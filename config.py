@@ -1,7 +1,7 @@
 import os
 
 
-DOCUMENT_DF_PATH = "C:/Users/wb649538/projects/project_based_briefings/public_documents.csv"
+DOCUMENT_DF_PATH = "./public_documents_filtered.csv"
 OPENAI_CHAT_MODEL = "gpt-5.2"
 ANTHROPIC_CHAT_MODEL = "claude-sonnet-4-6"
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
