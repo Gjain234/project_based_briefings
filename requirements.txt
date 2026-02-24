@@ -1,0 +1,21 @@
+# Core dependencies
+pandas
+requests
+beautifulsoup4
+python-dateutil
+
+# PDF processing
+PyMuPDF
+
+# LangChain and OpenAI
+langchain
+langchain-openai
+
+# Anthropic API
+anthropic
+
+# Document processing
+python-docx
+
+# Web UI
+streamlit
