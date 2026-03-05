@@ -28,7 +28,7 @@ st.title("🌍 FCV Portfolio Briefing Generator")
 
 # Load available countries from document dataframe
 @st.cache_data
-def load_available_countries(internal=True):
+def load_available_countries(internal=False):
     document_df_path = get_document_df_path(internal=internal)
     document_df = pd.read_csv(document_df_path)
     # Get unique countries and filter out regional groupings
