@@ -1,23 +1,94 @@
 from langchain_core.prompts import ChatPromptTemplate
+from prompts import IMPLEMENTATION_RISK_EXTRACTION_SYSTEM_PROMPT, RISK_MAPPING_SYSTEM_PROMPT
 import uuid
 import json
+import os
+import hashlib
 from document_utils import *
 import pandas as pd
 
-def extract_all_realized_fcv_risks(country_document_df, client):
+def get_document_cache_key(row):
+    """Generate a unique cache key for a document based on project ID, document type, and node ID."""
+    proj_id = str(row['PROJ_ID_IB'])
+    doc_type = str(row['document_type']).replace(' ', '_').replace('/', '_')
+    node_id = str(row.get('node_id', row.get('guid', '')))
+    # Use hash of node_id to keep filename reasonable length
+    node_hash = hashlib.md5(node_id.encode()).hexdigest()[:8]
+    return f"{proj_id}_{doc_type}_{node_hash}"
+
+def extract_all_realized_fcv_risks(country_document_df, client, country=None):
+    """Extract FCV risks from documents, using individual document-level caching.
+    
+    Args:
+        country_document_df: DataFrame with documents for the country
+        client: LLM client
+        country: Country name for organizing cache (optional but recommended)
+    """
     project_docs_df = select_recent_project_docs(country_document_df)
     all_risks = []
+    
+    # Organize cache by country if provided
+    if country:
+        cache_dir = f"intermediary_outputs/implementation_risks_cache/{country}"
+    else:
+        cache_dir = "intermediary_outputs/implementation_risks_cache"
+    
+    # Create cache directory if it doesn't exist
+    os.makedirs(cache_dir, exist_ok=True)
 
     for _, row in project_docs_df.iterrows():
         print(f"📄 Processing {row['PROJ_ID_IB']} - {row['document_type']}")
-
-        risks = extract_realized_fcv_risks_from_doc(row, client)
-
-        if risks:
-            print(f"   ✓ Found {len(risks)} FCV risks")
-            all_risks.extend(risks)
+        
+        # Check if this specific document is already cached
+        cache_key = get_document_cache_key(row)
+        cache_path = os.path.join(cache_dir, f"{cache_key}.csv")
+        
+        if os.path.exists(cache_path):
+            try:
+                print(f"   ✓ Loading from cache: {cache_key}")
+                cached_df = pd.read_csv(cache_path)
+                if not cached_df.empty:
+                    cached_risks = cached_df.to_dict('records')
+                    all_risks.extend(cached_risks)
+                else:
+                    print(f"   - No risks in cache (previously processed with no results)")
+            except Exception as e:
+                print(f"   ⚠️ Error reading cache for {cache_key}: {e}")
+                print(f"   → Will reprocess this document")
+                # Reprocess if cache is corrupted
+                risks = extract_realized_fcv_risks_from_doc(row, client)
+                if risks:
+                    print(f"   ✓ Found {len(risks)} FCV risks")
+                    pd.DataFrame(risks).to_csv(cache_path, index=False)
+                    print(f"   ✓ Cached to: {cache_key}")
+                    all_risks.extend(risks)
+                else:
+                    print("   - No FCV risks found")
+                    # Save empty cache with proper columns
+                    empty_cache = pd.DataFrame(columns=[
+                        'realized_risk_id', 'PROJ_ID_IB', 'doc_type', 'doc_date',
+                        'risk_title', 'risk_summary', 'severity', 'direction', 'evidence_quote'
+                    ])
+                    empty_cache.to_csv(cache_path, index=False)
         else:
-            print("   - No FCV risks found")
+            # Extract risks from document
+            risks = extract_realized_fcv_risks_from_doc(row, client)
+
+            if risks:
+                print(f"   ✓ Found {len(risks)} FCV risks")
+                # Save to individual cache
+                pd.DataFrame(risks).to_csv(cache_path, index=False)
+                print(f"   ✓ Cached to: {cache_key}")
+                all_risks.extend(risks)
+            else:
+                print("   - No FCV risks found")
+                # Save empty cache with proper columns to avoid reprocessing
+                # Use the expected column structure
+                empty_cache = pd.DataFrame(columns=[
+                    'realized_risk_id', 'PROJ_ID_IB', 'doc_type', 'doc_date',
+                    'risk_title', 'risk_summary', 'severity', 'direction', 'evidence_quote'
+                ])
+                empty_cache.to_csv(cache_path, index=False)
 
     return pd.DataFrame(all_risks)
 
@@ -35,30 +106,7 @@ def extract_realized_fcv_risks_from_doc(row, client):
     prompt = ChatPromptTemplate.from_messages([
         (
             "system",
-            "You are a World Bank FCV analyst reviewing a project implementation document.\n\n"
-            "Extract realized or emerging FCV-related risks affecting project implementation.\n\n"
-            "FCV includes:\n"
-            "- Political instability, governance fragility, protests\n"
-            "- Conflict and violence dynamics\n"
-            "- Displacement or refugee pressures\n"
-            "- Tensions between government and development actors\n\n"
-            "Rules:\n"
-            "- Extract only risks already affecting implementation.\n"
-            "- Do NOT extract generic fiduciary or procurement issues unless clearly FCV-linked.\n"
-            "- Each risk must include a verbatim evidence quote.\n"
-            "- Keep risks atomic.\n\n"
-            "Return valid JSON:\n"
-            "{{\n"
-            '  "fcv_risks": [\n'
-            "    {{\n"
-            '      "risk_title": "string",\n'
-            '      "risk_summary": "string",\n'
-            '      "severity": "low|medium|high|unclear",\n'
-            '      "direction": "new|worsening|persistent|improving|unclear",\n'
-            '      "evidence_quote": "verbatim"\n'
-            "    }}\n"
-            "  ]\n"
-            "}}"
+            IMPLEMENTATION_RISK_EXTRACTION_SYSTEM_PROMPT
         ),
         (
             "human",
@@ -73,10 +121,28 @@ def extract_realized_fcv_risks_from_doc(row, client):
 
     try:
         parsed = json.loads(raw)
-    except:
-        json_start = raw.find("{")
-        json_end = raw.rfind("}")
-        parsed = json.loads(raw[json_start:json_end+1])
+    except json.JSONDecodeError as e:
+        # Try to extract JSON from markdown code block
+        if "```json" in raw:
+            json_start = raw.find("```json") + 7
+            json_end = raw.find("```", json_start)
+            if json_end > json_start:
+                raw = raw[json_start:json_end].strip()
+        else:
+            # Try to find JSON object boundaries
+            json_start = raw.find("{")
+            json_end = raw.rfind("}")
+            if json_start >= 0 and json_end > json_start:
+                raw = raw[json_start:json_end+1]
+        
+        try:
+            parsed = json.loads(raw)
+        except json.JSONDecodeError as e2:
+            print(f"   ⚠️  JSON parsing failed even after cleanup")
+            print(f"   Error: {str(e2)}")
+            print(f"   Raw output (first 500 chars): {raw[:500]}")
+            # Return empty list if JSON is completely malformed
+            return []
 
     extracted = []
 
@@ -137,25 +203,7 @@ def map_realized_risk_to_country_risks(realized_risk_row,
     prompt = ChatPromptTemplate.from_messages([
         (
             "system",
-            "You are a World Bank FCV analyst.\n\n"
-            "Assess whether the realized project implementation risk "
-            "is plausibly connected to any of the current country-level FCV risks.\n\n"
-            "Guidelines:\n"
-            "- Identify only meaningful substantive connections.\n"
-            "- Do NOT force connections.\n"
-            "- A connection should reflect shared political, conflict, displacement, "
-            "or institutional fragility dynamics.\n\n"
-            "Return valid JSON:\n"
-            "{{\n"
-            '  "connections": [\n'
-            "    {{\n"
-            '      "country_risk_id": "string",\n'
-            '      "country_risk_title": "string",\n'
-            '      "connection_summary": "string",\n'
-            '      "confidence": 0.0\n'
-            "    }}\n"
-            "  ]\n"
-            "}}"
+            RISK_MAPPING_SYSTEM_PROMPT
         ),
         (
             "human",

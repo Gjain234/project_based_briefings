@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P501017",
+    "guid": 99011725115522033,
+    "node_id": 34447304,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-1b28ddee-3cc9-4cee-b588-d6971d933cfd.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Advancing Innovative Methods to Promote Learning (AIM4Learning) in Eastern and Southern Africa MPA Program",
+      "project_development_objective": "Increase equitable access and improve learning outcomes in basic education in Eastern and Southern Africa",
+      "total_financing": "US$2.158 billion equivalent (overall MPA envelope)",
+      "implementation_period": "FY25-34 (10 years)",
+      "beneficiaries": "72 million children with better education, 2.2 million teachers, marginalized and vulnerable populations with focus on female students from poorest households"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Eastern and Southern Africa region",
+        "Phase 1: Comoros (all three islands - Grande Comore, Anjouan, Mohéli)",
+        "Phase 1: Ethiopia (all regions)",
+        "Later phases: Angola, Madagascar, Malawi, Mozambique"
+      ],
+      "coverage_type": "regional",
+      "fragile_or_conflict_affected_areas": "yes - multiple countries face fragility, conflict and violence challenges; Ethiopia has ongoing conflict in northern regions; approximately 70% of school-aged children in AFE affected by persistent conflicts over last 10 years"
+    },
+    "key_components": [
+      {
+        "component_name": "Pillar 1: Transforming Learning Spaces",
+        "description": "Expand school networks, develop climate-resilient infrastructure with electricity/connectivity/WASH, establish school grant programs, enable schools as digital hubs, tackle demand-side constraints through stipends and feeding programs",
+        "financing": "Estimated savings of US$3.1 billion through cost-effective approaches"
+      },
+      {
+        "component_name": "Pillar 2: Empowering Skilled and Motivated Workforce of Educators",
+        "description": "Strengthen initial teacher education and continuous professional development, reduce teacher absenteeism, improve teacher deployment systems, invest in school leadership, use technology for teacher support",
+        "financing": "Expected efficiency savings of US$4.1 billion equivalent to quarter of annual teacher salary bill"
+      },
+      {
+        "component_name": "Pillar 3: Strengthening Systems",
+        "description": "Support curriculum and assessment reform, enhance teacher workforce management, strengthen resource allocation systems, improve partnerships with non-state sector, build institutional capacity",
+        "financing": "Not specified separately"
+      },
+      {
+        "component_name": "Pillar 4: Building Cross-Country Collaboration",
+        "description": "Develop learning agenda, create digital regional platform, establish standardized assessment tools, support research collaboration, create regional financing platform, facilitate public-private partnerships",
+        "financing": "Grant to regional organization (Association of African Universities)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Country-level: Ministries of Education in participating countries. Regional: Association of African Universities (AAU) proposed as regional entity",
+      "coordination_mechanisms": "High-level steering committees, project management units, multisectoral coordination structures, regional Program Coordination Offices",
+      "procurement_approach": "World Bank Procurement Regulations for IPF, competitive methods emphasized, regional aggregation for economies of scale",
+      "monitoring_and_evaluation": "Results framework with PrDO indicators, semi-annual reporting, Mid-Term Review, independent verification agencies for PforR components, GEMS tool for remote monitoring"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political and governance",
+        "risk_description": "Implementation across multiple countries at different development stages, fragility and conflict situations, lack of coordination across ministries and levels of government",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Strengthen coordination mechanisms, flexible design to respond to changing circumstances, regular communication among countries, conflict-sensitive programming"
+      },
+      {
+        "risk_category": "macroeconomic",
+        "risk_description": "Debt distress (9 out of 16 low-income AFE countries in/at high risk), climate shocks, food insecurity, conflict impacts on economic development",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Ongoing Development Policy Financing supporting structural reforms, debt management, private sector participation, economic recovery measures"
+      },
+      {
+        "risk_category": "institutional capacity",
+        "risk_description": "Varying institutional conditions across countries, capacity limitations, staff turnover, decentralized implementation challenges",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Technical assistance under Pillar 4, capacity building requirements, regular meetings among countries, hands-on implementation support"
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "Deficiencies in procurement capacity, weak internal audit functions, extensive geographic scope, fragile and conflict contexts affecting thousands of schools",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Program Action Plans, Disbursement Linked Indicators, capacity building, best practices integration, robust oversight mechanisms"
+      },
+      {
+        "risk_category": "environmental and social",
+        "risk_description": "Implementation across diverse contexts by various agencies, construction-related risks, GBV/SEA/SH risks, impacts on vulnerable groups",
+        "risk_rating": "substantial for Ethiopia PforR, moderate for other components",
+        "mitigation_measures": "Comprehensive technical capacity development, ongoing technical assistance, Environmental and Social Commitment Plans, grievance mechanisms"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate risk classification overall",
+      "triggered_safeguard_policies": [
+        "ESS 1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS 10: Stakeholder Engagement and Information Disclosure",
+        "ESS 2: Labor and Working Conditions",
+        "ESS 3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS 4: Community Health and Safety",
+        "ESS 5: Land Acquisition, Restrictions on Land Use and Involuntary Resettlement",
+        "ESS 8: Cultural Heritage"
+      ],
+      "grievance_redress_mechanism": "yes - country-specific mechanisms developed, GBV-sensitive procedures, referral services, community-level structures",
+      "gender_considerations": "Strong focus on girls education across all pillars, female teacher recruitment, gender-segregated WASH facilities, safe school policies, behavior change campaigns to reduce restrictive gender norms",
+      "vulnerable_groups": [
+        "girls",
+        "children from poor households",
+        "rural children",
+        "refugees",
+        "internally displaced children",
+        "children with disabilities",
+        "pastoralists",
+        "over-age school dropouts"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Flexible design to respond to changing conflict circumstances, exclusion of high-risk conflict areas from construction activities, Security Management Plans, pre/during/post conflict standard operating procedures",
+      "fragility_context": "Multiple countries designated as fragile states, weak institutional capacity, limited service delivery, governance challenges, economic vulnerability to external shocks",
+      "security_considerations": "Security Management Plans prepared, GEMS remote monitoring tools, exclusion criteria for conflict-affected areas, landmine/unexploded ordnance assessments required",
+      "displacement_or_refugees": "yes - 6 million refugees and 24 million internally displaced people in AFE region (2023), program includes support for refugee education integration, mobile/flexible learning approaches for displaced populations"
+    }
+  }
+}

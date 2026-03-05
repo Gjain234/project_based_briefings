@@ -1,0 +1,127 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P176731",
+    "guid": 99030624153526642,
+    "node_id": 34276649,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-1e226c28-af86-42ae-afbc-9ce86c730ea1.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Power Sector Reform, Investment and Modernization in Ethiopia Project (PRIME-1)",
+      "project_development_objective": "To strengthen and expand the electricity network and enable renewable energy generation in Ethiopia",
+      "total_financing": "US$602.33 million (IDA US$522.63 million, Counterpart US$79.70 million)",
+      "implementation_period": "March 2024 - August 2030",
+      "beneficiaries": "Existing and new electricity consumers including industrial, commercial, and residential customers across 72 towns; potentially entire population over MPA lifetime"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "72 towns across Ethiopia",
+        "Addis Ababa",
+        "Tendaho-Alalobad",
+        "Aluto-Adonshe",
+        "Aluto-Bobessa",
+        "Gambella region",
+        "Afar region",
+        "Tigray region",
+        "Amhara region"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "yes - Ethiopia is designated as fragile state with ongoing internal conflicts in different regions, ethnic-based localized conflicts, and conflict-induced humanitarian crisis"
+    },
+    "key_components": [
+      {
+        "component_name": "Distribution Network Refurbishment and Modernization",
+        "description": "Improve reliability of supply in 72 towns, modernize distribution network with digital systems, build client capacity",
+        "financing": "US$225.7 million"
+      },
+      {
+        "component_name": "Transmission Network Strengthening and Modernization",
+        "description": "Construct 14 new transmission lines and substations, grid modernization, system defense activities",
+        "financing": "US$311 million"
+      },
+      {
+        "component_name": "Upstream Geothermal Site Preparation",
+        "description": "Enable geothermal development through drilling and resource establishment at multiple locations",
+        "financing": "US$60.63 million"
+      },
+      {
+        "component_name": "Technical Assistance and Capacity Building at PEA",
+        "description": "Institutional capacity strengthening support for Petroleum and Energy Authority",
+        "financing": "US$5 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ethiopian Electric Power (EEP) and Ethiopian Electric Utility (EEU)",
+      "coordination_mechanisms": "Project Implementation Units (PIUs) established at EEP and EEU with central and regional teams",
+      "procurement_approach": "World Bank Procurement Regulations for IPF, open international competitive bidding for major contracts, EPC contract strategy for major works",
+      "monitoring_and_evaluation": "PIUs responsible for M&E, biannual progress reports, midterm review, quarterly IFRs within 45 days"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political and governance",
+        "risk_description": "Violent conflicts in different parts of country, ethnic-based localized conflicts, tensions between centralized and decentralized forces",
+        "risk_rating": "high",
+        "mitigation_measures": "Close coordination with implementing entities, adapting to changes in political landscape, regular risk rating updates"
+      },
+      {
+        "risk_category": "macroeconomic",
+        "risk_description": "Continued domestic and global uncertainty, droughts, supply shocks, inflation over 30%, FX shortages, debt default",
+        "risk_rating": "high",
+        "mitigation_measures": "Large import content settled directly in foreign currency, close coordination with IMF, economic analysis shows project remains viable"
+      },
+      {
+        "risk_category": "sector strategies and policies",
+        "risk_description": "Risk of government not implementing needed reforms or reversing reforms after adoption",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Performance-based conditions, technical assistance, ongoing energy operations and PASA support"
+      },
+      {
+        "risk_category": "institutional capacity",
+        "risk_description": "EEP and EEU capacity overstretched despite experience with World Bank projects",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Additional dedicated staff, capacity building components, training programs"
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "Procurement performance standards gaps, low quality designs, FM system challenges, audit delays",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Performance standards establishment, capacity strengthening, system upgrades, close monitoring"
+      },
+      {
+        "risk_category": "environmental and social",
+        "risk_description": "High social risk due to land acquisition, resettlement, GBV/SEA/SH risks, habitat alteration, occupational safety",
+        "risk_rating": "high",
+        "mitigation_measures": "Comprehensive ESRM instruments, grievance mechanisms, capacity building, site-specific ESIAs and ESMPs"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "High risk",
+      "triggered_safeguard_policies": [
+        "ESS1: Assessment and Management of Environmental and Social Risks",
+        "ESS2: Labor and Working Conditions",
+        "ESS3: Resource Efficiency and Pollution Prevention",
+        "ESS4: Community Health and Safety",
+        "ESS5: Land Acquisition and Resettlement",
+        "ESS6: Biodiversity Conservation",
+        "ESS7: Indigenous Peoples/Traditional Communities",
+        "ESS8: Cultural Heritage",
+        "ESS10: Stakeholder Engagement"
+      ],
+      "grievance_redress_mechanism": "yes - project-level grievance mechanisms, World Bank GRS, quarterly focus group discussions, annual public consultations",
+      "gender_considerations": "Strong gender equality dimension, five-year gender action plan, internship programs for female STEM graduates, targets to increase female employment in EEP from 16% to 21%",
+      "vulnerable_groups": [
+        "women and girls affected by conflict-induced GBV",
+        "displaced populations",
+        "rural households with limited electricity access"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project acknowledges ongoing violent conflicts and ethnic tensions, implements flexible framework approach to prioritize activities based on security conditions, close coordination with implementing entities to adapt to changing environment",
+      "fragility_context": "Ethiopia designated as fragile state experiencing internal conflicts, humanitarian crisis, climate-induced displacement, economic challenges from droughts and global shocks",
+      "security_considerations": "Security Risk Assessment and Management Plan under development, potential impact on fieldwork and ground presence, some proposed activities in potential conflict zones",
+      "displacement_or_refugees": "yes - climate-induced displacement increasingly prominent, conflict-induced humanitarian crisis ongoing, displaced women and children vulnerable to food insecurity and GBV"
+    }
+  }
+}

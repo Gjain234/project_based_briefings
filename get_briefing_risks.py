@@ -34,7 +34,8 @@ def extract_country_risk_items(risk_briefing: str, client):
             "- Avoid duplication.\n"
             "- Summaries should be concise (2–4 sentences).\n"
             f"- Assign 1–3 theme tags from this allowed list only: {COUNTRY_THEMES}\n"
-            "- Provide 3–8 keywords per risk.\n\n"
+            "- Provide 3–8 keywords per risk.\n"
+            "- List affected locations: Specify regions, states, provinces, cities, or districts mentioned (e.g., ['Tigray region', 'Addis Ababa'] or ['nationwide']). Use empty array if not specified.\n\n"
             "Return valid JSON in this exact format:\n"
             "{{\n"
             '  "risks": [\n'
@@ -44,6 +45,7 @@ def extract_country_risk_items(risk_briefing: str, client):
             '      "summary": "string",\n'
             '      "themes": ["string"],\n'
             '      "keywords": ["string"],\n'
+            '      "locations": ["string"],\n'
             '      "severity": "low|medium|high|unknown",\n'
             '      "time_horizon": "current|0-3m|3-12m|unknown"\n'
             "    }}\n"
@@ -67,11 +69,27 @@ def extract_country_risk_items(risk_briefing: str, client):
     # -----------------------------
     try:
         parsed = json.loads(raw_output)
-    except json.JSONDecodeError:
-        # Attempt to extract JSON block if model wrapped it in markdown
-        json_start = raw_output.find("{")
-        json_end = raw_output.rfind("}")
-        parsed = json.loads(raw_output[json_start:json_end+1])
+    except json.JSONDecodeError as e:
+        # Try to extract JSON from markdown code block
+        if "```json" in raw_output:
+            json_start = raw_output.find("```json") + 7
+            json_end = raw_output.find("```", json_start)
+            if json_end > json_start:
+                raw_output = raw_output[json_start:json_end].strip()
+        else:
+            # Attempt to extract JSON block if model wrapped it in markdown
+            json_start = raw_output.find("{")
+            json_end = raw_output.rfind("}")
+            if json_start >= 0 and json_end > json_start:
+                raw_output = raw_output[json_start:json_end+1]
+        
+        try:
+            parsed = json.loads(raw_output)
+        except json.JSONDecodeError as e2:
+            print(f"   ⚠️  JSON parsing failed")
+            print(f"   Error: {str(e2)}")
+            print(f"   Raw output (first 500 chars): {raw_output[:500]}")
+            raise
 
     risks = parsed.get("risks", [])
 
@@ -87,6 +105,9 @@ def extract_country_risk_items(risk_briefing: str, client):
 
         if not isinstance(r.get("keywords"), list):
             r["keywords"] = []
+        
+        if not isinstance(r.get("locations"), list):
+            r["locations"] = []
 
         cleaned.append(r)
 

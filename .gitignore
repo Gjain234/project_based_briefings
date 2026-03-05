@@ -209,3 +209,7 @@ __marimo__/
 # Project-specific data files
 public_documents.csv
 joined_df_filtered_with_embeddings.csv
+joined_df_filtered.csv
+FCV-AGENT-main/
+intermediary_outputs/old_outputs/
+intermediary_outputs/final*.md

@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P171627",
+    "guid": 99112624153019395,
+    "node_id": 34428640,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-9c696086-53fa-4e15-90e5-a2430b0d7053.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Financial Sector Strengthening Project (FSSP)",
+      "project_development_objective": "To enhance financial sector stability through strengthening key state-owned financial institutions and the banking sector supervisory and regulatory framework",
+      "total_financing": "SDR 525.7 million (US$700 million equivalent)",
+      "implementation_period": "December 17, 2024 to December 31, 2028",
+      "beneficiaries": "National Bank of Ethiopia (NBE), Commercial Bank of Ethiopia (CBE), Development Bank of Ethiopia (DBE), depositors (approximately 44,000 CBE depositors), and staff members (83,000 total from CBE, NBE, and DBE)"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "National coverage - Ethiopia"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "yes - Ethiopia is classified as fragile state with ongoing internal conflicts and social tensions"
+    },
+    "key_components": [
+      {
+        "component_name": "Strengthening the banking sector supervisory and regulatory framework and the institutional capacity of National Bank of Ethiopia (NBE)",
+        "description": "Modernizing banking regulation and supervision including Basel II framework implementation, climate-related financial risk guidelines, and institutional capacity strengthening of NBE",
+        "financing": "US$107 million"
+      },
+      {
+        "component_name": "Reform, Restructuring and Recapitalization of the CBE",
+        "description": "Governance reforms, balance sheet restructuring, and recapitalization of CBE including fundamental reform of governance and operating model, restructuring balance sheet to address legacy issues, and capital injection",
+        "financing": "US$560 million"
+      },
+      {
+        "component_name": "Reform, Recapitalization & Institutional Strengthening of the DBE",
+        "description": "Transformation and institutional strengthening of DBE including modernized risk-management and governance framework and strategic plan development",
+        "financing": "US$23 million"
+      },
+      {
+        "component_name": "Implementation Support",
+        "description": "Project management expenses and support for developing institutional capabilities including fiduciary and environmental & social risk management capacity",
+        "financing": "US$10 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "National Bank of Ethiopia (NBE) as lead implementing agency, with Commercial Bank of Ethiopia (CBE) and Development Bank of Ethiopia (DBE) as secondary implementing agencies",
+      "coordination_mechanisms": "High-level Project Steering Committee comprising senior personnel from MoF, NBE, DBE and CBE; Technical Working Group for operational coordination; Project Implementation Unit (PIU) at NBE",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers, September 2023; procurement mainly involves goods procurement and consultancy services, IT system supply and installation",
+      "monitoring_and_evaluation": "PIU at NBE conducts overall monitoring and coordination; biannual progress reports; midterm review after two years; Results Framework with PDO and intermediate indicators"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political and governance",
+        "risk_description": "Complex reform agenda during conflict and social tensions; entrenched opposition to market-oriented reforms; risk of policy reversals; upcoming national election in 2026",
+        "risk_rating": "high",
+        "mitigation_measures": "Strong government ownership of reforms; fundamental governance reform of CBE; modernized governance in line with international good practice"
+      },
+      {
+        "risk_category": "macroeconomic",
+        "risk_description": "Unanchored exchange rate expectations; low revenue collection; continued quasi-fiscal deficit crowding out private sector; depressing longer-term growth prospects",
+        "risk_rating": "high",
+        "mitigation_measures": "Coordination with DPF, IMF ECF, and other operations; prudent monetary and fiscal reforms; timely debt negotiations with creditors"
+      },
+      {
+        "risk_category": "sector strategies and policies",
+        "risk_description": "Complex challenges implementing extensive reforms across public sector institutions; resistance from stakeholders; cultural shift required in role and operation of institutions",
+        "risk_rating": "high",
+        "mitigation_measures": "Strong government ambition for financial sector reform; leadership by NBE and Council of Ministers; consultations with sector stakeholders"
+      },
+      {
+        "risk_category": "institutional capacity",
+        "risk_description": "CBE lacks World Bank experience; complex coordination required; potential for policy reversals; capacity limitations in procurement and financial management",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Targeted capacity-building programs; World Bank technical specialists support; institutional champions in implementing agencies"
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "Audit backlogs at NBE; operational losses; insufficient World Bank project experience; significant advance amounts risk; procurement capacity limitations",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Financial support for clearing backlogs; training on World Bank requirements; strict monitoring and reporting mechanisms; procurement capacity building"
+      },
+      {
+        "risk_category": "technical design",
+        "risk_description": "Significant departure from status quo required; introduction of global best practices requiring enhanced capacity; complex banking sector reforms",
+        "risk_rating": "high",
+        "mitigation_measures": "Strong capacity building support; Council of Ministers endorsement of CBE reform plan; extensive technical assistance"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate risk",
+      "triggered_safeguard_policies": [
+        "ESS 1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS 10: Stakeholder Engagement and Information Disclosure",
+        "ESS 2: Labor and Working Conditions",
+        "ESS 3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS 4: Community Health and Safety"
+      ],
+      "grievance_redress_mechanism": "yes - project-level grievance mechanisms and World Bank's Grievance Redress Service (GRS) available",
+      "gender_considerations": "Support for gender-inclusive financial sector through capacity building for gender-disaggregated data collection; NBE Corporate Governance directive requires at least two women on bank boards; coordination with Africa Gender Innovation Lab",
+      "vulnerable_groups": [
+        "underserved communities accessing bank services",
+        "individuals and communities affected by potential CBE branch streamlining"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project designed considering ongoing internal conflicts and social tensions; implementation during fragile context with upcoming 2026 elections; risk mitigation through strong government ownership and gradual reform rollout",
+      "fragility_context": "Ethiopia classified as fragile state; multiple adversities since 2020 including COVID-19, internal conflicts, global tensions, persistent droughts; economic imbalances reached critical point leading to external debt default in 2023",
+      "security_considerations": "Complex reform agenda implemented during conflict and social tensions; risk of opposition to market-oriented reforms; potential for policy reversals due to political dynamics",
+      "displacement_or_refugees": "no specific details mentioned in the document"
+    }
+  }
+}

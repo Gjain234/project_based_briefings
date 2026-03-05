@@ -1,5 +1,8 @@
 import pandas as pd
 from document_utils import *
+from preprocess_pads import get_or_preprocess_pad
+from prompts import PAD_STRESS_TEST_SYSTEM_PROMPT
+import json
 def select_latest_pad_per_project(country_document_df):
     
     # Filter to country
@@ -69,39 +72,111 @@ def chunk_text(text, max_chars=50000, overlap=1000):
 
 def stress_test_pad_against_country_risks(pad_row,
                                           country_risks_df,
-                                          client):
-
-    pad_text = fetch_pdf_text(str(pad_row["guid"]), str(pad_row["node_id"]))
-
-    if not pad_text:
+                                          client,
+                                          country,
+                                          reasoning_client=None,
+                                          preprocessed_pad=None):
+    """
+    Test a PAD against country risks using preprocessed PAD data.
+    
+    Args:
+        pad_row: DataFrame row with PAD metadata
+        country_risks_df: DataFrame with country risks
+        client: LLM client for risk analysis
+        country: Country name (for caching preprocessed PADs)
+        reasoning_client: Optional higher-reasoning client for PAD preprocessing
+        preprocessed_pad: Optional preprocessed PAD data (if already loaded)
+    """
+    
+    # Use reasoning_client for preprocessing if provided, otherwise use standard client
+    preprocess_client = reasoning_client if reasoning_client else client
+    
+    # Get or create preprocessed PAD
+    if preprocessed_pad is None:
+        preprocessed_pad = get_or_preprocess_pad(pad_row, country, preprocess_client)
+    
+    if not preprocessed_pad:
+        print(f"   ❌ Could not get preprocessed PAD data")
         return []
-
-    pad_text = clean_text(pad_text)
     
-    # Check if text needs chunking
-    if len(pad_text) > 200000:
-        print(f"   ⚠️ PAD text is {len(pad_text)} chars, chunking into smaller pieces...")
-        chunks = chunk_text(pad_text, max_chars=200000, overlap=1000)
-        print(f"   → Split into {len(chunks)} chunks")
-        
-        all_exposures = []
-        for i, chunk in enumerate(chunks, 1):
-            print(f"   → Processing chunk {i}/{len(chunks)}...")
-            exposures = _analyze_pad_chunk(chunk, country_risks_df, client, pad_row)
-            all_exposures.extend(exposures)
-        
-        # Deduplicate based on similar content
-        return _deduplicate_exposures(all_exposures)
+    # Convert preprocessed data to compact text format for analysis
+    pad_content = _format_preprocessed_pad_for_analysis(preprocessed_pad)
     
-    else:
-        return _analyze_pad_chunk(pad_text, country_risks_df, client, pad_row)
+    # Use standard client for risk analysis (faster)
+    return _analyze_pad_content(pad_content, country_risks_df, client, pad_row)
 
 
-def _analyze_pad_chunk(pad_text, country_risks_df, client, pad_row):
-    """Analyze a single chunk of PAD text."""
+def _format_preprocessed_pad_for_analysis(preprocessed_pad):
+    """
+    Convert preprocessed PAD JSON into a compact text format for risk analysis.
+    
+    Args:
+        preprocessed_pad: Preprocessed PAD dictionary
+        
+    Returns:
+        str: Formatted text representation
+    """
+    content = preprocessed_pad.get("structured_content", {})
+    
+    sections = []
+    
+    # Project overview
+    overview = content.get("project_overview", {})
+    sections.append(f"PROJECT: {overview.get('project_name', 'N/A')}")
+    sections.append(f"OBJECTIVE: {overview.get('project_development_objective', 'N/A')}")
+    sections.append(f"FINANCING: {overview.get('total_financing', 'N/A')}")
+    sections.append(f"BENEFICIARIES: {overview.get('beneficiaries', 'N/A')}")
+    
+    # Geographic scope
+    geo = content.get("geographic_scope", {})
+    sections.append(f"\nLOCATIONS: {', '.join(geo.get('primary_locations', []))}")
+    sections.append(f"COVERAGE: {geo.get('coverage_type', 'N/A')}")
+    sections.append(f"CONFLICT-AFFECTED AREAS: {geo.get('fragile_or_conflict_affected_areas', 'N/A')}")
+    
+    # Components
+    components = content.get("key_components", [])
+    if components:
+        sections.append("\nCOMPONENTS:")
+        for comp in components:
+            sections.append(f"  - {comp.get('component_name')}: {comp.get('description')} ({comp.get('financing', 'N/A')})")
+    
+    # Implementation
+    impl = content.get("implementation_arrangements", {})
+    sections.append(f"\nIMPLEMENTING AGENCY: {impl.get('implementing_agency', 'N/A')}")
+    sections.append(f"COORDINATION: {impl.get('coordination_mechanisms', 'N/A')}")
+    sections.append(f"M&E: {impl.get('monitoring_and_evaluation', 'N/A')}")
+    
+    # Identified risks from PAD
+    risks = content.get("identified_risks", [])
+    if risks:
+        sections.append("\nIDENTIFIED RISKS IN PAD:")
+        for risk in risks:
+            sections.append(f"  - {risk.get('risk_category')} ({risk.get('risk_rating')}): {risk.get('risk_description')}")
+            sections.append(f"    Mitigation: {risk.get('mitigation_measures')}")
+    
+    # Safeguards and social
+    safeguards = content.get("safeguards_and_social", {})
+    sections.append(f"\nSAFEGUARDS: {safeguards.get('environmental_category', 'N/A')}")
+    if safeguards.get('triggered_safeguard_policies'):
+        sections.append(f"TRIGGERED POLICIES: {', '.join(safeguards.get('triggered_safeguard_policies', []))}")
+    sections.append(f"GRM: {safeguards.get('grievance_redress_mechanism', 'N/A')}")
+    sections.append(f"VULNERABLE GROUPS: {', '.join(safeguards.get('vulnerable_groups', []))}")
+    
+    # FCV relevant
+    fcv = content.get("fcv_relevant_details", {})
+    sections.append(f"\nCONFLICT SENSITIVITY: {fcv.get('conflict_sensitivity', 'N/A')}")
+    sections.append(f"FRAGILITY CONTEXT: {fcv.get('fragility_context', 'N/A')}")
+    sections.append(f"SECURITY: {fcv.get('security_considerations', 'N/A')}")
+    sections.append(f"DISPLACEMENT/REFUGEES: {fcv.get('displacement_or_refugees', 'N/A')}")
+    
+    return "\n".join(sections)
 
-def _analyze_pad_chunk(pad_text, country_risks_df, client, pad_row):
-    """Analyze a single chunk of PAD text."""
+
+def _analyze_pad_content(pad_content, country_risks_df, client, pad_row):
+    """Analyze preprocessed PAD content against country risks."""
+
+def _analyze_pad_content(pad_content, country_risks_df, client, pad_row):
+    """Analyze preprocessed PAD content against country risks."""
 
     # Use structured risks only (compact form)
     country_risks = country_risks_df[[
@@ -115,40 +190,12 @@ def _analyze_pad_chunk(pad_text, country_risks_df, client, pad_row):
     prompt = ChatPromptTemplate.from_messages([
         (
             "system",
-            "You are a World Bank FCV analyst reviewing a project.\n\n"
-            "You are given:\n"
-            "- A list of current country-level FCV risk drivers.\n"
-            "- The Project Appraisal Document (PAD) text.\n\n"
-            "Your task:\n"
-            "Assess where this project may be susceptible to implementation "
-            "or outcome disruption given the current FCV dynamics.\n\n"
-            "Think operationally:\n"
-            "- Could political instability disrupt governance arrangements?\n"
-            "- Could conflict affect access, logistics, or staffing?\n"
-            "- Could displacement undermine targeting or beneficiary reach?\n"
-            "- Could tensions between government and development actors create interference?\n\n"
-            "Rules:\n"
-            "- Identify only vulnerabilities supported by the PAD text.\n"
-            "- Each item MUST include a verbatim evidence quote from the PAD.\n"
-            "- Do NOT speculate beyond the PAD.\n"
-            "- If the PAD shows no meaningful susceptibility to current FCV risks, return an empty list.\n\n"
-            "Return valid JSON:\n"
-            "{{\n"
-            '  "project_susceptibilities": [\n'
-            "    {{\n"
-            '      "related_country_risk_id": "string",\n'
-            '      "related_country_risk_title": "string",\n'
-            '      "susceptibility_summary": "string",\n'
-            '      "evidence_quote": "verbatim from PAD",\n'
-            '      "confidence": 0.0\n'
-            "    }}\n"
-            "  ]\n"
-            "}}"
+            PAD_STRESS_TEST_SYSTEM_PROMPT
         ),
         (
             "human",
             "Current Country FCV Risks:\n\n{country_risks}\n\n"
-            "Project Appraisal Document (PAD):\n\n{pad_text}"
+            "Project Information from PAD:\n\n{pad_content}"
         )
     ])
 
@@ -156,7 +203,7 @@ def _analyze_pad_chunk(pad_text, country_risks_df, client, pad_row):
 
     message = chain.invoke({
         "country_risks": json.dumps(country_risks, indent=2),
-        "pad_text": pad_text
+        "pad_content": pad_content
     })
 
     raw = (message.content or "").strip()
@@ -172,6 +219,9 @@ def _analyze_pad_chunk(pad_text, country_risks_df, client, pad_row):
 
     for e in parsed.get("project_susceptibilities", []):
         e["PROJ_ID_IB"] = pad_row["PROJ_ID_IB"]
+        # Rename field for consistency
+        if "evidence_from_pad" in e:
+            e["evidence_quote"] = e.pop("evidence_from_pad")
         exposures.append(e)
 
     return exposures
@@ -202,15 +252,17 @@ def _deduplicate_exposures(exposures):
     return deduplicated
 
 
-def run_stress_tests_for_all_pads(country_document_df, country_risks_df, client):
+def run_stress_tests_for_all_pads(country_document_df, country_risks_df, client, country, reasoning_client=None):
     """
     Run stress test for every PAD returned from select_latest_pad_per_project.
+    Uses preprocessed PADs for efficiency.
     
     Args:
         country_document_df: DataFrame with all documents for the country
-        country: Country name to filter
         country_risks_df: DataFrame with country-level risks
-        client: LLM client for analysis
+        client: LLM client for analysis (standard/fast model)
+        country: Country name (for preprocessing cache)
+        reasoning_client: Optional higher-reasoning client for PAD preprocessing
     
     Returns:
         List of all susceptibilities found across all PADs
@@ -233,7 +285,9 @@ def run_stress_tests_for_all_pads(country_document_df, country_risks_df, client)
             susceptibilities = stress_test_pad_against_country_risks(
                 pad_row,
                 country_risks_df,
-                client
+                client,
+                country,
+                reasoning_client
             )
             
             if susceptibilities:
@@ -244,6 +298,8 @@ def run_stress_tests_for_all_pads(country_document_df, country_risks_df, client)
                 
         except Exception as e:
             print(f"   ✗ Error processing {project_id}: {e}")
+            import traceback
+            traceback.print_exc()
             continue
     
     print(f"\n📊 Total susceptibilities found: {len(all_susceptibilities)}")

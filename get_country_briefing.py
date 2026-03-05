@@ -45,19 +45,154 @@ import anthropic
 from docx import Document
 from get_icg_text import (
     get_icg_reports,
-    get_crisiswatch_last3months,
+    get_crisiswatch_lastnmonths,
 )
-from config import ANTHROPIC_API_KEY, ANTHROPIC_CHAT_MODEL
+from config import ANTHROPIC_API_KEY, ANTHROPIC_COUNTRY_RISK_MODEL, ANTHROPIC_RISK_BRIEFING_MODEL
+from prompts import get_country_risk_extraction_prompt
+import pandas as pd
+import json
+import uuid
 
 client = anthropic.Anthropic(
     api_key=ANTHROPIC_API_KEY,
 )
 
+COUNTRY_THEMES = [
+    "governance",
+    "political",
+    "security",
+    "economy",
+    "health",
+    "environment",
+    "social",
+    "humanitarian",
+    "displacement",
+    "crime"
+]
+
+def extract_country_risks_with_websearch(country_name):
+    """
+    Extract structured country risks directly from ICG/CrisisWatch data with web search.
+    Single LLM call that combines data gathering and risk extraction.
+    
+    Returns: DataFrame with risk items (risk_id, title, summary, themes, keywords, severity, time_horizon)
+    """
+    today = datetime.datetime.now().strftime("%Y-%m-%d")
+    print(f"\n=== Extracting country risks for {country_name} with web search ===")
+    
+    try:
+        cw = get_crisiswatch_lastnmonths(country_name, 3)
+        reports = get_icg_reports(country_name)
+    except:
+        cw = None
+        reports = None        
+
+    icg_texts = ""
+
+    if cw is not None:
+        for _, row in cw.iterrows():
+            icg_texts += (
+                f"--- CrisisWatch Entry: {row['entry_month'].strftime('%B %Y')} ---\n"
+                f"{row['text']}\n\n"
+            )
+    if icg_texts == "":
+        icg_texts = "No ICG text available for country"
+
+    if reports is not None:
+        for _, row in reports.iterrows():
+            icg_texts += (
+                f"--- ICG Report: {row['title']} ({row['date'].strftime('%Y-%m-%d')}) ---\n"
+                f"{row['text']}\n\n"
+            )
+
+    prompt = get_country_risk_extraction_prompt(country_name, today, icg_texts)
+
+    response = client.messages.create(
+        model=ANTHROPIC_COUNTRY_RISK_MODEL,
+        max_tokens=10000,
+        messages=[
+            {"role": "user", "content": prompt}
+        ],
+        tools=[{
+            "type": "web_search_20250305",
+            "name": "web_search",
+            "max_uses": 10,
+            "blocked_domains": ["wikipedia.org", "en.wikipedia.org/*"],
+        }]
+    )
+
+    # Extract JSON from response and collect all citations
+    raw_output = ""
+    all_citations = []
+    
+    for block in response.content:
+        if block.type == "text":
+            raw_output += block.text
+            # Collect citations from this text block
+            if hasattr(block, 'citations') and block.citations:
+                for citation in block.citations:
+                    # Avoid duplicates
+                    if citation not in all_citations:
+                        all_citations.append(citation)
+
+    raw_output = raw_output.strip()
+    
+    # Debug: print if we found citations
+    if all_citations:
+        print(f"   Found {len(all_citations)} citations from web search")
+
+    # Parse JSON safely
+    try:
+        parsed = json.loads(raw_output)
+    except json.JSONDecodeError as e:
+        # Try to extract JSON from markdown code block
+        if "```json" in raw_output:
+            json_start = raw_output.find("```json") + 7
+            json_end = raw_output.find("```", json_start)
+            if json_end > json_start:
+                raw_output = raw_output[json_start:json_end].strip()
+        else:
+            # Attempt to extract JSON block if model wrapped it
+            json_start = raw_output.find("{")
+            json_end = raw_output.rfind("}")
+            if json_start >= 0 and json_end > json_start:
+                raw_output = raw_output[json_start:json_end+1]
+        
+        try:
+            parsed = json.loads(raw_output)
+        except json.JSONDecodeError as e2:
+            print(f"   ⚠️  JSON parsing failed for country risks")
+            print(f"   Error: {str(e2)}")
+            print(f"   Raw output (first 500 chars): {raw_output[:500]}")
+            raise ValueError(f"Failed to parse JSON from LLM response: {raw_output[:200]}")
+
+    risks = parsed.get("risks", [])
+
+    # Light cleanup / validation
+    cleaned = []
+    for r in risks:
+        if not r.get("risk_id"):
+            r["risk_id"] = "cr_" + uuid.uuid4().hex[:8]
+
+        r["themes"] = [t for t in r.get("themes", []) if t in COUNTRY_THEMES]
+
+        if not isinstance(r.get("keywords"), list):
+            r["keywords"] = []
+        
+        if not isinstance(r.get("locations"), list):
+            r["locations"] = []
+
+        cleaned.append(r)
+
+    country_risks_df = pd.DataFrame(cleaned)
+    return country_risks_df
+
+
 def get_country_recent_risks_briefing(country_name):
     today = datetime.datetime.now().strftime("%Y-%m-%d")
     print(f"\n=== Running briefing for {country_name} ===")
     try:
-        cw = get_crisiswatch_last3months(country_name)
+        cw = get_crisiswatch_lastnmonths(country_name, 3)
         reports = get_icg_reports(country_name)
     except:
         cw=None
@@ -156,7 +291,7 @@ def get_country_recent_risks_briefing(country_name):
     """
 
     response = client.messages.create(
-        model="claude-haiku-4-5",
+        model=ANTHROPIC_RISK_BRIEFING_MODEL,
         max_tokens=10000,
         messages=[
             {"role": "user", "content" : prompt}
@@ -216,7 +351,7 @@ def get_country_recent_risks_briefing(country_name):
     """
 
     response = client.messages.create(
-        model=ANTHROPIC_CHAT_MODEL,
+        model=ANTHROPIC_RISK_BRIEFING_MODEL,
         max_tokens=10000,
         messages=[
             {"role": "user", "content": prompt}

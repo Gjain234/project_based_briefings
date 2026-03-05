@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P174300",
+    "guid": 850181641925218427,
+    "node_id": 33653187,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b088bdcd4b&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Horn of Africa Initiative: Djibouti Regional Economic Corridor",
+      "project_development_objective": "To improve regional connectivity and enhance logistics efficiency in Djibouti along the Djibouti-Addis southern corridor",
+      "total_financing": "US$90 million (US$70 million IDA, US$17 million GoD, US$3 million private sector)",
+      "implementation_period": "December 16, 2021 to December 31, 2026",
+      "beneficiaries": "Local consumers and producers of tradable goods in Djibouti and hinterland, road transport service providers, local traders, populations living in corridor area, end consumers, port authorities"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Djibouti city",
+        "Arta",
+        "Ali Sabbieh",
+        "Guelileh border",
+        "RN1",
+        "RN5",
+        "RN19 corridors"
+      ],
+      "coverage_type": "national corridor connecting to regional (Ethiopia)",
+      "fragile_or_conflict_affected_areas": "yes - Djibouti exited FCV list in FY21 but remains vulnerable to regional spillovers from Horn of Africa conflicts and instability"
+    },
+    "key_components": [
+      {
+        "component_name": "Improvement of infrastructure and introduction of intelligent transportation systems along the Djibouti-Addis southern corridor",
+        "description": "Rehabilitation of 42km of roads (Djibouti-Arta 21km, RN5 junction-Ali Sabbieh 12km, Ali Sabbieh-Guelileh 9km) with climate resilient standards, deployment of Integrated Transport Information System (ITIS), maintenance and operation through OPBRC",
+        "financing": "US$80 million"
+      },
+      {
+        "component_name": "Improvement of transit services along the Djibouti-Addis southern corridor",
+        "description": "Enhancement of customs transit procedures, development of OSBP at Guelileh border, upgrade of Djibouti customs automated systems including Cargo Targeting System",
+        "financing": "US$5 million"
+      },
+      {
+        "component_name": "Institutional strengthening and capacity-building on road performance-based contracts and project implementation support",
+        "description": "Technical assistance for OPBRC, institutional strengthening on road PBCs and PPPs, maximizing corridor development impacts for local communities including HIV/AIDS prevention and women's economic empowerment",
+        "financing": "US$5 million"
+      },
+      {
+        "component_name": "Contingent emergency response component (CERC)",
+        "description": "Emergency response component to be activated during eligible crisis or emergency",
+        "financing": "US$0 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "ADR (Djibouti Road Agency) under Ministry of Infrastructure and Equipment (MoIE)",
+      "coordination_mechanisms": "Inter-ministerial Project Steering Committee led by MoIE, Project Coordination Unit (PCU) within ADR, Supporting Implementing Agencies including DPCR and Customs",
+      "procurement_approach": "Open international competition for major contracts, OPBRC modality for road works, WB Standard Procurement Documents",
+      "monitoring_and_evaluation": "Quarterly implementation progress reports, annual monitoring and evaluation reports, satisfaction surveys, PCU responsible for M&E with inputs from beneficiary agencies"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political and governance",
+        "risk_description": "Ability to influence private sector finance mobilization depends on political will; line ministries may lack incentives or resist change",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Obtain commitment at highest state level, involve donor agencies and stakeholders to emphasize project importance"
+      },
+      {
+        "risk_category": "security/fragility",
+        "risk_description": "Regional fragility in Horn of Africa, political instability and conflict in sub-region including recent developments in Ethiopia, vulnerability to spillover and refugee influxes",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Regular security risk assessments, activities requiring Ethiopia collaboration conditional on mutual understanding between customs authorities"
+      },
+      {
+        "risk_category": "macroeconomic",
+        "risk_description": "Impact of COVID-19 pandemic on GDP growth and unemployment, job losses from decreased goods volume through Djibouti ports affecting tax base and government contribution to road maintenance",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Monitor economic conditions and adjust implementation as needed"
+      },
+      {
+        "risk_category": "institutional capacity",
+        "risk_description": "ADR has limited experience with World Bank financed projects, multi-sectoral operation complexity, need for harmonization with Ethiopia",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Capacity building, hiring experienced specialists, technical assistance, consultant support"
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "No current WB transport project in country, ADR lacks WB project experience, limited procurement capacity for complex OPBRC contracts",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Hire experienced FM and procurement specialists, provide training, consultant support for OPBRC procurement and supervision"
+      },
+      {
+        "risk_category": "environmental and social",
+        "risk_description": "Potential erosion, vegetation loss, construction pollution, occupational and community health safety, road safety risks, livelihood impacts, COVID-19 exposure, SEA/SH risks",
+        "risk_rating": "substantial",
+        "mitigation_measures": "ESIA with ESMP, Labor Management Procedures, Resettlement Framework, Road Safety Management Plan, Stakeholder Engagement Plan, Environmental and Social Commitment Plan"
+      },
+      {
+        "risk_category": "stakeholders",
+        "risk_description": "Multiple stakeholder participation required, coordination risk between Djibouti and Ethiopia, need for integrated effort on regional integration and trade facilitation",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Close collaboration between SOP project teams, leverage HoAI dialogue platform, facilitate Djibouti-Ethiopia dialogue"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "substantial risk",
+      "triggered_safeguard_policies": [
+        "ESS1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS2: Stakeholder Engagement and Information Disclosure",
+        "ESS3: Labor and Working Conditions",
+        "ESS4: Resource Efficiency and Pollution Prevention",
+        "ESS5: Community Health and Safety",
+        "ESS6: Land Acquisition and Involuntary Resettlement",
+        "ESS7: Biodiversity Conservation",
+        "ESS9: Cultural Heritage"
+      ],
+      "grievance_redress_mechanism": "yes - project-level grievance redress mechanisms and World Bank corporate Grievance Redress Service available",
+      "gender_considerations": "Activities to address gender gaps including literacy training for women, support for female labor force participation, childcare services at border areas, GBV prevention protocols, 20% quota for women in construction jobs",
+      "vulnerable_groups": [
+        "women traders",
+        "communities along corridor",
+        "truck drivers",
+        "border personnel"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project designed to support regional integration and cooperation through Horn of Africa Initiative, addresses regional fragility through economic connectivity, includes coordination mechanisms between countries",
+      "fragility_context": "Djibouti recently exited FCV list but remains vulnerable to regional spillovers from Horn of Africa conflicts, weak institutional capacity, governance challenges, vulnerability to refugees and migrants from regional crises",
+      "security_considerations": "Security situation monitored through periodic threat assessments, activities requiring Ethiopia collaboration conditional on customs authorities mutual understanding, project implementation may be affected by regional security context",
+      "displacement_or_refugees": "yes - Djibouti serves as major destination for refugees and migrants fleeing political and environmental crises in Horn of Africa region, typically settling in poor areas worsening conditions"
+    }
+  }
+}

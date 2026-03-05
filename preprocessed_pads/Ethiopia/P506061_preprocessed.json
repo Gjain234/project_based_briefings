@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P506061",
+    "guid": 99070925154021409,
+    "node_id": 40029079,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-b16acf78-b05c-4234-b35d-ec4ca80658d2.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Accelerating Sustainable and Clean Energy Access Transformation in Ethiopia Program",
+      "project_development_objective": "To increase access to electricity in Ethiopia",
+      "total_financing": "US$424 million (IDA US$400 million, Denmark US$24 million)",
+      "implementation_period": "2025-2030",
+      "beneficiaries": "5.5 million people through 1.1 million new electricity connections"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Countrywide coverage",
+        "230 towns",
+        "Rural areas within 2.5km of grid",
+        "Addis Ababa"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "yes - Ethiopia is classified as fragile state with recent Tigray conflict mentioned and ongoing security challenges"
+    },
+    "key_components": [
+      {
+        "component_name": "Results Area 1: Increase on-grid access to electricity",
+        "description": "Grid connection through regularization, densification, intensification, and extension of electricity connections. Target 1.1 million new connections benefiting 5.5 million people",
+        "financing": "US$360 million IDA + US$24 million Denmark"
+      },
+      {
+        "component_name": "Results Area 2: Increase off-grid access to electricity",
+        "description": "Scaling up public sector led off-grid programs including mini-grids and solar home systems in remote areas, strengthening regulatory framework for private sector participation",
+        "financing": "To be designed in subsequent phases"
+      },
+      {
+        "component_name": "Results Area 3: Strengthen sector capacity and institutional reform",
+        "description": "Supporting critical functions of key sector institutions, updating national electrification program, strengthening fiduciary and safeguard systems, utility digitalization",
+        "financing": "US$40 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Water and Energy (MoWE) and Ethiopian Electric Utility (EEU)",
+      "coordination_mechanisms": "Electrification and Energy Information Lead Executive (EEILE) at MoWE for oversight, EEU for main implementation",
+      "procurement_approach": "Program-for-Results (PforR) using government systems with strengthening measures",
+      "monitoring_and_evaluation": "Independent Verification Agencies (IVAs) for DLI verification, World Bank supervision, Mid-Term Review within 3 years"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political",
+        "risk_description": "Risk of conflict and its implications on program implementation and supervision, risk of double dipping due to parallel World Bank projects",
+        "risk_rating": "high",
+        "mitigation_measures": "Design pre, during, and post-conflict measures, maintain separate records/documents and bank accounts, flexible designs to alternate sites when inaccessible"
+      },
+      {
+        "risk_category": "macroeconomic",
+        "risk_description": "Impact of recent forex reform on projects, maintaining market-reflective exchange rate, prudent monetary and fiscal reforms",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Continuously analyze forex risks, maintain prudent forex risk management protocols, monitor budgets affected by inflation, update project designs"
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "Delays due to EEU restructuring, challenges in capturing program expenditures, weak internal audit capacity, budgeting challenges, absence of supporting documents for new procurement proclamation, extensive use of direct contracting, fraud and corruption risks",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Accelerate restructuring process, enable systems to capture expenditures accurately, strengthen internal audit function, prepare detailed work plans and budgets, establish accountability mechanisms, implement e-GP system"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate risk",
+      "triggered_safeguard_policies": [
+        "Environmental and Social Management Systems",
+        "Resettlement Systems",
+        "Worker and Community Health and Safety"
+      ],
+      "grievance_redress_mechanism": "yes - existing program grievance mechanism and World Bank Grievance Redress Service available",
+      "gender_considerations": "Strategic gender actions including facilitating clean electricity access for women and female-headed households, enhancing women's employment in energy sector, target of 100 females in STEM hired at EEU",
+      "vulnerable_groups": [
+        "Female-headed households",
+        "Youth",
+        "Indigenous/historically underserved communities",
+        "Rural poor households"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Program includes designing pre, during, and post-conflict measures, Standard Operating Procedures to manage conflict situations, social conflict/security risk assessment in ESHS screenings, security risk assessment and Security Management Plans for conflict-prone areas",
+      "fragility_context": "Ethiopia classified as fragile state, recent Tigray conflict mentioned, ongoing security challenges, macroeconomic instability with debt default in 2023, structural reforms launched in 2024 to address imbalances",
+      "security_considerations": "Security risk assessment and management plans for conflict-prone areas, flexibility in designs to alternate sites when inaccessible due to security, social conflict prevention and management measures",
+      "displacement_or_refugees": "no specific mention of displacement or refugee populations in the document"
+    }
+  }
+}

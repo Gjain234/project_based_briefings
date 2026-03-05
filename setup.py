@@ -1,16 +1,16 @@
 from config import *
 import os
 
-def setup(internal=True):
+def get_client_for_model(model_name, internal=True):
     """
-    Setup LLM client.
+    Create a client for a specific model name.
     
     Args:
-        internal: If True, use internal World Bank Azure infrastructure with itsai authentication.
-                  If False, use generic Anthropic Claude client via API key.
+        model_name: Name of the model (e.g., 'claude-sonnet-4-6', 'gpt-5.2')
+        internal: If True, use internal Azure infrastructure. If False, use Anthropic API.
     
     Returns:
-        LangChain-compatible LLM client
+        LangChain chat client configured for the specified model
     """
     if internal:
         try:
@@ -20,15 +20,16 @@ def setup(internal=True):
             token_class = DesktopToken()
             token_provider = lambda: token_class.token_provider(env="DEV")
             
-            client = AzureChatOpenAI(
+            # Determine reasoning effort based on model name or use default
+            reasoning_effort = 'high' if 'reasoning' in model_name.lower() else 'medium'
+            
+            return AzureChatOpenAI(
                 azure_endpoint="https://azapimdev.worldbank.org/conversationalai/v2",
                 azure_ad_token_provider=token_provider,
                 api_version=OPENAI_CHAT_API_VERSION,
-                deployment_name=OPENAI_CHAT_MODEL,
-                reasoning_effort='medium',
+                deployment_name=model_name,
+                reasoning_effort=reasoning_effort,
             )
-            
-            return client
             
         except ImportError as e:
             raise ImportError(
@@ -47,18 +48,43 @@ def setup(internal=True):
                     "Set it in config.py or as an environment variable."
                 )
             
-            # Create Claude client (compatible with LangChain's ChatPromptTemplate pattern)
-            client = ChatAnthropic(
-                model=ANTHROPIC_CHAT_MODEL,  # or use config.CHAT_MODEL if defined for external
+            # Determine max_tokens based on model - Sonnet gets more for complex reasoning
+            max_tokens = 16384 if 'sonnet' in model_name.lower() else 8192
+            
+            return ChatAnthropic(
+                model=model_name,
                 anthropic_api_key=anthropic_api_key,
                 temperature=0,
-                max_tokens=8192
+                max_tokens=max_tokens
             )
-            
-            return client
             
         except ImportError as e:
             raise ImportError(
                 f"External mode requires 'langchain-anthropic' package. "
                 f"Install it with: pip install langchain-anthropic\nError: {e}"
             )
+
+def setup(internal=True):
+    """
+    Setup LLM clients.
+    
+    Args:
+        internal: If True, use internal World Bank Azure infrastructure with itsai authentication.
+                  If False, use generic Anthropic Claude client via API key.
+    
+    Returns:
+        tuple: (standard_client, reasoning_client)
+            - standard_client: Fast, lower-latency model for general tasks (Haiku for external, GPT for internal)
+            - reasoning_client: Higher reasoning model for complex analysis (Sonnet for external, GPT for internal)
+    """
+    if internal:
+        # Internal uses GPT-5.2 for both, but with different reasoning efforts
+        standard_client = get_client_for_model(OPENAI_CHAT_MODEL, internal=True)
+        reasoning_client = get_client_for_model(OPENAI_CHAT_MODEL, internal=True)
+        # Note: Both use same model but get_client_for_model will set different reasoning_effort
+    else:
+        # External uses Haiku for speed and Sonnet for reasoning
+        standard_client = get_client_for_model(ANTHROPIC_CHAT_MODEL, internal=False)
+        reasoning_client = get_client_for_model(ANTHROPIC_REASONING_MODEL, internal=False)
+    
+    return standard_client, reasoning_client

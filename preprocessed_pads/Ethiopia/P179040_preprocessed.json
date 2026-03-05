@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P179040",
+    "guid": 99112223132535848,
+    "node_id": 34201758,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-efb09b92-513a-49d9-858a-135df22da7d1.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Digital ID for Inclusion and Services Project",
+      "project_development_objective": "To establish an inclusive digital ID ecosystem and improve service delivery for registered persons in Ethiopia",
+      "total_financing": "US$350 million (SDR 266.3 million equivalent - US$300 million IDA Credit + US$50 million WHR Grant)",
+      "implementation_period": "December 14, 2023 to January 7, 2029",
+      "beneficiaries": "At least 90 million Ethiopian nationals and residents, including refugees, asylum seekers, stateless persons, and host communities"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Gambella",
+        "Somali",
+        "Benishangul-Gumuz",
+        "Afar",
+        "Tigray",
+        "Amhara",
+        "Oromia",
+        "Sidama",
+        "Addis Ababa"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "yes - implementation in conflict-affected areas including northern Ethiopia, with ongoing conflicts in Amhara, Gambela, and Oromia regions"
+    },
+    "key_components": [
+      {
+        "component_name": "Building institutions and trust",
+        "description": "Supporting stakeholder engagement, establishing Digital ID Institution and Data Protection Commission",
+        "financing": "US$21 million"
+      },
+      {
+        "component_name": "Establishing scalable and secure Fayda ICT infrastructure",
+        "description": "Developing Fayda software, data infrastructure, and strengthening digital security",
+        "financing": "US$68 million"
+      },
+      {
+        "component_name": "Inclusive ID issuance",
+        "description": "Mass registration and issuance of physical and digital IDs to 90 million people including refugees and host communities",
+        "financing": "US$214 million"
+      },
+      {
+        "component_name": "Improving service delivery",
+        "description": "Integration of Fayda authentication into priority sectors and developing Ethiopia Digital Stack",
+        "financing": "US$35 million"
+      },
+      {
+        "component_name": "Project management and coordination",
+        "description": "Supporting PMU establishment and project implementation coordination",
+        "financing": "US$12 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Prime Minister's Office (PMO) through National ID Program (NIDP), transitioning to permanent ID Institution within 2 years",
+      "coordination_mechanisms": "Project Steering Committee co-chaired by Minister of Finance and Minister of Cabinet Affairs; Technical Committee chaired by NIDP with multi-stakeholder participation",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers, using STEP system for all procurement transactions",
+      "monitoring_and_evaluation": "PMU responsible for M&E with real-time dashboards, quarterly IFRs, satisfaction surveys, and formal annual/midterm reports"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political",
+        "risk_description": "Ongoing civil conflicts could create low trust in government intentions for Fayda rollout and possible opposition",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Heavy investment in communications and stakeholder engagement; data minimization principles; exclusion of ethnicity/religion data collection"
+      },
+      {
+        "risk_category": "macroeconomic",
+        "risk_description": "High debt distress, foreign currency shortage, parallel exchange market affecting specialized imports",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Early publication of RFPs, international open bids, direct payment methods, priority designation for project items"
+      },
+      {
+        "risk_category": "institutional",
+        "risk_description": "Limited experience managing World Bank projects, salary ceiling constraints for skilled consultants",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Leveraging firm contracts where possible, continued advocacy for policy change, special attention to inter-agency coordination"
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "No institutional experience with World Bank projects, weak internal audit capacity, procurement capacity limitations",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Recruiting dedicated procurement specialists, pre-prepared bidding documents, training on World Bank procedures"
+      },
+      {
+        "risk_category": "environmental and social",
+        "risk_description": "Potential exclusion of marginalized groups, data breaches, safety risks in conflict areas, ethnic/religious tensions",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Inclusive registration processes, data protection provisions, security risk assessment, comprehensive ESMF and SEP"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate environmental risk",
+      "triggered_safeguard_policies": [
+        "ESS1",
+        "ESS2",
+        "ESS3",
+        "ESS4",
+        "ESS7",
+        "ESS10"
+      ],
+      "grievance_redress_mechanism": "yes - multi-channel GRM including toll-free hotline, SMS, online portal, physical help desks, and mobile app functionality",
+      "gender_considerations": "21% gender gap in current Kebele ID coverage; project targets 50% women/girls registration; tailored communication strategies for women",
+      "vulnerable_groups": [
+        "women and girls",
+        "refugees",
+        "asylum seekers",
+        "stateless persons",
+        "IDPs",
+        "persons with disabilities",
+        "elderly",
+        "historically underserved communities"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project designed to avoid collecting ethnicity/religion data that could fuel discrimination; includes conflict analysis and end-user surveys; special protocols for conflict-affected areas",
+      "fragility_context": "Ethiopia classified as fragile state with ongoing conflicts in northern regions; 3.4 million IDPs; ethnic and religious tensions; limited state presence in remote areas",
+      "security_considerations": "Security risk assessment and management plan required; safety risks for registration workers in conflict areas; coordination with security forces",
+      "displacement_or_refugees": "yes - Ethiopia hosts nearly 1 million refugees (3rd largest in Africa); 3.4 million IDPs; project specifically targets refugee inclusion with US$50 million WHR funding"
+    }
+  }
+}

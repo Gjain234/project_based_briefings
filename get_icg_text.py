@@ -215,7 +215,7 @@ def get_icg_reports(country_name, write=False, override_date=None):
 #     print(df.head())
 #     return df
 
-def get_crisiswatch_last3months(country_name, override_date=None):
+def get_crisiswatch_lastnmonths(country_name, override_date=None, n=3):
     if country_name not in COUNTRY_IDS:
         raise ValueError(f"Country '{country_name}' not found")
 
@@ -224,15 +224,14 @@ def get_crisiswatch_last3months(country_name, override_date=None):
         today = override_date
     else:
         today = datetime.today().date()
-    three_months_ago = today - relativedelta(months=3)
-
-    created_param = "custom" if override_date is not None else "-3+months"
+    n_months_ago = today - relativedelta(months=n)
+    created_param = "custom" if override_date is not None else f"-{n}+months"
 
     url = (
         "https://www.crisisgroup.org/crisiswatch/database"
         f"?location%5B%5D={country_id}"
         f"&crisis_state=&created={created_param}"
-        f"&from_month={three_months_ago.month}&from_year={three_months_ago.year}"
+        f"&from_month={n_months_ago.month}&from_year={n_months_ago.year}"
         f"&to_month={today.month}&to_year={today.year}"
     )
 
@@ -270,8 +269,8 @@ def get_crisiswatch_last3months(country_name, override_date=None):
     # convert to year–month only
     df["year_month"] = df["entry_month"].dt.to_period("M")
 
-    # compute last 3 months based on site logic
-    last_periods = sorted(df["year_month"].unique(), reverse=True)[:3]
+    # compute last n months based on site logic
+    last_periods = sorted(df["year_month"].unique(), reverse=True)[:n]
 
     df = df[df["year_month"].isin(last_periods)]
     df = df.drop(columns=["year_month"])

@@ -1,0 +1,123 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P172284",
+    "guid": 99052323095519647,
+    "node_id": 34067377,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-0611b230-d318-48f2-930a-55190479c46f.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Ethiopia Human Capital Operation",
+      "project_development_objective": "To improve learning outcomes and nutrition services for girls and boys, and to strengthen service delivery and accountability, in all regions including areas affected by conflict, droughts and high levels of refugees",
+      "total_financing": "US$405 million (US$400 million IDA + US$5 million GFF)",
+      "implementation_period": "2023-2028 (5 years)",
+      "beneficiaries": "97 million Ethiopians and 800,000 refugees, with particular focus on 2.2 million people in 29 selected woredas"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "All regions except Addis Ababa",
+        "Tigray",
+        "Afar",
+        "Amhara",
+        "Oromia",
+        "Somali",
+        "Benishangul-Gumuz",
+        "SNNP",
+        "Sidama",
+        "Gambella",
+        "Harari",
+        "Dire Dawa",
+        "South West Ethiopia Peoples"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "yes - Tigray, parts of Afar, Amhara, Oromia and Benishangul-Gumuz affected by conflict; drought-affected areas; high refugee-hosting areas"
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: PforR - Basic Service Delivery",
+        "description": "Support basic service delivery at woreda level through General Purpose Grant and Human Capital Specific Purpose Grant, including for refugees and host communities",
+        "financing": "US$270 million"
+      },
+      {
+        "component_name": "Component 2: IPF - Multisector Interventions and Capacity Building",
+        "description": "Improve human capital outcomes in conflict/drought/refugee-affected areas and strengthen system capacity through technical assistance",
+        "financing": "US$135 million (US$130 million IDA + US$5 million GFF)"
+      },
+      {
+        "component_name": "Component 3: Contingent Emergency Response Component (CERC)",
+        "description": "Zero-dollar component that can be activated for emergency response",
+        "financing": "US$0"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Finance (MOF) through Channel One Programs Coordination Directorate (COPCD)",
+      "coordination_mechanisms": "Steering Committee chaired by State Minister of MOF; Technical Committees at federal, regional and woreda levels; coordination with MOE, MOH, MOA, MOWE, MOWSA, MOPD",
+      "procurement_approach": "World Bank Procurement Regulations for IPF component; government procurement systems for PforR component",
+      "monitoring_and_evaluation": "Semi-annual Joint Review and Implementation Support missions; administrative data through EMIS, DHIS2, UNISE; impact evaluation surveys in SPG woredas"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political",
+        "risk_description": "Political transition, ethnic conflicts, armed conflict in northern Ethiopia, governance challenges",
+        "risk_rating": "high",
+        "mitigation_measures": "Decentralized service delivery, equitable resource allocation, peace agreement implementation monitoring"
+      },
+      {
+        "risk_category": "security",
+        "risk_description": "Ongoing conflict in Tigray, Afar, Amhara regions; violence in western Oromia and Benishangul-Gumuz",
+        "risk_rating": "high",
+        "mitigation_measures": "Flexible implementation arrangements, regional/zonal level management in high-risk areas, security assessments"
+      },
+      {
+        "risk_category": "institutional",
+        "risk_description": "Weak multisectoral coordination, limited woreda capacity for SPG management, staff turnover",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Technical assistance, capacity building, establishment of coordination committees, dedicated planning staff"
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "Limited procurement capacity, weak internal controls, cash management issues, high staff turnover",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Strengthened audit arrangements, procurement training, PFM capacity building, simplified procedures"
+      },
+      {
+        "risk_category": "macroeconomic",
+        "risk_description": "High inflation, foreign exchange shortages, declining tax-to-GDP ratio, debt sustainability concerns",
+        "risk_rating": "high",
+        "mitigation_measures": "Counterpart funding arrangements, macroeconomic monitoring, home-grown economic reform program"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Substantial risk",
+      "triggered_safeguard_policies": [
+        "ESS1",
+        "ESS2",
+        "ESS3",
+        "ESS4",
+        "ESS5",
+        "ESS6",
+        "ESS7",
+        "ESS8",
+        "ESS10"
+      ],
+      "grievance_redress_mechanism": "yes - existing government GRM at woreda level, World Bank GRS available",
+      "gender_considerations": "Focus on girls' secondary education completion, gender-sensitive teacher training, women's participation in planning and budgeting, support for Women Development Groups",
+      "vulnerable_groups": [
+        "refugees",
+        "internally displaced persons",
+        "children with disabilities",
+        "adolescent girls",
+        "drought-affected communities",
+        "conflict-affected populations"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Operation designed to work in conflict-affected areas with flexible implementation arrangements, focus on social cohesion building, peace-building through equitable service delivery",
+      "fragility_context": "Multiple concurrent crises including COVID-19, climate shocks, civil conflict, high inflation, new refugee influxes from Somalia and potential from Sudan",
+      "security_considerations": "Security risk assessments required, implementation may be managed at regional/zonal level in high-risk areas, staff safety protocols",
+      "displacement_or_refugees": "yes - supports 800,000 refugees and host communities, includes refugee integration into national education and health systems, addresses needs of 512,000 drought-induced IDPs"
+    }
+  }
+}
