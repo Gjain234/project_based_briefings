@@ -12,7 +12,7 @@ def get_document_df_path(internal=True):
     Returns:
         Path to the appropriate CSV file
     """
-    if internal:
+    if not internal:
         return "./public_documents_filtered.csv"
     else:
         return "./joined_df_filtered.csv"
