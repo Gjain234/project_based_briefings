@@ -43,7 +43,7 @@ st.sidebar.header("Configuration")
 internal = st.sidebar.checkbox(
     "Internal (World Bank)",
     value=False,
-    help="Use World Bank internal data (public_documents_filtered.csv). Uncheck for external users (joined_df_filtered.csv)"
+    help="Do not select internal unless you are running locally."
 )
 
 available_countries = load_available_countries(internal=internal)
