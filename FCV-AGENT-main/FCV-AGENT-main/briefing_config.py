@@ -36,7 +36,7 @@ ANTHROPIC_RISK_BRIEFING_MODEL = "claude-haiku-4-5"  # Model for legacy risk scan
 MAX_BRIEFING_INPUT_LENGTH = 200000  # Maximum total characters for final briefing input
 MAX_PROJECTS_FOR_BRIEFING = 15  # Maximum number of projects to include in final briefing (prioritized by risk count)
 # API configurations
-ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY_DEV")
 OPENAI_CHAT_API_VERSION = "2025-01-01-preview"
 EMBEDDINGS_MODEL = "text-embedding-3-small"
 EMBEDDINGS_API_VERSION = "2024-10-01-preview"
