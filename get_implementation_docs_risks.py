@@ -4,8 +4,48 @@ import uuid
 import json
 import os
 import hashlib
+import re
 from document_utils import *
 import pandas as pd
+
+def fix_json_string(raw_text):
+    """
+    Attempt to fix common JSON formatting issues from LLM output.
+    
+    Fixes:
+    - Extracts JSON from markdown code blocks
+    - Handles unescaped quotes in string values
+    - Replaces literal newlines with spaces in quoted strings
+    """
+    # Try to extract from markdown code block first
+    if "```json" in raw_text:
+        json_start = raw_text.find("```json") + 7
+        json_end = raw_text.find("```", json_start)
+        if json_end > json_start:
+            raw_text = raw_text[json_start:json_end].strip()
+    
+    # Find JSON object boundaries
+    json_start = raw_text.find("{")
+    json_end = raw_text.rfind("}")
+    if json_start >= 0 and json_end > json_start:
+        raw_text = raw_text[json_start:json_end+1]
+    
+    # Replace literal newlines with spaces within quoted strings
+    # This regex finds quoted strings and replaces internal newlines
+    def replace_newlines_in_strings(text):
+        def replacer(match):
+            # Get the quoted string content
+            content = match.group(1)
+            # Replace newlines and multiple spaces with single space
+            content = content.replace('\n', ' ').replace('\r', ' ')
+            content = re.sub(r' +', ' ', content).strip()
+            return f'"{content}"'
+        # Match quoted strings (handles escaped quotes)
+        return re.sub(r'"((?:[^"\\]|\\.)*)"', replacer, text)
+    
+    raw_text = replace_newlines_in_strings(raw_text)
+    
+    return raw_text
 
 def get_document_cache_key(row):
     """Generate a unique cache key for a document based on project ID, document type, and node ID."""
@@ -35,6 +75,22 @@ def extract_all_realized_fcv_risks(country_document_df, client, country=None):
     
     # Create cache directory if it doesn't exist
     os.makedirs(cache_dir, exist_ok=True)
+    
+    # Check if all expected documents are already cached
+    missing_docs = []
+    for _, row in project_docs_df.iterrows():
+        cache_key = get_document_cache_key(row)
+        cache_path = os.path.join(cache_dir, f"{cache_key}.csv")
+        if not os.path.exists(cache_path):
+            missing_docs.append((row['PROJ_ID_IB'], row['document_type']))
+    
+    if missing_docs:
+        print(f"   ⚠️ {len(missing_docs)} implementation doc(s) not yet cached: ")
+        for proj_id, doc_type in missing_docs[:5]:
+            print(f"      - {proj_id} ({doc_type})")
+        if len(missing_docs) > 5:
+            print(f"      ... and {len(missing_docs) - 5} more")
+        print(f"   Will process all documents to ensure completeness")
 
     for _, row in project_docs_df.iterrows():
         print(f"📄 Processing {row['PROJ_ID_IB']} - {row['document_type']}")
@@ -119,30 +175,42 @@ def extract_realized_fcv_risks_from_doc(row, client):
     message = chain.invoke({"document_text": text})
     raw = (message.content or "").strip()
 
+    # Try multiple approaches to parse JSON
+    parsed = None
+    last_error = None
+    
+    # Approach 1: Direct parse
     try:
         parsed = json.loads(raw)
     except json.JSONDecodeError as e:
-        # Try to extract JSON from markdown code block
-        if "```json" in raw:
-            json_start = raw.find("```json") + 7
-            json_end = raw.find("```", json_start)
-            if json_end > json_start:
-                raw = raw[json_start:json_end].strip()
-        else:
-            # Try to find JSON object boundaries
-            json_start = raw.find("{")
-            json_end = raw.rfind("}")
-            if json_start >= 0 and json_end > json_start:
-                raw = raw[json_start:json_end+1]
-        
+        last_error = e
+        # Approach 2: Clean and retry
         try:
-            parsed = json.loads(raw)
+            cleaned = fix_json_string(raw)
+            parsed = json.loads(cleaned)
         except json.JSONDecodeError as e2:
-            print(f"   ⚠️  JSON parsing failed even after cleanup")
-            print(f"   Error: {str(e2)}")
-            print(f"   Raw output (first 500 chars): {raw[:500]}")
-            # Return empty list if JSON is completely malformed
-            return []
+            last_error = e2
+            # Approach 3: Try extracting just the fcv_risks array
+            try:
+                fcv_start = raw.lower().find('"fcv_risks"')
+                if fcv_start >= 0:
+                    array_start = raw.find("[", fcv_start)
+                    array_end = raw.rfind("]")
+                    if array_start >= 0 and array_end > array_start:
+                        array_str = raw[array_start:array_end+1]
+                        # Try to parse as array directly
+                        fcv_array = json.loads(array_str)
+                        parsed = {"fcv_risks": fcv_array}
+            except json.JSONDecodeError as e3:
+                last_error = e3
+    
+    if parsed is None:
+        print(f"   ⚠️  JSON parsing failed after all cleanup attempts")
+        print(f"   Error: {str(last_error)}")
+        print(f"   Raw output (first 800 chars): {raw[:800]}")
+        print(f"   → Skipping document due to malformed LLM response")
+        # Return empty list if JSON is completely malformed
+        return []
 
     extracted = []
 

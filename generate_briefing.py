@@ -3,6 +3,57 @@ import json
 import re
 import pandas as pd
 
+def restructure_evidence_by_source(pad_risks, implementation_realized_risks_mapped, implementation_realized_risks=None):
+    """
+    Restructure evidence data into a hierarchical format organized by document type, then by project.
+    
+    Returns:
+    {
+        "PAD": {
+            "P123456": [risk1, risk2, ...],
+            "P789012": [risk1, ...]
+        },
+        "ISR": {
+            "P123456": [risk1, ...],
+            "P345678": [risk1, ...]
+        },
+        "Aide Memoire": {
+            "P789012": [risk1, ...]
+        }
+    }
+    
+    This format makes it impossible for the LLM to cite a project-document combination that doesn't exist.
+    """
+    evidence_by_source = {
+        "PAD": {},
+        "ISR": {},
+        "Aide Memoire": {}
+    }
+    
+    # Organize PAD risks by project
+    if len(pad_risks) > 0 and 'PROJ_ID_IB' in pad_risks.columns:
+        for proj_id in pad_risks['PROJ_ID_IB'].unique():
+            project_risks = pad_risks[pad_risks['PROJ_ID_IB'] == proj_id].to_dict('records')
+            evidence_by_source["PAD"][proj_id] = project_risks
+    
+    # Organize implementation risks by project and document type
+    if len(implementation_realized_risks_mapped) > 0 and 'PROJ_ID_IB' in implementation_realized_risks_mapped.columns:
+        for _, row in implementation_realized_risks_mapped.iterrows():
+            proj_id = row['PROJ_ID_IB']
+            doc_type = row.get('doc_type', 'ISR')
+            
+            if doc_type not in evidence_by_source:
+                evidence_by_source[doc_type] = {}
+            
+            if proj_id not in evidence_by_source[doc_type]:
+                evidence_by_source[doc_type][proj_id] = []
+            
+            evidence_by_source[doc_type][proj_id].append(row.to_dict())
+    
+    return evidence_by_source
+
+
+
 def prioritize_projects_by_risk_count(pad_risks, implementation_realized_risks, implementation_realized_risks_mapped, max_projects=15):
     """
     Select top N projects by total risk count (PAD susceptibilities + implementation risks).
@@ -109,7 +160,8 @@ def generate_custom_aligned_briefing(
     implementation_realized_risks,
     implementation_realized_risks_mapped,
     client,
-    custom_prompt=None
+    custom_prompt=None,
+    stream_callback=None
 ):
     """
     Each custom category becomes exactly one paragraph.
@@ -117,12 +169,13 @@ def generate_custom_aligned_briefing(
 
     n_paragraphs = len(custom_categories)
 
+    # Restructure evidence by document type and project
+    evidence_by_source = restructure_evidence_by_source(pad_risks, implementation_realized_risks_mapped, implementation_realized_risks)
+
     evidence = {
         "categories": custom_categories,
         "country_risks": country_risks_df.to_dict(orient="records"),
-        "pad_risks": pad_risks.to_dict(orient="records"),
-        "implementation_realized_risks": implementation_realized_risks.to_dict(orient="records"),
-        "implementation_realized_risks_mapped": implementation_realized_risks_mapped.to_dict(orient="records")
+        "evidence_by_document_type": evidence_by_source
     }
 
     # Use custom prompt if provided, otherwise use default
@@ -132,21 +185,11 @@ def generate_custom_aligned_briefing(
         "Each paragraph MUST correspond to exactly one of the custom categories provided in the evidence.\n"
         "Process the categories in the exact order given.\n\n"
         "For each paragraph:\n"
-        "- Start with the category name (e.g., 'Governance and Institutional Capacity:', 'Service Delivery and Access:', etc.)\n"
-        "- Analyze how this category relates to the country's FCV risks.\n"
-        "- Show how projects are exposed to relevant risks (PAD evidence).\n"
-        "- Show whether these risks are materializing (ISR/Aide Memoire evidence).\n"
-        "- Focus on risks and project evidence that align with this specific category.\n\n"
-        "CRITICAL CITATION RULES:\n"
-        "- PAD citations: Look at 'pad_risks' data. Each entry has 'PROJ_ID_IB'. ONLY cite [PROJ_ID | PAD] if that project appears in pad_risks.\n"
-        "- Implementation citations: Look at 'implementation_realized_risks_mapped' data. Each entry has 'PROJ_ID_IB' and 'doc_type'. ONLY cite the exact doc_type shown (ISR or Aide Memoire).\n"
-        "- NEVER cite a document type that doesn't appear in the evidence for that project.\n"
-        "- If a project only has 'Aide Memoire' in the data, cite [PROJ_ID | Aide Memoire], NOT [PROJ_ID | ISR].\n"
-        "- If a project only appears in implementation_realized_risks_mapped but NOT in pad_risks, do NOT cite [PROJ_ID | PAD].\n"
-        "- Each citation must be in its own bracket pair: [P123456 | PAD] [P123456 | ISR]\n"
-        "- NEVER combine multiple citations with semicolons inside one bracket\n"
-        "- Do NOT create hyperlinks.\n"
-        "- Do NOT invent citations."
+        "- Start with the category name\n"
+        "- Analyze how this category relates to the country's FCV risks\n"
+        "- Show projects' exposure to relevant risks (from PAD evidence)\n"
+        "- Show whether risks are materializing (from ISR/Aide Memoire evidence)\n\n"
+        "Citation format: [PROJ_ID | DOC_TYPE]. Only cite projects that appear in the evidence_by_document_type structure."
     )
 
     prompt = ChatPromptTemplate.from_messages([
@@ -162,11 +205,28 @@ def generate_custom_aligned_briefing(
 
     chain = prompt | client
 
-    message = chain.invoke({
-        "evidence": json.dumps(evidence, indent=2)
-    })
-
-    return (message.content or "").strip()
+    if stream_callback:
+        # Use streaming if callback provided
+        full_content = ""
+        for chunk in chain.stream({
+            "evidence": json.dumps(evidence, indent=2)
+        }):
+            if hasattr(chunk, 'content'):
+                content = chunk.content
+            else:
+                content = str(chunk)
+            
+            if content:
+                full_content += content
+                stream_callback(content)
+        
+        return full_content.strip()
+    else:
+        # Non-streaming (original behavior)
+        message = chain.invoke({
+            "evidence": json.dumps(evidence, indent=2)
+        })
+        return (message.content or "").strip()
 
 
 def generate_risk_aligned_briefing(
@@ -175,12 +235,15 @@ def generate_risk_aligned_briefing(
     implementation_realized_risks_mapped,
     n_paragraphs,
     client,
-    custom_prompt=None
+    custom_prompt=None,
+    stream_callback=None
 ):
+    # Restructure evidence by document type and project
+    evidence_by_source = restructure_evidence_by_source(pad_risks, implementation_realized_risks_mapped)
+
     evidence = {
         "country_risks": country_risks_df.to_dict(orient="records"),
-        "pad_risks": pad_risks.to_dict(orient="records"),
-        "implementation_realized_risks_mapped": implementation_realized_risks_mapped.to_dict(orient="records")
+        "evidence_by_document_type": evidence_by_source
     }
 
     # Use custom prompt if provided, otherwise use default
@@ -189,25 +252,11 @@ def generate_risk_aligned_briefing(
         f"Write exactly {n_paragraphs} paragraphs.\n"
         "Each paragraph must correspond to a distinct country-level FCV risk.\n\n"
         "For each paragraph:\n"
-        "- Describe the country-level risk clearly without using technical risk IDs.\n"
-        "- Explain how projects are susceptible (PAD evidence).\n"
-        "- Explain whether risks are materializing (ISR/Aide evidence).\n"
-        "- Integrate both forward-looking and realized risks.\n\n"
-        "Important rules:\n"
-        "- Do NOT mention risk_id or any technical identifiers (e.g., DJI_R1, NIG_R9).\n"
-        "- Describe risks in natural language for senior leadership.\n"
-        "- Focus on substance, not reference codes.\n\n"
-        "CRITICAL CITATION RULES:\n"
-        "- PAD citations: Look at 'pad_risks' data. Each entry has 'PROJ_ID_IB'. ONLY cite [PROJ_ID | PAD] if that project appears in pad_risks.\n"
-        "- Implementation citations: Look at 'implementation_realized_risks_mapped' data. Each entry has 'PROJ_ID_IB' and 'doc_type'. ONLY cite the exact doc_type shown (ISR or Aide Memoire).\n"
-        "- NEVER cite a document type that doesn't appear in the evidence for that project.\n"
-        "- If a project only has 'Aide Memoire' in the data, cite [PROJ_ID | Aide Memoire], NOT [PROJ_ID | ISR].\n"
-        "- If a project only appears in implementation_realized_risks_mapped but NOT in pad_risks, do NOT cite [PROJ_ID | PAD].\n"
-        "- Each citation must be in its own bracket pair: [P123456 | PAD] [P123456 | ISR]\n"
-        "- NEVER combine multiple citations with semicolons inside one bracket\n"
-        "- Do NOT create hyperlinks.\n"
-        "- Do NOT invent citations.\n"
-        "- Write analytically and concisely."
+        "- Describe the country-level risk clearly without technical risk IDs\n"
+        "- Explain how projects are susceptible (from PAD evidence)\n"
+        "- Explain whether risks are materializing (from ISR/Aide evidence)\n"
+        "- Integrate both forward-looking and realized risks\n\n"
+        "Citation format: [PROJ_ID | DOC_TYPE]. Only cite projects that appear in the evidence_by_document_type structure."
     )
 
     prompt = ChatPromptTemplate.from_messages([
@@ -223,11 +272,28 @@ def generate_risk_aligned_briefing(
 
     chain = prompt | client
 
-    message = chain.invoke({
-        "evidence": json.dumps(evidence, indent=2)
-    })
-
-    return (message.content or "").strip()
+    if stream_callback:
+        # Use streaming if callback provided
+        full_content = ""
+        for chunk in chain.stream({
+            "evidence": json.dumps(evidence, indent=2)
+        }):
+            if hasattr(chunk, 'content'):
+                content = chunk.content
+            else:
+                content = str(chunk)
+            
+            if content:
+                full_content += content
+                stream_callback(content)
+        
+        return full_content.strip()
+    else:
+        # Non-streaming (original behavior)
+        message = chain.invoke({
+            "evidence": json.dumps(evidence, indent=2)
+        })
+        return (message.content or "").strip()
 
 def generate_sector_aligned_briefing(
     country_risks_df,
@@ -235,33 +301,30 @@ def generate_sector_aligned_briefing(
     implementation_realized_risks,
     n_paragraphs,
     client,
-    custom_prompt=None
+    custom_prompt=None,
+    stream_callback=None
 ):
+    # For sector mode, create mapped version from implementation_realized_risks
+    implementation_realized_risks_mapped = implementation_realized_risks if len(implementation_realized_risks) > 0 else pd.DataFrame()
+
+    # Restructure evidence by document type and project
+    evidence_by_source = restructure_evidence_by_source(pad_risks, implementation_realized_risks_mapped)
 
     evidence = {
         "country_risks": country_risks_df.to_dict(orient="records"),
-        "pad_risks": pad_risks.to_dict(orient="records"),
-        "implementation_realized_risks": implementation_realized_risks.to_dict(orient="records"),
+        "evidence_by_document_type": evidence_by_source
     }
 
     # Use custom prompt if provided, otherwise use default
     system_prompt = custom_prompt if custom_prompt else (
         "You are writing a sector-aligned FCV portfolio briefing.\n\n"
         f"Write exactly {n_paragraphs} paragraphs.\n"
-        "Each paragraph should correspond to a major sectoral cluster "
-        "that you infer from the evidence (e.g., health, infrastructure, governance, social protection).\n\n"
+        "Each paragraph should correspond to a major sectoral cluster (e.g., health, infrastructure, governance, social protection).\n\n"
         "For each paragraph:\n"
-        "- Identify the sector cluster clearly in the first sentence.\n"
-        "- Integrate country risk context.\n"
-        "- Integrate PAD risks.\n"
-        "- Integrate realized implementation risks.\n\n"
-        "Citation rules:\n"
-        "- Use [PROJ_ID | PAD] for PAD evidence.\n"
-        "- Use [PROJ_ID | ISR] or [PROJ_ID | Aide Memoire] for implementation evidence.\n"
-        "- Each citation must be in its own bracket pair\n"
-        "- NEVER combine citations with semicolons\n"
-        "- Do NOT create hyperlinks.\n"
-        "- Do NOT invent citations."
+        "- Identify the sector cluster clearly\n"
+        "- Integrate country risk context\n"
+        "- Integrate PAD risks and realized implementation risks\n\n"
+        "Citation format: [PROJ_ID | DOC_TYPE]. Only cite projects that appear in the evidence_by_document_type structure."
     )
 
     prompt = ChatPromptTemplate.from_messages([
@@ -277,11 +340,28 @@ def generate_sector_aligned_briefing(
 
     chain = prompt | client
 
-    message = chain.invoke({
-        "evidence": json.dumps(evidence, indent=2)
-    })
-
-    return (message.content or "").strip()
+    if stream_callback:
+        # Use streaming if callback provided
+        full_content = ""
+        for chunk in chain.stream({
+            "evidence": json.dumps(evidence, indent=2)
+        }):
+            if hasattr(chunk, 'content'):
+                content = chunk.content
+            else:
+                content = str(chunk)
+            
+            if content:
+                full_content += content
+                stream_callback(content)
+        
+        return full_content.strip()
+    else:
+        # Non-streaming (original behavior)
+        message = chain.invoke({
+            "evidence": json.dumps(evidence, indent=2)
+        })
+        return (message.content or "").strip()
 
 def generate_briefing(
     mode,
@@ -294,7 +374,8 @@ def generate_briefing(
     country_document_df,
     custom_categories=None,
     custom_prompt=None,
-    max_projects=None
+    max_projects=None,
+    stream_callback=None
 ):
     """
     Unified briefing generator.
@@ -315,6 +396,10 @@ def generate_briefing(
     
     max_projects:
         Optional limit on number of projects (prioritized by risk count). If None, includes all projects.
+    
+    stream_callback:
+        Optional callback function to receive streamed text chunks as they are generated.
+        Called with each incoming text chunk (str).
     """
     
     # Prioritize projects if max_projects is specified
@@ -334,7 +419,8 @@ def generate_briefing(
             implementation_realized_risks_mapped=implementation_realized_risks_mapped,
             n_paragraphs=n_paragraphs,
             client=client,
-            custom_prompt=custom_prompt
+            custom_prompt=custom_prompt,
+            stream_callback=stream_callback
         )
 
     elif mode == "sector":
@@ -344,7 +430,8 @@ def generate_briefing(
             implementation_realized_risks=implementation_realized_risks,
             n_paragraphs=n_paragraphs,
             client=client,
-            custom_prompt=custom_prompt
+            custom_prompt=custom_prompt,
+            stream_callback=stream_callback
         )
 
     elif mode == "custom":
@@ -358,7 +445,8 @@ def generate_briefing(
             implementation_realized_risks=implementation_realized_risks,
             implementation_realized_risks_mapped=implementation_realized_risks_mapped,
             client=client,
-            custom_prompt=custom_prompt
+            custom_prompt=custom_prompt,
+            stream_callback=stream_callback
         )
 
     else:

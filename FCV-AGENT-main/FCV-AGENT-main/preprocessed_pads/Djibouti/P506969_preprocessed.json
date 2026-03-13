@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P506969",
+    "guid": 99022525185016955,
+    "node_id": 34459919,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-87c444de-4797-4bf9-b654-4932a7fb0112.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Integrated Community Resilience Project (ICRP)",
+      "project_development_objective": "To improve access to basic services and safety nets, and enhance economic opportunities for vulnerable communities, including refugees and host communities in target areas",
+      "total_financing": "US$31 million equivalent (SDR 23.8 million)",
+      "implementation_period": "March 2025 - June 2029",
+      "beneficiaries": "74,800 direct beneficiaries, including 12,860 refugees (39.4% of total refugee population) and 35,900 host community residents (4.5% of total host population)"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Dikhil region",
+        "Obock",
+        "Ali Sabieh (including Ali Addeh and Holl Holl refugee villages)",
+        "Djibouti-Ville",
+        "All six regions for social safety nets"
+      ],
+      "coverage_type": "national for Component 1, regional/local for Component 2",
+      "fragile_or_conflict_affected_areas": "partial - hosts 32,643 registered refugees and asylum-seekers (3% of population) primarily from Somalia, Ethiopia, and Yemen"
+    },
+    "key_components": [
+      {
+        "component_name": "Social Safety Net System",
+        "description": "Cash for Nutrition transfers, Social Behavior Change Communication, Financial Inclusion Services, and strengthening Social Registry",
+        "financing": "US$15.0 million (including US$3.9 million WHR)"
+      },
+      {
+        "component_name": "Access to Socio-Economic Infrastructure and Development of Economic Opportunities",
+        "description": "Development of socio-economic infrastructure, productive facilities, and economic opportunities including income-generating activities",
+        "financing": "US$14.0 million (including US$4.5 million WHR)"
+      },
+      {
+        "component_name": "Project Management",
+        "description": "Overall management, coordination, monitoring and evaluation of project activities",
+        "financing": "US$2.0 million (including US$0.6 million WHR)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Social Affairs and Solidarity (MASS) for Component 1, Djiboutian Social Development Agency (ADDS) for Component 2",
+      "coordination_mechanisms": "Dual implementation arrangement with separate designated accounts, steering committee for infrastructure project selection",
+      "procurement_approach": "World Bank Procurement Regulations September 2023, using STEP online tool, mostly national market approach",
+      "monitoring_and_evaluation": "Results Framework with PDO and intermediate indicators, M&E teams in both PIUs, beneficiary assessments, technical audits, midterm review in 2027"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political and governance",
+        "risk_description": "Complexities of managing diverse interests and evolving governance landscape, coordination challenges across stakeholders",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Enhance coordination and alignment across stakeholders at community and central levels"
+      },
+      {
+        "risk_category": "macroeconomic",
+        "risk_description": "Vulnerability to external shocks, fluctuations in global trade, regional instability, dependency on imports, high public debt",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Emphasize diversifying economic activities and building resilience to external shocks"
+      },
+      {
+        "risk_category": "institutional capacity",
+        "risk_description": "Dual implementation arrangement between MASS and ADDS poses coordination challenges, limited experience with this arrangement",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Targeted capacity-building for MASS and ADDS, close monitoring and World Bank support"
+      },
+      {
+        "risk_category": "technical design",
+        "risk_description": "Integrated nature requiring different implementation approaches, geographic targeting, strong linkages between components",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Close coordination and synchronized implementation, tailored capacity development"
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "Recurrent delays in procurement processing and reporting, dual implementation challenges",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Close follow-up and support from World Bank, procurement progress monitoring, regular implementation support missions"
+      },
+      {
+        "risk_category": "environmental and social",
+        "risk_description": "Water use, waste generation, contamination risks, exclusion, social conflict, SEA/SH, labor risks",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Strong management frameworks, active stakeholder engagement, effective grievance management"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Substantial risk",
+      "triggered_safeguard_policies": [
+        "ESS1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS2: Labor and Working Conditions",
+        "ESS3: Resource Efficiency and Pollution Prevention",
+        "ESS4: Community Health and Safety",
+        "ESS6: Biodiversity Conservation",
+        "ESS8: Cultural Heritage",
+        "ESS10: Stakeholder Engagement"
+      ],
+      "grievance_redress_mechanism": "yes - accessible, responsive, transparent, inclusive grievance mechanism for both implementing agencies, multiple access channels including free channels",
+      "gender_considerations": "Women targeted for 75% of cash transfers, 60% of financial inclusion beneficiaries, focus on maternal health, women's economic empowerment through GEAs",
+      "vulnerable_groups": [
+        "refugees",
+        "women",
+        "youth",
+        "persons with disabilities",
+        "pregnant women",
+        "children",
+        "female-headed households"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project addresses needs of both refugees and host communities to strengthen social cohesion, includes conflict-sensitive targeting and implementation approaches",
+      "fragility_context": "High poverty rates (39% extreme poverty), climate vulnerability, limited economic diversification, heavy reliance on imports, exposure to regional instability",
+      "security_considerations": "Remote locations pose implementation challenges, SEA/SH risks in refugee-hosting areas, need for secure project sites and worker safety",
+      "displacement_or_refugees": "yes - 32,643 registered refugees and asylum-seekers (3% of population) from Somalia, Ethiopia, Yemen; 85% in settlements, 15% in urban areas; project specifically targets refugee integration and host community support"
+    }
+  }
+}

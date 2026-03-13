@@ -1,0 +1,145 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P172770",
+    "guid": 99040008102234128,
+    "node_id": 33881409,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-1e05d46a-942a-40a9-b99e-73b57a786469.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Reduction of Unintentional POPs through Waste Management in a Circular Economy",
+      "project_development_objective": "To reduce UPOPs emissions and improve solid waste management in selected serviced zones",
+      "total_financing": "US$ 8.86 million (GEF grant)",
+      "implementation_period": "2022-2026 (4 years)",
+      "beneficiaries": "Direct beneficiaries: approximately 470,000 people in 2 selected serviced zones (Union of Municipalities of Tyre and Union of Municipalities of Jurd El Kaiteh); approximately 150,000 people living within 5km radius of open dumpsites. Indirect beneficiaries: Lebanon's population overall through policy and institutional support"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Union of Municipalities of Tyre (South Lebanon)",
+        "Municipality of Abbasiyeh (South Lebanon)",
+        "Union of Municipalities of Iqlim el Touffah (Nabatieh)",
+        "Union of Municipalities of Sahel el Zahrani (South Lebanon)",
+        "Union of Municipalities of Jurd El Kaiteh (Akkar, North Lebanon)"
+      ],
+      "coverage_type": "Regional/Local - 5 shortlisted serviced zones with implementation in 2-3 zones; national policy support",
+      "fragile_or_conflict_affected_areas": "Yes - Lebanon is classified as a fragile state. The country faces compounded crises including severe economic and financial crisis (GDP contracted 58.1% from 2019-2021), Port of Beirut explosion (August 2020), COVID-19 pandemic, and hosts the highest number of displaced persons per capita (Syrian refugees and Palestinian displaced persons). Environmental governance is severely weakened with 30% loss of Ministry of Environment technical staff since 2019 and 52% budget cuts in 2020"
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Strengthen Regulatory Framework and Capacities for Sustainable Waste Management in the Circular Economy",
+        "description": "Policy framework and capacity building for circular economy in waste management; long-term planning including updating National Implementation Plan (NIP) for POPs and Master Plan for Closure and Rehabilitation of Uncontrolled Dumpsites; improvement of UPOPs management through mapping vulnerable populations, assessing UPOPs in sediments, and establishing national database for POPs and contaminated sites",
+        "financing": "US$ 1.94 million (GEF); US$ 2.2 million leveraged government funding"
+      },
+      {
+        "component_name": "Component 2: Demonstrations on 3R Practices and BATs/BEPs at Open Dumpsites in Selected Geographic Areas",
+        "description": "Design and implementation of 3R practices (reduce, reuse, recycle) in key waste streams in 2-3 serviced zones; implementation of Best Available Techniques (BAT) and Best Environmental Practices (BEP) at up to 5 selected open dumpsites to eliminate open burning; includes waste characterization, sorting at source, composting, recycling facility upgrades, and dumpsite rehabilitation/closure",
+        "financing": "US$ 6.0 million (GEF); US$ 56.0 million leveraged (government budget for SW facilities and EU TaDWIR project)"
+      },
+      {
+        "component_name": "Component 3: Project Monitoring and Evaluation",
+        "description": "Implementation of M&E plan including recruitment of M&E experts (social/gender, environmental), technical auditor, financial auditor, and independent evaluators; monitoring of PDO indicators, intermediate results, and GEF core indicators; mid-term and final evaluations",
+        "financing": "US$ 0.5 million (GEF); US$ 1.0 million leveraged"
+      },
+      {
+        "component_name": "Component 4: Project Management",
+        "description": "Establishment and operation of Project Management Unit (PMU) at Ministry of Environment; recruitment of project manager, financial officer, procurement officer, and operational costs",
+        "financing": "US$ 0.42 million (GEF); US$ 2.8 million leveraged government funding"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Environment (MoE) as primary implementing agency; will establish Project Management Unit (PMU) with technical, financial, and procurement specialists; will engage UN Agency (UNOPS or other UN agency to be selected) to implement part of activities under Components 1, 2, and 3 through standard output agreement",
+      "coordination_mechanisms": "Project Steering Committee (PSC) to be established including Ministry of Environment, Ministry of Industry, Ministry of Public Health, Ministry of Interior and Municipalities, Ministry of Finance, Ministry of Economy and Trade, OMSAR, CDR, and other stakeholders; Technical Committee for circular economy initiatives including government, private sector, academia, and civil society; coordination with local authorities, municipalities, unions of municipalities, NGOs, and private sector operators",
+      "procurement_approach": "World Bank Procurement Framework (November 2020); use of Standard Procurement Documents; prior review thresholds set at high-risk level; advance procurement allowed; UN Agency single-sourcing permitted; NGO engagement for implementation; Systematic Tracking of Exchanges in Procurement (STEP) system required; Procurement Plan to be updated regularly",
+      "monitoring_and_evaluation": "Semi-annual progress reports on Results Framework indicators; quarterly Unaudited Interim Financial Reports (IFRs) and annual Project Financial Statements (PFS); independent external audit annually; technical auditor to validate services and activities; mid-term review at year 2-3; final evaluation at project completion; World Bank implementation support missions twice yearly; M&E team including social/gender specialist and environmental specialist; monitoring of GEF core indicators and gender-disaggregated data"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Political and governance instabilities may disrupt government workflow and project implementation; weak environmental governance with chronically reduced Ministry of Environment budget and staff capacity",
+        "risk_rating": "High",
+        "mitigation_measures": "Close monitoring of political developments; flexible implementation arrangements with options to outsource/hire capacity; engagement with implementing partners; strict screening and monitoring for transparency and accountability; World Bank coordination with development partners"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Lebanon facing most severe financial and economic crisis in modern history; Lebanese Pound depreciated over 90% since 2019; rising inflation; potential further deterioration affecting government budget and counterpart contributions; currency devaluation risks",
+        "risk_rating": "High",
+        "mitigation_measures": "Preserve purchasing power of project funds by maximizing US dollar value; regular review of benefit amounts in local currency; involvement of UN Agency to manage disbursements in US dollars; project design allows improvements in selected zones with local mobilization even if central budget challenges occur; solid waste management remains government priority for public health; government expected to maintain services despite crisis"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Weak regulatory framework and technical capacity of institutions for solid waste management; sector governance challenges with different institutional arrangements making coordination difficult",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Component 1 supports strengthening policy and regulatory framework; coordination with development agencies, NGOs, and civil society; establishment of Solid Waste Management Authority (SWMA) per ISWM Law 80/2018; close coordination with other World Bank projects (Lake Qaraoun, Beirut Critical Environment Recovery)"
+      },
+      {
+        "risk_category": "Technical Design",
+        "risk_description": "Project will not finance high-risk activities; uses commercially available 3R practices and BAT/BEP recommended by Stockholm Convention and EU standards",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "Focus on improvements (upgrading) of existing facilities using technically proven and widely applied solutions; investments based on waste characterization and site assessments"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "Ministry of Environment has sound experience with World Bank projects but faces serious staffing challenges due to budgetary constraints; 30% staff loss since 2019; limited capacity to maintain adequate staffing; necessity to hire UN Agency for significant parts of project",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Establishment of Project Steering Committee with key stakeholders; recruitment of qualified PMU staff; training and hands-on support from World Bank; engagement of UN Agency with capacity and country experience; capacity building activities; knowledge transfer to ensure sustainability"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Ministry of Environment has limited human resources and fiduciary capacities; possible delays in fund transfers from Ministry of Finance due to Court of Accounts prior review; MoE lacks comprehensive FM procedures covering Bank requirements; no accounting software; continuing LBP devaluation; Court of Accounts lacks human resources for timely audits",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Establishment of dedicated PMU with qualified financial officer; recruitment of technical auditor; preparation of Project Operations Manual with FM chapter; use of ring-fenced accounting system with excel spreadsheets; opening segregated project account in USD at Central Bank; quarterly IFRs within 45 days; annual independent external audit; coordination with Ministry of Finance and Court of Accounts for swift fund transfers; high advance ceiling for Designated Account; training on Bank FM procedures"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Environmental risks (substantial): possible leachate migration, gas emissions, contamination of soil/water from dumpsite rehabilitation, continuation of uncontrolled disposal, erosion, air emissions/noise from machinery, disruption of waste sorting facilities, traffic risks, household nuisance. Social risks (substantial): local resistance due to NIMBY syndrome, community health and safety concerns, potential labor-induced sexual abuse/exploitation, exclusion of informal waste pickers, citizen mistrust, livelihood impacts on waste pickers, gender-related concerns",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Environmental and Social Management Framework (ESMF) prepared and disclosed; Stakeholder Engagement Plan (SEP) with three stakeholder categories; Livelihood Resettlement Plan (LMP) and Resettlement Policy Framework (RPF) to be prepared; grievance mechanism with confidentiality and anonymity; codes of conduct for project workers; awareness-raising campaigns; gender-sensitive activities; consultation with vulnerable groups including waste pickers; SEA/SH risk mitigation measures; recruitment of environmental and social specialists in PMU; continuous monitoring of E&S instruments"
+      },
+      {
+        "risk_category": "Stakeholders",
+        "risk_description": "Circular economy requires multiple stakeholders' collaboration across waste value chains; need for coordination among collection, recycling, and upstream production industries",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "Substantial managerial and technical training under Component 1; pro-active and inclusive citizen engagement process; inclusive communications and stakeholder engagement plan; establishment of Technical Committee with multi-stakeholder representation; knowledge and learning events; engagement with private sector, NGOs, and civil society"
+      },
+      {
+        "risk_category": "Other",
+        "risk_description": "COVID-19 pandemic instability could lead to lockdowns delaying field activities; pandemic could negatively impact mobilization of international experts and companies; potential impacts from Ukraine war on cereal imports affecting food security",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Flexibility in implementation timeline; virtual engagement options; contingency planning for pandemic-related disruptions; monitoring of geopolitical developments"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Substantial environmental risk classification",
+      "triggered_safeguard_policies": [
+        "Environmental and Social Standard 1 (ESS1): Assessment and Management of Environmental and Social Risks and Impacts",
+        "Environmental and Social Standard 2 (ESS2): Stakeholder Engagement and Information Disclosure",
+        "Environmental and Social Standard 3 (ESS3): Labor and Working Conditions",
+        "Environmental and Social Standard 4 (ESS4): Resource Efficiency and Pollution Prevention and Management",
+        "Environmental and Social Standard 5 (ESS5): Community Health and Safety",
+        "Environmental and Social Standard 6 (ESS6): Land Acquisition, Restrictions on Land Use and Involuntary Resettlement"
+      ],
+      "grievance_redress_mechanism": "Yes - Project-level grievance mechanism established with principles of confidentiality, anonymity, and data privacy; multiple uptake channels; specified timelines for resolution; referral pathways for SEA/SH complaints; appeals procedures; grievance log for documentation; World Bank Grievance Redress Service (GRS) also available; World Bank Inspection Panel available for complaints about Bank non-compliance",
+      "gender_considerations": "Gender analysis conducted; Gender Action Plan (GAP) developed as living document; gender-sensitive regulatory instruments and recommendations; gender-sensitive Technical Committee with at least 35% women; gender-disaggregated data collection; women's participation in consultations (minimum 30%); support for women-led industries and MSMEs in recycling sector; equal access to green financing; gender-inclusive M&E framework; separate meetings for men and women to collect feedback; attention to safety of women in project activities; confidential reporting mechanisms for GBV/harassment; linkages with women networks; recognition of women's role in waste generation and household waste management; addressing gender gaps in economic participation and decision-making in waste sector",
+      "vulnerable_groups": [
+        "Informal waste pickers and waste workers",
+        "Women and women-headed households",
+        "Refugees (Syrian and Palestinian)",
+        "Poor and low-income households",
+        "Elderly persons",
+        "Persons with disabilities",
+        "Illiterate populations",
+        "Communities living near open dumpsites (within 5km radius)",
+        "Populations near schools, hospitals, and other vulnerable facilities",
+        "Communities in coastal areas vulnerable to climate change impacts"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project addresses environmental degradation and public health impacts from waste mismanagement which are exacerbated by fragility context. Project design includes conflict-sensitive approaches: (1) focus on environmental services critical for public health and social stability; (2) inclusive stakeholder engagement to build consensus and reduce tensions; (3) support for decentralization of waste management to strengthen local governance; (4) gender-inclusive approach recognizing women's vulnerability in fragile contexts; (5) grievance mechanisms to address community concerns; (6) coordination with development partners to ensure coherence; (7) knowledge management to strengthen institutional capacity and coordination",
+      "fragility_context": "Lebanon classified as fragile state facing compounded crises: (1) Severe economic and financial crisis since 2019 with 58.1% GDP contraction (2019-2021); (2) Port of Beirut explosion (August 2020) killing 217, wounding 6,000, displacing 300,000; (3) COVID-19 pandemic and lockdowns; (4) Hosts highest number of displaced persons per capita - Syrian refugees and Palestinian displaced persons constitute 30% of population; (5) Environmental governance severely weakened - Ministry of Environment budget cut 52% in 2020, 30% staff loss since 2019; (6) Chronic weak environmental governance and political instability preventing implementation of reform agenda; (7) Worsening poverty and service delivery collapse; (8) Environmental services at risk of collapse due to currency depreciation and insufficient financing; (9) Over 85% of population lives in urban coastal areas vulnerable to sea level rise and flooding; (10) Waste management sector in critical condition with limited facility operations and increased open dumping",
+      "security_considerations": "Project operates in context of political instability and weak state capacity. Security considerations include: (1) Potential for community resistance to waste facilities (NIMBY syndrome) requiring careful stakeholder engagement; (2) Risk of labor-induced sexual abuse/exploitation in remote project areas requiring codes of conduct and oversight; (3) Potential for fraud and corruption in fragile political environment requiring strict screening and monitoring; (4) Limited market response to work opportunities due to economic crisis; (5) Coordination challenges with multiple government agencies and local authorities; (6) Need for transparent and accountable implementation to build citizen trust; (7) Potential for project activities to be disrupted by political developments or security incidents",
+      "displacement_or_refugees": "Yes - significant displacement and refugee populations: (1) Lebanon hosts highest number of displaced persons per capita globally; (2) Syrian refugees constitute approximately 15% of population (estimated 1+ million); (3) Palestinian displaced persons also present; (4) Refugees and displaced persons generate approximately 15% of total waste (estimated 1,050 tons/day of 7,000 tons/day pre-crisis); (5) Project beneficiaries include refugee and displaced populations in selected serviced zones; (6) Project addresses environmental impacts affecting refugee and host communities; (7) Waste pickers (informal sector) may include refugees and vulnerable migrants; (8) Project includes livelihood considerations for informal waste pickers through formalization efforts; (9) Resettlement Policy Framework (RPF) to be prepared to address potential livelihood impacts on vulnerable groups including waste pickers; (10) Gender analysis notes Syrian women refugees engaged in waste sorting facilities (limited cases); (11) Project design includes attention to needs of vulnerable populations including refugees in community consultations and benefit distribution"
+    }
+  }
+}

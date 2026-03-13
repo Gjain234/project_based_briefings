@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P151294",
+    "guid": 99060002022332354,
+    "node_id": 33993630,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=P151294-19342f7d-f9a1-4a4e-9919-745b154e7011.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Oromia Forested Landscape Program – Emission Reduction Project",
+      "project_development_objective": "The project will generate measured, reported and verified Emissions Reductions (ER) from reduced deforestation, forest degradation, enhancement of forest carbon stocks (REDD+), agriculture and other land use sectors that meet the GHG accounting requirements of the BioCF ISFL in the Oromia State and will distribute ER payments in accordance with an agreed benefit sharing plan.",
+      "total_financing": "US$61.95 million (US$60 million ERPA + US$1.95 million grants)",
+      "implementation_period": "January 2023 - June 2028",
+      "beneficiaries": "400,000 people living in communities adjacent to forests, 2,000 communities, 25,000 people in registered cooperatives, 10,000 smallholder farmers"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Oromia Regional State",
+        "West Wollega",
+        "Kelem Wollega",
+        "Ilubabor",
+        "Bale",
+        "Guji",
+        "Jimma",
+        "East/West Hararghe"
+      ],
+      "coverage_type": "regional",
+      "fragile_or_conflict_affected_areas": "yes - ongoing instability in western Wollega cluster zone, ethnic conflicts, OLF-Shane operations, territorial disputes with Somali region"
+    },
+    "key_components": [
+      {
+        "component_name": "Emission Reductions payments distributed in accordance with agreed Benefit Sharing Plan",
+        "description": "Purchase of emission reduction credits and distribution of net revenues according to benefit sharing plan",
+        "financing": "US$60 million (ERPA)"
+      },
+      {
+        "component_name": "Comprehensive Measurement, reporting and verification (MRV) system and program management including Safeguards Management system",
+        "description": "Program management, E&S standards implementation, and improvement of MRV system for livestock sector",
+        "financing": "US$1.95 million (PROGREEN US$1.2M + ISFL US$0.75M)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ethiopia Forest Development (EFD) with Oromia Environmental Protection Authority (OEPA) and Oromia REDD+ Coordination Unit (ORCU)",
+      "coordination_mechanisms": "Oromia Regional State Vice-President chairs OFLP Steering Committee, multisector coordination through Rural Development Cluster",
+      "procurement_approach": "World Bank Procurement Regulations for IPF, national procedures for certain activities",
+      "monitoring_and_evaluation": "Biannual monitoring reports, third-party verification, MRV system for forest and livestock sectors"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political",
+        "risk_description": "Unstable political situation, social unrest, conflict in Tigray spreading to other regions including Oromia, ethnic tensions and violence",
+        "risk_rating": "high",
+        "mitigation_measures": "Framework approach allowing flexibility, remote monitoring, strategic communication, enhanced transparency, security management plan"
+      },
+      {
+        "risk_category": "security",
+        "risk_description": "OLF-Shane operations in West/Kellem Wollega, ethnic violence, territorial disputes, civilian casualties and displacement",
+        "risk_rating": "high",
+        "mitigation_measures": "Security risk assessment conducted, proportionate security management plan developed and disclosed"
+      },
+      {
+        "risk_category": "institutional",
+        "risk_description": "Limited institutional capacity, multisectoral coordination challenges, staff turnover, weak enforcement",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Capacity building, grants for operational costs, coordination platforms, training programs"
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "New benefit sharing system, delays in MRV activities, absence of legal framework for ER ownership, weak procurement capacity",
+        "risk_rating": "substantial",
+        "mitigation_measures": "BSP operational manual, legal framework development, procurement training, close supervision"
+      },
+      {
+        "risk_category": "environmental and social",
+        "risk_description": "Jurisdictional scale implementation, fragile environment, complex social relationships, potential for elite capture, GBV risks",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Updated ESMF, SESA, RPF, SEP, LMP, ESCP, GBV Action Plan, grievance redress mechanism, third-party monitoring"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Substantial risk",
+      "triggered_safeguard_policies": [
+        "ESS1: Assessment and Management of Environmental and Social Risks",
+        "ESS2: Stakeholder Engagement",
+        "ESS3: Labor and Working Conditions",
+        "ESS4: Resource Efficiency and Pollution Prevention",
+        "ESS5: Community Health and Safety",
+        "ESS6: Land Acquisition and Involuntary Resettlement",
+        "ESS7: Biodiversity Conservation",
+        "ESS8: Indigenous Peoples/Traditional Communities",
+        "ESS9: Cultural Heritage"
+      ],
+      "grievance_redress_mechanism": "yes - project-level GRM established, strengthened during implementation, separate GBV GRM guidelines",
+      "gender_considerations": "Gender action plan developed, 60% of cooperative members targeted to be women, specific attention to women-headed households, gender mainstreaming guidelines",
+      "vulnerable_groups": [
+        "forest-dependent communities",
+        "pastoralists",
+        "women",
+        "youth",
+        "elderly",
+        "disabled persons",
+        "ethnic minorities",
+        "orphans",
+        "pregnant and lactating mothers"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project acknowledges nexus of FCV, natural resource use, and climate change. Addresses root causes affecting livelihoods and contributing to conflicts. Framework approach allows flexibility based on security situation.",
+      "fragility_context": "Ethiopia experiencing historic transition with new uncertainties, conflicts, and insecurities. Long-standing grievances exacerbated by climate change, resource competition, ethnic tensions, and governance issues.",
+      "security_considerations": "Security management plan developed and disclosed. Regular security risk assessments. Remote monitoring capabilities. Strategic communication and outreach. Enhanced transparency and citizen engagement.",
+      "displacement_or_refugees": "yes - significant internal displacement due to conflicts, ethnic violence, and forced displacement of people. Project areas affected by population movements and territorial disputes."
+    }
+  }
+}

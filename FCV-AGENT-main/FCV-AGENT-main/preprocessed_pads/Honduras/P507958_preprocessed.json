@@ -1,0 +1,140 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P507958",
+    "guid": 99062025085569175,
+    "node_id": 40023431,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-16ccfa88-c5fd-4b6a-acfc-b69c54b5e6ac.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Honduras Resilient Management For La Ceiba - Puerto Castilla Road Corridor Project",
+      "project_development_objective": "To improve the accessibility, climate-resiliency, safety and management of the CA-13 corridor between La Ceiba and Puerto Castilla.",
+      "total_financing": "US$176 million (US$100 million IDA credit + US$76 million from FONPRODE/Spanish Government)",
+      "implementation_period": "8 years (July 2025 - December 2033)",
+      "beneficiaries": "Approximately 615,000 people (53.4% women), primarily in departments of Atlántida and Colón on Honduras's Caribbean coast"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "La Ceiba",
+        "Puerto Castilla",
+        "Atlántida Department",
+        "Colón Department",
+        "Bajo Aguán region",
+        "CA-13 corridor (174 km)"
+      ],
+      "coverage_type": "Regional - specific road corridor in northern Honduras",
+      "fragile_or_conflict_affected_areas": "Yes - partial. The CA-13 corridor crosses the Bajo Aguán region which has been affected by violent land disputes since early 2000s stemming from 1992 Agricultural Modernization Law and land rights issues. Region experiences social tensions, organized crime, drug trafficking, and weak state presence. Atlántida and Colón departments face high poverty (64% and 77% respectively vs 62.9% national average) and marginalization of indigenous and Afro-descendant communities."
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Recovery and Management of the CA-13 La Ceiba-Puerto Castilla Corridor",
+        "description": "Divided into two subcomponents: (1.1) Performance-Based Contract (PBC) for rehabilitation, management and maintenance of 174 km road corridor including climate resilience and road safety upgrades, with initial recovery (6 months), rehabilitation (months 6-30), routine maintenance (months 6-84), and climate resilience/safety plans; (1.2) Reconstruction and strengthening of 13 prioritized bridges and critical infrastructure to enhance climate resilience, including comprehensive feasibility study for 4-km Aguán River basin floodplain stretch.",
+        "financing": "US$164 million"
+      },
+      {
+        "component_name": "Component 2: Institutional strengthening for safe and resilient road asset management and project management",
+        "description": "Four subcomponents: (2.1) Climate resilience, mobility and logistics development including PBC training, climate risk tools, GIS-based asset management system, equipment procurement; (2.2) Safer road and community-driven asset management including road safety standards, speed limit evaluation, community participation, occupational safety; (2.3) Women's participation in road management including barrier assessment, Gender Action Plan, capacity-building for women, GBV prevention plan; (2.4) Project management including PEU personnel, Project Management Agency, financial audits, stakeholder engagement, training.",
+        "financing": "US$12 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Secretariat of Infrastructure and Transport (SIT) through a Project Executing Unit (PEU). PEU will be established within SIT with expanded team including Project Manager, Environmental Specialist, Social Specialists (with GBV competencies), Procurement Specialist, M&E Specialist, and Financial Management Specialist.",
+      "coordination_mechanisms": "PEU reports to SIT Minister while operating under Ministry of Finance (SEFIN) regulations. Project Management and Monitoring Agency will be hired within 8 months of effectiveness to support PEU. Coordination with FONPRODE (Spanish co-financier) through Co-financing Framework Agreement. Collaboration with CABEI, JICA, and IFC for strategic partnerships. WB provides technical assistance, procurement support, financial management, disbursement, and environmental/social support.",
+      "procurement_approach": "WB Procurement Regulations for IPF Borrowers (July 2016, revised February 2025). Early Market Engagement (EME) required for contracts exceeding US$10 million. Procurement Plan covers first 18 months. Project Procurement Strategy for Development (PPSD) developed. Hands-on Expanded Implementation Support (HEIS) provided by WB. Competitive selection of Project Management and Monitoring Agency. FIDIC contracts anticipated for complex works.",
+      "monitoring_and_evaluation": "PEU oversees M&E framework with data collection, analysis, and periodic reporting. Initial M&E report due 4 months after effectiveness, followed by semiannual reports within 30 days of each 6-month period. Mid-Term Review between 36-48 months after effectiveness. Implementation Completion Report due 4 months after project closure. Project Operational Manual (POM) will define all M&E procedures. Results Framework includes PDO indicators (accessibility, climate-resilience, safety, management) and intermediate indicators by component. Monitoring frequency: annual for most indicators, semiannual for GBV measures."
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Possible delays in Congressional approval; implications of potential government priority changes following November 2025 presidential election; political uncertainty affecting institutional stability; challenge of securing project inclusion in official budget allocations affecting funding availability and execution delays.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Ensure multi-sectoral support and foster sector champion; promote communication plan with key stakeholders for continuity regardless of administration changes; develop contingency plans for high-risk areas; leverage Country Portfolio Reviews (CPPRs) to engage authorities and reinforce commitment; ensure project inclusion in official budget allocations; develop ToR for Component 1.1 during preparation to ensure timely implementation; leverage Spanish Government buy-in through FONPRODE co-financing."
+      },
+      {
+        "risk_category": "Fiduciary (Financial Management and Procurement)",
+        "risk_description": "SIT lacks prior experience managing WB-funded projects and implementing PBCs. Risk of non-compliance with WB policies, implementation delays, slow disbursements, accounting errors, and financial reporting issues. Risk that GoH does not allocate sufficient budget to PBC, disrupting implementation and weakening contractor credibility. Limited experience with complex procurement processes and FIDIC contracts. Limited competition in sector (few international firms participating in recent large road procurements).",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Develop comprehensive Project Operational Manual (POM); provide close support during first year of implementation; hire Project Management and Monitoring Agency with WB support; establish PEU with qualified consultants in procurement and financial management with MDB experience; provide procurement HEIS from WB; deliver fiduciary training to SIT FM personnel; strengthen FM governance structure with clear roles and responsibilities; promote multi-year budget commitments through national planning; conduct targeted market analysis to identify potential providers; implement comprehensive capacity-building program; require Early Market Engagement for contracts exceeding US$10 million; provide procurement training on WB Regulations and FIDIC contracts."
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "SIT has limited technical staff; additional staff covering key implementation areas needed. While SIT has stable and competent staff, capacity constraints remain. Risk of delays in project execution and sustainability of investments.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Establish dedicated PEU as effectiveness condition with key personnel in technical, social, environmental, procurement, and fiduciary areas; hire specialized agency to support project monitoring and implementation; provide capacity-building activities by WB to enhance PEU implementation capacity; use community involvement and monitoring in disaster risk and emergency response management; conduct extensive industry/contractor consultation for resilient roads and bridges design; develop comprehensive POM with clear functions, roles, and responsibilities; ensure institutional continuity and robust financial planning."
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Substantial environmental risks: high biodiversity values in project area; climate vulnerability; potential legal and illegal sourcing of construction materials in high-biodiversity areas; vegetation removal for ancillary facilities; water resource overexploitation; air, soil, water pollution; waste generation and disposal; soil erosion; OHS issues; habitat fragmentation and loss from improved road conditions (increased logging, poaching, wildlife trade); land use changes. Substantial social risks: potential involuntary resettlement (estimated 50-100 households affected); exclusion of vulnerable groups from consultation and benefits; OHS and labor influx risks (4,000+ workers); community health and safety risks; violence and insecurity including land conflicts, social unrest, organized crime, drug trafficking; SEA/SH risks (Substantial rating due to labor influx, remote areas, proximity to schools); Indigenous Peoples risks (temporary economic displacement, exclusion from planning, cultural heritage impacts).",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Conduct thorough Environmental and Social Impact Assessment (ESIA) and develop ESMP before bidding; develop and implement Stakeholder Engagement Plan (SEP) with grievance mechanism appropriate for violence/conflict-affected context; adopt and adapt Labor Management Procedures (LMP), Indigenous Peoples Plans (IPPs), and Resettlement Policy Framework (RPF) from HSCP P181166 prior to works; develop and implement SEA/SH action plan adapted from HSCP; conduct cultural heritage assessments and develop Cultural Heritage Management Plans (CHMPs) if needed; develop Security Management Plan with WBG Corporate Security guidance; implement Climate Risk and Resilience Management Plans (CRRMPs) and Emergency Management Plans; develop Gender-Based Violence Plan with community workshops and safe spaces; ensure early and effective stakeholder engagement with vulnerable groups; implement transparency measures and social accountability mechanisms; conduct regular ESRC reviews throughout project lifecycle; provide capacity-building for PEU, contractors, and sub-contractors on ESF requirements; establish robust grievance mechanism with confidential treatment and clear response protocols; coordinate with national entities (municipalities, ICF, SERNA)."
+      },
+      {
+        "risk_category": "Stakeholder",
+        "risk_description": "Substantial risk due to road alignment through regions with history of social unrest where past infrastructure projects have been controversial. Risk of protests and sabotage (arson). Potential resettlement needs with SIT's limited experience managing such processes. Risks from conflict, crime, and violence in project area.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Prepare comprehensive Stakeholder Engagement Plan (SEP) with: identification and mapping of key actors; information and consultation mechanism; grievance management mechanism. Conduct preliminary consultation process during preparation (P-ESA identified key actors and conducted consultations with 210+ participants from 20+ communities, 37% women). Organize community consultations during planning and implementation involving local leaders and civil society; incorporate feedback into project design and E&S instruments. Advance measures to prevent exacerbation of existing conflict conditions; ensure continuous monitoring of social environment. Develop Security Management Plan with WBG Corporate Security. Implement proactive transparency measures related to project progress; enhance public understanding of PBC approach; establish accessible grievance mechanisms at SIT, municipal, and community levels with culturally appropriate channels for Indigenous communities. Promote social accountability mechanisms and community participation in monitoring."
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Honduras GDP growth decelerating (4% in 2022 to 2.8% expected in 2025); constrained short-term prospects from lower expected growth in main trading partners and continuation of deceleration in remittance inflows.",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "Not explicitly detailed in document; project design emphasizes economic benefits and resilience to support development despite macroeconomic constraints."
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "GoH has yet to incorporate climate hazards into road strategies, policies, and planning; limited experience with sustainable maintenance practices and modern road asset management standards.",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "Project will support GoH effort to enhance connectivity while advancing climate-resilient road asset management through coordination with WB-financed Honduras Sustainable Connectivity Project (HSCP, P181166); introduce PBCs with focus on resilience; provide technical assistance and training on climate resilience, road safety, and sustainable asset management; develop climate-informed GIS-based road asset management system; prepare integrated manual for road design, construction, and maintenance aligned with international resilience standards."
+      },
+      {
+        "risk_category": "Technical Design of Project or Program",
+        "risk_description": "Cost estimates based on preliminary technical assessments; may be revised once detailed engineering studies completed. Complex bridge reconstruction requiring specialized skills and contract management. Coordination between PBC and bridge reconstruction contractors essential to prevent overlapping and maintain quality standards.",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "Conduct detailed engineering studies to refine cost estimates; develop comprehensive feasibility study for Aguán River basin 4-km stretch based on geotechnical, hydraulic, and floodplain assessments; establish clear coordination mechanisms between contractors and supervisors; ensure seamless execution and consistent quality standards; incorporate climate resilience indicators into PBCs; develop CRRMPs and Emergency Management Plans; implement road safety audits and Road Safety Management Plans; use Nature-Based Solutions where applicable."
+      },
+      {
+        "risk_category": "Stakeholders",
+        "risk_description": "Risk of inadequate stakeholder engagement leading to protests and sabotage; limited SIT experience with resettlement processes.",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "Implement comprehensive Stakeholder Engagement Plan; conduct early and meaningful consultations with communities; establish accessible grievance mechanisms; promote transparency and social accountability; ensure inclusion of vulnerable groups in decision-making; develop resettlement frameworks and action plans with SIT capacity-building."
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Substantial environmental risk rating",
+      "triggered_safeguard_policies": [
+        "ESS 1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS 2: Labor and Working Conditions",
+        "ESS 3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS 4: Community Health and Safety",
+        "ESS 5: Land Acquisition, Restrictions on Land Use and Involuntary Resettlement",
+        "ESS 6: Biodiversity Conservation and Sustainable Management of Living Natural Resources",
+        "ESS 7: Indigenous Peoples/Sub-Saharan African Historically Underserved Traditional Local Communities",
+        "ESS 8: Cultural Heritage",
+        "ESS 10: Stakeholder Engagement and Information Disclosure"
+      ],
+      "grievance_redress_mechanism": "Yes. Project-level grievance mechanism established at SIT, municipal, and community levels with culturally appropriate channels for Indigenous communities. Accessible and responsive grievance mechanisms with confidential treatment and clear response protocols. Complaints can also be submitted to WB's Grievance Redress Service (GRS) and Accountability Mechanism (Inspection Panel and Dispute Resolution Service). PEU will oversee complaints and report annually starting one year after works commencement, with gender-disaggregated results.",
+      "gender_considerations": "Substantial focus on gender equality. Honduras has one of widest labor force gender gaps in LAC (49.9% female participation vs 75.6% male). Women severely underrepresented in construction (2%) and transport/logistics (9%) sectors. Project will: (1) Introduce PBC indicator requiring hiring of local women for road maintenance tasks ensuring lasting employment; (2) Support promotion of women-led microenterprises with technical assistance; (3) Develop Gender Action Plan with specific targets and monitoring mechanisms; (4) Provide targeted capacity-building for women in road infrastructure management (drainage cleaning, vegetation control), leadership development, and business management; (5) Include women's participation performance indicator in PBC with focus on long-term employment over 8-year contract (target: 20 women employed long-term, representing 40% of estimated 50 maintenance workers); (6) Launch awareness campaigns encouraging women's involvement in monitoring and reporting road conditions; (7) Develop Gender-Based Violence Plan with community workshops, safe spaces, partnerships with local organizations; (8) Develop active mobility infrastructure with gender-sensitive considerations (pedestrian pathways, sidewalks, safe bus stops addressing women's security concerns); (9) Ensure recruitment support through women-led organizations at convenient locations/times.",
+      "vulnerable_groups": [
+        "Poor and low-income populations (49.5% of Honduras population living in poverty)",
+        "Women (49.9% labor force participation, underrepresented in transport/construction)",
+        "Youth (20.8% of population)",
+        "Indigenous Peoples (Garifuna communities, over 70% living in poverty, over half unemployed)",
+        "Afro-descendant communities",
+        "Single female-headed households",
+        "Small farmers and subsistence producers",
+        "People with disabilities",
+        "Remote/rural populations with limited access to services",
+        "Communities affected by land disputes and violence",
+        "Populations in climate-vulnerable areas"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project demonstrates substantial conflict sensitivity. The CA-13 corridor crosses the Bajo Aguán region affected by violent land disputes since early 2000s stemming from 1992 Agricultural Modernization Law privatizing collectively owned lands. Land rights issues remain unresolved, contributing to ongoing tension. Region experiences sporadic violence and social unrest exacerbated by organized crime, illicit economies, and weak state presence. Project design includes: (1) Security Management Plan developed with WBG Corporate Security; (2) Comprehensive Stakeholder Engagement Plan with conflict analysis; (3) Transparency measures to build trust and prevent escalation of violence; (4) Continuous monitoring of social environment; (5) Measures to prevent exacerbation of existing conflict conditions; (6) Community consultations involving local leaders and civil society; (7) Grievance mechanisms with confidential treatment and clear response protocols; (8) Community participation in monitoring and decision-making; (9) Awareness campaigns to promote understanding of PBC approach; (10) Proactive transparency related to project progress; (11) Coordination with local government entities and civil society organizations.",
+      "fragility_context": "Honduras faces multiple fragility factors: (1) High poverty (49.5% at $6.85/day PPP line, 62.9% multidimensional poverty nationally; Atlántida 64%, Colón 77%); (2) Extreme vulnerability to natural hazards (60% of road infrastructure at risk, second most vulnerable in LAC; projected cumulative losses of 5.4% GDP by 2050); (3) Weak institutional capacity (SIT limited experience with WB operations, modern asset management, climate integration); (4) Limited fiscal capacity (road maintenance only 0.8% of GDP vs peers; only US$14 million allocated to maintenance over past 2 years); (5) Poor infrastructure (only 22% of national road network paved, 23% in good condition; 0.13 km road per km²); (6) Social conflict and violence (land disputes, organized crime, drug trafficking, weak state presence in project area); (7) Gender inequality (second widest labor force gender gap in LAC); (8) Climate change impacts (heavy rainfall projected to increase 13% by 2050, flood flows up to 60%; recent Tropical Storm Sara destroyed 30+ bridges, damaged 58 roads, affected 200,000+ people); (9) Economic challenges (GDP growth decelerating from 4% to 2.8%; remittance inflows declining); (10) Marginalization of indigenous and Afro-descendant communities.",
+      "security_considerations": "Substantial security considerations integrated throughout project design: (1) Security Management Plan to be developed with WBG Corporate Security guidance; (2) Estimated 4,000+ workers creating labor influx risks in remote areas with limited supervision capacity; (3) Road passes near sensitive social infrastructure (schools); (4) Organized crime, drug trafficking, and illicit economies present in project area; (5) Land disputes and agrarian conflicts; (6) Threats to environmental defenders; (7) Social unrest and violence risks; (8) SEA/SH risks rated Substantial due to labor influx and remoteness; (9) Project will implement Code of Conduct for workers addressing GBV; (10) Training programs on SEA/SH prevention for workers, contractors, and communities; (11) Confidential grievance mechanisms with GBV-sensitive protocols; (12) Coordination with local service providers for survivor support; (13) Awareness campaigns for communities; (14) Occupational Health and Safety (OHS) measures; (15) Community health and safety risk mitigation; (16) Road safety improvements to reduce fatalities (target 12.8% reduction).",
+      "displacement_or_refugees": "Yes - involuntary resettlement expected. Approximately 1,000 households/properties located along road corridor; estimated 50-100 could be affected primarily through partial impacts on assets or land due to land acquisition or temporary resettlement for construction/maintenance activities. Housing resettlement expected to be minimal as corridor layout will remain unchanged. Targeted resettlement expected in specific areas with costs covered under Component 1. Project will: (1) Adopt and adapt Resettlement Policy Framework (RPF) from HSCP P181166 prior to works; (2) Develop Resettlement Action Plans (RAPs) when needed prior to start of work causing impacts; (3) Conduct thorough ESIA before bidding; (4) Ensure vulnerable groups not excluded from consultation and benefits; (5) Implement transparent and accountable resettlement processes; (6) Provide grievance mechanisms for resettlement-affected persons; (7) Ensure SIT capacity-building for resettlement management (limited prior experience noted)."
+    }
+  }
+}

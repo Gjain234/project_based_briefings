@@ -1,0 +1,127 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P167794",
+    "guid": 577341560737014064,
+    "node_id": 31118341,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b086d2b493&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "One WASH—Consolidated Water Supply, Sanitation, and Hygiene Account Project (One WASH—CWA)",
+      "project_development_objective": "To increase access to safe water supply, sanitation, and hygiene services and strengthen capacity for water resources management and service delivery.",
+      "total_financing": "US$350 million (IDA Credit: US$300 million, Counterpart Funding: US$50 million)",
+      "implementation_period": "June 13, 2019 to January 7, 2025",
+      "beneficiaries": "Approximately 3 million people (2 million rural, 1 million urban), 2,800 health facilities and schools, 8,260 WASHCOMs, 180 utilities"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "All regions of Ethiopia",
+        "382 woredas under previous WASHP",
+        "180 small- and medium-sized towns",
+        "Selected drought and flood-prone areas"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "partial - project includes areas affected by sporadic unrest, displacement, and climate shocks; Ethiopia hosts 920,000+ refugees and has internally displaced populations"
+    },
+    "key_components": [
+      {
+        "component_name": "Rural Water Supply, Sanitation, and Hygiene",
+        "description": "Increase access to safe WSS services in selected rural woredas, enhance service delivery management capacity",
+        "financing": "US$110 million (US$92.29 million IDA)"
+      },
+      {
+        "component_name": "Urban Water Supply, Sanitation, and Hygiene",
+        "description": "Improve access to WSS services in small- and medium-sized towns, strengthen operational efficiency of utilities",
+        "financing": "US$105 million (US$90 million IDA)"
+      },
+      {
+        "component_name": "Institutional Water Supply, Sanitation, and Hygiene",
+        "description": "Improve integrated access to advanced WASH facilities in schools and health centers",
+        "financing": "US$45 million (US$38.57 million IDA)"
+      },
+      {
+        "component_name": "Climate Resilient Water Supply, Sanitation, and Hygiene",
+        "description": "Strengthen water resources management, increase access in flood/drought-prone areas, contingency emergency response",
+        "financing": "US$65 million (US$55.71 million IDA)"
+      },
+      {
+        "component_name": "Institutional Strengthening and Project Management",
+        "description": "Operationalize sector MIS, institutional strengthening and project management support",
+        "financing": "US$25 million (US$21.43 million IDA)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Water, Irrigation and Energy (MoWIE) through Water Development Commission (WDC), Ministry of Education (MoE), Ministry of Health (MoH), Ministry of Finance (MoF)",
+      "coordination_mechanisms": "National WASH Steering Committee (NWSC) chaired by MoWIE Minister, National WASH Coordination Office (NWCO), Regional WASH Steering Committees, Woreda WASH Teams",
+      "procurement_approach": "World Bank Procurement Regulations for IPF, National Open Competitive Procurement (NOCP), decentralized implementation through regional bureaus",
+      "monitoring_and_evaluation": "Quarterly reporting through WASH MIS, National WASH Inventory, community-based monitoring tools, annual review meetings"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political",
+        "risk_description": "Political and social unrest creating difficulties in mobility and access to communities",
+        "risk_rating": "high",
+        "mitigation_measures": "Strengthen coordination between federal and regional governments, community sensitization, annual planning to shift focus to feasible areas"
+      },
+      {
+        "risk_category": "technical",
+        "risk_description": "Increased complexity in addressing water resources management and climate adaptation challenges",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Technical assistance, readiness criteria, stepped approach for institutional capacity building"
+      },
+      {
+        "risk_category": "institutional",
+        "risk_description": "Limited capacity of WASHCOMs, boards, and utilities to plan and manage infrastructure sustainably",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Increased tailored capacity building, functional MIS for tracking, local and regional government response mechanisms"
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "Decentralized implementation, staffing capacity and turnover, weak FM and procurement capacity",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Detailed capacity building, strengthening implementing agencies, improved internal controls and audit arrangements"
+      },
+      {
+        "risk_category": "environmental and social",
+        "risk_description": "High staff turnover, capacity gaps at regional/woreda levels, GBV risks from water collection and poor sanitation",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Continued training, expanded CFT terms of reference, strengthened GRM, zero-tolerance GBV policy"
+      },
+      {
+        "risk_category": "stakeholder",
+        "risk_description": "Water resource conflicts, displacement pressures, conflicting priorities among implementing agencies",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Enhanced environmental and social screening, participatory consultations, dedicated feasibility teams for Component 4, strengthened GRM"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "B-Partial Assessment",
+      "triggered_safeguard_policies": [
+        "Environmental Assessment OP/BP 4.01",
+        "Natural Habitats OP/BP 4.04",
+        "Physical Cultural Resources OP/BP 4.11",
+        "Indigenous Peoples OP/BP 4.10",
+        "Involuntary Resettlement OP/BP 4.12",
+        "Safety of Dams OP/BP 4.37",
+        "Projects on International Waterways OP/BP 7.50"
+      ],
+      "grievance_redress_mechanism": "yes - GRM established at woreda and town levels including kebele level, with clear procedures and 45% women representation",
+      "gender_considerations": "Gender Action Plan prepared, 45% women participation target in WASHCOMs, gender-informed designs, MHM facilities, women's decision-making roles",
+      "vulnerable_groups": [
+        "women and girls",
+        "people with disabilities",
+        "poor households",
+        "pastoralists",
+        "refugees and internally displaced persons"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project includes conflict mitigation tools through enhanced screening, community consultations, involvement of traditional leaders, documentation of processes, and strengthened grievance mechanisms",
+      "fragility_context": "Ethiopia hosts 920,000+ refugees from neighboring countries, internally displaced populations due to sporadic unrest, recurring droughts and floods, political volatility with state of emergency lifted in May 2018",
+      "security_considerations": "Political and social unrest affecting mobility and access, insecurity limiting contractor access to sites, potential for future unrest, labor influx and GBV risks during construction",
+      "displacement_or_refugees": "yes - Ethiopia hosts over 920,000 refugees primarily from Somalia, Sudan, South Sudan, and Eritrea; internally displaced populations have doubled due to sporadic unrest; displacement adds pressure to localized water sources"
+    }
+  }
+}

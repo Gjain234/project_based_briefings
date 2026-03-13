@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - FCV Portfolio Briefing Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #7f8c8d;
+            font-size: 16px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 8px 16px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .back-link:hover {
+            background: #2980b9;
+        }
+
+        .content {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            line-height: 1.8;
+            color: #34495e;
+        }
+
+        .content h2 {
+            color: #2c3e50;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+            font-size: 22px;
+        }
+
+        .content h3 {
+            color: #2c3e50;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+        }
+
+        .content ul,
+        .content ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .content li {
+            margin-bottom: 8px;
+        }
+
+        .content strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .highlight {
+            background: #fff9e6;
+            padding: 15px;
+            border-left: 4px solid #f39c12;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .info-box {
+            background: #e8f4f8;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .step {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .step-number {
+            background: #3498db;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content h3 {
+            margin-top: 0;
+        }
+
+        footer {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                max-width: 100%;
+            }
+
+            header {
+                padding: 20px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back-link">
+            <a href="/" style="color: white; text-decoration: none;">← Back to Briefing Viewer</a>
+        </div>
+
+        <header>
+            <h1>📚 How It Works</h1>
+            <p>Understanding the FCV Portfolio Briefing Viewer</p>
+        </header>
+
+        <div class="content">
+            <h2>Welcome to the FCV Portfolio Briefing Viewer</h2>
+            
+            <p>This tool provides read-only access to pre-generated <strong>Fragility, Conflict, and Violence (FCV) portfolio briefings</strong> for World Bank countries. It displays comprehensive risk assessments based on World Bank project documents and implementation data.</p>
+
+            <h2>What is a Portfolio FCV Briefing?</h2>
+            
+            <p>A Portfolio FCV Briefing is an integrated risk assessment that:</p>
+            <ul>
+                <li>Synthesizes country-level FCV risks identified from World Bank Fragility, Conflict, and Violence diagnostics</li>
+                <li>Maps how World Bank projects are exposed to those risks (Project Appraisal Documents - PADs)</li>
+                <li>Shows evidence of how risks are manifesting in project implementation (Implementation Status Reports - ISRs and Aide Memoires)</li>
+                <li>Consolidates insights into narrative briefings organized by risk, sector, or custom categories</li>
+            </ul>
+
+            <h2>How to Use This Viewer</h2>
+            
+            <div class="section">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Select a Country</h3>
+                        <p>Use the dropdown menu to select a country. The viewer will show all briefings available for that country.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Read the Portfolio Briefing</h3>
+                        <p>The main briefing section displays the consolidated FCV risk narrative for the country's portfolio. This includes:</p>
+                        <ul>
+                            <li>Country-level FCV risks</li>
+                            <li>How projects are exposed to those risks</li>
+                            <li>Evidence of risks materializing in implementation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Explore Risk Details</h3>
+                        <p>Click on the tabs below the briefing to view detailed risk data:</p>
+                        <ul>
+                            <li><strong>Country Risks:</strong> Identified FCV risks at the country level</li>
+                            <li><strong>PAD Risks:</strong> Project-level vulnerabilities from appraisal documents</li>
+                            <li><strong>Implementation Risks:</strong> Risks materializing during project implementation</li>
+                            <li><strong>Risk Mappings:</strong> Links between implementation risks and their source documents (ISRs, Aide Memoires)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Understanding the Data</h2>
+
+            <h3>Country Risks</h3>
+            <p>These are FCV risks identified at the country level from World Bank diagnostics. They describe systemic fragility, conflict, or violence dynamics affecting the operating environment for development projects.</p>
+
+            <h3>PAD Risks</h3>
+            <p>These identify how World Bank projects (as described in Project Appraisal Documents) are exposed to or could interact with FCV dynamics. Each risk indicates a potential vulnerability in project design that relates to fragility, conflict, or violence dimensions.</p>
+
+            <h3>Implementation Risks</h3>
+            <p>These are FCV-related risks that have emerged or materialized during project implementation, as documented in Implementation Status Reports (ISRs) and Aide Memoires. They show real-world evidence of FCV impacts on World Bank projects.</p>
+
+            <h3>Risk Mappings</h3>
+            <p>These connect implementation risks to their source documents (ISRs or Aide Memoires), showing which World Bank projects and documents provide evidence of FCV risk manifestation.</p>
+
+            <h2>Key Concepts</h2>
+
+            <div class="info-box">
+                <h3 style="margin-top: 0;">Fragility, Conflict, and Violence (FCV)</h3>
+                <p>FCV refers to situations where the state cannot or does not fulfill its basic functions, including the monopoly on violence, provision of public services, and rule of law. This is often accompanied by armed conflict, political instability, or high rates of violence.</p>
+            </div>
+
+            <div class="info-box">
+                <h3 style="margin-top: 0;">Project Appraisal Document (PAD)</h3>
+                <p>The PAD is the main World Bank document that describes a project before it is approved for financing. It includes project design, implementation arrangements, risk assessments, and development outcomes.</p>
+            </div>
+
+            <div class="info-box">
+                <h3 style="margin-top: 0;">Implementation Status Report (ISR)</h3>
+                <p>ISRs are periodic progress reports on World Bank projects during their implementation phase. They document progress, challenges, risks, and adjustments made during project execution.</p>
+            </div>
+
+            <h2>Important Notes</h2>
+
+            <div class="highlight">
+                <h3 style="margin-top: 0;">This is a Read-Only Viewer</h3>
+                <p>This tool displays pre-generated briefings only. It does not generate new briefings or modifications. To create custom briefings or update existing ones, please contact the project administration.</p>
+            </div>
+
+            <h3>Data Freshness</h3>
+            <p>Each briefing displays the date it was generated. Briefings are created periodically based on available project documents and implementation data. The dates shown indicate when the risk assessment was last conducted.</p>
+
+            <h3>Citation and Use</h3>
+            <p>Risk citations in briefings reference the specific projects and documents they come from, using project IDs (e.g., P123456) and document types (PAD, ISR, Aide Memoire). You can click on these citations to access the source documents when available.</p>
+
+            <h2>Questions or Feedback?</h2>
+            <p>If you have questions about the data, briefings, or this viewer, please contact the project administrators. This tool was designed to support evidence-based decision-making on FCV risks in the World Bank portfolio.</p>
+        </div>
+
+        <footer>
+            <p>FCV Portfolio Briefing Viewer • Read-Only Display • For questions, contact project administrators</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P178861",
+    "guid": 99013124165525565,
+    "node_id": 34249492,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-c5bd062e-ea4d-4c3f-8e6c-927b368b8c25.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Bolivia Resilient Water Management for Community and Household Irrigation Project",
+      "project_development_objective": "To improve integrated water resources management in selected basins and increase the resilience to climate variability of vulnerable rural families in selected micro basins",
+      "total_financing": "US$171.49 million (US$150 million IBRD loan + US$21.49 million counterpart funding)",
+      "implementation_period": "6 years (2024-2030)",
+      "beneficiaries": "30,000 families (150,000 inhabitants) including 7,680 small-scale subsistence farmers, 15,120 families from water management interventions, and 7,200 families from flood risk management; 134 basin management organizations (OGCs)"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "La Paz",
+        "Oruro",
+        "Potosí",
+        "Chuquisaca",
+        "Tarija",
+        "Cochabamba",
+        "Santa Cruz",
+        "Beni",
+        "Pando"
+      ],
+      "coverage_type": "national with focus on 256 municipalities across 9 departments",
+      "fragile_or_conflict_affected_areas": "partial - Project targets water-stressed areas with high aridity index, high erosion, and high poverty levels; areas experiencing climate-induced droughts and floods; some areas with high migration of young people leaving vulnerable groups (women, children, elderly)"
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Water resources planning and pre-investment studies",
+        "description": "Development of basin-level water planning strategies (EPHIC) following IWRM and MIC approaches; preparation of pre-investment studies and detailed engineering designs for subprojects addressing climate change impacts for water conservation, irrigation, and risk management infrastructure",
+        "financing": "US$9.9 million (100% IBRD)"
+      },
+      {
+        "component_name": "Component 2: Climate resilience infrastructure investments",
+        "description": "Three subcomponents: (2.1) Integrated water basin management investments including forestation, water harvesting, soil improvement, water recharge protection, grazing control, terraces, and small water reservoirs; (2.2) Minor community and household irrigation systems for water capture, storage, and distribution; (2.3) Risk management infrastructure including river defenses, erosion control, and flood control",
+        "financing": "US$139.328 million (US$117.84 million IBRD + US$21.488 million counterpart)"
+      },
+      {
+        "component_name": "Component 3: Capacity building for water governance and enhanced productivity",
+        "description": "Technical assistance and capacity building for UGCs, OGCs, ETA staff and farmers; Organizational Strengthening and Productive Technical Assistance (FORATP) program for irrigation systems including agricultural production training; climate change education and awareness; training on water governance, planning, implementation, and O&M",
+        "financing": "US$16.575 million (100% IBRD)"
+      },
+      {
+        "component_name": "Component 4: Project management",
+        "description": "Project administration, procurement, financial management, environmental and social management, technical management, monitoring and evaluation, and external audits",
+        "financing": "US$5.31 million (100% IBRD)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Environment and Water (MMAyA) through Vice Ministry of Water Resources and Irrigation (VRHR)",
+      "coordination_mechanisms": "Two existing Project Implementation Units (PIUs): UCP-PPCR (Coordination Unit of Climate Resilience Program) for Components 1, 3, and part of 4; UCEP-Mi Riego (Coordination and Implementation Unit of Mi Riego Projects) for Component 2 and part of 4. Coordination with Autonomous Territorial Entities (ETAs), basin management units (UGCs), basin management organizations (OGCs), and interinstitutional basin platforms (PICs). Intergovernmental/interinstitutional agreements define roles and responsibilities",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers (September 2023); open international competitive bidding for larger contracts; open national competitive bidding for small contracts; Quality-Cost-Based Selection or Consultant's Qualification Based Selection for consulting services; use of STEP system for procurement plans and monitoring",
+      "monitoring_and_evaluation": "Semi-annual Project Reports prepared by UCP-PPCR within 45 days of semester end; Mid-Term Review at beginning of year 3; Final evaluation in last year of implementation; External audit by independent private audit firm; M&E system tracks PDO indicators and intermediate indicators; field data collection by municipal staff, consultancy firms, and PIU staff; external audit confirms findings through sample verification"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Challenges in coordination between national, departmental, and municipal government levels; national elections scheduled for late 2025 and municipal/departmental elections in early 2026 may affect implementation continuity and political support",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Promote effective Project management; work closely with MMAyA and VRHR; provide close implementation support and training on Bank's Anticorruption Guidelines; ensure simple and straightforward project design"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Challenging macroeconomic situation including decline in international reserves, growing public debt, and limited access to funding in constrained international markets could hamper capacity of subnational governments to provide counterpart financing; national government's debt capacity and resources for O&M of infrastructure is a risk",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Limit counterpart financing requirements and make them flexible; allow percentage of counterpart funding to drop as low as zero; revise counterpart financing criteria in POM as needed; design project with limited counterpart funding dependency"
+      },
+      {
+        "risk_category": "Technical Design of Project",
+        "risk_description": "Large number of infrastructure investments in small communities located in remote areas across the country with difficult access; complexity of implementing diverse subproject types in dispersed locations",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Group subprojects per region to generate economies of scale and facilitate planning; ensure significant participation of beneficiaries throughout Project cycle; use Procurement Strategy that includes regional grouping approach; provide technical supervision and engineering support"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "PIUs have limited experience managing World Bank projects; high staff turnover may affect Project implementation; weakness in VRHR's social management capacity; first experience of MMAyA/VRHR with World Bank environmental and social standards",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Work closely with agencies and provide close implementation support; provide training on Bank's Anticorruption Guidelines; recruit fiduciary staff with relevant knowledge and experience; implement financial systems to register Project transactions; develop comprehensive Implementation Support Plan; provide capacity building for environmental and social safeguards implementation"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Counterpart funding from ETAs was not provided timely in earlier projects causing delays; timely availability of funds for Component 2 may be affected if arrangements between two PIUs not in place; lack of adequate policies for collection, control, recording and reporting of municipal contributions; high staff turnover in public sector; processes for recording and monitoring subproject financing still being implemented",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Sign Intergovernmental/interinstitutional Agreements with ETAs defining counterpart contribution procedures and activating 'Debito automatico' procedure by MEFP in case of default; establish separate Designated Accounts for each PIU; implement Projects Management System (SGP) to register and monitor counterpart funding; use multi-year contracts for fiduciary staff based on performance evaluation; recruit two Financial Management Specialists; include detailed procedures in POM for recording and controlling subproject financing"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Substantial social risk due to national coverage; complexity of stakeholders from national to local levels; limited information on subproject locations; potential exclusion of vulnerable populations (indigenous women, elders, youth, persons with disabilities); risk of reproducing gender inequalities; potential social conflicts over water usage; risk of reduced water availability for downstream communities; potential loss of indigenous agricultural knowledge; labor influx risks; increased expectations for employment; impacts on women's productive and reproductive roles; SEA/SH risks; child labor risks; potential intensification of social conflicts",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Prepare comprehensive Environmental and Social Management Framework (ESMF) with site-specific ESMPs; develop Stakeholder Engagement Plan with detailed stakeholder mapping; establish Project-level Grievance Redress Mechanism that is culturally appropriate and gender-sensitive; implement Gender Action Plan with concrete actions to increase women's participation in decision-making (target 30% in OGCs from 20% baseline); map gender violence prevention services and establish referral mechanisms; include codes of conduct in all contracts; provide training on GBV prevention; ensure free and informed prior consultation (FPIC) for indigenous communities; implement social assessment and cultural pertinence measures; monitor vulnerable groups and provide targeted strategies for inclusion"
+      },
+      {
+        "risk_category": "Stakeholder Engagement",
+        "risk_description": "Limited coordination between multiple entities expected to be involved; potential under-representation of vulnerable groups' interests; risk of inadequate participation of indigenous peoples and afro-Bolivian communities",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Implement comprehensive Stakeholder Engagement Plan with procedures for meaningful consultation; establish working groups at subproject and ETA levels; conduct stakeholder mapping at national, departmental, municipal, and local levels; ensure bottom-up approach with community identification and prioritization of activities; provide targeted communication and scheduling to facilitate women's participation; map women's organizations and support their strengthening"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Unclear allocation of water resources among different users; absence of operational basin management units; high fragmentation of water service delivery; need for updated legal framework for water management",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Project supports development of Basin Master Plans (EPHICs) and creation of interinstitutional basin platforms (PICs) and basin management units (UGCs); includes capacity building for water governance; promotes integrated water resources management approach; supports legal framework development through planning activities"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Substantial",
+      "triggered_safeguard_policies": [
+        "ESS 1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS 2: Labor and Working Conditions",
+        "ESS 3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS 4: Community Health and Safety",
+        "ESS 5: Land Acquisition, Restrictions on Land Use and Involuntary Resettlement",
+        "ESS 6: Biodiversity Conservation and Sustainable Management of Living Natural Resources",
+        "ESS 7: Indigenous Peoples/Sub-Saharan African Historically Underserved Traditional Local Communities",
+        "ESS 8: Cultural Heritage",
+        "OP 7.50: Projects on International Waterways (exception to riparian notification applies)"
+      ],
+      "grievance_redress_mechanism": "yes - Project-level Grievance Redress Mechanism (GRM) established as part of Stakeholder Engagement Plan; GRM is culturally appropriate and gender-sensitive; ensures confidentiality of users; allows reception and processing of anonymous complaints; includes specific measures to capture feedback and disseminate existence of GRM; includes referral mechanisms for gender-based violence cases; intermediate indicator tracks percentage of complaints addressed according to stipulated timeframe; World Bank's Grievance Redress Service (GRS) and Accountability Mechanism also available",
+      "gender_considerations": "Substantial focus on gender equality: Target to increase women's decision-making positions in OGCs from 20% to 30%; Gender Action Plan with concrete operational actions; Identified gender gaps include lack of women's organizations, limited political participation, limited employment access, double work burden, limited land access, limited access to productive resources and technology, differentiated productive activities, limited education/training access, remuneration disparities, and gender-based violence; Specific actions include: mapping women's organizations, organizing water governance congress for women leaders, establishing work-tables for women leaders, training workshops for female farmers, gender parity in new hirings, mechanisms to mitigate reproductive roles burden, equal access to productive resources and technology, equal remuneration guidelines, GBV prevention and referral mechanisms; Target farmers adopting improved agricultural technology: 10,752 men and 4,608 women; Training on O&M to be provided in sex-disaggregated way; Dual ownership of households for irrigation beneficiaries; Women's needs identified to facilitate access to training and participation in decision-making",
+      "vulnerable_groups": [
+        "Indigenous peoples and afro-Bolivian communities",
+        "Rural women and female farmers",
+        "Children and youth (particularly those left behind due to male migration)",
+        "Elderly",
+        "Persons with disabilities",
+        "Sexual and gender minorities",
+        "Subsistence farmers",
+        "Migrants and displaced persons",
+        "Families in high-poverty areas"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project addresses water scarcity and competition over water resources which are identified as potential sources of conflict in rural areas. Project design includes: (1) Integrated Water Resources Management approach to equitably allocate water among different users; (2) Stakeholder engagement and participatory planning to identify and address competing water demands; (3) Basin-level planning (EPHICs) to coordinate water use across multiple users and jurisdictions; (4) Capacity building for water governance bodies (OGCs, UGCs, PICs) to mediate between competing user groups; (5) Grievance Redress Mechanism to address water-related disputes; (6) Social Assessment identifying risk of intensification of underlying local tensions and conflicts if stakeholder engagement not properly carried out; (7) Bottom-up approach ensuring communities identify priorities to reduce imposition of external solutions; (8) Monitoring of social conflicts as part of implementation support",
+      "fragility_context": "Bolivia faces significant fragility factors: (1) High poverty and inequality, particularly in rural areas (32% rural poverty, 22% among indigenous people); (2) Climate vulnerability - ranked 10th globally for climate-related hazards; increasing droughts and floods causing US$91.1 million average annual damages; (3) Water stress and scarcity in key regions despite overall water abundance; (4) Land degradation and desertification affecting 77% of population; (5) High migration of young people (particularly males) leaving vulnerable groups; (6) Weak institutional capacity at subnational levels; (7) Limited coordination between national, departmental, and municipal governments; (8) Macroeconomic challenges including declining international reserves and growing public debt; (9) Political instability with elections scheduled for late 2025 and early 2026; (10) Limited access to basic services and infrastructure in rural areas; (11) Social tensions over water allocation and land use; (12) Gender inequalities and limited women's participation in decision-making",
+      "security_considerations": "Project operates in remote rural areas with difficult access; some areas affected by migration and associated social disruption; labor influx risks during construction phase; potential for social conflicts over water resources and land use; security of infrastructure investments in dispersed locations; staff safety during implementation in remote areas; mitigation measures include: local hiring of community workers to minimize labor influx; codes of conduct for contractors; community participation in project implementation; grievance mechanisms to address conflicts early; close monitoring and supervision; capacity building for local institutions to manage infrastructure",
+      "displacement_or_refugees": "no - Project does not involve involuntary resettlement or land acquisition for project purposes. However, ESS 5 is triggered due to potential restrictions on land use. Project includes protocol to ensure voluntary nature of any land donations for irrigation works and prevent coercion. Project may indirectly affect migration patterns by improving livelihood opportunities and reducing need for labor migration. Some areas have high outmigration of young people; project aims to improve economic opportunities to reduce migration incentives"
+    }
+  }
+}

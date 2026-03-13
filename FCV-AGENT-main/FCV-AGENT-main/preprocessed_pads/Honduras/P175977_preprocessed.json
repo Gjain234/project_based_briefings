@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P175977",
+    "guid": 428891608337065127,
+    "node_id": 32688779,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b08810980a&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Honduras Tropical Cyclones Eta and Iota Emergency Recovery Project",
+      "project_development_objective": "To support Honduras' response and recovery needs and strengthen institutional capacity to manage a resilient and inclusive recovery and reconstruction",
+      "total_financing": "US$150 million",
+      "implementation_period": "December 2020 - December 2026 (6 years)",
+      "beneficiaries": "At least 800,000 inhabitants in affected communities, approximately 50% women, including Indigenous Peoples and Afro-descendants; Government officials and local authorities"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Valle de Sula",
+        "San Pedro Sula",
+        "La Lima",
+        "Cortés Department",
+        "Atlántida Department",
+        "Colón Department",
+        "Santa Barbara Department",
+        "La Mosquitia",
+        "Multiple departments across Honduras"
+      ],
+      "coverage_type": "national with focus on most affected regions",
+      "fragile_or_conflict_affected_areas": "partial - Honduras faces crime and gang violence challenges; affected areas include territories of Indigenous Peoples and Afro-descendants; country experiences high vulnerability to natural disasters and climate shocks"
+    },
+    "key_components": [
+      {
+        "component_name": "Emergency Relief, Response and Public Health and Safety Operations",
+        "description": "Financing of immediate relief and response measures including emergency evacuation and rescue, renting of private transport equipment, distribution of food/non-food items and PPE, sheltering, water and debris clearing, and disease outbreak prevention measures",
+        "financing": "US$10 million"
+      },
+      {
+        "component_name": "Resilient Rehabilitation and Reconstruction of Public and Community Infrastructure and Resumption of Public Services",
+        "description": "Technical preparation and implementation of urgent repairs and resilient rehabilitation/reconstruction of high-priority public and community infrastructure including roads, bridges, public buildings (schools, health facilities, government offices, first responder facilities), with focus on building-back-better approach incorporating climate resilience and disaster risk mitigation",
+        "financing": "US$129 million"
+      },
+      {
+        "component_name": "Institutional Support to the Government Recovery and Reconstruction Program",
+        "description": "Financing of Project Implementation Unit operations, project management, procurement, financial management, M&E, technical audits, compliance monitoring, grievance redress mechanism, capacity building for SEDECOAS and other DRM agencies, asset management approaches, and communication strategy",
+        "financing": "US$11 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "SEDECOAS (Secretaría de Desarrollo Comunitario, Agua y Saneamiento - Ministry of Community Development, Water and Sanitation) through a dedicated Project Implementation Unit (PIU)",
+      "coordination_mechanisms": "Flexible institutional coordination mechanism between SEDECOAS and technical support ministries; coordination with Municipal Emergency Committees (CODEM) and Local Emergency Committees (CODELES); inter-institutional agreements with participating entities; coordination with COPECO (National Disaster Risk Management Agency); participation of local authorities and IP/AD organizations in prioritization processes",
+      "procurement_approach": "Fast-track emergency procurement including direct contracting, streamlined competitive procedures with shorter bidding times, use of government electronic catalog and framework agreements, procurement from UN Agencies; advance procurement and retroactive financing allowed; procurement risk rated as High",
+      "monitoring_and_evaluation": "PIU responsible for overall M&E and regular reporting to World Bank; bi-annual progress reports; collection of baseline data for social, environmental and economic impacts; outcomes and intermediate level indicators tracked; citizen satisfaction surveys; grievance monitoring; external audits (bi-annual technical, financial and system audits)"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Political polarization has traditionally delayed approvals of internationally financed projects; political changes may result in deviations from key objectives",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Strong consultation and information provided to all stakeholders on national reconstruction plan; broad understanding across political actors of importance and urgency of reconstruction efforts"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "External shocks (extreme weather, global economic slowdown, lower agricultural prices), domestic factors (pandemic impact, fiscal instability, ENEE deficit, weakened tax revenues), uncertainty about post-pandemic recovery speed",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Implementation of Disaster Risk Financing Strategy by SEFIN; measures supported by Cat DDO to promote climate resilience and provide fiscal buffer; IMF program supporting fiscal sustainability reforms"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "New PIU needs to be created and staffed with qualified experts; limited capacity of SEDECOAS due to COVID-19 and hurricane emergencies; need for coordination among multiple ministries",
+        "risk_rating": "high",
+        "mitigation_measures": "Project finances PIU operating expenses and additional technical staff; inputs from relevant line ministries for technical quality; Bank provides training and guidance; leverage expertise from other Bank-funded projects in Honduras; extension of DRM Project (P131094) capacity to support early implementation"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Emergency nature of operation; lack of established processes at SEDECOAS/PIU; capacity challenges for FM and procurement functions given project complexity and size; need for robust fiduciary environment",
+        "risk_rating": "high",
+        "mitigation_measures": "Dedicated FM specialist with knowledge of GoH finance systems; FM arrangements and disbursements detailed in POM; fast-track disbursement arrangements; integration with GoH's Integrated Financial Management Information System (SIAFI-UEPEX); external independent audit firm contracted; bi-annual technical, financial and system audits; clear roles and responsibilities between ministries"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Potential environmental impacts from debris clearing, earthworks, civil works, waste generation and disposal, wastewater discharge, traffic risks, health and safety risks including COVID-19 spread, malaria, dengue; social risks including exclusion of IPs/ADs, vulnerable populations, GBV, labor influx, potential involuntary resettlement, crime and gang violence, displacement, inadequate supervision of retroactive activities",
+        "risk_rating": "high",
+        "mitigation_measures": "Development of Environmental and Social Management Framework (ESMF), Stakeholder Engagement Plan (SEP), Labor Management Procedures (LMP), Resettlement Policy Framework (RPF), Indigenous Peoples and Afro-Descendants Plan (IPADP); E&S screening checklists and site-specific ESIAs/ESMPs; generic E&S management procedures and codes of practice; GBV and SEA risk management procedures; worker Code of Conduct; universal access design principles; robust Grievance Redress Mechanism; dedicated environmental, social, and health/safety specialists in PIU; community-based participatory processes; third-party monitoring for complex risks"
+      },
+      {
+        "risk_category": "Procurement",
+        "risk_description": "Lack of availability of goods/services/works due to increased local demand; limited implementing entity capacity; difficulty hiring qualified PIU staff quickly; governance issues in emergency contexts; conflict of interest with local vendors",
+        "risk_rating": "high",
+        "mitigation_measures": "Market research and analysis to identify potential contractors; access to local and international markets; hiring of experienced procurement and technical staff; procurement via UN agencies where they have comparative advantage; due diligence on conflict of interest; clear definition of roles and responsibilities in POM; hands-on expanded implementation support from Bank"
+      },
+      {
+        "risk_category": "Stakeholder",
+        "risk_description": "Multidisciplinary nature requires coordination among multiple stakeholders; ministries and agencies have not traditionally coordinated efficiently; coordination with NGOs and humanitarian organizations challenging; pandemic limits traditional engagement channels; affected populations face difficulties accessing safe communication channels",
+        "risk_rating": "substantial",
+        "mitigation_measures": "SEDECOAS continues institutional coordination support; participatory approaches to investment selection; adequate operation of SEP engagement strategy; robust, inclusive and culturally adapted GRM; involvement of local authorities and IP/AD organizations in decision-making"
+      },
+      {
+        "risk_category": "Other",
+        "risk_description": "COVID-19 pandemic (Honduras among most affected in LAC region); country prone to hurricanes and forest fires; ongoing La Niña Southern Oscillation expected to generate severe droughts in first half of 2021; occurrence of new natural disaster could undermine recovery progress",
+        "risk_rating": "substantial",
+        "mitigation_measures": "GoH with Bank and donor support continues strengthening DRM agencies; beneficiaries to receive training on disaster preparedness and response; building-back-better approach with improved construction standards; integration of disaster risk and climate change considerations into infrastructure designs"
+      },
+      {
+        "risk_category": "Technical Design of Project",
+        "risk_description": "Framework approach with significant flexibility defers details to POM and Recovery/Rehabilitation Plan; lack of detailed information on damages and losses; simplified and preliminary economic analysis",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Prioritization process during implementation based on criteria in POM; screening for eligibility; World Bank no-objection required for proposed investments; participatory and inclusive process involving local authorities and IPAD communities; climate-smart investment focus; economic analysis shows IRR of 13.45% and NPV of US$138 million at 4% discount rate"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Alignment with national DRM policies and frameworks; need for coordination with multiple sectoral policies",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Project aligned with UN Sendai Framework, Central America Policy for DRM (PCGIR), Honduras National DRM Plan, and National Emergency Operations Plan; support for operationalization of Disaster Risk Financing Strategy; alignment with World Bank CPF and COVID-19 Response Approach"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "High environmental and social risk classification",
+      "triggered_safeguard_policies": [
+        "Assessment and Management of Environmental and Social Risks and Impacts (ESS1)",
+        "Stakeholder Engagement and Information Disclosure (ESS10)",
+        "Labor and Working Conditions (ESS2)",
+        "Resource Efficiency and Pollution Prevention and Management (ESS3)",
+        "Community Health and Safety (ESS4)",
+        "Land Acquisition, Restrictions on Land Use and Involuntary Resettlement (ESS5)",
+        "Biodiversity Conservation and Sustainable Management of Living Natural Resources (ESS6)",
+        "Indigenous Peoples/Sub-Saharan African Historically Underserved Traditional Local Communities (ESS7)",
+        "Cultural Heritage (ESS8)",
+        "Projects on International Waterways (OP 7.50) - exception granted"
+      ],
+      "grievance_redress_mechanism": "Yes - robust GRM established to address concerns and complaints promptly and transparently with no cost or discrimination toward project-affected communities; channels developed for community M&E of site-specific activities through social audits or citizen feedback platforms; implementing staff and local-level coordination structures oriented on roles and responsibilities; World Bank's Grievance Redress Service (GRS) and Inspection Panel also available",
+      "gender_considerations": "Gender-sensitive participatory processes for defining priority investments; gender-informed implementation of activities; focus on female-headed households in housing reconstruction; women targeted as 48% of beneficiaries; gender specialist in PIU; training targets 48% women; GBV risk management procedures and SEA prevention measures included in codes of conduct; recognition that disaster impacts disproportionately affect women through disruptions to health, food security, livelihoods, and increased domestic violence",
+      "vulnerable_groups": [
+        "Indigenous Peoples (IPs) - 8.64% of population, 72% in extreme poverty, higher vulnerability to disaster impacts",
+        "Afro-descendants (ADs) - face similar vulnerabilities as IPs",
+        "Women - disproportionately affected by disasters, food insecurity, livelihood disruption, GBV",
+        "Persons with disabilities - universal design principles to be followed",
+        "Elderly",
+        "Youth",
+        "Sexual and gender minorities",
+        "Poor and extremely poor populations - estimated 60% of Eta/Iota affected population",
+        "Vulnerable populations as defined in SINAGER's DRM Law (Art. 10)",
+        "Groups in shelters - significant health challenges from COVID-19",
+        "Displaced persons and refugees"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project acknowledges crime and gang violence as contextual risks that can pose threats to local communities and project workers and could hinder implementation of site-specific activities; governance-related issues common in emergency situations identified as risk; project design includes measures to ensure inclusive participation and reduce exclusion risks; participatory processes designed to be culturally sensitive and inclusive of marginalized groups; GRM designed to address grievances transparently; focus on building social cohesion through inclusive recovery",
+      "fragility_context": "Honduras faces multiple fragility factors: (1) High exposure to natural hazards - most severely impacted by extreme weather events 1996-2015 with annual losses of 2.1% of GDP; (2) Economic vulnerability - modest volatile growth, 50% poverty rate, 30% vulnerability; (3) Structural challenges - weak institutions, political instability, limited economic diversification, thin economic base; (4) Social vulnerabilities - Indigenous Peoples and Afro-descendants face extreme poverty (72%), discrimination, precarious working conditions; (5) Security challenges - crime, migration pressures; (6) Fiscal instability - ENEE deficit, weakened tax revenues; (7) External shocks - COVID-19 pandemic, La Niña southern oscillation, global economic slowdown, lower agricultural prices; (8) Compound crises - simultaneous impact of COVID-19, Eta/Iota hurricanes, and La Niña creating severe fiscal and financial system stress",
+      "security_considerations": "Crime and gang violence identified as substantial risk during disaster response and reconstruction; project workers and local communities face security threats; gang violence could hinder implementation of site-specific activities; emergency context creates governance challenges; project design includes measures to address security concerns through coordination mechanisms and community engagement; local authorities and CODEL/CODEM involvement in planning to enhance local security awareness",
+      "displacement_or_refugees": "Yes - Over 1 million people evacuated due to Eta and Iota; approximately 96,000 remain in shelters as of December 2020; significant number expected to remain in need of shelter and basic nutrition for extended period due to destruction and damage; project finances short and long-term sheltering as part of Component 1; Resettlement Policy Framework prepared to address potential exceptional cases of land acquisition or economic displacement; project explicitly states no involuntary resettlement will occur - all buildings reconstructed in situ within existing footprints or on publicly owned land; temporary land taking for contractor camps and storage may occur; potential relocation of encroachers and interruption to adjacent business access identified as possible scenarios"
+    }
+  }
+}

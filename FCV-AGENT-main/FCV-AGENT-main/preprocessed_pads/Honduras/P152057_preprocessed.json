@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P152057",
+    "guid": 123161563355581151,
+    "node_id": 31252592,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b086ecd508&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Proyecto de Integración de la Protección Social (Social Protection Integration Project)",
+      "project_development_objective": "Mejorar los resultados del programa de TMC Urbano y fortalecer la integración del sistema de protección social para los extremadamente pobres",
+      "total_financing": "US$30 millones",
+      "implementation_period": "2019-2023 (4 años, cierre previsto 30 de junio de 2023)",
+      "beneficiaries": "Aproximadamente 40,000 participantes de TMC en zonas urbanas de hogares extremadamente pobres; 200,000 hogares adicionales en áreas rurales se beneficiarán indirectamente; estudiantes de 9º a 11º grado en escuelas seleccionadas; jóvenes y mujeres en tres municipios piloto (Tegucigalpa, San Pedro Sula, Choloma)"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Tegucigalpa (Distrito Central)",
+        "San Pedro Sula",
+        "Choloma",
+        "Áreas urbanas de Honduras (cobertura nacional para TMC urbano)",
+        "Áreas rurales (beneficiarios indirectos)"
+      ],
+      "coverage_type": "nacional con énfasis en tres municipios urbanos priorizados para la estrategia de transición",
+      "fragile_or_conflict_affected_areas": "partial - Honduras enfrenta desafíos significativos de seguridad y violencia, aunque la tasa de homicidios ha disminuido de 89 por 100,000 en 2011 a 43 en 2017. La delincuencia y violencia en zonas urbanas críticas han sido obstáculos importantes para el crecimiento económico. El proyecto se implementa en contexto de inseguridad urbana, con riesgos de violencia y crimen que afectan desproporcionadamente a los pobres"
+    },
+    "key_components": [
+      {
+        "component_name": "Componente 1: Fortalecimiento del Programa de TMC Urbano e Implementación de la Estrategia de Transición Integrada",
+        "description": "Financia transferencias monetarias condicionadas para hogares extremadamente pobres en áreas urbanas (aproximadamente 50,000 hogares) y diseña/implementa estrategia de transición urbana en tres municipios piloto. Incluye: reforma de estructura de incentivos de TMC urbano, extensión de beneficios a grados 10-12, estandarización de operación urbana-rural, expansión de educación alternativa, capacitación en habilidades sociales para la vida y empleo, referencias a programas de microcrédito",
+        "financing": "US$22.60 millones"
+      },
+      {
+        "component_name": "Componente 2: Fortalecimiento Institucional del Programa TMC e Integración del Sistema de Protección Social",
+        "description": "Fortalece sistemas de entrega del programa TMC (mecanismos de pago alternativos, sistema de atención al participante, GRM, plataforma SIG, estrategia de comunicación). Apoya integración del sistema de protección social a través de actualización de política de PS, certificación internacional del RUP, fortalecimiento de CENISS, actualización del PMT, estrategia de inclusión financiera, M&E e impacto de estrategia de transición",
+        "financing": "US$5.56 millones"
+      },
+      {
+        "component_name": "Componente 3: Gestión de Proyectos",
+        "description": "Financia personal clave de la Unidad Coordinadora del Proyecto (UCP): especialista técnico, especialista en adquisiciones, asistentes de adquisiciones, especialista en gestión financiera, contador, especialista en monitoreo. Incluye costos operacionales y auditoría externa",
+        "financing": "US$1.84 millones"
+      },
+      {
+        "component_name": "Componente 4: Contingente de Respuesta a Emergencias (CCRE)",
+        "description": "Proporciona respuesta inmediata a emergencias elegibles mediante reasignación de fondos del proyecto. Financia actividades y gastos de emergencia que cumplen condiciones especificadas en acuerdo de financiamiento y manual de operaciones",
+        "financing": "US$0.00 (contingente, sin asignación inicial)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Secretaría de Desarrollo e Inclusión Social (SEDIS) a través de la Subsecretaría de Integración Social (SSIS). Unidad Coordinadora del Proyecto (UCP) bajo SSIS responsable de gestión diaria, adquisiciones y supervisión",
+      "coordination_mechanisms": "Comité Técnico supervisa implementación del Programa TMC (integrado por SEDIS, SSIS, Secretaría de Salud, Secretaría de Educación, Secretaría de Finanzas, Secretaría de Coordinación General del Gobierno, CENISS). Acuerdos interinstitucionales con SEDUC, Programa Crédito Solidario, INFOP, CENISS, SCGG. Colaboración con socios: BID (TMC rural), FAO (alimentación escolar), JICA (inclusión financiera), USAID, OIT, GTZ (empleo), UE (servicios de empleo)",
+      "procurement_approach": "Regulaciones de Adquisiciones del Banco Mundial para Prestatarios de FPI (julio 2016, revisado noviembre 2017 y agosto 2018). PPSD preparado. Sistema STEP del Banco para planes de adquisiciones. Revisión previa obligatoria para contratos especificados. Documentos de Estándares de Adquisiciones para licitaciones competitivas internacionales. Enfoque de mercado nacional para procesos de licitación específicos",
+      "monitoring_and_evaluation": "SSIS lidera M&E. Sistema establecido a través de Proyecto de Protección Social anterior (P115592). Múltiples fuentes: Plataforma SIG, evaluaciones de selección/cobertura basadas en EPHPM, evaluación de impacto de estrategia de transición, evaluaciones de proceso e implementación, informes de avance. Indicadores de resultados intermedios y PDO monitoreados anualmente. Evaluación de impacto rigurosa de TMC urbano y estrategia de transición con encuestas de línea de base, intermedia y final"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Política y Gobernanza",
+        "risk_description": "Polarización política profundizándose en contexto de crisis política de 2009 no resuelta. Fragmentación política emergente puede disminuir espacios para diálogo político. Escándalos de corrupción pública resaltan debilidades institucionales y de gobernanza. Aunque partido gobernante tiene mayoría en Congreso, polarización puede demorar aprobaciones de proyectos o desviar fondos de implementación",
+        "risk_rating": "Considerable",
+        "mitigation_measures": "Banco Mundial continuará enfocándose en áreas de importancia crítica para desarrollo del país. Apoyo a diálogo con todas las partes interesadas sobre objetivos de desarrollo compartidos. Campaña de comunicación apoyada por proyecto difundirá ampliamente resultados del Programa TMC entre sociedad civil, donantes y academia para asegurar sostenibilidad política"
+      },
+      {
+        "risk_category": "Macroeconómico",
+        "risk_description": "Riesgos externos: normalización más rápida de postura monetaria en EE.UU. puede afectar entradas de capital. Política de inmigración más estricta en EE.UU. puede reducir remesas familiares y consumo interno, aumentar presiones en mercado laboral. Incertidumbre sobre perspectivas comerciales. Condiciones climáticas adversas y precios bajos de productos agrícolas clave (café) pueden afectar grandemente a Honduras. Riesgos internos: déficit persistente de ENEE amenaza posición fiscal. Amnistía fiscal prolongada debilita base impositiva. Estos riesgos afectarán desproporcionadamente a hogares pobres",
+        "risk_rating": "Considerable",
+        "mitigation_measures": "Gobierno apunta a fortalecer sostenibilidad fiscal mediante consolidación del sector Gobierno Central, reducción de gasto en inversiones, plan integral para rescatar sistema eléctrico y reducir deuda de ENEE. Equipo seguirá de cerca estos problemas con GdH y ajustará actividades del componente si es necesario. Compromiso del Gobierno con prudencia macroeconómica en general apoya éxito del proyecto"
+      },
+      {
+        "risk_category": "Diseño Técnico del Proyecto",
+        "risk_description": "Proyecto propone intervenciones nuevas para organismos de implementación (estrategia de transición requiere coordinación interinstitucional e intersectorial efectiva). Aunque proyecto financia TMC solo en zonas urbanas, gran proporción de participantes rurales no tienen fácil acceso a cuentas bancarias, planteando riesgo significativo para transición sin problemas del mecanismo de pago en zonas remotas. Efectividad del Programa TMC urbano se desconoce. Incidencia de pobreza es menor en zonas urbanas que rurales",
+        "risk_rating": "Considerable",
+        "mitigation_measures": "Proyecto financia serie de evaluaciones: evaluación de proceso, evaluación de impacto del TMC urbano y estrategia de transición. Estudios permitirán monitorear progreso de implementación y ajuste oportuno de actividades si se encuentran debilidades. Enfoque piloto de 'aprender haciendo' antes de ampliación. Hallazgos de implementación piloto e impacto se documentarán e incorporarán en manual de operaciones"
+      },
+      {
+        "risk_category": "Capacidad Institucional para Implementación y Sostenibilidad",
+        "risk_description": "Proyecto se basa en experiencias de agencias involucradas, pero hay elementos de reforma que requieren capacidad de gestión y coordinación: coordinación interinstitucional e intersectorial para estrategia de transición; capacidad técnica para diseñar e implementar reformas a PAML. Incertidumbre respecto a resultados finales de reforma del INFOP. Asociación con Programa Crédito Solidario puede suponer riesgo dado que se desconoce efectividad o sostenibilidad fiscal. FSPSRP enfrenta necesidades en competencia y asignación no es tan segura con presupuesto nacional regular",
+        "risk_rating": "Considerable",
+        "mitigation_measures": "Medidas de mitigación incorporadas en diseño: provisión de apoyo de AT y desarrollo de capacidades. Proyecto considerará posibles socios alternativos para capacitación vocacional durante primer año. Evaluación de estructuras y procesos del programa Crédito Solidario como parte de evaluación institucional. Colaboración iniciada como piloto evaluando efectividad de asociación. Decreto ejecutivo de noviembre 2018 compromete asignación anual del 10% de fondos FSPSRP a TMC"
+      },
+      {
+        "risk_category": "Fiduciario",
+        "risk_description": "Evaluación previa del Banco como Considerable para Proyecto de Protección Social (P115592) cerrado. Desafíos potenciales adicionales con Subcomponente 1.2 financiando estrategia de transición urbana. SSIS tiene experiencia significativa en implementación de Programa TMC en áreas rurales, pero crédito financiará nueva línea de TMC (Urbanas) con complejidad de arreglos institucionales. Desde perspectiva de adquisiciones: arreglos interinstitucionales complejos, apoyo y monitoreo de contratos resultantes del alto volumen de adquisiciones (especialmente gastos operativos y eventos de capacitación). Contexto del país: violencia y problemas de seguridad podrían impactar significativamente implementación",
+        "risk_rating": "Alta",
+        "mitigation_measures": "Arreglos se revisarán dentro de 6-12 meses de ejecución para asegurar funcionamiento según lo previsto. Ajustes necesarios serán realizados. Estrecha supervisión junto con actividades de creación de capacidad para personal fiduciario relevante y calificado. Plan de acción acordado incluye: procedimientos acordados y acuerdo interinstitucional con CENISS; mejoras en plataforma SIG; implementación de plan de acción sobre mecanismos de pago; evaluación externa del SIG; Manual de Operaciones actualizado; formato y contenido acordados de informes financieros; controles internos para contratos monitoreados; contratación de auditores externos dentro de 3 meses; revisiones de cumplimiento de pagos TMC por firma externa; acuerdos interinstitucionales acordados"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "B - Evaluación Parcial (Category B con riesgo ambiental Bajo, no se prevén impactos ambientales de salvaguardia, no se requiere evaluación ambiental)",
+      "triggered_safeguard_policies": [
+        "OP/BP 4.10 - Pueblos Indígenas (activada - tercero de serie de proyectos PS TMC desde 2010)"
+      ],
+      "grievance_redress_mechanism": "Sí. Proyecto fortalece Sistema de Atención al Participante que incluye Módulo de Quejas y Denuncias (GRM). Refuerzos al GRM apoyarán sistema a nivel nacional; apoyo al sistema de atención al participante se centrará en tres municipios priorizados. Lecciones aprendidas del Proyecto de PS anterior: importancia del uso de equipos móviles (tabletas) para garantizar que facilitadores en terreno tengan acceso al sistema GRM para informar y dar seguimiento a agravios. Proyecto medirá efectividad del GRM evaluando nivel de satisfacción con respuestas recibidas sobre quejas/agravios registrados. Indicador: porcentaje de quejas/agravios respondidos dentro de 5 días hábiles; porcentaje de participantes que reportan respuesta satisfactoria/adecuada según encuesta de satisfacción. Servicio de Reparación de Agravios (GRS) del Banco Mundial disponible para comunidades y personas que crean verse afectadas negativamente",
+      "gender_considerations": "Proyecto incorpora enfoques sensibles al género. Para empoderar a niñas y mujeres y abordar baja participación femenina en fuerza laboral: campaña de comunicación enfatizará importancia de participación femenina; materiales de capacitación vocacional para estudiantes 9º-11º grado enfatizarán importancia de participación laboral femenina y potencial económico/oportunidades de trabajo para niñas. Esfuerzos de inclusión financiera dirigidos a participantes TMC (>90% mujeres). Indicadores de resultados intermedios medirán efectividad de mensajes sensibles al género en materiales de comunicación y capacitación vocacional, y nivel de participación de participantes en orientaciones de inclusión financiera. Indicador específico: número de participantes femeninos de TMC urbanos que completan orientación de inclusión financiera (objetivo final: 6,920)",
+      "vulnerable_groups": [
+        "Hogares extremadamente pobres en áreas urbanas (definidos por PMT usando líneas de pobreza oficiales del Gobierno)",
+        "Niños y jóvenes en edad escolar de familias extremadamente pobres",
+        "Mujeres (participantes de TMC >90% mujeres; baja tasa de participación en fuerza laboral femenina de 47% vs 85% hombres)",
+        "Jóvenes NEET (Ni Estudiando Ni Trabajando Ni Capacitando) - 25% de población en edad productiva en 2016, 88% eran mujeres",
+        "Pueblos Indígenas y Comunidades Afrohondureñas (Colonia Garífuna Alfonso Lacayo en San Pedro Sula identificada en área de influencia del proyecto)",
+        "Adolescentes embarazadas (tasa de natalidad de 15-19 años de 103 por 1,000 en Honduras vs 62 en región ALC)",
+        "Poblaciones vulnerables a desastres naturales y cambio climático"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Proyecto diseñado con sensibilidad al contexto de violencia y crimen en Honduras. Aunque tasa general de delincuencia está disminuyendo (homicidios bajaron de 89 por 100,000 en 2011 a 43 en 2017), violencia en zonas urbanas críticas sigue siendo obstáculo importante. Proyecto se implementa en tres municipios urbanos priorizados (Tegucigalpa, San Pedro Sula, Choloma) con alta concentración de participantes TMC y disponibilidad de modalidades educativas alternativas. Estrategia de transición urbana busca mantener jóvenes fuera del crimen, violencia y embarazos de adolescentes mediante: extensión de beneficios TMC a grados 11-12 para mejorar perspectivas económicas; capacitación en habilidades sociales para la vida y empleo; acceso a programas de desarrollo de habilidades vocacionales y microcréditos. Proyecto financia campaña de comunicación nacional para crear conciencia sobre cambios en Programa TMC. Fortalecimiento del GRM y sistema de atención al participante contribuye a transparencia y rendición de cuentas, reduciendo potencial para conflicto",
+      "fragility_context": "Honduras enfrenta múltiples factores de fragilidad: (1) Pobreza extrema: 17.2% de población vive en pobreza extrema (segunda tasa más alta en ALC), 31.6% en pobreza moderada. Desigualdad persistentemente alta (Gini 50.5 en 2015). (2) Bajo crecimiento económico: crecimiento per cápita promedio 1.2% última década, no correlacionado con reducción de pobreza. (3) Informalidad laboral: 58% en 2016, caracterizada por empleos de baja productividad. Baja participación en fuerza laboral femenina (47% vs 85% hombres). (4) Educación deficiente: tasa neta de matriculación secundaria 45% (42% niños, 49% niñas); matriculación terciaria 20%. Años de escolaridad promedio 6.2 años vs 8.4 en ALC. (5) Vulnerabilidad climática: exposición a huracanes, inundaciones, sequías que destruyen cultivos y medios de vida. Perfil de vulnerabilidad climática de pobres particularmente alto. (6) Gobernanza débil: polarización política profunda, escándalos de corrupción, debilidades institucionales. (7) Presiones fiscales: déficit persistente de ENEE, amnistía fiscal prolongada debilita base impositiva. Proyecto aborda fragilidad mediante: fortalecimiento de sistema de protección social; mejora de capital humano; integración de sistemas de PS; inclusión financiera; respuesta a emergencias climáticas",
+      "security_considerations": "Contexto de inseguridad urbana significativa. Violencia y crimen en zonas urbanas críticas han impulsado emigración masiva hacia EE.UU. Con endurecimiento de políticas de inmigración de EE.UU., mayor número de migrantes regresa a Honduras, exacerbando necesidad urgente de crear buenas oportunidades de empleo. Proyecto implementado en tres municipios urbanos priorizados con presencia de violencia. Riesgos de seguridad identificados en evaluación de adquisiciones: violencia y problemas de seguridad podrían impactar significativamente implementación de actividades. Mitigación: Proyecto financia estrategia de transición urbana para mantener jóvenes fuera de reclutamiento en pandillas locales mediante educación, capacitación vocacional y oportunidades de emprendimiento. Fortalecimiento de sistemas de entrega y transparencia (GRM, mecanismos de pago alternativos) contribuye a reducir vulnerabilidad a corrupción y violencia. Componente Contingente de Respuesta a Emergencias permite respuesta rápida a crisis de seguridad o desastres naturales",
+      "displacement_or_refugees": "No se identifica desplazamiento o refugiados como resultado directo del proyecto. Sin embargo, contexto de Honduras incluye: (1) Emigración masiva en últimas dos décadas hacia EE.UU. impulsada por inseguridad y falta de oportunidades de empleo. (2) Mayor número de migrantes retornando a Honduras debido a endurecimiento de políticas de inmigración de EE.UU., exacerbando presiones en mercado laboral local. (3) Proyecto no requiere adquisición de tierras ni reasentamiento involuntario. (4) Evaluación social identificó riesgo de exclusión de beneficios del proyecto como principal riesgo social. Plan de Consulta con Partes Interesadas y Plan de Pueblos Indígenas y Comunidades Afrohondureñas (PPI) actualizado abordan estos riesgos. Desafío identificado en Proyecto de Protección Social anterior: aproximadamente 1,487 casos de personas indígenas en Departamento de Gracias a Dios no pudieron acceder a beneficios debido a falta de identificación nacional. Se espera que estas personas se conviertan en participantes del programa con fondos del FSPSRP. Asistencia Técnica ejecutada por Banco Mundial ('Mejorando la Prestación de Servicios a través de Identificación Mejorada' P168618) abordará este problema"
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P156433",
+    "guid": 979601491184897890,
+    "node_id": 27279120,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b084a10035&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Second Ethiopia Urban Water Supply and Sanitation Project",
+      "project_development_objective": "To increase access to enhanced water supply and sanitation services in an operationally efficient manner in Addis Ababa and selected secondary cities",
+      "total_financing": "US$505 million (IDA Credit US$320 million + IDA Scale Up Facility US$125 million + Government counterpart US$60 million)",
+      "implementation_period": "March 2017 - July 2023",
+      "beneficiaries": "3.38 million people (50% women) - 2.76 million from improved sanitation, 623,000 from improved water supply"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Addis Ababa",
+        "Dire Dawa",
+        "Mekelle",
+        "Adama",
+        "Bahir Dar",
+        "Awassa",
+        "Jimma",
+        "Gondar",
+        "Sodo",
+        "Adigrat",
+        "Harar",
+        "Jijiga",
+        "Gambella",
+        "Asosa",
+        "Semera",
+        "Bishoftu",
+        "Dessie",
+        "Shashemene",
+        "Nekemete",
+        "Asella",
+        "Arba Minch",
+        "Debrebirehan",
+        "Degeh Bur"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "partial - project implemented during state of emergency declared due to political unrest"
+    },
+    "key_components": [
+      {
+        "component_name": "Sanitation and water supply services improvements in Addis Ababa",
+        "description": "Construction of eastern catchment WWTP (80,000 m3/day), sewerage networks, public/communal latrines, operational efficiency improvements, NRW reduction",
+        "financing": "US$260 million"
+      },
+      {
+        "component_name": "Sanitation and water supply services improvement in secondary cities",
+        "description": "Sanitation infrastructure, fecal sludge management, communal/public latrines, vacuum trucks, water supply improvements, operational efficiency in 22 cities",
+        "financing": "US$241 million"
+      },
+      {
+        "component_name": "Project management and institutional strengthening",
+        "description": "Federal and regional level capacity building, studies, training, equipment",
+        "financing": "US$4 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Water, Irrigation and Electricity (MoWIE)",
+      "coordination_mechanisms": "National WaSH Steering Committee, Federal Project Management Unit, Regional Water Bureaus, Town Support Groups",
+      "procurement_approach": "World Bank procurement guidelines, Design-Build-Operate contracts for WWTPs, performance-based contracts",
+      "monitoring_and_evaluation": "Quarterly reporting, midterm review, annual audits, beneficiary surveys"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political",
+        "risk_description": "State of emergency and political unrest, tariff revision delays due to political factors",
+        "risk_rating": "high",
+        "mitigation_measures": "Monitor political situation, support tariff revision processes, alternative financing mechanisms"
+      },
+      {
+        "risk_category": "institutional",
+        "risk_description": "Limited capacity of secondary cities in implementation and management, weak coordination among multiple stakeholders",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Stepped approach, capacity building, Town Support Groups, international technical assistance"
+      },
+      {
+        "risk_category": "technical",
+        "risk_description": "Limited experience in WWTP design and management, low demand for sewer connections",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Design-Build-Operate contracts, community engagement, affordable connection strategies"
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "Weak financial management and procurement capacity in secondary cities, audit backlogs",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Capacity building, additional FM staff, procurement training, audit backlog clearance plans"
+      },
+      {
+        "risk_category": "environmental and social",
+        "risk_description": "Land acquisition requirements, NIMBY syndrome for sanitation facilities, limited awareness",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Resettlement Policy Framework, community consultations, Urban Health Extension Program engagement"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "B - Partial Assessment",
+      "triggered_safeguard_policies": [
+        "Environmental Assessment OP/BP 4.01",
+        "Physical Cultural Resources OP/BP 4.11",
+        "Involuntary Resettlement OP/BP 4.12",
+        "Projects on International Waterways OP/BP 7.50"
+      ],
+      "grievance_redress_mechanism": "yes - grievance committees at various levels in participating cities to log, track and resolve complaints",
+      "gender_considerations": "Gender Action Plan focusing on women's participation in consultations, employment opportunities, gender-responsive infrastructure design, institutional capacity for gender mainstreaming",
+      "vulnerable_groups": [
+        "women",
+        "youth",
+        "low-income households",
+        "people with disabilities"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project designed with awareness of political tensions - includes community engagement, grievance mechanisms, and stepped implementation approach to build local ownership",
+      "fragility_context": "Rapid urbanization straining services, institutional fragmentation, limited government capacity, high poverty rates in urban areas, recent political unrest leading to state of emergency",
+      "security_considerations": "State of emergency declared due to political unrest may impede implementation progress, security situation being monitored",
+      "displacement_or_refugees": "no specific mention of displacement or refugees, but project targets low-income areas and vulnerable populations"
+    }
+  }
+}

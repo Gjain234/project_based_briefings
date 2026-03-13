@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P176532",
+    "guid": 99459409222228456,
+    "node_id": 33904059,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=IDU-b7e241ff-57b5-48f8-bf67-ec450fd3e23a.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Proyecto de Servicios Esenciales de Salud y Preparación ante Emergencias (Essential Health Services and Emergency Preparedness Project)",
+      "project_development_objective": "The objectives are: (i) improve utilization of reproductive and child health services in priority regions, (ii) strengthen public health system capacities for emergency preparedness, and (iii) in case of an Eligible Crisis or Emergency, respond rapidly and effectively to it.",
+      "total_financing": "US$75 million (US$60 million IDA credit + US$15 million Global Financing Facility grant)",
+      "implementation_period": "June 16, 2022 to November 30, 2028",
+      "beneficiaries": "10.1 million inhabitants of Honduras; direct beneficiaries include 3 million women of reproductive age, 600,000 adolescents (15-19 years), and 640,000 children under five in priority regions; national coverage for Component 2 activities"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Gracias a Dios",
+        "Comayagua",
+        "El Paraíso",
+        "Olancho",
+        "Yoro",
+        "Santa Bárbara",
+        "Colón",
+        "Intibucá",
+        "Copán",
+        "Choluteca",
+        "Atlántida",
+        "Islas de la Bahía",
+        "Lempira",
+        "Francisco Morazán",
+        "Valle"
+      ],
+      "coverage_type": "Regional (13 priority regions for maternal/neonatal/adolescent health; 8 regions for immunization; national for Component 2)",
+      "fragile_or_conflict_affected_areas": "Partial - Honduras faces significant vulnerabilities including weak governance, high crime rates (41 homicides per 100,000 in 2021), gang violence, high emigration, and extreme vulnerability to climate change and natural disasters. The country experienced devastating impacts from tropical storms Eta and Iota in November 2020 (4.5 million affected, 1 million displaced, US$1.8 billion in damages). However, Honduras is not classified as a fragile or conflict-affected state; rather it faces fragility factors related to institutional weakness, poverty, and climate vulnerability."
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1 - Strengthening Essential Maternal, Child and Adolescent Health Services",
+        "description": "Strengthen supply and demand for health services for adolescents, mothers and children in priority regions. Activities include: (a) immunization support through vaccination campaigns, cold chain strengthening with climate-resilient infrastructure, social mobilization, and SINOVA system strengthening; (b) maternal and neonatal care through facility rehabilitation/equipment, communication materials, health worker training, and referral network strengthening; (c) adolescent sexual and reproductive health services through facility rehabilitation, communication campaigns, and health worker capacity building.",
+        "financing": "US$53 million (US$43 million IDA + US$10 million MMF)"
+      },
+      {
+        "component_name": "Component 2 - Public Health Preparedness, Response and Stewardship Capacity",
+        "description": "Strengthen capacity to prevent, detect and respond to health emergencies. Activities include: (a) surveillance and response system strengthening through Standard Operating Procedures (SOPs) updates, risk communication strategy, analytical capacity building, emergency response plans, and zoonotic disease prevention; (b) laboratory system strengthening through supply chain improvements, processing capacity enhancement with climate-resilient design, and quality accreditation systems; (c) health information system integration through protocol development, IT solutions, governance strengthening, and module development; (d) SESAL stewardship capacity through leadership training for mid-level managers.",
+        "financing": "US$18 million (US$14 million IDA + US$4 million MMF)"
+      },
+      {
+        "component_name": "Component 3 - Project Management Support",
+        "description": "Strengthen capacity of SESAL central and regional units for project coordination, execution management and supervision. Includes fiduciary functions, monitoring and evaluation, environmental and social standards compliance, audits, personnel costs, technical consultants, and operational costs.",
+        "financing": "US$4 million (US$3 million IDA + US$1 million MMF)"
+      },
+      {
+        "component_name": "Component 4 - Contingent Emergency Response Component (CERC)",
+        "description": "Provides funds following an eligible crisis or emergency, drawing from uncommitted resources of other components. Establishes conditions for fund use and requires preparation of Emergency Action Plan and CERC Operations Manual. Uses simplified procurement and disbursement procedures.",
+        "financing": "US$0 million (contingent funding mechanism)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Secretaría de Salud de Honduras (SESAL - Ministry of Health). Project implementation through existing Project Management Unit (UAP) within SESAL, which currently manages the COVID-19 Emergency Response Project (P173861).",
+      "coordination_mechanisms": "Multi-stakeholder coordination through: (i) intersectoral coordination mechanisms at departmental, municipal and community levels (intersectoral tables, regional committees); (ii) coordination with development partners including Global Financing Facility (MMF), GAVI, USAID, PAHO, UNICEF, UNFPA, IDB; (iii) MMF-supported coordination mechanism for multiple stakeholders to strengthen alignment and accountability; (iv) annual review of legal and institutional framework for sector health coordination.",
+      "procurement_approach": "Follows World Bank Procurement Standards (July 2016, revised November 2020). Uses STEP system for planning and tracking. Methods include: International Competitive Bidding, National Competitive Bidding, Direct Contracting with UN agencies, and Facilitated Procurement Mechanism. HEIS (Broad Practical Implementation Support Mechanism) recommended for UAP. Systematic Tracking Exchange on Procurement (STEP) used for planning and monitoring. Ex-ante review thresholds apply; ex-post review of sample contracts (minimum 20%) conducted annually.",
+      "monitoring_and_evaluation": "SESAL through UAP responsible for overall project implementation monitoring and results framework reporting. M&E specialist based in UAP coordinates with technical units. Monitoring harmonized with SESAL routine data systems (SINOVA, SIIS). Indicators tracked semi-annually and annually. Baseline evaluation of maternal/neonatal care standards conducted at project start. Annual evaluations of facility compliance with standards. Mid-Term Evaluation planned. Project Completion and Results Report prepared at closure. Citizen feedback mechanisms include user satisfaction surveys for adolescent health services; regional health authorities collect feedback and develop annual corrective action plans."
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Recent leadership changes and new government administration (January 2022) could result in delays and challenges from incomplete authority transition in health units, lack of coordination and adequate supervision. Uncertainty regarding government priorities and commitment to health sector reforms.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Sustained engagement with Ministry and health sector stakeholders and new administration members to secure support for rapid transition and effective coordination. Health sector coordination mechanisms anchored to existing legal and institutional framework, reviewed annually with recommendations to address deficiencies. Ensure project continuity during government transitions."
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Severe fiscal and inflationary pressures in Honduras could affect project costs and restrict SESAL's capacity to execute the project and ensure complementary investments. Government commitment to absorb 30% additional health workers on SESAL payroll will limit budget available for required health system investments. Risk of inadequate funding for basic health system functions (human resources, health supplies).",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Build cost contingency mechanisms into contracts. Apply cost-efficient interventions in project design. Monitor macroeconomic conditions and adjust implementation as needed."
+      },
+      {
+        "risk_category": "Institutional Capacity",
+        "risk_description": "Limited SESAL experience managing World Bank-financed initiatives. Challenges in SESAL's stewardship role within health sector. General project management and disease surveillance/response functions capacity constraints. UAP has limited experience (created October 2021). COVID-19 pandemic consuming significant financial and human resources, hindering effective ordinary health interventions and management of other emergencies like dengue. Risk of inadequate project supervision and results achievement.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Hire UAP personnel with World Bank project experience, especially in fiduciary functions and civil works execution. Provide technical assistance for institutional strengthening and stewardship capacity building. Strengthen coordination mechanisms through standard protocols and procedures. Improve M&E through health information system digitalization and integration. Develop equitable access strategy in coordination with development partners (GAVI). Provide HEIS for procurement support. Implement capacity development activities and personnel training."
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Financial management risks related to UAP capacity to handle increased workload and complexity of new project while managing COVID-19 project. Procurement risks include limited UAP experience with World Bank procedures, weak capacity of technical evaluators, market supply constraints for certain goods/services, and potential price increases.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Financial Management: Hire/assign qualified financial professional; consolidate financial information and coordination mechanisms between UAP and regional offices (detailed in MOP); provide periodic FM training. Procurement: Hire experienced procurement personnel; provide specialized training for evaluators and technical teams; ensure clear definition of roles and responsibilities in MOP; use HEIS; conduct specific market analysis to identify suppliers/contractors and assess capacity; implement cost contingency measures."
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Moderate environmental risks from minor civil works in health facilities, laboratories and cold chain storage (noise, dust, waste generation, traffic safety, occupational health and safety risks, medical waste generation with biological hazards). Moderate social risks include: potential discrimination and access difficulties for marginalized groups (Afro-Hondurans, indigenous peoples, migrants, elderly, LGBTI, persons with disabilities, rural/remote populations); gender-based violence (GBV) risks for patients and health workers including sexual exploitation/abuse and harassment; limited reach of communication strategies if not culturally adapted; misinformation risks regarding health programs and vaccination.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Environmental: Implement Environmental and Social Management Framework (MGAS) with site-specific risk assessments; develop detailed Environmental and Social Management Plans; ensure climate-resilient and low-carbon design for civil works; implement waste management practices; conduct occupational health and safety training. Social: Prepare Stakeholder Engagement Plan (PPPI) with culturally sensitive and linguistically adapted communication materials for indigenous and Afro-Honduran populations; establish Grievance Redress Mechanism (MRQ); develop Labor Management Procedures (LMP) with worker-specific grievance mechanism; prepare Indigenous Peoples Planning Framework (IPPF) and Indigenous Peoples Plans (IPP) as needed; integrate GBV prevention and response protocols in health worker training; ensure inclusive service design for vulnerable groups; implement community feedback mechanisms for service quality improvement."
+      },
+      {
+        "risk_category": "Design and Technical",
+        "risk_description": "Risk that interventions may not achieve expected results if implementation quality is compromised or if assumptions about behavior change and service utilization do not materialize. Risk of inadequate coordination between project components or with other health sector initiatives.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Evidence-based design incorporating lessons learned from diagnostic studies and international best practices. Operational research and studies to identify and address bottlenecks. Strong M&E system with regular monitoring and mid-term evaluation. Coordination mechanisms with development partners. Technical assistance for implementation support. Flexibility to adjust implementation based on evidence."
+      },
+      {
+        "risk_category": "Sector Policies and Strategies",
+        "risk_description": "Risk of misalignment between project activities and evolving national health priorities or sector policies. Potential for fragmented implementation if coordination with other health initiatives is weak.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Project aligned with national health strategies (Maternal-Infant Mortality Reduction Strategy, ENAPREAH, AIN-C, National Pandemic Response Plan). Annual review of legal and institutional framework for sector coordination. MMF-supported coordination mechanism to strengthen alignment among stakeholders. Integration with Mi Bono Seguro conditional cash transfer program in overlapping regions."
+      },
+      {
+        "risk_category": "Stakeholder Engagement",
+        "risk_description": "Risk of inadequate stakeholder participation or community engagement, potentially limiting project effectiveness and sustainability. Risk of insufficient engagement with indigenous peoples and Afro-Honduran communities.",
+        "risk_rating": "low",
+        "mitigation_measures": "Comprehensive Stakeholder Engagement Plan (PPPI) prepared with consultation of internal and external stakeholders. Culturally sensitive and linguistically adapted communication materials for vulnerable groups. Community mobilization activities. Citizen feedback mechanisms and grievance redress. Regular stakeholder consultation during implementation."
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate",
+      "triggered_safeguard_policies": [
+        "Environmental and Social Standards 1 (ES1): Assessment and Management of Environmental and Social Risks and Impacts",
+        "Environmental and Social Standards 2 (ES2): Labor and Working Conditions",
+        "Environmental and Social Standards 3 (ES3): Resource Efficiency and Pollution Prevention and Management",
+        "Environmental and Social Standards 4 (ES4): Community Health and Safety",
+        "Environmental and Social Standards 7 (ES7): Indigenous Peoples/Traditional Local Communities Historically Underserved Populations of Sub-Saharan Africa",
+        "Environmental and Social Standards 10 (ES10): Stakeholder Engagement and Information Disclosure"
+      ],
+      "grievance_redress_mechanism": "Yes - Project-level Grievance Redress Mechanism (MRQ) established to receive and address complaints from affected communities and persons. Mechanism ensures prompt study of complaints related to project. Affected persons can also submit complaints to World Bank's Grievance Redress Service or World Bank Inspection Panel. MRQ details included in Stakeholder Engagement Plan (PPPI). Labor Management Procedures (LMP) include worker-specific grievance mechanism.",
+      "gender_considerations": "Strong gender focus throughout project. Addresses high adolescent pregnancy rates (highest in Central America, second highest in LAC region) with marked gender disparity (25% of girls vs 4% of boys are parents before age 18). Project supports sexual and reproductive health services for adolescents, family planning, prevention of gender-based violence, and women's empowerment. Includes indicator on health workers trained in adolescent-friendly services. Aligned with World Bank's Regional Gender Action Plan for LAC (AF21-25) to improve women's autonomy through improved access to maternal and reproductive health care. Addresses gender-based violence (GBV) as barrier to reproductive health - Honduras had highest femicide rate in Latin America (4.7 per 100,000 in 2020). Project includes GBV identification, treatment and referral protocols in health worker training.",
+      "vulnerable_groups": [
+        "Indigenous peoples (estimated 8.6% of population, over 70% living in poverty)",
+        "Afro-Hondurans/Afrodescendants (estimated 8.6% of population)",
+        "Adolescents (15-19 years), particularly girls",
+        "Women of reproductive age",
+        "Children under five",
+        "Rural and remote populations",
+        "Migrants",
+        "LGBTI community",
+        "Persons with disabilities",
+        "Elderly persons",
+        "Poorest income quintiles",
+        "Persons with low education levels",
+        "Victims of gender-based violence"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "While Honduras is not classified as a fragile or conflict-affected state, the project incorporates conflict-sensitive approaches through: (i) inclusive service design addressing needs of marginalized groups (indigenous peoples, Afro-Hondurans, LGBTI, migrants, persons with disabilities); (ii) culturally sensitive and linguistically adapted communication materials; (iii) gender-based violence prevention and response protocols; (iv) community participation mechanisms; (v) grievance redress mechanisms; (vi) focus on vulnerable populations disproportionately affected by poverty and exclusion. Project supports essential health services that are critical for vulnerable populations and can contribute to social cohesion through improved access to maternal, child and adolescent health services.",
+      "fragility_context": "Honduras faces significant fragility factors: (i) Weak governance and institutional capacity - second poorest country in Western Hemisphere (PIB per capita US$2,822); 49% of population living on less than US$5.50 daily (55% in 2020); low public health spending (US$171 per capita, second lowest in LAC after Haiti); weak stewardship capacity of SESAL; (ii) High crime and violence - 41 homicides per 100,000 in 2021 (down from 77 in 2013); high emigration; (iii) Extreme climate vulnerability - recent tropical storms Eta and Iota (November 2020) caused 4.5 million affected, 1 million displaced, US$1.8 billion in damages (7.5% of 2020 GDP); increasing frequency and intensity of droughts, floods, hurricanes; (iv) Health system weaknesses - low immunization coverage (dropped from 90%+ in 2016 to 82% in 2020); interrupted essential health services during COVID-19; weak surveillance and laboratory capacity (34% of International Health Regulations capacity); ongoing dengue epidemic; (v) Socioeconomic vulnerabilities - high poverty and inequality; significant disparities in health outcomes by geography, income and education; high adolescent pregnancy rates; high gender-based violence; (vi) Pandemic impacts - COVID-19 caused 424,000+ cases and 10,895 deaths; 68% of households reported income losses in 2020; 33%+ reported food insecurity.",
+      "security_considerations": "Project addresses security-related health vulnerabilities through: (i) Strengthening emergency preparedness and response capacity to handle health crises (pandemics, epidemics, natural disasters); (ii) Improving surveillance systems to detect and respond to disease outbreaks; (iii) Strengthening laboratory capacity for rapid diagnosis; (iv) Integrating health information systems for real-time data and early warning systems; (v) Building resilience of health facilities to climate-related emergencies through climate-resilient infrastructure; (vi) Ensuring continuity of essential health services during emergencies; (vii) Addressing health impacts of climate change (vector-borne diseases, water-borne diseases, heat-related illness); (viii) Supporting vulnerable populations most affected by health emergencies and climate impacts.",
+      "displacement_or_refugees": "Yes - Honduras experiences significant internal displacement and migration. Tropical storms Eta and Iota (November 2020) displaced over 1 million people. Gender-based violence is identified as a cause of forced displacement - UNHCR research indicates sexual violence and femicide are drivers of forced displacement from Honduras. Project addresses health needs of displaced persons and migrants through: (i) Inclusive service design for migrants and displaced populations; (ii) Culturally sensitive communication materials; (iii) Strengthened maternal and child health services in priority regions with high displacement; (iv) GBV prevention and response protocols; (v) Adolescent sexual and reproductive health services; (vi) National coverage of surveillance and emergency preparedness systems. Project beneficiaries include migrants and displaced persons accessing essential health services in priority regions."
+    }
+  }
+}

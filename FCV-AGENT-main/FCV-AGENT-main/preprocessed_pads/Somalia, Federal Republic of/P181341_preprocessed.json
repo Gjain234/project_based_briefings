@@ -1,0 +1,211 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P181341",
+    "guid": 99113023180038846,
+    "node_id": 34205401,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-2ca62b03-e1a7-47d1-9c72-b59a2fa65b89.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Accelerating Sustainable & Clean Energy Access Transformation (ASCENT) Program using the Multiphase Programmatic Approach",
+      "project_development_objective": "To increase access to sustainable and clean energy in Eastern and Southern Africa",
+      "total_financing": "US$1,063 million (first wave); overall MPA financing envelope of US$5 billion IDA + US$415 million other sources = US$5,415 million",
+      "implementation_period": "2023-2030 (7 years)",
+      "beneficiaries": "100 million people across up to 20 countries in Eastern and Southern Africa, including households, enterprises, schools, health clinics, women, youth, and displaced persons"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Eastern and Southern Africa (AFE) region",
+        "Rwanda",
+        "Sao Tome and Principe",
+        "Somalia",
+        "Tanzania",
+        "COMESA member states (regional)",
+        "Future phases: Burundi, Comoros, Democratic Republic of Congo, Ethiopia, Kenya, Lesotho, Madagascar, Malawi, Mozambique, South Sudan, Uganda, Zambia"
+      ],
+      "coverage_type": "regional",
+      "fragile_or_conflict_affected_areas": "yes - Somalia is explicitly flagged as Fragile State and Conflict-affected; the program notes that half of the AFE population without electricity access resides in FCV-affected countries; the MPA datasheet checks 'Fragile State(s)', 'Fragile within a non-fragile Country', and 'Conflict' boxes; specific FCV-contextualized interventions are designed for Somalia and future phases targeting DRC, South Sudan, and others"
+    },
+    "key_components": [
+      {
+        "component_name": "COMESA Regional Energy Access Acceleration Platform (Phase 1)",
+        "description": "Digital MRV platforms for energy access and climate finance; Project Preparation Facility for governments and private sector; Advisory Support Facility for policy/regulatory environment; Knowledge exchange, skills development, consumer engagement; Project management and capacity building for COMESA Secretariat PIU",
+        "financing": "US$50 million (IDA Grant)"
+      },
+      {
+        "component_name": "ASCENT Rwanda - Increasing Access to Grid Electricity (Phase 2, Component 1)",
+        "description": "Grid densification and expansion targeting ~420,000 households across 15 districts; MV and LV line extensions, substations, transformers, service drops",
+        "financing": "US$207.75 million IDA + US$69.25 million AIIB"
+      },
+      {
+        "component_name": "ASCENT Rwanda - Enhancing Reliability of Electricity Services (Phase 2, Component 2)",
+        "description": "Upgrading and rehabilitation of substations, HV lines, MV and LV network refurbishment to improve grid stability",
+        "financing": "US$54.75 million IDA + US$18.25 million AIIB"
+      },
+      {
+        "component_name": "ASCENT Rwanda - Off-Grid Electricity, Clean Cooking, and Productive Use (Phase 2, Component 3)",
+        "description": "RBF facilities for off-grid electrification and clean cooking via BRD; PUE technology distribution; credit support facility; clean cooking in public institutions",
+        "financing": "US$22.5 million IDA + US$7.5 million AIIB"
+      },
+      {
+        "component_name": "ASCENT Rwanda - Technical Assistance and Capacity Building (Phase 2, Component 4)",
+        "description": "Technical studies on energy efficiency and PUE; capacity building for EDCL and BRD; project implementation support",
+        "financing": "US$15 million IDA + US$5 million AIIB"
+      },
+      {
+        "component_name": "ASCENT Sao Tome and Principe - On-Grid and Off-Grid Electricity Access Expansion (Phase 3, Component 1)",
+        "description": "Network reinforcement and expansion; last-mile connections; solar systems for public facilities; off-grid connections for households",
+        "financing": "US$14.2 million IDA + US$2.8 million PHRD + US$5 million AfDB"
+      },
+      {
+        "component_name": "ASCENT Sao Tome and Principe - Solar PV Scale-Up (Phase 3, Component 2)",
+        "description": "Site preparation for up to 15 MWp solar PV; initial 5 MWp plant with private operator; interconnection line; battery storage; SCADA modernization; tariff buy-down and liquidity guarantee for 10 MWp IPP",
+        "financing": "US$13.4 million IDA + US$6.9 million ESMAP + US$3 million AfDB"
+      },
+      {
+        "component_name": "ASCENT Sao Tome and Principe - Governance and Institutional Capacity (Phase 3, Component 3)",
+        "description": "Management information system for EMAE; prepayment meters; institutional capacity for policy, regulation, and system operations",
+        "financing": "US$10.4 million IDA + US$5 million AfDB"
+      },
+      {
+        "component_name": "ASCENT Somalia - Distributed Renewable Energy with Solar PV and BESS (Phase 4, Component 1)",
+        "description": "Design, supply, and installation of 30-50 MW solar PV with battery energy storage in Mogadishu and Federal Member States; capital cost buy-down to reduce electricity cost from ~US$0.60/kWh to ~US$0.35-0.45/kWh; operated by private ESPs",
+        "financing": "US$81.5 million IDA Grant"
+      },
+      {
+        "component_name": "ASCENT Somalia - Electricity Distribution Network Rehabilitation (Phase 4, Component 2)",
+        "description": "Reduction of technical and commercial losses; network capacity expansion; last-mile access for low-income households; MV and LV distribution equipment",
+        "financing": "US$10 million IDA Grant"
+      },
+      {
+        "component_name": "ASCENT Somalia - Sector Capacity and Institution Enhancement (Phase 4, Component 3)",
+        "description": "Policy and regulatory development; sector planning; feasibility studies; capacity building for ministry and ESPs; Gender Action Plan implementation; project implementation support",
+        "financing": "US$8.5 million IDA Grant"
+      },
+      {
+        "component_name": "ASCENT Tanzania - Expanding On-Grid Access (Phase 5, Result Area 1)",
+        "description": "PforR supporting REA Phase 3 grid densification and last-mile connections; MV/LV lines, transformers, metering; DLI-based disbursement targeting 812,606 new connections",
+        "financing": "US$277.66 million IDA Credit (DLI 1)"
+      },
+      {
+        "component_name": "ASCENT Tanzania - Distributed Renewable Energy via REIF (Phase 5, Result Area 2)",
+        "description": "Renewable Energy Investment Facility operationalization; matching grants, RBF, credit lines, equity, and mezzanine instruments for small power producers",
+        "financing": "US$19.72 million IDA Credit (DLI 2)"
+      },
+      {
+        "component_name": "ASCENT Tanzania - National Access Acceleration Platform (Phase 5, Result Area 3)",
+        "description": "PUE strategy development; SPP Standard Financing Framework; policy and regulatory strengthening for renewable energy and electrification",
+        "financing": "US$2.62 million IDA Credit (DLI 3)"
+      },
+      {
+        "component_name": "TDB Regional Energy Access Financing Platform - Lending to DRE and Clean Cooking Companies (Phase 6, Component 1)",
+        "description": "Direct and on-lending via PFIs to DRE and clean cooking companies; long-term debt, local currency financing; TDF subsidiary for SME lending (up to 25% of IDA SUW); co-financing mobilization target of US$300 million private/commercial capital",
+        "financing": "US$265 million (US$250 million IDA SUW + US$15 million Regional IDA Credit)"
+      },
+      {
+        "component_name": "TDB Regional Energy Access Financing Platform - RBF for Frontier Markets (Phase 6, Component 2)",
+        "description": "Regional RBF facility targeting unserved/underserved areas including FCV markets; performance-based catalytic grants for companies entering new markets; gender-targeted incentives",
+        "financing": "US$12 million ESMAP RETF Grant"
+      },
+      {
+        "component_name": "TDB Regional Energy Access Financing Platform - Technical Assistance and Innovations (Phase 6, Component 3)",
+        "description": "TA for TDB/TDF on DRE due diligence; digital planning and MRV tools; PFI capacity building; gender action plan; financial innovation piloting including hedging, de-risking, aggregation; carbon revenue monetization",
+        "financing": "US$17 million (US$10 million Regional IDA Credit + US$7 million ESMAP)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Multiple: COMESA Secretariat (Phase 1); Energy Development Corporation Limited (EDCL) and Development Bank of Rwanda (BRD) (Phase 2); Ministry of Infrastructure, Natural Resources and Environment / AFAP (Phase 3); Ministry of Energy and Water Resources Somalia (Phase 4); Rural Energy Agency Tanzania (Phase 5); Trade and Development Bank / Trade and Development Fund (Phase 6)",
+      "coordination_mechanisms": "ASCENT MPA coordination mechanism established leveraging DARES Platform co-managed by AFE, AFW, IFC, and MIGA; COMESA PIU monitors overall program results; Project Steering Committees in each country; MOU between Tanzania REA and TANESCO; coordination mechanism for REAF financing facility to facilitate IFC/MIGA co-financing; bi-annual consultation events; regional knowledge exchange platform",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers (September 2023 edition); STEP online tool for all procurement tracking; country-specific procurement plans and PPSDs; PforR for Tanzania uses fiduciary systems assessment; enhanced forced labor provisions for solar panel procurement including Forced Labor Performance Declaration and Forced Labor Declaration from suppliers; OP 4.03 Performance Standards applied to TDB as FI",
+      "monitoring_and_evaluation": "COMESA Secretariat PIU leads program-level M&E; digital MRV platform to aggregate results from countries and private sector; quarterly IFRs from all implementing agencies; annual external audits; independent monitoring and verification firm for Somalia; impact evaluations under Knowledge Compact with DEC/DIME; multi-tier framework household surveys; beneficiary satisfaction surveys; disaggregated indicators by gender, technology type, and end-user category"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Somalia: High political risk due to fluid security situation, tensions between Federal Government and Federal Member States, contestation over project location allocations, and inadequate political commitment to regulatory reform. STP: Government commitment to sector reforms needed to attract private developers may waver; tariff reform resistance.",
+        "risk_rating": "high",
+        "mitigation_measures": "Somalia: Close coordination with FGS, FMS, NEA, and ESPs; activities prioritized per geospatial analysis and Somalia Electricity Power Masterplan; flexible site selection based on security. STP: Continued coordination with government and high-level crisis committee; DPO series to anchor key reform measures; IMF program alignment."
+      },
+      {
+        "risk_category": "Security",
+        "risk_description": "Somalia: Parts of Somalia remain insecure, affecting access to project sites and safety of government agency and contractor staff. Security risk rated High.",
+        "risk_rating": "high",
+        "mitigation_measures": "Flexibility in site selection subject to security situation; contingency plans for restricted site access; Security Management Plan updated from ongoing ESRP; standard operating procedures for contractors; project design allows activities in low-security-risk areas with option to select new sites."
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "STP: High macroeconomic risk due to reliance on external grants, exchange rate uncertainty, financial sector exposure, and energy sector fragility; fuel price increases pressure already constrained power sector. TDB: Worsening macroeconomic environment in AFE countries including inflation and exchange rate fluctuations; potential spillover from shareholder sovereign risks. Somalia: ESP cash-flow constraints threaten sustainability.",
+        "risk_rating": "high",
+        "mitigation_measures": "STP: Government commitment to sound policies backed by IMF program; World Bank DPO series. TDB: Diversified shareholder base; capital buffers >40%; robust risk management; insurance on callable capital; project supports diversification into DRE sector. Somalia: Project reduces cost of supply and improves ESP operational efficiency to expand consumer base."
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "Somalia: Low capacity within Ministry of Energy and Water Resources and ESPs undermines timely and effective project preparation and implementation. STP: Lack of clarity among stakeholders, insufficient coordination between AFAP/EMAE/MIRNMA, limited government oversight; first IPP experience. TDB: TDF is newly established with no prior World Bank project experience.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Somalia: Utilize existing PIU from ESRP; recruit owner's engineer; capacity-building activities; HEIS modality applied. STP: Regular stakeholder meetings; international recruitment for project coordinator; owner's engineers for all investments; transaction adviser for solar tender. TDB: TDB manages all fiduciary responsibilities until TDF capacity established; detailed Operations Manual provisions; Component 3 institutional strengthening."
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Somalia: Challenging FM and procurement environment with potential mismanagement, fraud, lack of transparency, and corruption; decentralized project activities difficult to monitor. STP: Substantial fiduciary risk due to country context and coordination challenges between AFAP, MIRNMA, and EMAE. TDB: Risks related to AWPB delays, TDF inexperience, complexity of credit lines/RBF/grants, IFR submission delays. Tanzania: Procurement rated Substantial due to delays in vendor payments, AG office vetting, record-keeping issues.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Somalia: Retain dedicated procurement and FM specialists from ESRP PIU; on-the-job training; periodic World Bank reviews. STP: Recruit competent accountant; update FMM; update accounting software; sign external auditor addendum within 6 months. TDB: TDB manages fiduciary until TDF capacity built; detailed Operations Manual; timely AWPB preparation. Tanzania: Tailored procurement training; Contract Management Plans; KPI measurement throughout procurement cycle."
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Overall program E&S risk rated Substantial. Construction of MV/LV lines can cause habitat alteration, affect natural/critical habitats, and pose OHS risks. Somalia: High GBV risk; land acquisition issues; IDP displacement; legacy land claims; labor influx risks; security for workers. Rwanda: Biodiversity impacts, OHS from transformer replacement, e-waste from batteries/solar panels, GBV from labor influx. STP: Land clearing, OHS, waste management, GBV/SEA/SH from works. TDB: FI-2 risk; PFI capacity to manage E&S; involuntary resettlement; forced labor in solar supply chain.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Country-specific ESMFs, ESCPs, RPFs, SEPs, LMPs, GBV Action Plans prepared and disclosed; site-specific ESIAs/ESMPs before civil works; RAPs before land acquisition; independent M&V firm for Somalia; TDB ESMS enhanced with PFI guidance note; forced labor declarations required from solar suppliers; E&S specialists in all PIUs; HEIS for Somalia."
+      },
+      {
+        "risk_category": "Macroeconomic (Program-level)",
+        "risk_description": "Africa's post-COVID recovery weak; AFE region faces weaker external demand, global inflation, higher borrowing costs, adverse weather events, and climate impacts posing risks to macroeconomic stability across participating countries.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Strengthening institutional capacity during rollout; strengthening enabling environment for utility financial recovery and private investment mobilization; supporting financial innovations to reduce risks and mobilize local currency financing."
+      },
+      {
+        "risk_category": "Political and Governance (Program-level)",
+        "risk_description": "Varying levels of government commitment across participating countries; potential for policy reversals; regional coordination challenges across 20+ countries.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "ASCENT remains adaptable to evolving sociopolitical contexts; COMESA platform provides regional coordination; reform roadmaps required before country joins ASCENT; learning agenda to raise implementation quality."
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Substantial (overall program and most phases); Moderate (COMESA Phase 1 and STP Phase 3)",
+      "triggered_safeguard_policies": [
+        "ESS 1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS 2: Labor and Working Conditions",
+        "ESS 3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS 4: Community Health and Safety",
+        "ESS 5: Land Acquisition, Restrictions on Land Use and Involuntary Resettlement",
+        "ESS 6: Biodiversity Conservation and Sustainable Management of Living Natural Resources",
+        "ESS 7: Indigenous Peoples/Sub-Saharan African Historically Underserved Traditional Local Communities (relevant for TDB/COMESA/Somalia/Rwanda; not currently relevant for STP)",
+        "ESS 8: Cultural Heritage",
+        "ESS 10: Stakeholder Engagement and Information Disclosure",
+        "OP 4.03: World Bank Performance Standards for Private Sector Activities (TDB as FI)"
+      ],
+      "grievance_redress_mechanism": "yes - Project-level GRMs required as effectiveness condition for COMESA; GBV-sensitive GRM for Somalia; country-specific GRMs for all phases; World Bank Grievance Redress Service (GRS) and Accountability Mechanism (Inspection Panel and Dispute Resolution Service) available; GRM resolution rate tracked as indicator (90% target for Somalia and Rwanda)",
+      "gender_considerations": "Comprehensive gender strategy across all phases: COMESA to develop regional Gender Action Plan and Women's Leadership Institute and STEM Skills Accelerator Institute; Rwanda tracks women-led businesses with grid/PUE access and women employed in BRD-financed enterprises (15% target); STP targets 12% women in technical positions at EMAE and 30% women in solar park O&M; Somalia tracks female-headed households with electricity access (10% target), women-owned enterprises (30% target), and women with STEM background in energy sector (10% target); Tanzania tracks women-owned/led businesses with electricity and female STEM graduates in energy sector; TDB uses RBF with gender-targeted incentives; program-wide indicator for increased women with STEM background in energy sector (10% increase target); gender audits of COMESA member state policies planned",
+      "vulnerable_groups": [
+        "Women and girls (especially in rural areas and FCV contexts)",
+        "Female-headed households",
+        "Low-income households (bottom two income quintiles)",
+        "Forcibly displaced persons and host communities",
+        "Internally displaced persons (IDPs) in Somalia",
+        "Nomadic populations (Somalia)",
+        "Indigenous Peoples/Sub-Saharan African Historically Underserved Traditional Local Communities",
+        "People living with disabilities",
+        "Persons with informal land rights",
+        "Communities in FCV-affected areas",
+        "Youth (especially in DRE supply chains)"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Program explicitly designed with FCV-contextualized approaches: Somalia flagged as Fragile State and Conflict-affected with HEIS modality; private sector-based DRE electrification identified as only viable rapid access expansion approach in FCV contexts; TDB RBF facility specifically targets frontier/FCV markets; learning agenda includes documenting FCV context lessons for replicable/scalable approaches; ASCENT remains adaptable to evolving sociopolitical contexts; security management plans required; flexible site selection based on security conditions; border areas noted as having higher social tension and conflict risks requiring special attention; cross-border electrification solutions designed with conflict sensitivity; FCV-affected countries to receive de-risking instruments in future phases",
+      "fragility_context": "Half of AFE population without electricity access lives in FCV-affected countries; lack of energy access is both consequence and cause of fragility and conflict; energy access progress in FCV countries falling behind non-FCV countries due to security issues, institutional weaknesses, and capacity constraints; Somalia emerging from conflicts that destroyed public infrastructure; decentralized energy system operated by private ESPs using small-scale diesel generators; Somalia electricity cost among world's highest (US$0.61/kWh); ~8 million Somalis without electricity access; STP faces acute macroeconomic crisis with 32.2% of GDP in energy sector debt; DRC, South Sudan, Burundi identified as future FCV phase countries; increasing number of forcibly displaced persons and host communities need improved energy access",
+      "security_considerations": "Somalia security risk rated High; parts of Somalia remain insecure affecting site access and staff safety; Security Management Plan required and updated from ongoing ESRP; standard operating procedures for contractors in restricted access areas; flexible project design allows activity relocation based on security situation; border areas in AFE region noted for higher social tension risks; labor influx risks in conflict-affected areas including GBV/SEA/SH; independent monitoring and verification firm required for Somalia; World Bank staff access limitations acknowledged in project design",
+      "displacement_or_refugees": "yes - program explicitly acknowledges increasing number of forcibly displaced persons and host communities in urgent need of improved energy access; Somalia has significant IDP population with forced displacement risk from land acquisition identified as key social risk; legacy land issues and unsettled/multiple claims at existing ESP generation sites in Somalia; RPFs required to address involuntary resettlement; exceptional provision for land compensation payments through World Bank funds in Somalia given government budget constraints; border areas hosting refugees noted as higher social tension risk areas; TDB RBF facility designed to reach displacement-affected communities"
+    }
+  }
+}

@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import os
-import glob
 from main_briefing_generator import get_fcv_content_from_docs
 from generate_briefing import generate_briefing
 from config import (
@@ -49,17 +48,10 @@ internal = st.sidebar.checkbox(
 available_countries = load_available_countries(internal=internal)
 
 # Country selection
-# Initialize default country in session state if not set
 if 'selected_country' not in st.session_state:
     st.session_state.selected_country = "Djibouti" if "Djibouti" in available_countries else available_countries[0]
 
-# Get index for currently selected country
-try:
-    default_index = available_countries.index(st.session_state.selected_country)
-except ValueError:
-    # If previously selected country is no longer available, reset to first
-    default_index = 0
-    st.session_state.selected_country = available_countries[0]
+default_index = available_countries.index(st.session_state.selected_country) if st.session_state.selected_country in available_countries else 0
 
 country = st.sidebar.selectbox(
     "Select Country",
@@ -68,9 +60,7 @@ country = st.sidebar.selectbox(
     key="country_selector"
 )
 
-# Update session state when country changes
-if country != st.session_state.selected_country:
-    st.session_state.selected_country = country
+st.session_state.selected_country = country
 
 # Briefing type
 briefing_mode = st.sidebar.selectbox(
@@ -109,10 +99,12 @@ if briefing_mode == "custom":
 # Check if country risk briefing exists and show timestamp
 save_folder = "intermediary_outputs"
 briefing_risks_metadata_path = f"{save_folder}/{country}_briefing_risks_metadata.json"
+briefing_risks_csv_path = f"{save_folder}/{country}_briefing_risks.csv"
 
 last_scan_date = None
 never_scanned = True
 
+# Check metadata file first (preferred)
 if os.path.exists(briefing_risks_metadata_path):
     import json
     from datetime import datetime
@@ -129,6 +121,19 @@ if os.path.exists(briefing_risks_metadata_path):
                 except:
                     date_only = last_scan_date.split()[0] if ' ' in last_scan_date else last_scan_date
                 st.sidebar.info(f"📅 Generating briefing using news from **{date_only}**. If you would like to use fresh news, tick the regenerate checkbox (will take around 10 minutes).")
+    except:
+        pass
+
+# Fallback: check CSV file's modification time if metadata doesn't exist
+if never_scanned and os.path.exists(briefing_risks_csv_path):
+    import json
+    from datetime import datetime
+    try:
+        file_mtime = os.path.getmtime(briefing_risks_csv_path)
+        file_date = datetime.fromtimestamp(file_mtime)
+        date_only = file_date.strftime("%Y-%m-%d")
+        never_scanned = False
+        st.sidebar.info(f"📅 Generating briefing using news from **{date_only}**. If you would like to use fresh news, tick the regenerate checkbox (will take around 10 minutes).")
     except:
         pass
 
@@ -196,21 +201,6 @@ if st.session_state.generate or 'briefing' in st.session_state:
     pad_risks_path = f"{save_folder}/{country}_pad_risks.csv"
     implementation_risks_path = f"{save_folder}/{country}_implementation_realized_risks.csv"
     implementation_mapped_path = f"{save_folder}/{country}_implementation_realized_risks_mapped.csv"
-    briefing_output_path = f"{save_folder}/final_{country}_{briefing_mode}_briefing.md"
-    
-    # Check if parameters changed (requires briefing regeneration)
-    params_changed = False
-    if os.path.exists(briefing_output_path):
-        prev_params = st.session_state.get('prev_params', {})
-        current_params = {
-            'country': country,
-            'mode': briefing_mode,
-            'n_paragraphs': n_paragraphs,
-            'custom_categories': custom_categories
-        }
-        if prev_params != current_params:
-            params_changed = True
-            st.info("⚠️ Parameters changed - briefing will be regenerated")
     
     # Only generate if button was clicked
     if st.session_state.generate:
@@ -226,18 +216,15 @@ if st.session_state.generate or 'briefing' in st.session_state:
         
         with st.spinner("🔄 Generating briefing..."):
             try:
-                # Archive outputs that need regeneration
-                from datetime import datetime
-                archive_timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-                
                 if force_regenerate:
+                    from datetime import datetime
+                    archive_timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
                     update_status("🗂️ Archiving previous outputs...")
                     # Archive country risks, PAD susceptibilities, and implementation mappings
                     # Keep preprocessed PADs and implementation risk caches (document-level)
                     for path in [briefing_risks_path, briefing_risks_metadata_path,
                                 pad_risks_path, implementation_mapped_path]:
                         if os.path.exists(path):
-                            # Create archive filename with timestamp
                             base_name = os.path.splitext(os.path.basename(path))[0]
                             extension = os.path.splitext(path)[1]
                             archive_path = f"{save_folder}/{base_name}_archived_{archive_timestamp}{extension}"
@@ -245,11 +232,8 @@ if st.session_state.generate or 'briefing' in st.session_state:
                 
                 # Generate briefing
                 # Only use custom prompt if regenerating from Edit Prompt tab
-                # (check if 'regenerate_with_custom_prompt' flag is set)
-                custom_prompt = None
+                custom_prompt = st.session_state.get('custom_prompt') if st.session_state.get('regenerate_with_custom_prompt', False) else None
                 if st.session_state.get('regenerate_with_custom_prompt', False):
-                    custom_prompt = st.session_state.get('custom_prompt', None)
-                    # Clear the flag after using it
                     st.session_state.regenerate_with_custom_prompt = False
                 
                 briefing = get_fcv_content_from_docs(
@@ -526,13 +510,6 @@ if st.session_state.generate or 'briefing' in st.session_state:
             except Exception as e:
                 st.error(f"❌ Error loading risk mappings: {str(e)}")
                 st.info("Try regenerating the briefing.")
-            else:
-                # Fallback if no project ID
-                for idx, row in df.iterrows():
-                    with st.expander(f"**Connection {idx + 1}**", expanded=idx < 3):
-                        st.markdown(f"**Country Risk:** {row['country_risk_title']}")
-                        st.markdown(f"**Connection:** {row['connection_summary']}")
-                        st.markdown(f"**Confidence:** {row['confidence']}")
         else:
             st.info("Generate a briefing to view risk mappings.")
     
@@ -601,8 +578,6 @@ Citation rules:
 - Only use citation markers when supported by evidence."""
         }
         
-        current_mode = st.session_state.get('mode', briefing_mode)
-        
         st.info("ℹ️ Your custom prompt will automatically receive all the data sources as JSON evidence:\n"
                 "- `country_risks`: Country-level FCV risks\n"
                 "- `pad_risks`: PAD susceptibility analysis\n"
@@ -612,7 +587,7 @@ Citation rules:
         
         custom_prompt = st.text_area(
             "System Prompt",
-            value=default_prompts[current_mode].format(n_paragraphs=n_paragraphs),
+            value=default_prompts[briefing_mode].format(n_paragraphs=n_paragraphs),
             height=400,
             help="This prompt will be used to generate the final briefing. All data sources are automatically provided as evidence."
         )
@@ -622,7 +597,7 @@ Citation rules:
         col1, col2 = st.columns([1, 1])
         with col1:
             if st.button("🔄 Reset to Default", use_container_width=True):
-                st.session_state.custom_prompt = default_prompts[current_mode]
+                st.session_state.custom_prompt = default_prompts[briefing_mode]
                 st.rerun()
         with col2:
             if st.button("🚀 Regenerate Briefing", type="primary", use_container_width=True):

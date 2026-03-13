@@ -85,7 +85,20 @@ def preprocess_pad(pad_row, client):
     except Exception as e:
         print(f"   ❌ Error fetching PAD text: {e}")
         return None
-    # switch to a model that can handle large context like sonnet 4.6
+    
+    # If PAD is too long, keep the LAST ~190k tokens (roughly 760k chars) to account for prompt overhead
+    # Conservative estimate accounting for:
+    # - System prompt: ~1.5k tokens
+    # - User prompt wrapper: ~500 tokens
+    # - Safety margin: ~2k tokens
+    # Budget for actual PAD content: ~196k tokens
+    MAX_CHARS = 760000  # Conservative: ~190k tokens accounting for prompt overhead
+    if len(pad_text) > MAX_CHARS:
+        print(f"   ⚠️  PAD is {len(pad_text)} chars (~{len(pad_text)//4} tokens), truncating to last {MAX_CHARS} chars")
+        pad_text = pad_text[-MAX_CHARS:]
+        # Add note that this is truncated
+        pad_text = f"[NOTE: This PAD exceeds context limits. Displaying the LAST ~190k tokens of the document.]\n\n{pad_text}"
+    
     # Extract structured information using LLM
     prompt = ChatPromptTemplate.from_messages([
         (
@@ -177,7 +190,8 @@ def preprocess_pad(pad_row, client):
                 "node_id": pad_row.get("node_id"),
                 "pdf_url": pad_row.get("pdf_url"),
                 "document_type": "Project Appraisal Document",
-                "preprocessing_version": "1.0"
+                "preprocessing_version": "1.0",
+                "truncated": "[NOTE: This PAD exceeds context limits" in pad_text
             },
             "structured_content": structured_data
         }
@@ -185,6 +199,48 @@ def preprocess_pad(pad_row, client):
         return result
         
     except Exception as e:
+        error_str = str(e).lower()
+        # Check if it's a context overflow error and we haven't already aggressively truncated
+        if ("context" in error_str or "tokens" in error_str or "overflow" in error_str) and "LAST ~190k" not in pad_text:
+            print(f"   ⚠️  Context overflow detected, retrying with more aggressive truncation...")
+            # Drastically reduce PAD size to ~100k tokens (~400k chars)
+            AGGRESSIVE_MAX_CHARS = 400000
+            pad_text_short = pad_text[-AGGRESSIVE_MAX_CHARS:] if len(pad_text) > AGGRESSIVE_MAX_CHARS else pad_text
+            pad_text_short = f"[NOTE: This PAD is very large. Displaying approximately the LAST ~100k tokens.]\n\n{pad_text_short}"
+            
+            # Retry with shorter text
+            try:
+                message = chain.invoke({"pad_text": pad_text_short})
+                raw = (message.content or "").strip()
+                
+                try:
+                    structured_data = json.loads(raw)
+                except json.JSONDecodeError:
+                    json_start = raw.find("{")
+                    json_end = raw.rfind("}")
+                    if json_start != -1 and json_end != -1:
+                        structured_data = json.loads(raw[json_start:json_end+1])
+                    else:
+                        raise ValueError("Could not extract valid JSON from response")
+                
+                result = {
+                    "metadata": {
+                        "PROJ_ID_IB": proj_id,
+                        "guid": pad_row.get("guid"),
+                        "node_id": pad_row.get("node_id"),
+                        "pdf_url": pad_row.get("pdf_url"),
+                        "document_type": "Project Appraisal Document",
+                        "preprocessing_version": "1.0",
+                        "truncated": True
+                    },
+                    "structured_content": structured_data
+                }
+                print(f"   ✓ Successfully preprocessed with aggressive truncation")
+                return result
+            except Exception as e2:
+                print(f"   ❌ Even aggressive truncation failed: {repr(e2)}")
+                return None
+        
         print(f"   ❌ Error preprocessing PAD: {repr(e)}")
         import traceback
         traceback.print_exc()

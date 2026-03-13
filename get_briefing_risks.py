@@ -2,19 +2,7 @@ from langchain_core.prompts import ChatPromptTemplate
 import pandas as pd
 import json
 import uuid
-
-COUNTRY_THEMES = [
-    "governance",
-    "political",
-    "security",
-    "economy",
-    "health",
-    "environment",
-    "social",
-    "humanitarian",
-    "displacement",
-    "crime"
-]
+from prompts import COUNTRY_THEMES
 
 def extract_country_risk_items(risk_briefing: str, client):
 

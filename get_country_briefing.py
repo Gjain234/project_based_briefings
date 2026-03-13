@@ -1,44 +1,3 @@
-COUNTRIES = [
-    "Afghanistan",
-    "Burkina Faso",
-    "Cameroon",
-    "Central African Republic",
-    "Democratic Republic of Congo",
-    "Ethiopia",
-    "Haiti",
-    "Iraq",
-    "Lebanon",
-    "Mali",
-    "Mozambique",
-    "Myanmar",
-    "Niger",
-    "Nigeria",
-    "Somalia",
-    "South Sudan",
-    "Djibouti",
-    "Sudan",
-    "Syrian Arab Republic",
-    "Ukraine",
-    "Israel/Palestine",
-    "Yemen",
-    "Burundi",
-    "Chad",
-    "Comoros Islands",
-    "Republic of Congo",
-    "Eritrea",
-    "Guinea-Bissau",
-    "Kiribati",
-    "Libya",
-    "Marshall Islands",
-    "Federated States of Micronesia",
-    "Papua New Guinea",
-    "Sao Tome and Principe",
-    "Solomon Islands",
-    "Timor-Leste",
-    "Tuvalu",
-    "Venezuela",
-    "Zimbabwe",
-]
 import os
 import datetime
 import anthropic
@@ -48,7 +7,7 @@ from get_icg_text import (
     get_crisiswatch_lastnmonths,
 )
 from config import ANTHROPIC_API_KEY, ANTHROPIC_COUNTRY_RISK_MODEL, ANTHROPIC_RISK_BRIEFING_MODEL
-from prompts import get_country_risk_extraction_prompt
+from prompts import get_country_risk_extraction_prompt, COUNTRY_THEMES
 import pandas as pd
 import json
 import uuid
@@ -56,19 +15,6 @@ import uuid
 client = anthropic.Anthropic(
     api_key=ANTHROPIC_API_KEY,
 )
-
-COUNTRY_THEMES = [
-    "governance",
-    "political",
-    "security",
-    "economy",
-    "health",
-    "environment",
-    "social",
-    "humanitarian",
-    "displacement",
-    "crime"
-]
 
 def extract_country_risks_with_websearch(country_name):
     """

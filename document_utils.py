@@ -1,9 +1,10 @@
 
 import requests
 import fitz
+import re
 from io import BytesIO
 
-def fetch_pdf_text(guid, node_id, text_url = None, pdf_url = None) -> str:
+def fetch_pdf_text(guid, node_id) -> str:
     if guid and len(guid) < 18:
             guid = "0" + guid
     url = f"https://documents1.worldbank.org/curated/en/{guid}/pdf/{node_id}.pdf"
@@ -20,13 +21,11 @@ def fetch_pdf_text(guid, node_id, text_url = None, pdf_url = None) -> str:
         print(f"⚠️ Error fetching {url}: {e}")
         return ""
 
-import re
 
 def clean_text(text: str) -> str:
     """
     Light normalization of PDF text.
-    Does NOT alter meaning.
-    Only removes excessive whitespace and formatting artifacts.
+    Removes excessive whitespace and formatting artifacts.
     """
     if not text:
         return ""

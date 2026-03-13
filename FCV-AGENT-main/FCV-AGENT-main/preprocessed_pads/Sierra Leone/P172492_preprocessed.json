@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P172492",
+    "guid": 629531623722488067,
+    "node_id": 33107507,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b088616f2d&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Accountable Governance for Basic Service Delivery Project",
+      "project_development_objective": "To improve resource management, transparency and accountability of government systems for enabling the delivery of local development projects and basic services",
+      "total_financing": "US$40.0 million equivalent (SDR 27.9 million)",
+      "implementation_period": "6 years (2021-2027)",
+      "beneficiaries": "Poor Sierra Leoneans relying on publicly delivered basic services, particularly in rural areas where poverty is concentrated (73.9% poverty rate). Direct beneficiaries include 22 local councils, key central ministries (MoF, MoPED, NPPA, ASSL, MBSSE, MoHS, MoLG), parliamentarians, civil society organizations, and community groups. Rural district councils are primary focus due to higher poverty concentration and weaker systems."
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Pujehun",
+        "Falaba",
+        "Kono",
+        "Karene",
+        "Tonkolili",
+        "Bo District",
+        "Bombali",
+        "Moyamba",
+        "Koinadugu",
+        "Kailahun",
+        "Kenema District",
+        "Bonthe District",
+        "Kambia",
+        "Port Loko District Council",
+        "Western Area Rural District Council",
+        "All 22 local councils for systems strengthening"
+      ],
+      "coverage_type": "National with focus on rural district councils",
+      "fragile_or_conflict_affected_areas": "Partial - Sierra Leone is post-conflict (civil war ended in 2002) with nearly two decades of peace but fragile political settlement. The project acknowledges fragility context including fractious political settlement, political uncertainty, North-South ethno-regional divide, frustrated youth demographic, and conflict-inducing effects of concessions. Project is designed to strengthen local governance institutions as stabilizing mechanism."
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Systems and skills for local services delivery",
+        "description": "Strengthens planning, FM and accountability systems at central and local levels. Includes: (1.1) Better PFM systems at central and local level through improved planning, budget execution, accounting, reporting, internal audit, and public investment management; (1.2) Improved procurement systems through e-Government Procurement (e-GP) implementation in health and education sectors; (1.3) Improved capacity of key technical staff at local councils through training and HR management support; (1.4) Effective local audits and external oversight through ASSL capacity strengthening and citizen engagement in audit processes.",
+        "financing": "US$15.75 million"
+      },
+      {
+        "component_name": "Component 2: Local Development Financing",
+        "description": "Provides direct financing to rural district councils through development grants for locally-identified development priorities. Includes: (2.1) Local government development grants (US$17 million) with phased eligibility criteria based on institutional strengthening; (2.2) Improved systems for LC financing through development of revised Inter-Governmental Fiscal Transfer System and revenue-mobilization strategies; (2.3) Contingent Emergency Response Component (CERC) for eligible emergencies.",
+        "financing": "US$19.00 million"
+      },
+      {
+        "component_name": "Component 3: Integrated data platforms for monitoring and accountability",
+        "description": "Supports improved data management and reporting at local level. Includes: (3.1) Improved systems for LC monitoring and reporting on capital investments and sectoral transfers; (3.2) Robust supply-chain data platforms for key commodities (textbooks, TLM, drugs, medical supplies); (3.3) Supporting demonstration effect of using data platforms for results reporting and development of National Monitoring and Evaluation Management Information System (NaMEMIS).",
+        "financing": "US$3.25 million"
+      },
+      {
+        "component_name": "Component 4: Project management and implementation support",
+        "description": "Covers project management costs including PMU staffing (technical, fiduciary, safeguards specialists), M&E system implementation using Geo-enabling Initiative for Monitoring and Supervision (GEMS), grievance redress mechanism, and citizen feedback surveys.",
+        "financing": "US$2.00 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Finance (MoF) with support from Project Management Unit (PMU). Technical leading units: Fiscal Decentralization Division (FDD) for Component 2, Public Financial Management Reform Division (PFMRD) for Component 1, National Monitoring and Evaluation Directorate (NaMED) for Component 3. Project Fiduciary Management Unit (PFMU) provides fiduciary support.",
+      "coordination_mechanisms": "High-level Project Steering Committee chaired by Minister of Finance with representatives from targeted ministries, MoPED, NaMED, DSTI, MoLG, and Local Councils Association of Sierra Leone (LoCASL). Technical Committee and Thematic Technical Working Groups (TWGs) for decision-making and coordination. Focal points nominated by each participating entity for day-to-day coordination.",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers (July 2016, revised November 2017, August 2018, November 2020). Sierra Leone National Public Procurement Act of 2016 applies for national market tenders. Use of World Bank's STEP system mandatory for all procurement transactions. Project Procurement Strategy for Development (PPSD) prepared. Major items: ICT equipment, PFM Smart system, e-GP System Integrator. International competitive bidding for items with no local vendors.",
+      "monitoring_and_evaluation": "Robust M&E plan with Senior M&E Specialist in PMU supported by M&E Officer. Data collection through quarterly physical and financial progress reports from LCs, complemented by Geo-enabling Initiative for Monitoring and Supervision (GEMS) for digital data collection. Mid-term review after 2 years of disbursements. Results Framework tracks PDO indicators and intermediate results indicators across all components. Citizen satisfaction surveys at mid-term and project close."
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Government is reviewing legislation and policy relating to allocation of roles and responsibilities for service delivery among different levels of government. Historical experience shows reform does not consistently empower LCs compared to central ministries and Chiefdom administrations. Risk that Government's review does not result in further support to strong LCs or rolls back decentralization agenda.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "World Bank engagement includes policy dialogue and support through analytical and advisory activity on 'Local Financing and Fiscal Decentralization for supporting Sierra Leone's NDP' (P175685). Project designed to strengthen existing institutional arrangements at both local and central levels without requiring increased decentralization. Project can deliver benefits even while legal and policy reforms are pending."
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Sierra Leone's fiscal situation is fragile following successive macroeconomic shocks (fall in commodity prices, EVD outbreak, COVID-19 pandemic). Economic growth predictions substantially downgraded, government debt rising. Government substantially constrained regarding fiscal space for medium term. Risk that despite investment in better systems, LCs are not provided meaningful additional funding to deliver basic services role, undermining systems investments.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Project provides financing itself through development grants components to strengthen and use systems. Support to development of next-generation IGFTS to strengthen fiscal decentralization architecture. Six-year project timeframe ensures government supported when most needed while having longer period to overcome macroeconomic challenges."
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Expanding PFM reforms to local level is government priority but progress mixed. Limited capacity at local level and poor coordination between national and local governments continues. Weak capacity of FDD with long delays in notifying LCs about allocations.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Project includes activities to increase LC capacity in planning, budgeting, procurement, and budget execution while legal and policy frameworks are under review. Project provides support to strengthen FDD in finalizing policy framework of revised IGFTS and its rollout."
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "Quality of public administration in Sierra Leone is variable with islands of excellence against generally low-capacity backdrop. Political settlement weakly incentivizes delivery of quality public services. Widespread process inefficiencies, skills shortages, and lack of commitment to delivery outside limited central government agencies. LCs have identified capacity concerns and will be primarily responsible for implementing investment subprojects.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Project specifically designed to actively build capacity among key local government institutions. TA inputs principally improve government systems and skills for sustainability. External capacity accessed where lacking within government. Deliberate sequencing and phasing ensures sustainability in financing of institutional systems. Project expected to reduce to Moderate during implementation but remains Substantial at effectiveness."
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Civil works will not be complex but limited to upgrading and rehabilitation of existing public assets with some new construction in final years. Environmental risks include air/noise emissions, waste management, eWaste from IT equipment, traffic management, occupational health and safety, and exposure to asbestos-containing materials (ACM). Social risks include health and safety of workers and communities, COVID-19 transmission, sexual exploitation and abuse/sexual harassment (SEA/SH) from construction workers' disproportionately higher wages in low-income communities, and social exclusion if women, persons with disabilities, and vulnerable groups not included in consultations.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Environmental and Social Commitment Plan (ESCP) and Stakeholder Engagement Plan (SEP) finalized, cleared, consulted on and disclosed May 4, 2021. Generic Environmental and Social Management Plan (ESMP) with checklist and screening tool to be prepared before effectiveness. Contractor ESMP required with Code of Conduct prohibiting SEA/SH. Project GRM established prior to effectiveness with confidential complaint mechanisms. PMU includes Environmental Specialist and Social and Gender Specialist. Rehabilitated facilities include safe and universal designs for women and persons with disabilities."
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Project design requires successful cooperation of several entities at central and local levels. LCs with identified capacity concerns will be primarily responsible for implementing investment subprojects including FM tasks and procurement. Limited capacity of PFMU staff compared to workload. General weaknesses in Government's procurement capability compared to World Bank standards at district council level. 2019 ASSL audit identified Le5.3 billion (US$530k) in cash losses across 22 LCs from fuel not accounted for, withholding taxes not paid, payments without documentation, and payroll irregularities.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "At central level: Recruitment of dedicated FM staff to strengthen PFMU capacity; installation of TOMPRO accounting system; issuance of revised PFMU FM Manual with enhanced control framework; building enhanced capacity in MoF Internal Audit Directorate; investments in government procurement capability. At local level: Development grants finance only small investment subprojects similar in size and nature to those currently implemented; well-defined subproject cycle with clear roles and responsibilities; fiduciary minimum conditions LCs must meet to access grants; rigorous application of Grant Implementation Manual with substantial training and support through dedicated grant management team; strong M&E requirement for subproject implementation. Dedicated FM staff recruited to PMU but functionally report to PFMU. Internal Auditor recruited to PMU functionally reporting to MoF Internal Audit Directorate."
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate",
+      "triggered_safeguard_policies": [
+        "Assessment and Management of Environmental and Social Risks and Impacts (ESS1)",
+        "Stakeholder Engagement and Information Disclosure (ESS10)",
+        "Labor and Working Conditions (ESS2)",
+        "Resource Efficiency and Pollution Prevention and Management (ESS3)",
+        "Community Health and Safety (ESS4)",
+        "Land Acquisition, Restrictions on Land Use and Involuntary Resettlement (ESS5)",
+        "Biodiversity Conservation and Sustainable Management of Living Natural Resources (ESS6)"
+      ],
+      "grievance_redress_mechanism": "Yes - Comprehensive project-wide Grievance Redress Service (GRS) established to provide opportunities for affected parties to channel concerns, questions, and complaints through multiple grievance uptake channels. Project-level GRM established prior to project effectiveness. World Bank's corporate GRS available for complaints. World Bank Inspection Panel available for complaints regarding World Bank non-compliance with policies and procedures. Project will monitor percentage of registered grievances resolved within three months of registration.",
+      "gender_considerations": "Project places special emphasis on engaging women and providing opportunity for their voices to be heard in efforts to improve basic service delivery. Key challenge identified is women's lack of voice and agency. Project will incentivize increased participation and voice of women in local development planning. Sub-projects identified through participatory processes must have membership that is at least 40 percent women. Ward Committees will ensure female representation with five out of 12 members mandated to be women. Rehabilitated facilities will include safe and universal designs to accommodate unique needs of women and persons with disabilities. Social and Gender Specialist included in PMU.",
+      "vulnerable_groups": [
+        "Poor and extremely poor households (concentrated in rural areas with 73.9% poverty rate)",
+        "Rural populations dependent on publicly delivered basic services",
+        "Women and girls",
+        "Persons with disabilities",
+        "Youth",
+        "Construction workers (risk of SEA/SH from wage differentials)",
+        "Communities in low-income areas"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project addresses conflict risks through strengthening local governance institutions as stabilizing mechanism. Project design recognizes that poor human development outcomes and weak trust in governing institutions risk undermining citizens' fragile trust and could generate avoidable human misery and impede economic development. Project aims to improve basic service delivery and strengthen accountability, which should build confidence in institutions. Project emphasizes citizen engagement and participatory planning to strengthen social contract between local populations and locally elected officials. Project supports community participation at ward level and strengthens LCs' convening role, which was identified during Ebola experience as critical to effective community-level response during crises. Project includes grievance redress mechanisms and citizen feedback systems to address grievances and build trust.",
+      "fragility_context": "Sierra Leone is post-conflict (civil war ended in 2002) with nearly two decades of peace but remains fragile. Key fragility factors mentioned: (1) Fractious political settlement with only weakly incentivized delivery of quality public services; (2) Political uncertainty and North-South ethno-regional divide; (3) Frustrated youth demographic; (4) Conflict-inducing effects of concessions; (5) Very high poverty and inequality with bottom 40% enjoying only 20% of household consumption; (6) Unequal poverty distribution with rural poverty (73.9%) more than twice urban poverty (34.8%); (7) Poor human development outcomes (HCI of 0.36, lower than SSA average); (8) Inefficient health and education spending; (9) Successive macroeconomic shocks (commodity price collapse, EVD 2015-16, COVID-19) affecting fiscal position; (10) Weak state institutions and limited capacity outside central government; (11) Political settlement provides convenient justification for ambivalence toward decentralized government. Project designed to address these fragility factors through strengthening local governance, improving service delivery, and building citizen trust in institutions.",
+      "security_considerations": "Project acknowledges security context through: (1) Recognition that poor service delivery outcomes risk undermining citizens' fragile trust in governing institutions; (2) Emphasis on strengthening LCs as conveners of community engagement, identified as critical during Ebola response for effective community-level response during crises; (3) Support for participatory planning and citizen engagement to strengthen social contract; (4) Grievance redress mechanisms to address citizen concerns; (5) Environmental and social safeguards including Code of Conduct prohibiting SEA/SH to prevent exacerbation of security risks from construction workers; (6) Climate change adaptation and disaster risk reduction investments to address vulnerabilities that could create security pressures.",
+      "displacement_or_refugees": "No - Project unlikely to cause displacement. Only remote possibility of land acquisition in final years (Y5-Y6) where new constructions may be undertaken. Project will reduce risks of physical, economic or livelihood impacts through menu of negative list for sub-project investments. Negative list excludes investments that result in fiscal and economic displacement. Environmental and Social Management Plan includes screening tool to determine where Resettlement Action Plans (RAPs) will be necessary. Project focuses on rehabilitation of existing infrastructure rather than new construction in initial years, further reducing displacement risk."
+    }
+  }
+}

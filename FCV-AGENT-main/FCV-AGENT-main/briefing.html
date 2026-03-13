@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FCV Portfolio Briefing Generator · WBG FCV Analytics Unit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/briefing_styles.css">
+</head>
+<body>
+  <a href="#main" class="skip">Skip to main content</a>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <svg class="wbg-globe" viewBox="0 0 40 40" fill="none">
+        <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5" fill="none" opacity=".85"/>
+        <path d="M20 1 C12 12, 8 28, 20 39 M20 1 C28 12, 32 28, 20 39" stroke="currentColor" stroke-width="1.3" fill="none" opacity=".8"/>
+        <line x1="1" y1="20" x2="39" y2="20" stroke="currentColor" stroke-width="1.3" opacity=".75"/>
+        <ellipse cx="20" cy="20" rx="9" ry="18.5" stroke="currentColor" stroke-width="1.2" fill="none" opacity=".7"/>
+      </svg>
+      <div>
+        <div class="top-bar-wordmark">World Bank Group</div>
+        <div class="top-bar-divider"></div>
+        <div class="top-bar-unit">FCV Analytics Unit</div>
+      </div>
+    </div>
+    <div class="top-bar-badge">AI-ASSISTED TOOL</div>
+  </div>
+
+  <!-- Hero Banner -->
+  <div class="hero">
+    <div class="hero-inner">
+      <h1>FCV Portfolio Briefing Generator</h1>
+      <p class="hero-tool-sub">Comprehensive FCV portfolio briefings using country risk analysis, PAD assessments, and implementation status</p>
+      <div class="hero-disclaimer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <circle cx="12" cy="12" r="10" stroke-width="2"/>
+          <line x1="12" y1="8" x2="12" y2="12" stroke-width="2" stroke-linecap="round"/>
+          <line x1="12" y1="16" x2="12" y2="16" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <div><strong>Experimental Tool:</strong> This briefing generator synthesizes country risk data, project documents, and implementation reports. Generated content requires expert review and verification before operational use.</div>
+      </div>
+      <div class="tab-nav">
+        <a href="/" class="tab-link">FCV Project Screener</a>
+        <a href="/briefing" class="tab-link active">Portfolio Briefing Generator</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main" class="main">
+    
+    <!-- Configuration Section -->
+    <section class="config-section">
+      <div class="section-header">
+        <h2>Configuration</h2>
+        <p>Select country and briefing parameters</p>
+      </div>
+
+      <div class="config-grid">
+        <!-- Country Selection -->
+        <div class="config-card">
+          <label class="config-label">Country</label>
+          <select id="countrySelect" class="config-select">
+            <option value="">Loading countries...</option>
+          </select>
+          <div id="lastScanDate" class="config-note" style="display:none;"></div>
+        </div>
+
+        <!-- Briefing Type -->
+        <div class="config-card">
+          <label class="config-label">Briefing Type</label>
+          <select id="briefingMode" class="config-select">
+            <option value="risk">Risk-Aligned Briefing</option>
+            <option value="sector">Sector-Aligned Briefing</option>
+            <option value="custom">Custom Categories Briefing</option>
+          </select>
+        </div>
+
+        <!-- Number of Paragraphs -->
+        <div class="config-card">
+          <label class="config-label">Number of Paragraphs</label>
+          <input type="range" id="nParagraphs" min="3" max="10" value="5" class="config-slider">
+          <div class="config-slider-value"><span id="nParagraphsValue">5</span> paragraphs</div>
+        </div>
+
+        <!-- Force Regenerate -->
+        <div class="config-card">
+          <label class="config-checkbox">
+            <input type="checkbox" id="forceRegenerate">
+            <span>Regenerate with fresh news (~10 minutes)</span>
+          </label>
+          <div class="config-note">Pull latest country risks from ICG/CrisisWatch</div>
+        </div>
+      </div>
+
+      <!-- Custom Categories (shown only for custom mode) -->
+      <div id="customCategoriesSection" class="custom-categories-section" style="display:none;">
+        <label class="config-label">Custom Categories (one per line)</label>
+        <textarea id="customCategories" class="custom-categories-input" rows="5">Governance and Institutional Capacity
+Service Delivery and Access
+Economic Vulnerability
+Social Cohesion and Protection</textarea>
+      </div>
+
+      <!-- Generate Button -->
+      <div class="generate-section">
+        <button id="generateBtn" class="generate-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+          Generate Briefing
+        </button>
+        <button id="stopBtn" class="stop-btn" style="display:none;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="6" y="6" width="12" height="12" rx="2"/>
+          </svg>
+          Stop Generation
+        </button>
+      </div>
+
+      <!-- Status Messages -->
+      <div id="statusContainer" class="status-container" style="display:none;"></div>
+    </section>
+
+    <!-- Recent Briefings Section -->
+    <section id="recentBriefingsSection" class="recent-briefings-section" style="display:none;">
+      <div class="section-header">
+        <h2>Recent Briefings</h2>
+        <p>Previously generated briefings for this country</p>
+      </div>
+      <div id="recentBriefingsList" class="recent-briefings-list"></div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="resultsSection" class="results-section">
+      <div class="tabs-container">
+        <div class="tabs-header">
+          <button class="tab-btn active" data-tab="briefing">📄 Final Briefing</button>
+          <button class="tab-btn" data-tab="edit-prompt">✏️ Edit Prompt</button>
+          <button class="tab-btn" data-tab="country-risks">🌐 Country Risks</button>
+          <button class="tab-btn" data-tab="pad-risks">📋 PAD Risks</button>
+          <button class="tab-btn" data-tab="impl-risks">⚠️ Implementation Risks</button>
+          <button class="tab-btn" data-tab="mappings">🔗 Risk Mappings</button>
+          <button class="tab-btn" data-tab="how-it-works">📖 How It Works</button>
+        </div>
+
+        <!-- Briefing Tab -->
+        <div id="tab-briefing" class="tab-content active">
+          <div class="briefing-header">
+            <h3>Final Briefing</h3>
+            <button id="downloadBtn" class="download-btn" style="display:none;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+              </svg>
+              Download Markdown
+            </button>
+          </div>
+          <div id="briefingContent" class="briefing-content">
+            <p style="color: #5a6a7e; text-align: center; padding: 40px 20px;">
+              Select a country and click "Generate Briefing" to create a new briefing, or view recent briefings below.
+            </p>
+          </div>
+        </div>
+
+        <!-- Edit Prompt Tab -->
+        <div id="tab-edit-prompt" class="tab-content">
+          <div class="tab-header">
+            <h3>Edit Final Briefing Prompt</h3>
+            <p>Customize the prompt used to generate the final briefing</p>
+          </div>
+          <div class="edit-prompt-container">
+            <div class="info-box">
+              <strong>ℹ️ How Custom Prompts Work</strong><br>
+              Your custom prompt will automatically receive all data sources as JSON evidence:
+              <ul>
+                <li><code>country_risks</code>: Country-level FCV risks</li>
+                <li><code>pad_risks</code>: PAD susceptibility analysis</li>
+                <li><code>implementation_realized_risks</code>: Extracted ISR/Aide Memoire risks</li>
+                <li><code>implementation_realized_risks_mapped</code>: Implementation risks mapped to country risks</li>
+              </ul>
+              Citation markers like <code>[PROJ_ID | PAD]</code> will be automatically converted to document links.
+            </div>
+            <label class="config-label">System Prompt</label>
+            <textarea id="customPromptEditor" class="custom-prompt-editor" rows="20" disabled>
+Generate a briefing to see and edit the system prompt...
+            </textarea>
+            <div class="edit-prompt-actions">
+              <button id="resetPromptBtn" class="btn-secondary" disabled>
+                🔄 Reset to Default
+              </button>
+              <button id="regenerateWithPromptBtn" class="btn-primary" disabled>
+                🚀 Regenerate with Custom Prompt
+              </button>
+            </div>
+            <div class="config-note">Note: Custom prompt editing will be enabled after first briefing generation</div>
+          </div>
+        </div>
+
+        <!-- Country Risks Tab -->
+        <div id="tab-country-risks" class="tab-content">
+          <div class="tab-header">
+            <h3>Country-Level FCV Risks</h3>
+            <p>Extracted from ICG reports, CrisisWatch, and web search</p>
+          </div>
+          <div class="info-box">
+            <details>
+              <summary><strong>ℹ️ How Country Risks Are Extracted</strong></summary>
+              <div style="margin-top: 12px; line-height: 1.6;">
+                <p><strong>Inputs:</strong> ICG reports, CrisisWatch entries (last 3 months), web search results</p>
+                <p><strong>Model:</strong> Claude Sonnet 4</p>
+                <p><strong>System Prompt:</strong></p>
+                <pre style="background: #f5f5f5; padding: 12px; border-radius: 4px; overflow-x: auto; font-size: 12px;">You are a Fragility, Conflict &amp; Violence (FCV) analyst extracting structured country-level risk items.
+
+Extract 6–12 distinct, structured risk items that cover:
+- Institutional fragility, political tensions, and social unrest
+- Conflict and violence dynamics
+- Displacement and refugee dynamics
+- Sensitivities between government and development actors
+
+Rules:
+- Each risk must be distinct (no duplication)
+- Assign 1–3 theme tags: governance, political, security, economy, health, environment, social, humanitarian, displacement, crime
+- Provide 3–8 keywords per risk
+- Set severity: low, medium, high, or unknown
+- Set time_horizon: current, 0-3m, 3-12m, or unknown
+- List affected locations as specific regions, cities, or districts
+- Include inline citations with sources
+
+Return valid JSON with structure: { "risks": [ { "risk_id", "title", "summary", "themes", "keywords", "locations", "severity", "time_horizon" } ] }</pre>
+                <p><strong>Caching:</strong> Results cached with timestamps. Use "Regenerate with fresh news" to pull latest data (~10 minutes).</p>
+              </div>
+            </details>
+          </div>
+          <div id="countryRisksContent" class="risks-content"></div>
+        </div>
+
+        <!-- PAD Risks Tab -->
+        <div id="tab-pad-risks" class="tab-content">
+          <div class="tab-header">
+            <h3>PAD Risk Assessment</h3>
+            <p>Project susceptibilities to country-level FCV risks</p>
+          </div>
+          <div class="info-box">
+            <details>
+              <summary><strong>ℹ️ How PAD Susceptibilities Are Analyzed</strong></summary>
+              <div style="margin-top: 12px; line-height: 1.6;">
+                <p><strong>Inputs:</strong> Current country-level FCV risks, Preprocessed PAD data (sectors, components, beneficiaries, locations, risk matrices)</p>
+                <p><strong>Model:</strong> Claude Sonnet 4</p>
+                <p><strong>System Prompt:</strong></p>
+                <pre style="background: #f5f5f5; padding: 12px; border-radius: 4px; overflow-x: auto; font-size: 12px;">You are a World Bank FCV analyst reviewing a project.
+
+Assess where this project may be susceptible to implementation or outcome disruption given current FCV dynamics.
+
+Think operationally:
+- Could political instability disrupt governance arrangements?
+- Could conflict affect access, logistics, or staffing?
+- Could displacement undermine targeting or beneficiary reach?
+- Could tensions between government and development actors create interference?
+
+Rules:
+- Identify only vulnerabilities supported by PAD information
+- Each item MUST reference specific details from the PAD
+- Do NOT speculate beyond the PAD
+- If no meaningful susceptibility exists, return empty list
+
+Return valid JSON with structure: { "project_susceptibilities": [ { "related_country_risk_id", "related_country_risk_title", "susceptibility_summary", "evidence_from_pad", "confidence" } ] }</pre>
+                <p><strong>Caching:</strong> PAD preprocessing cached permanently. Stress tests regenerate when country risks change.</p>
+              </div>
+            </details>
+          </div>
+          <div id="padRisksContent" class="risks-content"></div>
+        </div>
+
+        <!-- Implementation Risks Tab -->
+        <div id="tab-impl-risks" class="tab-content">
+          <div class="tab-header">
+            <h3>Realized Implementation Risks</h3>
+            <p>FCV risks from ISRs and Aide Memoires</p>
+          </div>
+          <div class="info-box">
+            <details>
+              <summary><strong>ℹ️ How Implementation Risks Are Extracted</strong></summary>
+              <div style="margin-top: 12px; line-height: 1.6;">
+                <p><strong>Inputs:</strong> Document text from ISRs and Aide Memoires (most recent 2 of each per project)</p>
+                <p><strong>Model:</strong> Claude Sonnet 4</p>
+                <p><strong>System Prompt:</strong></p>
+                <pre style="background: #f5f5f5; padding: 12px; border-radius: 4px; overflow-x: auto; font-size: 12px;">You are a World Bank FCV analyst reviewing a project implementation document.
+
+Extract realized or emerging FCV-related risks affecting project implementation.
+
+FCV includes:
+- Political instability, governance fragility, protests
+- Conflict and violence dynamics
+- Displacement or refugee pressures
+- Tensions between government and development actors
+
+Rules:
+- Extract only risks already affecting implementation
+- Do NOT extract generic fiduciary or procurement issues unless clearly FCV-linked
+- Each risk must include a verbatim evidence quote
+- Keep risks atomic
+
+Return valid JSON with structure: { "fcv_risks": [ { "risk_title", "risk_summary", "severity", "direction", "evidence_quote" } ] }</pre>
+                <p><strong>Caching:</strong> Results cached at document level by country. Cache persists across briefing regenerations.</p>
+              </div>
+            </details>
+          </div>
+          <div id="implRisksContent" class="risks-content"></div>
+        </div>
+
+        <!-- Risk Mappings Tab -->
+        <div id="tab-mappings" class="tab-content">
+          <div class="tab-header">
+            <h3>Implementation-to-Country Risk Mappings</h3>
+            <p>Connections between implementation and country-level risks</p>
+          </div>
+          <div class="info-box">
+            <details>
+              <summary><strong>ℹ️ How Risk Mappings Are Created</strong></summary>
+              <div style="margin-top: 12px; line-height: 1.6;">
+                <p><strong>Inputs:</strong> Realized project implementation risks, Current country-level FCV risks</p>
+                <p><strong>Model:</strong> Claude Sonnet 4</p>
+                <p><strong>System Prompt:</strong></p>
+                <pre style="background: #f5f5f5; padding: 12px; border-radius: 4px; overflow-x: auto; font-size: 12px;">You are a World Bank FCV analyst.
+
+Assess whether the realized project implementation risk is plausibly connected to any of the current country-level FCV risks.
+
+Guidelines:
+- Identify only meaningful substantive connections
+- Do NOT force connections
+- A connection should reflect shared political, conflict, displacement, or institutional fragility dynamics
+
+Return valid JSON with structure: { "connections": [ { "country_risk_id", "country_risk_title", "connection_summary", "confidence" } ] }</pre>
+                <p><strong>Purpose:</strong> These mappings enable the risk-aligned briefing mode, which organizes the final briefing by country-level risks and shows how they're affecting projects.</p>
+              </div>
+            </details>
+          </div>
+          <div id="mappingsContent" class="risks-content"></div>
+        </div>
+
+        <!-- How It Works Tab -->
+        <div id="tab-how-it-works" class="tab-content">
+          <div class="how-it-works-content">
+            <h3>📖 How the Briefing Pipeline Works</h3>
+            <p>This tool generates comprehensive FCV portfolio briefings through a multi-stage pipeline that combines external intelligence, 
+            project documents, and AI analysis. Here's how it works:</p>
+
+            <hr>
+
+            <h4>🔄 Stage 1: Country-Level Risk Intelligence</h4>
+            <div class="how-box">
+              <p><strong>Objective:</strong> Understand current FCV dynamics in the country</p>
+              <p><strong>Process:</strong></p>
+              <ol>
+                <li>Fetch latest ICG (International Crisis Group) reports for the country</li>
+                <li>Fetch CrisisWatch entries from the last 3 months</li>
+                <li>Use Claude Sonnet 4 with web search to:
+                  <ul>
+                    <li>Corroborate ICG reporting</li>
+                    <li>Fill gaps in coverage</li>
+                    <li>Capture very recent developments not yet in ICG reports</li>
+                  </ul>
+                </li>
+                <li>Extract 6-12 structured risk items in a <strong>single LLM call</strong></li>
+              </ol>
+              <p><strong>Each risk includes:</strong> Title and detailed summary with inline citations, themes (governance, political, security, humanitarian, etc.), keywords for semantic matching, affected locations (regions, cities, districts), severity (low/medium/high) and time horizon (current/0-3m/3-12m)</p>
+              <p><strong>Caching:</strong> Results stored with timestamps. Only regenerates when you click "Regenerate with fresh news" (~10 minutes).</p>
+              <p><strong>Why web search?</strong> Ensures the most current information, as ICG reports may lag behind fast-moving events.</p>
+            </div>
+
+            <h4>📋 Stage 2: PAD Preprocessing & Risk Assessment</h4>
+            <div class="how-box">
+              <p><strong>Objective:</strong> Identify how projects are susceptible to country-level risks</p>
+              <p><strong>Process:</strong></p>
+              <ol>
+                <li><strong>Preprocessing</strong> (one-time per PAD):
+                  <ul>
+                    <li>Extract full PAD text from World Bank API</li>
+                    <li>Restructure into high-density JSON (sectors, components, beneficiaries, locations, risk matrices)</li>
+                    <li>Cache preprocessed structure permanently</li>
+                  </ul>
+                </li>
+                <li><strong>Stress Testing</strong> (regenerates with country risks):
+                  <ul>
+                    <li>For each PAD × country risk combination:</li>
+                    <li>LLM determines if project is susceptible</li>
+                    <li>Extracts verbatim evidence quote</li>
+                    <li>Explains susceptibility mechanism</li>
+                    <li>Assigns confidence level</li>
+                  </ul>
+                </li>
+              </ol>
+              <p><strong>Why preprocess?</strong> PADs are long (100-300 pages). Preprocessing creates a condensed, structured version 
+              that fits in LLM context windows and speeds up analysis by ~10x.</p>
+              <p><strong>Output:</strong> Susceptibility matrix showing which projects are exposed to which country risks.</p>
+            </div>
+
+            <h4>⚠️ Stage 3: Implementation Risk Extraction</h4>
+            <div class="how-box">
+              <p><strong>Objective:</strong> Identify FCV risks that have already materialized during implementation</p>
+              <p><strong>Process:</strong></p>
+              <ol>
+                <li><strong>Document Selection:</strong>
+                  <ul>
+                    <li>Select most recent 2 ISRs per project</li>
+                    <li>Select most recent 2 Aide Memoires per project</li>
+                  </ul>
+                </li>
+                <li><strong>Extraction</strong> (per document):
+                  <ul>
+                    <li>Fetch full document text</li>
+                    <li>LLM extracts FCV-related risks affecting implementation</li>
+                    <li>Each risk must have verbatim evidence quote</li>
+                    <li>Classify severity and direction (new/worsening/persistent/improving)</li>
+                  </ul>
+                </li>
+                <li><strong>Caching:</strong>
+                  <ul>
+                    <li>Results cached at document level (by country)</li>
+                    <li>Hash-based cache keys prevent reprocessing same documents</li>
+                    <li>Cached indefinitely unless document changes</li>
+                  </ul>
+                </li>
+              </ol>
+              <p><strong>What qualifies as FCV risk?</strong> Political instability, governance fragility, protests; Conflict and violence dynamics; Displacement or refugee pressures; Government-development actor tensions</p>
+              <p><strong>NOT included:</strong> Generic fiduciary or procurement issues (unless clearly FCV-linked)</p>
+            </div>
+
+            <h4>🔗 Stage 4: Risk Mapping</h4>
+            <div class="how-box">
+              <p><strong>Objective:</strong> Connect implementation risks to country-level risks</p>
+              <p><strong>Process:</strong></p>
+              <ol>
+                <li>For each implementation risk:
+                  <ul>
+                    <li>LLM matches it to 1-3 most relevant country risks</li>
+                    <li>Explains the connection mechanism</li>
+                    <li>Assigns confidence level</li>
+                  </ul>
+                </li>
+              </ol>
+              <p><strong>Purpose:</strong> Enables "risk-aligned" briefing mode where each paragraph describes a country-level FCV risk, shows which projects are susceptible (PAD evidence), and shows how it's manifesting in implementation (ISR/Aide evidence).</p>
+            </div>
+
+            <h4>📝 Stage 5: Final Briefing Generation</h4>
+            <div class="how-box">
+              <p><strong>Objective:</strong> Synthesize all evidence into a coherent briefing</p>
+              <p><strong>Process:</strong></p>
+              <ol>
+                <li>LLM receives all extracted data as JSON: Country risks with citations, PAD susceptibilities, Implementation risks, Risk mappings</li>
+                <li>Generates structured briefing based on mode:
+                  <ul>
+                    <li><strong>Risk-Aligned:</strong> One paragraph per country risk (shows susceptibility + realization)</li>
+                    <li><strong>Sector-Aligned:</strong> One paragraph per sector cluster (inferred from evidence)</li>
+                    <li><strong>Custom:</strong> One paragraph per user-defined category</li>
+                  </ul>
+                </li>
+                <li><strong>Citation System:</strong>
+                  <ul>
+                    <li>LLM writes markers: <code>[P123456 | PAD]</code>, <code>[P123456 | ISR]</code>, <code>[P123456 | Aide Memoire]</code></li>
+                    <li>System automatically converts to clickable PDF links</li>
+                    <li>Each citation links directly to the source document</li>
+                  </ul>
+                </li>
+              </ol>
+              <p><strong>Customization:</strong> You can edit the system prompt in the "Edit Prompt" tab to change writing style, focus areas, level of detail, and analytical framing. All data is automatically injected - your prompt just needs to specify how to present it.</p>
+            </div>
+
+            <h4>💾 Caching Strategy</h4>
+            <div class="how-box">
+              <p>The pipeline uses intelligent caching to optimize performance:</p>
+              <table class="info-table">
+                <thead>
+                  <tr>
+                    <th>Data Type</th>
+                    <th>Cache Level</th>
+                    <th>Regenerates When</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Preprocessed PADs</strong></td>
+                    <td>Document</td>
+                    <td>Never (unless doc changes)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Implementation Risks</strong></td>
+                    <td>Document (by country)</td>
+                    <td>Never (unless doc changes)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Country Risks</strong></td>
+                    <td>Country</td>
+                    <td>User clicks "Regenerate with fresh news"</td>
+                  </tr>
+                  <tr>
+                    <td><strong>PAD Stress Tests</strong></td>
+                    <td>Country</td>
+                    <td>Country risks regenerate</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Risk Mappings</strong></td>
+                    <td>Country</td>
+                    <td>Implementation or country risks change</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Final Briefing</strong></td>
+                    <td>Country + params</td>
+                    <td>Any input or settings change</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p><strong>First generation:</strong> ~10-15 minutes (fetches ICG, preprocesses PADs, extracts from ISRs)</p>
+              <p><strong>Subsequent generations:</strong> ~2-3 minutes (uses cached preprocessed data)</p>
+              <p><strong>Fresh news update:</strong> ~10 minutes (only regenerates country risks, reuses all document caches)</p>
+            </div>
+
+            <h4>🎯 Best Practices</h4>
+            <div class="how-box">
+              <p><strong>For accurate briefings:</strong></p>
+              <ul>
+                <li>Regenerate country risks monthly (or after major events)</li>
+                <li>Review intermediary outputs in other tabs to verify quality</li>
+                <li>Use custom prompts to tailor briefing style to your audience</li>
+                <li>Check citations link to correct documents</li>
+              </ul>
+              <p><strong>For faster performance:</strong></p>
+              <ul>
+                <li>Don't regenerate unless needed (caches are your friend)</li>
+                <li>Preprocessed PADs and implementation caches are permanent - no need to regenerate</li>
+                <li>Only click "Regenerate with fresh news" when you need latest country intelligence</li>
+              </ul>
+              <p><strong>For customization:</strong></p>
+              <ul>
+                <li>Edit the prompt in "Edit Prompt" tab to change briefing style</li>
+                <li>Use "Custom Categories" mode to define your own organizational structure</li>
+                <li>Adjust number of paragraphs to control briefing length</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal for viewing old briefings -->
+  <div id="briefingModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modalTitle">Briefing</h3>
+        <div class="modal-actions">
+          <button id="modalDownloadBtn" class="modal-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            Download
+          </button>
+          <button id="modalCloseBtn" class="modal-close">&times;</button>
+        </div>
+      </div>
+      <div id="modalBody" class="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="static/briefing.js?v=3"></script>
+</body>
+</html>

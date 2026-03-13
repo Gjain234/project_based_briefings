@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P176303",
+    "guid": 99031224151017669,
+    "node_id": 34279663,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-a04969dd-32f6-453f-b2d3-310f5643586b.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Ethiopia Rural Connectivity for Food Security Program",
+      "project_development_objective": "To enhance the climate resilient accessibility of target populations to food markets and services; and strengthen the institutional capacity for rural roads management",
+      "total_financing": "US$407.3 million (US$300 million IDA Grant + US$107.3 million counterpart funding)",
+      "implementation_period": "March 2024 - March 2029 (5 years)",
+      "beneficiaries": "11,356,191 people (5,651,404 women) accessing improved rural connectivity; rural population in agricultural potential areas"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "All 13 regions of Ethiopia",
+        "Priority woredas and kebeles based on agricultural potential",
+        "Rural areas with high food production potential"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "yes - Ethiopia is marked as fragile state with ongoing internal conflicts and security challenges affecting implementation"
+    },
+    "key_components": [
+      {
+        "component_name": "PforR - Rural Roads Infrastructure (US$250 million)",
+        "description": "Upgrading/construction of 7,554 km rural roads, 373 trail bridges, 750 special structures to climate resilient standards",
+        "financing": "US$250 million"
+      },
+      {
+        "component_name": "IPF Window 1 - E-market Platform (US$17.5 million)",
+        "description": "Digital market platform linking farmers to buyers, agricultural output tracking, contract farming management",
+        "financing": "US$17.5 million"
+      },
+      {
+        "component_name": "IPF Window 2 - Capacity Building (US$32.5 million)",
+        "description": "Institutional capacity building for federal, regional and woreda implementing agencies",
+        "financing": "US$32.5 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Urban and Infrastructure (MUI) - lead; Agricultural Transformation Institute (ATI) - IPF component",
+      "coordination_mechanisms": "Federal and Regional Steering Committees; Technical Committees at all levels; Joint Consultative Forum",
+      "procurement_approach": "National procurement systems for PforR; World Bank procurement regulations for IPF",
+      "monitoring_and_evaluation": "Independent Verification Agent; quarterly and annual reporting; web-based MIS; third-party performance evaluation"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political",
+        "risk_description": "Ongoing conflicts, internal displacements, ethnic tensions, political instability affecting implementation",
+        "risk_rating": "high",
+        "mitigation_measures": "Close monitoring, collaboration with stakeholders, community engagement for development purposes"
+      },
+      {
+        "risk_category": "macroeconomic",
+        "risk_description": "High inflation, foreign exchange shortages, currency distortions affecting project costs",
+        "risk_rating": "high",
+        "mitigation_measures": "Sensitivity analysis for exchange rates, coordination with IMF, price adjustment provisions in contracts"
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "Weak procurement systems, limited capacity at regional level, fraud and corruption risks",
+        "risk_rating": "high",
+        "mitigation_measures": "Capacity building, procurement DLI, strengthened oversight, anti-corruption measures through PAP"
+      },
+      {
+        "risk_category": "environmental and social",
+        "risk_description": "Soil erosion, water quality impacts, occupational safety, GBV/SEA risks, involuntary resettlement",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Environmental and Social Management System, E&S DLI, annual audits, grievance redress mechanism"
+      },
+      {
+        "risk_category": "institutional",
+        "risk_description": "Limited capacity at regional and woreda levels for program implementation",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Minimum Access Conditions, capacity building DLIs, technical support from ERA"
+      },
+      {
+        "risk_category": "security",
+        "risk_description": "Internal conflicts affecting project sites, staff safety, material transportation",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Conflict-sensitive implementation, standard operating procedures for conflict situations"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate risk (IPF component)",
+      "triggered_safeguard_policies": [
+        "ESS1: Assessment and Management of E&S Risks",
+        "ESS2: Labor and Working Conditions",
+        "ESS10: Stakeholder Engagement"
+      ],
+      "grievance_redress_mechanism": "yes - functional GRM to be established at all levels with clear procedures and recording systems",
+      "gender_considerations": "Gender Action Plan, women's participation in microenterprises, gender-sensitive recruitment, addressing barriers to women's participation in value chains",
+      "vulnerable_groups": [
+        "Indigenous peoples",
+        "Women",
+        "Youth",
+        "Pastoralist communities"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Operation designed to bring communities together for development; monitoring of conflict situations; standard operating procedures for conflict areas; funds limited to regional level",
+      "fragility_context": "Ethiopia marked as fragile state with ongoing ethnic tensions, internal displacement, weak governance structures, limited state capacity at lower levels",
+      "security_considerations": "Security risks affecting competitiveness, material transportation, construction delays; conflict-sensitive site selection and implementation procedures",
+      "displacement_or_refugees": "yes - ongoing internal displacements due to conflicts; voluntary land donation protocol to avoid involuntary resettlement; exclusion of involuntary displacement from Phase I"
+    }
+  }
+}

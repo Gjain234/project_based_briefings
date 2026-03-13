@@ -37,32 +37,26 @@ def get_client_for_model(model_name, internal=True):
             )
     
     else:
-        try:
-            from langchain_anthropic import ChatAnthropic
-            
-            # Get API key from environment variable
-            anthropic_api_key = ANTHROPIC_API_KEY
-            if not anthropic_api_key:
-                raise ValueError(
-                    "ANTHROPIC_API_KEY is required when internal=False. "
-                    "Set it in config.py or as an environment variable."
-                )
-            
-            # Determine max_tokens based on model - Sonnet gets more for complex reasoning
-            max_tokens = 16384 if 'sonnet' in model_name.lower() else 8192
-            
-            return ChatAnthropic(
-                model=model_name,
-                anthropic_api_key=anthropic_api_key,
-                temperature=0,
-                max_tokens=max_tokens
+        # Use Anthropic via langchain (required for LangChain compatibility)
+        from langchain_anthropic import ChatAnthropic
+        
+        # Get API key from environment variable
+        anthropic_api_key = ANTHROPIC_API_KEY
+        if not anthropic_api_key:
+            raise ValueError(
+                "ANTHROPIC_API_KEY is required when internal=False. "
+                "Set it in config.py or as an environment variable."
             )
-            
-        except ImportError as e:
-            raise ImportError(
-                f"External mode requires 'langchain-anthropic' package. "
-                f"Install it with: pip install langchain-anthropic\nError: {e}"
-            )
+        
+        # Determine max_tokens based on model
+        max_tokens = 16384 if 'sonnet' in model_name.lower() else 8192
+        
+        return ChatAnthropic(
+            model=model_name,
+            anthropic_api_key=anthropic_api_key,
+            temperature=0,
+            max_tokens=max_tokens
+        )
 
 def setup(internal=True):
     """

@@ -42,34 +42,6 @@ def select_latest_pad_per_project(country_document_df):
 from langchain_core.prompts import ChatPromptTemplate
 import json
 
-
-def chunk_text(text, max_chars=50000, overlap=1000):
-    """
-    Split text into overlapping chunks to fit context window.
-    
-    Args:
-        text: Text to chunk
-        max_chars: Maximum characters per chunk
-        overlap: Number of characters to overlap between chunks
-    
-    Returns:
-        List of text chunks
-    """
-    if len(text) <= max_chars:
-        return [text]
-    
-    chunks = []
-    start = 0
-    
-    while start < len(text):
-        end = start + max_chars
-        chunk = text[start:end]
-        chunks.append(chunk)
-        start = end - overlap
-    
-    return chunks
-
-
 def stress_test_pad_against_country_risks(pad_row,
                                           country_risks_df,
                                           client,
