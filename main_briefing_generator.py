@@ -44,6 +44,8 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     briefing_output_path = f"{save_folder}/final_{country}_{mode}_briefing_{timestamp}.md"
     
+    print(f"DEBUG main_briefing_generator: mode={mode}, briefing_output_path={briefing_output_path}")
+    
     # Create folder if saving
     if save_outputs and not os.path.exists(save_folder):
         os.makedirs(save_folder)
@@ -346,6 +348,7 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
             with open(briefing_output_path, "w", encoding="utf-8") as f:
                 f.write(briefing)
             print(f"  ✓ Saved to {briefing_output_path}")
+            print(f"DEBUG: File saved with mode={mode}, path includes mode={mode in briefing_output_path}")
     
     return briefing
 

@@ -19,12 +19,13 @@ from country_name_mapping import get_possible_wb_country_names, get_country_id_k
 import os
 from datetime import datetime
 
-def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categories=None, save_outputs=False,internal=False, force_regenerate=False, status_callback=None, custom_prompt=None):
+def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categories=None, save_outputs=False,internal=False, force_regenerate=False, status_callback=None, custom_prompt=None, stream_callback=None):
     """Generate FCV briefing with optional status updates.
     
     Args:
         status_callback: Optional function to call with status updates (str)
         custom_prompt: Optional custom system prompt to override defaults
+        stream_callback: Optional function to call with streamed briefing chunks
     """
     def update_status(msg):
         if status_callback:
@@ -232,6 +233,10 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
             max_projects_limit = MAX_PROJECTS_FOR_BRIEFING
             update_status(f"   📊 Portfolio is too large - prioritizing top {MAX_PROJECTS_FOR_BRIEFING} highest-risk projects. To see all project risks, check the PAD Risks, Implementation Risks, and Risk Mappings tabs.")
         
+        # Verify custom_categories are provided for custom mode
+        if mode == "custom" and not custom_categories:
+            raise ValueError("custom_categories must be provided when mode='custom'")
+        
         briefing = generate_briefing(
             mode=mode,
             n_paragraphs=n_paragraphs,
@@ -246,6 +251,9 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
             max_projects=max_projects_limit
         )
         if save_outputs:
+            print(f"DEBUG: About to save briefing")
+            print(f"    mode parameter: {mode}")
+            print(f"    briefing_output_path: {briefing_output_path}")
             with open(briefing_output_path, "w", encoding="utf-8") as f:
                 f.write(briefing)
             print(f"  ✓ Saved to {briefing_output_path}")

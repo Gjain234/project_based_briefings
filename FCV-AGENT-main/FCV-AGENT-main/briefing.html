@@ -112,6 +112,13 @@ Social Cohesion and Protection</textarea>
           </svg>
           Generate Briefing
         </button>
+        <button id="customPromptBtn" class="generate-btn" style="background: linear-gradient(135deg, #47C4EB 0%, #009FDA 100%); margin-left: 8px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+          </svg>
+          Custom Prompt
+        </button>
         <button id="stopBtn" class="stop-btn" style="display:none;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
             <rect x="6" y="6" width="12" height="12" rx="2"/>
@@ -150,12 +157,21 @@ Social Cohesion and Protection</textarea>
         <div id="tab-briefing" class="tab-content active">
           <div class="briefing-header">
             <h3>Final Briefing</h3>
-            <button id="downloadBtn" class="download-btn" style="display:none;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
-              </svg>
-              Download Markdown
-            </button>
+            <div style="display: flex; gap: 8px;">
+              <button id="copyBtn" class="download-btn" style="display:none;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                  <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                </svg>
+                Copy to Clipboard
+              </button>
+              <button id="downloadBtn" class="download-btn" style="display:none;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                </svg>
+                Download Markdown
+              </button>
+            </div>
           </div>
           <div id="briefingContent" class="briefing-content">
             <p style="color: #5a6a7e; text-align: center; padding: 40px 20px;">
@@ -183,18 +199,17 @@ Social Cohesion and Protection</textarea>
               Citation markers like <code>[PROJ_ID | PAD]</code> will be automatically converted to document links.
             </div>
             <label class="config-label">System Prompt</label>
-            <textarea id="customPromptEditor" class="custom-prompt-editor" rows="20" disabled>
+            <textarea id="customPromptEditor" class="custom-prompt-editor" rows="20">
 Generate a briefing to see and edit the system prompt...
             </textarea>
             <div class="edit-prompt-actions">
-              <button id="resetPromptBtn" class="btn-secondary" disabled>
+              <button id="resetPromptBtn" class="btn-secondary">
                 🔄 Reset to Default
               </button>
-              <button id="regenerateWithPromptBtn" class="btn-primary" disabled>
+              <button id="regenerateWithPromptBtn" class="btn-primary">
                 🚀 Regenerate with Custom Prompt
               </button>
             </div>
-            <div class="config-note">Note: Custom prompt editing will be enabled after first briefing generation</div>
           </div>
         </div>
 
@@ -552,6 +567,13 @@ Return valid JSON with structure: { "connections": [ { "country_risk_id", "count
       <div class="modal-header">
         <h3 id="modalTitle">Briefing</h3>
         <div class="modal-actions">
+          <button id="modalCopyBtn" class="modal-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+              <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+            </svg>
+            Copy
+          </button>
           <button id="modalDownloadBtn" class="modal-btn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>

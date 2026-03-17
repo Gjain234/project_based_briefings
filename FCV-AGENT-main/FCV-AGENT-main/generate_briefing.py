@@ -125,6 +125,13 @@ def generate_custom_aligned_briefing(
         "implementation_realized_risks_mapped": implementation_realized_risks_mapped.to_dict(orient="records")
     }
 
+    # Validate and clean custom_prompt
+    if custom_prompt:
+        if not isinstance(custom_prompt, str):
+            custom_prompt = None
+        else:
+            custom_prompt = custom_prompt.strip() if custom_prompt else None
+
     # Use custom prompt if provided, otherwise use default
     system_prompt = custom_prompt if custom_prompt else (
         f"You are writing a structured FCV portfolio briefing.\n\n"
@@ -182,6 +189,13 @@ def generate_risk_aligned_briefing(
         "pad_risks": pad_risks.to_dict(orient="records"),
         "implementation_realized_risks_mapped": implementation_realized_risks_mapped.to_dict(orient="records")
     }
+
+    # Validate and clean custom_prompt
+    if custom_prompt:
+        if not isinstance(custom_prompt, str):
+            custom_prompt = None
+        else:
+            custom_prompt = custom_prompt.strip() if custom_prompt else None
 
     # Use custom prompt if provided, otherwise use default
     system_prompt = custom_prompt if custom_prompt else (
@@ -243,6 +257,13 @@ def generate_sector_aligned_briefing(
         "pad_risks": pad_risks.to_dict(orient="records"),
         "implementation_realized_risks": implementation_realized_risks.to_dict(orient="records"),
     }
+
+    # Validate and clean custom_prompt
+    if custom_prompt:
+        if not isinstance(custom_prompt, str):
+            custom_prompt = None
+        else:
+            custom_prompt = custom_prompt.strip() if custom_prompt else None
 
     # Use custom prompt if provided, otherwise use default
     system_prompt = custom_prompt if custom_prompt else (

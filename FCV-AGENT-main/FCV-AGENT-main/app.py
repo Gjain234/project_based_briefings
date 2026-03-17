@@ -368,6 +368,35 @@ def get_last_scan(country):
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+@app.route('/api/briefing/project-names/<country>')
+def get_project_names(country):
+    """Get project names for a country from preprocessed PADs"""
+    try:
+        import json
+        project_names = {}
+        preprocessed_dir = "preprocessed_pads"
+        country_dir = os.path.join(preprocessed_dir, country)
+        
+        if os.path.exists(country_dir):
+            for filename in os.listdir(country_dir):
+                if filename.endswith('_preprocessed.json'):
+                    file_path = os.path.join(country_dir, filename)
+                    try:
+                        with open(file_path, 'r', encoding='utf-8') as f:
+                            data = json.load(f)
+                            proj_id = data.get('metadata', {}).get('PROJ_ID_IB')
+                            proj_name = data.get('structured_content', {}).get('project_overview', {}).get('project_name')
+                            if proj_id and proj_name:
+                                project_names[proj_id] = proj_name
+                    except Exception as e:
+                        print(f"Error reading {file_path}: {e}")
+        
+        return jsonify(project_names)
+    except Exception as e:
+        import traceback
+        print(f"Error in get_project_names: {traceback.format_exc()}")
+        return jsonify({})
+
 @app.route('/api/briefing/generate', methods=['POST'])
 def generate_briefing():
     """Generate FCV portfolio briefing"""
@@ -388,7 +417,31 @@ def generate_briefing():
         mode = data.get('mode', 'risk')
         n_paragraphs = data.get('n_paragraphs', 5)
         custom_categories = data.get('custom_categories')
+        custom_prompt = data.get('custom_prompt')
         force_regenerate = data.get('force_regenerate', False)
+        
+        print(f"DEBUG: Received briefing generation request:")
+        print(f"  - country: {country}")
+        print(f"  - mode: {mode}")
+        print(f"  - custom_categories: {custom_categories}")
+        print(f"  - custom_prompt: {custom_prompt}")
+        print(f"  - force_regenerate: {force_regenerate}")
+        
+        # Validate and clean custom_prompt
+        if custom_prompt:
+            if not isinstance(custom_prompt, str):
+                # If it's a dict or other type, try to convert it or set to None
+                try:
+                    if isinstance(custom_prompt, dict):
+                        custom_prompt = None
+                    else:
+                        custom_prompt = str(custom_prompt).strip()
+                        if not custom_prompt:
+                            custom_prompt = None
+                except:
+                    custom_prompt = None
+            else:
+                custom_prompt = custom_prompt.strip() if custom_prompt else None
         
         def safe_parse_list(value):
             """Safely parse string representations of lists"""
@@ -426,17 +479,20 @@ def generate_briefing():
                     nonlocal stream_gen
                     briefing_chunks.append(chunk)
                 
+                print(f"DEBUG: About to call get_fcv_content_from_docs with mode={mode}")
                 briefing = get_fcv_content_from_docs(
                     country=country,
                     mode=mode,
                     n_paragraphs=n_paragraphs,
                     custom_categories=custom_categories,
+                    custom_prompt=custom_prompt,
                     save_outputs=True,
                     internal=False,
                     force_regenerate=force_regenerate,
                     status_callback=None,
                     stream_callback=capture_stream
                 )
+                print(f"DEBUG: Returned from get_fcv_content_from_docs")
                 
                 # Send completion message after briefing is generated
                 yield f"data: {json.dumps({'status': 'Briefing generation complete. Loading intermediary data...'})}\n\n"
@@ -635,13 +691,23 @@ def get_recent_briefings(country):
             filename = os.path.basename(file_path)
             
             # Parse filename: final_{country}_{mode}_briefing_{timestamp}.md
-            # Example: final_Djibouti_risk_briefing_20260309_160110.md
-            match = re.match(rf'final_{re.escape(country)}_(\w+)_briefing_(\d{{8}})_(\d{{6}})\.md', filename)
+            # Example: final_Djibouti_custom_briefing_20260309_160110.md
+            # Use raw string for regex pattern - don't use f-string
+            match = re.match(r'final_(.+?)_([a-z]+)_briefing_(\d{8})_(\d{6})\.md', filename)
             
             if match:
-                mode = match.group(1)
-                date_str = match.group(2)  # YYYYMMDD
-                time_str = match.group(3)  # HHMMSS
+                matched_country = match.group(1)
+                mode = match.group(2)
+                date_str = match.group(3)  # YYYYMMDD
+                time_str = match.group(4)  # HHMMSS
+                
+                # Verify the country matches (to avoid false matches)
+                if matched_country != country:
+                    continue
+                
+                # Validate mode
+                if mode not in ['risk', 'sector', 'custom']:
+                    continue
                 
                 # Parse date
                 try:

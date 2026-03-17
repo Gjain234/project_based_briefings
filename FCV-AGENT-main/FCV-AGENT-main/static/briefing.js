@@ -2,11 +2,13 @@
 
 let currentCountry = '';
 let generating = false;
+let briefingText = ''; // Store original briefing text for download
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
   loadCountries();
   setupEventListeners();
+  initializePromptEditor(); // Initialize prompt editor on page load
 });
 
 // Setup event listeners
@@ -34,11 +36,25 @@ function setupEventListeners() {
   // Generate button
   document.getElementById('generateBtn').addEventListener('click', generateBriefing);
   
+  // Custom Prompt button
+  document.getElementById('customPromptBtn').addEventListener('click', () => {
+    switchTab('edit-prompt');
+    // Scroll to results section to show the tab
+    const resultsSection = document.getElementById('resultsSection');
+    if (resultsSection.style.display === 'none' || resultsSection.style.display === '') {
+      resultsSection.style.display = 'block';
+    }
+    resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+  
   // Stop button
   document.getElementById('stopBtn').addEventListener('click', stopGeneration);
   
   // Download button
   document.getElementById('downloadBtn').addEventListener('click', downloadBriefing);
+  
+  // Copy button
+  document.getElementById('copyBtn').addEventListener('click', copyBriefing);
   
   // Modal handlers
   document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
@@ -123,17 +139,28 @@ function handleBriefingModeChange() {
     customSection.style.display = 'none';
     slider.disabled = false;
   }
+  
+  // Reinitialize prompt editor to update default prompts and paragraph counts
+  initializePromptEditor();
 }
 
 // Generate briefing
-async function generateBriefing() {
+async function generateBriefing(customPrompt = null) {
   if (generating) return;
   
   generating = true;
   const country = document.getElementById('countrySelect').value;
-  const mode = document.getElementById('briefingMode').value;
+  const modeSelect = document.getElementById('briefingMode');
+  const mode = modeSelect.value;
   const nParagraphs = parseInt(document.getElementById('nParagraphs').value);
   const forceRegenerate = document.getElementById('forceRegenerate').checked;
+  
+  console.log('DEBUG generateBriefing called');
+  console.log('  - modeSelect element:', modeSelect);
+  console.log('  - modeSelect.value:', modeSelect.value);
+  console.log('  - mode:', mode);
+  console.log('  - country:', country);
+  console.log('  - customPrompt:', customPrompt ? 'provided' : 'null');
   
   let customCategories = null;
   if (mode === 'custom') {
@@ -141,6 +168,7 @@ async function generateBriefing() {
       .split('\n')
       .map(c => c.trim())
       .filter(c => c);
+    console.log('  - customCategories:', customCategories);
   }
   
   // Show generating state
@@ -158,8 +186,18 @@ async function generateBriefing() {
         mode,
         n_paragraphs: nParagraphs,
         custom_categories: customCategories,
+        custom_prompt: customPrompt,
         force_regenerate: forceRegenerate
       })
+    });
+    
+    console.log('DEBUG generateBriefing: Sent to server:', {
+      country,
+      mode,
+      n_paragraphs: nParagraphs,
+      custom_categories: customCategories,
+      custom_prompt: customPrompt ? '***PROMPT PROVIDED***' : null,
+      force_regenerate: forceRegenerate
     });
     
     const reader = response.body.getReader();
@@ -198,12 +236,14 @@ async function generateBriefing() {
               
               Promise.all([
                 fetch(`/api/briefing/content/${encodeURIComponent(country)}`).then(r => r.json()),
-                fetch(`/api/briefing/risks/${encodeURIComponent(country)}`).then(r => r.json())
+                fetch(`/api/briefing/risks/${encodeURIComponent(country)}`).then(r => r.json()),
+                fetch(`/api/briefing/project-names/${encodeURIComponent(country)}`).then(r => r.json())
               ])
-                .then(([briefingData, risksData]) => {
+                .then(([briefingData, risksData, projectNames]) => {
                   const results = {
                     briefing: briefingData.briefing,
-                    ...risksData
+                    ...risksData,
+                    projectNames: projectNames
                   };
                   
                   // Load all results
@@ -271,15 +311,17 @@ function showStatus(message, type = 'info') {
 function loadResults(results) {
   console.log('loadResults called with:', results);
   
-  // Show download button now that we have a briefing
+  // Show download and copy buttons now that we have a briefing
   document.getElementById('downloadBtn').style.display = 'inline-flex';
+  document.getElementById('copyBtn').style.display = 'inline-flex';
   
   // Load briefing - convert markdown newlines to HTML
-  const briefingText = results.briefing || 'No briefing generated.';
-  console.log('Briefing text length:', briefingText.length);
+  const briefingTextContent = results.briefing || 'No briefing generated.';
+  briefingText = briefingTextContent; // Store original text for download
+  console.log('Briefing text length:', briefingTextContent.length);
   
   // Simple markdown to HTML conversion
-  const briefingHtml = briefingText
+  const briefingHtml = briefingTextContent
     .replace(/\n\n/g, '</p><p>')
     .replace(/\n/g, '<br>')
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
@@ -339,10 +381,14 @@ function loadResults(results) {
   // Load PAD risks
   if (results.pad_risks && results.pad_risks.length > 0) {
     const padsByProject = groupBy(results.pad_risks, 'PROJ_ID_IB');
-    document.getElementById('padRisksContent').innerHTML = Object.entries(padsByProject).map(([proj, risks]) => `
+    const projectNames = results.projectNames || {};
+    document.getElementById('padRisksContent').innerHTML = Object.entries(padsByProject).map(([proj, risks]) => {
+      const projName = projectNames[proj];
+      const titleText = projName ? `${proj}: ${projName}` : proj;
+      return `
       <div class="risk-card" onclick="this.classList.toggle('expanded')">
         <div class="risk-card-header">
-          <div class="risk-card-title">Project: ${proj} (${risks.length} susceptibilities)</div>
+          <div class="risk-card-title">Project: ${titleText} (${risks.length} susceptibilities)</div>
           <span>▼</span>
         </div>
         <div class="risk-card-body">
@@ -356,7 +402,8 @@ function loadResults(results) {
           `).join('')}
         </div>
       </div>
-    `).join('');
+    `;
+    }).join('');
   } else {
     document.getElementById('padRisksContent').innerHTML = '<p>No PAD risks data available.</p>';
   }
@@ -364,10 +411,14 @@ function loadResults(results) {
   // Load implementation risks
   if (results.impl_risks && results.impl_risks.length > 0) {
     const implByProject = groupBy(results.impl_risks, 'PROJ_ID_IB');
-    document.getElementById('implRisksContent').innerHTML = Object.entries(implByProject).map(([proj, risks]) => `
+    const projectNames = results.projectNames || {};
+    document.getElementById('implRisksContent').innerHTML = Object.entries(implByProject).map(([proj, risks]) => {
+      const projName = projectNames[proj];
+      const titleText = projName ? `${proj}: ${projName}` : proj;
+      return `
       <div class="risk-card" onclick="this.classList.toggle('expanded')">
         <div class="risk-card-header">
-          <div class="risk-card-title">Project: ${proj} (${risks.length} risks)</div>
+          <div class="risk-card-title">Project: ${titleText} (${risks.length} risks)</div>
           <span>▼</span>
         </div>
         <div class="risk-card-body">
@@ -385,7 +436,8 @@ function loadResults(results) {
           `).join('')}
         </div>
       </div>
-    `).join('');
+    `;
+    }).join('');
   } else {
     document.getElementById('implRisksContent').innerHTML = '<p>No implementation risks data available.</p>';
   }
@@ -393,10 +445,14 @@ function loadResults(results) {
   // Load risk mappings
   if (results.mappings && results.mappings.length > 0) {
     const mappingsByProject = groupBy(results.mappings, 'PROJ_ID_IB');
-    document.getElementById('mappingsContent').innerHTML = Object.entries(mappingsByProject).map(([proj, maps]) => `
+    const projectNames = results.projectNames || {};
+    document.getElementById('mappingsContent').innerHTML = Object.entries(mappingsByProject).map(([proj, maps]) => {
+      const projName = projectNames[proj];
+      const titleText = projName ? `${proj}: ${projName}` : proj;
+      return `
       <div class="risk-card" onclick="this.classList.toggle('expanded')">
         <div class="risk-card-header">
-          <div class="risk-card-title">Project: ${proj} (${maps.length} connections)</div>
+          <div class="risk-card-title">Project: ${titleText} (${maps.length} connections)</div>
           <span>▼</span>
         </div>
         <div class="risk-card-body">
@@ -410,7 +466,8 @@ function loadResults(results) {
           `).join('')}
         </div>
       </div>
-    `).join('');
+    `;
+    }).join('');
   } else {
     document.getElementById('mappingsContent').innerHTML = '<p>No risk mappings data available.</p>';
   }
@@ -431,9 +488,10 @@ function switchTab(tabId) {
 
 // Download briefing
 function downloadBriefing() {
-  const content = document.getElementById('briefingContent').innerText;
   const country = document.getElementById('countrySelect').value;
   const mode = document.getElementById('briefingMode').value;
+  // Use the original briefing text (which has the [PROJ_ID | DOC_TYPE] markers)
+  const content = briefingText || document.getElementById('briefingContent').innerText;
   const blob = new Blob([content], {type: 'text/markdown'});
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
@@ -443,6 +501,24 @@ function downloadBriefing() {
   a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
+}
+
+function copyBriefing() {
+  // Copy the briefing text to clipboard
+  const content = briefingText || document.getElementById('briefingContent').innerText;
+  navigator.clipboard.writeText(content).then(() => {
+    // Show success feedback
+    const copyBtn = document.getElementById('copyBtn');
+    const originalText = copyBtn.innerHTML;
+    copyBtn.innerHTML = '✓ Copied!';
+    copyBtn.style.background = '#10b981';
+    setTimeout(() => {
+      copyBtn.innerHTML = originalText;
+      copyBtn.style.background = '';
+    }, 2000);
+  }).catch(err => {
+    alert('Failed to copy: ' + err.message);
+  });
 }
 
 // Utility: Group array by key
@@ -455,8 +531,8 @@ function groupBy(array, key) {
   }, {});
 }
 
-// Enable prompt editor after first briefing generation
-function enablePromptEditor() {
+// Initialize prompt editor on page load and when mode changes
+function initializePromptEditor() {
   const editor = document.getElementById('customPromptEditor');
   const resetBtn = document.getElementById('resetPromptBtn');
   const regenerateBtn = document.getElementById('regenerateWithPromptBtn');
@@ -531,9 +607,27 @@ Citation rules:
   };
   
   regenerateBtn.onclick = () => {
-    // TODO: Implement regeneration with custom prompt
-    alert('Custom prompt regeneration will be implemented soon!');
+    // Get custom prompt from editor - ensure it's a string
+    let customPrompt = editor.value;
+    if (customPrompt && typeof customPrompt === 'string') {
+      customPrompt = customPrompt.trim();
+      if (!customPrompt) {
+        customPrompt = null;
+      }
+    } else {
+      customPrompt = null;
+    }
+    // Log what mode is being used
+    const mode = document.getElementById('briefingMode').value;
+    console.log(`DEBUG: Regenerating with custom prompt, current mode=${mode}`);
+    // Call generateBriefing with custom prompt (don't force regenerate - use existing country risks)
+    generateBriefing(customPrompt);
   };
+}
+
+// Enable prompt editor after first briefing generation (kept for compatibility, but now does same as initialize)
+function enablePromptEditor() {
+  initializePromptEditor();
 }
 
 // Load recent briefings for a country
@@ -595,6 +689,7 @@ function showModal(title, content) {
   const modalTitle = document.getElementById('modalTitle');
   const modalBody = document.getElementById('modalBody');
   const downloadBtn = document.getElementById('modalDownloadBtn');
+  const copyBtn = document.getElementById('modalCopyBtn');
   
   modalTitle.textContent = title;
   
@@ -606,6 +701,21 @@ function showModal(title, content) {
     .replace(/\*(.+?)\*/g, '<em>$1</em>');
   
   modalBody.innerHTML = '<p>' + html + '</p>';
+  
+  // Set up copy button
+  copyBtn.onclick = () => {
+    navigator.clipboard.writeText(content).then(() => {
+      const originalText = copyBtn.innerHTML;
+      copyBtn.innerHTML = '✓ Copied!';
+      copyBtn.style.background = '#10b981';
+      setTimeout(() => {
+        copyBtn.innerHTML = originalText;
+        copyBtn.style.background = '';
+      }, 2000);
+    }).catch(err => {
+      alert('Failed to copy: ' + err.message);
+    });
+  };
   
   // Set up download button
   downloadBtn.onclick = () => {

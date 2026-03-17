@@ -178,6 +178,13 @@ def generate_custom_aligned_briefing(
         "evidence_by_document_type": evidence_by_source
     }
 
+    # Validate and clean custom_prompt
+    if custom_prompt:
+        if not isinstance(custom_prompt, str):
+            custom_prompt = None
+        else:
+            custom_prompt = custom_prompt.strip() if custom_prompt else None
+
     # Use custom prompt if provided, otherwise use default
     system_prompt = custom_prompt if custom_prompt else (
         f"You are writing a structured FCV portfolio briefing.\n\n"
@@ -245,6 +252,18 @@ def generate_risk_aligned_briefing(
         "country_risks": country_risks_df.to_dict(orient="records"),
         "evidence_by_document_type": evidence_by_source
     }
+    # Validate and clean custom_prompt
+    if custom_prompt:
+        if not isinstance(custom_prompt, str):
+            custom_prompt = None
+        else:
+            custom_prompt = custom_prompt.strip() if custom_prompt else None
+    # Validate and clean custom_prompt
+    if custom_prompt:
+        if not isinstance(custom_prompt, str):
+            custom_prompt = None
+        else:
+            custom_prompt = custom_prompt.strip() if custom_prompt else None
 
     # Use custom prompt if provided, otherwise use default
     system_prompt = custom_prompt if custom_prompt else (
