@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P181248",
+    "guid": 99072125125539995,
+    "node_id": 40031551,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-f8d6185d-f8cd-4a0b-8cd7-70b0164696e4.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Solutions for the Internally Displaced and Host Communities Project (SOLID)",
+      "project_development_objective": "To improve access to basic services and economic opportunities for internally displaced persons (IDPs) and host communities in target local government areas (LGAs) in northern Nigeria",
+      "total_financing": "US$300 million",
+      "implementation_period": "August 2025 - July 2030 (5 years)",
+      "beneficiaries": "Up to 7.4 million people total, including up to 1.3 million IDPs and host community members in northern Nigeria, with special focus on women and youth"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Borno",
+        "Adamawa",
+        "Yobe",
+        "Benue",
+        "Katsina",
+        "Zamfara",
+        "Kaduna",
+        "Taraba",
+        "Sokoto",
+        "Plateau",
+        "Gombe",
+        "Nasarawa"
+      ],
+      "coverage_type": "Regional - Northern Nigeria (North-East, North-West, North-Central regions)",
+      "fragile_or_conflict_affected_areas": "Yes - partial. Project targets 12 northern states with significant IDP populations. Tier 1 states (Borno, Adamawa, Yobe, Benue, Katsina, Zamfara) have over 150,000 IDPs representing >2% of state population. Borno is epicenter of Boko Haram insurgency since 2014 with 1.7 million IDPs. Project addresses protracted displacement from conflict, violence, and climate-induced disasters. Over 65% of IDPs in Northern Nigeria are in North-East region, with 95% in BAY states."
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Investments in Climate-Resilient Infrastructure and Services",
+        "description": "Subcomponent 1.1 (US$185M): Strategic investments in climate-resilient roads, drainage/flood control, solid waste management, water access, public spaces/markets, and pedestrian improvements. Subcomponent 1.2 (US$15M): Strengthening state/local government institutions through development of climate-resilient Local Area Development Plans, community participatory planning, capacity building for service delivery, and land use planning updates.",
+        "financing": "US$200 million"
+      },
+      {
+        "component_name": "Component 2: Livelihoods Support and Community Integration",
+        "description": "Subcomponent 2.1 (US$15M): Technical support to strengthen agricultural and non-agricultural cooperatives, skills training in climate-smart agriculture and trade skills, capacity building of state MDAs, and support for IDP integration (vital documents, land ownership). Subcomponent 2.2 (US$65M): Small grants mechanism (US$25M) for cooperative start-up/operational capital and small investments (US$40M) in storage facilities, processing centers, digital systems, and research on social integration.",
+        "financing": "US$80 million"
+      },
+      {
+        "component_name": "Component 3: Project Management and Support for Implementation of National Policy",
+        "description": "Federal Project Management Unit (FPMU) establishment and operations; project monitoring including Geo-Enabled Monitoring System (GEMS) and Grievance Redress Mechanism; impact evaluation; conflict analyses; third-party monitoring; support for National IDP Policy operationalization including IDP data collection, registration, profiling, and national database development.",
+        "financing": "US$20 million"
+      },
+      {
+        "component_name": "Component 4: Contingency Emergency Response Component (CERC)",
+        "description": "Allows rapid reallocation of uncommitted loan funds in eligible emergencies. Requires preparation of CERC Manual, Emergency Action Plan, and Environmental and Social Commitment Plan compliance.",
+        "financing": "US$0 million (contingent allocation)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Federal Ministry of Budget and Economic Planning (FMBEP) at federal level; State Project Coordination Units (PCUs) at state level for Tier 1 states; Tier 2 states assign focal points. Federal Project Management Unit (FPMU) headed by National Project Coordinator with technical experts.",
+      "coordination_mechanisms": "National Steering Committee (NSC) chaired by Minister of FMBEP meeting biannually; Federal Technical Committee (FTC) chaired by Permanent Secretary of FMBEP; State Steering Committees (SSCs) chaired by Governors; State Technical Committees (STCs) chaired by state commissioners of budget and economic planning. Coordination with IOM, UNDP, UNHCR, GIZ, and other development partners.",
+      "procurement_approach": "Investment Project Financing (IPF) with framework approach. World Bank Standard Procurement Documents for international competitive procurement; national competitive procurement using FGN Standard Bidding Documents with World Bank provisions. STEP tool for all procurement transactions. Community-Driven Development (CDD) approach for small value procurements at LGA level. Multiyear procurement planning to reduce fragmentation. Forced labor risk mitigation for solar-related procurements.",
+      "monitoring_and_evaluation": "Multitier quality oversight system: (1) physical quality control and supervision; (2) results M&E system with Results Framework indicators and baselines; (3) social accountability and grievance redress systems; (4) periodic independent third-party performance verification and audits. Geo-Enabled Monitoring System (GEMS) for activity mapping and data collection. Third-party monitors continuously engaged. Beneficiary phone surveys to track social cohesion and satisfaction. Mid-Term Review after 18 months. Independent Verification Agency (IVA) to verify Performance-Based Conditions."
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Political instability in Northern Nigeria remains a concern. 2027 elections at federal and state level pose potential risk. Political commitment to 'durable solutions' framework for IDPs could resurface with forced return or camp closure policies. Political infighting may hinder project fund disbursement.",
+        "risk_rating": "high",
+        "mitigation_measures": "Prioritize dialogue and consultation with federal and local government stakeholders and influential political leaders through Nigeria Governor's Forum and Northern Governor's Forum. Extensive engagement with local communities to ensure buy-in for the project. Capacity-building and TA activities during project implementation."
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Depreciation of the naira, exchange rate instability, and budget challenges remain. Potential inflation and currency impacts on project costing.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "World Bank will collaborate with stakeholders to implement foreign exchange risk management to some extent. Potential inflation and currency impacts will be considered in project costing and design."
+      },
+      {
+        "risk_category": "Technical Design of Project",
+        "risk_description": "Framework approach means specific investments have not yet been identified, which could delay project implementation if not selected early enough to allow for technical designs and required analyses to be completed.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Draw on technical experience of MCRP PCUs and national-level coordinating unit to support incoming FPMU and state PCUs. Rehabilitation and improvement technologies are well-known and pose limited risks. Project design is simple yet robust with proper M&E mechanisms. Reassessment during implementation for adjustments."
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "Weak institutional capacity to deliver services in host communities. Overlapping governance structures complicate service delivery and planning. LGs lack financial and staffing autonomy. Decision-making highly centralized at state level. Local development plans outdated with insufficient community and IDP representation.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Subcomponent 1.2 focuses on training staff from state MDAs, LGs, and community institutions to strengthen service delivery. Promote active involvement of community members, including IDPs, in planning process. PIM will clearly define roles and responsibilities of federal, state, local government, and community institutions. Build institutional capacity at both state and local levels and empower LGs and communities to take active role in planning, implementation, and O&M."
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Low procurement capacity, delays, poor contract management, and numerous small value procurement activities increasing fraud risk. Weak internal audit function, inadequate documentation and filing systems, ineffective budget control systems, poor digital data storage systems at state level. Delayed submission of acceptable Interim Financial Reports (IFRs) and weak controls over payments and retirement of advances at federal level.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Aggregate subprojects where possible to avoid contract fragmentation. Multiyear procurement planning to group and reduce procurement activities. Hire consultants for technical specifications and Bill of Quantities. Conduct business sounding events before tender launch. Procurement and contract management training at World Bank-recognized institutes. Engage qualified consultants for civil works supervision. Strengthen internal control mechanisms. Conduct due diligence on bidders' qualifications. Anti-corruption awareness sessions. Assess procurement capacity of participating states. Redesign internal audit function with centralized audit units. Ensure strict compliance with new FM Manual. Adopt data storage systems with cloud-based services and electronic data monitoring systems. Engage FPFMD to monitor timely delivery of IFRs. Strict compliance with new FM guidelines. Timely settlement of staff advances."
+      },
+      {
+        "risk_category": "Security",
+        "risk_description": "Security risks from insurgency, conflicts, and violence could delay project activities. Insecurity limits field team access to some locations with returnees and IDPs.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Develop security management plans using MCRP lessons shared with stakeholders including contracted firms responsible for civil works. Consult LGs to determine successful security mitigation strategies. Third-Party Monitoring (TPM) required by security conditions. World Bank project team will provide support to state PCUs in using GEMS in FCV-sensitive areas to ensure data collection can proceed and be verified."
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate",
+      "triggered_safeguard_policies": [
+        "ESS 1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS 2: Labor and Working Conditions",
+        "ESS 3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS 4: Community Health and Safety",
+        "ESS 10: Stakeholder Engagement and Information Disclosure",
+        "OP 7.50: Projects on International Waterways (exception to riparian notification applies)"
+      ],
+      "grievance_redress_mechanism": "Yes. Project leverages existing GRM developed under MCRP. BAY states already have system in place; additional states will develop their own GRM monitored by FPMU. Provides beneficiaries, stakeholders, and project-affected persons with formal process to provide feedback and lodge complaints. General communication strategy involves consistent consultations with communities and project-affected persons. Surveys planned at midterm. Citizen engagement feedback integrated into project interventions. GRM approach has feedback loop and uses gender-disaggregated filters where possible. Specialized GRM for cases of Sexual Exploitation and Abuse/Sexual Harassment (SEA/SH). Grievances addressed within project-approved timeline (target: 100% by project closing).",
+      "gender_considerations": "Key gender disparities identified: women's access to economic opportunities and financial capital limited. Female labor force participation 52% vs 66% for men. Women in agriculture earn and produce less than men with limited access to land, inputs, labor, and extension services. Women-led agricultural cooperatives receive 30-40% less funding than male-led cooperatives; women own less than 15% of agricultural land. Women-led non-agricultural cooperatives better represented (25-35%) with only 10-20% less funding. Project activities: (1) conduct market assessments for women-led cooperatives; (2) provide TA including skills training, awareness campaigns on women's leadership, childcare solutions; (3) provide financial and technical support for women-led cooperative start-up capital, machinery, private sector partnerships. Target: 80% of women-led cooperatives secure and utilize start-up capital and remain active 1.5 years after support. Many Results Framework indicators gender-disaggregated. Special emphasis on women and youth in cooperative support.",
+      "vulnerable_groups": [
+        "Internally Displaced Persons (IDPs)",
+        "Host community members",
+        "Women",
+        "Youth (ages 15-25)",
+        "Persons with disabilities",
+        "Vulnerable groups including those at risk of Gender-Based Violence (GBV)"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project explicitly addresses FCV context through: (1) Conflict-sensitive design with continuous conflict analyses under Component 3; (2) Security management plans developed using MCRP lessons; (3) Community integration and social cohesion activities to address tensions between IDPs and host communities; (4) Research and pilot programs on social integration, socioeconomic integration of IDPs, and inclusion of IDPs in community leadership; (5) Stakeholder engagement mechanisms ensuring inclusive participation of IDPs, women, and youth in planning and decision-making; (6) GBV/SEA/SH action plan implementation; (7) Grievance redress mechanisms with specialized GRM for SEA/SH cases; (8) Third-party monitoring in FCV-sensitive areas; (9) Just-in-time studies as needs arise; (10) Whole-of-government approach for coordination across all government levels; (11) Community-driven development methods emphasizing active and inclusive community participation.",
+      "fragility_context": "Northern Nigeria faces protracted displacement crisis with over 3.5 million IDPs—one of largest and fastest-growing displaced populations globally. Displacement driven by: (1) Boko Haram insurgency (Borno epicenter since 2014 with 1.7 million IDPs); (2) Farmer-herder conflicts; (3) Banditry; (4) Climate-induced disasters. Fragility factors: (1) Spatial: unplanned urban sprawl, poor service access, increased disaster vulnerability; (2) Physical: strained infrastructure, limited basic services (water, sanitation, waste management); (3) Institutional: weak capacity, overlapping governance structures, limited local representation, outdated development plans; (4) Socioeconomic: strained social cohesion, competition for limited resources, livelihood struggles, high poverty (73% in Northern Nigeria vs 46% nationally), limited economic opportunities, GBV risks, youth unemployment turning to violence. Project shifts from short-term humanitarian response to long-term development approach focused on system changes and local capacity building for resilient and inclusive development.",
+      "security_considerations": "Project operates in high-security risk environment. Specific security measures: (1) Security management plans developed and shared with stakeholders and contracted firms; (2) Consultation with LGs on successful security mitigation strategies; (3) Third-Party Monitoring (TPM) required by security conditions; (4) World Bank support to state PCUs for data collection in FCV-sensitive areas using GEMS; (5) Insecurity acknowledged as limiting field team access to some locations; (6) Project design incorporates lessons from MCRP on security risk management; (7) Continuous conflict analyses under Component 3; (8) Just-in-time studies as security situation evolves; (9) Flexibility in implementation approach to accommodate security constraints.",
+      "displacement_or_refugees": "Yes - extensive. Project specifically targets IDPs and host communities. Over 3.5 million IDPs in Northern Nigeria, with 1.3 million expected to benefit from project. IDP characteristics: (1) Over 65% in North-East region; 95% in BAY states (Borno, Adamawa, Yobe); (2) Borno has 1.7 million IDPs representing over 25% of state population and nearly 50% of total IDPs in North; (3) Protracted displacement: more than 50% of IDPs in target areas displaced for 4+ years by single event; (4) Sokoto and Taraba show highest poverty levels (>90%) with significant displacement; (5) IDPs concentrated in peri-urban and urban areas, contributing to urban sprawl and service strain; (6) IDP inflows have reshaped state capitals (Maiduguri, Yola, Makurdi) and other towns. Project addresses: (1) IDP integration through vital documents support (birth, marriage, death, educational certificates, local residence IDs, travel documents, business/driving licenses); (2) Land ownership and registration support; (3) Inclusion in long-term development processes (PBC 3); (4) Access to basic services and economic opportunities; (5) Social cohesion and community integration; (6) Data gaps on displacement vulnerabilities (PBC 2 with IDP registration and profiling of 80% of IDPs); (7) Transition from humanitarian assistance to self-reliance and resilience. No refugee component; project focuses exclusively on internally displaced persons."
+    }
+  }
+}

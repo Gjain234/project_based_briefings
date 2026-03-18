@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P164001",
+    "guid": 991581593223433078,
+    "node_id": 32108174,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b087a0da57&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Power Sector Recovery Operation (PSRO)",
+      "project_development_objective": "To improve the reliability of electricity supply, achieve financial and fiscal sustainability, and enhance accountability",
+      "total_financing": "US$750 million (SDR 548.9 million) IDA Credit, with potential additional financing of US$440 million",
+      "implementation_period": "June 23, 2020 - June 30, 2023",
+      "beneficiaries": "Nigerian population (97 million without grid access), businesses, power sector companies (GENCOs, DISCOs, TCN, NBET), Federal Government of Nigeria"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "National coverage across all 11 Distribution Companies (DISCOs) service areas",
+        "Six Generation Companies (GENCOs)",
+        "Transmission Company of Nigeria (TCN)",
+        "All states and local government areas"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "partial - Nigeria faces ongoing security challenges including Boko Haram insurgency in North East, banditry in North West and North Central, and communal conflicts. The power sector operates in these fragile areas. Gas supply constraints partly due to vandalism and security issues in oil/gas producing regions."
+    },
+    "key_components": [
+      {
+        "component_name": "Program for Results (PforR) - Power Sector Recovery",
+        "description": "Supports implementation of critical PSRP actions through 7 Disbursement Linked Indicators (DLIs): 2 Global DLIs on MYTO reviews and Financing Plan execution, and 5 standard DLIs on PIP implementation, business continuity, tariff adjustments, payment discipline, and transparency. Focuses on regulatory, policy, and financial measures without infrastructure investment.",
+        "financing": "US$730 million (initial), with potential US$440 million additional financing"
+      },
+      {
+        "component_name": "Technical Assistance and Capacity Building (IPF)",
+        "description": "Supports capacity building for NERC, NBET, BPE, FMoP, DMO, and PSRP Secretariat. Includes support for MYTO reviews, PIP monitoring, communications strategy, Financing Plan updates, independent verification, and institutional strengthening.",
+        "financing": "US$20 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Federal Ministry of Finance, Budget and National Planning (FMFBNP) as Borrower; PSRP Secretariat within Budget Office of Federation; NERC, NBET, BPE, TCN as key implementing agencies",
+      "coordination_mechanisms": "PSRP Finance and Policy Oversight Committee (chaired by Minister of Finance with Minister of Power as co-chair, reporting to Presidency); PSRP Finance Technical Committee (chaired by DG Budget); PSRP Secretariat for day-to-day coordination",
+      "procurement_approach": "PforR component has no procurements (focuses on tariff shortfall funding). IPF component uses World Bank procurement procedures for consultancies, goods, and services. Competitive procurement for generation capacity follows NERC 2014 Regulations.",
+      "monitoring_and_evaluation": "PSRP Secretariat responsible for M&E; Independent Verification Agent (IVA) hired to verify DLI achievement; quarterly monitoring of Financing Plan execution; semi-annual NERC monitoring reports on DISCO PIP implementation; quarterly publication of operational/financial data by NERC"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "High degree of inter-agency coordination required; overlapping institutional roles and responsibilities; potential government priority shifts; changes in administration could impact PSRP implementation",
+        "risk_rating": "high",
+        "mitigation_measures": "Strong emphasis on governance arrangements with high-level Presidential oversight; clear delineation of MDA roles; robust coordination mechanisms; stakeholder engagement; transparency measures; front-loading of implementation"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Significant uncertainty in macro-fiscal parameters; COVID-19 impacts on economy and oil prices; FX depreciation pressure; revenue shortfalls affecting FGN budget contributions; sensitivity of tariff shortfalls to FX rate and energy volume changes",
+        "risk_rating": "high",
+        "mitigation_measures": "Quarterly advance release of FGN budgetary contributions; conversion of PSRO proceeds at NAFEX for natural hedge; regular updating of Financing Plan; flexibility in tariff adjustments; contingency planning for risk scenarios"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Inconsistent enforcement of existing policies and regulations; tariff revisions are politically sensitive; lack of enforcement of contracts and regulations in past",
+        "risk_rating": "high",
+        "mitigation_measures": "Emphasis on enforcement through MYTO implementation and Financing Plan execution; Global DLIs incentivize consistent policy implementation; NERC strengthening; regulatory oversight mechanisms"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "Capacity gaps at MDAs; complex governance and policy measures requiring coordination; sustainability risk if government changes; need for sustained commitment",
+        "risk_rating": "high",
+        "mitigation_measures": "Substantial TA for capacity building and implementation support; establishment of institutionalized governance structures; engagement of broader stakeholders; World Bank implementation support missions"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Unpredictability of FGN budgetary contribution releases; risk of fund diversion for unintended purposes; delays in external audit completion; systemic FM and corruption concerns",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Prioritization of budget releases; quarterly advance releases; clear payment protocols; monthly monitoring reports; Global DLI 2 incentivizes Financing Plan implementation; NBET audit backlog clearance; enhanced audit scope; ACTU establishment; anti-corruption framework"
+      },
+      {
+        "risk_category": "Stakeholder",
+        "risk_description": "Electricity consumers resisting tariff increases; legislative body may refuse budget approvals; MDA officials with vested interests; public dissatisfaction with poor service quality",
+        "risk_rating": "high",
+        "mitigation_measures": "Stakeholder engagement and governance arrangements; extensive communication campaign; linking tariff adjustments to performance improvements; transparency and accountability mechanisms; mitigation measures for poor households"
+      },
+      {
+        "risk_category": "Operational - Distribution Constraints",
+        "risk_description": "DISCO turnaround is complex; load rejection by DISCOs; gas supply constraints; distribution network inadequacy; DISCOs' weak operational and financial performance",
+        "risk_rating": "high",
+        "mitigation_measures": "DLIs for PIP implementation and enforcement; business continuity arrangements; regulatory oversight by NERC; parallel Distribution Recovery Operation; TA support for DISCO governance and capacity"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Tariff increases may reduce purchasing power of metered households; potential social conflict if reforms fail; gender gaps in awareness and participation; grievance redress mechanisms need strengthening",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Poverty and Social Impact Assessment; mitigation measures for poor (lifeline tariff, bill capping for unmetered); gender-focused communication strategy; strengthened grievance redress mechanisms; women's group engagement; follow-up survey on awareness"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Category B - Limited environmental impacts expected; no large-scale, irreversible, or precedent-setting impacts",
+      "triggered_safeguard_policies": [
+        "Environmental Assessment (OP/BP 4.01) - triggered for ESSA",
+        "Social Safeguards - triggered for social risk management"
+      ],
+      "grievance_redress_mechanism": "Yes - Multiple mechanisms: (1) World Bank's Grievance Redress Service (GRS) for complaints about Bank non-compliance; (2) World Bank Inspection Panel for affected communities; (3) NERC call centers and website for customer complaints; (4) DISCOs' local offices for customer service; (5) ACTU within NBET for corruption complaints; (6) EFCC collaboration for anti-corruption grievances",
+      "gender_considerations": "Gender gaps identified in awareness (13% women vs 16% men aware of PSRP); women spend 80 min/day collecting fuels vs 64 min for men; lower literacy rates among women (41% adult female vs 58% adult male); underrepresentation in energy sector (~19% of utility employees). Program actions: engagement through women's groups, strengthening gender focal point in FMoP, disaggregating data by gender, follow-up survey targeting 40% women awareness by end of program",
+      "vulnerable_groups": [
+        "Bottom 40% of population by income (37% grid access vs 68% for top 60%)",
+        "Unmetered households (53% of residential customers, generally poorer)",
+        "Rural populations (lower access and spending than urban)",
+        "Northern regions (lower access than Southern regions)",
+        "Female-headed households (slightly higher impact from tariff increases)",
+        "Poorest 20% (less than 2% benefit from current tariff subsidies)"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Program addresses conflict risks through: (1) Improved electricity supply reducing economic losses and frustration; (2) Strengthened governance and transparency building public trust; (3) Mitigation measures for poor protecting vulnerable populations; (4) Communication strategy addressing public concerns; (5) Grievance redress mechanisms for conflict resolution. However, tariff increases could trigger social conflict if not well-managed. Gas supply constraints partly due to security issues in oil/gas regions.",
+      "fragility_context": "Nigeria faces multiple fragility factors: (1) Ongoing security challenges - Boko Haram insurgency in North East, banditry in North West/North Central, communal conflicts; (2) High poverty rate (40.1% below poverty line in 2019, expected to increase with COVID-19); (3) High unemployment (11% in 2018, rising from 5% in 2015); (4) Weak institutional capacity and governance; (5) Economic vulnerability to oil price shocks; (6) Low government revenues (8% of GDP); (7) Weak service delivery; (8) Limited trust in government institutions. Power sector dysfunction exacerbates fragility by limiting economic growth and service delivery.",
+      "security_considerations": "Security risks include: (1) Gas supply vandalism and theft in oil/gas producing regions affecting generation; (2) Potential for social unrest if tariff increases not well-managed; (3) Corruption risks in power sector (62% of consumers in one survey asked to pay bribes); (4) Weak enforcement capacity of regulatory agencies; (5) Potential for conflict over electricity access and billing disputes. Mitigation: strengthened governance, transparency, grievance mechanisms, communication, and anti-corruption measures",
+      "displacement_or_refugees": "No direct displacement expected from program activities. However, context: Nigeria hosts significant refugee populations (Boko Haram IDPs in North East, regional refugees). Improved electricity supply could support humanitarian response and refugee services. Program does not involve infrastructure construction that would cause displacement."
+    }
+  }
+}

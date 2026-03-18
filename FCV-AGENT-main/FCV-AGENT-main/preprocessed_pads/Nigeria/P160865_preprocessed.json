@@ -1,0 +1,139 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P160865",
+    "guid": 572291648046788384,
+    "node_id": 33748874,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=IBArchive-03827105-585b-4750-9095-203bbba388b8.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Livestock Productivity and Resilience Support Project (LPRES)",
+      "project_development_objective": "To improve productivity, commercialization, and resilience of targeted livestock production systems in Nigeria.",
+      "total_financing": "US$500.0 million (SDR 359.3 million equivalent)",
+      "implementation_period": "6 years (2022-2028)",
+      "beneficiaries": "1.43 million direct beneficiaries (at least 30% women), including livestock producers, pastoral and sedentary farm households, smallholder producers, and value chain actors"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "All 36 states of Nigeria (technically eligible)",
+        "Priority focus on northern states with pastoral systems",
+        "Key livestock corridors for transhumance",
+        "Areas affected by farmer-herder conflicts"
+      ],
+      "coverage_type": "National with state-level implementation and performance-based staging",
+      "fragile_or_conflict_affected_areas": "Yes - partial. Project explicitly targets areas affected by herder-farmer conflicts, particularly in Northeast and North-Central zones. Component 3 specifically addresses conflict mitigation in conflict-prone areas."
+    },
+    "key_components": [
+      {
+        "component_name": "Institutional and Innovation System Strengthening",
+        "description": "Strengthens livestock policy and regulatory framework, improves animal husbandry and advisory services, and strengthens animal health services. Includes preparation of Livestock Master Plan, development of sub-sector policies, support for private veterinary services, and establishment of One-Health platforms.",
+        "financing": "US$95.0 million"
+      },
+      {
+        "component_name": "Livestock Value Chain Enhancement",
+        "description": "Enhances livestock value chains through market linkages, access to finance, and Livestock Service Centers. Includes producer organization, market infrastructure, credit line, risk-sharing facility, and establishment of 7 LSCs.",
+        "financing": "US$275.0 million"
+      },
+      {
+        "component_name": "Crisis Prevention and Conflict Mitigation",
+        "description": "Addresses drivers of herder-farmer conflict through natural resource management, pasture improvement, and conflict mitigation mechanisms. Includes water point construction, rangeland management, conflict committees, and early warning systems.",
+        "financing": "US$100.0 million"
+      },
+      {
+        "component_name": "Project Coordination and Management",
+        "description": "Establishes National Coordination Office and State Coordination Offices for project management, M&E, and communication.",
+        "financing": "US$30.0 million"
+      },
+      {
+        "component_name": "Contingency Emergency Response Component",
+        "description": "Zero-dollar allocation mechanism to finance response to natural disasters, disease outbreaks, or other eligible emergencies.",
+        "financing": "US$0.0 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Federal Ministry of Agriculture and Rural Development (FMARD) at federal level; State Ministries of Agriculture and Rural Development (SMARD) at state level; Development Bank of Nigeria (DBN) for access to finance component",
+      "coordination_mechanisms": "National Steering Committee (NSC) chaired by Minister of FMARD; National Technical Committee (NTC); State Steering Committees (SSC) and State Technical Committees (STC); National Coordination Office (NCO) and State Coordination Offices (SCOs)",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers; National procurement procedures; Competitive selection for goods, works, and services; Standard Procurement Documents; Prior and post-review by World Bank",
+      "monitoring_and_evaluation": "Comprehensive M&E system with baseline, mid-term, and end-of-project surveys; Annual administrative updates; Quarterly and semi-annual progress reports; Independent Verification Agent for Performance-Based Conditions; Sex-disaggregated indicators; Potential rigorous impact evaluation on women's economic empowerment"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Elite capture of marketing infrastructure, governance challenges in public sector, potential for conflict to spiral out of control in implementing areas",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Strong FM and procurement arrangements; Grievance Redress Mechanism; Transparent state selection criteria; Government commitment and support"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "COVID-19 pandemic impacts, economic slowdown, reduced government fiscal capacity, limited access to foreign exchange for inputs and capital expenditures",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Project design flexibility; Contingency Emergency Response Component; Coordination with government fiscal planning"
+      },
+      {
+        "risk_category": "Technical Design",
+        "risk_description": "Multi-sectoral nature of interventions, coordination challenges across disparate domains, implementation across multiple states with different contexts",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "Intersectoral steering and technical committees; Multi-disciplinary World Bank implementation support team; Capacity building and technical assistance"
+      },
+      {
+        "risk_category": "Institutional Capacity",
+        "risk_description": "Limited human resource capacity in federal and state agencies, sustainability of infrastructure investments dependent on adequate management and government commitment",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Capacity-strengthening activities; Technical assistance through third-party service providers; Recruitment of specialized staff in NCO and SCOs"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Weaknesses in procurement systems, accountability and value-for-money concerns",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Hiring of FM and Procurement Specialists; Capacity building; Enhanced controls; Regular World Bank supervision; Third-party monitoring"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Potential involuntary displacement from land acquisition, infrastructure rehabilitation, and grazing reserve protection; SEA/SH risks from labor influx",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Resettlement Policy Framework; Environmental and Social Management Framework; SEA/SH Action Plan; Grievance Redress Mechanism; Stakeholder Engagement Plan; Labor Management Procedure"
+      },
+      {
+        "risk_category": "Stakeholder",
+        "risk_description": "Diverse stakeholder interests in conflict mitigation, exclusion of deserving states, managing expectations",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Consultative approach to conflict prevention; Transparent state selection criteria; Stakeholder engagement throughout implementation"
+      },
+      {
+        "risk_category": "Security",
+        "risk_description": "Escalating conflict and violence across participating states, potential preclosure of implementation areas",
+        "risk_rating": "High",
+        "mitigation_measures": "Security Management Plan; Government commitment to security; Project design includes conflict mitigation component; Flexibility in implementation"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "B - Partial Assessment",
+      "triggered_safeguard_policies": [
+        "Environmental Assessment (OP/BP 4.01)",
+        "Pest Management (OP/BP 4.09)",
+        "Physical Cultural Resources (OP/BP 4.11)",
+        "Involuntary Resettlement (OP/BP 4.12)"
+      ],
+      "grievance_redress_mechanism": "Yes - Layered GRM at national, state, and local levels with reporting channels that are ethical, confidential, and safe for women and girls to report SEA/SH issues. Procedural manual for grievance redress officers at all levels.",
+      "gender_considerations": "Project targets at least 30% women beneficiaries. Addresses gender gaps in livestock ownership, access to productive resources, and decision-making power. Specific targets: increase women's use of extension services from 8% to 20%, veterinary services from 10% to 30%. Develops financial products using psychometric testing to overcome collateral constraints for women. Plans sex-disaggregated impact evaluation on women's economic empowerment.",
+      "vulnerable_groups": [
+        "Smallholder livestock producers",
+        "Pastoral and agro-pastoral communities",
+        "Women livestock owners",
+        "Poor rural households",
+        "Communities affected by farmer-herder conflicts",
+        "Displaced persons from land acquisition",
+        "Youth in rural areas"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project explicitly addresses farmer-herder conflicts driven by climate change and resource scarcity. Component 3 focuses on conflict prevention and mitigation through: establishment of local conflict committees, community dialogue, early warning systems, infrastructure along transhumance corridors, and transnational agreements on livestock mobility. Project incorporates conflict-sensitive approaches and community ownership in peacebuilding.",
+      "fragility_context": "Nigeria faces significant fragility challenges: (1) Boko Haram insurgency in Northeast; (2) Escalating farmer-herder conflicts across North-Central and southern zones since 2015, killing thousands and costing estimated US$14 billion annually; (3) Banditry and cattle rustling; (4) Climate change-induced resource scarcity driving migration and conflict; (5) Weak governance and institutional capacity; (6) High poverty rates (40%+ of population); (7) Limited access to basic services. Project targets fragile areas and addresses root causes of conflict.",
+      "security_considerations": "Security risk rated as High due to escalating conflict and violence. Project includes Security Management Plan to be prepared within 9 months of effectiveness. Implementation flexibility to respond to security changes. Project activities in conflict-prone areas may be precluded by escalation of violence. Government commitment to security is essential. Project design includes conflict mitigation as core component.",
+      "displacement_or_refugees": "Yes - potential displacement. OP 4.12 triggered because project interventions may result in land acquisition, temporary loss of livelihoods, and limited physical resettlement. Specific areas: (1) Livestock Service Centers requiring 100+ hectares of land; (2) Infrastructure rehabilitation and construction; (3) Protection of grazing reserves and livestock routes. Resettlement Policy Framework prepared to guide RAP development. States responsible for resettlement financing. Safeguards screening required for land gazettement."
+    }
+  }
+}

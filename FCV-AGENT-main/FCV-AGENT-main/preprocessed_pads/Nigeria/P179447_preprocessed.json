@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P179447",
+    "guid": 99060223162027206,
+    "node_id": 34074678,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-e7bb7cb7-6726-472c-b6d4-e7d4dc5834be.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Nigeria for Women Program Scale-Up Project (NFWP-SU)",
+      "project_development_objective": "To institutionalize Women Affinity Groups (WAGs) and other platforms for women's economic empowerment and enhance the economic opportunities of unbanked women",
+      "total_financing": "US$540 million (IDA Credit: US$500 million; Government of Nigeria: US$40 million)",
+      "implementation_period": "7 years (2023-2028)",
+      "beneficiaries": "Approximately 3.9 million women WAG members and their households; core beneficiaries are poor and vulnerable women aged 18+ residing in participating states, particularly unbanked women engaged in informal and small-scale livelihood activities; indirect beneficiaries include other household members and broader communities"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "National coverage across Nigeria's 36 states and Federal Capital Territory",
+        "Original NFWP states: Abia, Akwa Ibom, Kebbi, Niger, Ogun, Taraba",
+        "Scale-up targeting up to 23 states total"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "partial - Nigeria faces significant security challenges, particularly in the northeast (conflict-affected areas) and northern states; project includes security risk assessments and management plans for participating states"
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Building Community Institutions",
+        "description": "Formation and strengthening of Women Affinity Groups (WAGs) and their federations (Village Organizations and Cluster-Level Federations); social norms influencing activities; platforms for behavior change in health, WASH, and climate adaptation",
+        "financing": "US$168 million"
+      },
+      {
+        "component_name": "Component 2: Livelihood Program",
+        "description": "Community Investment Funds (CIFs) as revolving funds for WAGs; support to livelihood collectives; technical assistance and innovations for livelihoods including climate-smart agriculture, farmer field schools, and market linkages",
+        "financing": "US$312 million (IDA: US$292 million; Government: US$20 million)"
+      },
+      {
+        "component_name": "Component 3: Project Management, Monitoring and Evaluation, and Learning",
+        "description": "Project management at federal and state levels; M&E system strengthening; knowledge management; capacity building; GBV service provider mapping; grievance redress mechanism",
+        "financing": "US$50 million (IDA: US$30 million; Government: US$20 million)"
+      },
+      {
+        "component_name": "Unallocated",
+        "description": "Reserve for contingencies and adjustments during implementation",
+        "financing": "US$10 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Federal Ministry of Women Affairs (FMWA) with State Ministries of Women Affairs (SMWAs) in participating states",
+      "coordination_mechanisms": "Federal Steering Committee (FSC) chaired by Ministers of Finance and Women Affairs; Federal Technical Committee (FTC); State-level Multisectoral Coordination Structures (MCS) and State Technical Committees (STCs); Local Government Area (LGA) technical committees; Federal Project Coordination Unit (FPCU) and State Project Coordination Units (SPCUs)",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers (November 2020); use of STEP system; World Bank Standard Procurement Documents; national competitive bidding for eligible contracts; prior review for specified contracts; inherent procurement risk rated Substantial, residual risk Moderate after mitigation",
+      "monitoring_and_evaluation": "Robust digital M&E system with Project Management Information System (PMIS); annual beneficiary surveys; quarterly and semi-annual progress monitoring; intermediate results monitoring; process evaluations and agile impact evaluations; social audits and community scorecards; Iterative Beneficiary Monitoring (IBM) system; impact evaluation integrated with Nigeria Gender Innovation Lab"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Recent change in administration may lead to reduced political commitments or policy stance changes at state level; potential inconsistency in government support for WEE agenda",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Continuous engagement with Nigeria Governors' Forum; engagement with each state government; strong communications and citizen engagement; WEE likely to remain priority given role in inclusive economic growth"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Challenging macroeconomic environment including slow recovery from recession, high inflation pushing millions into poverty, petrol subsidies exacerbating fiscal situation, wide gap between official and parallel exchange rates, declining external reserves, sovereign rating downgrade, reduced capital inflows",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Project designed to support economic recovery and resilience; focus on livelihood diversification; support for climate-resilient activities; alignment with government's poverty reduction strategy"
+      },
+      {
+        "risk_category": "Technical Design",
+        "risk_description": "Innovations in design not yet fully tested (CIF revolving fund model, federation structures, health/WASH/climate integration); multisectoral nature with activities outside FMWA expertise; coordination challenges across multiple states; changes from original project design",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Creation of Multisectoral Coordination Structures at state level; partnerships with technical service providers; electronic disbursement of CIF grants; requirement for National Identity Numbers (NIN) for WAG members; coordination with other World Bank projects; technical assistance from specialized agencies"
+      },
+      {
+        "risk_category": "Institutional Capacity",
+        "risk_description": "Need to strengthen technical skills in new Project Coordination Units; capacity challenges at FPCU to support multiple SPCUs; delays in state-level approvals",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Technical assistance to FPCU for project management; capacity building for FPCU and SPCU staff; use of Multisectoral Coordination Structures for timely approvals; recruitment of qualified consultants where needed"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Increased number of implementing units and designated accounts; manual accounting systems in new states; risks associated with cash transfers to beneficiaries; inadequate technical capacity in state PFMUs; weak procurement capacity in some states",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Introduction of computerized accounting systems in all implementing agencies; training of FM staff in World Bank procedures; FM supervision integrated with M&E; physical verification of interventions; transaction reviews; periodic audits of beneficiary payments; training of project auditors; continued training and capacity building"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Potential for small-scale civil works to generate environmental impacts (noise, dust, waste); occupational health and safety risks; land acquisition for small infrastructure; elite capture risks; exclusion of economically inactive women; inadequate stakeholder consultations; nonfunctional grievance mechanisms; GBV risks including intimate partner violence, sexual violence, harassment; SEA/SH risks; contextual security risks; COVID-19 risks",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Environmental and Social Management Framework (ESMF); Labor Management Procedure; Resettlement Policy Framework; Stakeholder Engagement Plan; Gender-Based Violence Prevention and Response Plan; Grievance Redress Mechanism; social accountability mechanisms; GBV service provider mapping; training for implementers on GBV prevention; codes of conduct for contractors; Security Risk Assessments and Management Plans; WHO COVID-19 protocols"
+      },
+      {
+        "risk_category": "Gender-Based Violence",
+        "risk_description": "Project activities aimed at women's empowerment may exacerbate GBV risks including intimate partner violence due to changes in household power dynamics, increased vulnerability to sexual violence due to women's increased presence in public spaces, harassment in marketplaces and workplaces, harmful widowhood practices",
+        "risk_rating": "moderate",
+        "mitigation_measures": "GBV service provider mapping in all states; behavior change communication addressing negative social norms; safe spaces for meetings and trainings; training for implementers on GBV prevention and survivor-centered response; contractor codes of conduct; GBV monitoring protocols in GRM and social accountability framework; partnerships with sexual assault referral centers; state-level GBV legislation requirements for participation"
+      },
+      {
+        "risk_category": "Security",
+        "risk_description": "Contextual security risks in Nigeria, particularly in northern states; potential impact on project implementation and staff safety; security challenges may reduce participation of foreign firms in procurement",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Security Risk Assessments in participating states; Security Management Framework development; site-specific SRAs for identified LGAs; LGA Security Management Plans proportionate to risk; security specialist at federal level; regular assessment and evaluation of security situations; corrective actions as required"
+      },
+      {
+        "risk_category": "Sector Strategy and Policy",
+        "risk_description": "Potential for policy changes affecting WEE agenda; inconsistent state-level implementation of relevant laws and policies",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Federal government's favorable strategic thrust for WEE; ongoing policy dialogue; participating states have implemented relevant laws and policies; states have already allocated financing demonstrating commitment"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate",
+      "triggered_safeguard_policies": [
+        "ESS1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS2: Labor and Working Conditions",
+        "ESS3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS4: Community Health and Safety",
+        "ESS5: Land Acquisition, Restrictions on Land Use and Involuntary Resettlement",
+        "ESS10: Stakeholder Engagement and Information Disclosure"
+      ],
+      "grievance_redress_mechanism": "Yes - Project-level GRM with multiple channels (in-person, toll-free hotline, written); designed to intake GBV and SEA/SH complaints with proper referral pathways; GBV service provider mapping and referral pathways in all states; protocols for confidential reporting and survivor-centered response; escalation procedures for serious cases; coordination with development partners and GBV subsector working group",
+      "gender_considerations": "Project explicitly targets women's economic empowerment; addresses gender gaps in earnings, labor force participation, and access to finance; integrates gender considerations throughout all components; includes specific measures to address gender-based violence and harmful social norms; promotes women's decision-making power and agency; supports women's participation in climate adaptation and mitigation; recognizes differential impacts of climate change on women",
+      "vulnerable_groups": [
+        "Poor and vulnerable women",
+        "Unbanked women",
+        "Women in reproductive years (20-44)",
+        "Female-headed households",
+        "Displaced women",
+        "Women with disabilities",
+        "Marginalized and ethnic minority women",
+        "Widows",
+        "Women in internally displaced persons camps",
+        "Women in conflict-affected areas",
+        "Rural women",
+        "Women engaged in informal sector activities"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project is aligned with World Bank Group's Fragility, Conflict, and Violence (FCV) strategy (2020-25); addresses gender gaps in education, economic opportunities, and labor market access; increases access to finance for women-owned businesses; provides employment opportunities for at-risk female youth; prevents and responds to GBV; enhances women's participation in governance; addresses impacts of climate shocks that may lead to conflict and violence; includes security risk assessments and management plans; contextual security risks acknowledged particularly in northern states; project design includes measures to avoid backlash and potential increase in violence against women",
+      "fragility_context": "Nigeria faces significant fragility challenges including: ongoing conflict in northeast (Boko Haram); farmer-herder conflicts over resources during droughts; high poverty rates (40% of population); limited access to basic services; weak institutional capacity in some states; climate-related shocks (droughts, floods) contributing to resource scarcity and conflict; gender-based violence prevalence; limited economic opportunities particularly for women and youth; climate change exacerbating vulnerabilities and conflict risks",
+      "security_considerations": "Project acknowledges contextual security risks in Nigeria; security risk assessments to be conducted in participating states within 6 months of effectiveness; site-specific SRAs for identified LGAs; LGA Security Management Plans to be developed proportionate to risk; security specialist engaged at federal level to identify risks and propose solutions; security situations to be assessed regularly with corrective actions as needed; security challenges may affect implementation timelines and staff safety; potential impact on procurement participation",
+      "displacement_or_refugees": "Yes - Project explicitly includes displaced women and those in internally displaced persons camps as vulnerable groups to be included; project design includes measures to ensure persons with disabilities, marginalized groups, persons in IDP camps, and ethnic minorities are not excluded; climate-related displacement risks acknowledged as potential outcome of climate shocks; project aims to build resilience to reduce displacement risks through livelihood diversification and climate adaptation"
+    }
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P172891",
+    "guid": 886051612753240219,
+    "node_id": 32753056,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b0881c34cc&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Nigeria Distribution Sector Recovery Program (DISREP)",
+      "project_development_objective": "To improve financial and technical performance of the electricity distribution companies",
+      "total_financing": "US$500 million (IBRD)",
+      "implementation_period": "2020-2025 (5 years)",
+      "beneficiaries": "Nigerian power sector customers (residential, commercial, industrial), DISCOs, NERC, BPE, TCN, broader Nigerian economy"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Abuja",
+        "Benin",
+        "Eko",
+        "Enugu",
+        "Ibadan",
+        "Ikeja",
+        "Jos",
+        "Kaduna",
+        "Kano",
+        "Port Harcourt",
+        "Yola"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "partial - Northeast Nigeria (particularly Yola DISCO area) experiences fragility, conflict and insecurity; however, the program covers all 11 DISCOs across the entire country"
+    },
+    "key_components": [
+      {
+        "component_name": "PforR Component - On-lending to DISCOs",
+        "description": "Provides funds to BPE for on-lending to DISCOs as shareholder loans for implementation of Performance Improvement Plans (PIPs) including infrastructure rehabilitation, new connections, commercial operations improvements, and governance strengthening",
+        "financing": "US$345 million"
+      },
+      {
+        "component_name": "IPF Component 1 - Bulk Procurement of Meters",
+        "description": "Bulk procurement of customer/retail meters and meter data management systems (MDMS) for DISCOs to address metering gap of approximately 10 million meters",
+        "financing": "US$120 million"
+      },
+      {
+        "component_name": "IPF Component 2 - Data Aggregation Platform",
+        "description": "Procurement and implementation of comprehensive Data Aggregation Platform (DAP) for NERC to improve regulatory oversight and sector monitoring",
+        "financing": "US$20 million"
+      },
+      {
+        "component_name": "TA Component 1 - Implementation Support",
+        "description": "Establishment of Project Management Unit (PMU) in BPE, capacity building for BPE and DISCOs, appointment of Independent Verification Agent (IVA)",
+        "financing": "US$10 million"
+      },
+      {
+        "component_name": "TA Component 2 - Capacity Building and Design",
+        "description": "DISCO capacity building through NAPTIN, support to Power Sector Working Group, design of Consumer Assistance Fund, gender strategy development",
+        "financing": "US$5 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Bureau of Public Enterprises (BPE) for PforR component; Transmission Company of Nigeria (TCN) for IPF and TA components",
+      "coordination_mechanisms": "PSRP Finance and Policy Oversight Committee (chaired by Federal Minister of Finance with Federal Minister of Power as co-Chair); DISREP Technical Committee (chaired by Ministry of Power); alignment with parallel PSRO operation",
+      "procurement_approach": "PforR uses DISCOs' own procurement policies and processes (with strengthening); IPF uses World Bank procurement regulations; bulk meter procurement through international competitive bidding",
+      "monitoring_and_evaluation": "BPE responsible for M&E with support from Independent Verification Agent (IVA); NERC provides regulatory oversight of PIP implementation; World Bank appointed Verification Oversight Consultant (VOC); semi-annual verification of DLIs; results framework with PDO indicators and intermediate results indicators"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Government commitment to PSRP is strong but implementation depends on coordinated efforts of multiple MDAs with overlapping roles and responsibilities; potential conflicts among MDAs",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Program scoped to focus on PIP interventions within DISCOs' mandate with limited MDA involvement; significant engagement with BPE to ensure buy-in; continued engagement during implementation; complementary PSRO addresses MDA-dependent aspects"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Challenging macroeconomic environment with recession, low oil revenues, high inflation, currency depreciation; cost of power generation sensitive to commodity prices, FX, and inflation; COVID-19 pandemic impacts; potential impact on customer willingness and ability to pay",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Use of output DLIs completely within DISCO control and externally verifiable; focus on actions within DISCO control; improved governance and transparency through metering and MIS to support evidence-based decision-making"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Power sector strategies and policies must remain current; reviewing and revising policies quickly has proven challenging in Nigeria; risk that strategies may not remain fit for purpose during program duration",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Program supports improvements in governance and transparency through metering, MDMS, MIS implementation, and DAP; improved data will support evidence-based policy making; NERC's regulatory oversight role"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "Success depends on implementation of technical and commercial sub-projects by DISCOs; DISCOs have limited experience in power sector; risk of license revocation by NERC for non-performing DISCOs; low corporate governance compliance (average 52%); BPE and NERC monitoring capacity needs strengthening",
+        "risk_rating": "high",
+        "mitigation_measures": "PforR instrument requires DLIs to be met before disbursement; DLI focused on corporate governance compliance incentivizes improvement; capacity building for DISCOs through NAPTIN and development partners (USAID, AFD); PMU establishment in BPE; NERC's DAP will enable better monitoring; leverage development partner TA programs"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Weak FM and procurement in DISCOs; fraud and corruption risks; DISCOs' poor financial position and inability to access commercial financing; weak corporate governance; some DISCOs not up to date with audited financial statements; risk of license revocation creating uncertainty about Program funds; risk of diversion of funds",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Eligibility criteria requiring in-depth internal control review and framework to address risks; DISCOs must have Board-approved procurement framework supporting core principles; governance and anti-corruption framework must incorporate Program; DLI on corporate governance; shareholder loans made to DISCOs (not shareholders) so debt remains on books regardless of ownership changes; bi-annual reporting on use of funds; annual audited Program financial statements; World Bank Anti-Corruption Guidelines apply; protocol for reporting fraud and corruption; EFCC involvement in GRM implementation"
+      },
+      {
+        "risk_category": "Stakeholders",
+        "risk_description": "Resentment from stakeholder groups including non-paying customers, MDAs with payment arrears, and illegally connected users; electricity viewed as public service rather than commercial service; DISCOs may disconnect non-paying customers; potential for conflict and resistance",
+        "risk_rating": "substantial",
+        "mitigation_measures": "TA for scoping and design of Consumer Assistance Fund to protect vulnerable customers; DISCOs expected to engage with customers and stakeholders to raise understanding of power sector economics; improved DISCO performance expected to increase customer willingness to pay; World Bank working with BPE and FGN to improve MDA payment performance; community-based awareness campaigns; local-level conflict resolution committees"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Moderate E&S risks from rehabilitation of distribution infrastructure including potential for PCB-contaminated oil, OHS issues, waste management, labor issues, risk of exclusion of vulnerable groups, potential for GBV/SEA/SH due to labor influx and changing community dynamics",
+        "risk_rating": "moderate",
+        "mitigation_measures": "ESSA prepared assessing E&S systems; E&S benchmark protocol to be developed by BPE and NERC; DISCOs to develop/update/harmonize E&S instruments; annual E&S monitoring by BPE; on-site training for workers on OHS; local-level conflict resolution committees; community awareness campaigns; E&S Risk Management Specialists to be engaged; site-specific E&S safeguards instruments; GBV response committees; excluded activities list prevents large-scale construction and land acquisition"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate (PforR); Low (IPF)",
+      "triggered_safeguard_policies": [
+        "Assessment and Management of Environmental and Social Risks and Impacts",
+        "Stakeholder Engagement and Information Disclosure",
+        "Labor and Working Conditions",
+        "Resource Efficiency and Pollution Prevention and Management",
+        "Community Health and Safety"
+      ],
+      "grievance_redress_mechanism": "Yes - Multiple mechanisms: DISCOs have Whistle Blower Policies, Customer Complaints programs, Fraud Management Policies; NERC-regulated electronic platform for tracking complaints; dedicated email addresses and phone numbers in some DISCOs; World Bank Grievance Redress Service (GRS) available; local-level conflict resolution committees to be established; EFCC to implement GRMs across key agencies",
+      "gender_considerations": "Gender gaps identified in electricity access, particularly for female-headed households in urban areas and poorest wealth quintiles; TA Sub-component 2.1 will support DISCOs in identifying and quantifying gender gaps within customer bases; NERC to develop gender guidance for DISCOs; Consumer Assistance Fund to include targeted support for vulnerable women, girls, and female-headed households; NAPTIN training to support gender strategy development; DISCOs to track new metered connections to customers in lower tariff bands (A and B) where poorest customers are concentrated",
+      "vulnerable_groups": [
+        "Female-headed households",
+        "Poorest 40% of population",
+        "Unmetered customers (subject to overbilling)",
+        "Non-paying customers at risk of disconnection",
+        "Informal sector workers",
+        "People in conflict-prone areas",
+        "Persons with disabilities",
+        "Marginalized and excluded individuals/groups"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Program acknowledges fragility, conflict and insecurity in northeast Nigeria (particularly affecting Yola DISCO). Conflict sensitivity measures include: local-level conflict resolution committees to address program-related conflicts; community-based awareness campaigns to build understanding and support; engagement with traditional rulers and LGA leadership; GBV response committees; E&S Risk Management Specialists to monitor social risks; Stakeholder Engagement Plan prepared; program design focuses on service delivery improvements which can reduce grievances and build state legitimacy",
+      "fragility_context": "Nigeria faces significant fragility challenges: 40% of population (80+ million) living in poverty; economic growth below population growth since 2016; first recession in 25 years (2015-2016); COVID-19 pandemic causing deepest recession in four decades; fragility, conflict and insecurity afflict many parts of country, particularly northeast; corruption and weak capacity plague public sector; low human development indicators. Power sector crisis exacerbates fragility by limiting economic growth, job creation, and service delivery. Program contributes to addressing fragility by improving electricity access and reliability, reducing fiscal burden of subsidies, strengthening institutions and governance",
+      "security_considerations": "Yola DISCO operates in conflict-affected northeast region; program activities in this area require security awareness; rehabilitation works and meter installation may require security coordination; labor influx during construction could create security concerns; program includes measures to manage community tensions and conflicts; local conflict resolution committees and community engagement mechanisms help mitigate security risks",
+      "displacement_or_refugees": "No - Program does not involve land acquisition or involuntary resettlement. Rehabilitation activities are limited to existing infrastructure and existing rights of way. Any temporary working space required during rehabilitation is expected to be reverted to users upon completion. Program explicitly excludes activities requiring right of ways or significant land acquisition"
+    }
+  }
+}

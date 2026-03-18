@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P170664",
+    "guid": 613581596247523870,
+    "node_id": 32255254,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b087bc19f3&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Adolescent Girls Initiative for Learning and Empowerment (AGILE) Project",
+      "project_development_objective": "To improve secondary education opportunities among girls in targeted areas in participating states",
+      "total_financing": "US$500 million (SDR 364.5 million equivalent)",
+      "implementation_period": "5 years (2020-2025)",
+      "beneficiaries": "6.02 million girls and boys in secondary schools; 15.5 million family and community members; 13,400+ teachers and administrative staff"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Borno",
+        "Ekiti",
+        "Kaduna",
+        "Kano",
+        "Katsina",
+        "Kebbi",
+        "Plateau"
+      ],
+      "coverage_type": "Multi-state (7 participating states covering 182 Local Government Authorities)",
+      "fragile_or_conflict_affected_areas": "Yes - Borno state is conflict-affected by Boko Haram insurgency; North East, Middle Belt, and Niger Delta regions experience widespread conflict; project includes specific adaptations for fragile and conflict-affected contexts"
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Creating Safe and Accessible Learning Spaces",
+        "description": "Construction of 440 new JSSs and 220 new SSSs; rehabilitation of existing infrastructure in 2,786 JSSs and 1,914 SSSs; provision of teaching and learning materials; WASH facilities; climate-smart infrastructure",
+        "financing": "US$315 million"
+      },
+      {
+        "component_name": "Component 2: Fostering an Enabling Environment for Girls",
+        "description": "Social and behavioral change campaigns; life skills training through safe spaces; digital literacy and remote learning platform; girls' scholarship program (financial incentives to poorest households)",
+        "financing": "US$140 million"
+      },
+      {
+        "component_name": "Component 3: Project Management and System Strengthening",
+        "description": "System strengthening for secondary EMIS; technical assistance; capacity building; project management; monitoring and evaluation; support for policy development",
+        "financing": "US$35 million"
+      },
+      {
+        "component_name": "Unallocated",
+        "description": "Funds to be allocated during mid-term review based on state performance",
+        "financing": "US$10 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Federal Ministry of Education (FME) at federal level; State Ministries of Education (SMEs) at state level; with support from National Project Coordination Unit (NPCU) and State Project Implementation Units (SPIUs)",
+      "coordination_mechanisms": "National Project Steering Committee (NPSC) chaired by Minister of Education; State Project Steering Committees (SPSCs) chaired by State Commissioners of Education; multi-sectoral coordination with Ministries of Women Affairs, Youth, Health, and Humanitarian Affairs",
+      "procurement_approach": "Community-driven development (CDD) for JSS construction; SME-led approach for SSS construction; Request for Bids/Quotations; approximately 90% of procurements at state level; World Bank Procurement Regulations for IPF Borrowers",
+      "monitoring_and_evaluation": "Multi-layered M&E system grounded in country systems; third-party monitoring including ICT and geo-enabling technology; semi-annual implementation support missions; annual joint reviews; mid-term and end-term reviews; Results Framework with PDO and intermediate indicators"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Nigeria's economy heavily dependent on oil revenues; COVID-19 pandemic causing economic contraction (projected -3% in 2020); significant fiscal deficit; reduced FAAC allocations to states; states' inability to recruit and pay teachers",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Securing governors' ascent on teacher recruitment as disbursement condition; project design emphasizes sustainability; government commitment to include teacher salaries in state budgets; flexible implementation approach"
+      },
+      {
+        "risk_category": "Institutional Capacity",
+        "risk_description": "Limited capacity of implementing institutions; coordination difficulties between entities; capacity limitations in financial management and procurement at community and school levels; weak enforcement of environmental and social requirements",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Simplified project design; extensive capacity-building support; technical assistance at federal and state levels; emphasis on skills transfer; training on World Bank procedures; hiring of experienced consultants; community training on construction management and E&S compliance"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Lack of experienced procurement staff; inadequate contract management skills; limited FM capacity at community and school levels; SBMCs and CPMCs have low capacity in FM; potential for misuse of funds; unretired advances",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "FM training before project effectiveness; deployment of computerized accounting systems; regular FM reviews; internal and external audits; enhanced accountability framework for training and workshops; social accountability mechanisms; involvement of SBMCs in school governance; third-party monitoring"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "School-based violence including GBV/SEA; labor influx during construction increasing SEA risks; potential displacement from land acquisition; exclusion of persons with disabilities; intercommunity conflicts over social norms promotion; elite capture in SIG management; community disputes over beneficiary targeting; limited supervision capacity in conflict-affected areas",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Whole school approach to violence prevention; development of Codes of Conduct with enforcement mechanisms; GBV/SEA assessment and costed action plan; mapping of GBV service providers; establishment of referral pathways; grievance redress mechanisms with GBV protocols; Security Risk Assessment for Borno; third-party monitoring in hard-to-reach areas; inclusive design following CPTED principles; extensive stakeholder engagement; community-led targeting processes"
+      },
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Political interference in procurement; potential for corruption; weak enforcement of laws; government commitment may wane",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "Continuous engagement with political class; involvement of anti-corruption agencies; strong federal and state government commitment demonstrated through legislation and policy; community monitoring mechanisms; transparency in procurement and beneficiary selection"
+      },
+      {
+        "risk_category": "Security",
+        "risk_description": "Boko Haram insurgency in North East; farmer-herder conflicts; ongoing violence in Middle Belt and Niger Delta; limited capacity for supervision in conflict-affected areas; risks to beneficiaries and project staff",
+        "risk_rating": "Substantial (for Borno and conflict-affected areas)",
+        "mitigation_measures": "Security Risk Assessment to be conducted within 6 months of effectiveness; Security Management Plan as part of site-specific ESMPs; third-party monitoring in hard-to-supervise areas; use of security personnel following ESS4 requirements; adaptation of implementation measures for conflict-affected settings; linkages with Multi-Sectoral Crisis Recovery Project for North Eastern Nigeria"
+      },
+      {
+        "risk_category": "COVID-19 Related",
+        "risk_description": "School closures disrupting education; girls forced out of school may not return; learning gaps; economic hardship increasing vulnerability; gender divide exacerbation; weakened education systems from budget cuts",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Remote learning platform with offline and online access; TV and radio broadcasting of lessons; digital literacy training; psychosocial support for girls; flexible implementation allowing for school readiness support; support for school re-opening strategies; TA on COVID-19 response policies"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Substantial",
+      "triggered_safeguard_policies": [
+        "ESS1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS2: Stakeholder Engagement and Information Disclosure",
+        "ESS3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS4: Community Health and Safety",
+        "ESS5: Land Acquisition, Restrictions on Land Use and Involuntary Resettlement",
+        "ESS6: Biodiversity Conservation and Sustainable Management of Living Natural Resources",
+        "ESS8: Cultural Heritage"
+      ],
+      "grievance_redress_mechanism": "Yes - Multi-level project GRM at community, SPIU, and NPCU levels; labor-specific GRM for project workers; GBV-specific protocols ensuring confidentiality and survivor-centered approach; referral pathways to GBV service providers; accessible complaint mechanisms including complaint boxes; escalation procedures; court redress as final resort",
+      "gender_considerations": "Project specifically targets adolescent girls ages 10-20; addresses gender-based violence and sexual exploitation; promotes girls' education and empowerment; includes life skills training on gender awareness; supports female teacher recruitment (minimum 50% of new teachers); female counselors lead safe space sessions; scholarships target girls; whole school approach includes boys' engagement on gender issues and toxic masculinity",
+      "vulnerable_groups": [
+        "Out-of-school girls",
+        "Girls from poorest households",
+        "Girls in northern Nigeria (high early marriage and fertility rates)",
+        "Girls with disabilities",
+        "Internally displaced persons (IDPs)",
+        "Girls in conflict-affected areas",
+        "Rural girls",
+        "Girls from marginalized communities"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project design explicitly accounts for fragility and conflict context; adapted implementation measures for conflict-affected states (particularly Borno); Security Risk Assessment required; Security Management Plan as part of ESMPs; third-party monitoring in hard-to-reach areas; linkages with Multi-Sectoral Crisis Recovery Project for North Eastern Nigeria; conflict-sensitive communications campaigns; psychosocial support training for teachers; focus on building resilience and social cohesion through education",
+      "fragility_context": "Nigeria faces security challenges exacerbating fragility in marginalized areas, particularly northern regions; Boko Haram insurgency in North East has deleterious effects on economic and social wellbeing; widespread conflict in North East, Middle Belt, and Niger Delta; complex interrelated historical, economic, political, socio-cultural and environmental factors driving conflict; project targets states with low human development outcomes, high poverty, and conflict-related challenges; North-South divide in development outcomes",
+      "security_considerations": "Boko Haram targeting of schools creating reluctance to send girls to school; long distances to schools placing girls at risk of sexual exploitation and abuse; corporal punishment and physical disciplinary action commonplace; limited understanding of GBV among communities; risks of violence in and around schools; labor influx during construction increasing SEA risks; security personnel to be used following ESS4 requirements; safe pathways to schools following CPTED principles; perimeter fencing and well-lit facilities; community mapping of safe/unsafe zones",
+      "displacement_or_refugees": "Yes - Internally displaced persons (IDPs) identified as vulnerable group; project aims to support inclusion of IDPs; Borno state affected by Boko Haram displacement; project includes support for psychosocial needs of girls in conflict-affected areas; linkages with humanitarian response programs; study planned to assess barriers for girls with disabilities and other vulnerable groups including IDPs"
+    }
+  }
+}

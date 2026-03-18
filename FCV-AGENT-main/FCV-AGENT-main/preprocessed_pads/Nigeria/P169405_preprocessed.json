@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P169405",
+    "guid": 257211582340515134,
+    "node_id": 31744057,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b0875749b4&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Sustainable Procurement, Environmental and Social Standards Enhancement Project (SPESSE)",
+      "project_development_objective": "To develop sustainable capacity in managing procurement, environment and social standards in the public and private sectors",
+      "total_financing": "US$80 million equivalent (SDR 58 million)",
+      "implementation_period": "2020-2024 (approximately 5 years, closing date October 31, 2024)",
+      "beneficiaries": "Public and private sector practitioners, students, job-seekers, youth, females, disadvantaged people, employers, central agencies (BPP, EAD, FMWA), six Federal Universities hosting Centers of Excellence, Nigerian society as a whole"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Ahmadu Bello University, Zaria",
+        "Abubakar Tafawa Balewa University, Bauchi",
+        "University of Benin, Benin City",
+        "University of Agriculture, Makurdi",
+        "Federal University of Technology, Owerri",
+        "University of Lagos, Lagos"
+      ],
+      "coverage_type": "National with focus on six Federal Universities across different geopolitical zones",
+      "fragile_or_conflict_affected_areas": "Partial - Project is being prepared during a period of social conflict in the North East and Niger Delta regions; project addresses governance and accountability concerns in these contexts"
+    },
+    "key_components": [
+      {
+        "component_name": "Component I: Technical Assistance and Support to Implementing Agencies",
+        "description": "Provides technical assistance to central agencies (BPP, EAD, FMWA, NUC, FMoFB&NP) to build capacity for strategic planning, monitoring PES practice, certification schemes, and online platforms. Includes support for Campaign for Change and project coordination.",
+        "financing": "US$15.45 million"
+      },
+      {
+        "component_name": "Component II: Establishment and Operating of the Centers of Excellence (SPESSECE)",
+        "description": "Establishes and operates six Centers of Excellence in Federal Universities to deliver training across five tracks (short courses, advanced certificates, postgraduate diplomas, master's degrees, bachelor's degrees) in procurement, environmental and social standards. Includes digital infrastructure, connectivity, and DLI-based operational support.",
+        "financing": "US$64.55 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Federal Ministry of Finance, Budget and National Planning (FMoFB&NP) - overall coordination; National Universities Commission (NUC) - manages Centers of Excellence; Bureau of Public Procurement (BPP), Federal Ministry of Environment (FMEnv), Federal Ministry of Women Affairs (FMWA) - manage respective technical assistance components",
+      "coordination_mechanisms": "FMoFB&NP coordinates through bi-annual or ad hoc meetings with implementing agencies; NUC manages Independent National Facilitation Unit (INFU) for day-to-day management of Centers of Excellence; Technical Working Group on Social Development coordinated by FMWA; Project Implementation Units established in each implementing agency",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers (July 2016, revised November 2017 and August 2018); National Competitive Bidding for most goods/services; International Competitive Bidding for ICT and specialized services; use of World Bank Standard Bidding Documents; Systematic Tracking and Exchanges in Procurement (STEP) system; Project Procurement Strategy for Development prepared and agreed",
+      "monitoring_and_evaluation": "Results-based framework with 18 Disbursement-Linked Indicators (DLIs) covering 65% of project financing; Independent Verification Agents (IVAs) verify achievement of DLRs; M&E based on digital tools and data analytics; online M&E database platform; graduate tracer studies; independent third-party verification; mid-term review planned for end of year 2; annual M&E reports; satisfaction surveys at project mid-term"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Challenges in policy making and implementation, weak interagency coordination, policy inconsistency, potential for political interference in procurement and implementation",
+        "risk_rating": "High",
+        "mitigation_measures": "Institutionalizing and incentivizing Centers of Excellence; competitive selection of implementing agencies; front-loading critical activities to show early results; retroactive financing of preparation expenses; strong implementation arrangements with clear roles and responsibilities"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Slow economic recovery expected, real GDP growth just over 2.6% in medium term, oil-dependent economy vulnerable to shocks, fiscal constraints may affect government commitment to sustaining programs",
+        "risk_rating": "High",
+        "mitigation_measures": "Project design includes self-sustaining certification programs and Centers of Excellence; improved expenditure efficiency through better procurement and E&S standards; diversified revenue sources for Centers including student fees, TETFUND, research grants, corporate partnerships"
+      },
+      {
+        "risk_category": "Technical Design of Project",
+        "risk_description": "Ambitious design with multiple implementing entities and beneficiaries, reliance on partnerships and online delivery, expectation that Centers reach international standards, complexity of DLI-based financing",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Extensive stakeholder involvement in project design; competitive selection process with Independent Evaluation Committee; focus on implementing agencies' readiness; careful calibration of TA activities; enhanced World Bank implementation support; incentive-based DLI payments to trigger delivery"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "Lack of capacity in most implementing agencies, limited experience with complex project management, sustainability concerns for Centers beyond project completion",
+        "risk_rating": "High",
+        "mitigation_measures": "Strong implementation arrangements with clear communication and monitoring; close World Bank monitoring and guidance; incentives for achievement of results; capacity building for faculty and staff; academic partnerships for train-the-trainer; diversified funding mechanisms; commitment from government to sustain programs"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Instances of waste and abuse in similar operations, weak procurement implementation, poor records management, governance issues, payment delays, high turnover of procurement officers",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Results-based financing (65% of project); strengthened implementation oversight by INFU; specific fiduciary safeguards beyond usual World Bank requirements; asset disclosure by project officials; beneficial ownership disclosure by bidders; enhanced accountability framework; internal audit units; external audit by Auditor General; FM supervision at least twice yearly; contract management plans; records management systems; training of FM and procurement staff"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Minor construction-related environmental risks (waste, wastewater, sewage, noise, dust, safety); labor risks (health and safety, fair wages, working conditions); Gender-Based Violence (GBV) and Sexual Exploitation and Abuse (SEA) risks; exclusion of women and persons with disabilities; potential civil works involving rehabilitation",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "Environmental and Social Management Framework (ESMF) with Labor Management Procedures; Environmental and Social Commitment Plan (ESCP); Stakeholder Engagement Plan (SEP); site-specific ESMPs before project activities; institutional codes of conduct prohibiting sexual harassment; GBV Action Plan; grievance redress mechanisms with GBV-specific protocols; counselors/focal points for students; accessibility provisions for persons with disabilities; gender-informed curriculum design; minimum 25% female participation targets"
+      },
+      {
+        "risk_category": "Procurement",
+        "risk_description": "Weak procurement capacity, high turnover of procurement officers, low capacity of assigned officers, payment delays, governance issues, poor records management, political interference",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Procurement capacity assessments conducted; capacity building programs by BPP and World Bank; handholding support during implementation; contract management plans; sensitization of stakeholders on Financing Agreement provisions; good records management systems; STEP system for tracking; publication of contract awards; debriefing for unsuccessful bidders; fraud and corruption guidelines applied"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate",
+      "triggered_safeguard_policies": [
+        "ESS1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS2: Labor and Working Conditions",
+        "ESS3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS4: Community Health and Safety",
+        "ESS5: Land Acquisition, Restrictions on Land Use and Involuntary Resettlement (Not Currently Relevant)",
+        "ESS6: Biodiversity Conservation and Sustainable Management of Living Natural Resources (Not Currently Relevant)",
+        "ESS7: Indigenous Peoples/Sub-Saharan African Historically Underserved Traditional Local Communities (Not Currently Relevant)",
+        "ESS8: Cultural Heritage (Not Currently Relevant)",
+        "ESS9: Financial Intermediaries (Not Currently Relevant)"
+      ],
+      "grievance_redress_mechanism": "Yes - Project-level grievance redress mechanism (GRM) designed in consultation with stakeholders; accessible processes for submitting complaints; clear procedures from investigation to resolution with appeal provisions; GBV-specific protocols allowing confidential reporting; connection to women organizations and support services; satisfaction surveys at mid-term; feedback loop with stakeholders; World Bank Grievance Redress Service (GRS) and Inspection Panel available for project-affected communities",
+      "gender_considerations": "Minimum 25% female participation targets in short courses; gender-informed curriculum design; equal opportunities for women as students and employees; addressing traditional gender bias; digital learning to overcome social and cultural norms preventing women's attendance; gender disaggregation of beneficiary data; GBV and SEA risk mitigation; sexual harassment codes of conduct; designated counselors for students experiencing harassment",
+      "vulnerable_groups": [
+        "School leavers",
+        "Unemployed individuals",
+        "Residents of remote areas",
+        "Persons with disabilities",
+        "Women and girls",
+        "Disadvantaged people",
+        "Communities in conflict-affected areas (North East and Niger Delta)"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project acknowledges being prepared during period of social conflict in North East and Niger Delta regions; addresses governance and accountability concerns that contribute to conflict; improves transparency and efficiency in public procurement and resource management to reduce corruption and mismanagement; strengthens institutional capacity for E&S standards compliance; promotes good governance and service delivery; includes stakeholder engagement and grievance mechanisms; supports inclusive development through capacity building for diverse groups",
+      "fragility_context": "Nigeria faces governance challenges including weak interagency coordination, policy inconsistency, and low institutional capacity; high corruption levels affecting public resource management; weak procurement systems and E&S standards compliance; inadequate capacity in public and private sectors; social conflict in North East and Niger Delta regions; rising demands for good governance and accountability; macroeconomic vulnerabilities with slow growth and fiscal constraints; large infrastructure and human capital deficits",
+      "security_considerations": "Project addresses security-related governance issues through improved procurement transparency and efficiency; strengthens institutional capacity to manage public resources effectively; supports professionalization of procurement and E&S standards to reduce opportunities for corruption and mismanagement; includes grievance mechanisms and accountability frameworks; operates in context of social conflict but does not directly address security sector issues",
+      "displacement_or_refugees": "No - Project does not involve land acquisition, involuntary resettlement, or displacement. Minor civil works may involve rehabilitation of existing centers but no involuntary resettlement is anticipated. ESS5 (Land Acquisition and Involuntary Resettlement) is marked as Not Currently Relevant."
+    }
+  }
+}
