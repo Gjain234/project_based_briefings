@@ -955,3 +955,84 @@ details p{
   font-size:14px;
 }
 
+/* RRA Comparison Highlighting */
+.rra-highlighted{
+  background-color: #fef3c7;
+  border-bottom: 2px solid #f59e0b;
+  cursor: help;
+  position: relative;
+  display: inline-block;
+  transition: all 0.2s ease;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+.rra-highlighted:hover{
+  background-color: #fcd34d;
+  border-bottom-color: #d97706;
+}
+
+/* RRA Tooltip */
+.rra-tooltip{
+  visibility: hidden;
+  width: 280px;
+  background-color: #1f2937;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 10px 12px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -140px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 13px;
+  line-height: 1.4;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  white-space: normal;
+  word-wrap: break-word;
+  border-left: 3px solid #009FDA;
+}
+
+/* Arrow for tooltip */
+.rra-tooltip::after{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #1f2937 transparent transparent transparent;
+}
+
+.rra-highlighted:hover .rra-tooltip{
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Alternative: show tooltip on click for mobile */
+@media (max-width: 768px){
+  .rra-highlighted:active .rra-tooltip{
+    visibility: visible;
+    opacity: 1;
+    bottom: auto;
+    top: 100%;
+  }
+  
+  .rra-highlighted:active .rra-tooltip::after{
+    top: auto;
+    bottom: 100%;
+    border-color: transparent transparent #1f2937 transparent;
+  }
+}
+/* Spinning animation for loading */
+@keyframes spin{
+  100%{
+    transform: rotate(360deg);
+  }
+}

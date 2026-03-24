@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P506072",
+    "guid": 99090424121525168,
+    "node_id": 34386424,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-aa26d346-cc66-4708-a538-60e0b30cdda4.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Guinea Enhancing Health System Transformation (GUEST) Project",
+      "project_development_objective": "To improve the utilization of quality reproductive, maternal, neonatal, child, and adolescent health and nutrition services in selected regions.",
+      "total_financing": "US$95 million (IDA Credit: US$85 million, GFF Grant: US$10 million)",
+      "implementation_period": "2024-2029 (5 years, closing December 31, 2029)",
+      "beneficiaries": "Primary beneficiaries: women, children, and adolescents in 7 target regions (11.8 million inhabitants, 84.3% of Guinea's population). Direct beneficiaries include 6.2 million women aged 15-49 and 3.1 million children under five. Four regions prioritized for additional interventions: Kankan, Kindia, Faranah, and Labé (7.3 million inhabitants, 52% of Guinea's population)."
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Kankan",
+        "Kindia",
+        "Faranah",
+        "Labé",
+        "Boké",
+        "Mamou",
+        "N'Zérékoré"
+      ],
+      "coverage_type": "regional (7 regions of Guinea, excluding capital Conakry)",
+      "fragile_or_conflict_affected_areas": "partial - Guinea faces political instability and governance challenges. The country experienced a coup d'état in September 2021 by the CNRD. Political and social instability risks are present but have not significantly hindered health sector program execution. Climate-vulnerable areas identified include flood-prone regions (Boké, Faranah, Kankan, N'zérékoré, Kindia) and areas affected by extreme heat (Labé, Kankan, Faranah, N'zérékoré, Boké). The project specifically targets climate-vulnerable and low-performing regions."
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Supply of quality basic RMNCAH-N services",
+        "description": "Strengthening health facility readiness through procurement of essential medicines, equipment, and commodities; recruitment and training of health workers; climate-resilient WASH improvements; solar power and water supply systems; medical waste management; expansion of RBF program to 19 health districts in 4 regions; and digitalization of health services including HMIS/DHIS2 for CHWs and electronic maternity registers.",
+        "financing": "US$55 million (IDA: US$50 million, GFF: US$5 million)"
+      },
+      {
+        "component_name": "Component 2: Stimulating demand for and access to basic RMNCAH-N services",
+        "description": "Expansion of free health care for the poorest through indigent identification and card distribution; strengthening community health strategy through recruitment and training of 300 CHWs and 2,700 community relays; establishing nutrition and WASH support groups; user satisfaction surveys; and technical assistance for M&E of community structures.",
+        "financing": "US$31 million (IDA: US$27 million, GFF: US$4 million)"
+      },
+      {
+        "component_name": "Component 3: Project coordination, management, and M&E",
+        "description": "Project coordination and management through PCU; strengthening of National RBF Technical Unit (CTN-FBR); M&E support including surveys and evaluations; and strengthening health information systems including HMIS/DHIS2, CRVS digitalization, and climate-health data integration.",
+        "financing": "US$9 million (IDA: US$8 million, GFF: US$1 million)"
+      },
+      {
+        "component_name": "Component 4: Contingent Emergency Response Component (CERC)",
+        "description": "Allows rapid reallocation of uncommitted IDA funds in case of eligible emergency as defined in OP 8.00. CERC Manual and Emergency Action Plan to guide activation and implementation.",
+        "financing": "US$0 (contingent allocation)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Health and Public Hygiene (MoHPH) of the Republic of Guinea",
+      "coordination_mechanisms": "Steering Committee (expanded from HSCSP) chaired by Secretary General of MoHPH, including representatives from Ministry of Economy and Finance, Ministry of Budget, Ministry of Decentralization, Ministry of Women's Promotion, Civil Society, and private health sector. Project Coordination Unit (PCU) with central office in Conakry and 5-7 regional offices. National RBF Technical Unit (CTN-FBR) for RBF program management. Multisectoral RMNCAH-N platform at national, regional, and prefectorial levels. Coordination with development partners (GFF, Global Fund, GAVI, USAID, EU, WHO, UNICEF, UNPFA, JICA).",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers (September 2023). Use of STEP system for tracking. Prior review for high-risk procurements. Procurement methods include competitive bidding, request for quotations, and direct contracting as appropriate. Major procurements: water wells, medical equipment, micronutrient supplements, drugs/consumables, solar panels. Enhanced provisions on forced labor for solar panel procurement. Procurement risk rated as Moderate after mitigation measures.",
+      "monitoring_and_evaluation": "M&E supported under Component 3. Baseline survey within 3 months of effectiveness, then annual surveys. Uses existing HMIS data via DHIS2, RBF database, and FASTR for rapid-cycle monitoring. Quarterly reporting of PDO and intermediate indicators. Semi-annual and annual project reports to World Bank. Evaluation of RBF and free health services scale-up feasibility using quasi-experimental methodology (stepped wedge or matching approach). Community verification surveys semi-annually. Health facility supervision visits tracked quarterly. PCU manages M&E system with coordination from relevant directorates."
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Guinea faces political instability with restrictions on freedom of expression, banning of civil protests, and deviation from ECOWAS transition roadmap (return to constitutional order delayed from December 2024). Uncertainty about transition period after December 2024 and political stability after next presidential election. However, BTI 2024 notes reduction in corruption and autocratic governance since September 2021 coup.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Project design aligned with national health priorities and government ownership. Strong political commitment evidenced by health sector budget increase from 7% (2014) to 12.7% (2021). Close World Bank oversight with semi-annual implementation support missions. Project focus on health services less vulnerable to political disruptions than other sectors."
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Guinea's economic growth driven by mining sector but poverty remains high (44% in 2019). COVID-19 pandemic offset poverty reduction progress. However, real GDP growth averaged 4.8% (2019-2022) and reached 7.1% in 2023.",
+        "risk_rating": "low",
+        "mitigation_measures": "Project design focuses on health outcomes less dependent on macroeconomic conditions. Diversified financing sources (IDA and GFF). Government commitment to health sector financing."
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Risk of intervention misalignment due to complexity of implementing comprehensive interventions (RBF, free health care, e-health) in new regions with low capacity. Risk of fraudulent invoicing for reimbursements. Project design complexity and challenge of scaling up in regions with relatively low implementation capacity.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Gradual scaling up of interventions. Update of national RBF manual to clarify institutional arrangements and procedures. Independent verification and cross-verification of RBF results and payments. Strengthening of MoHPH capacity to coordinate health sector interventions. Support for RMNCAH-N multisectoral platform to reduce fragmentation."
+      },
+      {
+        "risk_category": "Technical Design of Project",
+        "risk_description": "Complexity of project design with multiple components and cross-cutting themes (climate resilience, GBV, digital health). Risk of implementation delays in new regions. Challenge of integrating climate-sensitive RMNCAH-N services with existing systems.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Project builds on successful HSCSP model with proven implementation track record. Lessons learned from previous projects incorporated into design. Gradual scaling approach. Strong technical assistance and capacity building. Close World Bank supervision."
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "Government track record shows successful implementation of multiple World Bank projects, but capacity constraints exist in new regions. E&S performance of former health projects improved from Moderately Unsatisfactory to Moderately Satisfactory only after 2.5 years. Risk of inadequate capacity for managing complex project components.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Provision of training, capacity-building, and technical assistance. Close monitoring and support. Recruitment of additional staff (accountants, E&S specialists, procurement assistant) within 3 months of effectiveness. Strengthening of PCU and regional offices. If E&S performance unsatisfactory by month 3, new E&S specialists hired by month 6. Support from experienced PCU that has managed 7 World Bank projects."
+      },
+      {
+        "risk_category": "Fiduciary - Financial Management",
+        "risk_description": "FM capacity of PCU assessed as satisfactory with moderate risk. Adequate FM arrangements in place but challenges remain. Project will be implemented across 7 regions requiring coordination of multiple accounting units.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Recruitment of 3 additional accountants in regional PCUs within 3 months of effectiveness. Update of FM manual and accounting software (Tompro) configuration within 3 months. Update of internal audit work program to include project. Recruitment of external auditor. Quarterly unaudited IFRs submission. Annual audits with unmodified opinions required. Direct disbursement mechanism from PCU to health centers' bank accounts after verification."
+      },
+      {
+        "risk_category": "Fiduciary - Procurement",
+        "risk_description": "Inherent procurement risk rated as Substantial before mitigation. Multiple entities involved in procurement process (PCU, MoHPH tender committee, DGCMP). Significant delays in procurement common. One procurement specialist overseeing all ministry procurement activities.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Retention of current procurement specialist. Recruitment of procurement assistant within 3 months of effectiveness. Procurement training on World Bank procedures for tender committee and partners. Efficacy communication plan with all procurement actors. Use of STEP system for tracking. Prior review of high-risk procurements (solar panels, medical equipment)."
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Overall E&S risk Moderate. SEA/SH risk rated as Substantial. Key risks include: medical waste production from increased health facility patronage; exclusion of vulnerable groups; community and occupational health and safety risks; exacerbation of gender inequalities; GBV risks; pollution and noise nuisance; occupational hazards in health care settings. Minor infrastructure activities planned with no land acquisition or displacement expected.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Preparation of ESMF, ESCP, SEP, LMP, and ICWMP. Adoption and disclosure of ESMF and ESCP (August 2024). Disclosure of SEP and LMP (July-August 2024). Medical Waste Management Plan to be adopted within 6 months of effectiveness. ICWMP assessment within 3 months of effectiveness. Recruitment of GBV specialist and medical waste management specialist within 3 months of effectiveness. Recruitment of 4 E&S specialists (2 environment, 2 social) in Regional Health Directorates. Establishment of grievance mechanism within 3 months of effectiveness. Community verification and user satisfaction surveys. Stakeholder engagement plan implementation. Training on GBV and women-friendly services for health workers."
+      },
+      {
+        "risk_category": "Stakeholders",
+        "risk_description": "Low risk. Strong government ownership and commitment. Active involvement of central and local government officials in project preparation. Coordination with multiple development partners.",
+        "risk_rating": "low",
+        "mitigation_measures": "Continued stakeholder engagement through multisectoral platforms. Regular communication with partners. Community engagement through CHWs and community groups. Grievance redress mechanism for citizen feedback."
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate (Category B equivalent under World Bank Environmental and Social Framework)",
+      "triggered_safeguard_policies": [
+        "ESS 1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS 2: Labor and Working Conditions",
+        "ESS 3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS 4: Community Health and Safety",
+        "ESS 10: Stakeholder Engagement and Information Disclosure",
+        "OP 7.50: Projects on International Waterways (exception to notification requirement approved)"
+      ],
+      "grievance_redress_mechanism": "Yes. Project-level grievance mechanism to be established within 3 months of effectiveness. In interim, will use GM from previous projects (CERSPSP P174032 and HSCSP P163140). Grievances addressed within specified project timeline (target: 80% by project closing). World Bank Grievance Redress Service (GRS) available for project-affected communities. World Bank Accountability Mechanism (Inspection Panel and Dispute Resolution Service) available for complaints regarding World Bank non-compliance with policies.",
+      "gender_considerations": "Significant gender focus throughout project. Guinea ranked 154th out of 193 countries in gender inequality (2022). Key gender issues addressed: 24% of girls out of primary school vs 13% of boys; 59% of women report husbands/partners make health decisions; 47% of women married before age 18; 63% experience intimate partner violence; 56% female labor force participation vs 76% male. Project activities include: recruitment of female CHWs (target 25-35% by closing); women-friendly WASH improvements; training on respectful, women-friendly care; GBV services integration into RBF program; free health care for GBV survivors; gender-sensitive recruitment of community health workers; community awareness campaigns on gender roles and parenting; support for women's groups and nutrition demonstrations; female-friendly health facility improvements.",
+      "vulnerable_groups": [
+        "Pregnant women and women of reproductive age",
+        "Children under five",
+        "Adolescents (particularly girls)",
+        "Indigent/extremely poor households",
+        "Rural populations",
+        "Climate-vulnerable populations",
+        "Internally displaced persons",
+        "GBV survivors",
+        "People with disabilities",
+        "Elderly",
+        "Women and girls affected by harmful practices (child marriage, FGM)"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project addresses fragility drivers through human capital investment. Aligned with 2023 Risk and Resilience Assessment recommendation for continued support to investment in people to address identified drivers of fragility. Project supports World Bank's transformational goal 1 on 'Rebuilding trust between citizens and the state to create a new social contract' through strengthening health service delivery and citizen engagement. Community health workers and community verification mechanisms enhance citizen-state engagement. Grievance redress mechanism and stakeholder engagement plan support accountability and transparency. Project design incorporates lessons from Ebola and COVID-19 crises which disrupted health services and deepened poverty.",
+      "fragility_context": "Guinea faces multiple fragility drivers: (1) Political instability - coup d'état September 2021, restrictions on freedom of expression, deviation from ECOWAS transition roadmap; (2) Governance challenges - corruption, weak institutional capacity; (3) Low human capital - Human Capital Index 0.37 (below SSA average 0.40), high poverty (44% in 2019, increased to 48% by 2020 due to COVID-19), extreme poverty 13%; (4) Health system weakness - among lowest health outcomes globally (life expectancy 59 years, U5MR 96/1000, MMR 553/100,000); (5) Climate vulnerability - ranked 154th out of 187 in adaptive capacity, high exposure to floods, droughts, extreme heat; (6) Economic vulnerability - mining-dependent growth, limited poverty reduction despite 5.8% average growth (2012-2022); (7) Demographic challenges - high fertility rate 4.8 children/woman, 47% adolescent fertility; (8) Gender inequality - 63% intimate partner violence, low female labor participation; (9) Recent disease outbreaks - Ebola (2014-2016) increased poverty 2%, COVID-19 increased poverty 4%; (10) Weak institutional capacity - low health worker density (0.33/1000 vs WHO standard 4.45/1000), uneven distribution favoring urban areas.",
+      "security_considerations": "Project operates in context of political instability but focuses on essential health services less directly affected by security concerns than other sectors. Four priority regions (Kankan, Kindia, Faranah, Labé) selected based on health performance and climate vulnerability, not security status. Project includes contingent emergency response component (CERC) to allow rapid reallocation of funds in case of eligible emergency. Climate shocks (floods, extreme heat) pose security risks to health infrastructure and service delivery continuity. Project includes climate emergency preparedness and response planning, contingency plans for service delivery during climate shocks, and pre-positioning of supplies. Community health workers and digital communication platforms designed to ensure service continuity during emergencies. No specific security incidents mentioned in PAD, but political volatility and governance challenges noted as ongoing risks.",
+      "displacement_or_refugees": "No. Project involves minor infrastructure activities (rehabilitation of existing health facilities, installation of water wells and solar systems) with no land acquisition or economic/physical displacement expected. Project does not target refugee populations specifically, though internally displaced persons are mentioned as vulnerable group that may benefit from improved health services. Project supports civil registration and vital statistics (CRVS) digitalization which could improve identification and service access for displaced populations. Free health care program for indigents may benefit displaced persons if they are identified in social registry."
+    }
+  }
+}

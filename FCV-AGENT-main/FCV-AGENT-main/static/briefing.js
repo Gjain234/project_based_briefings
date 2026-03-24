@@ -3,6 +3,7 @@
 let currentCountry = '';
 let generating = false;
 let briefingText = ''; // Store original briefing text for download
+let rraComparisonAbortController = null; // Track active RRA comparison for cancellation
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
@@ -56,11 +57,17 @@ function setupEventListeners() {
   // Copy button
   document.getElementById('copyBtn').addEventListener('click', copyBriefing);
   
+  // Compare to RRA button
+  document.getElementById('compareRraBtn').addEventListener('click', compareToRra);
+  
   // Modal handlers
   document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
   document.getElementById('briefingModal').addEventListener('click', (e) => {
     if (e.target.id === 'briefingModal') closeModal();
   });
+  
+  // Modal Compare to RRA button
+  document.getElementById('modalCompareRraBtn').addEventListener('click', compareToRra);
   
   // Tab buttons
   document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -135,9 +142,15 @@ function handleBriefingModeChange() {
     slider.value = categories.length;
     sliderValue.textContent = categories.length;
     slider.disabled = true;
+  } else if (mode === 'project-based') {
+    customSection.style.display = 'none';
+    slider.disabled = true;
+    slider.style.opacity = '0.5';
+    sliderValue.textContent = 'auto';
   } else {
     customSection.style.display = 'none';
     slider.disabled = false;
+    slider.style.opacity = '1';
   }
   
   // Reinitialize prompt editor to update default prompts and paragraph counts
@@ -314,6 +327,9 @@ function loadResults(results) {
   // Show download and copy buttons now that we have a briefing
   document.getElementById('downloadBtn').style.display = 'inline-flex';
   document.getElementById('copyBtn').style.display = 'inline-flex';
+  
+  // Check if RRA exists for this country
+  checkRraExists(currentCountry);
   
   // Load briefing - convert markdown newlines to HTML
   const briefingTextContent = results.briefing || 'No briefing generated.';
@@ -650,7 +666,7 @@ function loadRecentBriefings(country) {
               </div>
               <div class="briefing-card-meta-item">
                 <span class="briefing-type-badge ${b.mode}">${b.mode}</span>
-                <span style="margin-left: 8px;">📝 ${b.paragraph_count} sections</span>
+
               </div>
             </div>
           </div>
@@ -672,7 +688,7 @@ function viewBriefing(filename, country) {
     .then(response => response.json())
     .then(data => {
       if (data.briefing) {
-        showModal(filename, data.briefing);
+        showModal(filename, data.briefing, country);
       } else {
         alert('Error: ' + (data.error || 'Briefing not found'));
       }
@@ -684,12 +700,15 @@ function viewBriefing(filename, country) {
 }
 
 // Show modal with briefing content
-function showModal(title, content) {
+function showModal(title, content, country = null) {
   const modal = document.getElementById('briefingModal');
   const modalTitle = document.getElementById('modalTitle');
   const modalBody = document.getElementById('modalBody');
   const downloadBtn = document.getElementById('modalDownloadBtn');
   const copyBtn = document.getElementById('modalCopyBtn');
+  
+  // Store briefing text for comparison
+  briefingText = content;
   
   modalTitle.textContent = title;
   
@@ -730,10 +749,152 @@ function showModal(title, content) {
     URL.revokeObjectURL(url);
   };
   
+  // If country was provided, update currentCountry and check if RRA exists
+  if (country) {
+    currentCountry = country;
+    checkRraExists(country);
+  }
+  
   modal.style.display = 'flex';
 }
 
 // Close modal
 function closeModal() {
+  // Cancel any active RRA comparison when modal closes
+  if (rraComparisonAbortController) {
+    rraComparisonAbortController.abort();
+    rraComparisonAbortController = null;
+    showStatus('RRA comparison cancelled', 'info');
+  }
   document.getElementById('briefingModal').style.display = 'none';
+}
+// Check if RRA exists for the country and show/hide compare button
+async function checkRraExists(country) {
+  if (!country) {
+    document.getElementById('compareRraBtn').style.display = 'none';
+    document.getElementById('modalCompareRraBtn').style.display = 'none';
+    return;
+  }
+  
+  try {
+    const response = await fetch(`/api/briefing/rra-check/${encodeURIComponent(country)}`);
+    const data = await response.json();
+    
+    const compareBtn = document.getElementById('compareRraBtn');
+    const modalCompareBtn = document.getElementById('modalCompareRraBtn');
+    
+    if (data.exists) {
+      if (compareBtn) compareBtn.style.display = 'inline-flex';
+      if (modalCompareBtn) modalCompareBtn.style.display = 'inline-flex';
+    } else {
+      if (compareBtn) compareBtn.style.display = 'none';
+      if (modalCompareBtn) modalCompareBtn.style.display = 'none';
+    }
+  } catch (error) {
+    console.error('Error checking RRA:', error);
+    document.getElementById('compareRraBtn').style.display = 'none';
+    document.getElementById('modalCompareRraBtn').style.display = 'none';
+  }
+}
+
+// Compare briefing to RRA
+async function compareToRra() {
+  const country = currentCountry;
+  const briefing = briefingText || document.getElementById('briefingContent').innerText;
+  
+  if (!country || !briefing) {
+    alert('Please generate a briefing first');
+    return;
+  }
+  
+  const compareBtn = document.getElementById('compareRraBtn');
+  const modalCompareBtn = document.getElementById('modalCompareRraBtn');
+  const originalText = compareBtn ? compareBtn.innerHTML : '';
+  const originalModalText = modalCompareBtn ? modalCompareBtn.innerHTML : '';
+  
+  // Create AbortController for this comparison
+  rraComparisonAbortController = new AbortController();
+  
+  // Disable both buttons and show loading state
+  if (compareBtn) {
+    compareBtn.disabled = true;
+    compareBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation: spin 1s linear infinite;"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Comparing...';
+  }
+  if (modalCompareBtn) {
+    modalCompareBtn.disabled = true;
+    modalCompareBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation: spin 1s linear infinite;"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Comparing...';
+  }
+  
+  // Show status message
+  showStatus('Comparing briefing to RRA... this may take a minute', 'info');
+  
+  try {
+    const response = await fetch('/api/briefing/compare-to-rra', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        country: country,
+        briefing: briefing
+      }),
+      signal: rraComparisonAbortController.signal
+    });
+    
+    const data = await response.json();
+    
+    if (!response.ok) {
+      throw new Error(data.error || 'Failed to compare briefing to RRA');
+    }
+    
+    // Display annotated briefing
+    const comparisonSection = document.getElementById('rraComparisonSection');
+    const annotatedContent = document.getElementById('annotatedBriefingContent');
+    
+    // Set the HTML first
+    annotatedContent.innerHTML = data.annotated_briefing;
+    
+    // Add tooltips to highlighted elements (after they're in the DOM)
+    annotatedContent.querySelectorAll('.rra-highlighted').forEach(span => {
+      const rraRef = span.getAttribute('data-rra-reference');
+      
+      // Only add tooltip if there's a valid RRA reference
+      if (rraRef && rraRef.trim()) {
+        // Check if tooltip already exists to avoid duplicates
+        const existingTooltip = span.querySelector('.rra-tooltip');
+        if (!existingTooltip) {
+          const tooltip = document.createElement('div');
+          tooltip.className = 'rra-tooltip';
+          tooltip.textContent = rraRef.length > 200 ? rraRef.substring(0, 200) + '...' : rraRef;
+          span.appendChild(tooltip);
+        }
+      }
+    });
+    
+    comparisonSection.style.display = 'block';
+    
+    // Scroll to comparison
+    comparisonSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    
+    showStatus('RRA comparison complete!', 'success');
+  } catch (error) {
+    // Check if this was an abort (user closed the modal)
+    if (error.name === 'AbortError') {
+      console.log('RRA comparison was cancelled');
+      // Don't show error message - cancellation is expected
+    } else {
+      console.error('Error comparing to RRA:', error);
+      showStatus('Error comparing to RRA: ' + error.message, 'error');
+    }
+  } finally {
+    // Clear the abort controller
+    rraComparisonAbortController = null;
+    
+    if (compareBtn) {
+      compareBtn.disabled = false;
+      compareBtn.innerHTML = originalText;
+    }
+    if (modalCompareBtn) {
+      modalCompareBtn.disabled = false;
+      modalCompareBtn.innerHTML = originalModalText;
+    }
+  }
 }

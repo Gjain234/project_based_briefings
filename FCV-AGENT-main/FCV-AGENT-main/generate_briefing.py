@@ -304,6 +304,87 @@ def generate_sector_aligned_briefing(
 
     return (message.content or "").strip()
 
+def generate_project_based_briefing(
+    country_risks_df,
+    pad_risks,
+    implementation_realized_risks,
+    implementation_realized_risks_mapped,
+    client,
+    custom_prompt=None
+):
+    """
+    Generate a project-based briefing with one paragraph per project.
+    Each project gets its own dedicated analysis paragraph.
+    """
+    
+    # Get unique projects from all data sources
+    projects = set()
+    
+    if len(pad_risks) > 0 and 'PROJ_ID_IB' in pad_risks.columns:
+        projects.update(pad_risks['PROJ_ID_IB'].unique())
+    
+    if len(implementation_realized_risks_mapped) > 0 and 'PROJ_ID_IB' in implementation_realized_risks_mapped.columns:
+        projects.update(implementation_realized_risks_mapped['PROJ_ID_IB'].unique())
+    
+    projects = sorted(list(projects))
+    n_projects = len(projects)
+    
+    evidence = {
+        "projects": projects,
+        "country_risks": country_risks_df.to_dict(orient="records"),
+        "pad_risks": pad_risks.to_dict(orient="records"),
+        "implementation_realized_risks": implementation_realized_risks.to_dict(orient="records"),
+        "implementation_realized_risks_mapped": implementation_realized_risks_mapped.to_dict(orient="records")
+    }
+
+    # Validate and clean custom_prompt
+    if custom_prompt:
+        if not isinstance(custom_prompt, str):
+            custom_prompt = None
+        else:
+            custom_prompt = custom_prompt.strip() if custom_prompt else None
+
+    # Use custom prompt if provided, otherwise use default
+    system_prompt = custom_prompt if custom_prompt else (
+        "You are writing a project-based FCV portfolio briefing.\n\n"
+        f"Write exactly {n_projects} paragraphs, one for each project listed in the evidence.\n"
+        "Process the projects in the exact order provided.\n\n"
+        "For each paragraph:\n"
+        "- Start with the project ID (e.g., 'P123456'). You may look up project names from the evidence if available.\n"
+        "- Analyze the project's FCV exposure and risks.\n"
+        "- Describe how country-level FCV risks affect this specific project.\n"
+        "- Include PAD-stage susceptibilities. Provide 1-3 sentences elaborating on the specific exposure mechanisms.\n"
+        "- Include any realized implementation risks or issues. Provide 1-3 sentences detailing observed impacts.\n"
+        "- Focus on the unique context and risks for this specific project.\n\n"
+        "Citation rules:\n"
+        "- Use [PROJ_ID | PAD] only if that project appears in pad_risks.\n"
+        "- Use [PROJ_ID | ISR] or [PROJ_ID | Aide Memoire] only for document types that appear in implementation_realized_risks_mapped.\n"
+        "- Each citation must be in its own bracket pair: [P123456 | PAD] [P123456 | ISR]\n"
+        "- NEVER combine multiple citations with semicolons inside one bracket\n"
+        "- Do NOT cite a document type that doesn't appear in the evidence for that project.\n"
+        "- Do NOT create hyperlinks.\n"
+        "- Do NOT invent citations."
+    )
+
+    prompt = ChatPromptTemplate.from_messages([
+        (
+            "system",
+            system_prompt
+        ),
+        (
+            "human",
+            "Evidence:\n\n{evidence}"
+        )
+    ])
+
+    chain = prompt | client
+
+    message = chain.invoke({
+        "evidence": json.dumps(evidence, indent=2)
+    })
+
+    return (message.content or "").strip()
+
 def generate_briefing(
     mode,
     n_paragraphs,
@@ -368,6 +449,16 @@ def generate_briefing(
             custom_prompt=custom_prompt
         )
 
+    elif mode == "project-based":
+        briefing = generate_project_based_briefing(
+            country_risks_df=country_risks_df,
+            pad_risks=pad_risks,
+            implementation_realized_risks=implementation_realized_risks,
+            implementation_realized_risks_mapped=implementation_realized_risks_mapped,
+            client=client,
+            custom_prompt=custom_prompt
+        )
+
     elif mode == "custom":
         if not custom_categories:
             raise ValueError("custom_categories must be provided for custom mode")
@@ -383,7 +474,7 @@ def generate_briefing(
         )
 
     else:
-        raise ValueError("mode must be 'risk', 'sector', or 'custom'")
+        raise ValueError("mode must be 'risk', 'sector', 'project-based', or 'custom'")
     
     # Inject links for citation markers
     briefing = inject_links(briefing, country_document_df)

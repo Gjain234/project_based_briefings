@@ -74,6 +74,7 @@
           <select id="briefingMode" class="config-select">
             <option value="risk">Risk-Aligned Briefing</option>
             <option value="sector">Sector-Aligned Briefing</option>
+            <option value="project-based">Project-Based Briefing</option>
             <option value="custom">Custom Categories Briefing</option>
           </select>
         </div>
@@ -158,6 +159,12 @@ Social Cohesion and Protection</textarea>
           <div class="briefing-header">
             <h3>Final Briefing</h3>
             <div style="display: flex; gap: 8px;">
+              <button id="compareRraBtn" class="download-btn" style="display:none;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2v20M2 12h20M6 6l12 12M18 6l-12 12"/>
+                </svg>
+                Compare to RRA
+              </button>
               <button id="copyBtn" class="download-btn" style="display:none;">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
@@ -177,6 +184,16 @@ Social Cohesion and Protection</textarea>
             <p style="color: #5a6a7e; text-align: center; padding: 40px 20px;">
               Select a country and click "Generate Briefing" to create a new briefing, or view recent briefings below.
             </p>
+          </div>
+          <!-- RRA Comparison Section -->
+          <div id="rraComparisonSection" style="display:none; margin-top: 40px; padding-top: 40px; border-top: 1px solid #d9e2ec;">
+            <h3>📚 Briefing vs. RRA Analysis</h3>
+            <p style="font-size: 14px; color: #5a6a7e; margin-bottom: 20px;">
+              Highlighted sections show connections to the Risk and Resilience Assessment. Hover over highlighted text to see RRA references.
+            </p>
+            <div id="annotatedBriefingContent" class="briefing-content" style="background: #f9fafb; padding: 20px; border-radius: 8px;">
+              <!-- Annotated briefing will be inserted here -->
+            </div>
           </div>
         </div>
 
@@ -567,6 +584,12 @@ Return valid JSON with structure: { "connections": [ { "country_risk_id", "count
       <div class="modal-header">
         <h3 id="modalTitle">Briefing</h3>
         <div class="modal-actions">
+          <button id="modalCompareRraBtn" class="modal-btn" style="display:none;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M2 12h20M6 6l12 12M18 6l-12 12"/>
+            </svg>
+            Compare to RRA
+          </button>
           <button id="modalCopyBtn" class="modal-btn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>

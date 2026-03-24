@@ -1,5 +1,6 @@
 import os
 import json
+import re
 import base64
 from flask import Flask, request, jsonify, send_from_directory, Response, stream_with_context
 import anthropic
@@ -108,7 +109,7 @@ def extract_pdf_text(b64_data, name):
 
 app = Flask(__name__, static_folder='static')
 app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024
-client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
+client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY_DEV"))
 
 
 @app.route('/')
@@ -706,18 +707,12 @@ def get_recent_briefings(country):
                     continue
                 
                 # Validate mode
-                if mode not in ['risk', 'sector', 'custom']:
+                if mode not in ['risk', 'sector', 'project-based', 'custom']:
                     continue
                 
                 # Parse date
                 try:
                     dt = datetime.strptime(f"{date_str}_{time_str}", "%Y%m%d_%H%M%S")
-                    
-                    # Count paragraphs (rough estimate)
-                    with open(file_path, 'r', encoding='utf-8') as f:
-                        content = f.read()
-                        # Count ## headers as paragraph count
-                        paragraph_count = content.count('## ')
                     
                     briefings.append({
                         'filename': filename,
@@ -725,8 +720,7 @@ def get_recent_briefings(country):
                         'mode': mode,
                         'date': dt.strftime('%Y-%m-%d'),
                         'time': dt.strftime('%H:%M:%S'),
-                        'timestamp': dt.isoformat(),
-                        'paragraph_count': paragraph_count
+                        'timestamp': dt.isoformat()
                     })
                 except:
                     pass
@@ -758,6 +752,142 @@ def get_briefing_file(filename):
             briefing_content = f.read()
         
         return jsonify({'briefing': briefing_content})
+        
+    except Exception as e:
+        import traceback
+        return jsonify({'error': f"{str(e)}\\n{traceback.format_exc()}"}), 500
+
+
+# ── RRA Comparison endpoint ──────────────────────────────────────────────────
+
+@app.route('/api/briefing/rra-check/<country>', methods=['GET'])
+def check_rra_exists(country):
+    """Check if RRA exists for the country"""
+    try:
+        rra_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'rras')
+        # Normalize country name for file lookup (lowercase, replace spaces with underscores)
+        rra_filename = f"{country.lower().replace(' ', '_')}_rra.txt"
+        rra_path = os.path.join(rra_folder, rra_filename)
+        
+        # Also check exact case
+        if not os.path.exists(rra_path):
+            # Try without normalization
+            for file in os.listdir(rra_folder):
+                if file.endswith('_rra.txt') and country.lower() in file.lower():
+                    rra_path = os.path.join(rra_folder, file)
+                    break
+        
+        exists = os.path.exists(rra_path)
+        return jsonify({'exists': exists})
+    except Exception as e:
+        return jsonify({'exists': False, 'error': str(e)})
+
+
+@app.route('/api/briefing/compare-to-rra', methods=['POST'])
+def compare_to_rra():
+    """Compare briefing to RRA and return annotated version"""
+    try:
+        data = request.get_json()
+        country = data.get('country')
+        briefing = data.get('briefing')
+        
+        if not country or not briefing:
+            return jsonify({'error': 'Country and briefing are required'}), 400
+        
+        # Load RRA file
+        rra_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'rras')
+        rra_filename = f"{country.lower().replace(' ', '_')}_rra.txt"
+        rra_path = os.path.join(rra_folder, rra_filename)
+        
+        # Try exact match if not found
+        if not os.path.exists(rra_path):
+            for file in os.listdir(rra_folder):
+                if file.endswith('_rra.txt') and country.lower() in file.lower():
+                    rra_path = os.path.join(rra_folder, file)
+                    break
+        
+        if not os.path.exists(rra_path):
+            return jsonify({'error': f'RRA file not found for {country}'}), 404
+        
+        # Load RRA content
+        with open(rra_path, 'r', encoding='utf-8') as f:
+            rra_content = f.read()
+        
+        # Truncate RRA if too large - keep first 300k chars for context
+        if len(rra_content) > 300000:
+            rra_content = rra_content[:300000] + '\n\n[RRA content truncated...]'
+        
+        # Truncate briefing to avoid exceeding context - keep most recent first
+        briefing_truncated = briefing
+        if len(briefing_truncated) > 50000:
+            briefing_truncated = briefing_truncated[:50000] + '\n\n[Briefing content truncated...]'
+        
+        # Create comparison prompt
+        comparison_prompt = f"""You are an expert analyst comparing a FCV portfolio briefing to a Risk and Resilience Assessment (RRA).
+
+Your task is to:
+1. Find specific connections between briefing content and RRA content
+2. ONLY highlight briefing sections that have a CLEAR, SUBSTANTIVE connection to specific RRA findings
+3. For each highlighted section, provide a specific reference to what in the RRA it connects to
+4. Return ONLY clean HTML - no markdown, no explanation
+
+CRITICAL RULE: Do not highlight unless you can point to a specific RRA reference.
+- If you highlight text, you MUST include data-rra-reference with what RRA finding it relates to
+
+Examples of connections to find include (but are not limited to):
+- Structural risk factors (governance, political fragility, conflict dynamics)
+- Armed groups, militias, or security threats mentioned in RRA
+- Sources of resilience or institutional strengths identified in RRA
+- Shock-response mechanisms or coping strategies discussed in RRA
+- Development constraints or sectoral vulnerabilities from RRA
+- International factors (geopolitical alignments, external actors) in RRA
+- Specific geographic or subnational dynamics from RRA
+- Demographic or social group vulnerabilities from RRA
+
+For sections clearly relating to the RRA, wrap in: <span class="rra-highlighted" data-rra-reference="[specific RRA reference]">[briefing text]</span>
+
+IMPORTANT: Return flat HTML inline within paragraphs - do NOT add newlines between highlighted spans. Keep highlighted text flowing inline with surrounding text.
+
+RRA Context:
+{rra_content}
+
+Briefing to Annotate:
+{briefing_truncated}"""
+        
+        # Call Claude to generate comparison with higher token limit
+        message = client.messages.create(
+            model="claude-sonnet-4-6",
+            max_tokens=8000,
+            messages=[
+                {
+                    "role": "user",
+                    "content": comparison_prompt
+                }
+            ]
+        )
+        
+        annotated_briefing = message.content[0].text
+        
+        # Strip markdown code block markers if present
+        if annotated_briefing.startswith('```'):
+            # Remove opening ```html or similar
+            annotated_briefing = annotated_briefing.split('```', 2)[1].lstrip('html\n').lstrip('\n')
+        if annotated_briefing.endswith('```'):
+            # Remove closing ```
+            annotated_briefing = annotated_briefing.rsplit('```', 1)[0]
+        
+        # Remove highlighted spans that don't have a data-rra-reference attribute with content
+        # Match spans without data-rra-reference or with empty data-rra-reference
+        annotated_briefing = re.sub(
+            r'<span class="rra-highlighted"(?!\s+data-rra-reference="[^"]*[^"\s]")[^>]*>([^<]*)</span>',
+            r'\1',
+            annotated_briefing
+        )
+        
+        return jsonify({
+            'annotated_briefing': annotated_briefing,
+            'rra_summary': f"RRA found: {os.path.basename(rra_path)}"
+        })
         
     except Exception as e:
         import traceback
