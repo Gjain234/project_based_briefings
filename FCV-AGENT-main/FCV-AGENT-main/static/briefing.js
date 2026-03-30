@@ -21,6 +21,25 @@ function setupEventListeners() {
       currentCountry = country;
       loadRecentBriefings(country);
       loadLastScanDate(country);
+      // Enable map button when country is selected
+      document.getElementById('loadMapBtn').disabled = false;
+    } else {
+      document.getElementById('loadMapBtn').disabled = true;
+    }
+  });
+  
+  // Load map button
+  document.getElementById('loadMapBtn').addEventListener('click', () => {
+    if (currentCountry) {
+      const btn = document.getElementById('loadMapBtn');
+      btn.disabled = true;
+      btn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation:spin 1s linear infinite"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg> Loading...`;
+      loadCountryMap(currentCountry);
+      // Scroll to map
+      const mapSection = document.getElementById('mapSection');
+      if (mapSection) {
+        mapSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   });
   
@@ -97,6 +116,7 @@ async function loadCountries() {
     if (data.countries.includes('Djibouti')) {
       select.value = 'Djibouti';
       currentCountry = 'Djibouti';
+      document.getElementById('loadMapBtn').disabled = false;
       loadLastScanDate(currentCountry);
       loadRecentBriefings(currentCountry);
     }
@@ -269,9 +289,10 @@ async function generateBriefing(customPrompt = null) {
                   // Switch to briefing tab automatically
                   switchTab('briefing');
                   
-                  // Scroll to results section
-                  const resultsSection = document.getElementById('resultsSection');
-                  resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  // Scroll to map section if it exists and is visible, otherwise to briefing
+                  const mapSection = document.getElementById('mapSection');
+                  const scrollTarget = (mapSection && mapSection.style.display !== 'none') ? mapSection : document.getElementById('resultsSection');
+                  scrollTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
                   
                   // Hide status after 3 seconds
                   setTimeout(() => {
@@ -345,6 +366,9 @@ function loadResults(results) {
   
   document.getElementById('briefingContent').innerHTML = '<p>' + briefingHtml + '</p>';
   console.log('Briefing content loaded');
+  
+  // Load map for the country
+  loadCountryMap(currentCountry);
   
   // Enable custom prompt editing
   enablePromptEditor();
@@ -897,4 +921,278 @@ async function compareToRra() {
       modalCompareBtn.innerHTML = originalModalText;
     }
   }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Map Functions
+// ─────────────────────────────────────────────────────────────────────────────
+
+let currentMap = null;
+
+// Color mapping for event types
+const EVENT_TYPE_COLORS = {
+  'Protests': '#2a9d8f',
+  'Riots': '#3a86ff',
+  'Violence against civilians': '#e63946',
+  'Battles': '#e76f51',
+  'Explosions/remote violence': '#f4a261',
+  'Strategic developments': '#8d99ae',
+  'default': '#6c757d'
+};
+
+const FALLBACK_EVENT_COLORS = [
+  '#1d3557', '#457b9d', '#264653', '#6d597a', '#b56576', '#ff7f51', '#2a9d8f', '#577590'
+];
+
+function hashColorSeed(value) {
+  let hash = 0;
+  const text = String(value || '');
+  for (let i = 0; i < text.length; i += 1) {
+    hash = ((hash << 5) - hash) + text.charCodeAt(i);
+    hash |= 0;
+  }
+  return Math.abs(hash);
+}
+
+function getEventColor(eventType, subEventType) {
+  if (EVENT_TYPE_COLORS[eventType]) return EVENT_TYPE_COLORS[eventType];
+  if (EVENT_TYPE_COLORS[subEventType]) return EVENT_TYPE_COLORS[subEventType];
+  const seed = hashColorSeed(subEventType || eventType || 'default');
+  return FALLBACK_EVENT_COLORS[seed % FALLBACK_EVENT_COLORS.length] || EVENT_TYPE_COLORS.default;
+}
+
+function normalizeProjId(value) {
+  return String(value || '').trim().toUpperCase().replace(/[^A-Z0-9]/g, '');
+}
+
+function loadCountryMap(country) {
+  const mapUrl = `/api/briefing/map-data/${encodeURIComponent(country)}`;
+  const namesUrl = `/api/briefing/project-names/${encodeURIComponent(country)}`;
+
+  Promise.all([
+    fetch(mapUrl).then(response => response.json()),
+    fetch(namesUrl).then(response => response.json()).catch(() => ({}))
+  ])
+    .then(([data, projectNames]) => {
+      if (data.error) {
+        console.error('Error loading map data:', data.error);
+        return;
+      }
+
+      const namesByNorm = {};
+      Object.entries(projectNames || {}).forEach(([pid, pname]) => {
+        const norm = normalizeProjId(pid);
+        if (norm && pname) {
+          namesByNorm[norm] = String(pname);
+        }
+      });
+
+      const mergedProjects = (data.projects || []).map(project => {
+        const normId = normalizeProjId(project.proj_id);
+        const padName = namesByNorm[normId] || '';
+        return {
+          ...project,
+          project_name: project.project_name || padName
+        };
+      });
+
+      renderMap(country, mergedProjects, data.events || []);
+    })
+    .catch(error => {
+      console.error('Error fetching map data:', error);
+    })
+    .finally(() => {
+      const btn = document.getElementById('loadMapBtn');
+      if (btn) {
+        btn.disabled = false;
+        btn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Load Map`;
+      }
+    });
+}
+
+function renderMap(country, projects, events) {
+  const mapContainer = document.getElementById('mapContainer');
+  const mapSection = document.getElementById('mapSection');
+  
+  if (!mapContainer) return;
+  
+  // Show map section FIRST so container has proper dimensions
+  mapSection.style.display = 'block';
+  
+  // Destroy existing map if any
+  if (currentMap) {
+    currentMap.remove();
+    currentMap = null;
+  }
+  
+  // Initialize map - center on first marker or world center
+  let mapCenter = [0, 20];
+  if (projects.length > 0) {
+    mapCenter = [projects[0].lat, projects[0].lon];
+  } else if (events.length > 0) {
+    mapCenter = [events[0].lat, events[0].lon];
+  }
+  
+  currentMap = L.map(mapContainer).setView(mapCenter, 6);
+  
+  // Add basemap
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors',
+    maxZoom: 19
+  }).addTo(currentMap);
+  
+  // Add project location pins
+  const projectIcon = L.divIcon({
+    html: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="25" viewBox="0 0 16 25">
+      <path d="M8 0C3.58 0 0 3.58 0 8c0 6 8 16.6 8 16.6S16 14 16 8c0-4.42-3.58-8-8-8z" fill="#1fa463" stroke="#127a47" stroke-width="1.2"/>
+      <circle cx="8" cy="8" r="3" fill="white"/>
+    </svg>`,
+    className: '',
+    iconSize: [16, 25],
+    iconAnchor: [8, 25],
+    popupAnchor: [0, -24]
+  });
+
+  const projectLayer = L.markerClusterGroup({
+    maxClusterRadius: 30,
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: false,
+    iconCreateFunction: function(cluster) {
+      return L.divIcon({
+        html: `<div style="background:#1fa463;color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;border:2px solid #127a47;box-shadow:0 1px 4px rgba(0,0,0,.3);">${cluster.getChildCount()}</div>`,
+        className: '',
+        iconSize: [28, 28],
+        iconAnchor: [14, 14]
+      });
+    }
+  });
+  projectLayer.addTo(currentMap);
+  projects.forEach(project => {
+    const marker = L.marker([project.lat, project.lon], { icon: projectIcon });
+    const labelName = project.project_name || `Project ${project.proj_id}`;
+    const displayTitle = `${labelName} (${project.proj_id})`;
+    marker.bindTooltip(displayTitle, { direction: 'top', offset: [0, -22] });
+    marker.bindPopup(`
+      <div style="font-size: 13px; line-height: 1.6; min-width: 180px;">
+        <strong>${labelName}</strong><br>
+        <em style="color:#777; font-size:11px;">PCODE: ${project.proj_id}</em><br>
+        <span style="color:#888; font-size:12px;">Location: ${project.name || '\u2014'}</span><br>
+      </div>
+    `);
+    marker.addTo(projectLayer);
+  });
+
+  // Group events by type into toggleable LayerGroups
+  const eventLayers = {};
+  events.forEach(event => {
+    const evType = event.event_type || 'Other';
+    if (!eventLayers[evType]) {
+      eventLayers[evType] = L.layerGroup().addTo(currentMap);
+    }
+    const color = getEventColor(event.event_type, event.sub_event_type);
+    const marker = L.circleMarker([event.lat, event.lon], {
+      radius: 6.5,
+      fillColor: color,
+      color: '#ffffff',
+      weight: 1.4,
+      opacity: 0.95,
+      fillOpacity: 0.82
+    });
+    const noteSnippet = event.notes ? event.notes.substring(0, 200) + (event.notes.length > 200 ? '\u2026' : '') : '';
+    marker.bindPopup(`
+      <div style="font-size: 12px; line-height: 1.6; max-width: 250px;">
+        <strong style="color: ${color};">${event.sub_event_type || event.event_type}</strong><br>
+        <strong>Type:</strong> ${event.event_type}<br>
+        <strong>Date:</strong> ${event.date} &nbsp; <strong>Location:</strong> ${event.location}
+        ${noteSnippet ? `<br><span style="color:#555;">${noteSnippet}</span>` : ''}
+      </div>
+    `);
+    marker.addTo(eventLayers[evType]);
+  });
+  
+  // Build legend panel
+  buildMapLegend(projectLayer, eventLayers, projects.length, events.length);
+
+  // Update counters
+  document.getElementById('projectCount').textContent = projects.length;
+  document.getElementById('eventCount').textContent = events.length;
+  document.getElementById('mapCountryName').textContent = country;
+
+  // Invalidate map size and fit bounds after a brief delay to ensure rendering
+  setTimeout(() => {
+    if (currentMap) {
+      currentMap.invalidateSize();
+
+      // Fit bounds if markers exist
+      if (projects.length > 0 || events.length > 0) {
+        const allMarkers = [];
+        projects.forEach(p => allMarkers.push([p.lat, p.lon]));
+        events.forEach(e => allMarkers.push([e.lat, e.lon]));
+
+        if (allMarkers.length > 0) {
+          const group = new L.featureGroup(
+            allMarkers.map(coords => L.marker(coords))
+          );
+          currentMap.fitBounds(group.getBounds(), { padding: [50, 50], maxZoom: 12 });
+        }
+      }
+    }
+  }, 100);
+}
+
+function buildMapLegend(projectLayer, eventLayers, projectCount, eventCount) {
+  const legendEl = document.getElementById('mapLegend');
+  if (!legendEl) return;
+
+  legendEl.innerHTML = '<div style="font-size:12px; font-weight:700; text-transform:uppercase; color:#6b7280; letter-spacing:.5px; margin-bottom:10px;">Map Legend</div>';
+
+  // Projects toggle row
+  const projRow = document.createElement('label');
+  projRow.style.cssText = 'display:flex; align-items:center; gap:7px; padding:5px 0 8px; cursor:pointer; border-bottom:1px solid #e5e7eb; margin-bottom:8px;';
+  projRow.innerHTML = `
+    <input type="checkbox" checked style="width:14px;height:14px;accent-color:#22c55e;flex-shrink:0;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 16 25" style="flex-shrink:0">
+      <path d="M8 0C3.58 0 0 3.58 0 8c0 6 8 16.6 8 16.6S16 14 16 8c0-4.42-3.58-8-8-8z" fill="#1fa463" stroke="#127a47" stroke-width="1.2"/>
+      <circle cx="8" cy="8" r="3" fill="white"/>
+    </svg>
+    <span style="font-size:13px; font-weight:600; color:#15803d; flex:1;">Projects</span>
+    <span style="font-size:11px; color:#9ca3af;">${projectCount}</span>
+  `;
+  const projCb = projRow.querySelector('input');
+  projCb.addEventListener('change', () => {
+    if (projCb.checked) projectLayer.addTo(currentMap);
+    else projectLayer.remove();
+  });
+  legendEl.appendChild(projRow);
+
+  // Events section heading
+  if (Object.keys(eventLayers).length > 0) {
+    const evHdr = document.createElement('div');
+    evHdr.style.cssText = 'font-size:11px; font-weight:700; text-transform:uppercase; color:#6b7280; letter-spacing:.5px; margin-bottom:6px;';
+    evHdr.textContent = 'Conflict Events (last 12 mo.)';
+    legendEl.appendChild(evHdr);
+  }
+
+  // Sort event types by count descending, add toggle row for each
+  Object.entries(eventLayers)
+    .sort(([, a], [, b]) => b.getLayers().length - a.getLayers().length)
+    .forEach(([evType, layer]) => {
+      const count = layer.getLayers().length;
+      const firstMarker = layer.getLayers()[0];
+      const color = firstMarker ? firstMarker.options.fillColor : '#6b7280';
+      const row = document.createElement('label');
+      row.style.cssText = 'display:flex; align-items:center; gap:7px; padding:4px 0; cursor:pointer;';
+      row.innerHTML = `
+        <input type="checkbox" checked style="width:13px;height:13px;accent-color:${color};flex-shrink:0;">
+        <span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:${color};flex-shrink:0;"></span>
+        <span style="font-size:12px; color:#374151; flex:1; line-height:1.3;">${evType}</span>
+        <span style="font-size:11px; color:#9ca3af;">${count}</span>
+      `;
+      const cb = row.querySelector('input');
+      cb.addEventListener('change', () => {
+        if (cb.checked) layer.addTo(currentMap);
+        else layer.remove();
+      });
+      legendEl.appendChild(row);
+    });
 }

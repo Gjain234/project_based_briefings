@@ -2,11 +2,13 @@ import os
 import json
 import re
 import base64
+import csv
 from flask import Flask, request, jsonify, send_from_directory, Response, stream_with_context
 import anthropic
 from background_docs import FCV_GUIDE
 import io
 import sys
+import pandas as pd
 try:
     from pypdf import PdfReader
 except ImportError:
@@ -373,30 +375,32 @@ def get_last_scan(country):
 def get_project_names(country):
     """Get project names for a country from preprocessed PADs"""
     try:
-        import json
-        project_names = {}
-        preprocessed_dir = "preprocessed_pads"
-        country_dir = os.path.join(preprocessed_dir, country)
-        
-        if os.path.exists(country_dir):
-            for filename in os.listdir(country_dir):
-                if filename.endswith('_preprocessed.json'):
-                    file_path = os.path.join(country_dir, filename)
-                    try:
-                        with open(file_path, 'r', encoding='utf-8') as f:
-                            data = json.load(f)
-                            proj_id = data.get('metadata', {}).get('PROJ_ID_IB')
-                            proj_name = data.get('structured_content', {}).get('project_overview', {}).get('project_name')
-                            if proj_id and proj_name:
-                                project_names[proj_id] = proj_name
-                    except Exception as e:
-                        print(f"Error reading {file_path}: {e}")
-        
-        return jsonify(project_names)
+        return jsonify(load_project_names_for_country(country))
     except Exception as e:
         import traceback
         print(f"Error in get_project_names: {traceback.format_exc()}")
         return jsonify({})
+
+def load_project_names_for_country(country):
+    """Load project names from preprocessed PAD JSON files for a country."""
+    project_names = {}
+    preprocessed_dir = "preprocessed_pads"
+    country_dir = os.path.join(preprocessed_dir, country)
+
+    if os.path.exists(country_dir):
+        for filename in os.listdir(country_dir):
+            if filename.endswith('_preprocessed.json'):
+                file_path = os.path.join(country_dir, filename)
+                try:
+                    data = read_json_fallback(file_path)
+                    proj_id = data.get('metadata', {}).get('PROJ_ID_IB')
+                    proj_name = data.get('structured_content', {}).get('project_overview', {}).get('project_name')
+                    if proj_id and proj_name:
+                        project_names[str(proj_id).strip()] = str(proj_name).strip()
+                except Exception as e:
+                    print(f"Error reading {file_path}: {e}")
+
+    return project_names
 
 @app.route('/api/briefing/generate', methods=['POST'])
 def generate_briefing():
@@ -887,6 +891,251 @@ Briefing to Annotate:
         return jsonify({
             'annotated_briefing': annotated_briefing,
             'rra_summary': f"RRA found: {os.path.basename(rra_path)}"
+        })
+        
+    except Exception as e:
+        import traceback
+        return jsonify({'error': f"{str(e)}\\n{traceback.format_exc()}"}), 500
+
+# ── Map Data Endpoint ────────────────────────────────────────────────────────
+
+# Country name mapping for ACLED
+ACLED_COUNTRY_MAPPING = {
+    'Guinea': ['Guinea', 'Guinea-Bissau'],
+    'Ethiopia': ['Ethiopia'],
+    'Somalia': ['Somalia', 'Federal Republic of Somalia'],
+    'Djibouti': ['Djibouti'],
+    'South Sudan': ['South Sudan', 'Sudan'],
+}
+
+def get_iso_code_for_country(country_name):
+    """Get ISO code from country name"""
+    iso_mapping = {
+        'Guinea': 'GN',
+        'Ethiopia': 'ET',
+        'Somalia': 'SO',
+        'Djibouti': 'DJ',
+        'South Sudan': 'SS',
+        'Sudan': 'SD',
+    }
+    return iso_mapping.get(country_name, '')
+
+def normalize_country_name(name, target_country):
+    """Check if a country name from data matches the target country"""
+    if not name or not target_country:
+        return False
+    
+    name_lower = str(name).lower().strip()
+    target_lower = str(target_country).lower().strip()
+    
+    # Exact match
+    if name_lower == target_lower:
+        return True
+    
+    # Check ACLED mapping for matching variations
+    for key, variations in ACLED_COUNTRY_MAPPING.items():
+        if key.lower() == target_lower:
+            for var in variations:
+                if name_lower == var.lower():
+                    return True
+    
+    return False
+
+def read_csv_fallback(path, **kwargs):
+    """Read CSV with fallback encodings for mixed-source files."""
+    last_error = None
+    for enc in ("utf-8", "utf-8-sig", "cp1252", "latin-1"):
+        try:
+            return pd.read_csv(path, encoding=enc, **kwargs)
+        except UnicodeDecodeError as e:
+            last_error = e
+    if last_error:
+        raise last_error
+    return pd.read_csv(path, **kwargs)
+
+def read_json_fallback(path):
+    """Read JSON with fallback encodings for legacy preprocessed files."""
+    last_error = None
+    for enc in ("utf-8", "utf-8-sig", "cp1252", "latin-1"):
+        try:
+            with open(path, 'r', encoding=enc) as f:
+                return json.load(f)
+        except UnicodeDecodeError as e:
+            last_error = e
+    if last_error:
+        raise last_error
+    with open(path, 'r', encoding='utf-8') as f:
+        return json.load(f)
+
+def norm_proj_id(value):
+    """Normalize project IDs so joins survive punctuation/spacing differences."""
+    if pd.isna(value):
+        return None
+    normalized = str(value).strip().upper()
+    normalized = re.sub(r"[^A-Z0-9]", "", normalized)
+    return normalized or None
+
+def is_generic_country_location(location_name, country_name):
+    """Detect country-level location labels that are too generic for a project pin."""
+    if not location_name:
+        return True
+
+    loc = str(location_name).strip().casefold()
+    country = str(country_name).strip().casefold()
+    generic_labels = {
+        country,
+        f"republic of {country}",
+        f"{country}, republic of",
+        f"federal republic of {country}",
+    }
+    return loc in generic_labels
+
+@app.route('/api/briefing/map-data/<country>', methods=['GET'])
+def get_map_data(country):
+    """Get map data (projects and conflict events) for a country"""
+    try:
+        # Get parent directory where public_documents_filtered.csv is located
+        parent_dir = os.path.join(os.path.dirname(__file__), '..', '..')
+        map_data_folder = os.path.join(os.path.dirname(__file__), 'map_data')
+        
+        projects = []
+        events = []
+        
+        # Load active projects from public_documents_filtered.csv
+        docs_csv = os.path.join(parent_dir, 'public_documents_filtered.csv')
+        if os.path.exists(docs_csv):
+            try:
+                df_docs = read_csv_fallback(docs_csv)
+
+                # Filter by country with whitespace/case normalization
+                country_docs = df_docs[
+                    df_docs['CNTRY_SHORT_NAME'].astype(str).str.strip().str.casefold().eq(country.strip().casefold())
+                ].copy()
+
+                if not country_docs.empty:
+                    country_docs['PROJ_ID_NORM'] = country_docs['PROJ_ID_IB'].map(norm_proj_id)
+                    country_docs = country_docs.dropna(subset=['PROJ_ID_NORM'])
+                    unique_proj_ids = country_docs['PROJ_ID_NORM'].dropna().unique()
+                    print(f"DEBUG: Found {len(unique_proj_ids)} unique normalized projects for {country}")
+
+                    # Load geographic data
+                    geo_csv = os.path.join(map_data_folder, 'PROJECT_GEOGRAPHIC_LOCATION_V2.csv')
+                    if os.path.exists(geo_csv):
+                        df_geo = read_csv_fallback(
+                            geo_csv,
+                            skiprows=4,
+                            engine='python',
+                            on_bad_lines='skip',
+                            quoting=csv.QUOTE_MINIMAL
+                        ).copy()
+
+                        df_geo['PROJ_ID_NORM'] = df_geo['PROJ_ID'].map(norm_proj_id)
+                        df_geo['GEO_LATITUDE_NBR'] = pd.to_numeric(df_geo['GEO_LATITUDE_NBR'], errors='coerce')
+                        df_geo['GEO_LONGITUDE_NBR'] = pd.to_numeric(df_geo['GEO_LONGITUDE_NBR'], errors='coerce')
+
+                        # Keep only valid coordinates before joining
+                        df_geo = df_geo[
+                            df_geo['GEO_LATITUDE_NBR'].between(-90, 90)
+                            & df_geo['GEO_LONGITUDE_NBR'].between(-180, 180)
+                        ]
+
+                        merged = country_docs[['PROJ_ID_IB', 'PROJ_ID_NORM']].drop_duplicates().merge(
+                            df_geo[['PROJ_ID', 'PROJ_ID_NORM', 'GEO_LOC_NME', 'GEO_LATITUDE_NBR', 'GEO_LONGITUDE_NBR']],
+                            on='PROJ_ID_NORM',
+                            how='inner'
+                        ).dropna(subset=['GEO_LATITUDE_NBR', 'GEO_LONGITUDE_NBR'])
+
+                        merged = merged.drop_duplicates(
+                            subset=['PROJ_ID_NORM', 'GEO_LOC_NME', 'GEO_LATITUDE_NBR', 'GEO_LONGITUDE_NBR']
+                        )
+
+                        # Load PAD project names for hover display
+                        project_names_raw = load_project_names_for_country(country)
+                        pad_name_map_raw = {
+                            str(k).strip(): str(v).strip()
+                            for k, v in project_names_raw.items()
+                            if str(v).strip()
+                        }
+                        pad_name_map_norm = {
+                            norm_proj_id(k): str(v).strip()
+                            for k, v in project_names_raw.items()
+                            if norm_proj_id(k) and str(v).strip()
+                        }
+
+                        # One project pin per cleaned project ID so visible pins match project count.
+                        merged['PROJ_ID_CLEAN'] = merged['PROJ_ID_IB'].astype(str).str.strip()
+                        for proj_id_value, proj_group in merged.groupby('PROJ_ID_CLEAN', dropna=True):
+                            proj_id_raw = str(proj_id_value).strip()
+                            proj_id_norm = norm_proj_id(proj_id_raw)
+                            project_name = ''
+                            if proj_id_norm:
+                                project_name = pad_name_map_norm.get(proj_id_norm, '')
+                            if not project_name:
+                                project_name = pad_name_map_raw.get(proj_id_raw, '')
+
+                            selected_row = None
+                            for _, candidate in proj_group.iterrows():
+                                loc_name = str(candidate['GEO_LOC_NME']).strip() if pd.notna(candidate['GEO_LOC_NME']) else ''
+                                if not is_generic_country_location(loc_name, country):
+                                    selected_row = candidate
+                                    break
+                            if selected_row is None:
+                                selected_row = proj_group.iloc[0]
+
+                            projects.append({
+                                'proj_id': proj_id_raw,
+                                'name': str(selected_row['GEO_LOC_NME']).strip() if pd.notna(selected_row['GEO_LOC_NME']) else '',
+                                'project_name': project_name,
+                                'lat': float(selected_row['GEO_LATITUDE_NBR']),
+                                'lon': float(selected_row['GEO_LONGITUDE_NBR']),
+                                'type': 'project'
+                            })
+
+                    print(f"DEBUG: Found {len(projects)} project pins for {country}")
+                else:
+                    print(f"DEBUG: No documents found for country {country} in public_documents_filtered.csv")
+            except Exception as e:
+                print(f"Error loading projects: {e}")
+                import traceback
+                traceback.print_exc()
+        
+        # Load conflict events
+        acled_csv = os.path.join(map_data_folder, 'ACLED Data_2026-03-24.csv')
+        if os.path.exists(acled_csv):
+            try:
+                df_events = read_csv_fallback(acled_csv)
+                df_events['event_date_parsed'] = pd.to_datetime(df_events['event_date'], errors='coerce')
+                cutoff_date = pd.Timestamp.now() - pd.Timedelta(days=365)
+                df_events = df_events[df_events['event_date_parsed'] >= cutoff_date]
+
+                # Filter by country - check various name formats
+                country_events = df_events[
+                    df_events['country'].apply(lambda x: normalize_country_name(x, country))
+                ]
+                
+                # Convert to list of dicts
+                for _, row in country_events.iterrows():
+                    if pd.notna(row['latitude']) and pd.notna(row['longitude']):
+                        try:
+                            events.append({
+                                'lat': float(row['latitude']),
+                                'lon': float(row['longitude']),
+                                'type': 'event',
+                                'sub_event_type': str(row['sub_event_type']).strip() if pd.notna(row['sub_event_type']) else '',
+                                'event_type': str(row['event_type']).strip() if pd.notna(row['event_type']) else '',
+                                'notes': str(row['notes']).strip() if pd.notna(row['notes']) else '',
+                                'date': str(row['event_date']).strip() if pd.notna(row['event_date']) else '',
+                                'location': str(row['location']).strip() if pd.notna(row['location']) else '',
+                            })
+                        except (ValueError, TypeError):
+                            continue
+            except Exception as e:
+                print(f"Error loading ACLED CSV: {e}")
+        
+        return jsonify({
+            'country': country,
+            'projects': projects,
+            'events': events
         })
         
     except Exception as e:
