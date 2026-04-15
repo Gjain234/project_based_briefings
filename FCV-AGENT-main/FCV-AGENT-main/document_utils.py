@@ -1,6 +1,7 @@
 
 import requests
 import fitz
+import re
 from io import BytesIO
 
 def fetch_pdf_text(guid, node_id) -> str:

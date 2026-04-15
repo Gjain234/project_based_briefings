@@ -1,14 +1,35 @@
 import os
 import json
 import re
+import ast
 import base64
 import csv
+import glob
 from flask import Flask, request, jsonify, send_from_directory, Response, stream_with_context
 import anthropic
 from background_docs import FCV_GUIDE
+from rra_cache import get_rra_cache
 import io
 import sys
+import time
+import math
+import unicodedata
+import difflib
+from urllib.parse import urlencode
+from urllib.request import Request, urlopen
 import pandas as pd
+try:
+    import geopandas as gpd
+    from shapely.geometry import Point
+    GEO_AVAILABLE = True
+except ImportError:
+    GEO_AVAILABLE = False
+    
+try:
+    import googlemaps
+except ImportError:
+    googlemaps = None
+
 try:
     from pypdf import PdfReader
 except ImportError:
@@ -17,12 +38,15 @@ except ImportError:
 # Add parent directory to sys.path once at startup (survives Flask reloads)
 parent_dir = os.path.join(os.path.dirname(__file__), '..', '..')
 if parent_dir not in sys.path:
-    sys.path.insert(0, parent_dir)
+    # Keep app-local modules highest priority; parent path is fallback only.
+    sys.path.append(parent_dir)
 
 try:
-    from country_name_mapping import is_individual_country
+    from country_name_mapping import is_individual_country, get_country_id_key, check_acled_country_match
 except ImportError:
     is_individual_country = None
+    get_country_id_key = None
+    check_acled_country_match = None
 
 # ── Constants ────────────────────────────────────────────────────────────────
 
@@ -371,6 +395,172 @@ def get_last_scan(country):
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+
+def get_intermediary_outputs_dir():
+    candidates = [
+        os.path.join(os.path.dirname(__file__), 'intermediary_outputs'),
+        os.path.join(os.path.dirname(__file__), '..', '..', 'intermediary_outputs')
+    ]
+    for path in candidates:
+        if os.path.isdir(path):
+            return path
+    return candidates[0]
+
+
+def parse_list_like(value):
+    if value is None or pd.isna(value):
+        return []
+    if isinstance(value, list):
+        return [str(item).strip() for item in value if str(item).strip()]
+
+    text = str(value).strip()
+    if not text:
+        return []
+
+    try:
+        parsed = ast.literal_eval(text)
+        if isinstance(parsed, list):
+            return [str(item).strip() for item in parsed if str(item).strip()]
+    except Exception:
+        pass
+
+    return [part.strip() for part in text.split(',') if part.strip()]
+
+
+def get_country_risk_scan_candidates(country):
+    candidate_dirs = [
+        os.path.join(os.path.dirname(__file__), 'intermediary_outputs'),
+        os.path.join(os.path.dirname(__file__), '..', '..', 'intermediary_outputs')
+    ]
+    candidates = []
+    for folder in candidate_dirs:
+        metadata_path = os.path.join(folder, f"{country}_briefing_risks_metadata.json")
+        risks_csv_path = os.path.join(folder, f"{country}_briefing_risks.csv")
+        if os.path.exists(metadata_path) or os.path.exists(risks_csv_path):
+            candidates.append((metadata_path, risks_csv_path))
+    return candidates
+
+
+def get_country_risk_scan_paths(country):
+    candidates = get_country_risk_scan_candidates(country)
+    if not candidates:
+        save_folder = get_intermediary_outputs_dir()
+        return (
+            os.path.join(save_folder, f"{country}_briefing_risks_metadata.json"),
+            os.path.join(save_folder, f"{country}_briefing_risks.csv")
+        )
+
+    scored = []
+    for metadata_path, risks_csv_path in candidates:
+        generated_at = ''
+        has_locations = False
+        if os.path.exists(metadata_path):
+            try:
+                with open(metadata_path, 'r', encoding='utf-8') as f:
+                    generated_at = str(json.load(f).get('generated_at', '')).strip()
+            except Exception:
+                generated_at = ''
+        if os.path.exists(risks_csv_path):
+            try:
+                preview = pd.read_csv(risks_csv_path, nrows=1)
+                has_locations = 'locations' in preview.columns
+            except Exception:
+                has_locations = False
+        scored.append((generated_at, has_locations, metadata_path, risks_csv_path))
+
+    scored.sort(key=lambda item: (item[0], item[1]), reverse=True)
+    _, _, metadata_path, risks_csv_path = scored[0]
+    return metadata_path, risks_csv_path
+
+
+def offset_coordinates(lat, lon, index, step=0.045):
+    """Spread overlapping country-level risk pins so each remains clickable."""
+    if index <= 0:
+        return lat, lon
+
+    angle = index * 2.399963229728653
+    radius = step * math.sqrt(index)
+    lat_offset = radius * math.cos(angle)
+    lon_scale = max(math.cos(math.radians(lat)), 0.25)
+    lon_offset = (radius * math.sin(angle)) / lon_scale
+    return lat + lat_offset, lon + lon_offset
+
+
+def load_recent_risk_scan_markers(country):
+    """Load recent country risk-scan rows and expose them as map markers."""
+    _, risks_csv_path = get_country_risk_scan_paths(country)
+    if not os.path.exists(risks_csv_path):
+        return []
+
+    try:
+        df_risks = read_csv_fallback(risks_csv_path)
+    except Exception as e:
+        print(f"Error loading risk scan CSV for {country}: {e}")
+        return []
+
+    if df_risks.empty:
+        return []
+
+    if 'time_horizon' in df_risks.columns:
+        horizon_series = df_risks['time_horizon'].astype(str).str.strip().str.casefold()
+        df_risks = df_risks[horizon_series.isin({'current', '0-3m'})].copy()
+
+    if df_risks.empty:
+        return []
+
+    markers = []
+    fallback_index = 0
+    country_fallback = lookup_local_location_in_country(country, country)
+    for idx, (_, row) in enumerate(df_risks.iterrows()):
+        risk_locations = parse_list_like(row.get('locations'))
+        risk_payload = {
+            'risk_id': str(row.get('risk_id', '')).strip(),
+            'title': str(row.get('title', '')).strip(),
+            'summary': str(row.get('summary', '')).strip(),
+            'severity': str(row.get('severity', '')).strip().lower(),
+            'time_horizon': str(row.get('time_horizon', '')).strip(),
+            'themes': parse_list_like(row.get('themes')),
+            'keywords': parse_list_like(row.get('keywords')),
+            'locations': risk_locations,
+            'type': 'risk_scan'
+        }
+
+        seen_points = set()
+        added_any = False
+        for loc in risk_locations:
+            loc_text = str(loc).strip()
+            if not loc_text or not is_specific_geocodable_location(loc_text):
+                continue
+
+            point = lookup_local_location_in_country(loc_text, country)
+            if not point:
+                continue
+            if not is_point_in_country(point['lat'], point['lon'], country):
+                print(
+                    f"Skipping out-of-country risk-scan pin for {country}: "
+                    f"location='{loc_text}' lat={point['lat']} lon={point['lon']}"
+                )
+                continue
+
+            dedupe_key = (round(point['lat'], 4), round(point['lon'], 4))
+            if dedupe_key in seen_points:
+                continue
+            seen_points.add(dedupe_key)
+            markers.append({
+                **risk_payload,
+                'lat': float(point['lat']),
+                'lon': float(point['lon']),
+                'location_name': loc_text
+            })
+            added_any = True
+
+        if added_any:
+            continue
+        # No specific geocodable location found — skip rather than defaulting to country centroid.
+        # A risk with no identifiable location should not appear on the map.
+
+    return markers
+
 @app.route('/api/briefing/project-names/<country>')
 def get_project_names(country):
     """Get project names for a country from preprocessed PADs"""
@@ -410,16 +600,16 @@ def generate_briefing():
         import pandas as pd
         import ast
         
-        # Add parent directory to path to import main_briefing_generator
+        # Add parent directory as fallback path only.
         parent_dir = os.path.join(os.path.dirname(__file__), '..', '..')
         if parent_dir not in sys.path:
-            sys.path.insert(0, parent_dir)
+            sys.path.append(parent_dir)
         
         from main_briefing_generator import get_fcv_content_from_docs
         
         data = request.json
         country = data.get('country')
-        mode = data.get('mode', 'risk')
+        mode = data.get('mode', 'rra')
         n_paragraphs = data.get('n_paragraphs', 5)
         custom_categories = data.get('custom_categories')
         custom_prompt = data.get('custom_prompt')
@@ -711,7 +901,7 @@ def get_recent_briefings(country):
                     continue
                 
                 # Validate mode
-                if mode not in ['risk', 'sector', 'project-based', 'custom']:
+                if mode not in ['rra', 'risk', 'sector', 'project-based', 'custom']:
                     continue
                 
                 # Parse date
@@ -789,11 +979,12 @@ def check_rra_exists(country):
 
 @app.route('/api/briefing/compare-to-rra', methods=['POST'])
 def compare_to_rra():
-    """Compare briefing to RRA and return annotated version"""
+    """Compare briefing to RRA and return annotated version, using cache when available"""
     try:
         data = request.get_json()
         country = data.get('country')
         briefing = data.get('briefing')
+        bypass_cache = data.get('bypass_cache', False)  # Allow client to force regeneration
         
         if not country or not briefing:
             return jsonify({'error': 'Country and briefing are required'}), 400
@@ -812,6 +1003,18 @@ def compare_to_rra():
         
         if not os.path.exists(rra_path):
             return jsonify({'error': f'RRA file not found for {country}'}), 404
+        
+        # Check cache before loading RRA
+        cache = get_rra_cache(country=country)
+        if not bypass_cache and cache.is_cache_valid(country, briefing, rra_path):
+            cached_result = cache.get_cached_comparison(country, briefing)
+            if cached_result:
+                return jsonify({
+                    'annotated_briefing': cached_result,
+                    'rra_summary': f"RRA found: {os.path.basename(rra_path)}",
+                    'from_cache': True,
+                    'cache_key': cache._build_cache_key(country, briefing)
+                })
         
         # Load RRA content
         with open(rra_path, 'r', encoding='utf-8') as f:
@@ -888,25 +1091,87 @@ Briefing to Annotate:
             annotated_briefing
         )
         
+        # Save to cache for future use
+        cache_key = cache._build_cache_key(country, briefing)
+        cache.save_comparison(country, briefing, rra_path, annotated_briefing)
+        
         return jsonify({
             'annotated_briefing': annotated_briefing,
-            'rra_summary': f"RRA found: {os.path.basename(rra_path)}"
+            'rra_summary': f"RRA found: {os.path.basename(rra_path)}",
+            'from_cache': False,
+            'cache_key': cache_key
         })
         
     except Exception as e:
         import traceback
         return jsonify({'error': f"{str(e)}\\n{traceback.format_exc()}"}), 500
 
+
+@app.route('/api/briefing/compare-to-rra/<country>', methods=['GET'])
+def get_cached_comparison(country):
+    """Get cached RRA comparison if it exists"""
+    try:
+        cache = get_rra_cache(country=country)
+        # Note: This endpoint only retrieves cache, doesn't generate
+        # To request generation, use POST endpoint instead
+        return jsonify({
+            'message': 'Use POST /api/briefing/compare-to-rra to generate or retrieve cached comparison',
+            'has_cache': cache.get_cache_entries(country) > 0 if hasattr(cache, 'get_cache_entries') else False
+        })
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+# ── RRA Cache Management Endpoints ───────────────────────────────────────────
+
+@app.route('/api/briefing/rra-cache/stats', methods=['GET'])
+def get_rra_cache_stats():
+    """Get statistics about RRA comparison cache"""
+    try:
+        cache = get_rra_cache()
+        stats = cache.get_cache_stats()
+        return jsonify(stats)
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+@app.route('/api/briefing/rra-cache/clear', methods=['POST'])
+def clear_rra_cache():
+    """Clear RRA comparison cache for a specific country"""
+    try:
+        data = request.get_json()
+        country = data.get('country')
+        
+        if not country:
+            return jsonify({'error': 'Country is required'}), 400
+        
+        cache = get_rra_cache()
+        cleared = cache.clear_country_cache(country)
+        
+        return jsonify({
+            'success': True,
+            'message': f'Cleared {cleared} cache entries for {country}',
+            'entries_cleared': cleared
+        })
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
 # ── Map Data Endpoint ────────────────────────────────────────────────────────
 
 # Country name mapping for ACLED
-ACLED_COUNTRY_MAPPING = {
-    'Guinea': ['Guinea', 'Guinea-Bissau'],
-    'Ethiopia': ['Ethiopia'],
-    'Somalia': ['Somalia', 'Federal Republic of Somalia'],
-    'Djibouti': ['Djibouti'],
-    'South Sudan': ['South Sudan', 'Sudan'],
-}
+def canonical_country_name(name):
+    """Normalize country labels to a canonical key for strict same-country matching."""
+    text = str(name or '').strip()
+    if not text:
+        return ''
+
+    if get_country_id_key is not None:
+        mapped = get_country_id_key(text)
+        if mapped:
+            return str(mapped).strip().casefold()
+
+    return text.casefold()
 
 def get_iso_code_for_country(country_name):
     """Get ISO code from country name"""
@@ -917,29 +1182,20 @@ def get_iso_code_for_country(country_name):
         'Djibouti': 'DJ',
         'South Sudan': 'SS',
         'Sudan': 'SD',
+        'Lebanon': 'LB',
+        'Mauritania': 'MR',
     }
     return iso_mapping.get(country_name, '')
 
 def normalize_country_name(name, target_country):
-    """Check if a country name from data matches the target country"""
+    """Check if a country name from data matches the target country (uses ACLED mapping)"""
+    if check_acled_country_match is not None:
+        return check_acled_country_match(name, target_country)
+    
+    # Fallback: basic case-insensitive match if check_acled_country_match not available
     if not name or not target_country:
         return False
-    
-    name_lower = str(name).lower().strip()
-    target_lower = str(target_country).lower().strip()
-    
-    # Exact match
-    if name_lower == target_lower:
-        return True
-    
-    # Check ACLED mapping for matching variations
-    for key, variations in ACLED_COUNTRY_MAPPING.items():
-        if key.lower() == target_lower:
-            for var in variations:
-                if name_lower == var.lower():
-                    return True
-    
-    return False
+    return str(name).lower().strip() == str(target_country).lower().strip()
 
 def read_csv_fallback(path, **kwargs):
     """Read CSV with fallback encodings for mixed-source files."""
@@ -967,6 +1223,59 @@ def read_json_fallback(path):
     with open(path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
+
+ACLED_EVENTS_CACHE = {
+    'signature': None,
+    'df': None,
+}
+
+
+def load_combined_acled_events(map_data_folder):
+    """Load and merge ACLED snapshots from map_data, removing duplicates."""
+    pattern = os.path.join(map_data_folder, 'ACLED Data_*.csv')
+    acled_files = sorted(glob.glob(pattern))
+    if not acled_files:
+        return pd.DataFrame()
+
+    signature = tuple((os.path.basename(path), os.path.getmtime(path)) for path in acled_files)
+    if ACLED_EVENTS_CACHE['signature'] == signature and ACLED_EVENTS_CACHE['df'] is not None:
+        return ACLED_EVENTS_CACHE['df']
+
+    frames = []
+    for path in acled_files:
+        try:
+            df_part = read_csv_fallback(path)
+            df_part['__source_file'] = os.path.basename(path)
+            frames.append(df_part)
+        except Exception as e:
+            print(f"Warning: failed to load ACLED file {path}: {e}")
+
+    if not frames:
+        return pd.DataFrame()
+
+    df_events = pd.concat(frames, ignore_index=True)
+
+    # Prefer canonical ACLED unique event id where available.
+    if 'event_id_cnty' in df_events.columns:
+        df_events['event_id_cnty'] = df_events['event_id_cnty'].astype(str).str.strip()
+        dedupe_cols = ['event_id_cnty']
+    else:
+        dedupe_cols = [
+            col for col in ['country', 'event_date', 'location', 'latitude', 'longitude', 'event_type', 'sub_event_type']
+            if col in df_events.columns
+        ]
+
+    # Keep the latest entry when duplicates exist across snapshot files.
+    sort_cols = [col for col in ['timestamp', 'event_date', '__source_file'] if col in df_events.columns]
+    if sort_cols:
+        df_events = df_events.sort_values(sort_cols)
+    if dedupe_cols:
+        df_events = df_events.drop_duplicates(subset=dedupe_cols, keep='last')
+
+    ACLED_EVENTS_CACHE['signature'] = signature
+    ACLED_EVENTS_CACHE['df'] = df_events
+    return df_events
+
 def norm_proj_id(value):
     """Normalize project IDs so joins survive punctuation/spacing differences."""
     if pd.isna(value):
@@ -990,16 +1299,816 @@ def is_generic_country_location(location_name, country_name):
     }
     return loc in generic_labels
 
+
+GEOCODE_CACHE = {}
+GEOCODE_CACHE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'map_data', 'geocode_cache.json')
+REVERSE_GEOCODE_CACHE = {}
+REVERSE_GEOCODE_CACHE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'map_data', 'reverse_geocode_cache.json')
+LOCATION_NAME_VALIDATION_CACHE = {}  # (location_name_key, country_key) -> bool
+LOCATION_NAME_VALIDATION_CACHE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'map_data', 'location_validation_cache.json')
+LAST_GEOCODE_REQUEST_AT = 0.0
+WORLD_BOUNDARIES = None  # Will load Natural Earth boundaries on first use
+GOOGLE_MAPS_CLIENT = None  # Will initialize if API key is available
+LOCAL_LOCATION_INDEX = {}
+LOCATION_COORD_STORE = {}
+LOCATION_COORD_STORE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'map_data', 'location_coordinates.json')
+
+
+def load_geocode_cache():
+    global GEOCODE_CACHE
+    if GEOCODE_CACHE:
+        return GEOCODE_CACHE
+
+    if os.path.exists(GEOCODE_CACHE_FILE):
+        try:
+            with open(GEOCODE_CACHE_FILE, 'r', encoding='utf-8') as f:
+                raw_cache = json.load(f)
+            for key, value in raw_cache.items():
+                parts = key.split('||', 1)
+                if len(parts) == 2:
+                    GEOCODE_CACHE[(parts[0], parts[1])] = value
+        except Exception as e:
+            print(f"Warning: failed to load geocode cache: {e}")
+    return GEOCODE_CACHE
+
+
+def save_geocode_cache():
+    try:
+        os.makedirs(os.path.dirname(GEOCODE_CACHE_FILE), exist_ok=True)
+        serializable = {
+            f"{key[0]}||{key[1]}": value
+            for key, value in GEOCODE_CACHE.items()
+            if value is not None
+        }
+        with open(GEOCODE_CACHE_FILE, 'w', encoding='utf-8') as f:
+            json.dump(serializable, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"Warning: failed to save geocode cache: {e}")
+
+
+def load_reverse_geocode_cache():
+    global REVERSE_GEOCODE_CACHE
+    if REVERSE_GEOCODE_CACHE:
+        return REVERSE_GEOCODE_CACHE
+
+    if os.path.exists(REVERSE_GEOCODE_CACHE_FILE):
+        try:
+            with open(REVERSE_GEOCODE_CACHE_FILE, 'r', encoding='utf-8') as f:
+                REVERSE_GEOCODE_CACHE = json.load(f)
+        except Exception as e:
+            print(f"Warning: failed to load reverse geocode cache: {e}")
+            REVERSE_GEOCODE_CACHE = {}
+
+    return REVERSE_GEOCODE_CACHE
+
+
+def save_reverse_geocode_cache():
+    try:
+        os.makedirs(os.path.dirname(REVERSE_GEOCODE_CACHE_FILE), exist_ok=True)
+        with open(REVERSE_GEOCODE_CACHE_FILE, 'w', encoding='utf-8') as f:
+            json.dump(REVERSE_GEOCODE_CACHE, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"Warning: failed to save reverse geocode cache: {e}")
+
+
+def load_location_validation_cache():
+    """Load cached location+country validation results."""
+    global LOCATION_NAME_VALIDATION_CACHE
+    if LOCATION_NAME_VALIDATION_CACHE:
+        return LOCATION_NAME_VALIDATION_CACHE
+
+    if os.path.exists(LOCATION_NAME_VALIDATION_CACHE_FILE):
+        try:
+            with open(LOCATION_NAME_VALIDATION_CACHE_FILE, 'r', encoding='utf-8') as f:
+                raw = json.load(f)
+            for key, value in raw.items():
+                parts = key.split('||', 1)
+                if len(parts) == 2 and isinstance(value, bool):
+                    LOCATION_NAME_VALIDATION_CACHE[(parts[0], parts[1])] = value
+        except Exception as e:
+            print(f"Warning: failed to load location validation cache: {e}")
+
+    return LOCATION_NAME_VALIDATION_CACHE
+
+
+def save_location_validation_cache():
+    """Save cached location+country validation results."""
+    try:
+        os.makedirs(os.path.dirname(LOCATION_NAME_VALIDATION_CACHE_FILE), exist_ok=True)
+        serializable = {
+            f"{key[0]}||{key[1]}": value
+            for key, value in LOCATION_NAME_VALIDATION_CACHE.items()
+            if isinstance(value, bool)
+        }
+        with open(LOCATION_NAME_VALIDATION_CACHE_FILE, 'w', encoding='utf-8') as f:
+            json.dump(serializable, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"Warning: failed to save location validation cache: {e}")
+
+
+NATURALEARTH_LOCAL = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'map_data', 'ne_110m_admin_0_countries.zip')
+NATURALEARTH_URL = 'https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip'
+
+
+def load_world_boundaries():
+    """Load Natural Earth country boundaries for offline point-in-polygon checks."""
+    global WORLD_BOUNDARIES
+
+    if WORLD_BOUNDARIES is not None:
+        return WORLD_BOUNDARIES
+
+    if not GEO_AVAILABLE:
+        print("Warning: geopandas not available; falling back to Nominatim reverse geocoding")
+        return None
+
+    # Use locally cached shapefile if available
+    if not os.path.exists(NATURALEARTH_LOCAL):
+        try:
+            os.makedirs(os.path.dirname(NATURALEARTH_LOCAL), exist_ok=True)
+            print("Downloading Natural Earth country boundaries (one-time download)...")
+            req = Request(NATURALEARTH_URL, headers={'User-Agent': 'FCV-Agent-Map-Geocoder/1.0'})
+            with urlopen(req, timeout=30) as resp:
+                with open(NATURALEARTH_LOCAL, 'wb') as f:
+                    f.write(resp.read())
+            print("Downloaded Natural Earth boundaries.")
+        except Exception as e:
+            print(f"Warning: failed to download Natural Earth boundaries: {e}")
+            WORLD_BOUNDARIES = None
+            return None
+
+    try:
+        WORLD_BOUNDARIES = gpd.read_file(NATURALEARTH_LOCAL)
+        print(f"Loaded Natural Earth boundaries with {len(WORLD_BOUNDARIES)} countries")
+        return WORLD_BOUNDARIES
+    except Exception as e:
+        print(f"Warning: failed to load world boundaries: {e}")
+        WORLD_BOUNDARIES = None
+        return None
+
+
+def is_point_in_country_geopandas(lat, lon, country_name):
+    """Use geopandas to check if a point is in a country (offline, instant)."""
+    try:
+        world = load_world_boundaries()
+        if world is None:
+            return None  # Fallback to API
+
+        target_country = canonical_country_name(country_name)
+        if not target_country:
+            return False
+
+        point = Point(float(lon), float(lat))
+
+        matches = world[world.geometry.contains(point)]
+        if matches.empty:
+            return False
+
+        # The Natural Earth full shapefile uses 'NAME' (uppercase); lowres used 'name'
+        name_col = 'NAME' if 'NAME' in world.columns else 'name'
+        for _, row in matches.iterrows():
+            country_in_boundary = canonical_country_name(str(row.get(name_col, '')))
+            if country_in_boundary == target_country:
+                return True
+
+        return False
+    except Exception as e:
+        print(f"Warning: geopandas check failed for ({lat}, {lon}) in {country_name}: {e}")
+        return None  # Fallback to API
+
+
+def initialize_google_maps():
+    """Initialize Google Maps client if API key is available."""
+    global GOOGLE_MAPS_CLIENT
+    if GOOGLE_MAPS_CLIENT is not None:
+        return GOOGLE_MAPS_CLIENT
+    
+    if googlemaps is None:
+        return None
+    
+    api_key = os.environ.get("GOOGLE_MAPS_API_KEY")
+    if not api_key:
+        return None
+    
+    try:
+        GOOGLE_MAPS_CLIENT = googlemaps.Client(key=api_key, timeout=8)
+        return GOOGLE_MAPS_CLIENT
+    except Exception as e:
+        print(f"Warning: failed to initialize Google Maps client: {e}")
+        return None
+
+
+def forward_geocode_location(location_name, country_name):
+    """
+    Try to get coordinates for a location name using Google Maps (fast, accurate).
+    Falls back to Nominatim if Google Maps is unavailable.
+    Caches result in location_coordinates.json.
+    """
+    # First check if we have it cached
+    stored = lookup_stored_location_in_country(location_name, country_name)
+    if stored:
+        return stored
+    
+    # Try Google Maps if available
+    client = initialize_google_maps()
+    if client:
+        try:
+            search_query = f"{location_name}, {country_name}"
+            results = client.geocode(search_query)
+            if results:
+                result = results[0]
+                location = result['geometry']['location']
+                point = {
+                    'lat': location['lat'],
+                    'lon': location['lng'],
+                    'source': 'google_maps'
+                }
+                register_location_coordinate(location_name, country_name, point)
+                return point
+        except Exception as e:
+            print(f"Note: Google Maps lookup failed for {location_name}: {e}")
+    
+    # Fallback to Nominatim (slow, but free)
+    try:
+        search_query = f"{location_name}, {country_name}"
+        params = urlencode({
+            'q': search_query,
+            'format': 'jsonv2',
+            'limit': 1,
+            'addressdetails': 1
+        })
+        req = Request(
+            f"https://nominatim.openstreetmap.org/search?{params}",
+            headers={'User-Agent': 'FCV-Agent-Map-Geocoder/1.0 (internal tooling)'}
+        )
+        
+        wait_for_geocode_rate_limit()
+        with urlopen(req, timeout=8) as resp:
+            results = json.loads(resp.read().decode('utf-8'))
+        
+        if results and len(results) > 0:
+            result = results[0]
+            point = {
+                'lat': float(result['lat']),
+                'lon': float(result['lon']),
+                'source': 'nominatim'
+            }
+            register_location_coordinate(location_name, country_name, point)
+            return point
+    except Exception as e:
+        print(f"Note: Nominatim lookup failed for {location_name}: {e}")
+    
+    return None
+
+
+def is_point_in_country(lat, lon, country_name):
+    """Verify coordinates are in the selected country using geopandas (offline) or fallback to Nominatim."""
+    target_country = canonical_country_name(country_name)
+    if not target_country:
+        return False
+
+    # Only retrieve confirmed-True results from cache — never cache False, because a
+    # previous API failure or stale data could poison the cache and hide valid pins.
+    load_location_validation_cache()
+    cache_key = (f"{float(lat):.5f},{float(lon):.5f}", str(country_name).strip().casefold())
+    cached_result = LOCATION_NAME_VALIDATION_CACHE.get(cache_key)
+    if cached_result is True:
+        return True
+
+    # Try geopandas first (instant, offline, no API)
+    result = is_point_in_country_geopandas(lat, lon, country_name)
+    if result is not None:
+        if result is True:
+            LOCATION_NAME_VALIDATION_CACHE[cache_key] = True
+            save_location_validation_cache()
+        return result
+
+    # Fallback to Nominatim reverse geocoding (slower, requires API)
+    load_reverse_geocode_cache()
+    reverse_cache_key = f"{float(lat):.5f},{float(lon):.5f}"
+    cached_country = REVERSE_GEOCODE_CACHE.get(reverse_cache_key)
+    if cached_country is not None:
+        result = canonical_country_name(cached_country) == target_country
+        if result is True:
+            LOCATION_NAME_VALIDATION_CACHE[cache_key] = True
+            save_location_validation_cache()
+        return result
+
+    try:
+        params = urlencode({
+            'lat': float(lat),
+            'lon': float(lon),
+            'format': 'jsonv2',
+            'zoom': 5,
+            'addressdetails': 1
+        })
+        req = Request(
+            f"https://nominatim.openstreetmap.org/reverse?{params}",
+            headers={'User-Agent': 'FCV-Agent-Map-Geocoder/1.0 (internal tooling)'}
+        )
+
+        wait_for_geocode_rate_limit()
+        with urlopen(req, timeout=8) as resp:
+            payload = json.loads(resp.read().decode('utf-8'))
+
+        country_value = str((payload.get('address') or {}).get('country', '')).strip()
+        REVERSE_GEOCODE_CACHE[reverse_cache_key] = country_value
+        save_reverse_geocode_cache()
+        
+        result = canonical_country_name(country_value) == target_country
+        if result is True:
+            LOCATION_NAME_VALIDATION_CACHE[cache_key] = True
+            save_location_validation_cache()
+        return result
+    except Exception as e:
+        print(f"Warning: reverse geocode country check failed for ({lat}, {lon}) in {country_name}: {e}")
+        # Fail open for API errors — don't hide valid pins due to transient failures.
+        return True
+
+
+def load_location_coord_store():
+    global LOCATION_COORD_STORE
+    if LOCATION_COORD_STORE:
+        return LOCATION_COORD_STORE
+
+    if os.path.exists(LOCATION_COORD_STORE_FILE):
+        try:
+            with open(LOCATION_COORD_STORE_FILE, 'r', encoding='utf-8') as f:
+                raw_store = json.load(f)
+            for key, value in raw_store.items():
+                parts = key.split('||', 1)
+                if len(parts) == 2 and isinstance(value, dict):
+                    LOCATION_COORD_STORE[(parts[0], parts[1])] = value
+        except Exception as e:
+            print(f"Warning: failed to load location coordinate store: {e}")
+    return LOCATION_COORD_STORE
+
+
+def save_location_coord_store():
+    try:
+        os.makedirs(os.path.dirname(LOCATION_COORD_STORE_FILE), exist_ok=True)
+        serializable = {
+            f"{key[0]}||{key[1]}": value
+            for key, value in LOCATION_COORD_STORE.items()
+            if isinstance(value, dict) and 'lat' in value and 'lon' in value
+        }
+        with open(LOCATION_COORD_STORE_FILE, 'w', encoding='utf-8') as f:
+            json.dump(serializable, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"Warning: failed to save location coordinate store: {e}")
+
+
+def wait_for_geocode_rate_limit(min_interval_seconds=1.1):
+    global LAST_GEOCODE_REQUEST_AT
+    now = time.time()
+    elapsed = now - LAST_GEOCODE_REQUEST_AT
+    if elapsed < min_interval_seconds:
+        time.sleep(min_interval_seconds - elapsed)
+    LAST_GEOCODE_REQUEST_AT = time.time()
+
+
+def normalize_location_key(value):
+    text = unicodedata.normalize('NFKD', str(value or '')).encode('ascii', 'ignore').decode('ascii')
+    text = text.strip().casefold()
+    text = text.replace('-', ' ')
+    text = re.sub(r"\([^)]*\)", ' ', text)
+    text = re.sub(r"\bcity\b", ' ', text)
+    text = re.sub(r"\b(region|province|district|ville)\b", ' ', text)
+    text = re.sub(r"[^a-z0-9\s]", ' ', text)
+    text = re.sub(r"\s+", ' ', text).strip()
+    return text
+
+
+def location_key_variants(value):
+    base = normalize_location_key(value)
+    if not base:
+        return []
+
+    variants = {base}
+    variants.add(base.replace(' djibouti', '').strip())
+    variants.add(base.replace('tadjourah', 'tadjoura').strip())
+    variants.add(base.replace('tadjoura', 'tadjourah').strip())
+    variants.add(base.replace('hol hol', 'holhol').strip())
+    variants.add(base.replace('holhol', 'hol hol').strip())
+    variants.add(base.replace('holl holl', 'hol hol').strip())
+    variants.add(base.replace('holl holl', 'holhol').strip())
+    variants.add(re.sub(r"\bali addeh\b", 'ali adde', base).strip())
+    if re.search(r"\bali adde\b", base) and not re.search(r"\bali addeh\b", base):
+        variants.add(re.sub(r"\bali adde\b", 'ali addeh', base).strip())
+    variants.add(base.replace('markazi', 'markasi').strip())
+    variants.add(base.replace('markasi', 'markazi').strip())
+    variants.add(base.replace('merkazi', 'markazi').strip())
+    variants.add(base.replace('merkazi', 'markasi').strip())
+
+    cleaned = []
+    for variant in variants:
+        variant = re.sub(r"\s+", ' ', variant).strip()
+        if variant:
+            cleaned.append(variant)
+    return list(dict.fromkeys(cleaned))
+
+
+def register_location_coordinate(location_name, country_name, point, persist=True):
+    if not point or 'lat' not in point or 'lon' not in point:
+        return
+
+    load_location_coord_store()
+    country_key = str(country_name or '').strip().casefold()
+    if not country_key:
+        return
+
+    payload = {
+        'lat': float(point['lat']),
+        'lon': float(point['lon']),
+        'source': str(point.get('source', 'stored')).strip() or 'stored'
+    }
+
+    changed = False
+    for variant in location_key_variants(location_name):
+        store_key = (variant, country_key)
+        existing = LOCATION_COORD_STORE.get(store_key)
+        if existing != payload:
+            LOCATION_COORD_STORE[store_key] = payload
+            changed = True
+
+    if changed and persist:
+        save_location_coord_store()
+
+
+def lookup_stored_location_in_country(location_name, country_name):
+    load_location_coord_store()
+    country_key = str(country_name or '').strip().casefold()
+    if not country_key:
+        return None
+
+    for variant in location_key_variants(location_name):
+        stored = LOCATION_COORD_STORE.get((variant, country_key))
+        if stored and 'lat' in stored and 'lon' in stored:
+            return {
+                'lat': float(stored['lat']),
+                'lon': float(stored['lon']),
+                'source': str(stored.get('source', 'stored')).strip() or 'stored'
+            }
+    return None
+
+
+def build_local_location_index(country_name):
+    cache_key = str(country_name).strip().casefold()
+    if cache_key in LOCAL_LOCATION_INDEX:
+        return LOCAL_LOCATION_INDEX[cache_key]
+
+    index = {}
+    map_data_folder = os.path.join(os.path.dirname(__file__), 'map_data')
+    iso_code = get_iso_code_for_country(country_name)
+
+    geo_csv = os.path.join(map_data_folder, 'PROJECT_GEOGRAPHIC_LOCATION_V2.csv')
+    if os.path.exists(geo_csv):
+        try:
+            df_geo = read_csv_fallback(
+                geo_csv,
+                skiprows=4,
+                engine='python',
+                on_bad_lines='skip',
+                quoting=csv.QUOTE_MINIMAL
+            )
+            if iso_code:
+                df_geo = df_geo[df_geo['ISO_CNTRY_CODE'].astype(str).str.strip().eq(iso_code)]
+            else:
+                # If ISO is not configured, restrict to projects belonging to the selected country.
+                docs_csv = os.path.join(os.path.dirname(__file__), '..', '..', 'public_documents_filtered.csv')
+                allowed_proj_ids = set()
+                if os.path.exists(docs_csv):
+                    try:
+                        df_docs = read_csv_fallback(docs_csv)
+                        if {'CNTRY_SHORT_NAME', 'PROJ_ID_IB'}.issubset(df_docs.columns):
+                            country_docs = df_docs[
+                                df_docs['CNTRY_SHORT_NAME'].apply(lambda x: normalize_country_name(x, country_name))
+                            ].copy()
+                            allowed_proj_ids = {
+                                norm_proj_id(value)
+                                for value in country_docs['PROJ_ID_IB'].tolist()
+                                if norm_proj_id(value)
+                            }
+                    except Exception as e:
+                        print(f"Warning: failed to load country project scope for {country_name}: {e}")
+
+                if allowed_proj_ids:
+                    df_geo['PROJ_ID_NORM'] = df_geo['PROJ_ID'].map(norm_proj_id)
+                    df_geo = df_geo[df_geo['PROJ_ID_NORM'].isin(allowed_proj_ids)].copy()
+                else:
+                    # Fail closed: no country scope means no project-geo index for this country.
+                    df_geo = df_geo.iloc[0:0].copy()
+            df_geo['GEO_LATITUDE_NBR'] = pd.to_numeric(df_geo['GEO_LATITUDE_NBR'], errors='coerce')
+            df_geo['GEO_LONGITUDE_NBR'] = pd.to_numeric(df_geo['GEO_LONGITUDE_NBR'], errors='coerce')
+            df_geo = df_geo[
+                df_geo['GEO_LATITUDE_NBR'].between(-90, 90)
+                & df_geo['GEO_LONGITUDE_NBR'].between(-180, 180)
+            ]
+            for _, row in df_geo.iterrows():
+                loc_name = str(row.get('GEO_LOC_NME', '')).strip()
+                point = {
+                    'lat': float(row['GEO_LATITUDE_NBR']),
+                    'lon': float(row['GEO_LONGITUDE_NBR']),
+                    'source': 'local_geo'
+                }
+                for key in location_key_variants(loc_name):
+                    if key and key not in index:
+                        index[key] = point
+        except Exception as e:
+            print(f"Warning: failed to build geo location index for {country_name}: {e}")
+
+    try:
+        df_events = load_combined_acled_events(map_data_folder)
+        if not df_events.empty:
+            df_events = df_events[df_events['country'].apply(lambda x: normalize_country_name(x, country_name))].copy()
+            df_events['latitude'] = pd.to_numeric(df_events['latitude'], errors='coerce')
+            df_events['longitude'] = pd.to_numeric(df_events['longitude'], errors='coerce')
+            df_events = df_events[
+                df_events['latitude'].between(-90, 90)
+                & df_events['longitude'].between(-180, 180)
+            ]
+            for _, row in df_events.iterrows():
+                loc_name = str(row.get('location', '')).strip()
+                point = {
+                    'lat': float(row['latitude']),
+                    'lon': float(row['longitude']),
+                    'source': 'local_acled'
+                }
+                for key in location_key_variants(loc_name):
+                    if key and key not in index:
+                        index[key] = point
+    except Exception as e:
+        print(f"Warning: failed to build ACLED location index for {country_name}: {e}")
+
+    LOCAL_LOCATION_INDEX[cache_key] = index
+    return index
+
+
+def lookup_local_location_in_country(location_name, country_name):
+    stored_match = lookup_stored_location_in_country(location_name, country_name)
+    if stored_match:
+        return stored_match
+
+    index = build_local_location_index(country_name)
+    for key in location_key_variants(location_name):
+        if key in index:
+            point = index[key]
+            register_location_coordinate(location_name, country_name, point)
+            return point
+
+    # Retry with generic suffixes removed or common whitespace variants.
+    for key in location_key_variants(location_name):
+        simplified = re.sub(r"\b(republic of|federal republic of)\b", ' ', key)
+        simplified = re.sub(r"\s+", ' ', simplified).strip()
+        if simplified in index:
+            point = index[simplified]
+            register_location_coordinate(location_name, country_name, point)
+            return point
+
+    # Allow a conservative fuzzy match for spelling variants like Markazi/Markasi.
+    lookup_keys = location_key_variants(location_name)
+    for lookup_key in lookup_keys:
+        close = difflib.get_close_matches(lookup_key, list(index.keys()), n=1, cutoff=0.86)
+        if close:
+            point = index[close[0]]
+            register_location_coordinate(location_name, country_name, point)
+            return point
+
+    return None
+
+
+def is_specific_geocodable_location(location_name):
+    """Heuristic filter to skip broad/non-geocodable PAD location phrases."""
+    if not location_name:
+        return False
+
+    text = str(location_name).strip()
+    if not text:
+        return False
+
+    lower = text.casefold()
+    broad_markers = [
+        "all ",
+        "nationwide",
+        "countrywide",
+        "across ",
+        "throughout ",
+        "governorates",
+        "national",
+        "population at large",
+    ]
+    if any(marker in lower for marker in broad_markers):
+        return False
+
+    # Very short tokens are usually too ambiguous for geocoding.
+    if len(text) < 3:
+        return False
+
+    return True
+
+
+def is_reliable_geocode_candidate(candidate):
+    """Accept only location-like Nominatim results with reasonable confidence."""
+    if not candidate:
+        return False
+
+    candidate_type = str(candidate.get('type', '')).strip().casefold()
+    candidate_class = str(candidate.get('class', '')).strip().casefold()
+    importance = float(candidate.get('importance', 0) or 0)
+
+    allowed_classes = {'', 'place', 'boundary'}
+    allowed_types = {
+        'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood',
+        'administrative', 'county', 'state_district', 'municipality', 'locality',
+        'residential', 'refugee_site'
+    }
+
+    if candidate_type and candidate_type not in allowed_types:
+        return False
+
+    if candidate_class not in allowed_classes and not candidate_type:
+        return False
+
+    # Keep threshold conservative so ambiguous/free-text matches are discarded.
+    if importance < 0.05 and candidate_type != 'refugee_site':
+        return False
+
+    return True
+
+
+def geocode_location_in_country(location_name, country_name):
+    """Geocode a location and keep only results plausibly in the target country."""
+    if not is_specific_geocodable_location(location_name):
+        return None
+
+    local_match = lookup_local_location_in_country(location_name, country_name)
+    if local_match:
+        return local_match
+
+    stored_match = lookup_stored_location_in_country(location_name, country_name)
+    if stored_match:
+        return stored_match
+
+    # Prefer the shared forward geocoder (Google Maps when configured, Nominatim fallback).
+    # This avoids the high-volume multi-variant Nominatim loop below when Google is available.
+    forward_match = forward_geocode_location(location_name, country_name)
+    if forward_match:
+        try:
+            if is_point_in_country(forward_match['lat'], forward_match['lon'], country_name):
+                source = str(forward_match.get('source', '')).strip().lower()
+                normalized_source = 'pad_geocoded_google' if source == 'google_maps' else 'pad_geocoded'
+                return {
+                    'lat': float(forward_match['lat']),
+                    'lon': float(forward_match['lon']),
+                    'source': normalized_source
+                }
+        except Exception:
+            pass
+
+    # If Google is configured and forward lookup still failed, stop here to avoid
+    # additional Nominatim burst traffic for PAD overlays.
+    if initialize_google_maps() is not None:
+        return None
+
+    load_geocode_cache()
+    cache_key = (str(location_name).strip().casefold(), str(country_name).strip().casefold())
+    if cache_key in GEOCODE_CACHE:
+        cached = GEOCODE_CACHE[cache_key]
+        # Retry historical misses after logic updates instead of locking failures forever.
+        if cached is not None:
+            return cached
+        del GEOCODE_CACHE[cache_key]
+
+    try:
+        target_country = str(country_name).strip().casefold()
+        target_country_token = f", {target_country}"
+
+        # Query variants improve hit rate for names like "Djibouti City".
+        base_location = str(location_name).strip()
+        query_variants = [
+            f"{base_location}, {country_name}",
+            base_location,
+            base_location.replace('-', ' '),
+            base_location.replace(' city', '').replace(' City', ''),
+        ]
+
+        seen_queries = set()
+        for query in query_variants:
+            q = query.strip()
+            if not q:
+                continue
+            q_key = q.casefold()
+            if q_key in seen_queries:
+                continue
+            seen_queries.add(q_key)
+
+            params = urlencode({
+                'q': q,
+                'format': 'jsonv2',
+                'addressdetails': 1,
+                'limit': 3
+            })
+            url = f"https://nominatim.openstreetmap.org/search?{params}"
+            req = Request(url, headers={
+                'User-Agent': 'FCV-Agent-Map-Geocoder/1.0 (internal tooling)'
+            })
+
+            wait_for_geocode_rate_limit()
+            with urlopen(req, timeout=8) as resp:
+                payload = json.loads(resp.read().decode('utf-8'))
+
+            for candidate in payload:
+                if not is_reliable_geocode_candidate(candidate):
+                    continue
+
+                lat = candidate.get('lat')
+                lon = candidate.get('lon')
+                if lat is None or lon is None:
+                    continue
+
+                address = candidate.get('address', {}) or {}
+                addr_country = str(address.get('country', '')).strip().casefold()
+                display_name = str(candidate.get('display_name', '')).strip().casefold()
+
+                # Strict country validation:
+                # 1) If candidate has a country value, it must match target country.
+                # 2) Only if country is missing do we fall back to display_name token checks.
+                if target_country:
+                    if addr_country:
+                        if target_country not in addr_country and addr_country not in target_country:
+                            continue
+                    else:
+                        if (
+                            target_country_token not in display_name
+                            and not display_name.endswith(target_country)
+                        ):
+                            continue
+
+                result = {
+                    'lat': float(lat),
+                    'lon': float(lon),
+                    'source': 'pad_geocoded'
+                }
+                GEOCODE_CACHE[cache_key] = result
+                save_geocode_cache()
+                register_location_coordinate(location_name, country_name, result)
+
+                return result
+    except Exception as e:
+        print(f"Geocoding failed for '{location_name}' in '{country_name}': {e}")
+
+    # Do not negative-cache misses: API data/filters may improve and should be retryable.
+    return None
+
+
+def load_pad_primary_locations_for_project(country, proj_id):
+    """Read primary_locations from a project's preprocessed PAD JSON."""
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    country_dir = os.path.join(base_dir, "preprocessed_pads", country)
+    file_path = os.path.join(country_dir, f"{proj_id}_preprocessed.json")
+
+    if not os.path.exists(file_path):
+        return []
+
+    try:
+        data = read_json_fallback(file_path)
+        locations = data.get('structured_content', {}).get('geographic_scope', {}).get('primary_locations', [])
+        if isinstance(locations, list):
+            return [str(loc).strip() for loc in locations if str(loc).strip()]
+    except Exception as e:
+        print(f"Error loading PAD primary locations for {proj_id}: {e}")
+
+    return []
+
+
+def has_preprocessed_pad_for_project(country, proj_id):
+    """Check whether a project has a preprocessed PAD JSON file available."""
+    if not proj_id:
+        return False
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    country_dir = os.path.join(base_dir, "preprocessed_pads", country)
+    file_path = os.path.join(country_dir, f"{proj_id}_preprocessed.json")
+    return os.path.exists(file_path)
+
 @app.route('/api/briefing/map-data/<country>', methods=['GET'])
 def get_map_data(country):
     """Get map data (projects and conflict events) for a country"""
     try:
+        debug_enabled = str(request.args.get('debug', '')).strip().lower() in {'1', 'true', 'yes'}
+
         # Get parent directory where public_documents_filtered.csv is located
         parent_dir = os.path.join(os.path.dirname(__file__), '..', '..')
         map_data_folder = os.path.join(os.path.dirname(__file__), 'map_data')
         
         projects = []
         events = []
+        debug_info = {
+            'country': country,
+            'projects_in_docs': 0,
+            'projects_with_csv_geo': 0,
+            'projects_missing_csv_geo': 0,
+            'pad_fallback_projects_added': 0,
+            'per_project': []
+        }
         
         # Load active projects from public_documents_filtered.csv
         docs_csv = os.path.join(parent_dir, 'public_documents_filtered.csv')
@@ -1016,7 +2125,23 @@ def get_map_data(country):
                     country_docs['PROJ_ID_NORM'] = country_docs['PROJ_ID_IB'].map(norm_proj_id)
                     country_docs = country_docs.dropna(subset=['PROJ_ID_NORM'])
                     unique_proj_ids = country_docs['PROJ_ID_NORM'].dropna().unique()
+                    debug_info['projects_in_docs'] = int(len(unique_proj_ids))
                     print(f"DEBUG: Found {len(unique_proj_ids)} unique normalized projects for {country}")
+
+                    # Load PAD project names for hover display (used for direct and fallback pins)
+                    project_names_raw = load_project_names_for_country(country)
+                    pad_name_map_raw = {
+                        str(k).strip(): str(v).strip()
+                        for k, v in project_names_raw.items()
+                        if str(v).strip()
+                    }
+                    pad_name_map_norm = {
+                        norm_proj_id(k): str(v).strip()
+                        for k, v in project_names_raw.items()
+                        if norm_proj_id(k) and str(v).strip()
+                    }
+
+                    mapped_proj_ids = set()
 
                     # Load geographic data
                     geo_csv = os.path.join(map_data_folder, 'PROJECT_GEOGRAPHIC_LOCATION_V2.csv')
@@ -1029,10 +2154,15 @@ def get_map_data(country):
                             quoting=csv.QUOTE_MINIMAL
                         ).copy()
 
+                        iso_code = get_iso_code_for_country(country)
+                        if iso_code and 'ISO_CNTRY_CODE' in df_geo.columns:
+                            df_geo = df_geo[
+                                df_geo['ISO_CNTRY_CODE'].astype(str).str.strip().eq(iso_code)
+                            ].copy()
+
                         df_geo['PROJ_ID_NORM'] = df_geo['PROJ_ID'].map(norm_proj_id)
                         df_geo['GEO_LATITUDE_NBR'] = pd.to_numeric(df_geo['GEO_LATITUDE_NBR'], errors='coerce')
                         df_geo['GEO_LONGITUDE_NBR'] = pd.to_numeric(df_geo['GEO_LONGITUDE_NBR'], errors='coerce')
-
                         # Keep only valid coordinates before joining
                         df_geo = df_geo[
                             df_geo['GEO_LATITUDE_NBR'].between(-90, 90)
@@ -1048,19 +2178,6 @@ def get_map_data(country):
                         merged = merged.drop_duplicates(
                             subset=['PROJ_ID_NORM', 'GEO_LOC_NME', 'GEO_LATITUDE_NBR', 'GEO_LONGITUDE_NBR']
                         )
-
-                        # Load PAD project names for hover display
-                        project_names_raw = load_project_names_for_country(country)
-                        pad_name_map_raw = {
-                            str(k).strip(): str(v).strip()
-                            for k, v in project_names_raw.items()
-                            if str(v).strip()
-                        }
-                        pad_name_map_norm = {
-                            norm_proj_id(k): str(v).strip()
-                            for k, v in project_names_raw.items()
-                            if norm_proj_id(k) and str(v).strip()
-                        }
 
                         # One project pin per cleaned project ID so visible pins match project count.
                         merged['PROJ_ID_CLEAN'] = merged['PROJ_ID_IB'].astype(str).str.strip()
@@ -1091,6 +2208,100 @@ def get_map_data(country):
                                 'type': 'project'
                             })
 
+                            if proj_id_norm:
+                                mapped_proj_ids.add(proj_id_norm)
+
+                    debug_info['projects_with_csv_geo'] = int(len(mapped_proj_ids))
+
+                    # Fallback: geocode PAD primary_locations for projects missing from geographic dataset.
+                    missing_projects = (
+                        country_docs[['PROJ_ID_IB', 'PROJ_ID_NORM']]
+                        .drop_duplicates()
+                        .loc[lambda df: ~df['PROJ_ID_NORM'].isin(mapped_proj_ids)]
+                    )
+                    debug_info['projects_missing_csv_geo'] = int(len(missing_projects))
+
+                    for _, missing_row in missing_projects.iterrows():
+                        proj_id_raw = str(missing_row['PROJ_ID_IB']).strip()
+                        if not proj_id_raw or proj_id_raw.lower() == 'nan':
+                            continue
+
+                        proj_id_norm = norm_proj_id(proj_id_raw)
+                        proj_debug = {
+                            'proj_id': proj_id_raw,
+                            'pad_exists': False,
+                            'primary_locations_total': 0,
+                            'primary_locations_specific': 0,
+                            'geocode_attempts': 0,
+                            'geocode_hits': 0,
+                            'pins_added': 0,
+                            'status': 'pending'
+                        }
+
+                        # ISR-only projects may exist in docs but have no PAD file.
+                        # For now, explicitly skip fallback geocoding for these projects.
+                        if not has_preprocessed_pad_for_project(country, proj_id_raw):
+                            print(f"DEBUG: Skipping fallback geocoding for {proj_id_raw} (no preprocessed PAD)")
+                            proj_debug['status'] = 'no_preprocessed_pad'
+                            if debug_enabled:
+                                debug_info['per_project'].append(proj_debug)
+                            continue
+
+                        proj_debug['pad_exists'] = True
+
+                        project_name = ''
+                        if proj_id_norm:
+                            project_name = pad_name_map_norm.get(proj_id_norm, '')
+                        if not project_name:
+                            project_name = pad_name_map_raw.get(proj_id_raw, '')
+
+                        primary_locations = load_pad_primary_locations_for_project(country, proj_id_raw)
+                        proj_debug['primary_locations_total'] = int(len(primary_locations))
+                        added_locations = 0
+                        seen_points = set()
+
+                        for loc in primary_locations:
+                            loc_text = str(loc).strip()
+                            if not loc_text:
+                                continue
+
+                            point = None
+                            if is_specific_geocodable_location(loc_text):
+                                proj_debug['primary_locations_specific'] += 1
+                                proj_debug['geocode_attempts'] += 1
+                                point = geocode_location_in_country(loc_text, country)
+                                if point:
+                                    proj_debug['geocode_hits'] += 1
+
+                            if not point:
+                                continue
+
+                            dedupe_key = (round(point['lat'], 4), round(point['lon'], 4))
+                            if dedupe_key in seen_points:
+                                continue
+                            seen_points.add(dedupe_key)
+
+                            projects.append({
+                                'proj_id': proj_id_raw,
+                                'name': loc_text,
+                                'project_name': project_name,
+                                'lat': point['lat'],
+                                'lon': point['lon'],
+                                'type': 'project'
+                            })
+                            added_locations += 1
+
+                        if added_locations:
+                            print(f"DEBUG: Added {added_locations} PAD-geocoded pin(s) for {proj_id_raw}")
+                            debug_info['pad_fallback_projects_added'] += 1
+                            proj_debug['status'] = 'added'
+                        else:
+                            proj_debug['status'] = 'no_geocoded_locations'
+
+                        proj_debug['pins_added'] = int(added_locations)
+                        if debug_enabled:
+                            debug_info['per_project'].append(proj_debug)
+
                     print(f"DEBUG: Found {len(projects)} project pins for {country}")
                 else:
                     print(f"DEBUG: No documents found for country {country} in public_documents_filtered.csv")
@@ -1100,10 +2311,9 @@ def get_map_data(country):
                 traceback.print_exc()
         
         # Load conflict events
-        acled_csv = os.path.join(map_data_folder, 'ACLED Data_2026-03-24.csv')
-        if os.path.exists(acled_csv):
-            try:
-                df_events = read_csv_fallback(acled_csv)
+        try:
+            df_events = load_combined_acled_events(map_data_folder)
+            if not df_events.empty:
                 df_events['event_date_parsed'] = pd.to_datetime(df_events['event_date'], errors='coerce')
                 cutoff_date = pd.Timestamp.now() - pd.Timedelta(days=365)
                 df_events = df_events[df_events['event_date_parsed'] >= cutoff_date]
@@ -1129,14 +2339,21 @@ def get_map_data(country):
                             })
                         except (ValueError, TypeError):
                             continue
-            except Exception as e:
-                print(f"Error loading ACLED CSV: {e}")
+        except Exception as e:
+            print(f"Error loading ACLED CSVs: {e}")
+
+        scan_risks = load_recent_risk_scan_markers(country)
         
-        return jsonify({
+        payload = {
             'country': country,
             'projects': projects,
-            'events': events
-        })
+            'events': events,
+            'scan_risks': scan_risks
+        }
+        if debug_enabled:
+            payload['debug'] = debug_info
+
+        return jsonify(payload)
         
     except Exception as e:
         import traceback

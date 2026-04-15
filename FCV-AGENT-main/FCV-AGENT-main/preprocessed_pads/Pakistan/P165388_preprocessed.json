@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P165388",
+    "guid": 144221527478236394,
+    "node_id": 29885964,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b085a7d203&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 152067
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Punjab Green Development Program",
+      "project_development_objective": "Strengthen environmental governance and promote green investments in Punjab",
+      "total_financing": "US$273 million (SDR 137.6 million equivalent)",
+      "implementation_period": "July 1, 2018 - June 30, 2023 (5 years)",
+      "beneficiaries": "Provincial agencies, public institutions, targeted polluting industries, commercial entities, and general public in Punjab. Direct beneficiaries include all provincial agencies, targeted polluting industries, and commercial entities. Indirect beneficiaries include inhabitants of Punjab who will benefit from improved environmental quality and reduced health risks."
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Punjab Province",
+        "Lahore",
+        "Sialkot",
+        "Raiwind"
+      ],
+      "coverage_type": "provincial",
+      "fragile_or_conflict_affected_areas": "no - Punjab is not classified as fragile or conflict-affected, though the document notes Pakistan faces macroeconomic challenges and governance weaknesses"
+    },
+    "key_components": [
+      {
+        "component_name": "Strengthening Environmental Governance",
+        "description": "EPD restructuring, establishment of Environmental Monitoring Center (EMC), Environmental Technology Center (ETC), and Environmental Policy Center (EPC); regulatory reforms including environmental standards and policies; vehicle emission inspection system expansion; information disclosure and citizen engagement; capacity building for EPD and other departments",
+        "financing": "US$106.6 million"
+      },
+      {
+        "component_name": "Promoting Green Investments",
+        "description": "Green financing strategy development; Environmental Endowment Fund (EEF) capitalization; energy efficiency investments in public institutions; low-cost wastewater treatment technology pilots; resource-efficient and cleaner production (RECP) technology pilots and demonstrations in brick kilns and leather sector; support to Sialkot Tannery Zone",
+        "financing": "US$166.4 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Environmental Protection Department (EPD) as executing agency; Finance Department, Transport Department, and Energy Department as implementing agencies",
+      "coordination_mechanisms": "Program Steering Committee (PSC) chaired by Chairman of Planning and Development Department with members from Finance, Environment, Industries, Transport, Energy, Local Government, Housing/Urban Development, Labor, and Women Development departments; Program Coordination Unit (PCU) at P&D Department; Program Delivery Units (PDUs) in each implementing agency; Strategic Planning and Implementation Unit (SPIU) at EPD for monitoring",
+      "procurement_approach": "All departments follow Punjab Procurement Rules 2014; development of online Procurement Management Information System (PMIS); open data protocols to be established",
+      "monitoring_and_evaluation": "SPIU responsible for overall M&E; independent third-party verification of DLIs/DLRs; semiannual reporting on indicators, grievance complaints, labor issues, and fraud/corruption allegations; mid-term review at June 30, 2020"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political and governance",
+        "risk_description": "Reform momentum may slow down in run-up to 2018 general elections; governance weaknesses in anti-corruption systems; public distrust of GoPunjab's environmental management efforts",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Strong public pressure to address pollution should ensure continued effort regardless of electoral results; Program's focus on citizen engagement and information disclosure; implementation of FSA recommendations and PAP measures to strengthen anti-corruption systems; improved information disclosure and citizen engagement to address public distrust"
+      },
+      {
+        "risk_category": "macroeconomic",
+        "risk_description": "Pakistan's fiscal and external imbalances may erode economic growth outlook; near-term macroeconomic resilience concerns",
+        "risk_rating": "substantial",
+        "mitigation_measures": "World Bank will continue monitoring during Program implementation; Program interventions expected to contribute to sustainable growth trajectory and strengthen long-term competitiveness of supported industries"
+      },
+      {
+        "risk_category": "institutional capacity",
+        "risk_description": "EPD may face challenges implementing Program while restructuring its organizational structure; SPIU has only managed small investment activities so far; limited capacity of implementing agencies",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Multiple capacity-building activities included in Program to support EPD and SPIU; institutional strengthening of EPD/EPA and other implementing agencies; development of standard operating procedures; recruitment of qualified staff; technical assistance and training"
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "Deficiencies in procurement and financial management systems; long time to award contracts; limited bidder participation; delays in contract implementation; weaknesses in transparency and complaint handling",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Development of comprehensive online PMIS; establishment of open data protocols; strengthening of FM systems including appointment of qualified FM staff; development of FM manual with internal controls; adoption of internal auditing functions; measures to improve transparency and complaint handling; information disclosure and citizen engagement to mitigate risks"
+      },
+      {
+        "risk_category": "environmental and social",
+        "risk_description": "Potential social issues in regulatory reform and green investments; poor construction quality of physical structures; poor occupational health and safety records; unsafe disposal of replaced equipment and wastes; land acquisition issues; public distrust of GoPunjab's pollution management capacity; weak enforcement of environmental rules",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Full stakeholder consultation for all investment activities; development of environmental management plans for specific activities; adoption of international best practices; strengthening of EPD capacity; development of standard operating procedures for land acquisition; inclusion of social and gender considerations in RECP financing agreements; health impact study on pollution; development of health advisory system targeting vulnerable groups; grievance redress mechanism; citizen engagement and information disclosure"
+      },
+      {
+        "risk_category": "climate",
+        "risk_description": "Physical investments under Program face moderate climate risks from extreme weather events (temperature, precipitation, flooding, strong winds)",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Proper mitigation measures to be incorporated in design and implementation of physical investments; STZ designed with full consideration of climate adaptation including raising road levels, adequate storm drains, and flood management plan; promotion of water-saving RECP technologies to address water scarcity risks"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Category B (moderate environmental risks)",
+      "triggered_safeguard_policies": [
+        "Environmental Assessment",
+        "Land Acquisition and Involuntary Resettlement (for green building and wastewater treatment pilot sites)",
+        "Labor and Working Conditions (for RECP investments and Sialkot Tannery Zone)"
+      ],
+      "grievance_redress_mechanism": "yes - Program includes development of comprehensive stakeholder consultation and engagement strategy; existing EPA complaint cell; development of grievance redress mechanism at program level; interactive EPD platform for public inputs; telephone hotlines; World Bank's Grievance Redress Service (GRS) and Inspection Panel available for complaints",
+      "gender_considerations": "Special attention to gender-specific impacts of pollution; study on health impacts of pollution on vulnerable groups including women and children; development of health advisory system targeting women and other vulnerable demographics; inclusion of gender-specific actions in RECP financing agreements; training of EPD and implementing agencies on gender integration; Women Development Department represented on PSC; EEF to give preference to proposals benefiting vulnerable groups including women and children",
+      "vulnerable_groups": [
+        "Women",
+        "Children",
+        "Pregnant women",
+        "Elderly",
+        "Poor populations",
+        "People with cardiovascular and respiratory diseases",
+        "Workers in polluting industries"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Program does not directly address conflict issues as Punjab is not a conflict-affected area. However, the Program promotes environmental governance, transparency, and citizen engagement which can contribute to social cohesion and reduce grievances. The focus on inclusive stakeholder consultation and grievance redress mechanisms supports conflict-sensitive development.",
+      "fragility_context": "Pakistan faces governance weaknesses and institutional capacity constraints. Punjab specifically faces: weak environmental governance and enforcement; limited institutional capacity of EPD; weak anti-corruption systems; public distrust of government environmental management efforts; limited capacity of implementing agencies. The Program directly addresses these fragility factors through institutional strengthening, capacity building, and governance reforms.",
+      "security_considerations": "No direct security concerns mentioned. The Program focuses on environmental management and green development. Implementation in Sialkot tannery sector involves relocation of tanneries which requires careful stakeholder management and grievance redress mechanisms.",
+      "displacement_or_refugees": "yes - partial - The Sialkot Tannery Zone (STZ) project involves relocation of 250 tanneries from city clusters to a dedicated industrial estate. This is an industry-led initiative with tanners having already purchased STZ plots. The Program will support relocation through infrastructure development and financial incentives. Environmental management plans for closed tanner sites will be developed. Land acquisition for green building and wastewater treatment pilots may involve land acquisition issues. Standard operating procedures for land acquisition have been developed to address compensation and livelihood concerns."
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P174484",
+    "guid": 344521616983294482,
+    "node_id": 32901147,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b08839e75a&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 113010
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Pakistan Crisis-Resilient Social Protection (CRISP) Program-for-Results",
+      "project_development_objective": "To support the development of a more adaptive social protection system that will contribute to any future crisis-resilience among poor and vulnerable households",
+      "total_financing": "US$600 million (SDR 416.5 million equivalent)",
+      "implementation_period": "FY2021-FY2025 (July 2021 - June 2025)",
+      "beneficiaries": "Poor and vulnerable households across Pakistan; expansion from 4.6 million to 7 million BISP beneficiary families; informal sector workers; out-of-school children (particularly girls); pregnant women and mothers; vulnerable populations affected by climate shocks"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "All provinces and regions of Pakistan",
+        "Kalash valleys",
+        "Federally Administered Areas",
+        "13 districts for hybrid SP scheme pilot",
+        "50+ districts for WeT expansion",
+        "Khyber Pakhtunkhwa",
+        "Sindh",
+        "Punjab",
+        "Balochistan"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "partial - Federally Administered Areas and Kalash valleys included; program designed to address vulnerabilities in conflict-affected and disaster-prone regions; climate shocks and natural disasters are primary fragility factors"
+    },
+    "key_components": [
+      {
+        "component_name": "Results Area 1: Building Crisis-Resilient Delivery Systems",
+        "description": "Support for innovations to social registry (NSER) including multi-entry localized access (MELA) mechanism for regular household data updates; systematization of cross-checks and big data analytics for improved targeting; beneficiary-centric biometric payment systems; provincial governance structure for NSER; data exchange interfaces with other government programs",
+        "financing": "US$160 million"
+      },
+      {
+        "component_name": "Results Area 2: Developing Innovative Hybrid Social Protection Scheme",
+        "description": "Hybrid scheme blending social assistance with social risk mitigation for informal sector workers; contributory savings scheme with government matching incentives; support for women and exiting BISP beneficiaries in socioeconomic bands I and II; digital platform for tracking contributions and withdrawals; partnership with financial institutions",
+        "financing": "US$95 million"
+      },
+      {
+        "component_name": "Results Area 3: Protecting Human Capital in Early and Primary School Years",
+        "description": "Nutrition-focused conditional cash transfer (Nashonuma) linked to maternal and child health services; expansion of Waseela-e-Taleem (WeT) education-linked CCT; completion incentives for girls transitioning to secondary school; federal-provincial coordination mechanisms; impact evaluations",
+        "financing": "US$340 million"
+      },
+      {
+        "component_name": "Technical Assistance (IPF Component)",
+        "description": "Support for design and evaluation of MELA mechanism; data sharing protocol review for personal data protection; assessment of big data effectiveness for targeting; social registry governance support; payment system innovations; CCT design and implementation; capacity building for BISP staff; M&E strengthening",
+        "financing": "US$5 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Benazir Income Support Programme (BISP), headed by a Chairperson with Management Board including governmental and non-governmental members; Secretary BISP heads Management with Director Generals in headquarters and four provinces/two regions",
+      "coordination_mechanisms": "Five operational wings: NSER Wing (RA1), Complementary Initiatives Wing (RA2), CCT Wing (RA3), Cash Transfer Wing (cross-support), Technology Wing (all RAs); leverages intergovernmental coordination structures under National Social Protection Program (NSPP); federal-provincial coordination for human capital interventions; partnership with NADRA for identity verification; coordination with provincial education and health departments",
+      "procurement_approach": "No procurement activities required under PforR in accordance with World Bank Policy; TA component procurement follows World Bank Procurement Regulations; existing IVA (Planning Commission of Pakistan) to be used for verification of results",
+      "monitoring_and_evaluation": "BISP responsible for M&E using existing systems; bi-annual reviews analyzing results and progress; financial audit; Management Information System (MIS) tracking; continuous process evaluation and spot-checks; beneficiary satisfaction surveys; quarterly program progress reports; baseline and impact evaluation analysis; Mid-Term Review Report; disaggregation by gender and province; Independent Verification Agency (IVA) verification of Disbursement Linked Results (DLRs)"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Need for intergovernmental collaboration and limited provincial ownership of federal programs; political instability affecting program continuity",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Leverage intergovernmental structures developed under NSPP; BISP has demonstrated track record of managing such risks and reaching consensus between federal and provincial authorities; establishment of provincially representative governance structure for NSER; federal-provincial coordination mechanisms"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "COVID-19 pandemic causing economic contraction (GDP declined from 1.9% in FY19 to -1.5% in FY20); tight fiscal situation; vulnerability to external shocks; subdued near-term economic prospects with growth projected at 1.3% for FY2021-22",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Government has given highest priority to mitigating socio-economic impacts of pandemic; reprioritized resources from existing budget for social protection; previous performance and medium-term budgetary framework suggest projected 3% annual increase in BISP budget will occur; Government committed to spending US$6.5 billion over five years under Ehsaas; access to Debt Service Suspension Initiative (DSSI) providing US$1.6-2.4 billion in temporary fiscal space"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "Need for capacity building for new initiatives under RA1 (MELA mechanism, big data analytics); complexity of nutrition-focused CCT requiring coordination across multiple agencies; staff turnover affecting contract management; delays in awarding contracts",
+        "risk_rating": "moderate",
+        "mitigation_measures": "TA component provides support for capacity building; BISP has demonstrated capacity managing NSPP; existing IVA (Planning Commission) to be used reducing verification delays; institutionalization of processes to address staff turnover; delegation of financial powers for more efficient contract payment; training on E-waste management; development of Standard Operating Procedures (SOPs)"
+      },
+      {
+        "risk_category": "Technical Design of Project or Program",
+        "risk_description": "Complexity of implementing new systems (MELA, hybrid SP scheme, nutrition CCT); targeting accuracy challenges; data quality and protection concerns; integration of multiple data sources and systems",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Program is technically sound and consistent with international experience; BISP is efficient with cost-to-transfer ratio declining from 3% to 1.7%; TA component supports design and evaluation; review of data sharing protocols for personal data protection; pilot testing of survey approaches for climate-related disaster targeting; impact evaluations planned for CCT programs"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Financial management and procurement risks; need for improved monitoring to prevent, detect, and rectify improprieties; delays in external audit follow-up; limited public reporting of audit results; potential for fraud or errors in payments",
+        "risk_rating": "moderate",
+        "mitigation_measures": "FSA rates current risk as Moderate with residual risk for FM and procurement rated Low; BISP has satisfactory performance under NSPP; adoption of International Public Sector Accounting Standards; development of reporting templates; improved inhouse capacity for information system audits; interface with banks to detect improper payments; online complaint management system for procurements; commitment to ACG compliance; annual reporting to World Bank on ACG compliance"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Low environmental risks from ICT e-waste; moderate social risks related to targeting accuracy, inclusion/exclusion errors in new programs, vulnerability of marginalized groups, gender gaps, data privacy concerns, potential for adverse effects on vulnerable populations",
+        "risk_rating": "moderate",
+        "mitigation_measures": "ESSA concluded program activities likely to provide significant social benefits; development and implementation of SOPs for e-waste management; training on e-waste management for BISP, NADRA, and EPA staff; Stakeholder Engagement Plan (SEP) with mechanisms for Indigenous and marginalized communities feedback; differentiated engagement measures; grievance redress mechanism in place; review of data sharing protocols for personal data protection; gender-disaggregated monitoring; focus on inclusion of vulnerable groups"
+      },
+      {
+        "risk_category": "Security",
+        "risk_description": "Potential security challenges in conflict-affected areas and Federally Administered Areas; disruption of service delivery from climate-related shocks; vulnerability of payment systems and access points to disruption",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Program designed to build resilience to shocks; beneficiary-centric payment system designed for resilience against service disruptions; MELA access points to be made resilient against climate shocks; integration of information from National Disaster Management Authority (NDMA) and Pakistan Met Department on climatic hazards; adaptive SP systems to reduce lead time for crisis response"
+      },
+      {
+        "risk_category": "Stakeholder",
+        "risk_description": "Need for stakeholder buy-in for new programs; potential resistance to changes in delivery systems; coordination challenges across multiple agencies and provinces",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Stakeholder Engagement Plan developed; communication strategy for NSER through BISP field offices, local public institutions, print/electronic media; BISP has demonstrated ability to reach consensus; leveraging existing coordination structures; beneficiary satisfaction surveys planned"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate (for IPF component)",
+      "triggered_safeguard_policies": [
+        "ESS1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS2: Stakeholder Engagement and Information Disclosure",
+        "ESS7: Labor and Working Conditions",
+        "ESS10: Indigenous Peoples/Sub-Saharan African Historically Underserved Traditional Local Communities"
+      ],
+      "grievance_redress_mechanism": "Yes - Existing program GRM in place; World Bank's Grievance Redress Service (GRS) available for complaints; World Bank Inspection Panel available for complaints regarding Bank non-compliance; GRM improvement and implementation planned as part of Program Action Plan; semi-annual reporting on GRM implementation required",
+      "gender_considerations": "Over 53% of out-of-school children are girls; gender parity index at primary level is 0.832 and at lower secondary is 0.837; program addresses gender gaps through: expansion of Waseela-e-Taleem (WeT) with focus on girls' enrollment and attendance; DLI 6 measures girls receiving completion incentives for transition to secondary school; DLI 11 sets gender-disaggregated targets for children completing primary education; only 7% of women have bank/mobile money accounts vs 34.6% of men - program expands financial inclusion for women through hybrid SP scheme and One Woman One Account Policy; maternal mortality rate of 140 per 100,000 live births addressed through nutrition-focused CCT linked to health services; gender-disaggregated monitoring of all indicators",
+      "vulnerable_groups": [
+        "Poor and extremely poor households",
+        "Informal sector workers (72% of non-agricultural workers, 81.6% of private sector employment)",
+        "The 'missing middle' - those without access to insurance or savings mechanisms",
+        "Out-of-school children (11.5 million at primary level)",
+        "Girls and women",
+        "Pregnant women and mothers",
+        "Children under five (37.6% stunted)",
+        "Populations vulnerable to climate shocks",
+        "Indigenous peoples (Kalash valleys)",
+        "Marginalized communities",
+        "Populations in Federally Administered Areas",
+        "Populations affected by displacement or disasters"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Program designed to build crisis resilience and adaptive social protection systems responsive to shocks including conflict-related disruptions; implementation in Federally Administered Areas and conflict-affected regions; integration of disaster management information (NDMA) into targeting systems; beneficiary-centric payment systems designed for resilience against service disruptions; MELA access points to be made resilient; program supports rapid vertical and horizontal expansion of safety nets to respond to crises as demonstrated during COVID-19; focus on preventing negative coping strategies (reducing human capital investments, asset depletion) that can be exacerbated by conflict",
+      "fragility_context": "Pakistan faces multiple fragility factors: (1) Climate vulnerability - highly vulnerable to climatic shocks with extreme events disrupting human and physical capital; floods affected 30+ million since 2010 with damages exceeding US$14 billion; vulnerable to droughts, heatwaves, cyclones; (2) Economic fragility - real GDP growth declined from 1.9% to -1.5% in FY20 (first contraction in decades); subdued near-term prospects; tight fiscal constraints; (3) Human capital challenges - high stunting rates (37.6% of children under five); large gender gaps in schooling; 11.5 million out-of-school children; low maternal health indicators; (4) Informal economy dominance - 72% of non-agricultural workers in informal sector with limited social protection coverage; (5) Pandemic impacts - COVID-19 expected to lead to sizeable increase in poverty, reversing 20 years of progress; increased out-of-school children; deterioration of health indicators; (6) Institutional challenges - need for federal-provincial coordination; limited provincial ownership of federal programs; (7) Vulnerability of missing middle - millions without access to insurance or savings mechanisms",
+      "security_considerations": "Program includes implementation in Federally Administered Areas and Kalash valleys with potential security challenges; design incorporates resilience to service disruptions from security incidents; beneficiary-centric payment system designed for resilience; MELA access points to be made resilient; program supports rapid crisis response capacity as demonstrated during COVID-19; focus on preventing negative coping strategies that can be exacerbated by insecurity; integration of disaster management information systems; adaptive SP systems to reduce lead time for response to shocks",
+      "displacement_or_refugees": "No specific mention of refugee populations in the PAD; however, program is designed to address vulnerabilities of displaced populations and those affected by disasters; Federally Administered Areas (historically hosting displaced populations) are included in program coverage; program's adaptive SP systems and rapid response mechanisms are relevant for crisis-displaced populations; nutrition-focused CCT and education support (WeT) relevant for vulnerable children including those displaced by conflicts or disasters"
+    }
+  }
+}

@@ -247,3 +247,138 @@ def get_possible_wb_country_names(country_ids_key):
         possible_names.append(country_ids_key)
     
     return possible_names
+
+
+# Maps canonical country names to name variations used in ACLED data
+# Covers the canonical form from country_ids.json (the right side of COUNTRY_NAME_MAPPING)
+ACLED_NAME_VARIATIONS = {
+    "Afghanistan": ["Afghanistan"],
+    "Albania": ["Albania"],
+    "Algeria": ["Algeria"],
+    "Angola": ["Angola"],
+    "Armenia": ["Armenia"],
+    "Azerbaijan": ["Azerbaijan"],
+    "Bahrain": ["Bahrain"],
+    "Bangladesh": ["Bangladesh"],
+    "Belarus": ["Belarus"],
+    "Benin": ["Benin"],
+    "Bosnia And Herzegovina": ["Bosnia and Herzegovina"],
+    "Burundi": ["Burundi"],
+    "Burkina Faso": ["Burkina Faso"],
+    "Cameroon": ["Cameroon"],
+    "Central African Republic": ["Central African Republic"],
+    "Chad": ["Chad"],
+    "Colombia": ["Colombia"],
+    "Comoros Islands": ["Comoros"],
+    "Croatia": ["Croatia"],
+    "Democratic Republic of Congo": ["Democratic Republic of Congo", "Democratic Republic of the Congo"],
+    "Djibouti": ["Djibouti"],
+    "Egypt": ["Egypt"],
+    "Eritrea": ["Eritrea"],
+    "Eswatini": ["Eswatini", "Swaziland"],
+    "Ethiopia": ["Ethiopia"],
+    "Fiji": ["Fiji"],
+    "Gabon": ["Gabon"],
+    "Georgia": ["Georgia"],
+    "Ghana": ["Ghana"],
+    "Guinea": ["Guinea"],
+    "Guinea-Bissau": ["Guinea-Bissau"],
+    "Haiti": ["Haiti"],
+    "Honduras": ["Honduras"],
+    "Iran": ["Iran"],
+    "Iraq": ["Iraq"],
+    "Israel/Palestine": ["Israel", "Palestine"],
+    "Jordan": ["Jordan"],
+    "Kazakhstan": ["Kazakhstan"],
+    "Kenya": ["Kenya"],
+    "Kosovo": ["Kosovo"],
+    "Kuwait": ["Kuwait"],
+    "Kyrgyzstan": ["Kyrgyzstan"],
+    "Lebanon": ["Lebanon"],
+    "Lesotho": ["Lesotho"],
+    "Liberia": ["Liberia"],
+    "Libya": ["Libya"],
+    "Madagascar": ["Madagascar"],
+    "Malawi": ["Malawi"],
+    "Mali": ["Mali"],
+    "Mauritania": ["Mauritania"],
+    "Moldova": ["Moldova"],
+    "Mongolia": ["Mongolia"],
+    "Montenegro": ["Montenegro"],
+    "Morocco": ["Morocco"],
+    "Mozambique": ["Mozambique"],
+    "Myanmar": ["Myanmar"],
+    "Nepal": ["Nepal"],
+    "Niger": ["Niger"],
+    "Nigeria": ["Nigeria"],
+    "North Macedonia": ["North Macedonia"],
+    "Oman": ["Oman"],
+    "Pakistan": ["Pakistan"],
+    "Qatar": ["Qatar"],
+    "Republic of Congo": ["Republic of the Congo", "Congo"],
+    "Rwanda": ["Rwanda"],
+    "Saudi Arabia": ["Saudi Arabia"],
+    "Senegal": ["Senegal"],
+    "Serbia": ["Serbia"],
+    "Sierra Leone": ["Sierra Leone"],
+    "Somalia": ["Somalia", "Federal Republic of Somalia"],
+    "South Africa": ["South Africa"],
+    "South Sudan": ["South Sudan"],
+    "Sudan": ["Sudan"],
+    "Syria": ["Syria"],
+    "Tajikistan": ["Tajikistan"],
+    "Tanzania": ["Tanzania"],
+    "Timor-Leste": ["Timor-Leste"],
+    "Togo": ["Togo"],
+    "Tunisia": ["Tunisia"],
+    "Turkmenistan": ["Turkmenistan"],
+    "Türkiye": ["Turkey", "Türkiye"],
+    "Uganda": ["Uganda"],
+    "Ukraine": ["Ukraine"],
+    "Uzbekistan": ["Uzbekistan"],
+    "Yemen": ["Yemen"],
+    "Zambia": ["Zambia"],
+    "Zimbabwe": ["Zimbabwe"],
+}
+
+
+def check_acled_country_match(acled_country_name, target_country_name):
+    """
+    Check if an ACLED country name matches a target country after normalization.
+    Handles fuzzy matching through ACLED_NAME_VARIATIONS.
+    
+    Args:
+        acled_country_name: Country name as it appears in ACLED data
+        target_country_name: Target country name (from user selection or WB data)
+        
+    Returns:
+        bool: True if the names refer to the same country
+    """
+    if not acled_country_name or not target_country_name:
+        return False
+    
+    acled_lower = str(acled_country_name).lower().strip()
+    target_lower = str(target_country_name).lower().strip()
+    
+    # Exact match first
+    if acled_lower == target_lower:
+        return True
+    
+    # Check canonical name from ACLED_NAME_VARIATIONS
+    canonical_target = get_country_id_key(target_country_name) or target_country_name
+    canonical_variations = ACLED_NAME_VARIATIONS.get(canonical_target, [])
+    
+    for variation in canonical_variations:
+        if acled_lower == variation.lower():
+            return True
+    
+    # Reverse lookup: if target_country_name is in ACLED_NAME_VARIATIONS as a value,
+    # find its key and check other variations
+    for canonical, variations in ACLED_NAME_VARIATIONS.items():
+        if target_lower in [v.lower() for v in variations]:
+            for variation in variations:
+                if acled_lower == variation.lower():
+                    return True
+            break
+    
+    return False

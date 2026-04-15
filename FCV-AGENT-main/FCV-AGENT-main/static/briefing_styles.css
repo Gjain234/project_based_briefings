@@ -339,15 +339,28 @@ body{
   align-items:center;
   gap:10px;
 }
+.status-container.info{
+  animation:status-pulse 2s ease-in-out infinite;
+}
+@keyframes status-pulse{
+  0%,100%{background:#E8F4FD;border-color:#B3D9F5;}
+  50%{background:#d0eaf8;border-color:#7ec8f0;}
+}
+.status-spinner{
+  flex-shrink:0;
+  animation:spin .9s linear infinite;
+}
 .status-container.error{
   background:#FEE;
   border-color:#FCC;
   color:#900;
+  animation:none;
 }
 .status-container.success{
   background:#E8F5E9;
   border-color:#A5D6A7;
   color:#1B5E20;
+  animation:none;
 }
 
 /* Results Section */

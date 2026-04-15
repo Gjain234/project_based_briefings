@@ -385,6 +385,77 @@ def generate_project_based_briefing(
 
     return (message.content or "").strip()
 
+RRA_HEADINGS = [
+    "Social unrest and protests",
+    "Violence between refugees, host communities, and the state",
+    "Organized violence between political and sectarian groups",
+    "Political instability",
+    "External risks and intra-state conflict",
+]
+
+
+def generate_rra_aligned_briefing(
+    country_risks_df,
+    pad_risks,
+    implementation_realized_risks,
+    implementation_realized_risks_mapped,
+    client,
+    custom_prompt=None
+):
+    """
+    Generate a briefing structured around the five standard RRA short-term
+    FCV risk headings.
+    """
+    n_paragraphs = len(RRA_HEADINGS)
+
+    evidence = {
+        "categories": RRA_HEADINGS,
+        "country_risks": country_risks_df.to_dict(orient="records"),
+        "pad_risks": pad_risks.to_dict(orient="records"),
+        "implementation_realized_risks": implementation_realized_risks.to_dict(orient="records"),
+        "implementation_realized_risks_mapped": implementation_realized_risks_mapped.to_dict(orient="records"),
+    }
+
+    if custom_prompt:
+        if not isinstance(custom_prompt, str):
+            custom_prompt = None
+        else:
+            custom_prompt = custom_prompt.strip() if custom_prompt else None
+
+    system_prompt = custom_prompt if custom_prompt else (
+        f"You are writing a structured FCV portfolio briefing organised around the five standard "
+        f"short-term RRA (Risk and Resilience Assessment) risk headings.\n\n"
+        f"Write exactly {n_paragraphs} paragraphs, one for each heading in the order given.\n\n"
+        "For each paragraph:\n"
+        "- Begin the paragraph with the exact RRA heading in bold followed by a colon "
+        "(e.g. **Social unrest and protests:**).\n"
+        "- Summarise the relevant country-level FCV dynamics under that heading.\n"
+        "- Show how World Bank projects in the portfolio are susceptible to that risk "
+        "(PAD evidence). Provide 1-3 sentences per project cited.\n"
+        "- Show whether those risks are materialising in implementation "
+        "(ISR/Aide Memoire evidence). Provide 1-3 sentences per issue cited.\n\n"
+        "CRITICAL CITATION RULES:\n"
+        "- PAD citations: ONLY cite [PROJ_ID | PAD] if that project appears in pad_risks.\n"
+        "- Implementation citations: use the exact doc_type from implementation_realized_risks_mapped "
+        "(ISR or Aide Memoire).\n"
+        "- NEVER cite a document type absent from the evidence for that project.\n"
+        "- Each citation must be in its own bracket pair: [P123456 | PAD] [P123456 | ISR]\n"
+        "- NEVER combine multiple citations with semicolons inside one bracket.\n"
+        "- Do NOT create hyperlinks.\n"
+        "- Do NOT invent citations.\n"
+        "- Write analytically and concisely for senior leadership."
+    )
+
+    prompt = ChatPromptTemplate.from_messages([
+        ("system", system_prompt),
+        ("human", "Evidence:\n\n{evidence}"),
+    ])
+
+    chain = prompt | client
+    message = chain.invoke({"evidence": json.dumps(evidence, indent=2)})
+    return (message.content or "").strip()
+
+
 def generate_briefing(
     mode,
     n_paragraphs,
@@ -429,7 +500,17 @@ def generate_briefing(
         )
     
     # Generate briefing based on mode
-    if mode == "risk":
+    if mode == "rra":
+        briefing = generate_rra_aligned_briefing(
+            country_risks_df=country_risks_df,
+            pad_risks=pad_risks,
+            implementation_realized_risks=implementation_realized_risks,
+            implementation_realized_risks_mapped=implementation_realized_risks_mapped,
+            client=client,
+            custom_prompt=custom_prompt,
+        )
+
+    elif mode == "risk":
         briefing = generate_risk_aligned_briefing(
             country_risks_df=country_risks_df,
             pad_risks=pad_risks,
@@ -474,7 +555,7 @@ def generate_briefing(
         )
 
     else:
-        raise ValueError("mode must be 'risk', 'sector', 'project-based', or 'custom'")
+        raise ValueError("mode must be 'rra', 'risk', 'sector', 'project-based', or 'custom'")
     
     # Inject links for citation markers
     briefing = inject_links(briefing, country_document_df)

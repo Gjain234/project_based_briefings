@@ -3,6 +3,156 @@ import json
 import re
 import pandas as pd
 
+
+def estimate_tokens_from_text(text):
+    """Approximate token count using a conservative chars-per-token heuristic."""
+    if not text:
+        return 0
+    return max(1, int(len(text) / 4))
+
+
+def _is_token_limit_error(error):
+    message = str(error).lower()
+    return (
+        'token limit will exceed' in message
+        or ('statuscode' in message and '429' in message and 'token' in message)
+    )
+
+
+def _normalize_record_value(value, max_field_chars):
+    if value is None:
+        return None
+    if isinstance(value, str):
+        text = value.strip()
+        if len(text) > max_field_chars:
+            return text[:max_field_chars].rstrip() + '...'
+        return text
+    return value
+
+
+def _truncate_project_records(records, level_cfg):
+    max_records_per_project = level_cfg['max_records_per_project']
+    max_field_chars = level_cfg['max_field_chars']
+    max_fields_per_record = level_cfg['max_fields_per_record']
+
+    truncated = []
+    for row in records[:max_records_per_project]:
+        if not isinstance(row, dict):
+            truncated.append(row)
+            continue
+
+        keys = list(row.keys())
+        if len(keys) > max_fields_per_record:
+            keys = keys[:max_fields_per_record]
+
+        row_out = {}
+        for key in keys:
+            row_out[key] = _normalize_record_value(row.get(key), max_field_chars)
+
+        truncated.append(row_out)
+
+    return truncated
+
+
+def _truncate_evidence_payload(evidence, level):
+    """Progressively reduce payload size while preserving project-by-project structure."""
+    if level <= 0:
+        return evidence
+
+    level_configs = {
+        1: {'max_projects_per_doc': 30, 'max_records_per_project': 10, 'max_field_chars': 450, 'max_fields_per_record': 16},
+        2: {'max_projects_per_doc': 24, 'max_records_per_project': 7, 'max_field_chars': 320, 'max_fields_per_record': 14},
+        3: {'max_projects_per_doc': 18, 'max_records_per_project': 5, 'max_field_chars': 220, 'max_fields_per_record': 12},
+        4: {'max_projects_per_doc': 12, 'max_records_per_project': 3, 'max_field_chars': 160, 'max_fields_per_record': 10},
+    }
+    level_cfg = level_configs.get(level, level_configs[4])
+
+    # Deep copy via JSON to avoid mutating the original structure
+    payload = json.loads(json.dumps(evidence))
+
+    by_doc = payload.get('evidence_by_document_type')
+    if not isinstance(by_doc, dict):
+        return payload
+
+    for doc_type, projects in list(by_doc.items()):
+        if not isinstance(projects, dict):
+            continue
+
+        # Keep projects with most evidence first
+        ranked_projects = sorted(
+            projects.items(),
+            key=lambda item: len(item[1]) if isinstance(item[1], list) else 0,
+            reverse=True
+        )
+
+        keep_count = level_cfg['max_projects_per_doc']
+        selected_projects = ranked_projects[:keep_count]
+
+        truncated_projects = {}
+        for project_id, records in selected_projects:
+            if isinstance(records, list):
+                truncated_projects[project_id] = _truncate_project_records(records, level_cfg)
+            else:
+                truncated_projects[project_id] = records
+
+        by_doc[doc_type] = truncated_projects
+
+    return payload
+
+
+def _run_chain_with_token_fallback(chain, system_prompt, evidence, stream_callback=None, max_attempts=5):
+    """Retry generation with progressively truncated per-project evidence on token-limit 429 errors."""
+    last_error = None
+
+    for attempt in range(max_attempts):
+        truncation_level = attempt
+        attempt_evidence = _truncate_evidence_payload(evidence, truncation_level)
+        evidence_text = json.dumps(attempt_evidence, indent=2)
+
+        estimated_tokens = (
+            estimate_tokens_from_text(system_prompt)
+            + estimate_tokens_from_text(evidence_text)
+            + 500
+        )
+
+        print(
+            f"   ℹ️ Briefing generation attempt {attempt + 1}/{max_attempts} "
+            f"(estimated request tokens: ~{estimated_tokens:,}, truncation level: {truncation_level})"
+        )
+
+        try:
+            if stream_callback:
+                full_content = ""
+                for chunk in chain.stream({"evidence": evidence_text}):
+                    if hasattr(chunk, 'content'):
+                        content = chunk.content
+                    else:
+                        content = str(chunk)
+
+                    if content:
+                        full_content += content
+                        stream_callback(content)
+
+                return full_content.strip()
+
+            message = chain.invoke({"evidence": evidence_text})
+            return (message.content or "").strip()
+
+        except Exception as error:
+            last_error = error
+            if not _is_token_limit_error(error):
+                raise
+
+            if attempt >= max_attempts - 1:
+                break
+
+            print(
+                "   ⚠️ Token-limit 429 encountered. "
+                "Retrying with stronger per-project metadata truncation..."
+            )
+
+    raise last_error
+
 def restructure_evidence_by_source(pad_risks, implementation_realized_risks_mapped, implementation_realized_risks=None):
     """
     Restructure evidence data into a hierarchical format organized by document type, then by project.
@@ -212,28 +362,12 @@ def generate_custom_aligned_briefing(
 
     chain = prompt | client
 
-    if stream_callback:
-        # Use streaming if callback provided
-        full_content = ""
-        for chunk in chain.stream({
-            "evidence": json.dumps(evidence, indent=2)
-        }):
-            if hasattr(chunk, 'content'):
-                content = chunk.content
-            else:
-                content = str(chunk)
-            
-            if content:
-                full_content += content
-                stream_callback(content)
-        
-        return full_content.strip()
-    else:
-        # Non-streaming (original behavior)
-        message = chain.invoke({
-            "evidence": json.dumps(evidence, indent=2)
-        })
-        return (message.content or "").strip()
+    return _run_chain_with_token_fallback(
+        chain=chain,
+        system_prompt=system_prompt,
+        evidence=evidence,
+        stream_callback=stream_callback
+    )
 
 
 def generate_risk_aligned_briefing(
@@ -291,28 +425,12 @@ def generate_risk_aligned_briefing(
 
     chain = prompt | client
 
-    if stream_callback:
-        # Use streaming if callback provided
-        full_content = ""
-        for chunk in chain.stream({
-            "evidence": json.dumps(evidence, indent=2)
-        }):
-            if hasattr(chunk, 'content'):
-                content = chunk.content
-            else:
-                content = str(chunk)
-            
-            if content:
-                full_content += content
-                stream_callback(content)
-        
-        return full_content.strip()
-    else:
-        # Non-streaming (original behavior)
-        message = chain.invoke({
-            "evidence": json.dumps(evidence, indent=2)
-        })
-        return (message.content or "").strip()
+    return _run_chain_with_token_fallback(
+        chain=chain,
+        system_prompt=system_prompt,
+        evidence=evidence,
+        stream_callback=stream_callback
+    )
 
 def generate_sector_aligned_briefing(
     country_risks_df,
@@ -359,28 +477,12 @@ def generate_sector_aligned_briefing(
 
     chain = prompt | client
 
-    if stream_callback:
-        # Use streaming if callback provided
-        full_content = ""
-        for chunk in chain.stream({
-            "evidence": json.dumps(evidence, indent=2)
-        }):
-            if hasattr(chunk, 'content'):
-                content = chunk.content
-            else:
-                content = str(chunk)
-            
-            if content:
-                full_content += content
-                stream_callback(content)
-        
-        return full_content.strip()
-    else:
-        # Non-streaming (original behavior)
-        message = chain.invoke({
-            "evidence": json.dumps(evidence, indent=2)
-        })
-        return (message.content or "").strip()
+    return _run_chain_with_token_fallback(
+        chain=chain,
+        system_prompt=system_prompt,
+        evidence=evidence,
+        stream_callback=stream_callback
+    )
 
 def generate_briefing(
     mode,

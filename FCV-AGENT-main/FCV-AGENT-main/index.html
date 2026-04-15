@@ -502,6 +502,18 @@
     .topbar-prompt-btn{font-size:11px;padding:4px 12px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:4px;color:rgba(255,255,255,.75);cursor:pointer;font-family:inherit;font-weight:600;letter-spacing:.04em;transition:all .15s}
     .topbar-prompt-btn:hover{background:rgba(255,255,255,.2);color:#fff}
     .topbar-prompt-btn.has-modified{border-color:rgba(245,158,11,.6);color:#fbbf24}
+    
+    /* Override Leaflet cluster halo effects */
+    .marker-cluster {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+    .marker-cluster-small,
+    .marker-cluster-medium,
+    .marker-cluster-large {
+      background: transparent !important;
+    }
 
   </style>
 </head>

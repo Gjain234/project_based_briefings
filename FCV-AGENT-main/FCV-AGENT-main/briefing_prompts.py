@@ -3,6 +3,8 @@ Centralized prompt storage for all LLM calls in the FCV briefing pipeline.
 This ensures consistency between documentation and actual usage.
 """
 
+from local_media_sources import build_country_media_source_prompt
+
 COUNTRY_THEMES = [
     "governance",
     "political",
@@ -18,6 +20,7 @@ COUNTRY_THEMES = [
 
 def get_country_risk_extraction_prompt(country_name, today, icg_texts):
     """Prompt for extracting structured country risks from ICG/CrisisWatch + web search."""
+    local_media_guidance = build_country_media_source_prompt(country_name)
     return f"""You are a Fragility, Conflict & Violence (FCV) analyst extracting structured country-level risk items for {country_name}.
 
 Your audience is senior development leadership (e.g., World Bank Country Director) who need actionable intelligence on current FCV dynamics.
@@ -57,10 +60,11 @@ Your audience is senior development leadership (e.g., World Bank Country Directo
 
 ### Source Preference Order
 
-1. ICG / CrisisWatch (from the provided summary)
+1. ICG / CrisisWatch (from the provided summary) and Reputable national or regional outlets from {country_name}
 2. Multilateral or UN sources (OCHA, UNHCR, WFP, UNICEF, OHCHR, World Bank, UNDP, IOM DTM, IDMC)
-3. Reputable national or regional outlets from {country_name}
-4. Reputable international wires or broadcasters (Reuters, AP, BBC, Al Jazeera, VOA)
+3. Reputable international wires or broadcasters (Reuters, AP, BBC, Al Jazeera, VOA)
+
+{local_media_guidance}
 
 Use web search to ensure each risk is properly sourced. Avoid more than two sources from the same publisher.
 

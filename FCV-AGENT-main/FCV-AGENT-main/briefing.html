@@ -79,6 +79,7 @@
         <div class="config-card">
           <label class="config-label">Briefing Type</label>
           <select id="briefingMode" class="config-select">
+            <option value="rra" selected>RRA-Aligned Briefing</option>
             <option value="risk">Risk-Aligned Briefing</option>
             <option value="sector">Sector-Aligned Briefing</option>
             <option value="project-based">Project-Based Briefing</option>
@@ -146,20 +147,11 @@ Social Cohesion and Protection</textarea>
       <div id="statusContainer" class="status-container" style="display:none;"></div>
     </section>
 
-    <!-- Recent Briefings Section -->
-    <section id="recentBriefingsSection" class="recent-briefings-section" style="display:none;">
-      <div class="section-header">
-        <h2>Recent Briefings</h2>
-        <p>Previously generated briefings for this country</p>
-      </div>
-      <div id="recentBriefingsList" class="recent-briefings-list"></div>
-    </section>
-
     <!-- Map Section -->
     <section id="mapSection" style="display:none; margin-bottom: 40px;">
       <div class="section-header">
-        <h2>🗺️ Projects & Conflict Events</h2>
-        <p>Active World Bank projects and conflict events in <span id="mapCountryName"></span></p>
+        <h2>🗺️ Projects, ACLED Events, and Risk Scan</h2>
+        <p>Active World Bank projects, ACLED events, and latest risk scan findings in <span id="mapCountryName"></span></p>
       </div>
       <div style="display: flex; gap: 16px; align-items: flex-start;">
         <div id="mapContainer" style="flex: 1; min-width: 0; height: 500px; border-radius: 8px; overflow: hidden; border: 1px solid #d9e2ec;">
@@ -171,15 +163,21 @@ Social Cohesion and Protection</textarea>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 20px;">
         <div style="padding: 12px; background: #f0fdf4; border-left: 3px solid #22c55e; border-radius: 4px;">
-          <strong style="color: #22c55e;">Projects</strong>
+          <strong style="color: #1e40af;">Projects</strong>
           <div style="font-size: 14px; color: #5a6a7e; margin-top: 4px;">
             <span id="projectCount">0</span> project pins
           </div>
         </div>
-        <div style="padding: 12px; background: #fef2f2; border-left: 3px solid #ef4444; border-radius: 4px;">
-          <strong style="color: #ef4444;">Conflict Events</strong>
+        <div style="padding: 12px; background: #f9fafb; border-left: 3px solid #374151; border-radius: 4px;">
+          <strong style="color: #374151;">ACLED Events</strong>
           <div style="font-size: 14px; color: #5a6a7e; margin-top: 4px;">
-            <span id="eventCount">0</span> last 12 months
+            <span id="eventCount">0</span> last 12 weeks
+          </div>
+        </div>
+        <div style="padding: 12px; background: #fef2f2; border-left: 3px solid #dc2626; border-radius: 4px;">
+          <strong style="color: #991b1b;">Risk Scan</strong>
+          <div style="font-size: 14px; color: #5a6a7e; margin-top: 4px;">
+            <span id="riskScanCount">0</span> recent risk pins
           </div>
         </div>
       </div>
@@ -209,6 +207,9 @@ Social Cohesion and Protection</textarea>
                 </svg>
                 Compare to RRA
               </button>
+              <button id="rraViewToggleBtn" style="display:none; align-items:center; gap:6px; font-size:13px; font-weight:500; color:#5b21b6; padding:0 10px; border:1px solid #7c3aed; border-radius:6px; height:32px; background:#f5f3ff; cursor:pointer;">
+                View Original
+              </button>
               <button id="copyBtn" class="download-btn" style="display:none;">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
@@ -222,6 +223,12 @@ Social Cohesion and Protection</textarea>
                 </svg>
                 Download Markdown
               </button>
+              <button id="exportHtmlBtn" class="download-btn" style="display:none;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                </svg>
+                Export HTML
+              </button>
             </div>
           </div>
           <div id="briefingContent" class="briefing-content">
@@ -229,16 +236,7 @@ Social Cohesion and Protection</textarea>
               Select a country and click "Generate Briefing" to create a new briefing, or view recent briefings below.
             </p>
           </div>
-          <!-- RRA Comparison Section -->
-          <div id="rraComparisonSection" style="display:none; margin-top: 40px; padding-top: 40px; border-top: 1px solid #d9e2ec;">
-            <h3>📚 Briefing vs. RRA Analysis</h3>
-            <p style="font-size: 14px; color: #5a6a7e; margin-bottom: 20px;">
-              Highlighted sections show connections to the Risk and Resilience Assessment. Hover over highlighted text to see RRA references.
-            </p>
-            <div id="annotatedBriefingContent" class="briefing-content" style="background: #f9fafb; padding: 20px; border-radius: 8px;">
-              <!-- Annotated briefing will be inserted here -->
-            </div>
-          </div>
+          <div id="annotatedBriefingContent" class="briefing-content" style="display:none;"></div>
         </div>
 
         <!-- Edit Prompt Tab -->
@@ -528,6 +526,7 @@ Return valid JSON with structure: { "connections": [ { "country_risk_id", "count
                 <li>LLM receives all extracted data as JSON: Country risks with citations, PAD susceptibilities, Implementation risks, Risk mappings</li>
                 <li>Generates structured briefing based on mode:
                   <ul>
+                    <li><strong>RRA-Aligned (default):</strong> Five paragraphs using standard RRA short-term FCV risk headings</li>
                     <li><strong>Risk-Aligned:</strong> One paragraph per country risk (shows susceptibility + realization)</li>
                     <li><strong>Sector-Aligned:</strong> One paragraph per sector cluster (inferred from evidence)</li>
                     <li><strong>Custom:</strong> One paragraph per user-defined category</li>
@@ -620,6 +619,15 @@ Return valid JSON with structure: { "connections": [ { "country_risk_id", "count
       </div>
     </section>
 
+    <!-- Recent Briefings Section -->
+    <section id="recentBriefingsSection" class="recent-briefings-section" style="display:none;">
+      <div class="section-header">
+        <h2>Recent Briefings</h2>
+        <p>Previously generated briefings for this country</p>
+      </div>
+      <div id="recentBriefingsList" class="recent-briefings-list"></div>
+    </section>
+
   </main>
 
   <!-- Modal for viewing old briefings -->
@@ -634,6 +642,9 @@ Return valid JSON with structure: { "connections": [ { "country_risk_id", "count
             </svg>
             Compare to RRA
           </button>
+          <label id="modalRraOverlayToggle" style="display:none; align-items:center; gap:6px; cursor:pointer; font-size:13px; font-weight:500; color:#5b21b6; padding:0 10px; border:1px solid #7c3aed; border-radius:6px; height:32px; background:#f5f3ff;">
+            <input type="checkbox" id="modalRraOverlayCheckbox" checked style="accent-color:#7c3aed; cursor:pointer;"> RRA Overlay
+          </label>
           <button id="modalCopyBtn" class="modal-btn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
@@ -654,6 +665,6 @@ Return valid JSON with structure: { "connections": [ { "country_risk_id", "count
     </div>
   </div>
 
-  <script src="static/briefing.js?v=3"></script>
+  <script src="static/briefing.js?v=6"></script>
 </body>
 </html>

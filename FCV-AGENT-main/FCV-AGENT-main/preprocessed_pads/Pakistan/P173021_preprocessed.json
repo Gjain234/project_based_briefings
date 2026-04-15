@@ -1,0 +1,127 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P173021",
+    "guid": 513151607742095471,
+    "node_id": 32598406,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b087ff6945&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 158698
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Solid Waste Emergency and Efficiency Project (SWEEP)",
+      "project_development_objective": "To mitigate the impacts of flooding and COVID-19 emergencies, and to improve solid waste management services in Karachi.",
+      "total_financing": "US$105 million (US$100 million IBRD + US$5 million counterpart funding)",
+      "implementation_period": "2020-2025 (Expected closing date: June 30, 2025)",
+      "beneficiaries": "Residents of Karachi (improved urban living conditions and SWM services); communities living around nullahs and flooding hotspots (reduced flooding and public health risks); sanitation workers (safer working conditions and reduced health risks); approximately 500,000 residents expected to benefit from improved SWM services"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Karachi",
+        "Sindh Province",
+        "Pakistan"
+      ],
+      "coverage_type": "local/city-wide",
+      "fragile_or_conflict_affected_areas": "partial - Karachi is not in a conflict zone but faces significant urban fragility challenges including ethnic tensions, governance fragmentation, informal settlements, and vulnerability to climate-related disasters"
+    },
+    "key_components": [
+      {
+        "component_name": "Immediate Emergency Response Interventions",
+        "description": "Cleaning of nullahs (natural drainage channels) to remove waste and restore drainage capacity; construction of temporary storage cell for waste cleared from nullahs at Jam Chakro dumpsite; communication and awareness campaign targeting communities around nullahs to promote better waste management practices and reduce illegal dumping.",
+        "financing": "US$11 million"
+      },
+      {
+        "component_name": "Development of SWM Backbone Infrastructure",
+        "description": "Provision of collection equipment (PPE, trucks, bins) for underserved districts; improvement and construction of kachra kundis (waste collection points); construction of new sanitary disposal cell at Jam Chakro dumpsite with material recovery facility; construction/upgrading of transfer stations; development of long-term waste solutions including new sanitary landfill at Dhabeji and advanced waste treatment facilities for medical and construction/demolition waste.",
+        "financing": "US$84 million"
+      },
+      {
+        "component_name": "Project Management and Implementation Support",
+        "description": "Support for implementing agencies to manage and implement project activities; training and skill development in monitoring and evaluation, communication, audits, social and environmental management, engineering, operations and maintenance, and project management.",
+        "financing": "US$10 million (US$5 million WB financing)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Sindh Solid Waste Management Board (SSWMB) as primary implementing agency; Local Government Department (LGD) as umbrella institution; Karachi Metropolitan Corporation (KMC) supporting emergency nullah cleaning; District Municipal Corporations (DMCs) for waste collection in three districts",
+      "coordination_mechanisms": "Project Steering Committee headed by Chairman, Planning and Development Board with representatives from relevant Government of Sindh agencies; CLICK PIU (under LGD) providing shared services support during first year; regular stakeholder engagement and coordination with multiple provincial and local agencies",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers; open international competition for major works contracts (landfill construction estimated at US$20 million each); quality and cost-based selection for consulting services; direct contracting used for emergency nullah cleaning works (July-August 2020); procurement risk rating: Moderate",
+      "monitoring_and_evaluation": "Quarterly and annual progress reports prepared by PIU; bi-annual interim unaudited financial reports (IUFRs) submitted within 45 days of semester close; annual audited financial statements by Auditor General of Pakistan; M&E staff/consultants hired for data collection and analysis; beneficiary feedback surveys at mid-term and completion; performance management system being designed for SSWMB under CLICK"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Complex political context with multiple actors at various government tiers; fragmented urban governance is pervasive challenge in SWM sector; mandate for service provision actively contested; high political pressures from recent flooding and COVID-19 crises",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Extensive, regular and collaborative engagement with stakeholders in Karachi including Government of Sindh and Local Councils; Project Steering Committee to institutionalize engagement; demonstrated strong ownership of Bank-financed projects in Karachi"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Pakistan's macroeconomic risk is high as it emerges from COVID-19 crisis; projected negative impact on real economic growth, government fiscal position, and private investment; risks to government's ability to make counterpart financing allocations and achieve outcomes related to private sector participation",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Government's monetary policy stance geared towards preserving macroeconomic stability; support from international financial institutions enhancing Pakistan's fiscal space for COVID-19 response; Government of Sindh according highest priority to pandemic mitigation and reprioritizing resources; Karachi Transformation Plan (September 2020) identified SWM as key priority with substantial allocations"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Sector faces substantial fragmentation and coordination challenges; lack of financial sustainability; low institutional capacity; weak policy environment presents strong challenge to effectiveness of transformative policy-level interventions",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Comprehensive technical assistance through CLICK project to agencies involved with SWM services in tandem with SWEEP activities; strengthening institutional and regulatory capacity at provincial and local council levels; incremental improvements in service delivery"
+      },
+      {
+        "risk_category": "Technical Design and Institutional Capacity",
+        "risk_description": "SWM infrastructure requires operational expertise and financial resources to preserve service levels; substantial infrastructure investments require capacity to design, implement and manage; risks from institutional capacity for implementation and sustainability",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Use of international consultants at design and supervision stage; engagement of technical resources at PIU to manage construction phase; improving knowledge and skillsets of SSWMB staff; bringing in private sector to support operations and maintenance; targeted assistance under SWEEP complemented by technical assistance and capacity building under CLICK"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "High environmental risk from EHS risks associated with nullah cleaning in densely populated areas, transportation and temporary storage of contaminated wet wastes, safety and rehabilitation works at Jam Chakro landfill, construction and operation of collection points and transfer stations. High social risk from potential resettlement of approximately 400 households at Jam Chakro dumpsite, inadvertent damage to livelihood structures during nullah cleaning, health and safety risks to communities near nullahs and transport routes, significant risk of gender-based violence and sexual exploitation and abuse from construction labor and informal waste pickers, involvement of migrants and minors in waste recovery, exploitation of informal workers",
+        "risk_rating": "high",
+        "mitigation_measures": "Third-party environmental and social audit for retroactive financing with implementation of gap-filling measures; comprehensive screening and site-specific environmental and social assessments; resettlement plans prepared in accordance with Resettlement Framework; recruitment of environmental specialist, health and safety specialist, resettlement specialist, social development specialist for gender and inclusion, and communication specialist; third-party E&S audit firm hired; extensive training for environmental and social activities; Environmental and Social Commitment Plan (ESCP) mandates no upgradation or fresh construction on sites where anti-encroachment measures taken since November 21, 2019; GBV Action Plans to be prepared; Code of Conduct for protection against harassment at workplace"
+      },
+      {
+        "risk_category": "Stakeholder Engagement",
+        "risk_description": "Karachi has variety of ethnic, religious and social groups including poor communities and socially disadvantaged groups; several NGOs may be interested in implementation; need for meaningful engagement with women and residents of low-income settlements",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Stakeholder Engagement Plan (SEP) prepared and to be followed for adequate consultation and transparency; citizen engagement embedded with infrastructure investments; grievance and complaints redress systems strengthened; local NGOs regularly consulted and engaged; information on project activities regularly disseminated; dedicated Grievance Redress Mechanism (GRM) available to all citizens including women"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Financial management and procurement risks in implementing agency with limited capacity",
+        "risk_rating": "moderate",
+        "mitigation_measures": "SSWMB assessed as having adequate FM systems; separate Designated Account established; bi-annual interim unaudited financial reports; annual audited financial statements by Auditor General of Pakistan; internal controls through Government of Sindh rules and regulations; procurement support through consulting firm; additional procurement and contract management staff hired at PIU; staff training in Bank procurement procedures"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "High (Environmental and Social Risk Classification)",
+      "triggered_safeguard_policies": [
+        "ESS 1 - Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS 2 - Labor and Working Conditions",
+        "ESS 3 - Resource Efficiency and Pollution Prevention and Management",
+        "ESS 4 - Community Health and Safety",
+        "ESS 5 - Land Acquisition, Restrictions on Land Use and Involuntary Resettlement",
+        "ESS 6 - Biodiversity Conservation and Sustainable Management of Living Natural Resources",
+        "ESS 10 - Stakeholder Engagement and Information Disclosure"
+      ],
+      "grievance_redress_mechanism": "Yes - Grievance Redress Mechanism (GRM) established building on SSWMB's existing systems; available to all citizens including women to register grievances on infrastructure subprojects and service delivery performance; Grievance Redress Committees to have designated female representatives from communities; World Bank's Grievance Redress Service (GRS) and Inspection Panel also available",
+      "gender_considerations": "Two major gender gaps identified: (1) Working conditions and livelihood improvement prospects for women workers need improvement; women comprise approximately 20% of SWM workforce but restricted to labor-intensive or informal roles with limited skill development opportunities; (2) Women as primary caregivers not adequately represented in consultations and decision-making on SWM infrastructure design. Project responses include: baseline assessment on gender inclusion; measures to encourage women engagement with facilities like separate toilets and harassment-free environment; partnership with NGOs to enhance women's skills and access to formal sector employment; community consultations ensuring women representation; communication activities targeting women; three gender-related results indicators tracking female workers with viable opportunities, improved working conditions, and satisfaction with project infrastructure",
+      "vulnerable_groups": [
+        "Low-income residents living around drains and in informal settlements (katchi abadies)",
+        "Sanitation workers (disproportionately comprised of disadvantaged groups)",
+        "Waste pickers and scavengers (approximately 400 households at Jam Chakro dumpsite)",
+        "Women workers in SWM sector",
+        "Informal waste sector workers",
+        "Migrants and minors involved in waste recovery",
+        "Communities in flood-prone areas",
+        "Marginalized and extremely poor groups exploited by middlemen and contractors"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project is not in an active conflict zone but addresses urban fragility and resilience. Karachi has significant ethnic, religious and social tensions. Project design incorporates conflict sensitivity through: (1) Stakeholder Engagement Plan addressing diverse ethnic, religious and social groups; (2) Inclusive consultation processes ensuring representation of marginalized communities; (3) Grievance Redress Mechanism to address community concerns; (4) Focus on vulnerable populations including informal workers and low-income communities; (5) Employment generation through labor-intensive emergency works supporting COVID-19 economic recovery; (6) Coordination mechanisms through Project Steering Committee to manage inter-agency disputes and ensure inclusive decision-making",
+      "fragility_context": "Karachi faces significant urban fragility factors: (1) Weak and fragmented governance structure with multiple overlapping mandates and unclear roles; (2) Inadequate urban infrastructure and services affecting livelihood opportunities; (3) High vulnerability to climate-related disasters (flooding, extreme weather); (4) Large informal settlements and low-income neighborhoods disproportionately impacted by floods and poor SWM services; (5) Weak institutional capacity and low professionalization in critical service sectors; (6) Limited financial sustainability of public services; (7) Large informal economy with vulnerable workers; (8) COVID-19 pandemic exacerbating economic and health vulnerabilities; (9) Chronic underfunded public health system; (10) Concentrated poverty and weak social safety nets",
+      "security_considerations": "Project addresses public health and safety risks from inadequate SWM: (1) Open burning of waste generates toxic chemicals causing cardiovascular diseases; (2) Inadequate SWM linked to persistent polio incidence in Karachi; (3) Runoff from waste contributes to groundwater pollution and water-borne diseases; (4) Clogged drainage system from waste contributes to recurrent flooding; (5) Health and safety risks for sanitation workers and waste pickers from exposure to contaminated waste; (6) Risks of gender-based violence and sexual exploitation and abuse from construction labor and informal waste pickers; (7) COVID-19 transmission risks from improper handling of contaminated medical waste; (8) Project includes healthcare waste management strengthening to prevent COVID-19 spread; (9) PPE and training provided to SWM workers to mitigate COVID-19 transmission risks",
+      "displacement_or_refugees": "Yes - Resettlement impacts identified: (1) Potential resettlement of approximately 400 households living at Jam Chakro dumpsite (informal settlement of waste pickers); (2) Moderate risk of inadvertent damage to livelihood structures during nullah cleaning; (3) Possible additional resettlement for informal settlements and encroachers concerning transfer stations, new landfill at Dhabeji, or treatment infrastructure, though estimated to be smaller than Jam Chakro; (4) Mitigation measures include: Resettlement Framework prepared; Resettlement Plans to be prepared during implementation in accordance with ESS 5; Community Support Plan for waste pickers at Jam Chakro including immediate occupational safety improvements and medium-to-long-term resettlement/livelihood restoration; E&S audit to record any inadvertent damage and include compensation in gap-filling action plan; screening and site selection measures to avoid project-related risks; commitment to prepare and implement RP within project lifetime"
+    }
+  }
+}

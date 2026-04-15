@@ -13,6 +13,33 @@ from langchain_core.prompts import ChatPromptTemplate
 from document_utils import fetch_pdf_text
 
 
+def _parse_json_response(raw_response):
+    """Parse JSON response, including fallback extraction from code fences/text."""
+    raw = (raw_response or "").strip()
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError:
+        json_start = raw.find("{")
+        json_end = raw.rfind("}")
+        if json_start != -1 and json_end != -1 and json_end > json_start:
+            return json.loads(raw[json_start:json_end + 1])
+        raise ValueError("Could not extract valid JSON from response")
+
+
+def _is_context_or_token_limit_error(error):
+    error_str = str(error).lower()
+    return any(marker in error_str for marker in [
+        "context",
+        "tokens",
+        "overflow",
+        "token limit will exceed",
+        "estimated request tokens",
+        "rate limit",
+        "statuscode",
+        "429"
+    ])
+
+
 def get_pad_cache_path(proj_id, country):
     """
     Get the cache file path for a preprocessed PAD.
@@ -86,15 +113,7 @@ def preprocess_pad(pad_row, client):
         print(f"   ❌ Error fetching PAD text: {e}")
         return None
     
-    # If PAD is too long, keep the LAST ~200k tokens (roughly 800k chars)
-    # This preserves the most recent/relevant project details at the end
-    # rather than executive summaries at the beginning
-    MAX_CHARS = 800000  # ~200k tokens estimate
-    if len(pad_text) > MAX_CHARS:
-        print(f"   ⚠️  PAD is {len(pad_text)} chars (~{len(pad_text)//4} tokens), truncating to last {MAX_CHARS} chars")
-        pad_text = pad_text[-MAX_CHARS:]
-        # Add note that this is truncated
-        pad_text = f"[NOTE: This PAD exceeds context limits. Displaying the LAST ~200k tokens of the document.]\n\n{pad_text}"
+    original_pad_text = pad_text
     
     # Extract structured information using LLM
     prompt = ChatPromptTemplate.from_messages([
@@ -163,43 +182,68 @@ def preprocess_pad(pad_row, client):
     
     chain = prompt | client
     
-    try:
-        message = chain.invoke({"pad_text": pad_text})
-        raw = (message.content or "").strip()
-        
-        # Parse JSON
+    # Keep retrying with progressively smaller tails until success or minimum floor.
+    truncation_plan = [760000, 600000, 500000, 400000, 300000, 220000, 160000, 120000, 90000, 70000, 50000, 35000, 25000]
+    last_error = None
+
+    for attempt, max_chars in enumerate(truncation_plan, start=1):
+        truncated = len(original_pad_text) > max_chars
+        candidate_text = original_pad_text[-max_chars:] if truncated else original_pad_text
+
+        if truncated:
+            approx_tokens = max_chars // 4
+            candidate_text = (
+                f"[NOTE: This PAD exceeds context limits. Displaying approximately the LAST ~{approx_tokens} tokens of the document.]\n\n"
+                f"{candidate_text}"
+            )
+
         try:
-            structured_data = json.loads(raw)
-        except json.JSONDecodeError:
-            # Try to extract JSON from markdown code blocks
-            json_start = raw.find("{")
-            json_end = raw.rfind("}")
-            if json_start != -1 and json_end != -1:
-                structured_data = json.loads(raw[json_start:json_end+1])
-            else:
-                raise ValueError("Could not extract valid JSON from response")
-        
-        # Add metadata
-        result = {
-            "metadata": {
-                "PROJ_ID_IB": proj_id,
-                "guid": pad_row.get("guid"),
-                "node_id": pad_row.get("node_id"),
-                "pdf_url": pad_row.get("pdf_url"),
-                "document_type": "Project Appraisal Document",
-                "preprocessing_version": "1.0",
-                "truncated": "[NOTE: This PAD exceeds context limits" in pad_text
-            },
-            "structured_content": structured_data
-        }
-        
-        return result
-        
-    except Exception as e:
-        print(f"   ❌ Error preprocessing PAD: {repr(e)}")
-        import traceback
-        traceback.print_exc()
-        return None
+            if attempt == 1 and truncated:
+                print(
+                    f"   ⚠️  PAD is {len(original_pad_text)} chars (~{len(original_pad_text)//4} tokens), "
+                    f"starting with last {max_chars} chars"
+                )
+            elif attempt > 1:
+                print(f"   ↻ Retry {attempt}/{len(truncation_plan)} with last {max_chars} chars")
+
+            message = chain.invoke({"pad_text": candidate_text})
+            structured_data = _parse_json_response(message.content)
+
+            result = {
+                "metadata": {
+                    "PROJ_ID_IB": proj_id,
+                    "guid": pad_row.get("guid"),
+                    "node_id": pad_row.get("node_id"),
+                    "pdf_url": pad_row.get("pdf_url"),
+                    "document_type": "Project Appraisal Document",
+                    "preprocessing_version": "1.0",
+                    "truncated": truncated,
+                    "truncation_chars": max_chars if truncated else len(original_pad_text)
+                },
+                "structured_content": structured_data
+            }
+
+            if attempt > 1:
+                print(f"   ✓ Successfully preprocessed after iterative truncation (attempt {attempt})")
+            return result
+
+        except Exception as e:
+            last_error = e
+            if _is_context_or_token_limit_error(e):
+                if attempt < len(truncation_plan):
+                    print("   ⚠️  Context/token limit issue detected, truncating further...")
+                    continue
+                print("   ❌ Reached minimum truncation threshold and still hit token/context limits")
+                break
+
+            print(f"   ❌ Error preprocessing PAD: {repr(e)}")
+            import traceback
+            traceback.print_exc()
+            return None
+
+    if last_error is not None:
+        print(f"   ❌ Failed to preprocess PAD after all truncation attempts: {repr(last_error)}")
+    return None
 
 
 def save_preprocessed_pad(preprocessed_data, proj_id, country):

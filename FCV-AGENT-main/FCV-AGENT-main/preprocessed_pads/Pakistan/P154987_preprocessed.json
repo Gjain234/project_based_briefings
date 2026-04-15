@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P154987",
+    "guid": 345091513911668260,
+    "node_id": 29169631,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b0853d9363&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 155642
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "National Transmission Modernization I Project (NTMP-I)",
+      "project_development_objective": "To increase the capacity and reliability of selected segments of the national transmission system in Pakistan and modernize key business processes of the National Transmission and Despatch Company",
+      "total_financing": "US$536.33 million (IBRD: US$425 million; NTDC counterpart: US$111.33 million)",
+      "implementation_period": "January 12, 2018 to July 31, 2023 (Project Implementation); Expected Closing: January 31, 2024",
+      "beneficiaries": "All segments of Pakistan's population through improved power supply; NTDC through improved financial and accounting systems, management, and operations"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Balochistan Province",
+        "Khyber Pakhtunkhwa Province",
+        "Punjab Province",
+        "Sindh Province"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "partial - Pakistan faces security challenges and political instability; project areas scattered across all four provinces with varying security conditions; some sites noted as having higher security risks"
+    },
+    "key_components": [
+      {
+        "component_name": "Component A: Expansion and Upgradation of the Transmission Network",
+        "description": "Expansion, augmentation, and rehabilitation of selected existing 500 kV and 220 kV power substations and associated lines; construction of new 765 kV, 500 kV, and 220 kV substations and transmission lines. Includes two groups: Group 1 (33 subprojects ready for implementation) and Group 2 (potential subprojects to be appraised during implementation). Key subprojects include Islamabad West 765/500 kV substation (IWS) and Nowshera 500 kV substation.",
+        "financing": "US$455.89 million (IBRD: US$344.56 million; NTDC: US$111.33 million)"
+      },
+      {
+        "component_name": "Component B: Deployment of the Enterprise Resource Planning (ERP) System",
+        "description": "First stage of two-stage ERP deployment for NTDC. Includes modernization of ICT infrastructure and development/deployment of ERP system to strengthen management capabilities. Nine work packages covering ICT civil infrastructure, office automation, help desk, ERP modules (FMIS, HRMIS, Payroll, Supply Chain Management), capacity building, change management, business process improvement, and project management/quality assurance.",
+        "financing": "US$29.46 million (IBRD: 100%)"
+      },
+      {
+        "component_name": "Component C: Project Management, Technical Assistance, and Capacity Building",
+        "description": "Project management and implementation support services; strengthening of NTDC's planning, operations, and maintenance capability; modernization of key business processes; preparation of new investments; priority TA and capacity building including Grid Code updates, FACTS feasibility study, HVDC capacity building, internal audit methodology development, and operational planning capability enhancement.",
+        "financing": "US$20.00 million (IBRD: 100%)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "National Transmission and Despatch Company (NTDC), a state-owned entity operating under commercial principles with a nonexclusive transmission license from NEPRA",
+      "coordination_mechanisms": "NTMP-I Program Director in PMU oversees overall project coordination; two regional offices (PDEL-N and PDEL-S) manage subprojects; separate ERP PMU reports to Chief Information Officer; Environmental and Social Impact Cells (ESIC) manage safeguards; Procurement Review Committee reviews procurement decisions; Steering Committee and high-level ERP Steering Committee oversee ERP component",
+      "procurement_approach": "World Bank's Procurement Regulations for IPF Borrowers (July 1, 2016); open international, single-stage, two-envelope supply and installation procurement strategy with post-qualification for main substation works; Quality- and Cost-Based Selection for consulting services; use of World Bank's STEP system; phased implementation with Group 1 divided into six packages (US$234 million total); advance procurement underway for PDPC and PSC",
+      "monitoring_and_evaluation": "NTDC monitors project implementation against performance indicators; GMs of PDEL-N and PDEL-S collect data on performance indicators and monitor contractor performance; NTMP PD coordinates data collection on project outputs and outcomes; semi-annual reports submitted to World Bank; independent monitoring of RAP implementation; quarterly progress reports on ESMP and RAP implementation"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Sector structure and governance arrangements remain centralized and subject to political interference. Ministry of Energy retains day-to-day control over NTDC through board of directors and management. Substantial risk that decision-making at NTDC will be subject to political rather than operational considerations, undermining PDO achievement.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Maintain close dialogue with Ministry of Energy and other concerned government agencies during implementation to make timely adjustments in project management and implementation"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Inadequate tariff policy resulting in chronic sector circular debt (reached PKR 420 billion/US$4 billion by end FY16); lack of GoP strategy to eliminate the problem could prevent timely provision of counterpart funds. Lack of planning coordination between transmission and distribution system expansion and underinvestment in distribution networks could undermine PDO achievement.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Covenants requiring NTDC to submit annual tariff petitions to NEPRA by February 28 each year and Government to notify tariff within 30 days of NEPRA determination; monitoring of NTDC's financial condition; multiyear tariff regime transition"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "NTDC facing serious capacity constraints in meeting unprecedented five-year expansion plan. Past issues include lack of accountability throughout investment project cycle, poor coordination among departments, suboptimal delegation of decision-making, and frequent changes in senior management causing implementation delays. Risk to ERP development due to substantial organizational change and potential resistance to shift from paper-based to electronic systems.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Corporate restructuring launched July 2017 to enhance accountability and streamline investment decision-making; PMU including World Bank Program Unit to oversee results across NTMP-I and ongoing projects; two external consultants (PDPC and PSC) to build NTDC capacity; PMQA consultant and change management/capacity-building consultants for ERP implementation; effective communication of system benefits; capacity building for IT staff and end-users"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Risk of corruption at almost all stages of bidding process. Project Procurement Strategy for Development identified systematic deficiencies: inadequate processes for maintaining document confidentiality through evaluation process; complicated procurement decision-making framework with lack of clear responsibility and insufficient delegation of financial decision-making authority. Low debt service coverage in certain past years; with CPPA separation, NTDC will lose liquidity cushion and potentially face hard liquidity constraints.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Adoption of single-stage supply and installation procurement approach for works contracts; establishment of dedicated Procurement Review Committee as single review body; employment of experienced owner's engineer to supervise procurement and contract management; Board to increase financial delegations to management; FM action plan with budget preparation milestones; internal and external audit arrangements; semi-annual financial reporting; monitoring of NTDC's financial condition and liquidity"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Land acquisition for substations and especially for right of way (ROW) of transmission lines has been main bottleneck for most transmission projects. NTMP-I will require land acquisition and involuntary resettlement, although at limited scale, which can cause implementation delays. IWS will affect 260 households; Nowshera will affect 176 households.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Early focus on land acquisition process by NTDC and close collaboration with all concerned parties for IWS and Nowshera; preparation of Resettlement Action Plans (RAPs) for Group 1 subprojects; adoption of Land Acquisition and Resettlement Framework (LARF) for Group 2; Environmental and Social Management Framework (ESMF) for Group 2; independent monitoring of RAP implementation; grievance redress mechanism; gender-sensitive consultations; capacity building for NTDC staff on safeguard instruments"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Growing fiscal and external imbalances may erode economic gains; GDP growth lower than planned; power shortages constrain economic activity",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "Project supports Government's National Power Policy 2013 and Vision 2025 objectives; contributes to improved Doing Business ranking through electricity access improvements"
+      },
+      {
+        "risk_category": "Technical Design of Project",
+        "risk_description": "Group 1 subprojects have been appraised and are ready for implementation; Group 2 subprojects expected to be appraised within first 18 months. ERP implementation requires change in governance and strong ownership from management.",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "World Bank review of Pro-Forma Concept Documents (PC-1) found satisfactory; verification through regional load-flow analyses; PDPC to review and update technical specifications based on international best practice; flexible ERP design allowing changes during implementation; PMQA consultant support; staged ERP implementation with initial commitment less than US$30 million"
+      },
+      {
+        "risk_category": "Stakeholders",
+        "risk_description": "Need for effective stakeholder engagement and citizen participation; potential resistance to organizational changes and new systems",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "Stakeholder consultations during design, preparation, and implementation stages; multi-tier grievance redress mechanism at community, GM PDEL, PMU, and court levels; gender-responsive and culturally appropriate GRM; public consultation framework; disclosure of safeguard documents; capacity building and change management support"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Category B - Partial Assessment (potential adverse impacts are small to moderate and site-specific, readily mitigated through good site selection and design, pollution and emission control measures, and construction-related controls)",
+      "triggered_safeguard_policies": [
+        "OP/BP 4.01 - Environmental Assessment",
+        "OP/BP 4.04 - Natural Habitats (precautionary for Group 2 subprojects)",
+        "OP/BP 4.11 - Physical Cultural Resources (precautionary for Group 2 subprojects)",
+        "OP/BP 4.36 - Forests (precautionary for Group 2 subprojects)",
+        "OP/BP 4.12 - Involuntary Resettlement"
+      ],
+      "grievance_redress_mechanism": "Yes - Multi-tier GRM established: (1) Community level (village or group of villages); (2) GMs PDEL (second tier); (3) PMU/NTDC (third tier); (4) Court system (fourth tier). GRM is gender-responsive, culturally appropriate, readily accessible to PAPs at no cost and without retribution. Project-level GRMs for each subproject; World Bank Grievance Redress Service also available",
+      "gender_considerations": "Gender-informed project design with analysis of relevant gender information and mitigation measures. Gender disparity identified in project areas with women particularly vulnerable in rural areas. Women have no recognized role in village authority structures despite representing 46% of population; only 2-3% participate in business/formal employment; only 30% participate in local representation. NTDC has fewer than 3% women employees despite 10% government employment quota. Project includes: gender-sensitive consultations (men and women consulted separately); separate men's and women's PAP committees; target of 80% of affected households having women participation in consultation exercises (baseline 20%); Gender Assessment prepared; gender action plan to promote equality at institutional level; measures to increase women representation and improve retention/promotion; sex-disaggregated data generation; capacity building on gender issues; Labor Management Framework addressing fair and equitable working conditions and prevention of gender-based violence and harassment",
+      "vulnerable_groups": [
+        "Female-headed households with dependents",
+        "Disabled household heads",
+        "Poor households",
+        "Landless elderly households with no means of support",
+        "Households without security of tenure",
+        "Ethnic minorities",
+        "Sharecroppers",
+        "Families below poverty line (45 families identified at Nowshera)"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project acknowledges Pakistan's security challenges as constraint on economic growth. Security risks identified at some project sites acting as deterrent to bidders; NTDC to explain adequate security arrangements in place at each site and detail enhanced measures at higher-risk sites. Project design includes mitigation for security-related implementation delays. No explicit conflict sensitivity analysis provided, but project supports power sector development critical to economic stability and poverty reduction in conflict-affected country.",
+      "fragility_context": "Pakistan faces multiple fragility factors: (1) Security challenges constraining economic activity; (2) Macroeconomic imbalances (growing fiscal and external deficits); (3) Weak institutional capacity and governance (centralized control, political interference in NTDC operations, frequent management changes); (4) Sector governance challenges (chronic circular debt of PKR 420 billion, inadequate tariff policy, commercial discipline lacking); (5) Infrastructure constraints and electricity shortages (load shedding 6-8 hours/day for households, 1-2 hours for industry); (6) Frequent natural disasters; (7) Low human development indicators (147th out of 188 countries); (8) High poverty and inequality despite recent reductions. Project aims to address infrastructure constraint as enabler of economic growth and poverty reduction.",
+      "security_considerations": "Pakistan's economy hindered by security challenges; project areas scattered across all four provinces with varying security conditions; some subproject sites noted as having higher security risks; NTDC to provide security assurances to bidders; foreign bidders may be deterred by perceived security risks; project includes provisions for security arrangements at sites; implementation delays possible due to security-related issues",
+      "displacement_or_refugees": "Yes - Limited involuntary resettlement required. IWS will affect 260 households: 58 families will lose all their land; 12 families considered vulnerable; 10 families will be relocated; no land acquisition from female-headed households. Nowshera substation and transmission lines will affect 176 households: 59 families affected by substation (51 titleholders, 8 sharecroppers); 11 households will lose all agricultural land; 48 households will lose 40-50% of land; 117 households affected by transmission line (27 lose land for towers, 90 have land in ROW); 45 families below poverty line eligible for additional payments. Total estimated budget for resettlement activities: US$26.31 million. RAPs prepared for Group 1 subprojects; LARF adopted for Group 2 subprojects; independent monitoring of RAP implementation planned"
+    }
+  }
+}

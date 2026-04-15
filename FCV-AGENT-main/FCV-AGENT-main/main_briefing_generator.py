@@ -16,6 +16,7 @@ from get_pad_risks import run_stress_tests_for_all_pads
 from get_implementation_docs_risks import extract_all_realized_fcv_risks, map_all_realized_risks_to_country
 from generate_briefing import generate_briefing
 from country_name_mapping import get_possible_wb_country_names, get_country_id_key
+from local_media_sources import log_country_media_source_injection
 import os
 from datetime import datetime
 
@@ -52,6 +53,10 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
     # Use appropriate CSV based on internal/external usage
     document_df_path = get_document_df_path(internal=internal)
     document_df = pd.read_csv(document_df_path)
+
+    # Always log local media source injection intent so users can verify behavior,
+    # even when country risks are loaded from cache.
+    log_country_media_source_injection(country)
     
     # Get all possible World Bank country name variants for this country
     possible_country_names = get_possible_wb_country_names(country)
@@ -85,8 +90,10 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
                 except:
                     date_only = last_generated.split()[0] if ' ' in last_generated else last_generated
                 update_status(f"📂 Loading existing country risks (from {date_only})")
+                print("   Note: country risk extraction was not re-run; loaded cached risks and skipped fresh websearch extraction.")
         else:
             update_status("📂 Loading existing country risks")
+            print("   Note: country risk extraction was not re-run; loaded cached risks and skipped fresh websearch extraction.")
         
         briefing_risks_df = pd.read_csv(briefing_risks_path)
     else:

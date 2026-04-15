@@ -8,6 +8,7 @@ from get_icg_text import (
 )
 from briefing_config import ANTHROPIC_API_KEY, ANTHROPIC_COUNTRY_RISK_MODEL, ANTHROPIC_RISK_BRIEFING_MODEL
 from briefing_prompts import get_country_risk_extraction_prompt, COUNTRY_THEMES
+from local_media_sources import build_country_media_source_prompt, log_country_media_source_injection
 import pandas as pd
 import json
 import uuid
@@ -50,6 +51,9 @@ def extract_country_risks_with_websearch(country_name):
                 f"--- ICG Report: {row['title']} ({row['date'].strftime('%Y-%m-%d')}) ---\n"
                 f"{row['text']}\n\n"
             )
+
+    # Log the exact local sources/notes that will be injected into the extraction prompt.
+    log_country_media_source_injection(country_name)
 
     prompt = get_country_risk_extraction_prompt(country_name, today, icg_texts)
 
@@ -137,6 +141,7 @@ def extract_country_risks_with_websearch(country_name):
 def get_country_recent_risks_briefing(country_name):
     today = datetime.datetime.now().strftime("%Y-%m-%d")
     print(f"\n=== Running briefing for {country_name} ===")
+    local_media_guidance = log_country_media_source_injection(country_name)
     try:
         cw = get_crisiswatch_lastnmonths(country_name, 3)
         reports = get_icg_reports(country_name)
@@ -225,10 +230,11 @@ def get_country_recent_risks_briefing(country_name):
 
     **Source preference order:**
 
-    1. ICG / CrisisWatch (from the provided summary)
+    1. ICG / CrisisWatch (from the provided summary) and Reputable national or regional outlets from {country_name}
     2. Multilateral or UN sources (OCHA, UNHCR, WFP, UNICEF, OHCHR, World Bank, UNDP, IOM DTM, IDMC)
-    3. Reputable national or regional outlets from {country_name}
-    4. Reputable international wires or broadcasters (Reuters, AP, BBC, Al Jazeera, VOA)
+    3. Reputable international wires or broadcasters (Reuters, AP, BBC, Al Jazeera, VOA)
+
+    {local_media_guidance}
 
     ---
 

@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P161402",
+    "guid": 397431561946455682,
+    "node_id": 31162328,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b086db6948&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 199398
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Competitive and Livable City of Karachi Project",
+      "project_development_objective": "To improve urban management, service delivery and the business environment in Karachi",
+      "total_financing": "US$240 million (US$230 million IBRD + US$10 million counterpart funding)",
+      "implementation_period": "5 years (July 2019 - June 2024)",
+      "beneficiaries": "Direct beneficiaries: 3.04 million people (48% women = 1.46 million). Indirect beneficiaries: 15.18 million people in Karachi LCs' mandate area (7.29 million women). Institutional beneficiaries: 8 local councils (KMC, 6 DMCs, District Council) and 4 GoS agencies (LGD, E&TD, SID, SSWMB)"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Karachi Metropolitan Corporation (KMC)",
+        "Six District Municipal Corporations (DMCs)",
+        "District Council",
+        "Karachi Division (excluding Cantonment areas)"
+      ],
+      "coverage_type": "City-wide (metropolitan and district level)",
+      "fragile_or_conflict_affected_areas": "Partial - Karachi has experienced substantial reduction in violent crime through concerted government efforts, but faces complex political context with multiple actors at all tiers of government. Project is designed to avoid areas affected by ongoing Anti-Encroachment Drive (AED) initiated by Supreme Court in October 2018"
+    },
+    "key_components": [
+      {
+        "component_name": "Performance-based Grants to Local Councils and Capacity Building",
+        "description": "Provides annual performance-based grants to LCs upon achievement of institutional strengthening measures. Three types of grants: Capacity Building grant (US$10M), Minimum Conditions Capital Infrastructure grant (US$40M), and Performance Measures Capital Infrastructure grant (US$90M). Includes technical assistance for grant management, capacity building, and safeguards implementation. Subprojects include roads, drainage, parks, public facilities, health/education infrastructure, and fire management facilities.",
+        "financing": "US$169.4 million (US$160.0 million WB)"
+      },
+      {
+        "component_name": "Modernizing Urban Property Tax Administration and System",
+        "description": "Supports comprehensive property survey of Karachi (1.5-2 million properties), development of modern IT system for property tax database, capacity building of staff, taxpayer services, and review of property tax policies and regulations. Expected to increase annual revenue from property tax and improve collection efficiency.",
+        "financing": "US$40.4 million (US$40.0 million WB)"
+      },
+      {
+        "component_name": "Improvement of City Competitiveness and Business Environment",
+        "description": "Streamlines and integrates business regulations through consolidated registry of licenses/permits, business process mapping and re-engineering for 10 key agencies, establishment of Sindh Business Portal, and studies on women-run businesses and infrastructure financing. Also establishes PPP node at LGD for origination of public-private partnerships and pre-feasibility studies.",
+        "financing": "US$20.2 million (US$20.0 million WB)"
+      },
+      {
+        "component_name": "Technical Assistance for Solid Waste Management",
+        "description": "Provides TA to improve SWM sector performance through policy and regulatory development, capacity building of SSWMB, baseline studies for existing facilities, waste characterization, collection optimization, informal sector integration, and community engagement and behavior change activities.",
+        "financing": "US$10.0 million (US$10.0 million WB)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Government of Sindh through: Local Government Department (LGD) - Components 1, 3.2, 4; Excise & Taxation Department (E&TD) - Component 2; Sindh Investment Department (SID) - Component 3.1. Project Management Units (PMUs) established in each implementing agency headed by Project Directors with technical specialists. Inter-agency Steering Committee chaired by P&D Board provides strategic oversight.",
+      "coordination_mechanisms": "Inter-agency Steering Committee with representation from all relevant GoS agencies; coordination with existing mechanisms for Doing Business reforms; coordination between LGD and SSWMB for SWM activities; use of existing inter-agency working groups",
+      "procurement_approach": "Bank's Procurement Regulations for IPF apply. Risk-based approach with prior Bank review for high-risk contracts. LCs conduct small-scale procurements (shopping, NCB). Large contracts at GoS level use ICB or international RFP (QCBS). Mandatory procurement certification required for staff. PPSD prepared covering capacity, market assessment, risks and mitigation.",
+      "monitoring_and_evaluation": "LGD coordinates M&E data collection and consolidation. Independent third party conducts Annual Performance Assessment (APA) of LCs. LCs prepare semi-annual progress reports; implementing agencies prepare bi-annual reports to Bank. Third-party monitoring through local NGO/CSO for subproject compliance. M&E services procured for data collection, analysis, and modern M&E systems. Results framework includes PDO indicators and intermediate results indicators with annual targets."
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Complex political context with multiple actors at all tiers of government. Fragmented systems for land management, business regulations, and political influence in land. Ongoing Anti-Encroachment Drive (AED) reflects political complexity and potential for competing agendas affecting project implementation.",
+        "risk_rating": "High",
+        "mitigation_measures": "Extensive, regular and collaborative engagement with GoS and Karachi LCs at political level; engagement with relevant regulatory agencies; policy and regulatory support through TA programs; distribution of functions and responsibilities between provincial and local tiers with appropriate collaboration mechanisms; high-level coordination between GoS and Bank for portfolio of projects in Karachi and Sindh"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "First time Bank is working with Karachi LCs, SSWMB, LGD and SID. These agencies need to become familiar with Bank policies and procedures. Some project activities break new ground outside traditional focus of LCs. Sustained availability of sufficient skilled staff critical. Weak internal audit functions and limited FM capacity at LCs.",
+        "risk_rating": "High",
+        "mitigation_measures": "Procurement of professional consultancy services to support various components; training of staff; improvement of LC systems through performance measures and conditions; inter-agency steering committee oversight; FM implementation plan to capacitate LCs; mandatory procurement certification for staff; hiring of market-based specialists; capacity building through performance-based incentives"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Recent deterioration in macro-fiscal situation in Pakistan. Currency depreciation and energy tariff hikes. Medium-term inflationary impacts and reduced spending power affecting domestic demand. Delayed release of capital and recurrent budgets for project implementation.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Economic reform program negotiated with IMF; ensuring GoS prioritizes project expenditures in annual budget and development plans; major infrastructure expenditure scheduled for second half of project life; retroactive financing available for eligible expenditures"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Karachi's urban management faces coordination challenges and low technical and financial capacity of LCs. Basic systems for planning, implementation, transparency and accountability are weak. Limited authority and mandates with GoS recently 'recentralizing' municipal service delivery functions. Uncoordinated and overlapping functions between tiers. Fragmented business regulatory landscape across multiple agencies.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Project designed to improve basic systems at LCs incrementally; use of LGD as main PMU for TA activities to promote integrated development planning; leverage existing inter-agency coordination mechanisms; performance-based grants incentivize institutional improvement; capacity building support; systems development and notification by LGD"
+      },
+      {
+        "risk_category": "Fiduciary - Financial Management",
+        "risk_description": "FM staff have limited capacity and lack familiarity with applicable rules and regulations leading to sub-optimal FM performance at LCs. Weak internal audit function limited to transactional compliance. Weak budgetary controls leading to allocation inefficiencies. Standardized chart of accounts not used.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "FM implementation plan to capacitate LCs on FM aspects; separate books of accounts maintained on cash basis; bi-annual IFRs submitted within 45 days; LCs submit SoRPs within 25 days; annual audited financial statements by Auditor General of Pakistan within 6 months; designated accounts established; pre-audit by Director Local Fund Audit; segregation of duties; training on FM systems"
+      },
+      {
+        "risk_category": "Fiduciary - Procurement",
+        "risk_description": "LCs have had meager capital budgets and limited procurement experience in recent years. However, staff is technically qualified and understands procurement processes. Sindh has established procurement regulatory framework and mandatory certification program.",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "PPSD prepared with capacity assessment and risk mitigation measures; mandatory procurement certification for staff on priority basis; procurement training formalized in Sindh; framework contracting for small contracts; hands-on support for planning, prioritization, and contract management; hiring of market-based procurement specialists"
+      },
+      {
+        "risk_category": "Environmental and Social - Social Safeguards",
+        "risk_description": "Risks associated with ongoing judiciary-led Anti-Encroachment Drive (AED) which is not consistent with Bank policies on Involuntary Resettlement (OP 4.12). No provisions for compensation or rehabilitation of displaced persons or livelihood loss. Lack of documentation on AED-affected areas may result in unknowingly selecting subproject sites affected by AED. Extent of AED coverage may result in difficulties finding eligible subproject sites.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Multi-level Project Risk Reduction Procedure (PRRP) with robust screening criteria to exclude AED-affected areas; AED-affected areas excluded from project financing; screening mechanism to determine safeguard instruments needed; built-in time-lag of at least one year before subproject implementation; capacity building for LCs on social safeguards management; monitoring and mapping of AED locations; third-party monitoring through local NGO/CSO; GRM for grievances; TA for street economy formalization and rehabilitation support; legal covenants requiring compliance with safeguards"
+      },
+      {
+        "risk_category": "Environmental and Social - Environmental Safeguards",
+        "risk_description": "Potential physical environmental impacts from civil works are construction-related and temporary but capacity of LCs to apply EMF is low. Subprojects not expected to cause long-term or irreversible impacts but management systems need strengthening.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Environmental Management Framework (EMF) prepared and disclosed; investment eligibility criteria exclude high-risk subprojects; environmental impact screening for each subproject; Environmental Management Plans (EMPs) prepared where needed and cleared by Bank before implementation; environmental clauses incorporated in procurement documents; environmental complaints integrated into project-level GRM; capacity building and TA for LCs on environmental management; performance of LCs in managing environmental risks is minimum condition for accessing capital infrastructure funds"
+      },
+      {
+        "risk_category": "Stakeholders",
+        "risk_description": "Karachi has variety of ethnic, religious and social groups. Large geographic scope means many citizen groups directly or indirectly impacted. Active NGOs and CSOs interested in project. Array of formal and informal organizations at local level may vie for influence on project decisions.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Citizen engagement embedded in performance-based grants with regular stakeholder consultations; systems for grievance redress and citizen complaints introduced/strengthened at LCs; regular consultation and engagement with local NGOs/CSOs; regular dissemination of project activities; communication program for Bank's Karachi platform projects; participatory planning processes; separate consultations with women; access to information through LC websites"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "B - Partial Assessment",
+      "triggered_safeguard_policies": [
+        "Environmental Assessment (OP/BP 4.01)",
+        "Physical Cultural Resources (OP/BP 4.11)",
+        "Involuntary Resettlement (OP/BP 4.12)"
+      ],
+      "grievance_redress_mechanism": "Yes - Two-tier approach: (1) Project-specific GRM for subproject-related grievances and compliance with EMF/SMF, established at project start before subproject execution; (2) LC-wide GRM/citizen complaint referral systems for all LC services, incentivized through Performance Measures. KMC's existing system to be strengthened; similar systems established in other LCs. GRM will be gender-sensitive with protocol for handling GBV complaints. World Bank's Grievance Redress Service (GRS) also available for project-affected communities.",
+      "gender_considerations": "Project addresses identified gender gaps through: (1) Institutionalizing regular separate consultations with women during capital investment planning; LCs receive larger grants for higher expenditure on women-responsive infrastructure; (2) Training for elected women councilors on leadership and investment planning; (3) Component 3 identifies regulatory changes for women-owned businesses and gathers data on women entrepreneurs; (4) LCs required to operationalize code of conduct for workplace harassment protection as minimum condition; trainings on harassment prevention; funding for separate equipped toilets for women staff; (5) Review of property tax regulations to facilitate women property owners; (6) Project aims for 50% women staff in PMUs; (7) Two results indicators monitor gender progress: percentage of capital expenditure addressing women's needs and percentage of women considering their views taken into account in subproject designs",
+      "vulnerable_groups": [
+        "Residents of informal settlements (katchi abadis) - nearly half of Karachi's population",
+        "Street vendors and hawkers affected by Anti-Encroachment Drive",
+        "Mobile vendors and informal sector workers in waste management",
+        "Marginalized groups and minorities employed in waste sector",
+        "Migrant populations",
+        "Women (limited involvement in municipal service selection and design)",
+        "Poor and vulnerable groups affected by AED",
+        "Communities in disadvantaged neighborhoods"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project design incorporates conflict sensitivity through: (1) Avoidance of areas affected by ongoing Anti-Encroachment Drive (AED) initiated by Supreme Court in October 2018, which has displaced thousands of businesses and street vendors; (2) Multi-level Project Risk Reduction Procedure (PRRP) with screening criteria to exclude AED-affected areas and ensure compliance with Bank's Involuntary Resettlement policy; (3) Monitoring and mapping of AED locations throughout project implementation; (4) TA for street economy formalization and rehabilitation support to address resettlement issues; (5) Grievance redress mechanisms to address grievances related to AED and other service delivery issues; (6) Inclusive stakeholder engagement and citizen consultation processes; (7) Capacity building for LCs on social safeguards management; (8) Third-party monitoring through local NGO/CSO to verify subproject sites have not been subjected to AED; (9) Legal covenants requiring monitoring of involuntary resettlements and compliance with safeguards policies",
+      "fragility_context": "Karachi faces substantial institutional fragmentation and governance challenges: (1) Municipal functions divided among KMC, 6 DMCs, and District Council with no formal coordination mechanism; (2) Over 20 agencies at different government levels involved in business regulation with overlapping and unclear responsibilities; (3) Weak institutional capacity and nascent systems at local councils; (4) Limited authority and mandates with GoS recently 'recentralizing' municipal services; (5) Weak systems for planning, transparency and accountability; (6) Large-scale encroachment of public land and informal settlements; (7) Fragmented land management with over a dozen land-owning/controlling agencies with no consolidated database; (8) Low technical and financial capacity of local institutions; (9) Complex political context with multiple actors at all tiers of government; (10) Ethnic, religious and social diversity with potential for competing interests",
+      "security_considerations": "Project acknowledges security context: (1) Karachi has experienced substantial reduction in violent crime through concerted government efforts; (2) Project operates in complex political environment requiring careful stakeholder management; (3) Implementation arrangements include inter-agency coordination mechanisms to manage competing agendas; (4) Extensive engagement with GoS and local councils at political level to maintain ownership and support; (5) Third-party monitoring and grievance mechanisms to address potential conflicts; (6) Capacity building and institutional strengthening to improve governance and reduce opportunities for rent-seeking and discretion that could fuel conflict; (7) Inclusive citizen engagement and consultation processes to build social cohesion",
+      "displacement_or_refugees": "Yes - Project is directly affected by ongoing Anti-Encroachment Drive (AED): (1) AED initiated in October 2018 by Supreme Court order to vacate public spaces (parks, footpaths, amenity plots) from unauthorized uses; (2) Thousands of businesses, street vendors and hawkers have been affected, primarily in commercial districts; (3) GoS and local agencies making efforts to relocate some affected businesses; (4) Project design acknowledges adverse impacts of AED on poor and vulnerable groups; (5) Project excludes subproject sites in areas affected by AED on or after October 27, 2018; (6) Project includes TA for street economy formalization and registration through digital platforms; (7) Project includes additional support for city-wide approach to addressing resettlement and rehabilitation issues based on GoS demand; (8) Social Management Framework/Resettlement Policy Framework (SMF/RPF) includes provisions for any involuntary resettlement under project in accordance with OP 4.12; (9) No large-scale land acquisition and resettlement required; any resettlement will be small to modest scale; (10) Monitoring and mapping of AED locations throughout project implementation to avoid unknowingly selecting affected sites"
+    }
+  }
+}
