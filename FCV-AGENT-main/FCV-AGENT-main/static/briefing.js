@@ -906,7 +906,7 @@ Write exactly 5 paragraphs, one per heading, in this order:
 
 For each paragraph:
 - Begin with the exact RRA heading in bold followed by a colon (e.g. **Social unrest and protests:**).
-- Summarise relevant country-level FCV dynamics under that heading.
+- Summarise relevant country-level FCV dynamics under that heading. Ground this entirely in the country_risks entries in the evidence — these are extracted from live web search and recent ICG/CrisisWatch monitoring covering the last 3 months. Treat them as the authoritative source of current conditions. Do NOT substitute or supplement with your background training knowledge about the country.
 - Show how World Bank projects are susceptible to that risk (PAD evidence).
 - Show whether risks are materialising in implementation (ISR/Aide Memoire evidence).
 

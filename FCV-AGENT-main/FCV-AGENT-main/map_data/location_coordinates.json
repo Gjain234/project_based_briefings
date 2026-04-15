@@ -378,5 +378,10 @@
     "lat": 33.2626,
     "lon": 35.2388,
     "source": "local_acled"
+  },
+  "balbala||djibouti": {
+    "lat": 11.56194,
+    "lon": 43.106659,
+    "source": "local_geo"
   }
 }
