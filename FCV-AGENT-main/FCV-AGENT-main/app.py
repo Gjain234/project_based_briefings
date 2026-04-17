@@ -698,9 +698,15 @@ def generate_briefing():
                 # Load country risks with list field parsing
                 country_risks_path = f"{save_folder}/{country}_briefing_risks.csv"
                 country_risks = []
+
+                def df_to_clean_records(df):
+                    # Replace NaN with None for JSON compatibility
+                    return df.where(pd.notnull(df), None).to_dict('records')
+
                 if os.path.exists(country_risks_path):
                     try:
                         df = pd.read_csv(country_risks_path)
+                        df = df.where(pd.notnull(df), None)
                         for _, row in df.iterrows():
                             risk_dict = row.to_dict()
                             # Parse list fields that may be stored as strings
@@ -710,34 +716,34 @@ def generate_briefing():
                             country_risks.append(risk_dict)
                     except pd.errors.EmptyDataError:
                         pass  # File is empty, use empty list
-                
+
                 # Load PAD risks
                 pad_risks_path = f"{save_folder}/{country}_pad_risks.csv"
                 pad_risks = []
                 if os.path.exists(pad_risks_path):
                     try:
                         df = pd.read_csv(pad_risks_path)
-                        pad_risks = df.to_dict('records')
+                        pad_risks = df_to_clean_records(df)
                     except pd.errors.EmptyDataError:
                         pass  # File is empty, use empty list
-                
+
                 # Load implementation risks
                 impl_risks_path = f"{save_folder}/{country}_implementation_realized_risks.csv"
                 impl_risks = []
                 if os.path.exists(impl_risks_path):
                     try:
                         df = pd.read_csv(impl_risks_path)
-                        impl_risks = df.to_dict('records')
+                        impl_risks = df_to_clean_records(df)
                     except pd.errors.EmptyDataError:
                         pass  # File is empty, use empty list
-                
+
                 # Load risk mappings
                 mappings_path = f"{save_folder}/{country}_implementation_realized_risks_mapped.csv"
                 mappings = []
                 if os.path.exists(mappings_path):
                     try:
                         df = pd.read_csv(mappings_path)
-                        mappings = df.to_dict('records')
+                        mappings = df_to_clean_records(df)
                     except pd.errors.EmptyDataError:
                         pass  # File is empty, use empty list
                 
@@ -810,12 +816,18 @@ def get_briefing_risks(country):
                     return []
             return []
         
+
+        def df_to_clean_records(df):
+            # Replace NaN with None for JSON compatibility
+            return df.where(pd.notnull(df), None).to_dict('records')
+
         # Load country risks with list field parsing
         country_risks_path = f"{save_folder}/{country}_briefing_risks.csv"
         country_risks = []
         if os.path.exists(country_risks_path):
             try:
                 df = pd.read_csv(country_risks_path)
+                df = df.where(pd.notnull(df), None)
                 for _, row in df.iterrows():
                     risk_dict = row.to_dict()
                     # Parse list fields that may be stored as strings
@@ -825,37 +837,37 @@ def get_briefing_risks(country):
                     country_risks.append(risk_dict)
             except pd.errors.EmptyDataError:
                 pass  # File is empty, use empty list
-        
+
         # Load PAD risks
         pad_risks_path = f"{save_folder}/{country}_pad_risks.csv"
         pad_risks = []
         if os.path.exists(pad_risks_path):
             try:
                 df = pd.read_csv(pad_risks_path)
-                pad_risks = df.to_dict('records')
+                pad_risks = df_to_clean_records(df)
             except pd.errors.EmptyDataError:
                 pass  # File is empty, use empty list
-        
+
         # Load implementation risks
         impl_risks_path = f"{save_folder}/{country}_implementation_realized_risks.csv"
         impl_risks = []
         if os.path.exists(impl_risks_path):
             try:
                 df = pd.read_csv(impl_risks_path)
-                impl_risks = df.to_dict('records')
+                impl_risks = df_to_clean_records(df)
             except pd.errors.EmptyDataError:
                 pass  # File is empty, use empty list
-        
+
         # Load risk mappings
         mappings_path = f"{save_folder}/{country}_implementation_realized_risks_mapped.csv"
         mappings = []
         if os.path.exists(mappings_path):
             try:
                 df = pd.read_csv(mappings_path)
-                mappings = df.to_dict('records')
+                mappings = df_to_clean_records(df)
             except pd.errors.EmptyDataError:
                 pass  # File is empty, use empty list
-        
+
         return jsonify({
             'country_risks': country_risks,
             'pad_risks': pad_risks,

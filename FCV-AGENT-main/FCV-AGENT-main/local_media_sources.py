@@ -80,6 +80,9 @@ def _load_media_source_rows(workbook_path=WORKBOOK_PATH):
         .fillna("")
     )
 
+    # Replace NaN with None for JSON compatibility
+    df = df.where(pd.notnull(df), None)
+
     rows = []
     for record in df[required_columns].to_dict(orient="records"):
         country = _clean_text(record.get(COUNTRY_COLUMN, ""))

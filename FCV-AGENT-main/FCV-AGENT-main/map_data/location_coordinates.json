@@ -383,5 +383,235 @@
     "lat": 11.56194,
     "lon": 43.106659,
     "source": "local_geo"
+  },
+  "chabelley||djibouti": {
+    "lat": 11.4895,
+    "lon": 43.07528,
+    "source": "local_geo"
+  },
+  "doraleh||djibouti": {
+    "lat": 11.58306,
+    "lon": 43.066391,
+    "source": "local_geo"
+  },
+  "warabaley||djibouti": {
+    "lat": 11.09694,
+    "lon": 42.76639,
+    "source": "local_geo"
+  },
+  "balho||djibouti": {
+    "lat": 12.05786,
+    "lon": 42.19547,
+    "source": "local_geo"
+  },
+  "khyber pakhtunkhwa||pakistan": {
+    "lat": 34.45993,
+    "lon": 72.502373,
+    "source": "local_geo"
+  },
+  "punjab||pakistan": {
+    "lat": 30.86017,
+    "lon": 72.31976,
+    "source": "local_geo"
+  },
+  "sindh||pakistan": {
+    "lat": 26.13456,
+    "lon": 68.7696,
+    "source": "local_geo"
+  },
+  "lahore||pakistan": {
+    "lat": 31.558,
+    "lon": 74.35071,
+    "source": "local_geo"
+  },
+  "sialkot||pakistan": {
+    "lat": 32.4925479,
+    "lon": 74.5311505,
+    "source": "google_maps"
+  },
+  "raiwind||pakistan": {
+    "lat": 31.2448759,
+    "lon": 74.213717,
+    "source": "google_maps"
+  },
+  "newly merged districts||pakistan": {
+    "lat": 30.375321,
+    "lon": 69.34511599999999,
+    "source": "google_maps"
+  },
+  "multan||pakistan": {
+    "lat": 29.93312,
+    "lon": 71.38607,
+    "source": "local_geo"
+  },
+  "faisalabad||pakistan": {
+    "lat": 31.4272638,
+    "lon": 73.11655929999999,
+    "source": "google_maps"
+  },
+  "secondary cities and peri urban areas||pakistan": {
+    "lat": 30.0660159,
+    "lon": 67.9521767,
+    "source": "google_maps"
+  },
+  "former federally administered tribal areas||pakistan": {
+    "lat": 33.01455,
+    "lon": 69.99925,
+    "source": "local_geo"
+  },
+  "provincially administered tribal areas||pakistan": {
+    "lat": 32.667476,
+    "lon": 69.8597406,
+    "source": "google_maps"
+  },
+  "balochistan||pakistan": {
+    "lat": 28.47849,
+    "lon": 65.64355,
+    "source": "local_geo"
+  },
+  "rural areas||pakistan": {
+    "lat": 30.375321,
+    "lon": 69.34511599999999,
+    "source": "google_maps"
+  },
+  "urban slums||pakistan": {
+    "lat": 30.375321,
+    "lon": 69.34511599999999,
+    "source": "google_maps"
+  },
+  "lhw uncovered areas||pakistan": {
+    "lat": 30.375321,
+    "lon": 69.34511599999999,
+    "source": "google_maps"
+  },
+  "kalash valleys||pakistan": {
+    "lat": 35.7169503,
+    "lon": 71.754986,
+    "source": "google_maps"
+  },
+  "federally administered areas||pakistan": {
+    "lat": 33.01455,
+    "lon": 69.99925,
+    "source": "local_geo"
+  },
+  "13 districts for hybrid sp scheme pilot||pakistan": {
+    "lat": 30.375321,
+    "lon": 69.34511599999999,
+    "source": "google_maps"
+  },
+  "50 districts for wet expansion||pakistan": {
+    "lat": 30.375321,
+    "lon": 69.34511599999999,
+    "source": "google_maps"
+  },
+  "urban local areas||pakistan": {
+    "lat": 30.375321,
+    "lon": 69.34511599999999,
+    "source": "google_maps"
+  },
+  "priority districts those benefiting from sindh agriculture growth project and sindh water and agriculture transformation project||pakistan": {
+    "lat": 35.2227114,
+    "lon": 72.4258145,
+    "source": "google_maps"
+  },
+  "lahore division||pakistan": {
+    "lat": 31.5203696,
+    "lon": 74.35874729999999,
+    "source": "google_maps"
+  },
+  "five major cities faisalabad multan lahore gujranwala sheikhupura||pakistan": {
+    "lat": 32.1475636,
+    "lon": 74.19141239999999,
+    "source": "google_maps"
+  },
+  "quetta||pakistan": {
+    "lat": 30.1999,
+    "lon": 67.0097,
+    "source": "local_acled"
+  },
+  "killa abdulla||pakistan": {
+    "lat": 30.728,
+    "lon": 66.6612,
+    "source": "local_acled"
+  },
+  "pishin||pakistan": {
+    "lat": 30.5897022,
+    "lon": 67.0107153,
+    "source": "google_maps"
+  },
+  "chaghi||pakistan": {
+    "lat": 29.3552418,
+    "lon": 64.680683,
+    "source": "google_maps"
+  },
+  "chaman||pakistan": {
+    "lat": 30.9203638,
+    "lon": 66.443361,
+    "source": "google_maps"
+  },
+  "killa saifullah||pakistan": {
+    "lat": 30.95392,
+    "lon": 68.33996,
+    "source": "local_geo"
+  },
+  "noshki||pakistan": {
+    "lat": 29.5513755,
+    "lon": 66.0106684,
+    "source": "google_maps"
+  },
+  "focus on flood prone areas||pakistan": {
+    "lat": 30.375321,
+    "lon": 69.34511599999999,
+    "source": "google_maps"
+  },
+  "agricultural regions||pakistan": {
+    "lat": 30.375321,
+    "lon": 69.34511599999999,
+    "source": "google_maps"
+  },
+  "rural communities||pakistan": {
+    "lat": 30.375321,
+    "lon": 69.34511599999999,
+    "source": "google_maps"
+  },
+  "urban and peri urban areas with msme clusters||pakistan": {
+    "lat": 30.375321,
+    "lon": 69.34511599999999,
+    "source": "google_maps"
+  },
+  "kabul||pakistan": {
+    "lat": 26.41667,
+    "lon": 69.88333,
+    "source": "local_geo"
+  },
+  "mastung||pakistan": {
+    "lat": 29.79455,
+    "lon": 66.72068,
+    "source": "local_geo"
+  },
+  "gwadar||pakistan": {
+    "lat": 25.39336,
+    "lon": 63.18104,
+    "source": "local_geo"
+  },
+  "islamabad||pakistan": {
+    "lat": 34.33308,
+    "lon": 72.2857,
+    "source": "local_geo"
+  },
+  "gilgit baltistan||pakistan": {
+    "lat": 36.0,
+    "lon": 75.0,
+    "source": "local_geo"
+  },
+  "karachi||pakistan": {
+    "lat": 24.8608,
+    "lon": 67.0104,
+    "source": "local_geo"
+  },
+  "landi kotal||pakistan": {
+    "lat": 34.0988,
+    "lon": 71.14108,
+    "source": "local_geo"
   }
 }
