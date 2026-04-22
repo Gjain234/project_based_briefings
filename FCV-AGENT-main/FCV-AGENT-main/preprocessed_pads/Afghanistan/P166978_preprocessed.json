@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P166978",
+    "guid": 542361547566412383,
+    "node_id": 30761094,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b0868776cf&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 169052
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Tackling Afghanistan's Government HRM and Institutional Reforms (TAGHIR)",
+      "project_development_objective": "To strengthen the capacity of selected line ministries and agencies through merit-based recruitment of key positions, improved personnel management, and better HR planning.",
+      "total_financing": "US$75 million (SDR 18.1 million IDA Grant + US$50 million ARTF Grant)",
+      "implementation_period": "December 18, 2018 - December 31, 2021 (3 years)",
+      "beneficiaries": "16 priority line ministries and independent agencies (LMAs) selected based on contribution to revenue generation, private sector growth facilitation, basic service delivery, and governance reforms. All government institutions benefit from HRMIS implementation and administrative reforms."
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Kabul (central)",
+        "34 provinces",
+        "Multiple provincial offices"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "yes - Afghanistan is a fragile and conflict-affected state with ongoing insurgent activity, civilian casualties at unprecedented levels (10,451 killed/wounded in 2017; 8,050 in first 9 months of 2018), security constraints on service delivery, and 1.7 million internally displaced persons plus 2 million returnees since 2015"
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Human Resource Capacity Injection",
+        "description": "Provides financing for capacity 'surge' supporting up to 1,500 new and 'legacy' civil servant positions concentrated in 16 priority LMAs. Positions restricted to Senior Management Group (Grades 1-2) and mid-level management (Grade 3), with strategic Grade 4 positions retained. Includes merit-based recruitment, strategic staffing plans for targeted capacity surge, performance benchmarks, and gender quota of 10% for women. Project financing capped at maximum 2 years per appointment, with recruitment completion by June 30, 2020. Includes transition to core government budget financing and professional cadres.",
+        "financing": "US$54 million"
+      },
+      {
+        "component_name": "Component 2: Personnel and Payroll Management",
+        "description": "Strengthens establishment control and personnel management through building functional Human Resource Management Information System (HRMIS) integrated with biometric civil servant enrollment, payroll, AFMIS, and e-Payment Systems. Includes development of priority HRMIS functionalities (Civil Service Workforce Management, Payroll Management, Position and Establishment Management), integration with payroll and AFMIS, biometric registration, implementation support, and roll-out to provinces. Addresses 'ghost' employees and improves payroll control.",
+        "financing": "US$15 million"
+      },
+      {
+        "component_name": "Component 3: Support to Administrative Reforms",
+        "description": "Flexible technical assistance facility for IARCSC supporting functional reviews, establishment control and personnel management, pay structure and policy development, cadres development, and strategic management of national and international technical assistance. Includes services of independent third-party verification agency to validate recruitment procedures and selection criteria. Supports development of Civil Service Wages, Salaries and Allowances Policy and phase-out plan for parallel structures.",
+        "financing": "US$6 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Independent Administrative Reform and Civil Service Commission (IARCSC) - implementing directly without Project Implementation Unit (PIU). IARCSC Board of Commissioners provides steering; High Council for Rule of Law and Anti-Corruption provides policy-level oversight. Civil Service Appointments Board (CSAB) and Civil Service Complaints Board (CSCB) handle appointments and complaints. Administrative Reform Secretariat (ARS) handles fiduciary management.",
+      "coordination_mechanisms": "High Council for Rule of Law and Anti-Corruption (chaired by President) provides strategic oversight and coordination across LMAs. IARCSC Board of Commissioners steers project implementation. Project Director appointed from IARCSC senior management. Coordination with Ministry of Finance, Ministry of Communication and Information Technology, and priority LMAs. Working group established with IARCSC, MoF, MoE, ACCRA for integrated HRMIS platform. Coordination with other Bank projects (EQRA, PAISA, Sehatmandi, IP DPG, PASA).",
+      "procurement_approach": "Procurement in accordance with World Bank Procurement Regulations for IPF (July 2016, revised November 2017 and August 2018). High risk prior review threshold applied. IARCSC Procurement Directorate responsible for procurements; uses NPA services for facilitation. Standard Procurement Documents (SPDs) used. STEP system implemented for tracking. Human resource capacity injection subject to GoIRA civil servant recruitment processes per Amended Civil Servants Law (2018). Third-party verification agency contracted for independent validation of appointments. Bank conducts periodic ex-post review of recruitment files.",
+      "monitoring_and_evaluation": "IARCSC responsible for overall M&E in coordination with LMAs. Third-party verification agency produces quarterly reports on recruitment compliance. CSAB and CSCB maintain databases on appointments and appeals feeding into monthly project monitoring tables publicly disseminated by IARCSC. Monitoring templates modified to report on LMA performance benchmarks. IARCSC conducts annual performance appraisal of appointees and bi-annual LMA evaluations. Project progress reported in IARCSC Annual Achievements Report. Baselines and targets established for PDO and intermediate results indicators with monthly, annual, and bi-annual reporting frequencies."
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political and governance",
+        "risk_description": "Multiple sources of political risk including power-sharing tensions under National Unity Government, potential government change at April 2019 Presidential election, civil servant hiring freezes around elections, possible reversal of decision to support only pre-identified LMAs, and political vulnerabilities in recruitment processes particularly for senior appointments.",
+        "risk_rating": "high",
+        "mitigation_measures": "18-month recruitment window (to June 30, 2020) provides adequate time for processing. Presidential exemption sought for TAGHIR recruitments during hiring freezes. Upfront higher-level GoIRA endorsement of priority LMAs list. IARCSC consultations to socialize new approach. Broad support for reforms derived from Afghanistan National Peace and Development Framework (ANPDF) with government ownership. Ongoing policy dialogue under IP DPG and EU SRBC to maintain commitment. Proposed suspension clause in Financing Agreement if Civil Servants Law materially affected."
+      },
+      {
+        "risk_category": "macroeconomic",
+        "risk_description": "Afghanistan's macroeconomic outlook subject to substantial risks from uncertain and limited domestic and external fiscal resources, likely continued high security expenditures, and potential adverse impact on government's commitment to finance project-supported positions by project exit.",
+        "risk_rating": "high",
+        "mitigation_measures": "Gradual transition based on incremental financing strategy and partnership agreed with government considering fiscal space. Government commits to finance P&G base pay from budget starting project effectiveness. Appointees transitioned to regular payroll on P&G or professional cadres by project exit. Project interventions on payroll management and NTA rationalization expected to contribute additional fiscal space. GoIRA implementing ambitious revenue mobilization and expenditure management reforms through Fiscal Performance Improvement Plan (FPIP) with IP DPG support."
+      },
+      {
+        "risk_category": "institutional capacity for implementation and sustainability",
+        "risk_description": "Limited capacity of public administration may constrain government ability to conduct ambitious civil service reforms. Risk that recruitments move slower than planned. Risk that interventions (functional reviews) move at uneven pace depending on LMA capacity and commitment. Intrinsic vulnerability to political economy factors affecting civil service and administrative reforms.",
+        "risk_rating": "high",
+        "mitigation_measures": "Project design incrementally focused on meritocratic human resource capacity injection as key prerequisite. Pre-identification of LMAs and 'pockets of effectiveness' generates time savings and enhances strategic impact. Performance benchmarks hold LMAs accountable with sanctions for non-compliance (loss of staffing allocation). CBR performance since 2016 shows improvements in pace and quality of recruitments. Legal and administrative prerequisites for reforms already completed. Situating TAGHIR within broader policy-based financing provides additional incentives and momentum. Sectoral projects leveraged for entry-points and de-bottlenecking."
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "Fiduciary risks posed by transition away from PIU use to country systems. Weaknesses in IARCSC financial management capacity (inadequate staffing without professional accounting qualifications, insufficient internal audit resources, weak fixed assets management, non-implementation of external audit recommendations). Gaps in financial management and procurement systems.",
+        "risk_rating": "high",
+        "mitigation_measures": "Financial Management and Procurement Assessments conducted. CBR PIU fiduciary staff transitioning to IARCSC core Tashkeel. Additional internal audit positions approved for next fiscal year. Finance officer assigned to fixed assets management. Comprehensive Financial Management Manual for IDA/ARTF projects to be finalized by project effectiveness. Semi-annual internal audits by Internal Audit Department. Annual external audits by Supreme Audit Office per INTOSAI standards. IARCSC to develop audit follow-up mechanism for timely action on recommendations. Detailed subsidiary records maintained. STEP system for procurement tracking. High risk prior review threshold applied. Bank provides intensive implementation support."
+      },
+      {
+        "risk_category": "security",
+        "risk_description": "Continued insurgent activity and deterioration in security situation could divert government capacity and policy attention from planned interventions, undermine expected impacts, and constrain access to some areas of the country.",
+        "risk_rating": "high",
+        "mitigation_measures": "Bank experience shows successful monitoring and support of programs even with limited in-country presence. Civil service reform and public administration effectiveness recognized as significantly affected by ongoing conflict; government decisions factor in this dimension. Project design accounts for fragile and conflict-affected context."
+      },
+      {
+        "risk_category": "institutional capacity for implementation and sustainability",
+        "risk_description": "Risk that HRMIS development and roll-out faces technical challenges, integration difficulties with AFMIS and payroll systems, or adoption challenges across LMAs.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Adequacy testing of bespoke web-based HRMIS solution planned before major investments. Coordination with MoCIT and key stakeholders. Integration with AFMIS being assessed with Bank technical support. Biometric enrollment planned with PAISA Project. Working group established for integrated platform development. Technical support for system maintenance and staff training included."
+      },
+      {
+        "risk_category": "stakeholder",
+        "risk_description": "Risk of inconsistent LMA participation and commitment to reforms, as experienced with CBR. Risk of resistance to performance benchmarks and sanctions. Risk of limited buy-in from non-priority LMAs.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Top-down prioritization of LMAs by government reduces reliance on LMA demand. Strategic staffing plans required before recruitment initiation. Performance benchmarks with clear consequences for non-compliance. Bi-annual LMA evaluations. IARCSC consultations to socialize approach. Presidential endorsement of priority LMAs. Clear upfront communications to all stakeholders including Cabinet ministers and affected civil servants."
+      },
+      {
+        "risk_category": "sector strategies and policies",
+        "risk_description": "Risk that broader administrative reforms (functional reviews, pay policy, cadres development) move at uneven pace or face implementation challenges.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Technical assistance support under Component 3. Coordination with PASA (Public Administration Reform ASA). Linkage to policy-based financing instruments (IP DPG, EU SRBC) providing incentive structure. Legal and administrative prerequisites already completed. Presidential directive on functional reviews. Civil Service Pay Commission to oversee civilian compensation."
+      },
+      {
+        "risk_category": "technical design of project or program",
+        "risk_description": "Risk that project design assumptions regarding recruitment pace, LMA capacity, or fiscal space prove unrealistic. Risk that strategic staffing plans are overly ambitious or not implemented.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Design based on lessons from CBR and predecessor projects. Costing tool used to project costs and develop realistic scenarios. Narrowly focused approach with concentrated capacity injection. Simple, measurable performance metrics. Incremental approach to reforms. Bank technical expertise and intensive implementation support. Mid-term review planned for 2020."
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "C - Not Required",
+      "triggered_safeguard_policies": [],
+      "grievance_redress_mechanism": "yes - IARCSC maintains four existing GRMs: (1) civil servant recruitment complaints handled by Civil Service Complaints Board (CSCB); (2) corruption and fiduciary complaints; (3) legal complaints; (4) sexual harassment complaints. Project complaints mainstreamed into existing GRMs with separate reporting. Weekly public hearings where IARCSC Chairman and Commissioners directly receive complaints. Third-party verification agency validates recruitment procedures. IARCSC-at-large responsible for grievances not resolved at LMA level. IARCSC publishes Annual Achievements Report documenting complaints received and handled. IARCSC reaches public through social media, civil society forums, media, and religious leaders. World Bank Grievance Redress Service (GRS) and Inspection Panel available for project-affected communities.",
+      "gender_considerations": "CBR recruited only 76 women (7.2%) of 1,053 positions. TAGHIR introduces 10% gender quota for women in civil service recruitments to increase women's employment share. Amended Civil Servants Law (2018) enables creative solutions including female-only positions. IARCSC implements awareness raising campaigns to encourage female professionals to apply. At least one woman required on selection panels for positions with female candidates long-listed. IARCSC advocates with LMAs to improve enabling environment (gender-segregated washrooms, prayer rooms, daycare). Anti-harassment guidelines to be fully operationalized. CBR 'legacy' positions held by women not cut in CBR Position Review. Exit interviews conducted with women leaving senior positions. HRMIS/Payroll will improve monitoring of female civil service recruitment and facilitate attainment of gender targets. Capacity Management module in HRMIS will support targeted training for female civil servants.",
+      "vulnerable_groups": [
+        "Women in civil service (underrepresented, especially in senior positions at 7.3%)",
+        "Internally displaced persons (1.7 million)",
+        "Returnees (2 million since 2015)",
+        "Populations in insecure areas with limited access to services",
+        "Civil servants affected by transition from CBR to TAGHIR (especially those losing salary top-ups)"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project explicitly designed for fragile and conflict-affected context. Strengthening public administration efficiency and effectiveness recognized as vital not only for service delivery and economic growth but also to mitigate conflict pressures, build state legitimacy, and drive state-building process. Project supports merit-based recruitment to counter patronage and corruption that undermine state legitimacy. Capacity injection in key LMAs contributes to improved revenue generation and service delivery, addressing grievances. Gender-balanced recruitment supports inclusive governance. Project situated within broader state-building agenda and Self-Reliance Strategy. Coordination with High Council for Rule of Law and Anti-Corruption ensures linkage to broader governance and anti-corruption efforts.",
+      "fragility_context": "Afghanistan faces multiple fragility drivers: (1) Ongoing conflict with civilian casualties at unprecedented levels (10,451 killed/wounded in 2017; 8,050 in first 9 months 2018); (2) Weak state capacity with low civil service educational qualifications, particularly at sub-national level; (3) Political vulnerabilities in recruitment processes subject to patronage and corruption; (4) Fiscal constraints limiting government ability to finance quality public administration; (5) Weak institutional capacity for implementation; (6) Displacement and refugee pressures (1.7 million IDPs, 2 million returnees); (7) Declining aid environment threatening sustainability of parallel structures; (8) Political instability around 2018-2019 elections; (9) Poverty increase from 38% (2011/12) to 55% (2016/17); (10) Weak development budget execution rates; (11) Security constraints on service delivery in some areas.",
+      "security_considerations": "Continued insurgent activity represents source of risk to project achievement. Deterioration in security situation could divert government capacity and policy attention from planned interventions or undermine expected impacts. Some areas of country remain difficult to access due to insecurity. Civilian casualties remain at unprecedented levels. Project design accounts for security context. Bank experience shows successful monitoring and support of programs even with limited in-country presence. Government decisions on civil service reform factor in conflict dimension. Project supports state capacity building to address underlying drivers of fragility and build state legitimacy.",
+      "displacement_or_refugees": "yes - Afghanistan faces significant displacement and refugee pressures: (1) More than 1.7 million Afghans internally displaced; (2) More than 2 million Afghans have been returning to Afghanistan since 2015, mostly from Pakistan and Iran; (3) Living standards threatened by worsening drought conditions and displacement; (4) Project does not directly address displacement but contributes to improved service delivery and state capacity which can support displaced populations and returnees. Project supports improved public administration effectiveness in service delivery LMAs (Ministry of Public Health, Ministry of Education) that serve displaced and vulnerable populations."
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P159655",
+    "guid": 427941513911675673,
+    "node_id": 29160436,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b0853d777c&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 195210
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Fiscal Performance Improvement Support Project (FSP)",
+      "project_development_objective": "To contribute to the improvement of domestic revenue mobilization and public expenditures management, and of reinforcing a performance oriented management culture in the Ministry of Finance.",
+      "total_financing": "US$100 million (IDA Grant: US$25 million; ARTF: US$75 million)",
+      "implementation_period": "December 2017 - December 2022 (5 years)",
+      "beneficiaries": "Ministry of Finance departments, Supreme Audit Office (SAO), National Procurement Authority (NPA), and Government of Afghanistan at large through improved domestic revenue mobilization and public expenditure management"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Kabul (headquarters)",
+        "34 provinces of Afghanistan",
+        "Afghan embassies",
+        "Selected districts and municipalities"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "yes - Afghanistan is described as a poor, deeply fragile and conflict-affected country in almost constant conflict for over 35 years with no durable political settlement. Armed conflict has claimed 26,512 civilian lives and injured 48,931 others between January 2009 and June 2017. Security situation has led to reversals in access to services and increasing disparities among the poor."
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Budget as Tool for Development",
+        "description": "Aims to increase budget credibility by improving efficiency of budget processes, realistic budget estimation and costing, linking budget with policy and introducing medium-term budgeting. Includes budgeting processes reform, fiscal policy support, and development policy support with focus on gender-responsive budgeting and provincial budgeting policy implementation.",
+        "financing": "US$10 million"
+      },
+      {
+        "component_name": "Component 2: Revenue Mobilization",
+        "description": "Strengthens capacities of revenue administration departments to increase tax compliance and enhance government's capacity to regulate minerals and hydrocarbon resources. Includes tax administration reform, customs administration modernization, and Afghanistan Extractive Industries Transparency Initiative (AEITI) implementation.",
+        "financing": "US$40 million"
+      },
+      {
+        "component_name": "Component 3: Treasury Management, Accountability, and Transparency",
+        "description": "Consolidates core PFM functions to underpin ambitious PFM reforms. Includes treasury system enhancement (AFMIS), audit and financial reporting improvements, procurement reforms including e-Government Procurement (e-GP), SOE management, and citizen engagement mechanisms.",
+        "financing": "US$30 million"
+      },
+      {
+        "component_name": "Component 4: Institutional Capacity Building and Performance Management",
+        "description": "Builds capacity of MOF staff and systems for effective ministry functioning. Includes MOF backbone/shared services strengthening, information systems development, and performance management enhancement with focus on behavioral change and leadership development.",
+        "financing": "US$20 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Finance (MOF), National Procurement Authority (NPA), and Supreme Audit Office (SAO) - Government of Afghanistan",
+      "coordination_mechanisms": "Governance anchored in MOF Leadership Team (chaired by Minister of Finance, meets twice monthly). Core Reforms Group (CRG) serves as steering committee (chaired by Deputy Minister for Finance, meets bi-monthly). Performance Management Team (PMT) reporting to Deputy Minister for Finance provides day-to-day operational coordination. Implementation through country systems without parallel Project Implementation Units (PIUs).",
+      "procurement_approach": "World Bank Procurement Regulations for IPF applied. High Risk Implementing Agency threshold applies for prior review. Project Procurement Strategy for Development (PPSD) prepared. STEP system for tracking procurement activities. MOF, NPA, and SAO conduct their own procurement with NPA supporting SAO. International Procurement Consultant recommended for first 6-12 months. Standard Bidding Documents and World Bank Procurement Manual used.",
+      "monitoring_and_evaluation": "FSP Results Framework aligned with FPIP performance management framework. Mid-year and annual independently validated assessments conducted. Performance Management and Reporting System (PMRS) web-based platform developed for online tracking. PMT responsible for data collection and quarterly progress reporting. Indicators specified at intermediate outcome level. Baseline, unit of measurement, and data sources defined. Targets set for 5-year implementation period."
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Power-sharing arrangements under National Unity Government are source of tension and potential instability. Possibility of new government in 2019 elections poses risks of changes in political support for FPIP. Short window until elections could delay FSP implementation.",
+        "risk_rating": "high",
+        "mitigation_measures": "Move fast initially by 'locking-in' priority flagship, underserved and quick-win areas ahead of elections. Potential slowdown before another push until project completion with adjustments once new government established. Built-in flexibility to reallocate resources from low to high performing components."
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Afghanistan heavily reliant on aid. Any reduction in security and civilian support below expected levels would place pressure on fiscal sustainability and service delivery. Aid flows decreased from 75% of GDP in 2012 to 45% in 2015. Expected to decline further from 46% in 2017 to 20% by 2030.",
+        "risk_rating": "high",
+        "mitigation_measures": "Successful implementation of FPIP reforms including revenue mobilization and expenditure management will help mitigate this risk. Continued World Bank policy dialogue on fiscal management and structural reforms under IP Plus. Access to continued external support most likely sustained if progress achieved against key structural reforms."
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "Public sector characterized by highly uneven and thinly spread technical capacity. Long-term aid dependency has left agencies heavily dependent on international technical assistance, vulnerable to delays, discontinuities, and coordination problems. Shortage of skilled staff capable of developing and applying procedures.",
+        "risk_rating": "high",
+        "mitigation_measures": "FPIP design places strong emphasis on institutional transformation across technical directorates and MOF corporate backbone. FPIP Advisory Facility provides entry point for Bank-executed upfront work critical to FSP implementation. Focus on building institutional capacity rather than relying on consultants. Transition of PIU staff into core Tashkeel positions within 18 months."
+      },
+      {
+        "risk_category": "Security (Other)",
+        "risk_description": "Continued insurgent activity represents source of risk to achievement of PDO. Deterioration in security situation could divert government capacity and policy attention from reforms, impede technical assistance provision, or undermine expected impact of reforms.",
+        "risk_rating": "high",
+        "mitigation_measures": "Previous experience shows Bank can successfully monitor and support implementation of reform programs even with limited in-country presence. Task team based in Dubai with monthly supervision missions and formal implementation support missions twice yearly."
+      },
+      {
+        "risk_category": "Technical Design of Project",
+        "risk_description": "Breadth and technical sophistication of FPIP may prove excessively ambitious. Attempting to implement broad range of reforms may spread available capacity too thin, potentially slowing progress. Some areas (e.g., AEITI) have not progressed much since 2009.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "FSP support staggered to front-load reforms most likely to be robust, feasible and critical from political economy perspective with greatest buy-in. Readiness criteria applied to prioritize and sequence activities. Built-in flexibility to drop or simplify underperforming sub-components. Funds can be shifted between components and departments based on performance."
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Political sensitivity of some reforms (e.g., HR systems linking with payroll, AEITI implementation, customs enforcement incentives). Inherent lack of predictability in fragile, aid-dependent environment may impact medium-term fiscal and expenditure frameworks. Performance management framework targets may be perceived as unrealistic.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "FSP designed to allow periodic reassessment of appropriateness of policy actions. Programmatic approach and built-in financing flexibility give project agility to respond to changes. Results specified at intermediate outcome level rather than specific technical reforms to avoid cherry-picking and incentivize across-plan actions."
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "FSP implemented by MOF, NPA, and SAO using country systems. Poses fiduciary risks in short-term due to gaps in fiduciary systems and low civil service capacity. Risk of failure to build capacity due to perverse incentives.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "MOF retains key PIU staff to support procurement and contract management, integrated into core civil servant positions within 18 months. NPA has adequate capacity and will conduct large procurement packages for SAO. International Procurement Consultant hired for first 6-12 months. Advance work through FPIP Advisory Facility focused on fiduciary aspects. PPSD prepared. All-of-MOF ICT Assessment underway to inform complex IT systems design and procurement."
+      },
+      {
+        "risk_category": "Stakeholders",
+        "risk_description": "Varying degrees of FPIP buy-in and ownership across teams. Success requires upfront commitment and coordination institutionalized across whole of MOF. Capacity of some teams depends on actions by other teams. Heavy emphasis on MOF may underserve other government entities requiring MOF coordination and inputs.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Three-pronged approach: FPIP Advisory Facility laying foundations, FSP financing investments, IP Plus incentivizing results. Built-in flexibility to move away from underperforming areas and teams. PMT placement as secretariat to MOF Leadership Team and CRG ensures coordination. Change and Performance Management Scoping Mission provided concrete recommendations. CBR new phase under preparation to strengthen links to other ministries."
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "No environmental or social safeguard policies triggered. No physical works anticipated to be directly funded under project.",
+        "risk_rating": "low",
+        "mitigation_measures": "Project categorized as Category C for safeguards. No environmental impacts expected. Citizen Participatory Audit framework developed with capacity building for CSOs. Gender considerations integrated throughout project design."
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "C - Not Required",
+      "triggered_safeguard_policies": [],
+      "grievance_redress_mechanism": "yes - World Bank Grievance Redress Service (GRS) available for project-affected communities and individuals. Complaints can be submitted to project-level mechanisms or WB's GRS. World Bank Inspection Panel available for complaints regarding WB non-compliance with policies and procedures. Information available at http://www.worldbank.org/en/projects-operations/products-and-services/grievance-redress-service and www.inspectionpanel.org",
+      "gender_considerations": "Gender Responsive Budgeting (GRB) integrated into budget processes with framework for gender disaggregated statistical analysis. GRB Cell institutionalized as unit of Budget Department. Gender disaggregated budget and expenditure data to be compiled for 6 pilot ministries. Women's participation in MOF to be increased through internship programs for female graduates, HR policy review, and anti-harassment guidelines implementation. Female tax payer specific arrangements in ARD. Merit-based and gender-balanced recruitment promoted in customs and other departments. Women constitute 11% of MOF employees; project aims to increase this proportion.",
+      "vulnerable_groups": [
+        "Poor and vulnerable populations affected by service delivery improvements",
+        "Female taxpayers and government employees",
+        "Citizens engaging in participatory audit processes",
+        "Internally displaced persons and returnee refugees (1.2 million IDPs and 800,000 returnees in 2016)"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project directly addresses conflict-related governance challenges through strengthening public financial management, revenue mobilization, and institutional capacity. Improved PFM and revenue collection support government's self-reliance agenda, reducing aid dependency and building state capacity. Transparency and citizen engagement mechanisms (Citizen Participatory Audit, budget transparency) aim to rebuild citizen trust in government. Project recognizes that weak institutions and corruption undermine government legitimacy and contribute to conflict dynamics. Focus on reducing reliance on parallel systems and building core government capacity supports conflict prevention through stronger state institutions.",
+      "fragility_context": "Afghanistan is deeply fragile with 35+ years of almost constant conflict and no durable political settlement. Key fragility factors: (1) Weak government institutions and rule of law; (2) Widespread corruption (ranked 169th of 176 countries); (3) Poor business environment (ranked 183rd of 190); (4) Narrow, aid-dependent economy with undiversified productive base; (5) High poverty (39% in poverty, another third susceptible to dropping below poverty line); (6) Low social indicators (HDI ranking 171st of 188); (7) Weak public sector capacity with heavy reliance on donor-financed consultants; (8) Declining aid flows (from 75% of GDP in 2012 to 45% in 2015, projected to decline to 20% by 2030); (9) Political instability with power-sharing tensions in National Unity Government; (10) Humanitarian crisis with large displaced and refugee populations.",
+      "security_considerations": "Continued insurgent activity poses risk to project implementation. Deterioration in security situation could divert government capacity from reforms and impede technical assistance provision. Armed conflict claimed 26,512 civilian lives and injured 48,931 others between January 2009 and June 2017. Security situation has led to reversals in access to services and increasing disparities among poor. Project team based in Dubai with limited in-country presence to manage security risks. Previous Bank experience shows successful implementation of reform programs possible even with limited in-country presence. Monthly supervision missions and formal implementation support missions twice yearly planned.",
+      "displacement_or_refugees": "yes - Afghanistan currently faces humanitarian crisis with large numbers of return refugees (approximately 800,000 in 2016) and large and growing internally displaced population (1.2 million). Project aims to improve service delivery and economic management which would benefit displaced and refugee populations through improved public expenditure efficiency and revenue mobilization supporting government capacity to provide services."
+    }
+  }
+}

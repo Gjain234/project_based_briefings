@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P160567",
+    "guid": 257391477792873512,
+    "node_id": 26854145,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b0846160e5&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 341139
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Citizens' Charter Afghanistan Project (CCAP)",
+      "project_development_objective": "To improve the delivery of core infrastructure and social services to participating communities through strengthened Community Development Councils (CDCs). These services are part of a minimum service standards package that the Government is committed to delivering to the citizens of Afghanistan.",
+      "total_financing": "US$628 million (IDA Grant: US$100 million, ARTF: US$400 million, Government: US$128 million)",
+      "implementation_period": "October 2016 - October 2020 (4 years)",
+      "beneficiaries": "Approximately 8.5 million direct and indirect beneficiaries in rural and urban areas across all 34 provinces and 4 major cities (Herat, Mazar-i-Sharif, Kandahar, Jalalabad)"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "All 34 provinces of Afghanistan",
+        "Approximately one-third of districts in each province",
+        "Four major cities: Herat, Mazar-i-Sharif, Kandahar, Jalalabad"
+      ],
+      "coverage_type": "national with phased approach",
+      "fragile_or_conflict_affected_areas": "yes - Afghanistan is deeply fragile and conflict-affected. The document states that civil servants have access to only 60% of districts (lowest since 2007). Approximately one-third of the country (14,000 communities) is deemed highly or extremely insecure. Project targets 9,000 communities (70% of planned 12,600) due to security risks."
+    },
+    "key_components": [
+      {
+        "component_name": "Service Standards Grants",
+        "description": "Rural and urban infrastructure grants. Rural: approximately 12,000 communities receive grants for water supply, roads, electricity, and irrigation. Urban: 600 CDCs and 120 Gozars in 4 cities receive grants for street upgrading, water, waste management, lighting, and women's livelihood projects.",
+        "financing": "US$418.3 million (IDA: US$100 million, ARTF: US$190.3 million, Government: US$128 million)"
+      },
+      {
+        "component_name": "Institution Building",
+        "description": "Capacity building, technical assistance, and community facilitation services. Includes Facilitating Partner contracts (14 for rural, 4 for urban), training of provincial/district/municipal staff, Social Organizers, and engineering support.",
+        "financing": "US$130.7 million (ARTF)"
+      },
+      {
+        "component_name": "Monitoring and Knowledge Learning",
+        "description": "Citizens' monitoring and scorecards, studies and evaluations on service delivery, CDC institutional strengthening, social inclusion, social accountability, and technical quality audits. Includes satellite imagery validation and mobile technology for reporting.",
+        "financing": "US$5 million (ARTF)"
+      },
+      {
+        "component_name": "Project Implementation and Management",
+        "description": "Management and oversight at national, provincial, district, and municipal levels. Includes policy planning, Operations Manual development, capacity building, MIS, grievance redress, HR, communications, and safeguards oversight.",
+        "financing": "US$74 million (ARTF)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Rural Rehabilitation and Development (MRRD) for rural areas; Independent Directorate of Local Governance (IDLG) for urban areas. Ministry of Finance (MoF) provides overall oversight and reporting.",
+      "coordination_mechanisms": "National Citizens' Charter/CCAP Working Group chaired by MoF with MRRD as Secretary and IDLG, MoPH, MoE, MAIL as members. High Council for Governance (chaired by President) provides oversight. Sub-committees on monitoring/reporting, communications, and financial management.",
+      "procurement_approach": "World Bank Guidelines for procurement. National Competitive Bidding (NCB) for most contracts. Community procurement for CDCs following simplified procedures. Facilitating Partners contracted through Firm-Based Selection (FBS). Prior review for significant contracts.",
+      "monitoring_and_evaluation": "Community scorecards completed semi-annually by CDCs on service standards achievement. Third-party monitoring through ARTF. Satellite imagery validation. Semi-annual reports to Office of President and MoF. Studies on service delivery, CDC maturity, gender, technical quality, state legitimacy, conflict/fragility, local economic development, and public financial management."
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political",
+        "risk_description": "Risk of political instability from within the unity government coalition and from outside. Government reform actions could increase political uncertainty.",
+        "risk_rating": "high",
+        "mitigation_measures": "Strong commitment from Office of President to monitor project as flagship program. Performance-based budgeting reforms to evaluate project performance. Regular coordination with government working group."
+      },
+      {
+        "risk_category": "security",
+        "risk_description": "Deteriorating security situation poses largest risk. Civilian casualties rising, civil servant access to districts at lowest level since 2007 (60%). Growing insecurity will impact implementation speed and coverage.",
+        "risk_rating": "high",
+        "mitigation_measures": "Selection of secure and accessible areas for implementation. Flexibility in implementation approach. Communities to broker development space with insurgent groups. Reliance on intermediary agents (NGOs/contractors). Use of third-party monitors with better field access. Grievance redress and citizen engagement mechanisms to diffuse disagreements."
+      },
+      {
+        "risk_category": "institutional",
+        "risk_description": "Limited government capacity especially at sub-national levels. IDLG is new to World Bank-funded projects. Weak FM capacity within civil service. Shift from float account arrangement will impact timely grant payments.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Oversight Consultant support for IDLG for first 2 years. Training on World Bank FM and disbursement requirements. Adoption of existing NSP accounting systems. Simplified documentation for payment requests. Bulk allotments processing. Dedicated focal staff in MoF Special Disbursement Unit. CCAP Coordination Unit in MoF. Clearance accounts for grants routing."
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "Corruption and rent-seeking behavior. Afghanistan ranks 3rd most corrupt country globally. Sub-national institutions particularly weak. Risk of elite capture of CDCs.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Independent third-party monitoring. National level oversight and strong M&E systems. Transparent project information. Grievance redress mechanisms. Citizen engagement in service delivery monitoring. Community scorecards. Social audits. Enhanced community socialization and planning processes. Regular monitoring of social inclusion indicators. Training on participatory processes."
+      },
+      {
+        "risk_category": "macroeconomic",
+        "risk_description": "Fiscal uncertainties and declining foreign aid budget. Security expenditures remarkably high (25% of GDP). Limited fiscal space for civilian spending.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Full 4-year budget already included in Government's Medium-term Expenditure Framework. Fiscal feasibility reviewed assuming revenue increases to 12.6% of GDP and on-budget grants increase to 10.3% of GDP. Project aims to streamline service delivery to reduce duplication and inefficiencies."
+      },
+      {
+        "risk_category": "social",
+        "risk_description": "Risk of over-promising to citizens, which may exacerbate state-society tensions. Risk that CDCs and clusters are captured by elite and decisions do not benefit poor and vulnerable.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Greater involvement of ordinary people in CDC sub-committees. Improved community socialization and planning processes. Sufficient training time for CDCs and communities. Improved training modules. More communication materials and information campaigns. Regular monitoring of social inclusion indicators. Enhanced community mapping and well-being exercises. More intensive training of staff and CDCs on inclusion."
+      },
+      {
+        "risk_category": "environmental",
+        "risk_description": "Climate change and disaster risks. Afghanistan highly prone to earthquakes, floods, droughts affecting 9 million people since 1980.",
+        "risk_rating": "low",
+        "mitigation_measures": "National multi-hazard risk assessment completed to inform resilient infrastructure designs. Training program for MRRD and IDLG staff on resilient infrastructure. Easy-to-use checklists for provincial officials and FPs. Operations Manual incorporates resilience aspects. New CDC training module on disaster risk reduction."
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Category B - Partial Assessment",
+      "triggered_safeguard_policies": [
+        "OP/BP 4.01 Environmental Assessment",
+        "OP/BP 4.11 Physical Cultural Resources",
+        "OP/BP 4.12 Involuntary Resettlement"
+      ],
+      "grievance_redress_mechanism": "yes - Three-level GRM: (1) community level for resolution of issues, (2) district and municipal levels with Grievance Redress Committees, (3) national level appeal mechanism. Project will develop simple citizens' scorecards and explore mobile applications for reporting and grievance redress. Dedicated unit for receiving, registering, processing, analyzing, monitoring and resolving grievances.",
+      "gender_considerations": "Gender mainstreamed in all components. Building on NSP achievements: 50% of CDC seats allocated to women, women's participation in planning/decision-making/monitoring, gender-related trainings, women's projects in urban areas (livelihood activities), coordination with Women's Economic Empowerment Program. Gender-disaggregated data and citizen engagement indicators in Results Framework. Exchange visits for female CDC members. Separate focus group meetings with women during planning. Community analysis of women's mobility and socio-economic status.",
+      "vulnerable_groups": [
+        "Women and girls",
+        "Female-headed households",
+        "Landless households",
+        "Internally Displaced Persons (IDPs)",
+        "Refugee returnees",
+        "Poor and marginalized groups",
+        "Disabled persons",
+        "Ex-combatants"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project explicitly designed for fragile and conflict-affected context. Builds on 14 years of NSP experience in conflict environment. Uses community-driven development approach to build state-society relations from bottom-up. CDCs serve as platforms for citizen engagement and monitoring of service delivery. Project includes mechanisms for local conflict resolution and deliberative forums. Recognizes need for communities to broker development space with insurgent groups. Includes specific support for IDPs and returnees (US$10 million set aside). Explores nexus between service delivery quality and social cohesion. Includes conflict and fragility study as part of evaluation.",
+      "fragility_context": "Afghanistan is deeply fragile and conflict-affected with nearly four decades of protracted conflict resulting in weakened government institutions and severe social/ethnic cleavages. Key fragility factors: (1) ongoing Taliban insurgency and cross-border attacks, (2) civilian casualties at record high levels, (3) civil servant access to districts at lowest level since 2007, (4) high poverty (39.1%), (5) economic growth collapsed to 1.5-2%, (6) high dependency on foreign aid (45% of GDP), (7) security expenditures at 25% of GDP, (8) high population growth and youth bulge, (9) large refugee and IDP populations, (10) vulnerability to natural disasters. Project targets 70% of planned communities due to security constraints.",
+      "security_considerations": "Security is primary constraint on development. Project acknowledges that some areas may become inaccessible during implementation. Implementation will need to adjust to fluctuating security situation. Communities in two-thirds of country (21,800 communities) assessed as secure for operations; one-third (14,000 communities) deemed highly/extremely insecure. Project uses security assessments to select implementation areas. Flexibility built into implementation approach. Third-party monitors with better field access used to supplement Bank supervision. Project recognizes role of intermediary agents (NGOs/contractors) becomes critical as civil servant access reduces.",
+      "displacement_or_refugees": "yes - Afghanistan is second largest refugee source country with millions overseas and increasing returns from Pakistan. Top drivers of displacement: insecurity, lack of income opportunities, poor service provision. NSP served as community response mechanism for returnees. CCAP will continue this role with specific operational policies for IDPs/returnees. US$10 million set aside in Component 1 for quick responses to IDP/returnee needs. CDCs will help with school enrollment for IDP/returnee children and monitor grievances in accessing services. Project coordinates with UNHCR and other UN agencies. 2012 evaluation found NSP was largest provider of community development projects for returnees/IDPs and had positive impact on reintegration through short-term employment."
+    }
+  }
+}

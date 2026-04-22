@@ -613,5 +613,85 @@
     "lat": 34.0988,
     "lon": 71.14108,
     "source": "local_geo"
+  },
+  "badakhshan||afghanistan": {
+    "lat": 36.75,
+    "lon": 72.0,
+    "source": "local_geo"
+  },
+  "baghlan||afghanistan": {
+    "lat": 36.13068,
+    "lon": 68.70829,
+    "source": "local_geo"
+  },
+  "balkh||afghanistan": {
+    "lat": 36.75635,
+    "lon": 66.8972,
+    "source": "local_geo"
+  },
+  "bamyan||afghanistan": {
+    "lat": 34.82156,
+    "lon": 67.827339,
+    "source": "local_geo"
+  },
+  "daikundi||afghanistan": {
+    "lat": 33.98624,
+    "lon": 66.03569,
+    "source": "local_geo"
+  },
+  "faryab||afghanistan": {
+    "lat": 36.25,
+    "lon": 64.83333,
+    "source": "local_geo"
+  },
+  "herat||afghanistan": {
+    "lat": 34.5,
+    "lon": 62.0,
+    "source": "local_geo"
+  },
+  "kabul||afghanistan": {
+    "lat": 34.52813,
+    "lon": 69.172333,
+    "source": "local_geo"
+  },
+  "kunduz||afghanistan": {
+    "lat": 36.792561,
+    "lon": 68.843849,
+    "source": "local_geo"
+  },
+  "nangarhar||afghanistan": {
+    "lat": 34.33333,
+    "lon": 70.41667,
+    "source": "local_geo"
+  },
+  "parwan||afghanistan": {
+    "lat": 35.166012,
+    "lon": 69.001648,
+    "source": "local_geo"
+  },
+  "samangan||afghanistan": {
+    "lat": 36.0,
+    "lon": 67.66667,
+    "source": "local_geo"
+  },
+  "sar e pol||afghanistan": {
+    "lat": 36.298939,
+    "lon": 66.007408,
+    "source": "local_geo"
+  },
+  "takhar||afghanistan": {
+    "lat": 36.5940732,
+    "lon": 69.7938996,
+    "source": "nominatim"
+  },
+  "kandahar||afghanistan": {
+    "lat": 31.61332,
+    "lon": 65.71013,
+    "source": "local_geo"
+  },
+  "khost||afghanistan": {
+    "lat": 33.34045,
+    "lon": 70.0038,
+    "source": "local_geo"
   }
 }
