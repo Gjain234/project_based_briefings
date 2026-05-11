@@ -631,6 +631,62 @@ def validate_custom_categories(custom_categories):
 
     return None
 
+
+def format_external_model_error(error, traceback_text=None):
+    """Convert low-level Anthropic/network failures into user-facing messages."""
+    traceback_text = traceback_text or ""
+    traceback_lower = traceback_text.lower()
+    error_text = str(error).strip()
+
+    if 'certificate verify failed' in traceback_lower:
+        return (
+            'Unable to reach the Anthropic API because TLS certificate verification failed. '
+            'Configure the trusted corporate CA bundle for this Python environment, or switch this app to its internal model path.'
+        )
+
+    if isinstance(error, anthropic.APIConnectionError):
+        return (
+            'Unable to reach the Anthropic API. Check your internet connection, VPN/proxy settings, or any corporate firewall restrictions, then try again. '
+            'If the problem persists, the Anthropic service may be temporarily unavailable.'
+        )
+
+    if isinstance(error, anthropic.AuthenticationError):
+        return 'Anthropic authentication failed. Check that ANTHROPIC_API_KEY_DEV is set correctly for this environment.'
+
+    if error_text:
+        return error_text
+
+    return 'An unexpected error occurred while contacting the external model provider.'
+
+
+@app.route('/api/briefing/default-prompt', methods=['POST'])
+def get_default_briefing_prompt_api():
+    """Return the shared default prompt text for the selected briefing mode."""
+    try:
+        from generate_briefing import get_default_briefing_prompt
+
+        data = request.json or {}
+        mode = data.get('mode', 'rra')
+        n_paragraphs = data.get('n_paragraphs')
+        custom_categories = data.get('custom_categories') or []
+
+        if mode == 'custom':
+            category_error = validate_custom_categories(custom_categories)
+            if category_error:
+                return jsonify({'error': category_error}), 400
+            if not n_paragraphs:
+                n_paragraphs = len(custom_categories)
+
+        prompt = get_default_briefing_prompt(
+            mode=mode,
+            n_paragraphs=n_paragraphs,
+            include_guardrails=True,
+        )
+        return jsonify({'prompt': prompt})
+    except Exception as e:
+        import traceback
+        return jsonify({'error': f"{str(e)}\n{traceback.format_exc()}"}), 500
+
 @app.route('/api/briefing/generate', methods=['POST'])
 def generate_briefing():
     """Generate FCV portfolio briefing"""
@@ -763,7 +819,9 @@ def generate_briefing():
                         print(f"DEBUG: Returned from get_fcv_content_from_docs")
                     except Exception as e:
                         import traceback
-                        result['error'] = f"{str(e)}\n{traceback.format_exc()}"
+                        traceback_text = traceback.format_exc()
+                        print(traceback_text)
+                        result['error'] = format_external_model_error(e, traceback_text)
                     finally:
                         result['done'] = True
                 
@@ -852,12 +910,7 @@ def generate_briefing():
                 traceback_text = traceback.format_exc()
                 print(traceback_text)
 
-                error_msg = str(e)
-                if 'certificate verify failed' in traceback_text.lower():
-                    error_msg = (
-                        'Unable to reach the Anthropic API because TLS certificate verification failed. '
-                        'Configure the trusted corporate CA bundle for this Python environment, or switch this app to its internal model path.'
-                    )
+                error_msg = format_external_model_error(e, traceback_text)
 
                 yield f"data: {json.dumps({'error': error_msg})}\n\n"
         

@@ -252,10 +252,12 @@ Social Cohesion and Protection</textarea>
               Your custom prompt will automatically receive all data sources as JSON evidence:
               <ul>
                 <li><code>country_risks</code>: Country-level FCV risks</li>
+                <li><code>project_names</code>: PAD-derived <code>PROJ_ID</code> to project title mapping</li>
                 <li><code>pad_risks</code>: PAD susceptibility analysis</li>
                 <li><code>implementation_realized_risks</code>: Extracted ISR/Aide Memoire risks</li>
                 <li><code>implementation_realized_risks_mapped</code>: Implementation risks mapped to country risks</li>
               </ul>
+              The editor loads the shared backend default prompt, so the UI and generation use the same base text.
               Citation markers like <code>[PROJ_ID | PAD]</code> will be automatically converted to document links.
             </div>
             <label class="config-label">System Prompt</label>

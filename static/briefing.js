@@ -8,6 +8,7 @@ let lastMapData = null; // Store last loaded map data for HTML export
 let compareRraBtnDefaultHtml = '';
 let modalCompareRraBtnDefaultHtml = '';
 let projectSelectionResolve = null;
+let promptTemplateRequestId = 0;
 
 const SPINNER_SVG = `<svg class="status-spinner" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>`;
 
@@ -1201,7 +1202,7 @@ function groupBy(array, key) {
 }
 
 // Initialize prompt editor on page load and when mode changes
-function initializePromptEditor() {
+async function initializePromptEditor() {
   const editor = document.getElementById('customPromptEditor');
   const resetBtn = document.getElementById('resetPromptBtn');
   const regenerateBtn = document.getElementById('regenerateWithPromptBtn');
@@ -1209,91 +1210,60 @@ function initializePromptEditor() {
   // Get current mode to set default prompt
   const mode = document.getElementById('briefingMode').value;
   const nParagraphs = parseInt(document.getElementById('nParagraphs').value);
-  
-  const defaultPrompts = {
-    rra: `You are writing a structured FCV portfolio briefing organised around the five standard short-term RRA (Risk and Resilience Assessment) risk headings.
+  const customCategories = mode === 'custom'
+    ? document.getElementById('customCategories').value
+        .split('\n')
+        .map(category => category.trim())
+        .filter(category => category)
+    : null;
 
-Write exactly 5 paragraphs, one per heading, in this order:
-1. Social unrest and protests
-2. Violence between refugees, host communities, and the state
-3. Organized violence between political and sectarian groups
-4. Political instability
-5. External risks and intra-state conflict
+  const requestId = ++promptTemplateRequestId;
 
-For each paragraph:
-- Begin with the exact RRA heading in bold followed by a colon (e.g. **Social unrest and protests:**).
-- Summarise relevant country-level FCV dynamics under that heading. Ground this entirely in the country_risks entries in the evidence — these are extracted from live web search and recent ICG/CrisisWatch monitoring covering the last 3 months. Treat them as the authoritative source of current conditions. Do NOT substitute or supplement with your background training knowledge about the country.
-- Show how World Bank projects are susceptible to that risk (PAD evidence).
-- Show whether risks are materialising in implementation (ISR/Aide Memoire evidence).
+  editor.disabled = true;
+  editor.value = 'Loading shared prompt template...';
+  resetBtn.disabled = true;
+  regenerateBtn.disabled = true;
 
-Citation rules:
-- Use [PROJ_ID | PAD] for PAD evidence.
-- Use the exact implementation citation_marker from the evidence for ISR/Aide evidence, e.g. [PROJ_ID | ISR | YYYY-MM-DD] or [PROJ_ID | Aide Memoire | YYYY-MM-DD].
-- Each citation in its own bracket pair. NEVER combine with semicolons.
-- Do NOT create hyperlinks. Do NOT invent citations.`,
+  let defaultPrompt = '';
+  try {
+    const response = await fetch('/api/briefing/default-prompt', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        mode,
+        n_paragraphs: nParagraphs,
+        custom_categories: customCategories
+      })
+    });
 
-    risk: `You are writing a structured FCV portfolio briefing.
+    const data = await response.json();
+    if (!response.ok) {
+      throw new Error(data.error || 'Failed to load prompt template');
+    }
+    if (requestId !== promptTemplateRequestId) {
+      return;
+    }
 
-Write exactly ${nParagraphs} paragraphs.
-Each paragraph must correspond to a distinct country-level FCV risk.
+    defaultPrompt = data.prompt || '';
+    editor.value = defaultPrompt;
+  } catch (error) {
+    console.error('Error loading shared prompt template:', error);
+    if (requestId !== promptTemplateRequestId) {
+      return;
+    }
+    defaultPrompt = 'Unable to load the shared prompt template. Please try again.';
+    editor.value = defaultPrompt;
+  }
 
-For each paragraph:
-- Describe the country-level risk clearly without using technical risk IDs.
-- Explain how projects are susceptible (PAD evidence).
-- Explain whether risks are materializing (ISR/Aide evidence).
-- Integrate both forward-looking and realized risks.
-
-Important rules:
-- Do NOT mention risk_id or any technical identifiers.
-- Describe risks in natural language for senior leadership.
-- Focus on substance, not reference codes.
-
-Citation rules:
-- When referencing PAD evidence use marker: [PROJ_ID | PAD]
-- When referencing ISR/Aide evidence use the exact implementation citation_marker from the evidence, e.g. [PROJ_ID | ISR | YYYY-MM-DD]
-- Do NOT create hyperlinks.
-- Do NOT invent citations.`,
-    
-    sector: `You are writing a sector-aligned FCV portfolio briefing.
-
-Write exactly ${nParagraphs} paragraphs.
-Each paragraph should correspond to a major sectoral cluster inferred from the evidence.
-
-For each paragraph:
-- Identify the sector cluster clearly in the first sentence.
-- Integrate country risk context.
-- Integrate PAD risks.
-- Integrate realized implementation risks.
-
-Citation rules:
-- Use [PROJ_ID | PAD] for PAD evidence.
-- Use the exact implementation citation_marker from the evidence for ISR/Aide evidence, e.g. [PROJ_ID | ISR | YYYY-MM-DD].`,
-    
-    custom: `You are writing a structured FCV portfolio briefing.
-
-Write exactly ${nParagraphs} paragraphs.
-Each paragraph must correspond exactly to one of the provided categories.
-
-For each paragraph:
-- Use the category name clearly in the first sentence.
-- Integrate relevant country risks.
-- Integrate PAD risks.
-- Integrate realized implementation risks.
-
-Citation rules:
-- Use marker: [PROJ_ID | PAD]
-- Use the exact implementation citation_marker from the evidence, e.g. [PROJ_ID | ISR | YYYY-MM-DD]`
-  };
-  
-  // Set the default prompt
-  editor.value = defaultPrompts[mode] || defaultPrompts.rra;
   editor.disabled = false;
   resetBtn.disabled = false;
   regenerateBtn.disabled = false;
   
   // Add event listeners
   resetBtn.onclick = () => {
-    editor.value = defaultPrompts[mode] || defaultPrompts.rra;
+    editor.value = defaultPrompt;
   };
   
   regenerateBtn.onclick = () => {

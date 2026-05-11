@@ -91,6 +91,38 @@ def sanitize_evidence_records(df):
     return sanitized_records
 
 
+def build_project_name_map(project_names_by_id=None, *dataframes, selected_project_ids=None):
+    project_names = {}
+
+    for project_id, project_name in (project_names_by_id or {}).items():
+        normalized = normalize_project_id(project_id)
+        cleaned_name = str(project_name).strip() if project_name is not None else ""
+        if normalized and cleaned_name:
+            project_names[normalized] = cleaned_name
+
+    for df in dataframes:
+        if len(df) == 0 or 'PROJ_ID_IB' not in df.columns or 'project_name' not in df.columns:
+            continue
+
+        name_rows = df[['PROJ_ID_IB', 'project_name']].dropna(subset=['PROJ_ID_IB', 'project_name'])
+        for _, row in name_rows.iterrows():
+            normalized = normalize_project_id(row['PROJ_ID_IB'])
+            cleaned_name = str(row['project_name']).strip()
+            if normalized and cleaned_name and normalized not in project_names:
+                project_names[normalized] = cleaned_name
+
+    selected_ids = _dedupe_project_ids(selected_project_ids)
+    if selected_ids:
+        selected_set = set(selected_ids)
+        project_names = {
+            project_id: project_name
+            for project_id, project_name in project_names.items()
+            if project_id in selected_set
+        }
+
+    return project_names
+
+
 def _format_doc_date(value):
     if value is None or (isinstance(value, float) and pd.isna(value)):
         return None
@@ -157,12 +189,151 @@ STYLE_GUARDRAILS = (
     "- Do NOT begin every paragraph with formulaic lead-ins like 'Country-level monitoring shows', "
     "'Country-level evidence documents', 'Country-level monitoring does not document', or close variants.\n"
     "- After the heading or topic label, vary the first sentence structure and move directly into the substantive point.\n"
+    "- When referring to a project in prose, use the project's name from the PAD-derived evidence if available; do not refer to projects only by project ID or p-code. You may include the project ID alongside the name when useful.\n"
     "- Write like a senior analyst, not a template.\n"
 )
 
 
 def apply_style_guardrails(system_prompt):
     return f"{system_prompt.rstrip()}{STYLE_GUARDRAILS}"
+
+
+def get_default_briefing_prompt(mode, n_paragraphs=None, include_guardrails=False):
+    if mode == "custom":
+        if n_paragraphs is None:
+            raise ValueError("n_paragraphs is required for custom mode")
+        prompt = (
+            f"You are writing a structured FCV portfolio briefing.\n\n"
+            f"Write exactly {n_paragraphs} paragraphs.\n"
+            "Each paragraph MUST correspond to exactly one of the custom categories provided in the evidence.\n"
+            "Process the categories in the exact order given.\n\n"
+            "For each paragraph:\n"
+            "- Start with the category name (e.g., 'Governance and Institutional Capacity:', 'Service Delivery and Access:', etc.)\n"
+            "- Analyze how this category relates to the country's FCV risks.\n"
+            "- Show how projects are exposed to relevant risks (PAD evidence). Provide 1-3 sentences per project cited, elaborating on specific vulnerabilities.\n"
+            "- Show whether these risks are materializing (ISR/Aide Memoire evidence). Provide 1-3 sentences per issue cited, describing observed impacts.\n"
+            "- Focus on risks and project evidence that align with this specific category.\n\n"
+            "CRITICAL CITATION RULES:\n"
+            "- PAD citations: Look at 'pad_risks' data. Each entry has 'PROJ_ID_IB'. ONLY cite [PROJ_ID | PAD] if that project appears in pad_risks.\n"
+            "- Implementation citations: Look at 'implementation_realized_risks_mapped' data. Each entry includes a 'citation_marker'. Use that exact marker for implementation citations, for example [P123456 | ISR | 2025-09-26].\n"
+            "- NEVER cite a document type that doesn't appear in the evidence for that project.\n"
+            "- If a project only has 'Aide Memoire' in the data, cite its exact Aide Memoire citation_marker, NOT an ISR marker.\n"
+            "- If a project only appears in implementation_realized_risks_mapped but NOT in pad_risks, do NOT cite [PROJ_ID | PAD].\n"
+            "- Each citation must be in its own bracket pair: [P123456 | PAD] [P123456 | ISR | 2025-09-26]\n"
+            "- NEVER combine multiple citations with semicolons inside one bracket\n"
+            "- Do NOT create hyperlinks.\n"
+            "- Do NOT invent citations."
+        )
+    elif mode == "risk":
+        if n_paragraphs is None:
+            raise ValueError("n_paragraphs is required for risk mode")
+        prompt = (
+            "You are writing a structured FCV portfolio briefing.\n\n"
+            f"Write exactly {n_paragraphs} paragraphs.\n"
+            "Each paragraph must correspond to a distinct country-level FCV risk.\n\n"
+            "For each paragraph:\n"
+            "- Describe the country-level risk clearly without using technical risk IDs.\n"
+            "- Explain how projects are susceptible (PAD evidence). For each project cited, provide 1-3 sentences elaborating on the specific exposure mechanism.\n"
+            "- Explain whether risks are materializing (ISR/Aide evidence). For each implementation issue cited, provide 1-3 sentences on the specific impacts observed.\n"
+            "- Integrate both forward-looking and realized risks.\n\n"
+            "Important rules:\n"
+            "- Do NOT mention risk_id or any technical identifiers (e.g., DJI_R1, NIG_R9).\n"
+            "- Describe risks in natural language for senior leadership.\n"
+            "- Focus on substance, not reference codes.\n\n"
+            "CRITICAL CITATION RULES:\n"
+            "- PAD citations: Look at 'pad_risks' data. Each entry has 'PROJ_ID_IB'. ONLY cite [PROJ_ID | PAD] if that project appears in pad_risks.\n"
+            "- Implementation citations: Look at 'implementation_realized_risks_mapped' data. Each entry includes a 'citation_marker'. Use that exact marker for implementation citations.\n"
+            "- NEVER cite a document type that doesn't appear in the evidence for that project.\n"
+            "- If a project only has 'Aide Memoire' in the data, cite its exact Aide Memoire citation_marker, NOT an ISR marker.\n"
+            "- If a project only appears in implementation_realized_risks_mapped but NOT in pad_risks, do NOT cite [PROJ_ID | PAD].\n"
+            "- Each citation must be in its own bracket pair: [P123456 | PAD] [P123456 | ISR | 2025-09-26]\n"
+            "- NEVER combine multiple citations with semicolons inside one bracket\n"
+            "- Do NOT create hyperlinks.\n"
+            "- Do NOT invent citations.\n"
+            "- Write analytically and concisely."
+        )
+    elif mode == "sector":
+        if n_paragraphs is None:
+            raise ValueError("n_paragraphs is required for sector mode")
+        prompt = (
+            "You are writing a sector-aligned FCV portfolio briefing.\n\n"
+            f"Write exactly {n_paragraphs} paragraphs.\n"
+            "Each paragraph should correspond to a major sectoral cluster "
+            "that you infer from the evidence (e.g., health, infrastructure, governance, social protection).\n\n"
+            "For each paragraph:\n"
+            "- Identify the sector cluster clearly in the first sentence.\n"
+            "- Integrate country risk context.\n"
+            "- Integrate PAD risks. Provide 1-3 sentences per project cited, describing specific exposure pathways.\n"
+            "- Integrate realized implementation risks. Provide 1-3 sentences per issue cited, detailing observed effects.\n\n"
+            "Citation rules:\n"
+            "- Use [PROJ_ID | PAD] for PAD evidence.\n"
+            "- Use the exact implementation 'citation_marker' shown in the evidence, for example [P123456 | ISR | 2025-09-26].\n"
+            "- Each citation must be in its own bracket pair\n"
+            "- NEVER combine citations with semicolons\n"
+            "- Do NOT create hyperlinks.\n"
+            "- Do NOT invent citations."
+        )
+    elif mode == "project-based":
+        paragraph_instruction = (
+            f"Write exactly {n_paragraphs} paragraphs, one for each project listed in the evidence.\n"
+            if n_paragraphs is not None
+            else "Write exactly one paragraph for each project listed in the evidence.\n"
+        )
+        prompt = (
+            "You are writing a project-based FCV portfolio briefing.\n\n"
+            f"{paragraph_instruction}"
+            "Process the projects in the exact order provided.\n\n"
+            "For each paragraph:\n"
+            "- Start with the project ID (e.g., 'P123456'). You may look up project names from the evidence if available.\n"
+            "- Analyze the project's FCV exposure and risks.\n"
+            "- Describe how country-level FCV risks affect this specific project.\n"
+            "- Include PAD-stage susceptibilities. Provide 1-3 sentences elaborating on the specific exposure mechanisms.\n"
+            "- Include any realized implementation risks or issues. Provide 1-3 sentences detailing observed impacts.\n"
+            "- Focus on the unique context and risks for this specific project.\n\n"
+            "Citation rules:\n"
+            "- Use [PROJ_ID | PAD] only if that project appears in pad_risks.\n"
+            "- Use the exact implementation 'citation_marker' shown in implementation_realized_risks_mapped.\n"
+            "- Each citation must be in its own bracket pair: [P123456 | PAD] [P123456 | ISR | 2025-09-26]\n"
+            "- NEVER combine multiple citations with semicolons inside one bracket\n"
+            "- Do NOT cite a document type that doesn't appear in the evidence for that project.\n"
+            "- Do NOT create hyperlinks.\n"
+            "- Do NOT invent citations.\n"
+            "- Do NOT cite any risk mapping IDs as they have no meaning in the final briefing"
+        )
+    elif mode == "rra":
+        prompt = (
+            f"You are writing a structured FCV portfolio briefing organised around the five standard "
+            f"short-term RRA (Risk and Resilience Assessment) risk headings.\n\n"
+            f"Write exactly {len(RRA_HEADINGS)} paragraphs, one for each heading in the order given.\n\n"
+            "For each paragraph:\n"
+            "- Begin the paragraph with the exact RRA heading in bold followed by a colon "
+            "(e.g. **Social unrest, protests, and oppression:**).\n"
+            "- Summarise the relevant country-level FCV dynamics under that heading. "
+            "Ground this entirely in the `country_risks` entries in the evidence — these are extracted from "
+            "live web search and recent ICG/CrisisWatch monitoring covering the last 3 months. "
+            "Treat them as the authoritative source of current conditions. "
+            "Do NOT substitute or supplement with your background training knowledge about the country.\n"
+            "- Show how World Bank projects in the portfolio are susceptible to that risk "
+            "(PAD evidence). Provide 1-3 sentences per project cited.\n"
+            "- Show whether those risks are materialising in implementation "
+            "(ISR/Aide Memoire evidence). Provide 1-3 sentences per issue cited.\n\n"
+            "CRITICAL CITATION RULES:\n"
+            "- PAD citations: ONLY cite [PROJ_ID | PAD] if that project appears in pad_risks.\n"
+            "- Implementation citations: use the exact 'citation_marker' from implementation_realized_risks_mapped, "
+            "for example [P123456 | ISR | 2025-09-26].\n"
+            "- NEVER cite a document type absent from the evidence for that project.\n"
+            "- Each citation must be in its own bracket pair: [P123456 | PAD] [P123456 | ISR | 2025-09-26]\n"
+            "- NEVER combine multiple citations with semicolons inside one bracket.\n"
+            "- Do NOT create hyperlinks.\n"
+            "- Do NOT invent citations.\n"
+            "- Write analytically and concisely for senior leadership."
+        )
+    else:
+        raise ValueError("mode must be 'rra', 'risk', 'sector', 'project-based', or 'custom'")
+
+    if include_guardrails:
+        return apply_style_guardrails(prompt)
+    return prompt
 
 
 def build_project_selection(
@@ -368,6 +539,7 @@ def generate_custom_aligned_briefing(
     implementation_realized_risks,
     implementation_realized_risks_mapped,
     client,
+    project_names_by_id=None,
     custom_prompt=None
 ):
     """
@@ -382,6 +554,12 @@ def generate_custom_aligned_briefing(
 
     evidence = {
         "categories": custom_categories,
+        "project_names": build_project_name_map(
+            project_names_by_id,
+            pad_risks,
+            implementation_realized_risks,
+            implementation_realized_risks_mapped,
+        ),
         "country_risks": sanitize_evidence_records(country_risks_df),
         "pad_risks": sanitize_evidence_records(pad_risks),
         "implementation_realized_risks": sanitize_evidence_records(implementation_realized_risks),
@@ -396,28 +574,7 @@ def generate_custom_aligned_briefing(
             custom_prompt = custom_prompt.strip() if custom_prompt else None
 
     # Use custom prompt if provided, otherwise use default
-    system_prompt = custom_prompt if custom_prompt else (
-        f"You are writing a structured FCV portfolio briefing.\n\n"
-        f"Write exactly {n_paragraphs} paragraphs.\n"
-        "Each paragraph MUST correspond to exactly one of the custom categories provided in the evidence.\n"
-        "Process the categories in the exact order given.\n\n"
-        "For each paragraph:\n"
-        "- Start with the category name (e.g., 'Governance and Institutional Capacity:', 'Service Delivery and Access:', etc.)\n"
-        "- Analyze how this category relates to the country's FCV risks.\n"
-        "- Show how projects are exposed to relevant risks (PAD evidence). Provide 1-3 sentences per project cited, elaborating on specific vulnerabilities.\n"
-        "- Show whether these risks are materializing (ISR/Aide Memoire evidence). Provide 1-3 sentences per issue cited, describing observed impacts.\n"
-        "- Focus on risks and project evidence that align with this specific category.\n\n"
-        "CRITICAL CITATION RULES:\n"
-        "- PAD citations: Look at 'pad_risks' data. Each entry has 'PROJ_ID_IB'. ONLY cite [PROJ_ID | PAD] if that project appears in pad_risks.\n"
-        "- Implementation citations: Look at 'implementation_realized_risks_mapped' data. Each entry includes a 'citation_marker'. Use that exact marker for implementation citations, for example [P123456 | ISR | 2025-09-26].\n"
-        "- NEVER cite a document type that doesn't appear in the evidence for that project.\n"
-        "- If a project only has 'Aide Memoire' in the data, cite its exact Aide Memoire citation_marker, NOT an ISR marker.\n"
-        "- If a project only appears in implementation_realized_risks_mapped but NOT in pad_risks, do NOT cite [PROJ_ID | PAD].\n"
-        "- Each citation must be in its own bracket pair: [P123456 | PAD] [P123456 | ISR | 2025-09-26]\n"
-        "- NEVER combine multiple citations with semicolons inside one bracket\n"
-        "- Do NOT create hyperlinks.\n"
-        "- Do NOT invent citations."
-    )
+    system_prompt = custom_prompt if custom_prompt else get_default_briefing_prompt("custom", n_paragraphs=n_paragraphs)
 
     system_prompt = apply_style_guardrails(system_prompt)
 
@@ -447,6 +604,7 @@ def generate_risk_aligned_briefing(
     implementation_realized_risks_mapped,
     n_paragraphs,
     client,
+    project_names_by_id=None,
     custom_prompt=None
 ):
     _, implementation_realized_risks_mapped = prepare_implementation_evidence(
@@ -455,6 +613,11 @@ def generate_risk_aligned_briefing(
     )
 
     evidence = {
+        "project_names": build_project_name_map(
+            project_names_by_id,
+            pad_risks,
+            implementation_realized_risks_mapped,
+        ),
         "country_risks": sanitize_evidence_records(country_risks_df),
         "pad_risks": sanitize_evidence_records(pad_risks),
         "implementation_realized_risks_mapped": sanitize_evidence_records(implementation_realized_risks_mapped)
@@ -468,31 +631,7 @@ def generate_risk_aligned_briefing(
             custom_prompt = custom_prompt.strip() if custom_prompt else None
 
     # Use custom prompt if provided, otherwise use default
-    system_prompt = custom_prompt if custom_prompt else (
-        "You are writing a structured FCV portfolio briefing.\n\n"
-        f"Write exactly {n_paragraphs} paragraphs.\n"
-        "Each paragraph must correspond to a distinct country-level FCV risk.\n\n"
-        "For each paragraph:\n"
-        "- Describe the country-level risk clearly without using technical risk IDs.\n"
-        "- Explain how projects are susceptible (PAD evidence). For each project cited, provide 1-3 sentences elaborating on the specific exposure mechanism.\n"
-        "- Explain whether risks are materializing (ISR/Aide evidence). For each implementation issue cited, provide 1-3 sentences on the specific impacts observed.\n"
-        "- Integrate both forward-looking and realized risks.\n\n"
-        "Important rules:\n"
-        "- Do NOT mention risk_id or any technical identifiers (e.g., DJI_R1, NIG_R9).\n"
-        "- Describe risks in natural language for senior leadership.\n"
-        "- Focus on substance, not reference codes.\n\n"
-        "CRITICAL CITATION RULES:\n"
-        "- PAD citations: Look at 'pad_risks' data. Each entry has 'PROJ_ID_IB'. ONLY cite [PROJ_ID | PAD] if that project appears in pad_risks.\n"
-        "- Implementation citations: Look at 'implementation_realized_risks_mapped' data. Each entry includes a 'citation_marker'. Use that exact marker for implementation citations.\n"
-        "- NEVER cite a document type that doesn't appear in the evidence for that project.\n"
-        "- If a project only has 'Aide Memoire' in the data, cite its exact Aide Memoire citation_marker, NOT an ISR marker.\n"
-        "- If a project only appears in implementation_realized_risks_mapped but NOT in pad_risks, do NOT cite [PROJ_ID | PAD].\n"
-        "- Each citation must be in its own bracket pair: [P123456 | PAD] [P123456 | ISR | 2025-09-26]\n"
-        "- NEVER combine multiple citations with semicolons inside one bracket\n"
-        "- Do NOT create hyperlinks.\n"
-        "- Do NOT invent citations.\n"
-        "- Write analytically and concisely."
-    )
+    system_prompt = custom_prompt if custom_prompt else get_default_briefing_prompt("risk", n_paragraphs=n_paragraphs)
 
     system_prompt = apply_style_guardrails(system_prompt)
 
@@ -521,6 +660,7 @@ def generate_sector_aligned_briefing(
     implementation_realized_risks,
     n_paragraphs,
     client,
+    project_names_by_id=None,
     custom_prompt=None
 ):
 
@@ -530,6 +670,11 @@ def generate_sector_aligned_briefing(
     )
 
     evidence = {
+        "project_names": build_project_name_map(
+            project_names_by_id,
+            pad_risks,
+            implementation_realized_risks,
+        ),
         "country_risks": sanitize_evidence_records(country_risks_df),
         "pad_risks": sanitize_evidence_records(pad_risks),
         "implementation_realized_risks": sanitize_evidence_records(implementation_realized_risks),
@@ -543,24 +688,7 @@ def generate_sector_aligned_briefing(
             custom_prompt = custom_prompt.strip() if custom_prompt else None
 
     # Use custom prompt if provided, otherwise use default
-    system_prompt = custom_prompt if custom_prompt else (
-        "You are writing a sector-aligned FCV portfolio briefing.\n\n"
-        f"Write exactly {n_paragraphs} paragraphs.\n"
-        "Each paragraph should correspond to a major sectoral cluster "
-        "that you infer from the evidence (e.g., health, infrastructure, governance, social protection).\n\n"
-        "For each paragraph:\n"
-        "- Identify the sector cluster clearly in the first sentence.\n"
-        "- Integrate country risk context.\n"
-        "- Integrate PAD risks. Provide 1-3 sentences per project cited, describing specific exposure pathways.\n"
-        "- Integrate realized implementation risks. Provide 1-3 sentences per issue cited, detailing observed effects.\n\n"
-        "Citation rules:\n"
-        "- Use [PROJ_ID | PAD] for PAD evidence.\n"
-        "- Use the exact implementation 'citation_marker' shown in the evidence, for example [P123456 | ISR | 2025-09-26].\n"
-        "- Each citation must be in its own bracket pair\n"
-        "- NEVER combine citations with semicolons\n"
-        "- Do NOT create hyperlinks.\n"
-        "- Do NOT invent citations."
-    )
+    system_prompt = custom_prompt if custom_prompt else get_default_briefing_prompt("sector", n_paragraphs=n_paragraphs)
 
     system_prompt = apply_style_guardrails(system_prompt)
 
@@ -589,6 +717,7 @@ def generate_project_based_briefing(
     implementation_realized_risks,
     implementation_realized_risks_mapped,
     client,
+    project_names_by_id=None,
     custom_prompt=None
 ):
     """
@@ -615,6 +744,12 @@ def generate_project_based_briefing(
     
     evidence = {
         "projects": projects,
+        "project_names": build_project_name_map(
+            project_names_by_id,
+            pad_risks,
+            implementation_realized_risks,
+            implementation_realized_risks_mapped,
+        ),
         "country_risks": sanitize_evidence_records(country_risks_df),
         "pad_risks": sanitize_evidence_records(pad_risks),
         "implementation_realized_risks": sanitize_evidence_records(implementation_realized_risks),
@@ -629,27 +764,7 @@ def generate_project_based_briefing(
             custom_prompt = custom_prompt.strip() if custom_prompt else None
 
     # Use custom prompt if provided, otherwise use default
-    system_prompt = custom_prompt if custom_prompt else (
-        "You are writing a project-based FCV portfolio briefing.\n\n"
-        f"Write exactly {n_projects} paragraphs, one for each project listed in the evidence.\n"
-        "Process the projects in the exact order provided.\n\n"
-        "For each paragraph:\n"
-        "- Start with the project ID (e.g., 'P123456'). You may look up project names from the evidence if available.\n"
-        "- Analyze the project's FCV exposure and risks.\n"
-        "- Describe how country-level FCV risks affect this specific project.\n"
-        "- Include PAD-stage susceptibilities. Provide 1-3 sentences elaborating on the specific exposure mechanisms.\n"
-        "- Include any realized implementation risks or issues. Provide 1-3 sentences detailing observed impacts.\n"
-        "- Focus on the unique context and risks for this specific project.\n\n"
-        "Citation rules:\n"
-        "- Use [PROJ_ID | PAD] only if that project appears in pad_risks.\n"
-        "- Use the exact implementation 'citation_marker' shown in implementation_realized_risks_mapped.\n"
-        "- Each citation must be in its own bracket pair: [P123456 | PAD] [P123456 | ISR | 2025-09-26]\n"
-        "- NEVER combine multiple citations with semicolons inside one bracket\n"
-        "- Do NOT cite a document type that doesn't appear in the evidence for that project.\n"
-        "- Do NOT create hyperlinks.\n"
-        "- Do NOT invent citations."
-        "- Do NOT cite any risk mapping IDs as they have no meaning in the final briefing"
-    )
+    system_prompt = custom_prompt if custom_prompt else get_default_briefing_prompt("project-based", n_paragraphs=n_projects)
 
     system_prompt = apply_style_guardrails(system_prompt)
 
@@ -673,7 +788,7 @@ def generate_project_based_briefing(
     return (message.content or "").strip()
 
 RRA_HEADINGS = [
-    "Social unrest and protests",
+    "Social unrest, protests, and oppression",
     "Violence between refugees, host communities, and the state",
     "Organized violence between political and sectarian groups",
     "Political instability",
@@ -687,6 +802,7 @@ def generate_rra_aligned_briefing(
     implementation_realized_risks,
     implementation_realized_risks_mapped,
     client,
+    project_names_by_id=None,
     custom_prompt=None
 ):
     """
@@ -701,6 +817,12 @@ def generate_rra_aligned_briefing(
 
     evidence = {
         "categories": RRA_HEADINGS,
+        "project_names": build_project_name_map(
+            project_names_by_id,
+            pad_risks,
+            implementation_realized_risks,
+            implementation_realized_risks_mapped,
+        ),
         "country_risks": sanitize_evidence_records(country_risks_df),
         "pad_risks": sanitize_evidence_records(pad_risks),
         "implementation_realized_risks": sanitize_evidence_records(implementation_realized_risks),
@@ -713,33 +835,7 @@ def generate_rra_aligned_briefing(
         else:
             custom_prompt = custom_prompt.strip() if custom_prompt else None
 
-    system_prompt = custom_prompt if custom_prompt else (
-        f"You are writing a structured FCV portfolio briefing organised around the five standard "
-        f"short-term RRA (Risk and Resilience Assessment) risk headings.\n\n"
-        f"Write exactly {n_paragraphs} paragraphs, one for each heading in the order given.\n\n"
-        "For each paragraph:\n"
-        "- Begin the paragraph with the exact RRA heading in bold followed by a colon "
-        "(e.g. **Social unrest and protests:**).\n"
-        "- Summarise the relevant country-level FCV dynamics under that heading. "
-        "Ground this entirely in the `country_risks` entries in the evidence — these are extracted from "
-        "live web search and recent ICG/CrisisWatch monitoring covering the last 3 months. "
-        "Treat them as the authoritative source of current conditions. "
-        "Do NOT substitute or supplement with your background training knowledge about the country.\n"
-        "- Show how World Bank projects in the portfolio are susceptible to that risk "
-        "(PAD evidence). Provide 1-3 sentences per project cited.\n"
-        "- Show whether those risks are materialising in implementation "
-        "(ISR/Aide Memoire evidence). Provide 1-3 sentences per issue cited.\n\n"
-        "CRITICAL CITATION RULES:\n"
-        "- PAD citations: ONLY cite [PROJ_ID | PAD] if that project appears in pad_risks.\n"
-        "- Implementation citations: use the exact 'citation_marker' from implementation_realized_risks_mapped, "
-        "for example [P123456 | ISR | 2025-09-26].\n"
-        "- NEVER cite a document type absent from the evidence for that project.\n"
-        "- Each citation must be in its own bracket pair: [P123456 | PAD] [P123456 | ISR | 2025-09-26]\n"
-        "- NEVER combine multiple citations with semicolons inside one bracket.\n"
-        "- Do NOT create hyperlinks.\n"
-        "- Do NOT invent citations.\n"
-        "- Write analytically and concisely for senior leadership."
-    )
+    system_prompt = custom_prompt if custom_prompt else get_default_briefing_prompt("rra", n_paragraphs=n_paragraphs)
 
     system_prompt = apply_style_guardrails(system_prompt)
 
@@ -762,6 +858,7 @@ def generate_briefing(
     implementation_realized_risks_mapped,
     client,
     country_document_df,
+    project_names_by_id=None,
     custom_categories=None,
     custom_prompt=None,
     max_projects=None,
@@ -819,6 +916,13 @@ def generate_briefing(
             implementation_realized_risks=implementation_realized_risks,
             implementation_realized_risks_mapped=implementation_realized_risks_mapped,
             client=client,
+            project_names_by_id=build_project_name_map(
+                project_names_by_id,
+                pad_risks,
+                implementation_realized_risks,
+                implementation_realized_risks_mapped,
+                selected_project_ids=project_selection['selected_project_ids'],
+            ),
             custom_prompt=custom_prompt,
         )
 
@@ -829,6 +933,12 @@ def generate_briefing(
             implementation_realized_risks_mapped=implementation_realized_risks_mapped,
             n_paragraphs=n_paragraphs,
             client=client,
+            project_names_by_id=build_project_name_map(
+                project_names_by_id,
+                pad_risks,
+                implementation_realized_risks_mapped,
+                selected_project_ids=project_selection['selected_project_ids'],
+            ),
             custom_prompt=custom_prompt
         )
 
@@ -839,6 +949,12 @@ def generate_briefing(
             implementation_realized_risks=implementation_realized_risks,
             n_paragraphs=n_paragraphs,
             client=client,
+            project_names_by_id=build_project_name_map(
+                project_names_by_id,
+                pad_risks,
+                implementation_realized_risks,
+                selected_project_ids=project_selection['selected_project_ids'],
+            ),
             custom_prompt=custom_prompt
         )
 
@@ -849,6 +965,13 @@ def generate_briefing(
             implementation_realized_risks=implementation_realized_risks,
             implementation_realized_risks_mapped=implementation_realized_risks_mapped,
             client=client,
+            project_names_by_id=build_project_name_map(
+                project_names_by_id,
+                pad_risks,
+                implementation_realized_risks,
+                implementation_realized_risks_mapped,
+                selected_project_ids=project_selection['selected_project_ids'],
+            ),
             custom_prompt=custom_prompt
         )
 
@@ -863,6 +986,13 @@ def generate_briefing(
             implementation_realized_risks=implementation_realized_risks,
             implementation_realized_risks_mapped=implementation_realized_risks_mapped,
             client=client,
+            project_names_by_id=build_project_name_map(
+                project_names_by_id,
+                pad_risks,
+                implementation_realized_risks,
+                implementation_realized_risks_mapped,
+                selected_project_ids=project_selection['selected_project_ids'],
+            ),
             custom_prompt=custom_prompt
         )
 

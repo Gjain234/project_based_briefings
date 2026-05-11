@@ -30,6 +30,33 @@ def read_cached_dataframe(path):
     except pd.errors.EmptyDataError:
         return pd.DataFrame()
 
+
+def load_project_names_for_country(country):
+    """Load project names from preprocessed PAD JSON files for a country."""
+    project_names = {}
+    country_dir = os.path.join("preprocessed_pads", country)
+
+    if not os.path.exists(country_dir):
+        return project_names
+
+    for filename in os.listdir(country_dir):
+        if not filename.endswith("_preprocessed.json"):
+            continue
+
+        file_path = os.path.join(country_dir, filename)
+        try:
+            with open(file_path, "r", encoding="utf-8") as handle:
+                data = json.load(handle)
+
+            proj_id = data.get('metadata', {}).get('PROJ_ID_IB')
+            proj_name = data.get('structured_content', {}).get('project_overview', {}).get('project_name')
+            if proj_id and proj_name:
+                project_names[str(proj_id).strip()] = str(proj_name).strip()
+        except Exception as e:
+            print(f"Error reading {file_path}: {e}")
+
+    return project_names
+
 def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categories=None, save_outputs=False,internal=False, force_regenerate=False, status_callback=None, custom_prompt=None, stream_callback=None, selection_only=False, selected_project_ids=None, regenerate_final_only=False):
     """Generate FCV briefing with optional status updates.
     
@@ -75,6 +102,7 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
     country_document_df = document_df[
         document_df["CNTRY_SHORT_NAME"].isin(possible_country_names)
     ].copy()
+    project_names_by_id = load_project_names_for_country(country)
     
     if country_document_df.empty:
         print(f"⚠️  Warning: No documents found for country '{country}'")
@@ -158,6 +186,7 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
             implementation_realized_risks_mapped=implementation_realized_risks_mapped,
             client=final_briefing_client,
             country_document_df=country_document_df,
+            project_names_by_id=project_names_by_id,
             custom_categories=custom_categories,
             custom_prompt=custom_prompt,
             max_projects=max_projects_limit,
@@ -431,6 +460,7 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
             implementation_realized_risks_mapped=implementation_realized_risks_mapped,
             client=final_briefing_client,
             country_document_df=country_document_df,
+            project_names_by_id=project_names_by_id,
             custom_categories=custom_categories,
             custom_prompt=custom_prompt,
             max_projects=max_projects_limit,
