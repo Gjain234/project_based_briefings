@@ -1,7 +1,7 @@
 import pandas as pd
 from document_utils import *
 from preprocess_pads import get_or_preprocess_pad
-from prompts import PAD_STRESS_TEST_SYSTEM_PROMPT
+from briefing_prompts import PAD_STRESS_TEST_SYSTEM_PROMPT
 import json
 def select_latest_pad_per_project(country_document_df):
     

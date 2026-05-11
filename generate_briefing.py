@@ -4,205 +4,255 @@ import re
 import pandas as pd
 
 
-def estimate_tokens_from_text(text):
-    """Approximate token count using a conservative chars-per-token heuristic."""
-    if not text:
-        return 0
-    return max(1, int(len(text) / 4))
+PROJECT_ID_PATTERN = re.compile(r"\bP\d{5,}\b", re.IGNORECASE)
+TECHNICAL_ID_FIELDS = {
+    "risk_id",
+    "country_risk_id",
+    "realized_risk_id",
+}
+DOC_TYPE_SHORT_NAMES = {
+    "Project Appraisal Document": "PAD",
+    "Implementation Status and Results Report": "ISR",
+    "Aide Memoire": "Aide Memoire",
+}
 
 
-def _is_token_limit_error(error):
-    message = str(error).lower()
-    return (
-        'token limit will exceed' in message
-        or ('statuscode' in message and '429' in message and 'token' in message)
-    )
-
-
-def _normalize_record_value(value, max_field_chars):
-    if value is None:
+def normalize_project_id(project_id):
+    if project_id is None:
         return None
-    if isinstance(value, str):
-        text = value.strip()
-        if len(text) > max_field_chars:
-            return text[:max_field_chars].rstrip() + '...'
-        return text
-    return value
+    normalized = str(project_id).strip().upper()
+    return normalized or None
 
 
-def _truncate_project_records(records, level_cfg):
-    max_records_per_project = level_cfg['max_records_per_project']
-    max_field_chars = level_cfg['max_field_chars']
-    max_fields_per_record = level_cfg['max_fields_per_record']
+def extract_project_ids_from_prompt(custom_prompt):
+    if not isinstance(custom_prompt, str):
+        return []
 
-    truncated = []
-    for row in records[:max_records_per_project]:
-        if not isinstance(row, dict):
-            truncated.append(row)
-            continue
-
-        keys = list(row.keys())
-        if len(keys) > max_fields_per_record:
-            keys = keys[:max_fields_per_record]
-
-        row_out = {}
-        for key in keys:
-            row_out[key] = _normalize_record_value(row.get(key), max_field_chars)
-
-        truncated.append(row_out)
-
-    return truncated
+    seen = set()
+    project_ids = []
+    for match in PROJECT_ID_PATTERN.findall(custom_prompt.upper()):
+        project_id = normalize_project_id(match)
+        if project_id and project_id not in seen:
+            seen.add(project_id)
+            project_ids.append(project_id)
+    return project_ids
 
 
-def _truncate_evidence_payload(evidence, level):
-    """Progressively reduce payload size while preserving project-by-project structure."""
-    if level <= 0:
-        return evidence
+def _collect_project_risk_counts(pad_risks, implementation_realized_risks, implementation_realized_risks_mapped):
+    project_risk_counts = {}
 
-    level_configs = {
-        1: {'max_projects_per_doc': 30, 'max_records_per_project': 10, 'max_field_chars': 450, 'max_fields_per_record': 16},
-        2: {'max_projects_per_doc': 24, 'max_records_per_project': 7, 'max_field_chars': 320, 'max_fields_per_record': 14},
-        3: {'max_projects_per_doc': 18, 'max_records_per_project': 5, 'max_field_chars': 220, 'max_fields_per_record': 12},
-        4: {'max_projects_per_doc': 12, 'max_records_per_project': 3, 'max_field_chars': 160, 'max_fields_per_record': 10},
-    }
-    level_cfg = level_configs.get(level, level_configs[4])
-
-    # Deep copy via JSON to avoid mutating the original structure
-    payload = json.loads(json.dumps(evidence))
-
-    by_doc = payload.get('evidence_by_document_type')
-    if not isinstance(by_doc, dict):
-        return payload
-
-    for doc_type, projects in list(by_doc.items()):
-        if not isinstance(projects, dict):
-            continue
-
-        # Keep projects with most evidence first
-        ranked_projects = sorted(
-            projects.items(),
-            key=lambda item: len(item[1]) if isinstance(item[1], list) else 0,
-            reverse=True
-        )
-
-        keep_count = level_cfg['max_projects_per_doc']
-        selected_projects = ranked_projects[:keep_count]
-
-        truncated_projects = {}
-        for project_id, records in selected_projects:
-            if isinstance(records, list):
-                truncated_projects[project_id] = _truncate_project_records(records, level_cfg)
-            else:
-                truncated_projects[project_id] = records
-
-        by_doc[doc_type] = truncated_projects
-
-    return payload
-
-
-def _run_chain_with_token_fallback(chain, system_prompt, evidence, stream_callback=None, max_attempts=5):
-    """Retry generation with progressively truncated per-project evidence on token-limit 429 errors."""
-    last_error = None
-
-    for attempt in range(max_attempts):
-        truncation_level = attempt
-        attempt_evidence = _truncate_evidence_payload(evidence, truncation_level)
-        evidence_text = json.dumps(attempt_evidence, indent=2)
-
-        estimated_tokens = (
-            estimate_tokens_from_text(system_prompt)
-            + estimate_tokens_from_text(evidence_text)
-            + 500
-        )
-
-        print(
-            f"   ℹ️ Briefing generation attempt {attempt + 1}/{max_attempts} "
-            f"(estimated request tokens: ~{estimated_tokens:,}, truncation level: {truncation_level})"
-        )
-
-        try:
-            if stream_callback:
-                full_content = ""
-                for chunk in chain.stream({"evidence": evidence_text}):
-                    if hasattr(chunk, 'content'):
-                        content = chunk.content
-                    else:
-                        content = str(chunk)
-
-                    if content:
-                        full_content += content
-                        stream_callback(content)
-
-                return full_content.strip()
-
-            message = chain.invoke({"evidence": evidence_text})
-            return (message.content or "").strip()
-
-        except Exception as error:
-            last_error = error
-            if not _is_token_limit_error(error):
-                raise
-
-            if attempt >= max_attempts - 1:
-                break
-
-            print(
-                "   ⚠️ Token-limit 429 encountered. "
-                "Retrying with stronger per-project metadata truncation..."
-            )
-
-    raise last_error
-
-def restructure_evidence_by_source(pad_risks, implementation_realized_risks_mapped, implementation_realized_risks=None):
-    """
-    Restructure evidence data into a hierarchical format organized by document type, then by project.
-    
-    Returns:
-    {
-        "PAD": {
-            "P123456": [risk1, risk2, ...],
-            "P789012": [risk1, ...]
-        },
-        "ISR": {
-            "P123456": [risk1, ...],
-            "P345678": [risk1, ...]
-        },
-        "Aide Memoire": {
-            "P789012": [risk1, ...]
-        }
-    }
-    
-    This format makes it impossible for the LLM to cite a project-document combination that doesn't exist.
-    """
-    evidence_by_source = {
-        "PAD": {},
-        "ISR": {},
-        "Aide Memoire": {}
-    }
-    
-    # Organize PAD risks by project
     if len(pad_risks) > 0 and 'PROJ_ID_IB' in pad_risks.columns:
-        for proj_id in pad_risks['PROJ_ID_IB'].unique():
-            project_risks = pad_risks[pad_risks['PROJ_ID_IB'] == proj_id].to_dict('records')
-            evidence_by_source["PAD"][proj_id] = project_risks
-    
-    # Organize implementation risks by project and document type
+        pad_counts = pad_risks.groupby('PROJ_ID_IB').size().to_dict()
+        for proj, count in pad_counts.items():
+            normalized = normalize_project_id(proj)
+            if normalized:
+                project_risk_counts[normalized] = project_risk_counts.get(normalized, 0) + count
+
+    if len(implementation_realized_risks) > 0 and 'PROJ_ID_IB' in implementation_realized_risks.columns:
+        impl_counts = implementation_realized_risks.groupby('PROJ_ID_IB').size().to_dict()
+        for proj, count in impl_counts.items():
+            normalized = normalize_project_id(proj)
+            if normalized:
+                project_risk_counts[normalized] = project_risk_counts.get(normalized, 0) + count
+
     if len(implementation_realized_risks_mapped) > 0 and 'PROJ_ID_IB' in implementation_realized_risks_mapped.columns:
-        for _, row in implementation_realized_risks_mapped.iterrows():
-            proj_id = row['PROJ_ID_IB']
-            doc_type = row.get('doc_type', 'ISR')
-            
-            if doc_type not in evidence_by_source:
-                evidence_by_source[doc_type] = {}
-            
-            if proj_id not in evidence_by_source[doc_type]:
-                evidence_by_source[doc_type][proj_id] = []
-            
-            evidence_by_source[doc_type][proj_id].append(row.to_dict())
-    
-    return evidence_by_source
+        mapped_counts = implementation_realized_risks_mapped.groupby('PROJ_ID_IB').size().to_dict()
+        for proj, count in mapped_counts.items():
+            normalized = normalize_project_id(proj)
+            if normalized:
+                project_risk_counts[normalized] = project_risk_counts.get(normalized, 0) + count
+
+    return project_risk_counts
 
 
+def _dedupe_project_ids(project_ids):
+    seen = set()
+    deduped = []
+    for project_id in project_ids or []:
+        normalized = normalize_project_id(project_id)
+        if normalized and normalized not in seen:
+            seen.add(normalized)
+            deduped.append(normalized)
+    return deduped
+
+
+def sanitize_evidence_records(df):
+    if len(df) == 0:
+        return []
+
+    records = df.where(pd.notnull(df), None).to_dict(orient="records")
+    sanitized_records = []
+    for record in records:
+        sanitized_records.append({
+            key: value
+            for key, value in record.items()
+            if key not in TECHNICAL_ID_FIELDS
+        })
+    return sanitized_records
+
+
+def _format_doc_date(value):
+    if value is None or (isinstance(value, float) and pd.isna(value)):
+        return None
+
+    parsed = pd.to_datetime(value, errors="coerce")
+    if pd.isna(parsed):
+        return None
+    return parsed.strftime("%Y-%m-%d")
+
+
+def prepare_implementation_evidence(implementation_realized_risks, implementation_realized_risks_mapped):
+    implementation_realized_risks = implementation_realized_risks.copy()
+    implementation_realized_risks_mapped = implementation_realized_risks_mapped.copy()
+
+    if len(implementation_realized_risks) > 0:
+        implementation_realized_risks["citation_date"] = implementation_realized_risks.get("doc_date").apply(_format_doc_date)
+        implementation_realized_risks["citation_doc_type"] = implementation_realized_risks.get("doc_type").map(
+            lambda value: DOC_TYPE_SHORT_NAMES.get(value, value)
+        )
+        implementation_realized_risks["citation_marker"] = implementation_realized_risks.apply(
+            lambda row: (
+                f"[{row['PROJ_ID_IB']} | {row['citation_doc_type']} | {row['citation_date']}]"
+                if row.get("PROJ_ID_IB") and row.get("citation_doc_type") and row.get("citation_date")
+                else None
+            ),
+            axis=1,
+        )
+
+    if len(implementation_realized_risks_mapped) > 0:
+        if "doc_date" not in implementation_realized_risks_mapped.columns and len(implementation_realized_risks) > 0:
+            join_columns = [column for column in ["realized_risk_id", "PROJ_ID_IB", "doc_type", "doc_date"] if column in implementation_realized_risks.columns]
+            if {"realized_risk_id", "PROJ_ID_IB", "doc_type"}.issubset(join_columns):
+                implementation_realized_risks_mapped = implementation_realized_risks_mapped.merge(
+                    implementation_realized_risks[join_columns].drop_duplicates(
+                        subset=["realized_risk_id", "PROJ_ID_IB", "doc_type"]
+                    ),
+                    on=["realized_risk_id", "PROJ_ID_IB", "doc_type"],
+                    how="left",
+                )
+
+        if "doc_date" in implementation_realized_risks_mapped.columns:
+            implementation_realized_risks_mapped["citation_date"] = implementation_realized_risks_mapped["doc_date"].apply(_format_doc_date)
+        else:
+            implementation_realized_risks_mapped["citation_date"] = None
+
+        implementation_realized_risks_mapped["citation_doc_type"] = implementation_realized_risks_mapped.get("doc_type").map(
+            lambda value: DOC_TYPE_SHORT_NAMES.get(value, value)
+        )
+        implementation_realized_risks_mapped["citation_marker"] = implementation_realized_risks_mapped.apply(
+            lambda row: (
+                f"[{row['PROJ_ID_IB']} | {row['citation_doc_type']} | {row['citation_date']}]"
+                if row.get("PROJ_ID_IB") and row.get("citation_doc_type") and row.get("citation_date")
+                else None
+            ),
+            axis=1,
+        )
+
+    return implementation_realized_risks, implementation_realized_risks_mapped
+
+
+STYLE_GUARDRAILS = (
+    "\n\nSTYLE GUARDRAILS:\n"
+    "- Avoid repetitive paragraph openings across the briefing.\n"
+    "- Do NOT begin every paragraph with formulaic lead-ins like 'Country-level monitoring shows', "
+    "'Country-level evidence documents', 'Country-level monitoring does not document', or close variants.\n"
+    "- After the heading or topic label, vary the first sentence structure and move directly into the substantive point.\n"
+    "- Write like a senior analyst, not a template.\n"
+)
+
+
+def apply_style_guardrails(system_prompt):
+    return f"{system_prompt.rstrip()}{STYLE_GUARDRAILS}"
+
+
+def build_project_selection(
+    pad_risks,
+    implementation_realized_risks,
+    implementation_realized_risks_mapped,
+    max_projects=None,
+    preferred_project_ids=None,
+    selected_project_ids=None
+):
+    project_risk_counts = _collect_project_risk_counts(
+        pad_risks,
+        implementation_realized_risks,
+        implementation_realized_risks_mapped
+    )
+    ranked_projects = sorted(project_risk_counts.items(), key=lambda item: (-item[1], item[0]))
+    all_project_ids = [project_id for project_id, _ in ranked_projects]
+    available_project_ids = set(all_project_ids)
+
+    preferred_ids = _dedupe_project_ids(preferred_project_ids)
+    selected_override_ids = _dedupe_project_ids(selected_project_ids)
+
+    unavailable_preferred_ids = [project_id for project_id in preferred_ids if project_id not in available_project_ids]
+    unavailable_selected_ids = [project_id for project_id in selected_override_ids if project_id not in available_project_ids]
+
+    preferred_present_ids = [project_id for project_id in preferred_ids if project_id in available_project_ids]
+
+    if selected_override_ids:
+        selected_ids = [project_id for project_id in selected_override_ids if project_id in available_project_ids]
+        selection_source = 'manual'
+    elif preferred_present_ids:
+        selected_ids = list(preferred_present_ids)
+        selection_source = 'prompt-requested'
+    elif max_projects is not None and len(all_project_ids) > max_projects:
+        selected_ids = all_project_ids[:max_projects]
+        selection_source = 'auto-prioritized'
+    else:
+        selected_ids = list(all_project_ids)
+        selection_source = 'all-projects'
+
+    selected_ids = _dedupe_project_ids(selected_ids)
+    discarded_ids = [project_id for project_id in all_project_ids if project_id not in selected_ids]
+    total_risks_selected = sum(project_risk_counts[project_id] for project_id in selected_ids)
+    total_risks_available = sum(project_risk_counts.values())
+
+    rank_lookup = {project_id: index + 1 for index, project_id in enumerate(all_project_ids)}
+
+    return {
+        'selection_source': selection_source,
+        'portfolio_too_large': bool(max_projects is not None and len(all_project_ids) > max_projects),
+        'max_projects': max_projects,
+        'total_projects': len(all_project_ids),
+        'selected_project_ids': selected_ids,
+        'discarded_project_ids': discarded_ids,
+        'prompt_requested_project_ids': preferred_ids,
+        'prompt_requested_project_ids_available': preferred_present_ids,
+        'prompt_requested_project_ids_missing': unavailable_preferred_ids,
+        'selected_project_ids_missing': unavailable_selected_ids,
+        'selected_projects': [
+            {'project_id': project_id, 'risk_count': project_risk_counts[project_id], 'rank': rank_lookup[project_id]}
+            for project_id in selected_ids
+        ],
+        'discarded_projects': [
+            {'project_id': project_id, 'risk_count': project_risk_counts[project_id], 'rank': rank_lookup[project_id]}
+            for project_id in discarded_ids
+        ],
+        'total_risks_selected': total_risks_selected,
+        'total_risks_available': total_risks_available,
+    }
+
+
+def filter_project_evidence(
+    pad_risks,
+    implementation_realized_risks,
+    implementation_realized_risks_mapped,
+    selected_project_ids
+):
+    selected_set = set(_dedupe_project_ids(selected_project_ids))
+
+    def filter_df(df):
+        if len(df) == 0 or 'PROJ_ID_IB' not in df.columns:
+            return df
+        normalized_ids = df['PROJ_ID_IB'].astype(str).str.strip().str.upper()
+        return df[normalized_ids.isin(selected_set)].copy()
+
+    return (
+        filter_df(pad_risks),
+        filter_df(implementation_realized_risks),
+        filter_df(implementation_realized_risks_mapped)
+    )
 
 def prioritize_projects_by_risk_count(pad_risks, implementation_realized_risks, implementation_realized_risks_mapped, max_projects=15):
     """
@@ -210,54 +260,41 @@ def prioritize_projects_by_risk_count(pad_risks, implementation_realized_risks, 
     
     Returns filtered versions of the three dataframes containing only the highest-risk projects.
     """
-    # Count risks per project
-    project_risk_counts = {}
-    
-    # Count PAD susceptibilities
-    if len(pad_risks) > 0 and 'PROJ_ID_IB' in pad_risks.columns:
-        pad_counts = pad_risks.groupby('PROJ_ID_IB').size().to_dict()
-        for proj, count in pad_counts.items():
-            project_risk_counts[proj] = project_risk_counts.get(proj, 0) + count
-    
-    # Count implementation risks
-    if len(implementation_realized_risks) > 0 and 'PROJ_ID_IB' in implementation_realized_risks.columns:
-        impl_counts = implementation_realized_risks.groupby('PROJ_ID_IB').size().to_dict()
-        for proj, count in impl_counts.items():
-            project_risk_counts[proj] = project_risk_counts.get(proj, 0) + count
-    
-    # Count mapped risks
-    if len(implementation_realized_risks_mapped) > 0 and 'PROJ_ID_IB' in implementation_realized_risks_mapped.columns:
-        mapped_counts = implementation_realized_risks_mapped.groupby('PROJ_ID_IB').size().to_dict()
-        for proj, count in mapped_counts.items():
-            project_risk_counts[proj] = project_risk_counts.get(proj, 0) + count
-    
-    # Get top N projects
-    top_projects = sorted(project_risk_counts.items(), key=lambda x: x[1], reverse=True)[:max_projects]
-    top_project_ids = [proj for proj, _ in top_projects]
-    
-    if len(top_projects) < len(project_risk_counts):
-        total_risks_kept = sum(count for _, count in top_projects)
-        total_risks_all = sum(project_risk_counts.values())
-        print(f"   ℹ️ Prioritized top {len(top_projects)} projects (keeping {total_risks_kept}/{total_risks_all} risk items)")
-        print(f"   Top projects: {', '.join(top_project_ids[:5])}{'...' if len(top_project_ids) > 5 else ''}")
-    
-    # Filter dataframes
-    pad_risks_filtered = pad_risks[pad_risks['PROJ_ID_IB'].isin(top_project_ids)] if len(pad_risks) > 0 and 'PROJ_ID_IB' in pad_risks.columns else pad_risks
-    impl_risks_filtered = implementation_realized_risks[implementation_realized_risks['PROJ_ID_IB'].isin(top_project_ids)] if len(implementation_realized_risks) > 0 and 'PROJ_ID_IB' in implementation_realized_risks.columns else implementation_realized_risks
-    mapped_risks_filtered = implementation_realized_risks_mapped[implementation_realized_risks_mapped['PROJ_ID_IB'].isin(top_project_ids)] if len(implementation_realized_risks_mapped) > 0 and 'PROJ_ID_IB' in implementation_realized_risks_mapped.columns else implementation_realized_risks_mapped
-    
-    return pad_risks_filtered, impl_risks_filtered, mapped_risks_filtered
+    selection = build_project_selection(
+        pad_risks,
+        implementation_realized_risks,
+        implementation_realized_risks_mapped,
+        max_projects=max_projects
+    )
+
+    if selection['portfolio_too_large']:
+        print(
+            f"   ℹ️ Prioritized top {len(selection['selected_project_ids'])} projects "
+            f"(keeping {selection['total_risks_selected']}/{selection['total_risks_available']} risk items)"
+        )
+        print(
+            f"   Top projects: {', '.join(selection['selected_project_ids'][:5])}"
+            f"{'...' if len(selection['selected_project_ids']) > 5 else ''}"
+        )
+
+    return filter_project_evidence(
+        pad_risks,
+        implementation_realized_risks,
+        implementation_realized_risks_mapped,
+        selection['selected_project_ids']
+    )
 
 def inject_links(text, country_document_df):
     """
     Replace [PROJ_ID_IB | document_type] markers with actual PDF links.
-    Looks up the PDF URL from country_document_df based on PROJ_ID_IB and document_type.
+    If multiple documents match the same project/document-type citation, render
+    links to all matching documents instead of arbitrarily choosing one.
     """
     import re
 
     # Match pattern like [P123456 | PAD] where P is followed by digits
     # Use a more restrictive pattern: stop at semicolons, closing brackets, or opening brackets
-    pattern = r"\[(P\d+)\s*\|\s*([^\];\[]+?)\]"
+    pattern = r"\[(P\d+)\s*\|\s*([^\]|;\[]+?)(?:\s*\|\s*(\d{4}-\d{2}-\d{2}))?\]"
     
     # Map short doc type names to full names in the dataframe
     doc_type_mapping = {
@@ -277,6 +314,7 @@ def inject_links(text, country_document_df):
     def replacer(match):
         proj_id = match.group(1).strip()
         doc_type = match.group(2).strip()
+        citation_date = match.group(3).strip() if match.group(3) else None
         
         # Map the doc_type if it's a shorthand
         lookup_doc_type = doc_type_mapping.get(doc_type, doc_type)
@@ -291,15 +329,35 @@ def inject_links(text, country_document_df):
             # Keep the original marker if no match found
             print(f"⚠️ No match found for PROJ_ID={proj_id}, doc_type={doc_type} (lookup as {lookup_doc_type})")
             return match.group(0)
-        
-        # Get the first match's PDF URL
-        pdf_url = matches.iloc[0]['pdf_url']
+
+        if 'lupdate' in matches.columns:
+            matches = matches.sort_values('lupdate', ascending=False, na_position='last')
+
+        if citation_date and 'lupdate' in matches.columns:
+            matched_dates = pd.to_datetime(matches['lupdate'], errors='coerce').dt.strftime('%Y-%m-%d')
+            matches = matches[matched_dates == citation_date]
+
+        matches = matches.dropna(subset=['pdf_url'])
+        matches = matches.drop_duplicates(subset=['pdf_url'])
+
+        if matches.empty:
+            return match.group(0)
         
         # Use short display name if available, otherwise use original
         display_name = display_name_mapping.get(lookup_doc_type, doc_type_mapping.get(doc_type, doc_type))
-        
-        # Use HTML anchor tag for better compatibility with Streamlit
-        return f'<a href="{pdf_url}" target="_blank">{proj_id} – {display_name}</a>'
+        link_label = f"{display_name} {citation_date}" if citation_date else display_name
+
+        if len(matches) == 1:
+            pdf_url = matches.iloc[0]['pdf_url']
+            return f'<a href="{pdf_url}" target="_blank">{proj_id} – {link_label}</a>'
+
+        doc_links = []
+        for index, (_, row) in enumerate(matches.iterrows(), start=1):
+            pdf_url = row['pdf_url']
+            item_label = f'{link_label} {index}' if citation_date else f'{display_name} {index}'
+            doc_links.append(f'<a href="{pdf_url}" target="_blank">{item_label}</a>')
+
+        return f'{proj_id} – ' + ' / '.join(doc_links)
 
     return re.sub(pattern, replacer, text)
 
@@ -310,22 +368,24 @@ def generate_custom_aligned_briefing(
     implementation_realized_risks,
     implementation_realized_risks_mapped,
     client,
-    custom_prompt=None,
-    stream_callback=None
+    custom_prompt=None
 ):
     """
     Each custom category becomes exactly one paragraph.
     """
 
     n_paragraphs = len(custom_categories)
-
-    # Restructure evidence by document type and project
-    evidence_by_source = restructure_evidence_by_source(pad_risks, implementation_realized_risks_mapped, implementation_realized_risks)
+    implementation_realized_risks, implementation_realized_risks_mapped = prepare_implementation_evidence(
+        implementation_realized_risks,
+        implementation_realized_risks_mapped,
+    )
 
     evidence = {
         "categories": custom_categories,
-        "country_risks": country_risks_df.to_dict(orient="records"),
-        "evidence_by_document_type": evidence_by_source
+        "country_risks": sanitize_evidence_records(country_risks_df),
+        "pad_risks": sanitize_evidence_records(pad_risks),
+        "implementation_realized_risks": sanitize_evidence_records(implementation_realized_risks),
+        "implementation_realized_risks_mapped": sanitize_evidence_records(implementation_realized_risks_mapped)
     }
 
     # Validate and clean custom_prompt
@@ -342,12 +402,24 @@ def generate_custom_aligned_briefing(
         "Each paragraph MUST correspond to exactly one of the custom categories provided in the evidence.\n"
         "Process the categories in the exact order given.\n\n"
         "For each paragraph:\n"
-        "- Start with the category name\n"
-        "- Analyze how this category relates to the country's FCV risks\n"
-        "- Show projects' exposure to relevant risks (from PAD evidence)\n"
-        "- Show whether risks are materializing (from ISR/Aide Memoire evidence)\n\n"
-        "Citation format: [PROJ_ID | DOC_TYPE]. Only cite projects that appear in the evidence_by_document_type structure."
+        "- Start with the category name (e.g., 'Governance and Institutional Capacity:', 'Service Delivery and Access:', etc.)\n"
+        "- Analyze how this category relates to the country's FCV risks.\n"
+        "- Show how projects are exposed to relevant risks (PAD evidence). Provide 1-3 sentences per project cited, elaborating on specific vulnerabilities.\n"
+        "- Show whether these risks are materializing (ISR/Aide Memoire evidence). Provide 1-3 sentences per issue cited, describing observed impacts.\n"
+        "- Focus on risks and project evidence that align with this specific category.\n\n"
+        "CRITICAL CITATION RULES:\n"
+        "- PAD citations: Look at 'pad_risks' data. Each entry has 'PROJ_ID_IB'. ONLY cite [PROJ_ID | PAD] if that project appears in pad_risks.\n"
+        "- Implementation citations: Look at 'implementation_realized_risks_mapped' data. Each entry includes a 'citation_marker'. Use that exact marker for implementation citations, for example [P123456 | ISR | 2025-09-26].\n"
+        "- NEVER cite a document type that doesn't appear in the evidence for that project.\n"
+        "- If a project only has 'Aide Memoire' in the data, cite its exact Aide Memoire citation_marker, NOT an ISR marker.\n"
+        "- If a project only appears in implementation_realized_risks_mapped but NOT in pad_risks, do NOT cite [PROJ_ID | PAD].\n"
+        "- Each citation must be in its own bracket pair: [P123456 | PAD] [P123456 | ISR | 2025-09-26]\n"
+        "- NEVER combine multiple citations with semicolons inside one bracket\n"
+        "- Do NOT create hyperlinks.\n"
+        "- Do NOT invent citations."
     )
+
+    system_prompt = apply_style_guardrails(system_prompt)
 
     prompt = ChatPromptTemplate.from_messages([
         (
@@ -362,12 +434,11 @@ def generate_custom_aligned_briefing(
 
     chain = prompt | client
 
-    return _run_chain_with_token_fallback(
-        chain=chain,
-        system_prompt=system_prompt,
-        evidence=evidence,
-        stream_callback=stream_callback
-    )
+    message = chain.invoke({
+        "evidence": json.dumps(evidence, indent=2)
+    })
+
+    return (message.content or "").strip()
 
 
 def generate_risk_aligned_briefing(
@@ -376,22 +447,19 @@ def generate_risk_aligned_briefing(
     implementation_realized_risks_mapped,
     n_paragraphs,
     client,
-    custom_prompt=None,
-    stream_callback=None
+    custom_prompt=None
 ):
-    # Restructure evidence by document type and project
-    evidence_by_source = restructure_evidence_by_source(pad_risks, implementation_realized_risks_mapped)
+    _, implementation_realized_risks_mapped = prepare_implementation_evidence(
+        pd.DataFrame(),
+        implementation_realized_risks_mapped,
+    )
 
     evidence = {
-        "country_risks": country_risks_df.to_dict(orient="records"),
-        "evidence_by_document_type": evidence_by_source
+        "country_risks": sanitize_evidence_records(country_risks_df),
+        "pad_risks": sanitize_evidence_records(pad_risks),
+        "implementation_realized_risks_mapped": sanitize_evidence_records(implementation_realized_risks_mapped)
     }
-    # Validate and clean custom_prompt
-    if custom_prompt:
-        if not isinstance(custom_prompt, str):
-            custom_prompt = None
-        else:
-            custom_prompt = custom_prompt.strip() if custom_prompt else None
+
     # Validate and clean custom_prompt
     if custom_prompt:
         if not isinstance(custom_prompt, str):
@@ -405,12 +473,28 @@ def generate_risk_aligned_briefing(
         f"Write exactly {n_paragraphs} paragraphs.\n"
         "Each paragraph must correspond to a distinct country-level FCV risk.\n\n"
         "For each paragraph:\n"
-        "- Describe the country-level risk clearly without technical risk IDs\n"
-        "- Explain how projects are susceptible (from PAD evidence)\n"
-        "- Explain whether risks are materializing (from ISR/Aide evidence)\n"
-        "- Integrate both forward-looking and realized risks\n\n"
-        "Citation format: [PROJ_ID | DOC_TYPE]. Only cite projects that appear in the evidence_by_document_type structure."
+        "- Describe the country-level risk clearly without using technical risk IDs.\n"
+        "- Explain how projects are susceptible (PAD evidence). For each project cited, provide 1-3 sentences elaborating on the specific exposure mechanism.\n"
+        "- Explain whether risks are materializing (ISR/Aide evidence). For each implementation issue cited, provide 1-3 sentences on the specific impacts observed.\n"
+        "- Integrate both forward-looking and realized risks.\n\n"
+        "Important rules:\n"
+        "- Do NOT mention risk_id or any technical identifiers (e.g., DJI_R1, NIG_R9).\n"
+        "- Describe risks in natural language for senior leadership.\n"
+        "- Focus on substance, not reference codes.\n\n"
+        "CRITICAL CITATION RULES:\n"
+        "- PAD citations: Look at 'pad_risks' data. Each entry has 'PROJ_ID_IB'. ONLY cite [PROJ_ID | PAD] if that project appears in pad_risks.\n"
+        "- Implementation citations: Look at 'implementation_realized_risks_mapped' data. Each entry includes a 'citation_marker'. Use that exact marker for implementation citations.\n"
+        "- NEVER cite a document type that doesn't appear in the evidence for that project.\n"
+        "- If a project only has 'Aide Memoire' in the data, cite its exact Aide Memoire citation_marker, NOT an ISR marker.\n"
+        "- If a project only appears in implementation_realized_risks_mapped but NOT in pad_risks, do NOT cite [PROJ_ID | PAD].\n"
+        "- Each citation must be in its own bracket pair: [P123456 | PAD] [P123456 | ISR | 2025-09-26]\n"
+        "- NEVER combine multiple citations with semicolons inside one bracket\n"
+        "- Do NOT create hyperlinks.\n"
+        "- Do NOT invent citations.\n"
+        "- Write analytically and concisely."
     )
+
+    system_prompt = apply_style_guardrails(system_prompt)
 
     prompt = ChatPromptTemplate.from_messages([
         (
@@ -425,12 +509,11 @@ def generate_risk_aligned_briefing(
 
     chain = prompt | client
 
-    return _run_chain_with_token_fallback(
-        chain=chain,
-        system_prompt=system_prompt,
-        evidence=evidence,
-        stream_callback=stream_callback
-    )
+    message = chain.invoke({
+        "evidence": json.dumps(evidence, indent=2)
+    })
+
+    return (message.content or "").strip()
 
 def generate_sector_aligned_briefing(
     country_risks_df,
@@ -438,31 +521,48 @@ def generate_sector_aligned_briefing(
     implementation_realized_risks,
     n_paragraphs,
     client,
-    custom_prompt=None,
-    stream_callback=None
+    custom_prompt=None
 ):
-    # For sector mode, create mapped version from implementation_realized_risks
-    implementation_realized_risks_mapped = implementation_realized_risks if len(implementation_realized_risks) > 0 else pd.DataFrame()
 
-    # Restructure evidence by document type and project
-    evidence_by_source = restructure_evidence_by_source(pad_risks, implementation_realized_risks_mapped)
+    implementation_realized_risks, _ = prepare_implementation_evidence(
+        implementation_realized_risks,
+        pd.DataFrame(),
+    )
 
     evidence = {
-        "country_risks": country_risks_df.to_dict(orient="records"),
-        "evidence_by_document_type": evidence_by_source
+        "country_risks": sanitize_evidence_records(country_risks_df),
+        "pad_risks": sanitize_evidence_records(pad_risks),
+        "implementation_realized_risks": sanitize_evidence_records(implementation_realized_risks),
     }
+
+    # Validate and clean custom_prompt
+    if custom_prompt:
+        if not isinstance(custom_prompt, str):
+            custom_prompt = None
+        else:
+            custom_prompt = custom_prompt.strip() if custom_prompt else None
 
     # Use custom prompt if provided, otherwise use default
     system_prompt = custom_prompt if custom_prompt else (
         "You are writing a sector-aligned FCV portfolio briefing.\n\n"
         f"Write exactly {n_paragraphs} paragraphs.\n"
-        "Each paragraph should correspond to a major sectoral cluster (e.g., health, infrastructure, governance, social protection).\n\n"
+        "Each paragraph should correspond to a major sectoral cluster "
+        "that you infer from the evidence (e.g., health, infrastructure, governance, social protection).\n\n"
         "For each paragraph:\n"
-        "- Identify the sector cluster clearly\n"
-        "- Integrate country risk context\n"
-        "- Integrate PAD risks and realized implementation risks\n\n"
-        "Citation format: [PROJ_ID | DOC_TYPE]. Only cite projects that appear in the evidence_by_document_type structure."
+        "- Identify the sector cluster clearly in the first sentence.\n"
+        "- Integrate country risk context.\n"
+        "- Integrate PAD risks. Provide 1-3 sentences per project cited, describing specific exposure pathways.\n"
+        "- Integrate realized implementation risks. Provide 1-3 sentences per issue cited, detailing observed effects.\n\n"
+        "Citation rules:\n"
+        "- Use [PROJ_ID | PAD] for PAD evidence.\n"
+        "- Use the exact implementation 'citation_marker' shown in the evidence, for example [P123456 | ISR | 2025-09-26].\n"
+        "- Each citation must be in its own bracket pair\n"
+        "- NEVER combine citations with semicolons\n"
+        "- Do NOT create hyperlinks.\n"
+        "- Do NOT invent citations."
     )
+
+    system_prompt = apply_style_guardrails(system_prompt)
 
     prompt = ChatPromptTemplate.from_messages([
         (
@@ -477,12 +577,181 @@ def generate_sector_aligned_briefing(
 
     chain = prompt | client
 
-    return _run_chain_with_token_fallback(
-        chain=chain,
-        system_prompt=system_prompt,
-        evidence=evidence,
-        stream_callback=stream_callback
+    message = chain.invoke({
+        "evidence": json.dumps(evidence, indent=2)
+    })
+
+    return (message.content or "").strip()
+
+def generate_project_based_briefing(
+    country_risks_df,
+    pad_risks,
+    implementation_realized_risks,
+    implementation_realized_risks_mapped,
+    client,
+    custom_prompt=None
+):
+    """
+    Generate a project-based briefing with one paragraph per project.
+    Each project gets its own dedicated analysis paragraph.
+    """
+
+    implementation_realized_risks, implementation_realized_risks_mapped = prepare_implementation_evidence(
+        implementation_realized_risks,
+        implementation_realized_risks_mapped,
     )
+    
+    # Get unique projects from all data sources
+    projects = set()
+    
+    if len(pad_risks) > 0 and 'PROJ_ID_IB' in pad_risks.columns:
+        projects.update(pad_risks['PROJ_ID_IB'].unique())
+    
+    if len(implementation_realized_risks_mapped) > 0 and 'PROJ_ID_IB' in implementation_realized_risks_mapped.columns:
+        projects.update(implementation_realized_risks_mapped['PROJ_ID_IB'].unique())
+    
+    projects = sorted(list(projects))
+    n_projects = len(projects)
+    
+    evidence = {
+        "projects": projects,
+        "country_risks": sanitize_evidence_records(country_risks_df),
+        "pad_risks": sanitize_evidence_records(pad_risks),
+        "implementation_realized_risks": sanitize_evidence_records(implementation_realized_risks),
+        "implementation_realized_risks_mapped": sanitize_evidence_records(implementation_realized_risks_mapped)
+    }
+
+    # Validate and clean custom_prompt
+    if custom_prompt:
+        if not isinstance(custom_prompt, str):
+            custom_prompt = None
+        else:
+            custom_prompt = custom_prompt.strip() if custom_prompt else None
+
+    # Use custom prompt if provided, otherwise use default
+    system_prompt = custom_prompt if custom_prompt else (
+        "You are writing a project-based FCV portfolio briefing.\n\n"
+        f"Write exactly {n_projects} paragraphs, one for each project listed in the evidence.\n"
+        "Process the projects in the exact order provided.\n\n"
+        "For each paragraph:\n"
+        "- Start with the project ID (e.g., 'P123456'). You may look up project names from the evidence if available.\n"
+        "- Analyze the project's FCV exposure and risks.\n"
+        "- Describe how country-level FCV risks affect this specific project.\n"
+        "- Include PAD-stage susceptibilities. Provide 1-3 sentences elaborating on the specific exposure mechanisms.\n"
+        "- Include any realized implementation risks or issues. Provide 1-3 sentences detailing observed impacts.\n"
+        "- Focus on the unique context and risks for this specific project.\n\n"
+        "Citation rules:\n"
+        "- Use [PROJ_ID | PAD] only if that project appears in pad_risks.\n"
+        "- Use the exact implementation 'citation_marker' shown in implementation_realized_risks_mapped.\n"
+        "- Each citation must be in its own bracket pair: [P123456 | PAD] [P123456 | ISR | 2025-09-26]\n"
+        "- NEVER combine multiple citations with semicolons inside one bracket\n"
+        "- Do NOT cite a document type that doesn't appear in the evidence for that project.\n"
+        "- Do NOT create hyperlinks.\n"
+        "- Do NOT invent citations."
+        "- Do NOT cite any risk mapping IDs as they have no meaning in the final briefing"
+    )
+
+    system_prompt = apply_style_guardrails(system_prompt)
+
+    prompt = ChatPromptTemplate.from_messages([
+        (
+            "system",
+            system_prompt
+        ),
+        (
+            "human",
+            "Evidence:\n\n{evidence}"
+        )
+    ])
+
+    chain = prompt | client
+
+    message = chain.invoke({
+        "evidence": json.dumps(evidence, indent=2)
+    })
+
+    return (message.content or "").strip()
+
+RRA_HEADINGS = [
+    "Social unrest and protests",
+    "Violence between refugees, host communities, and the state",
+    "Organized violence between political and sectarian groups",
+    "Political instability",
+    "External risks and intra-state conflict",
+]
+
+
+def generate_rra_aligned_briefing(
+    country_risks_df,
+    pad_risks,
+    implementation_realized_risks,
+    implementation_realized_risks_mapped,
+    client,
+    custom_prompt=None
+):
+    """
+    Generate a briefing structured around the five standard RRA short-term
+    FCV risk headings.
+    """
+    n_paragraphs = len(RRA_HEADINGS)
+    implementation_realized_risks, implementation_realized_risks_mapped = prepare_implementation_evidence(
+        implementation_realized_risks,
+        implementation_realized_risks_mapped,
+    )
+
+    evidence = {
+        "categories": RRA_HEADINGS,
+        "country_risks": sanitize_evidence_records(country_risks_df),
+        "pad_risks": sanitize_evidence_records(pad_risks),
+        "implementation_realized_risks": sanitize_evidence_records(implementation_realized_risks),
+        "implementation_realized_risks_mapped": sanitize_evidence_records(implementation_realized_risks_mapped),
+    }
+
+    if custom_prompt:
+        if not isinstance(custom_prompt, str):
+            custom_prompt = None
+        else:
+            custom_prompt = custom_prompt.strip() if custom_prompt else None
+
+    system_prompt = custom_prompt if custom_prompt else (
+        f"You are writing a structured FCV portfolio briefing organised around the five standard "
+        f"short-term RRA (Risk and Resilience Assessment) risk headings.\n\n"
+        f"Write exactly {n_paragraphs} paragraphs, one for each heading in the order given.\n\n"
+        "For each paragraph:\n"
+        "- Begin the paragraph with the exact RRA heading in bold followed by a colon "
+        "(e.g. **Social unrest and protests:**).\n"
+        "- Summarise the relevant country-level FCV dynamics under that heading. "
+        "Ground this entirely in the `country_risks` entries in the evidence — these are extracted from "
+        "live web search and recent ICG/CrisisWatch monitoring covering the last 3 months. "
+        "Treat them as the authoritative source of current conditions. "
+        "Do NOT substitute or supplement with your background training knowledge about the country.\n"
+        "- Show how World Bank projects in the portfolio are susceptible to that risk "
+        "(PAD evidence). Provide 1-3 sentences per project cited.\n"
+        "- Show whether those risks are materialising in implementation "
+        "(ISR/Aide Memoire evidence). Provide 1-3 sentences per issue cited.\n\n"
+        "CRITICAL CITATION RULES:\n"
+        "- PAD citations: ONLY cite [PROJ_ID | PAD] if that project appears in pad_risks.\n"
+        "- Implementation citations: use the exact 'citation_marker' from implementation_realized_risks_mapped, "
+        "for example [P123456 | ISR | 2025-09-26].\n"
+        "- NEVER cite a document type absent from the evidence for that project.\n"
+        "- Each citation must be in its own bracket pair: [P123456 | PAD] [P123456 | ISR | 2025-09-26]\n"
+        "- NEVER combine multiple citations with semicolons inside one bracket.\n"
+        "- Do NOT create hyperlinks.\n"
+        "- Do NOT invent citations.\n"
+        "- Write analytically and concisely for senior leadership."
+    )
+
+    system_prompt = apply_style_guardrails(system_prompt)
+
+    prompt = ChatPromptTemplate.from_messages([
+        ("system", system_prompt),
+        ("human", "Evidence:\n\n{evidence}"),
+    ])
+
+    chain = prompt | client
+    message = chain.invoke({"evidence": json.dumps(evidence, indent=2)})
+    return (message.content or "").strip()
+
 
 def generate_briefing(
     mode,
@@ -496,7 +765,7 @@ def generate_briefing(
     custom_categories=None,
     custom_prompt=None,
     max_projects=None,
-    stream_callback=None
+    selected_project_ids=None
 ):
     """
     Unified briefing generator.
@@ -517,31 +786,50 @@ def generate_briefing(
     
     max_projects:
         Optional limit on number of projects (prioritized by risk count). If None, includes all projects.
-    
-    stream_callback:
-        Optional callback function to receive streamed text chunks as they are generated.
-        Called with each incoming text chunk (str).
     """
     
-    # Prioritize projects if max_projects is specified
-    if max_projects is not None:
-        pad_risks, implementation_realized_risks, implementation_realized_risks_mapped = prioritize_projects_by_risk_count(
-            pad_risks, 
-            implementation_realized_risks, 
-            implementation_realized_risks_mapped, 
-            max_projects=max_projects
+    project_selection = build_project_selection(
+        pad_risks,
+        implementation_realized_risks,
+        implementation_realized_risks_mapped,
+        max_projects=max_projects,
+        preferred_project_ids=extract_project_ids_from_prompt(custom_prompt),
+        selected_project_ids=selected_project_ids
+    )
+
+    if project_selection['portfolio_too_large'] or project_selection['selection_source'] == 'manual':
+        print(
+            f"   ℹ️ Using {len(project_selection['selected_project_ids'])} projects "
+            f"({project_selection['selection_source']}, keeping "
+            f"{project_selection['total_risks_selected']}/{project_selection['total_risks_available']} risk items)"
         )
+
+    pad_risks, implementation_realized_risks, implementation_realized_risks_mapped = filter_project_evidence(
+        pad_risks,
+        implementation_realized_risks,
+        implementation_realized_risks_mapped,
+        project_selection['selected_project_ids']
+    )
     
     # Generate briefing based on mode
-    if mode == "risk":
+    if mode == "rra":
+        briefing = generate_rra_aligned_briefing(
+            country_risks_df=country_risks_df,
+            pad_risks=pad_risks,
+            implementation_realized_risks=implementation_realized_risks,
+            implementation_realized_risks_mapped=implementation_realized_risks_mapped,
+            client=client,
+            custom_prompt=custom_prompt,
+        )
+
+    elif mode == "risk":
         briefing = generate_risk_aligned_briefing(
             country_risks_df=country_risks_df,
             pad_risks=pad_risks,
             implementation_realized_risks_mapped=implementation_realized_risks_mapped,
             n_paragraphs=n_paragraphs,
             client=client,
-            custom_prompt=custom_prompt,
-            stream_callback=stream_callback
+            custom_prompt=custom_prompt
         )
 
     elif mode == "sector":
@@ -551,8 +839,17 @@ def generate_briefing(
             implementation_realized_risks=implementation_realized_risks,
             n_paragraphs=n_paragraphs,
             client=client,
-            custom_prompt=custom_prompt,
-            stream_callback=stream_callback
+            custom_prompt=custom_prompt
+        )
+
+    elif mode == "project-based":
+        briefing = generate_project_based_briefing(
+            country_risks_df=country_risks_df,
+            pad_risks=pad_risks,
+            implementation_realized_risks=implementation_realized_risks,
+            implementation_realized_risks_mapped=implementation_realized_risks_mapped,
+            client=client,
+            custom_prompt=custom_prompt
         )
 
     elif mode == "custom":
@@ -566,12 +863,11 @@ def generate_briefing(
             implementation_realized_risks=implementation_realized_risks,
             implementation_realized_risks_mapped=implementation_realized_risks_mapped,
             client=client,
-            custom_prompt=custom_prompt,
-            stream_callback=stream_callback
+            custom_prompt=custom_prompt
         )
 
     else:
-        raise ValueError("mode must be 'risk', 'sector', or 'custom'")
+        raise ValueError("mode must be 'rra', 'risk', 'sector', 'project-based', or 'custom'")
     
     # Inject links for citation markers
     briefing = inject_links(briefing, country_document_df)

@@ -2,7 +2,7 @@ from langchain_core.prompts import ChatPromptTemplate
 import pandas as pd
 import json
 import uuid
-from prompts import COUNTRY_THEMES
+from briefing_prompts import COUNTRY_THEMES
 
 def extract_country_risk_items(risk_briefing: str, client):
 

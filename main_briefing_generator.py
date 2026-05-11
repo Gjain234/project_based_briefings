@@ -1,6 +1,6 @@
 from get_country_briefing import get_country_recent_risks_briefing, extract_country_risks_with_websearch
 import pandas as pd
-from config import (
+from briefing_config import (
     get_document_df_path, 
     ANTHROPIC_FINAL_BRIEFING_MODEL,
     ANTHROPIC_PAD_PREPROCESSING_MODEL,
@@ -10,22 +10,36 @@ from config import (
     MAX_BRIEFING_INPUT_LENGTH,
     MAX_PROJECTS_FOR_BRIEFING
 )
-from setup import setup, get_client_for_model
+from briefing_setup import setup, get_client_for_model
 from get_briefing_risks import extract_country_risk_items
 from get_pad_risks import run_stress_tests_for_all_pads
 from get_implementation_docs_risks import extract_all_realized_fcv_risks, map_all_realized_risks_to_country
-from generate_briefing import generate_briefing
+from generate_briefing import generate_briefing, build_project_selection, extract_project_ids_from_prompt
 from country_name_mapping import get_possible_wb_country_names, get_country_id_key
+from local_media_sources import log_country_media_source_injection
 import os
+import json
 from datetime import datetime
 
-def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categories=None, save_outputs=False,internal=False, force_regenerate=False, status_callback=None, custom_prompt=None, stream_callback=None):
-    """Generate FCV briefing with optional status updates and streaming output.
+
+def read_cached_dataframe(path):
+    if not os.path.exists(path):
+        return None
+    try:
+        return pd.read_csv(path)
+    except pd.errors.EmptyDataError:
+        return pd.DataFrame()
+
+def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categories=None, save_outputs=False,internal=False, force_regenerate=False, status_callback=None, custom_prompt=None, stream_callback=None, selection_only=False, selected_project_ids=None, regenerate_final_only=False):
+    """Generate FCV briefing with optional status updates.
     
     Args:
         status_callback: Optional function to call with status updates (str)
         custom_prompt: Optional custom system prompt to override defaults
-        stream_callback: Optional function to call with streamed text chunks from briefing generation
+        stream_callback: Optional function to call with streamed briefing chunks
+        selection_only: If True, return project selection metadata instead of a briefing
+        selected_project_ids: Optional explicit list of project IDs to keep in the final evidence set
+        regenerate_final_only: If True, rebuild only the final briefing from cached intermediary files
     """
     def update_status(msg):
         if status_callback:
@@ -39,12 +53,13 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
     pad_risks_path = f"{save_folder}/{country}_pad_risks.csv"
     implementation_risks_path = f"{save_folder}/{country}_implementation_realized_risks.csv"
     implementation_mapped_path = f"{save_folder}/{country}_implementation_realized_risks_mapped.csv"
+    implementation_mapped_metadata_path = f"{save_folder}/{country}_implementation_realized_risks_mapped_metadata.json"
     
     # Add timestamp to briefing output to avoid overwriting
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    briefing_output_path = f"{save_folder}/final_{country}_{mode}_briefing_{timestamp}.md"
-    
-    print(f"DEBUG main_briefing_generator: mode={mode}, briefing_output_path={briefing_output_path}")
+    output_mode = 'custom' if custom_prompt else mode
+    status_mode_label = 'custom-prompt' if custom_prompt else mode
+    briefing_output_path = f"{save_folder}/final_{country}_{output_mode}_briefing_{timestamp}.md"
     
     # Create folder if saving
     if save_outputs and not os.path.exists(save_folder):
@@ -54,7 +69,7 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
     # Use appropriate CSV based on internal/external usage
     document_df_path = get_document_df_path(internal=internal)
     document_df = pd.read_csv(document_df_path)
-    
+
     # Get all possible World Bank country name variants for this country
     possible_country_names = get_possible_wb_country_names(country)
     country_document_df = document_df[
@@ -69,15 +84,99 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
     # Initialize clients lazily when first needed
     client = None
     reasoning_client = None
+
+    if regenerate_final_only:
+        briefing_risks_df = read_cached_dataframe(briefing_risks_path)
+        pad_risks = read_cached_dataframe(pad_risks_path)
+        implementation_realized_risks = read_cached_dataframe(implementation_risks_path)
+        implementation_realized_risks_mapped = read_cached_dataframe(implementation_mapped_path)
+
+        missing_inputs = []
+        if briefing_risks_df is None:
+            missing_inputs.append('country risks')
+        if pad_risks is None:
+            missing_inputs.append('PAD risks')
+        if implementation_realized_risks is None:
+            missing_inputs.append('implementation risks')
+        if implementation_realized_risks_mapped is None:
+            missing_inputs.append('risk mappings')
+
+        if missing_inputs:
+            missing_label = ', '.join(missing_inputs)
+            raise ValueError(
+                f"Cannot regenerate final briefing from custom prompt because cached {missing_label} are missing. "
+                "Run a normal briefing generation first."
+            )
+
+        update_status("📂 Loading cached briefing evidence for prompt-only regeneration")
+
+        if selection_only:
+            max_projects_limit = None
+            total_input_length = (
+                len(briefing_risks_df.to_json()) +
+                len(pad_risks.to_json()) +
+                len(implementation_realized_risks.to_json()) +
+                len(implementation_realized_risks_mapped.to_json())
+            )
+            if total_input_length > MAX_BRIEFING_INPUT_LENGTH:
+                max_projects_limit = MAX_PROJECTS_FOR_BRIEFING
+            return build_project_selection(
+                pad_risks,
+                implementation_realized_risks,
+                implementation_realized_risks_mapped,
+                max_projects=max_projects_limit,
+                preferred_project_ids=extract_project_ids_from_prompt(custom_prompt),
+                selected_project_ids=selected_project_ids
+            )
+
+        update_status(f"📝 Generating final {status_mode_label} briefing document from cached evidence...")
+
+        if not internal:
+            final_briefing_client = get_client_for_model(ANTHROPIC_FINAL_BRIEFING_MODEL, internal=False)
+        else:
+            if client is None:
+                client, reasoning_client = setup(internal=internal)
+            final_briefing_client = reasoning_client
+
+        total_input_length = (
+            len(briefing_risks_df.to_json()) +
+            len(pad_risks.to_json()) +
+            len(implementation_realized_risks.to_json()) +
+            len(implementation_realized_risks_mapped.to_json())
+        )
+        max_projects_limit = MAX_PROJECTS_FOR_BRIEFING if total_input_length > MAX_BRIEFING_INPUT_LENGTH else None
+
+        if mode == "custom" and not custom_categories:
+            raise ValueError("custom_categories must be provided when mode='custom'")
+
+        briefing = generate_briefing(
+            mode=mode,
+            n_paragraphs=n_paragraphs,
+            country_risks_df=briefing_risks_df,
+            pad_risks=pad_risks,
+            implementation_realized_risks=implementation_realized_risks,
+            implementation_realized_risks_mapped=implementation_realized_risks_mapped,
+            client=final_briefing_client,
+            country_document_df=country_document_df,
+            custom_categories=custom_categories,
+            custom_prompt=custom_prompt,
+            max_projects=max_projects_limit,
+            selected_project_ids=selected_project_ids
+        )
+
+        if save_outputs:
+            with open(briefing_output_path, "w", encoding="utf-8") as f:
+                f.write(briefing)
+            print(f"  ✓ Saved to {briefing_output_path}")
+
+        return briefing
     
     # Load or generate briefing risks
-    should_regenerate_risks = force_regenerate
-    country_risks_are_fresh = False  # Track whether country risks are newly generated
+    country_risks_regenerated = False
     
     if os.path.exists(briefing_risks_path) and not force_regenerate:
         # Load metadata to show when it was last generated
         if os.path.exists(briefing_risks_metadata_path):
-            import json
             with open(briefing_risks_metadata_path, 'r') as f:
                 metadata = json.load(f)
                 last_generated = metadata.get('generated_at', 'Unknown')
@@ -88,20 +187,25 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
                 except:
                     date_only = last_generated.split()[0] if ' ' in last_generated else last_generated
                 update_status(f"📂 Loading existing country risks (from {date_only})")
+                print("   Note: country risk extraction was not re-run; loaded cached risks and skipped fresh websearch extraction.")
         else:
             update_status("📂 Loading existing country risks")
+            print("   Note: country risk extraction was not re-run; loaded cached risks and skipped fresh websearch extraction.")
         
         briefing_risks_df = pd.read_csv(briefing_risks_path)
-        country_risks_are_fresh = False  # Country risks are cached, not fresh
     else:
         # Initialize clients if not already done
         if client is None:
             client, reasoning_client = setup(internal=internal)
+
+        country_risks_regenerated = True
         
         if force_regenerate:
             update_status("🌐 Fetching latest country risks from ICG/CrisisWatch...")
         else:
             update_status("🌐 Generating country risk briefing...")
+
+        log_country_media_source_injection(country)
         
         # Try to map to country_ids format for ICG lookup
         icg_country_name = get_country_id_key(country)
@@ -119,7 +223,6 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
             briefing_risks_df.to_csv(briefing_risks_path, index=False)
             
             # Save metadata with timestamp
-            import json
             metadata = {
                 'generated_at': datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
                 'country': country,
@@ -130,63 +233,22 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
             
             print(f"  ✓ Saved to {briefing_risks_path}")
             print(f"  ✓ Saved metadata to {briefing_risks_metadata_path}")
-        country_risks_are_fresh = True  # Country risks are newly generated
     
     # Load or generate PAD risks
     should_regenerate_pad_risks = False
-    pads_needing_susceptibilities = []  # Track PADs that need susceptibility analysis
-    existing_pad_risks = pd.DataFrame()  # Load existing ones to preserve
-    
-    # First check if all current PADs have been preprocessed
-    from get_pad_risks import select_latest_pad_per_project
-    from preprocess_pads import get_pad_cache_path
-    pads_df = select_latest_pad_per_project(country_document_df)
-    missing_preprocessed_pads = []
-    
-    if not pads_df.empty:
-        for _, pad_row in pads_df.iterrows():
-            proj_id = pad_row.get("PROJ_ID_IB", "Unknown")
-            cache_path = get_pad_cache_path(proj_id, country)
-            if not cache_path.exists():
-                missing_preprocessed_pads.append(proj_id)
-    
-    # Check if we have existing susceptibilities
     if os.path.exists(pad_risks_path):
         try:
-            existing_pad_risks = pd.read_csv(pad_risks_path)
-            existing_proj_ids = set(existing_pad_risks['PROJ_ID_IB'].unique()) if 'PROJ_ID_IB' in existing_pad_risks.columns else set()
-        except Exception:
-            existing_pad_risks = pd.DataFrame()
-            existing_proj_ids = set()
+            update_status("📂 Loading existing PAD susceptibilities")
+            pad_risks = pd.read_csv(pad_risks_path)
+            # Check if the file is empty
+            if pad_risks.empty or len(pad_risks.columns) == 0:
+                update_status("   ⚠️ Previous PAD analysis is incomplete, will regenerate")
+                should_regenerate_pad_risks = True
+        except Exception as e:
+            update_status(f"   ⚠️ Error reading previous PAD analysis, will regenerate")
+            should_regenerate_pad_risks = True
     else:
-        existing_proj_ids = set()
-    
-    # Determine what needs to be done
-    if missing_preprocessed_pads:
-        update_status(f"   ⚠️ {len(missing_preprocessed_pads)} PAD(s) not yet preprocessed")
-        # Only analyze susceptibilities for the newly-preprocessed PADs (or all if no existing results)
-        if existing_proj_ids:
-            pads_needing_susceptibilities = missing_preprocessed_pads
-            print(f"   → Will preprocess missing PADs and generate susceptibilities only for those")
-        else:
-            pads_needing_susceptibilities = None  # None means analyze all
-            print(f"   → Will preprocess missing PADs and generate susceptibilities for all PADs")
         should_regenerate_pad_risks = True
-    elif country_risks_are_fresh:
-        # If country risks are freshly generated, always regenerate PAD susceptibilities for all
-        update_status("📋 Country risks are fresh, regenerating PAD susceptibilities for all PADs...")
-        pads_needing_susceptibilities = None  # None means analyze all
-        should_regenerate_pad_risks = True
-    elif existing_pad_risks.empty:
-        # No existing susceptibilities
-        update_status("📋 Analyzing PAD susceptibilities (first time)...")
-        pads_needing_susceptibilities = None  # None means analyze all
-        should_regenerate_pad_risks = True
-    else:
-        # All PADs preprocessed, country risks cached, and susceptibilities exist
-        update_status("📂 Loading existing PAD susceptibilities")
-        pad_risks = existing_pad_risks
-        should_regenerate_pad_risks = False
     
     if should_regenerate_pad_risks:
         update_status("📋 Analyzing PAD susceptibilities...")
@@ -199,96 +261,76 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
             pad_preprocessing_client = reasoning_client
             pad_stress_test_client = client
         
-        # If pads_needing_susceptibilities is a list, only analyze those PADs
-        if isinstance(pads_needing_susceptibilities, list) and pads_needing_susceptibilities:
-            pads_df_to_analyze = pads_df[pads_df['PROJ_ID_IB'].isin(pads_needing_susceptibilities)]
-        else:
-            # None means analyze all PADs
-            pads_df_to_analyze = pads_df
-        
         pad_risks_list = run_stress_tests_for_all_pads(
-            pads_df_to_analyze,  # Pass only the PADs that need analysis
+            country_document_df, 
             briefing_risks_df, 
             pad_stress_test_client, 
             country,
             pad_preprocessing_client
         )
-        new_pad_risks = pd.DataFrame(pad_risks_list)
-        
-        # If we have existing results, combine with new ones
-        if not existing_pad_risks.empty and isinstance(pads_needing_susceptibilities, list):
-            # Remove entries for PADs we just re-analyzed from existing_pad_risks
-            existing_filtered = existing_pad_risks[
-                ~existing_pad_risks['PROJ_ID_IB'].isin(pads_needing_susceptibilities)
-            ]
-            # Combine existing (for untouched PADs) with new (for newly-analyzed PADs)
-            pad_risks = pd.concat([existing_filtered, new_pad_risks], ignore_index=True)
-            update_status(f"   ✓ Combined {len(existing_filtered)} existing + {len(new_pad_risks)} new PAD susceptibilities")
-        else:
-            # Either no existing results or we regenerated all
-            pad_risks = new_pad_risks
-        
+        pad_risks = pd.DataFrame(pad_risks_list)
         if save_outputs:
             pad_risks.to_csv(pad_risks_path, index=False)
             print(f"  ✓ Saved to {pad_risks_path}")
     
     # Load or generate implementation realized risks
-    # Uses document-level caching - only processes new documents
-    update_status("⚠️ Extracting implementation risks from ISRs/Aide Memoires...")
-    
-    # Create specific client for implementation risk extraction based on config
-    if not internal:
-        implementation_risk_client = get_client_for_model(ANTHROPIC_IMPLEMENTATION_RISK_MODEL, internal=False)
-    else:
-        implementation_risk_client = client
-    
-    # extract_all_realized_fcv_risks now handles caching internally at document level
-    implementation_realized_risks = extract_all_realized_fcv_risks(
-        country_document_df, 
-        implementation_risk_client, 
-        country=country
-    )
-    
-    # Always save the combined results for this country
-    if save_outputs and len(implementation_realized_risks) > 0:
-        implementation_realized_risks.to_csv(implementation_risks_path, index=False)
-        print(f"  ✓ Saved combined results to {implementation_risks_path}")
+    should_regenerate_implementation_risks = not os.path.exists(implementation_risks_path)
+    if not should_regenerate_implementation_risks:
+        try:
+            update_status("📂 Loading existing implementation risks")
+            implementation_realized_risks = pd.read_csv(implementation_risks_path)
+        except Exception:
+            update_status("   ⚠️ Error reading previous implementation risks, will regenerate")
+            should_regenerate_implementation_risks = True
+
+    if should_regenerate_implementation_risks:
+        update_status("⚠️ Extracting implementation risks from ISRs/Aide Memoires...")
+
+        # Create specific client for implementation risk extraction based on config
+        if not internal:
+            implementation_risk_client = get_client_for_model(ANTHROPIC_IMPLEMENTATION_RISK_MODEL, internal=False)
+        else:
+            implementation_risk_client = client
+
+        # extract_all_realized_fcv_risks now handles caching internally at document level
+        implementation_realized_risks = extract_all_realized_fcv_risks(
+            country_document_df,
+            implementation_risk_client,
+            country=country
+        )
+
+        # Always save the combined results for this country
+        if save_outputs and len(implementation_realized_risks) > 0:
+            implementation_realized_risks.to_csv(implementation_risks_path, index=False)
+            print(f"  ✓ Saved combined results to {implementation_risks_path}")
     
     # Load or generate implementation risks mapped to country risks
-    # First check if all implementation docs are cached
-    from get_implementation_docs_risks import select_recent_project_docs, get_document_cache_key
-    project_docs_df = select_recent_project_docs(country_document_df)
-    
-    impl_cache_dir = f"intermediary_outputs/implementation_risks_cache/{country}"
-    missing_impl_docs = []
-    if os.path.exists(impl_cache_dir):
-        for _, row in project_docs_df.iterrows():
-            cache_key = get_document_cache_key(row)
-            cache_path = os.path.join(impl_cache_dir, f"{cache_key}.csv")
-            if not os.path.exists(cache_path):
-                missing_impl_docs.append((row['PROJ_ID_IB'], row['document_type']))
-    else:
-        missing_impl_docs = [(row['PROJ_ID_IB'], row['document_type']) for _, row in project_docs_df.iterrows()]
-    
-    should_regenerate_mapped = False
-    if missing_impl_docs:
-        update_status(f"   ⚠️ {len(missing_impl_docs)} implementation doc(s) incomplete, will regenerate mappings")
-        should_regenerate_mapped = True
-    elif os.path.exists(implementation_mapped_path):
-        should_regenerate_mapped = False
-    else:
-        should_regenerate_mapped = True
-    
-    if not should_regenerate_mapped:
-        update_status("📂 Loading existing risk mappings")
+    expected_realized_risk_ids = set()
+    if len(implementation_realized_risks) > 0 and 'realized_risk_id' in implementation_realized_risks.columns:
+        expected_realized_risk_ids = set(
+            implementation_realized_risks['realized_risk_id'].dropna().astype(str)
+        )
+
+    processed_realized_risk_ids = set()
+    if os.path.exists(implementation_mapped_metadata_path):
         try:
-            implementation_realized_risks_mapped = pd.read_csv(implementation_mapped_path)
-        except pd.errors.EmptyDataError:
-            # File exists but is empty - create empty dataframe with correct schema
-            implementation_realized_risks_mapped = pd.DataFrame(columns=[
-                'PROJ_ID_IB', 'country_risk_id', 'country_risk_title', 
-                'connection_summary', 'confidence'
-            ])
+            with open(implementation_mapped_metadata_path, 'r', encoding='utf-8') as f:
+                mapping_metadata = json.load(f)
+            processed_realized_risk_ids = set(
+                str(risk_id) for risk_id in mapping_metadata.get('processed_realized_risk_ids', []) if risk_id
+            )
+        except Exception:
+            processed_realized_risk_ids = set()
+
+    should_regenerate_mappings = country_risks_regenerated or not os.path.exists(implementation_mapped_path)
+    missing_mapping_ids = expected_realized_risk_ids - processed_realized_risk_ids
+    if not should_regenerate_mappings and missing_mapping_ids:
+        update_status(f"🔗 Completing missing implementation risk mappings ({len(missing_mapping_ids)} remaining)...")
+        should_regenerate_mappings = True
+
+    if not should_regenerate_mappings:
+        update_status("📂 Loading existing risk mappings")
+        implementation_realized_risks_mapped = pd.read_csv(implementation_mapped_path)
     else:
         update_status("🔗 Mapping implementation risks to country risks...")
         # Create specific client for risk mapping based on config
@@ -296,13 +338,47 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
             risk_mapping_client = get_client_for_model(ANTHROPIC_RISK_MAPPING_MODEL, internal=False)
         else:
             risk_mapping_client = client
-        
-        implementation_realized_risks_mapped = map_all_realized_risks_to_country(
-            implementation_realized_risks, briefing_risks_df, risk_mapping_client
+
+        if not country_risks_regenerated and os.path.exists(implementation_mapped_path):
+            try:
+                implementation_realized_risks_mapped = pd.read_csv(implementation_mapped_path)
+            except Exception:
+                implementation_realized_risks_mapped = pd.DataFrame()
+        else:
+            implementation_realized_risks_mapped = pd.DataFrame()
+
+        if country_risks_regenerated or not os.path.exists(implementation_mapped_metadata_path):
+            implementation_risks_to_map = implementation_realized_risks
+            implementation_realized_risks_mapped = pd.DataFrame()
+        else:
+            implementation_risks_to_map = implementation_realized_risks[
+                implementation_realized_risks['realized_risk_id'].astype(str).isin(missing_mapping_ids)
+            ].copy()
+
+        new_mappings = map_all_realized_risks_to_country(
+            implementation_risks_to_map, briefing_risks_df, risk_mapping_client,
+            status_callback=update_status
         )
-        if save_outputs and len(implementation_realized_risks_mapped) > 0:
+
+        if len(implementation_realized_risks_mapped) > 0 and len(new_mappings) > 0:
+            implementation_realized_risks_mapped = pd.concat(
+                [implementation_realized_risks_mapped, new_mappings],
+                ignore_index=True
+            )
+        elif len(new_mappings) > 0:
+            implementation_realized_risks_mapped = new_mappings
+
+        if len(implementation_realized_risks_mapped) > 0:
+            implementation_realized_risks_mapped = implementation_realized_risks_mapped.drop_duplicates()
+
+        if save_outputs:
             implementation_realized_risks_mapped.to_csv(implementation_mapped_path, index=False)
             print(f"  ✓ Saved to {implementation_mapped_path}")
+            with open(implementation_mapped_metadata_path, 'w', encoding='utf-8') as f:
+                json.dump({
+                    'processed_realized_risk_ids': sorted(expected_realized_risk_ids),
+                    'updated_at': datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                }, f, indent=2)
     
     # Load or generate final briefing
     if os.path.exists(briefing_output_path):
@@ -310,7 +386,7 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
         with open(briefing_output_path, "r", encoding="utf-8") as f:
             briefing = f.read()
     else:
-        update_status(f"📝 Generating final {mode} briefing document...")
+        update_status(f"📝 Generating final {status_mode_label} briefing document...")
         # Use specific model for final briefing synthesis based on config
         if not internal:
             final_briefing_client = get_client_for_model(ANTHROPIC_FINAL_BRIEFING_MODEL, internal=False)
@@ -329,6 +405,22 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
         if total_input_length > MAX_BRIEFING_INPUT_LENGTH:
             max_projects_limit = MAX_PROJECTS_FOR_BRIEFING
             update_status(f"   📊 Portfolio is too large - prioritizing top {MAX_PROJECTS_FOR_BRIEFING} highest-risk projects. To see all project risks, check the PAD Risks, Implementation Risks, and Risk Mappings tabs.")
+
+        project_selection = build_project_selection(
+            pad_risks,
+            implementation_realized_risks,
+            implementation_realized_risks_mapped,
+            max_projects=max_projects_limit,
+            preferred_project_ids=extract_project_ids_from_prompt(custom_prompt),
+            selected_project_ids=selected_project_ids
+        )
+
+        if selection_only:
+            return project_selection
+        
+        # Verify custom_categories are provided for custom mode
+        if mode == "custom" and not custom_categories:
+            raise ValueError("custom_categories must be provided when mode='custom'")
         
         briefing = generate_briefing(
             mode=mode,
@@ -342,13 +434,15 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
             custom_categories=custom_categories,
             custom_prompt=custom_prompt,
             max_projects=max_projects_limit,
-            stream_callback=stream_callback
+            selected_project_ids=selected_project_ids
         )
         if save_outputs:
+            print(f"DEBUG: About to save briefing")
+            print(f"    mode parameter: {mode}")
+            print(f"    briefing_output_path: {briefing_output_path}")
             with open(briefing_output_path, "w", encoding="utf-8") as f:
                 f.write(briefing)
             print(f"  ✓ Saved to {briefing_output_path}")
-            print(f"DEBUG: File saved with mode={mode}, path includes mode={mode in briefing_output_path}")
     
     return briefing
 

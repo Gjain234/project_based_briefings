@@ -1,0 +1,722 @@
+{
+  "ali addeh||djibouti": {
+    "lat": 11.13333,
+    "lon": 42.88583,
+    "source": "local_geo"
+  },
+  "ali adde||djibouti": {
+    "lat": 11.13333,
+    "lon": 42.88583,
+    "source": "local_geo"
+  },
+  "hol hol||djibouti": {
+    "lat": 11.31028,
+    "lon": 42.92944,
+    "source": "local_geo"
+  },
+  "holhol||djibouti": {
+    "lat": 11.31028,
+    "lon": 42.92944,
+    "source": "local_geo"
+  },
+  "mount lebanon||lebanon": {
+    "lat": 34.29899,
+    "lon": 36.10584,
+    "source": "local_geo"
+  },
+  "tallet el khayat||lebanon": {
+    "lat": 33.884171,
+    "lon": 35.48917,
+    "source": "local_geo"
+  },
+  "beirut||lebanon": {
+    "lat": 33.888939,
+    "lon": 35.494419,
+    "source": "local_geo"
+  },
+  "lebanon||lebanon": {
+    "lat": 33.833328,
+    "lon": 35.833328,
+    "source": "local_geo"
+  },
+  "nabatieh||lebanon": {
+    "lat": 33.3789,
+    "lon": 35.4839,
+    "source": "local_acled"
+  },
+  "tyre||lebanon": {
+    "lat": 33.273331,
+    "lon": 35.19389,
+    "source": "local_geo"
+  },
+  "marjaayoun||lebanon": {
+    "lat": 33.360279,
+    "lon": 35.59111,
+    "source": "local_geo"
+  },
+  "yatar||lebanon": {
+    "lat": 20.5177,
+    "lon": -13.04857,
+    "source": "local_geo"
+  },
+  "djibouti||djibouti": {
+    "lat": 11.58901,
+    "lon": 43.145031,
+    "source": "local_geo"
+  },
+  "dikhil||djibouti": {
+    "lat": 11.10861,
+    "lon": 42.37389,
+    "source": "local_geo"
+  },
+  "obock||djibouti": {
+    "lat": 11.96306,
+    "lon": 43.290562,
+    "source": "local_geo"
+  },
+  "ali sabieh||djibouti": {
+    "lat": 11.15583,
+    "lon": 42.712502,
+    "source": "local_geo"
+  },
+  "tadjourah||djibouti": {
+    "lat": 11.78528,
+    "lon": 42.884441,
+    "source": "local_geo"
+  },
+  "tadjoura||djibouti": {
+    "lat": 11.78528,
+    "lon": 42.884441,
+    "source": "local_geo"
+  },
+  "tadjourahh||djibouti": {
+    "lat": 11.78528,
+    "lon": 42.884441,
+    "source": "local_geo"
+  },
+  "arta||djibouti": {
+    "lat": 11.52222,
+    "lon": 42.841942,
+    "source": "local_geo"
+  },
+  "sidon||lebanon": {
+    "lat": 33.559929,
+    "lon": 35.375641,
+    "source": "local_geo"
+  },
+  "baalbek||lebanon": {
+    "lat": 34.005829,
+    "lon": 36.21806,
+    "source": "local_geo"
+  },
+  "bani haiyyan||lebanon": {
+    "lat": 33.2431,
+    "lon": 35.489,
+    "source": "local_acled"
+  },
+  "jezzine||lebanon": {
+    "lat": 33.541672,
+    "lon": 35.584438,
+    "source": "local_geo"
+  },
+  "greater beirut||lebanon": {
+    "lat": 33.8713604,
+    "lon": 35.5329497,
+    "source": "google_maps"
+  },
+  "beirut southern suburbs||lebanon": {
+    "lat": 33.8937913,
+    "lon": 35.5017767,
+    "source": "google_maps"
+  },
+  "damour kfashima||lebanon": {
+    "lat": 33.730784,
+    "lon": 35.4546312,
+    "source": "google_maps"
+  },
+  "baabda suburbs||lebanon": {
+    "lat": 33.8339902,
+    "lon": 35.5437069,
+    "source": "google_maps"
+  },
+  "coastal metn||lebanon": {
+    "lat": 33.9221153,
+    "lon": 35.5858255,
+    "source": "google_maps"
+  },
+  "bourj abu hadar||lebanon": {
+    "lat": 33.8836739,
+    "lon": 35.4990218,
+    "source": "google_maps"
+  },
+  "bekaa valley||lebanon": {
+    "lat": 34.008889,
+    "lon": 36.145278,
+    "source": "google_maps"
+  },
+  "hermel ras baalbek and qaa area||lebanon": {
+    "lat": 34.3418531,
+    "lon": 36.4801848,
+    "source": "google_maps"
+  },
+  "litani river basin||lebanon": {
+    "lat": 33.5808902,
+    "lon": 35.4611653,
+    "source": "google_maps"
+  },
+  "achrafieh substation||lebanon": {
+    "lat": 33.8868891,
+    "lon": 35.5191704,
+    "source": "google_maps"
+  },
+  "baalbek substation||lebanon": {
+    "lat": 34.004739,
+    "lon": 36.2116137,
+    "source": "google_maps"
+  },
+  "deir nbouh transmission line||lebanon": {
+    "lat": 34.3730504,
+    "lon": 35.9299388,
+    "source": "google_maps"
+  },
+  "southern lebanon||lebanon": {
+    "lat": 33.854721,
+    "lon": 35.862285,
+    "source": "google_maps"
+  },
+  "beqaa valley||lebanon": {
+    "lat": 34.008889,
+    "lon": 36.145278,
+    "source": "google_maps"
+  },
+  "southern suburbs of beirut||lebanon": {
+    "lat": 33.8937913,
+    "lon": 35.5017767,
+    "source": "google_maps"
+  },
+  "bint jbeil||lebanon": {
+    "lat": 33.1194,
+    "lon": 35.4333,
+    "source": "local_acled"
+  },
+  "tripoli||lebanon": {
+    "lat": 34.436668,
+    "lon": 35.84972,
+    "source": "local_geo"
+  },
+  "markazi||djibouti": {
+    "lat": 11.825138,
+    "lon": 42.590275,
+    "source": "google_maps"
+  },
+  "markasi||djibouti": {
+    "lat": 11.825138,
+    "lon": 42.590275,
+    "source": "google_maps"
+  },
+  "merkazi||djibouti": {
+    "lat": 11.825138,
+    "lon": 42.590275,
+    "source": "google_maps"
+  },
+  "northern zone tadjoura and obock regions||djibouti": {
+    "lat": 12.3895691,
+    "lon": 43.0194897,
+    "source": "google_maps"
+  },
+  "northern zone tadjourah and obock regions||djibouti": {
+    "lat": 12.3895691,
+    "lon": 43.0194897,
+    "source": "google_maps"
+  },
+  "northern zone tadjourahh and obock regions||djibouti": {
+    "lat": 12.3895691,
+    "lon": 43.0194897,
+    "source": "google_maps"
+  },
+  "southern zone dikhil and ali sabieh regions||djibouti": {
+    "lat": 11.2346815,
+    "lon": 42.6099723,
+    "source": "google_maps"
+  },
+  "central zone arta and djibouti peri urban area||djibouti": {
+    "lat": 11.6045756,
+    "lon": 43.1446602,
+    "source": "google_maps"
+  },
+  "central zone arta and peri urban area||djibouti": {
+    "lat": 11.6045756,
+    "lon": 43.1446602,
+    "source": "google_maps"
+  },
+  "greater conakry||guinea": {
+    "lat": 9.5076272,
+    "lon": -13.7121964,
+    "source": "google_maps"
+  },
+  "peri urban municipalities||guinea": {
+    "lat": 9.7769382,
+    "lon": -13.3486213,
+    "source": "google_maps"
+  },
+  "kindia||guinea": {
+    "lat": 10.05692,
+    "lon": -12.86576,
+    "source": "local_geo"
+  },
+  "samou sub basin||guinea": {
+    "lat": 11.40913,
+    "lon": -12.11779,
+    "source": "google_maps"
+  },
+  "kankoure basin||guinea": {
+    "lat": 9.945587,
+    "lon": -9.696645,
+    "source": "google_maps"
+  },
+  "conakry||guinea": {
+    "lat": 9.5379496,
+    "lon": -13.67729,
+    "source": "local_geo"
+  },
+  "coastal areas||guinea": {
+    "lat": 9.945587,
+    "lon": -9.696645,
+    "source": "google_maps"
+  },
+  "mountainous terrain regions||guinea": {
+    "lat": 9.945587,
+    "lon": -9.696645,
+    "source": "google_maps"
+  },
+  "major river basins||guinea": {
+    "lat": 9.945587,
+    "lon": -9.696645,
+    "source": "google_maps"
+  },
+  "boffa prefecture||guinea": {
+    "lat": 9.9765407,
+    "lon": -13.9332512,
+    "source": "google_maps"
+  },
+  "dubreka prefecture||guinea": {
+    "lat": 10.071771,
+    "lon": -13.4511768,
+    "source": "google_maps"
+  },
+  "forecariah prefecture||guinea": {
+    "lat": 9.272222,
+    "lon": -13.422222,
+    "source": "google_maps"
+  },
+  "mamou||guinea": {
+    "lat": 10.37546,
+    "lon": -12.09148,
+    "source": "local_geo"
+  },
+  "faranah||guinea": {
+    "lat": 10.04036,
+    "lon": -10.74343,
+    "source": "local_geo"
+  },
+  "coastal zones along 350 km coastline||guinea": {
+    "lat": 9.945587,
+    "lon": -9.696645,
+    "source": "google_maps"
+  },
+  "continental inland water bodies||guinea": {
+    "lat": 9.945587,
+    "lon": -9.696645,
+    "source": "google_maps"
+  },
+  "labe||guinea": {
+    "lat": 11.31823,
+    "lon": -12.28332,
+    "source": "local_geo"
+  },
+  "pita||guinea": {
+    "lat": 10.83333,
+    "lon": -12.58333,
+    "source": "local_geo"
+  },
+  "dalaba||guinea": {
+    "lat": 10.75,
+    "lon": -12.3,
+    "source": "local_geo"
+  },
+  "26 rural localities for mini grids||guinea": {
+    "lat": 10.2587018,
+    "lon": -10.8000051,
+    "source": "google_maps"
+  },
+  "kankan||guinea": {
+    "lat": 10.38542,
+    "lon": -9.3056803,
+    "source": "local_geo"
+  },
+  "boke||guinea": {
+    "lat": 10.93217,
+    "lon": -14.29055,
+    "source": "local_geo"
+  },
+  "n zerekore||guinea": {
+    "lat": 7.7562399,
+    "lon": -8.8178997,
+    "source": "local_geo"
+  },
+  "guinea||guinea": {
+    "lat": 10.83333,
+    "lon": -10.66667,
+    "source": "local_geo"
+  },
+  "bani hayyan||lebanon": {
+    "lat": 33.2431,
+    "lon": 35.489,
+    "source": "local_acled"
+  },
+  "burj shemali||lebanon": {
+    "lat": 33.2626,
+    "lon": 35.2388,
+    "source": "local_acled"
+  },
+  "balbala||djibouti": {
+    "lat": 11.56194,
+    "lon": 43.106659,
+    "source": "local_geo"
+  },
+  "chabelley||djibouti": {
+    "lat": 11.4895,
+    "lon": 43.07528,
+    "source": "local_geo"
+  },
+  "doraleh||djibouti": {
+    "lat": 11.58306,
+    "lon": 43.066391,
+    "source": "local_geo"
+  },
+  "warabaley||djibouti": {
+    "lat": 11.09694,
+    "lon": 42.76639,
+    "source": "local_geo"
+  },
+  "balho||djibouti": {
+    "lat": 12.05786,
+    "lon": 42.19547,
+    "source": "local_geo"
+  },
+  "khyber pakhtunkhwa||pakistan": {
+    "lat": 34.45993,
+    "lon": 72.502373,
+    "source": "local_geo"
+  },
+  "punjab||pakistan": {
+    "lat": 30.86017,
+    "lon": 72.31976,
+    "source": "local_geo"
+  },
+  "sindh||pakistan": {
+    "lat": 26.13456,
+    "lon": 68.7696,
+    "source": "local_geo"
+  },
+  "lahore||pakistan": {
+    "lat": 31.558,
+    "lon": 74.35071,
+    "source": "local_geo"
+  },
+  "sialkot||pakistan": {
+    "lat": 32.4925479,
+    "lon": 74.5311505,
+    "source": "google_maps"
+  },
+  "raiwind||pakistan": {
+    "lat": 31.2448759,
+    "lon": 74.213717,
+    "source": "google_maps"
+  },
+  "newly merged districts||pakistan": {
+    "lat": 30.375321,
+    "lon": 69.34511599999999,
+    "source": "google_maps"
+  },
+  "multan||pakistan": {
+    "lat": 29.93312,
+    "lon": 71.38607,
+    "source": "local_geo"
+  },
+  "faisalabad||pakistan": {
+    "lat": 31.4272638,
+    "lon": 73.11655929999999,
+    "source": "google_maps"
+  },
+  "secondary cities and peri urban areas||pakistan": {
+    "lat": 30.0660159,
+    "lon": 67.9521767,
+    "source": "google_maps"
+  },
+  "former federally administered tribal areas||pakistan": {
+    "lat": 33.01455,
+    "lon": 69.99925,
+    "source": "local_geo"
+  },
+  "provincially administered tribal areas||pakistan": {
+    "lat": 32.667476,
+    "lon": 69.8597406,
+    "source": "google_maps"
+  },
+  "balochistan||pakistan": {
+    "lat": 28.47849,
+    "lon": 65.64355,
+    "source": "local_geo"
+  },
+  "rural areas||pakistan": {
+    "lat": 30.375321,
+    "lon": 69.34511599999999,
+    "source": "google_maps"
+  },
+  "urban slums||pakistan": {
+    "lat": 30.375321,
+    "lon": 69.34511599999999,
+    "source": "google_maps"
+  },
+  "lhw uncovered areas||pakistan": {
+    "lat": 30.375321,
+    "lon": 69.34511599999999,
+    "source": "google_maps"
+  },
+  "kalash valleys||pakistan": {
+    "lat": 35.7169503,
+    "lon": 71.754986,
+    "source": "google_maps"
+  },
+  "federally administered areas||pakistan": {
+    "lat": 33.01455,
+    "lon": 69.99925,
+    "source": "local_geo"
+  },
+  "13 districts for hybrid sp scheme pilot||pakistan": {
+    "lat": 30.375321,
+    "lon": 69.34511599999999,
+    "source": "google_maps"
+  },
+  "50 districts for wet expansion||pakistan": {
+    "lat": 30.375321,
+    "lon": 69.34511599999999,
+    "source": "google_maps"
+  },
+  "urban local areas||pakistan": {
+    "lat": 30.375321,
+    "lon": 69.34511599999999,
+    "source": "google_maps"
+  },
+  "priority districts those benefiting from sindh agriculture growth project and sindh water and agriculture transformation project||pakistan": {
+    "lat": 35.2227114,
+    "lon": 72.4258145,
+    "source": "google_maps"
+  },
+  "lahore division||pakistan": {
+    "lat": 31.5203696,
+    "lon": 74.35874729999999,
+    "source": "google_maps"
+  },
+  "five major cities faisalabad multan lahore gujranwala sheikhupura||pakistan": {
+    "lat": 32.1475636,
+    "lon": 74.19141239999999,
+    "source": "google_maps"
+  },
+  "quetta||pakistan": {
+    "lat": 30.1999,
+    "lon": 67.0097,
+    "source": "local_acled"
+  },
+  "killa abdulla||pakistan": {
+    "lat": 30.728,
+    "lon": 66.6612,
+    "source": "local_acled"
+  },
+  "pishin||pakistan": {
+    "lat": 30.5897022,
+    "lon": 67.0107153,
+    "source": "google_maps"
+  },
+  "chaghi||pakistan": {
+    "lat": 29.3552418,
+    "lon": 64.680683,
+    "source": "google_maps"
+  },
+  "chaman||pakistan": {
+    "lat": 30.9203638,
+    "lon": 66.443361,
+    "source": "google_maps"
+  },
+  "killa saifullah||pakistan": {
+    "lat": 30.95392,
+    "lon": 68.33996,
+    "source": "local_geo"
+  },
+  "noshki||pakistan": {
+    "lat": 29.5513755,
+    "lon": 66.0106684,
+    "source": "google_maps"
+  },
+  "focus on flood prone areas||pakistan": {
+    "lat": 30.375321,
+    "lon": 69.34511599999999,
+    "source": "google_maps"
+  },
+  "agricultural regions||pakistan": {
+    "lat": 30.375321,
+    "lon": 69.34511599999999,
+    "source": "google_maps"
+  },
+  "rural communities||pakistan": {
+    "lat": 30.375321,
+    "lon": 69.34511599999999,
+    "source": "google_maps"
+  },
+  "urban and peri urban areas with msme clusters||pakistan": {
+    "lat": 30.375321,
+    "lon": 69.34511599999999,
+    "source": "google_maps"
+  },
+  "kabul||pakistan": {
+    "lat": 26.41667,
+    "lon": 69.88333,
+    "source": "local_geo"
+  },
+  "mastung||pakistan": {
+    "lat": 29.79455,
+    "lon": 66.72068,
+    "source": "local_geo"
+  },
+  "gwadar||pakistan": {
+    "lat": 25.39336,
+    "lon": 63.18104,
+    "source": "local_geo"
+  },
+  "islamabad||pakistan": {
+    "lat": 34.33308,
+    "lon": 72.2857,
+    "source": "local_geo"
+  },
+  "gilgit baltistan||pakistan": {
+    "lat": 36.0,
+    "lon": 75.0,
+    "source": "local_geo"
+  },
+  "karachi||pakistan": {
+    "lat": 24.8608,
+    "lon": 67.0104,
+    "source": "local_geo"
+  },
+  "landi kotal||pakistan": {
+    "lat": 34.0988,
+    "lon": 71.14108,
+    "source": "local_geo"
+  },
+  "badakhshan||afghanistan": {
+    "lat": 36.75,
+    "lon": 72.0,
+    "source": "local_geo"
+  },
+  "baghlan||afghanistan": {
+    "lat": 36.13068,
+    "lon": 68.70829,
+    "source": "local_geo"
+  },
+  "balkh||afghanistan": {
+    "lat": 36.75635,
+    "lon": 66.8972,
+    "source": "local_geo"
+  },
+  "bamyan||afghanistan": {
+    "lat": 34.82156,
+    "lon": 67.827339,
+    "source": "local_geo"
+  },
+  "daikundi||afghanistan": {
+    "lat": 33.98624,
+    "lon": 66.03569,
+    "source": "local_geo"
+  },
+  "faryab||afghanistan": {
+    "lat": 36.25,
+    "lon": 64.83333,
+    "source": "local_geo"
+  },
+  "herat||afghanistan": {
+    "lat": 34.5,
+    "lon": 62.0,
+    "source": "local_geo"
+  },
+  "kabul||afghanistan": {
+    "lat": 34.52813,
+    "lon": 69.172333,
+    "source": "local_geo"
+  },
+  "kunduz||afghanistan": {
+    "lat": 36.792561,
+    "lon": 68.843849,
+    "source": "local_geo"
+  },
+  "nangarhar||afghanistan": {
+    "lat": 34.33333,
+    "lon": 70.41667,
+    "source": "local_geo"
+  },
+  "parwan||afghanistan": {
+    "lat": 35.166012,
+    "lon": 69.001648,
+    "source": "local_geo"
+  },
+  "samangan||afghanistan": {
+    "lat": 36.0,
+    "lon": 67.66667,
+    "source": "local_geo"
+  },
+  "sar e pol||afghanistan": {
+    "lat": 36.298939,
+    "lon": 66.007408,
+    "source": "local_geo"
+  },
+  "takhar||afghanistan": {
+    "lat": 36.5940732,
+    "lon": 69.7938996,
+    "source": "nominatim"
+  },
+  "kandahar||afghanistan": {
+    "lat": 31.61332,
+    "lon": 65.71013,
+    "source": "local_geo"
+  },
+  "khost||afghanistan": {
+    "lat": 33.34045,
+    "lon": 70.0038,
+    "source": "local_geo"
+  },
+  "spin boldak||afghanistan": {
+    "lat": 30.98792,
+    "lon": 66.16975,
+    "source": "local_geo"
+  },
+  "helmand||afghanistan": {
+    "lat": 31.0,
+    "lon": 64.0,
+    "source": "local_geo"
+  },
+  "badghis||afghanistan": {
+    "lat": 35.0,
+    "lon": 63.75,
+    "source": "local_geo"
+  },
+  "farah||afghanistan": {
+    "lat": 32.217682,
+    "lon": 62.259918,
+    "source": "local_geo"
+  },
+  "panjshir||afghanistan": {
+    "lat": 35.40248,
+    "lon": 69.98291,
+    "source": "local_geo"
+  }
+}

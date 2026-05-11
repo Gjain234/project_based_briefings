@@ -5,10 +5,8 @@ import pandas as pd
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-AGENT_ROOT = PROJECT_ROOT / "FCV-AGENT-main" / "FCV-AGENT-main"
-
-if str(AGENT_ROOT) not in sys.path:
-    sys.path.insert(0, str(AGENT_ROOT))
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
 from local_media_sources import build_country_media_source_prompt, get_country_media_source_guidance
 
