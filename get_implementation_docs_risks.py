@@ -95,9 +95,11 @@ def extract_all_realized_fcv_risks(country_document_df, client, country=None):
 
 def extract_realized_fcv_risks_from_doc(row, client):
 
-    text = fetch_pdf_text(str(row["guid"]), str(row["node_id"]))
-    print(f"Text url: {row['text_url']}")
-    print(f"PDF url: {row['pdf_url']}")
+    text = str(row.get("document_text") or "").strip()
+    if not text:
+        text = fetch_pdf_text(str(row["guid"]), str(row["node_id"]))
+        print(f"Text url: {row['text_url']}")
+        print(f"PDF url: {row['pdf_url']}")
     if not text:
         return []
 

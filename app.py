@@ -37,6 +37,48 @@ except ImportError:
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+# ── Databricks document data refresh ─────────────────────────────────────────
+
+_DATABRICKS_WORKSPACE = "https://adb-8552758251265347.7.azuredatabricks.net"
+_ALL_DOCS_CSV = os.path.join(BASE_DIR, 'all_documents_filtered.csv')
+_PUBLIC_DOCS_CSV = os.path.join(BASE_DIR, 'public_documents_filtered.csv')
+_DOCS_REFRESH_DAYS = 14
+
+
+def refresh_document_data():
+    """Fetch latest document data from Databricks if older than 2 weeks."""
+    import time
+
+    if os.path.exists(_ALL_DOCS_CSV):
+        age_days = (time.time() - os.path.getmtime(_ALL_DOCS_CSV)) / 86400
+        if age_days < _DOCS_REFRESH_DAYS:
+            return
+
+    api_key = os.getenv('DATABRICKS_API_KEY')
+    if not api_key:
+        print("Warning: DATABRICKS_API_KEY not set, skipping document data refresh")
+        return
+
+    try:
+        from databricks.sdk import WorkspaceClient
+        import io as _io
+        print("Downloading latest_document_data.csv from Databricks...")
+        w = WorkspaceClient(host=_DATABRICKS_WORKSPACE, token=api_key)
+        buf = _io.BytesIO()
+        with w.dbfs.open("/FileStore/doc_pipeline/latest_document_data.csv", read=True) as f:
+            buf.write(f.read())
+        buf.seek(0)
+        df_all = pd.read_csv(buf, on_bad_lines='skip')
+        df_all.to_csv(_ALL_DOCS_CSV, index=False)
+        public_mask = df_all['security_classification'].astype(str).str.strip().str.lower() == 'public'
+        df_all[public_mask].to_csv(_PUBLIC_DOCS_CSV, index=False)
+        print(f"Document data refreshed: {len(df_all)} total, {public_mask.sum()} public")
+    except Exception as e:
+        print(f"Warning: Failed to refresh document data from Databricks: {e}")
+
+
+refresh_document_data()
+
 try:
     from country_name_mapping import is_individual_country, get_country_id_key, check_acled_country_match
 except ImportError:
@@ -2348,20 +2390,28 @@ def get_map_data(country):
                     debug_info['projects_in_docs'] = int(len(unique_proj_ids))
                     print(f"DEBUG: Found {len(unique_proj_ids)} unique normalized projects for {country}")
 
-                    # Load PAD project names for hover display (used for direct and fallback pins)
-                    project_names_raw = load_project_names_for_country(country)
-                    pad_name_map_raw = {
-                        str(k).strip(): str(v).strip()
-                        for k, v in project_names_raw.items()
-                        if str(v).strip()
-                    }
-                    pad_name_map_norm = {
-                        norm_proj_id(k): str(v).strip()
-                        for k, v in project_names_raw.items()
-                        if norm_proj_id(k) and str(v).strip()
-                    }
+                    # Build project name map from PROJ_DISPLAY_NAME in documents CSV
+                    proj_name_map = {}
+                    if 'PROJ_DISPLAY_NAME' in country_docs.columns:
+                        for _, nr in country_docs[['PROJ_ID_NORM', 'PROJ_DISPLAY_NAME']].drop_duplicates('PROJ_ID_NORM').iterrows():
+                            pid = nr['PROJ_ID_NORM']
+                            name = str(nr.get('PROJ_DISPLAY_NAME') or '').strip()
+                            if pid and name:
+                                proj_name_map[pid] = name
 
                     mapped_proj_ids = set()
+
+                    # Build proj_id -> document links for map tooltips
+                    proj_docs_map = {}
+                    if 'pdf_url' in country_docs.columns:
+                        docs_subset = country_docs[['PROJ_ID_NORM', 'document_type', 'pdf_url']].dropna(subset=['pdf_url'])
+                        for _, doc_row in docs_subset.iterrows():
+                            pid = doc_row['PROJ_ID_NORM']
+                            if pid:
+                                proj_docs_map.setdefault(pid, []).append({
+                                    'type': str(doc_row.get('document_type', '') or '').strip(),
+                                    'url': str(doc_row['pdf_url']).strip(),
+                                })
 
                     # Load geographic data
                     geo_csv = os.path.join(map_data_folder, 'PROJECT_GEOGRAPHIC_LOCATION_V2.csv')
@@ -2404,11 +2454,7 @@ def get_map_data(country):
                         for proj_id_value, proj_group in merged.groupby('PROJ_ID_CLEAN', dropna=True):
                             proj_id_raw = str(proj_id_value).strip()
                             proj_id_norm = norm_proj_id(proj_id_raw)
-                            project_name = ''
-                            if proj_id_norm:
-                                project_name = pad_name_map_norm.get(proj_id_norm, '')
-                            if not project_name:
-                                project_name = pad_name_map_raw.get(proj_id_raw, '')
+                            project_name = proj_name_map.get(proj_id_norm, '')
 
                             selected_row = None
                             for _, candidate in proj_group.iterrows():
@@ -2425,7 +2471,8 @@ def get_map_data(country):
                                 'project_name': project_name,
                                 'lat': float(selected_row['GEO_LATITUDE_NBR']),
                                 'lon': float(selected_row['GEO_LONGITUDE_NBR']),
-                                'type': 'project'
+                                'type': 'project',
+                                'docs': proj_docs_map.get(proj_id_norm, []),
                             })
 
                             if proj_id_norm:
@@ -2469,11 +2516,7 @@ def get_map_data(country):
 
                         proj_debug['pad_exists'] = True
 
-                        project_name = ''
-                        if proj_id_norm:
-                            project_name = pad_name_map_norm.get(proj_id_norm, '')
-                        if not project_name:
-                            project_name = pad_name_map_raw.get(proj_id_raw, '')
+                        project_name = proj_name_map.get(proj_id_norm, '')
 
                         primary_locations = load_pad_primary_locations_for_project(country, proj_id_raw)
                         proj_debug['primary_locations_total'] = int(len(primary_locations))
@@ -2507,7 +2550,8 @@ def get_map_data(country):
                                 'project_name': project_name,
                                 'lat': point['lat'],
                                 'lon': point['lon'],
-                                'type': 'project'
+                                'type': 'project',
+                                'docs': proj_docs_map.get(proj_id_norm, []),
                             })
                             added_locations += 1
 

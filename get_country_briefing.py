@@ -2,10 +2,7 @@ import os
 import datetime
 import anthropic
 from docx import Document
-from get_icg_text import (
-    get_icg_reports,
-    get_crisiswatch_lastnmonths,
-)
+from get_icg_text import get_crisiswatch_lastnmonths
 from briefing_config import ANTHROPIC_API_KEY, ANTHROPIC_COUNTRY_RISK_MODEL, ANTHROPIC_RISK_BRIEFING_MODEL
 from briefing_prompts import get_country_risk_extraction_prompt, COUNTRY_THEMES
 from local_media_sources import build_country_media_source_prompt, log_country_media_source_injection
@@ -29,10 +26,8 @@ def extract_country_risks_with_websearch(country_name):
     
     try:
         cw = get_crisiswatch_lastnmonths(country_name, 3)
-        reports = get_icg_reports(country_name)
     except:
         cw = None
-        reports = None        
 
     icg_texts = ""
 
@@ -44,13 +39,6 @@ def extract_country_risks_with_websearch(country_name):
             )
     if icg_texts == "":
         icg_texts = "No ICG text available for country"
-
-    if reports is not None:
-        for _, row in reports.iterrows():
-            icg_texts += (
-                f"--- ICG Report: {row['title']} ({row['date'].strftime('%Y-%m-%d')}) ---\n"
-                f"{row['text']}\n\n"
-            )
 
     # Log the exact local sources/notes that will be injected into the extraction prompt.
     log_country_media_source_injection(country_name)
@@ -144,10 +132,8 @@ def get_country_recent_risks_briefing(country_name):
     local_media_guidance = log_country_media_source_injection(country_name)
     try:
         cw = get_crisiswatch_lastnmonths(country_name, 3)
-        reports = get_icg_reports(country_name)
     except:
-        cw=None
-        reports=None        
+        cw = None
 
     icg_texts = ""
 
@@ -159,13 +145,6 @@ def get_country_recent_risks_briefing(country_name):
             )
     if icg_texts == "":
         icg_texts = "No ICG text available for country"
-
-    if reports is not None:
-        for _, row in reports.iterrows():
-            icg_texts += (
-                f"--- ICG Report: {row['title']} ({row['date'].strftime('%Y-%m-%d')}) ---\n"
-                f"{row['text']}\n\n"
-            )
 
     # ---- Build prompt (unchanged logic) ----
     prompt = f"""You are a Fragility, Conflict & Violence (FCV) analyst preparing a briefing for senior development leadership (e.g., World Bank Country Director).

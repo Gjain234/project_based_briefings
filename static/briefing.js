@@ -1022,7 +1022,7 @@ function exportBriefingHtml() {
     // Project markers (always shown)
     var projCoords=[];
     projects.forEach(function(p){
-      if(p.lat&&p.lon){projCoords.push([p.lat,p.lon]);L.marker([p.lat,p.lon],{icon:projectIcon}).bindPopup('<b>'+(p.project_name||p.proj_id)+'</b><br><em style="color:#777;font-size:11px;">'+p.proj_id+'</em>').addTo(map);}
+      if(p.lat&&p.lon){projCoords.push([p.lat,p.lon]);var docLinks=(p.docs&&p.docs.length)?'<div style="margin-top:5px;border-top:1px solid #e5e7eb;padding-top:4px;">'+p.docs.map(function(d){return'<a href="'+d.url+'" target="_blank" rel="noopener" style="display:block;font-size:11px;color:#2563eb;text-decoration:none;">'+( d.type||'Document')+'</a>';}).join('')+'</div>':'';L.marker([p.lat,p.lon],{icon:projectIcon}).bindPopup('<div style="max-width:220px"><b>'+(p.project_name||p.proj_id)+'</b><br><em style="color:#777;font-size:11px;">'+p.proj_id+'</em>'+docLinks+'</div>').addTo(map);}
     });
 
     // Risk scan markers (always shown) — diamond shape on top pane
@@ -1841,11 +1841,18 @@ function renderMap(country, projects, events, scanRisks) {
     const labelName = project.project_name || `Project ${project.proj_id}`;
     const displayTitle = `${labelName} (${project.proj_id})`;
     marker.bindTooltip(displayTitle, { direction: 'top', offset: [0, -22] });
+    const docsHtml = (project.docs && project.docs.length)
+      ? '<div style="margin-top:6px;border-top:1px solid #e5e7eb;padding-top:5px;">' +
+        project.docs.map(d =>
+          `<a href="${d.url}" target="_blank" rel="noopener" style="display:block;font-size:11px;color:#2563eb;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:220px;" title="${d.type || 'Document'}">${d.type || 'Document'}</a>`
+        ).join('') + '</div>'
+      : '';
     marker.bindPopup(`
-      <div style="font-size: 13px; line-height: 1.6; min-width: 180px;">
+      <div style="font-size: 13px; line-height: 1.6; min-width: 180px; max-width: 240px;">
         <strong>${labelName}</strong><br>
         <em style="color:#777; font-size:11px;">PCODE: ${project.proj_id}</em><br>
-        <span style="color:#888; font-size:12px;">Location: ${project.name || '\u2014'}</span><br>
+        <span style="color:#888; font-size:12px;">Location: ${project.name || '\u2014'}</span>
+        ${docsHtml}
       </div>
     `);
     marker.addTo(projectLayer);

@@ -102,7 +102,17 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
     country_document_df = document_df[
         document_df["CNTRY_SHORT_NAME"].isin(possible_country_names)
     ].copy()
-    project_names_by_id = load_project_names_for_country(country)
+    if 'PROJ_DISPLAY_NAME' in country_document_df.columns:
+        project_names_by_id = (
+            country_document_df[['PROJ_ID_IB', 'PROJ_DISPLAY_NAME']]
+            .drop_duplicates('PROJ_ID_IB')
+            .dropna(subset=['PROJ_DISPLAY_NAME'])
+            .set_index('PROJ_ID_IB')['PROJ_DISPLAY_NAME']
+            .astype(str).str.strip()
+            .to_dict()
+        )
+    else:
+        project_names_by_id = load_project_names_for_country(country)
     
     if country_document_df.empty:
         print(f"⚠️  Warning: No documents found for country '{country}'")

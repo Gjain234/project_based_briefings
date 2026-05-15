@@ -718,5 +718,10 @@
     "lat": 35.40248,
     "lon": 69.98291,
     "source": "local_geo"
+  },
+  "marjayoun||lebanon": {
+    "lat": 33.360279,
+    "lon": 35.59111,
+    "source": "local_geo"
   }
 }

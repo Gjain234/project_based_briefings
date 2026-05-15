@@ -106,9 +106,11 @@ def preprocess_pad(pad_row, client):
     
     print(f"   📄 Preprocessing PAD for {proj_id}...")
     
-    # Fetch full PAD text
+    # Use pre-fetched text if available, otherwise fetch from URL
     try:
-        pad_text = fetch_pdf_text(str(pad_row["guid"]), str(pad_row["node_id"]))
+        pad_text = str(pad_row.get("document_text") or "").strip()
+        if not pad_text:
+            pad_text = fetch_pdf_text(str(pad_row["guid"]), str(pad_row["node_id"]))
     except Exception as e:
         print(f"   ❌ Error fetching PAD text: {e}")
         return None
