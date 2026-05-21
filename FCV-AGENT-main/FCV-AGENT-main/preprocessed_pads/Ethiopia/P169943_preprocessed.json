@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P169943",
+    "guid": 438581601776877012,
+    "node_id": 32432838,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b087e0afcb&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Urban Productive Safety Net and Jobs Project",
+      "project_development_objective": "The project will support the Government of Ethiopia (GoE) in improving the incomes of the urban poor and the labor market inclusion of disadvantaged urban youth",
+      "total_financing": "US$550 million (IDA US$400 million, Government counterpart US$150 million)",
+      "implementation_period": "September 2020 - December 2025",
+      "beneficiaries": "816,000 urban poor including 88,000 jobless youth, refugees and host communities"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Up to 83 cities across all regional states",
+        "Addis Ababa",
+        "Secondary cities",
+        "Refugee camps near urban centers (Kebribeyah, Sherkole)",
+        "Faafan zone around Jigjiga"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "yes - includes refugee camps and host communities, areas affected by ethnic tensions and localized conflicts"
+    },
+    "key_components": [
+      {
+        "component_name": "Expand the Urban Productive Safety Net to Improve the Urban Environment",
+        "description": "Public works, livelihood development, and integration of refugees and host communities through cash-for-work and business grants",
+        "financing": "US$346.9 million"
+      },
+      {
+        "component_name": "Foster Urban Youth Employment",
+        "description": "Six-month apprenticeships for less educated youth and strengthening employment intermediation services",
+        "financing": "US$72.8 million"
+      },
+      {
+        "component_name": "Strengthen Social Assistance and Services for the Urban Poor and Destitute",
+        "description": "Direct cash support and reintegration services for homeless including street children",
+        "financing": "US$90.3 million"
+      },
+      {
+        "component_name": "Institutional Strengthening, Project Management and M&E",
+        "description": "Capacity building, MIS development, and project coordination support",
+        "financing": "US$40.0 million"
+      },
+      {
+        "component_name": "Contingent Emergency Response Component",
+        "description": "Zero-dollar component for emergency response activation",
+        "financing": "US$0 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Urban Development and Construction (lead), Urban Job Creation and Food Security Agency, Ministry of Labor and Social Affairs, Jobs Creation Commission",
+      "coordination_mechanisms": "National Steering Committee, Project Management and Coordination Committee, Technical Coordination Committees, Project Coordination Unit",
+      "procurement_approach": "World Bank Procurement Regulations for IPF, national competitive procedures where applicable, regional hubs for coordination",
+      "monitoring_and_evaluation": "Quarterly reporting, impact evaluations, process evaluations, Management Information System, citizen engagement mechanisms"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political",
+        "risk_description": "Ethnic tensions, postponed elections, localized conflicts, state of emergency declarations",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Balanced regional rollout, close government coordination, flexible adaptation to political changes"
+      },
+      {
+        "risk_category": "macroeconomic",
+        "risk_description": "COVID-19 economic impact, currency depreciation, fiscal constraints, foreign exchange shortages",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Annual benefit adjustments linked to food price index, strengthened livelihood training"
+      },
+      {
+        "risk_category": "institutional",
+        "risk_description": "Multiple implementing agencies, capacity constraints in new cities, limited experience with refugee integration",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Readiness criteria for rollout, capacity building, gradual expansion, dedicated training programs"
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "Procurement capacity gaps, double-dipping risks during overlap period, counterpart funding delays",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Procurement training, separate accounting systems, independent procurement audits, FM action plan"
+      },
+      {
+        "risk_category": "environmental and social",
+        "risk_description": "GBV risks, social exclusion, refugee-host tensions, occupational health and safety in public works",
+        "risk_rating": "substantial",
+        "mitigation_measures": "GBV risk assessment and mitigation plan, social cohesion activities, safety protocols, grievance mechanisms"
+      },
+      {
+        "risk_category": "security",
+        "risk_description": "Refugee protection risks outside camps, potential conflicts in implementation areas",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Coordination with UNHCR and ARRA, pilot approach, protection monitoring, gradual rollout"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Substantial risk rating under Environmental and Social Framework",
+      "triggered_safeguard_policies": [
+        "ESS1: Assessment and Management of Environmental and Social Risks",
+        "ESS2: Stakeholder Engagement",
+        "ESS3: Resource Efficiency and Pollution Prevention",
+        "ESS4: Community Health and Safety",
+        "ESS5: Land Acquisition and Involuntary Resettlement",
+        "ESS6: Biodiversity Conservation",
+        "ESS8: Cultural Heritage",
+        "ESS10: Stakeholder Engagement"
+      ],
+      "grievance_redress_mechanism": "yes - multi-level GRM at kebele, woreda, city and federal levels with dedicated focal persons and MIS module",
+      "gender_considerations": "Target 50% female beneficiaries, childcare support, women's economic empowerment focus, GBV prevention measures",
+      "vulnerable_groups": [
+        "urban poor",
+        "female-headed households",
+        "elderly",
+        "disabled",
+        "refugees",
+        "street children",
+        "homeless",
+        "unemployed youth"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project includes measures to prevent refugee-host tensions through mixed work teams, joint decision-making platforms, and equal treatment. Social cohesion activities and communication strategies designed to minimize conflicts",
+      "fragility_context": "Ethiopia experiencing political transitions, ethnic tensions, postponed elections, state of emergency due to COVID-19. High refugee population (733,125) creates additional pressures on host communities",
+      "security_considerations": "Refugee protection framework assessed as adequate by World Bank and UNHCR. Coordination with ARRA for protection services. Pilot approach for refugee integration with intensive monitoring",
+      "displacement_or_refugees": "yes - includes 81,000 refugees and host community beneficiaries. Integration of refugees from camps near cities into public works and livelihood programs. Focus on camps near urban centers like Kebribeyah and Sherkole"
+    }
+  }
+}

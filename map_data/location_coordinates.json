@@ -723,5 +723,60 @@
     "lat": 33.360279,
     "lon": 35.59111,
     "source": "local_geo"
+  },
+  "freetown||sierra leone": {
+    "lat": 8.48714,
+    "lon": -13.2356,
+    "source": "local_geo"
+  },
+  "western area peninsula||sierra leone": {
+    "lat": 8.3200195,
+    "lon": -13.1517454,
+    "source": "nominatim"
+  },
+  "bo||sierra leone": {
+    "lat": 7.98877,
+    "lon": -11.6734,
+    "source": "local_geo"
+  },
+  "moyamba||sierra leone": {
+    "lat": 8.21803,
+    "lon": -12.93418,
+    "source": "local_geo"
+  },
+  "tonkolili||sierra leone": {
+    "lat": 8.61885,
+    "lon": -11.84173,
+    "source": "local_geo"
+  },
+  "karene||sierra leone": {
+    "lat": 9.66393,
+    "lon": -12.22183,
+    "source": "local_geo"
+  },
+  "bonthe||sierra leone": {
+    "lat": 7.52639,
+    "lon": -12.505,
+    "source": "local_geo"
+  },
+  "kenema||sierra leone": {
+    "lat": 7.87687,
+    "lon": -11.19025,
+    "source": "local_geo"
+  },
+  "kailahun||sierra leone": {
+    "lat": 8.10768,
+    "lon": -10.75146,
+    "source": "local_geo"
+  },
+  "kambia||sierra leone": {
+    "lat": 9.45849,
+    "lon": -12.01232,
+    "source": "local_geo"
+  },
+  "falaba||sierra leone": {
+    "lat": 9.62602,
+    "lon": -11.13418,
+    "source": "local_geo"
   }
 }

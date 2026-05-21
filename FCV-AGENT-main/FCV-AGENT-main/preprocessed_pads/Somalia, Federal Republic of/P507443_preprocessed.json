@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P507443",
+    "guid": 99091625171529631,
+    "node_id": 40043603,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-00f4f571-1823-453b-9c9d-8aeb7c1ee72e.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Building Opportunities and Outcomes in Social Protection and Youth Employment (BOOST-YOU)",
+      "project_development_objective": "To enhance economic opportunities and strengthen resilience of the poor and vulnerable.",
+      "total_financing": "US$112 million (IDA Grant: US$100 million / SDR 73.9 million; Somalia Multi-Partner Fund: US$10 million; Global Shield Financing Facility: US$2 million)",
+      "implementation_period": "Expected approval: September 25, 2025; Closing date: December 31, 2029 (4 years)",
+      "beneficiaries": "Approximately 123,000 households (~738,000 individuals); 28,000 youth (60% women, 5% persons with disabilities) for economic inclusion; 50,000 poorest households for unconditional cash transfers; 30,000 pregnant women and mothers of children under 2 for health/nutrition CCTs; 5,000 children for education CCT pilot; 10,000 shock-affected households for emergency cash transfers; 12 million individuals registered in Unified Social Registry"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Federal Republic of Somalia (nationwide)",
+        "Banadir (economic inclusion scale-up)",
+        "Federal Member States (FMS) - all",
+        "Somaliland (US$9.5 million reserved)",
+        "Select urban districts with high immigration and climate vulnerability",
+        "Districts prioritized by District Distress Index"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "Yes - Somalia is a fragile and conflict-affected state. The project explicitly operates in FCV context. Al-Shabaab and other armed actors pose security threats. FGS has limited territorial control. Contested governance between FGS and Federal Member States. Areas experiencing violence and conflict have limited service delivery. Project only operates in locations where security situation does not create unacceptable risks."
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Connecting Youth and Women to Better Jobs Today",
+        "description": "Supports 28,000 youth (60% women, 5% persons with disabilities) to access wage and self-employment. Includes on-the-job training/apprenticeships with master craftsmen, socioemotional skills training, entrepreneurship support package (business skills, microenterprise grants, coaching), and financial inclusion linkages. Uses results-based implementation model with TPM verification of 6-month employment outcomes. Targets urban districts with high immigration and climate vulnerability. Includes 3,000 youth in Somaliland.",
+        "financing": "US$28.5 million (including US$4.5 million for Somaliland)"
+      },
+      {
+        "component_name": "Subcomponent 2.1: Unconditional Cash Transfers",
+        "description": "Provides unconditional cash transfers of US$20/month via mobile payments to women heads of 50,000 poorest households (Cohort 2 of Baxnaano, ~300,000 individuals) for one additional year. Targets chronically poor and climate-vulnerable areas using DDI and PMT-based targeting via USR. Links beneficiaries to skills training under Rajo Kaaba project.",
+        "financing": "US$13.5 million"
+      },
+      {
+        "component_name": "Subcomponent 2.2: Human Capital Co-Responsibility Cash Transfers",
+        "description": "Provides CCTs to 30,000 pregnant women and mothers of children 0-2 years (Health & Nutrition CCT, US$30/quarter) linked to health awareness sessions and growth monitoring at Baxnaano Facilitation Centers. Pilot Education CCT for 5,000 children from poorest households in one district (US$30/quarter) conditional on school enrollment and 70% attendance. Conditionalities suspended during major climate/access disruptions.",
+        "financing": "US$17.2 million"
+      },
+      {
+        "component_name": "Subcomponent 2.3: Shock Responsive Cash Transfers",
+        "description": "Finances emergency cash transfers (US$60/month for 6 months) to 10,000 climate-shock affected households using pre-arranged ECT funding mechanism with predetermined climate/food security triggers. Establishes governance mechanism for contingent funding, protocols for rapid deployment within days of trigger event, and framework to crowd in humanitarian funds. Coordinates with SoDMA and DRIVE project for early warning linkages.",
+        "financing": "US$4.0 million (including US$2 million from GSFF)"
+      },
+      {
+        "component_name": "Subcomponent 3.1: Adaptive Social Protection Systems",
+        "description": "Institutional strengthening and capacity development of Baxnaano SPP. Supports social registry, Social Protection Delivery System (SPDS), and On-Demand Registration (ODR) mechanism development. Enhances adaptive SPDS for rapid ECT delivery. Strengthens linkages with early warning systems and SoDMA. Supports Somaliland MoLSAF capacity. Includes US$3 million for Somaliland.",
+        "financing": "US$6.5 million"
+      },
+      {
+        "component_name": "Subcomponent 3.2: National Socio-Economic Survey",
+        "description": "Finances nationwide field data collection for Unified Social Registry (USR), registering approximately 2 million accessible households (~12 million individuals) with biometric-backed socioeconomic data. Enables PMT-based targeting. Includes quality assurance with 10% re-survey verification. Survey not conducted in Somaliland at this time. Supports collaboration with NIRA for national ID linkage.",
+        "financing": "US$30.5 million"
+      },
+      {
+        "component_name": "Subcomponent 3.3: Project Management",
+        "description": "Finances PIU embedded within MoLSA (FGS) and hybrid PIU in MoLSAF (Somaliland). Covers PIU salaries, training, IT equipment, operating costs, TPM firms, mobilization firms, security firms, payment service providers, impact evaluation, financial audits, and WFP services. Includes US$2 million for Somaliland.",
+        "financing": "US$11.8 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Labor and Social Affairs (MoLSA), Federal Government of Somalia (primary); Ministry of Labor, Social Affairs and Family (MoLSAF), Government of Somaliland (for Somaliland activities). PIU embedded within MoLSA's Social Protection Program (Baxnaano), transitioning from existing SNHCP PIU. WFP engaged via service contracts for backstopping and field implementation support.",
+      "coordination_mechanisms": "SPP Governance Committee (chaired by Federal Minister of Labor and Social Affairs) sets strategic direction; Executive Committee (chaired by Director General of MoLSA) provides technical oversight. Both include FMS Ministers and Directors General. USR Oversight Board (chaired by DG MoLSA) with NIRA, Data Protection Authority, Office of Attorney General. Government-led donor working group facilitated by MoLSA. Coordination with SoDMA for shock response. Linkages with SPRING, DRIVE, Rajo Kaaba, Damal Caafimaad, SURP-II projects.",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers (July 2016, revised February 2025, Sixth Edition). Special procurement arrangements under paragraph 12 of Section III of IPF Policy (FCV country status). Main activities: contracting WFP, Payment Service Provider, Mobilization Firm, TPM Firm, Security Firm, USR Survey and Quality Assurance firms, Software Development firm, Individual Consultants. STEP system used for procurement tracking. PP updated at least every 12 months.",
+      "monitoring_and_evaluation": "Aligned with Government of Somalia SPP M&E framework. Uses USR (geospatial functionality) and SPDS for real-time operational data and disaggregated reporting by gender, location, benefit type. TPM agents conduct independent verification, spot checks, beneficiary satisfaction surveys, post-distribution assessments. Impact evaluations for Component 1 (employment outcomes) and Component 2 (UCT program). Process evaluations for other components. Geo-Enabling for Monitoring and Supervision tools applied where feasible. Bi-annual reporting frequency for all indicators."
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Somalia's fluid political scenario and ongoing insecurity compounded by lack of government presence in parts of the country. Complex relationship between FGS, FMS, and Somaliland; volatile security situation; ongoing anti-terror campaign can restrict access to project sites for cash delivery and/or monitoring. Rising political brinksmanship between FGS and FMS.",
+        "risk_rating": "high",
+        "mitigation_measures": "Engagement with UN agencies, NGOs, and private sector with established relationships with FGS, FMS, and communities. Project provides operational platform for promoting FGS-FMS dialogue around poverty alleviation and building bridges for collaboration in service delivery."
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "FGS's limited capacity to respond to external shocks on nascent formal economy. Risk of recurrent droughts and floods damaging volatile economy. Economic activity exposed to insecurity risks. Inflationary pressures, exchange rate instability, and disruption of remittance flows could negatively affect household purchasing power and effectiveness of cash transfer interventions.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "World Bank strategic priorities focused on establishing state-led social protection system. Close coordination with macroeconomic policy dialogue. Linking social protection to public financial management reform, domestic resource mobilization, and household-level resilience-building."
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "Despite progress, government capacity and resources remain limited. Risks from expanding to complex economic inclusion interventions alongside human capital components requiring effective sequencing, coordination, and specialized technical expertise. Significant data security risks given scale-up of digital systems and sensitive personal data.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Phased rollouts, rigorous piloting, strengthened TA, partnerships with experienced agencies, adaptive management. Data protection measures: adherence to Somalia's data protection regulations, USR Oversight Board governance, data protection advisors, regular audits, secure data infrastructure, staff capacity building on data privacy and cybersecurity."
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Weak and evolving rudimentary funds flow and banking systems at implementation level with potential money laundering and terrorist financing risks. Inadequate public financial management and cash transfer management capacities at implementing agency and community level. Limited access to project sites due to security constraints. Potential beneficiary inclusion and exclusion errors.",
+        "risk_rating": "high",
+        "mitigation_measures": "Strengthening beneficiary identification and enrollment using USR and Baxnaano delivery system with biometric systems. Strengthening agreements with payment service providers for dedicated limited mandate wallets to minimize liquidity challenges. TPM arrangements complemented by field-based monitors. Agreement with MoLSA and implementing partners to use banking institutions supervised by recognized regimes. Residual FM risk rated Substantial."
+      },
+      {
+        "risk_category": "Environment and Social",
+        "risk_description": "E-waste from IT procurement; medical waste from vaccination services; selection bias leading to elite capture and exclusion of vulnerable beneficiaries; SEA/SH risks from gender norms during benefit distribution; fragility and social conflicts heightening security risks and affecting community health and safety including potential attacks on facilitation centers; MoLSA's evolving capacity to identify and mitigate risks; data privacy breaches.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Continuation of SNHCP PIU with social, security, GBV specialists; recruitment of environmental specialist; Social Management Plan with SEA/SH Action Plan, Labor Management Procedures, Security Risk Assessment and Management Plan; Medical Waste Management Plan; comprehensive GRM; digital cash transfers to reduce manual cash handling risks; community sensitization; female staff in facilitation and monitoring."
+      },
+      {
+        "risk_category": "Security/Other",
+        "risk_description": "Conflict and insecurity risks are substantial across the country and high in certain parts. Security situation limits access to project locations for World Bank implementation support and poses risks for frontline implementation agencies (government and UN) and beneficiaries.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Project only operates in locations where security situation is not expected to create risks to successfully delivering cash assistance. Risk mitigated using digital transfers. Continuation of operating modality established under SNHCP."
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Not elaborated in detail beyond overall risk rating.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Project aligned with Somalia National Transformation Plan 2025-2029, Social Protection Policy, and CPF. Government ministerial decrees formalizing SPP and USR governance."
+      },
+      {
+        "risk_category": "Technical Design",
+        "risk_description": "Not elaborated in detail beyond overall risk rating.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Building on proven approaches from SNHCP and SNLRP. Phased rollouts and piloting of new interventions."
+      },
+      {
+        "risk_category": "Stakeholders",
+        "risk_description": "Not elaborated in detail beyond overall risk rating.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Stakeholder Engagement Plan prepared and disclosed. Citizen engagement through GRM, TPM, community mobilization firms, multiple communication platforms."
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Substantial (Environmental and Social Risk Classification)",
+      "triggered_safeguard_policies": [
+        "ESS 1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS 2: Labor and Working Conditions",
+        "ESS 3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS 4: Community Health and Safety",
+        "ESS 7: Indigenous Peoples/Sub-Saharan African Historically Underserved Traditional Local Communities",
+        "ESS 10: Stakeholder Engagement and Information Disclosure"
+      ],
+      "grievance_redress_mechanism": "Yes - Comprehensive GRM maintained and strengthened. Includes national MoLSA call center, local-level feedback points managed with implementing firms and partners, dedicated mechanism for workers. Multiple accessible channels. Most cases resolved within one month under SNHCP. GRM enhanced to handle broader range of issues from expanded scope including economic inclusion and CCTs. World Bank GRS and Accountability Mechanism also available.",
+      "gender_considerations": "Strong gender focus throughout: cash transfers prioritize women as direct recipients; H&N CCTs target pregnant women and mothers; at least 60% of economic inclusion beneficiaries must be women; target of 50% of women beneficiaries in sustained employment 6 months post-intervention; women-friendly economic inclusion interventions with tailored support addressing mobility constraints, financial inclusion, childcare access; women incentivized to enter male-dominated sectors; female-headed households prioritized for UCTs; SGBV/SEA/SH mitigation measures including community sensitization, female staff in facilitation and monitoring, survivor linkage to services; gender-disaggregated data tracked throughout; Somalia ranks 4th in Gender Inequality Index (score 0.776).",
+      "vulnerable_groups": [
+        "Chronically poor households (54% of population below national poverty line)",
+        "Extreme poor households (21% in extreme poverty)",
+        "Women and girls (facing structural barriers, 99% FGM prevalence, high SGBV)",
+        "Youth aged 18-29 (70% of population, 60% NEET)",
+        "Persons with disabilities (74% NEET rate, highest among groups)",
+        "Nomadic populations (78% poverty rate, highest among settlement types)",
+        "Internally displaced persons (IDPs)",
+        "Pregnant women and mothers of children under 2",
+        "Children from poorest households",
+        "Climate-shock affected households",
+        "Households in conflict-affected areas",
+        "Minority communities",
+        "Female-headed households"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project explicitly designed for FCV context under paragraph 12 of IPF Policy (urgent need/capacity constraints). Processed as Fragile State with Conflict designation. Project only operates in locations where security situation does not create unacceptable risks. Digital transfers used to mitigate security risks of cash handling. Engagement with UN agencies and NGOs with established community relationships. Project provides platform for FGS-FMS dialogue on poverty alleviation. Targeting methodology accounts for conflict-affected areas through District Distress Index (includes frequency of food insecurity crises since 2012). Adaptive delivery mechanisms designed to respond to evolving security conditions. Security Risk Assessment and Management Plan required as effectiveness condition. Security firms contracted for implementation support. TPM arrangements include security considerations.",
+      "fragility_context": "State collapse since 1991. Persistent insecurity and weak territorial control. Al-Shabaab and other armed actors pose ongoing threats. Contested governance between FGS and Federal Member States on constitutional provisions and resource distribution. Transition from ATMIS to AUSSOM signals changing security landscape. Domestic revenue insufficient for key state expenditures. Modest economic growth (2.4% average 2019-2024) below population growth (2.8%). Anticipated decline in foreign aid. 5.98 million people in need of humanitarian assistance in 2025. 54% population below national poverty line. Rapid urbanization driven by instability and climate shocks. Decades of instability hindering human capital investment. Limited and uneven access to public services eroding trust in government. Shrinking humanitarian funding creating transition pressure to government-led systems.",
+      "security_considerations": "Volatile security situation with Al-Shabaab and other armed actors. Limited government presence in parts of country. Security constraints limit access to project sites for cash delivery and monitoring. Potential attacks on facilitation centers and beneficiaries identified as E&S risk. Security firms contracted under project management. Security Risk Assessment and Management Plan required before effectiveness. World Bank implementation support limited by security constraints. Project uses digital mobile payments to minimize physical cash handling risks. TPM arrangements designed to operate within security constraints. Project leverages WFP and UN agency presence in insecure areas.",
+      "displacement_or_refugees": "Yes - Somalia has significant internal displacement. Rapid urbanization fueled by instability and climate shocks leading to highest concentrations of poverty in urban areas. Component 1 prioritizes districts with high immigration driven partly by displacement due to droughts and floods. H&N CCT district selection prioritizes areas hosting displaced populations. IDP camps mentioned in context of 'gatekeeping' challenges for humanitarian aid access. Climate-induced displacement is an ongoing concern with droughts and floods contributing to internal migration."
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P146330",
+    "guid": 704121518922836847,
+    "node_id": 29555260,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b0855f3777&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Nigeria Electricity Transmission Project (NETAP)",
+      "project_development_objective": "To increase the transfer capacity of the transmission network in Nigeria",
+      "total_financing": "US$490 million (US$486 million IDA financing + US$4 million counterpart funding)",
+      "implementation_period": "February 15, 2018 to December 31, 2023",
+      "beneficiaries": "Current and future electricity consumers (grid-connected households and businesses), TCN, NBET, NERC, BPE, Ministry of Power, and indirect beneficiaries through improved economic growth and job creation"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Lagos State",
+        "Katsina State",
+        "Kano State",
+        "Kaduna State",
+        "Borno State",
+        "Anambra State",
+        "Akwa Ibom State",
+        "Federal Capital Territory",
+        "Abia State",
+        "Adamawa State",
+        "Edo State",
+        "Enugu State",
+        "Kebbi State",
+        "Kogi State",
+        "Osun State"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "partial - A few substations are in areas sometimes affected by unrest (particularly in Borno, Adamawa, Katsina, and Kebbi states), but these have small footprints, perimeter walls, and can be fairly easily secured. Security risks are mitigated through robust stakeholder engagement and communication plans"
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Transmission Network Strengthening and Improvement",
+        "description": "Upgrading and rehabilitation of approximately 48 existing substations (adding/replacing transformers, switchgear, protection systems); reconducting of about 1,260 km of 132 kV transmission lines; upgrading SCADA and telecommunication systems with construction of four regional control centers; installation of Static Var Compensator (SVC) at Gombe substation; purchase of spare equipment. Will expand transformer capacity by 3,060 MVA at 330/132 kV and 3,500 MVA at 132/33 kV substations.",
+        "financing": "US$408 million (US$404 million IDA/IDA SUF + US$4 million counterpart)"
+      },
+      {
+        "component_name": "Component 2: Capacity Building and Technical Assistance",
+        "description": "Transaction advisory services for PPP transmission infrastructure; PMU support and capacity building; TCN corporatization and governance strengthening; construction supervision and contract management consulting; feasibility studies for priority investments; consulting services and training for sector institutions (TCN, NERC, BPE, NBET, Ministry of Power, REA, etc.); support for PSRP implementation",
+        "financing": "US$32 million (IDA/IDA SUF)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Transmission Company of Nigeria (TCN), with oversight by a Steering Committee comprising Permanent Secretaries of Ministry of Finance and Ministry of Power, Managing Director of TCN, and Director General of BPE",
+      "coordination_mechanisms": "Program Coordinator reporting to TCN CEO coordinates overall transmission expansion program funded by multiple donors (World Bank, AFD, AfDB, JICA). Existing World Bank PMU within TCN implements day-to-day activities. Coordination with Development Partner Power Sector Working Group (co-chaired by DFID and World Bank). Partnership with Power Africa Initiative (PATRP) and technical assistance from AFD, EU, GIZ, JICA",
+      "procurement_approach": "World Bank July 2016 Procurement Framework; International Competitive Bidding (ICB) for major contracts; National Competitive Bidding (NCB) for smaller contracts; Direct Contracting for SCADA if proprietary issues arise; Project Procurement Strategy for Development (PPSD) prepared emphasizing involvement of Original Equipment Manufacturers (OEMs) as drivers of contract execution; EPC (Engineering, Procurement, Construction) model preferred; prior review thresholds established based on risk assessment",
+      "monitoring_and_evaluation": "PMU responsible for overall monitoring; Engineering consultant provides monthly implementation reports; Quarterly progress reports submitted to World Bank; Independent environmental and social consultants conduct biannual monitoring; Annual environmental and social compliance audits; Results Framework with PDO indicators (transformer capacity added in MVA, transmission lines upgraded in km) and intermediate results indicators tracked annually; Beneficiary feedback mechanism established; TCN PMU performance assessments conducted"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Country political and governance developments carry substantial risk. TCN has inadequate governance systems. Lack of FGN commitment to PSRP action plan could negatively affect technical assistance component effectiveness. Some substations are in areas affected by unrest.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Investment program is countrywide with all regions benefiting. Substations have small footprints and can be secured. Technical assistance supports improved TCN governance (internal audit strengthening). Strong World Bank sector dialogue with FGN mitigates risks."
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Substantial macroeconomic risk from exchange rate fluctuations. Naira depreciation could increase costs of maintaining infrastructure and servicing future borrowing. Nigeria experienced recession in 2016 with GDP contraction of 1.6 percent.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Future exchange rate risks to be mitigated in tariff reviews during asset lifetime. Macroeconomic recovery expected with oil production restoration and ERGP implementation."
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Substantial sector policy risk. TCN's financial condition depends on successful PSRP implementation. Revenue requirement determination relies partly on Federal Government funding through 2021. After 2021, tariffs must ensure companies receive revenue requirements. Financing plan integrated into Medium-Term Expenditure Framework but requires regular updates and approvals.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "World Bank's strong policy dialogue with FGN. Increasing private ownership in generation and distribution creates pressure on TCN to improve performance. PSRP communications and transparency activities increase scrutiny of TCN performance."
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "Substantial risk of project implementation delay if TCN PMU does not efficiently manage procurement and supervise construction. Risk that TCN may not maintain and operate transmission assets. PMU has experienced delays under NEGIP due to capacity weaknesses in procurement, contract management, and safeguards.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "International consultant support to PMU; Engineering consultant for contract management and construction supervision; Application of World Bank July 2016 Procurement Framework; Recruitment of additional staff and consultants; Capacity-building activities for TCN coordinated with other donor partners; Performance assessments of PMU; Team building exercises."
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Substantial fiduciary risks. PMU procurement capacity weakened due to retirement of experienced staff. TCN delayed in publishing external audits (2013-2014 audits published March 2016; 2015-2016 audits expected March 2018). FM risk deemed moderate with agreed action plan.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Training of newly appointed procurement officers in World Bank July 2016 Procurement Framework; FM action plan with specific milestones; Designation of project accountant, internal auditor, and support staff before effectiveness; Training in World Bank FM procedures; Regular FM supervision missions; Quarterly interim financial reports; Annual audited financial statements by Auditor General."
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Moderate risk given no greenfield infrastructure will be built. Potential impacts include construction traffic, noise, dust, workplace safety, and possible resettlement of encroachers on transmission line corridors. PCB contamination found in some transformers.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Environmental and Social Management Framework (ESMF) and Resettlement Policy Framework (RPF) prepared and disclosed. Site-specific ESMPs and RAPs prepared as needed. Independent environmental and social consultants monitor implementation. Environmental and social compliance audits conducted annually. Grievance Redress Mechanism established. Gender-based violence monitoring consultant engaged. PCB sampling and remediation procedures included. Contractor qualifications assessed for ESMP compliance. Training for TCN staff on environmental and social issues."
+      },
+      {
+        "risk_category": "Procurement",
+        "risk_description": "Substantial procurement risk. Delays experienced in NEGIP due to limited capacity for parallel large procurements and safeguard document preparation delays. Risks include security/civil unrest, perceived low quality of goods, internal/external influence on contractor selection, inadequate implementation quality.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "PPSD prepared with market assessment and lessons from NEGIP. Recruitment of experienced procurement specialists. Contract administration consultant engaged for one year. Consulting firm engaged to prepare procurement packages with defined scope. TCN senior management sign-off on substations/lines to prevent scope changes. ESMP sections included in bidding documents. Team building workshops for PMU coordination. Selection of integrity-focused evaluation committee members. Close contract management and site supervision. Strict compliance with quality assurance plans."
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Category B - Partial Assessment",
+      "triggered_safeguard_policies": [
+        "Environmental Assessment OP/BP 4.01",
+        "Involuntary Resettlement OP/BP 4.12"
+      ],
+      "grievance_redress_mechanism": "Yes - Project-specific Grievance Redress Mechanism (GRM) to be established by PMU as part of implementation. GRM will provide information about project implementation, resolve grievances at lowest level, facilitate communication between project and affected persons, and enable corrective/preventive action. Beneficiary feedback recorded and monitored in annual project progress reports. World Bank Grievance Redress Service (GRS) and Inspection Panel also available for complaints.",
+      "gender_considerations": "Gender-based violence monitoring consultant engaged to assess and monitor GBV issues in labor camps and provide risk mitigation with quarterly reporting. Responsibility for preventing GBV specified in ESMPs and included in all construction contracts. Supervising engineer contracts include responsibility for monitoring and reporting GBV instances. RAPs/ARAPs ensure women benefit appropriately from compensation and address different needs of men and women. Female-headed households noted as more likely to be grid-connected (72 percent) than male-headed (53 percent), though women suffer more from inefficient electricity provision.",
+      "vulnerable_groups": [
+        "Approximately 80 million people lacking access to grid electricity",
+        "Rural populations (39 percent electrification rate vs 55 percent national)",
+        "Female-headed households",
+        "Low-income households relying on expensive diesel self-generation",
+        "Encroachers on transmission line corridors (potential resettlement)"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project addresses conflict risks through: (1) Countrywide investment program ensuring all regions benefit, reducing regional grievances; (2) Robust stakeholder engagement and communication plans in areas affected by unrest; (3) Secure substation design with perimeter walls in sensitive areas; (4) Grievance Redress Mechanism to address community concerns; (5) Environmental and social safeguards to minimize community disruption; (6) Gender-based violence monitoring to address conflict-related protection risks; (7) Coordination with Development Partner Power Sector Working Group for information sharing on security issues.",
+      "fragility_context": "Nigeria faces significant fragility factors: (1) Macroeconomic fragility - recession in 2016 (GDP -1.6 percent), high inflation (16.3 percent in 2017), currency depreciation (50 percent since early 2016), oil price volatility affecting 75 percent of government revenues; (2) Sector financial crisis - US$1 billion annual sector deficit, non-payment across supply chain, DISCOs unable to access commercial financing; (3) Governance weaknesses - inadequate contract enforcement, weak transparency, overlapping agency responsibilities; (4) Security challenges - vandalism and militant attacks in Niger Delta constraining oil production, unrest in northern states affecting some project locations; (5) Institutional capacity constraints - PMU implementation delays, TCN governance deficiencies, skills gaps across sector institutions; (6) Service delivery failures - 80 million without electricity access, poor reliability affecting economic growth and poverty reduction.",
+      "security_considerations": "Security risks identified and mitigated: (1) A few substations located in areas sometimes affected by unrest (Borno, Adamawa, Katsina, Kebbi states); (2) Substations have small footprints, perimeter walls, and can be fairly easily secured; (3) Vandalism and militant attacks in Niger Delta historically constrained oil production and gas supply; (4) Robust stakeholder engagement and communication plans serve as mitigation in sensitive areas; (5) Project design avoids greenfield investments in high-risk areas; (6) Coordination with security-aware development partners; (7) PMU capacity for risk identification and management.",
+      "displacement_or_refugees": "Yes - Limited displacement expected. Resettlement will only be necessary if encroachers need to be relocated from transmission line corridors. Compensation expected to be limited to compensation of encroachers on existing transmission lines and will not involve land compensation. US$4 million counterpart funding allocated for resettlement compensation. Resettlement Policy Framework (RPF) prepared outlining procedures for preparing, approving, and monitoring RAPs/ARAPs where required. RAPs/ARAPs will involve full and fair stakeholder consultations with men and women, ensure gender equity, and include Grievance Redress Mechanisms. No large-scale displacement anticipated as project involves rehabilitation of existing infrastructure within existing rights-of-way."
+    }
+  }
+}

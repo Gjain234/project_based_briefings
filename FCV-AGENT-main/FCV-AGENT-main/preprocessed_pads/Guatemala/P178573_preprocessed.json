@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P178573",
+    "guid": 99061225171531877,
+    "node_id": 40021268,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-9fd7d239-f540-447f-ae10-ba1d29631b37.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Rural Infrastructure and Mobility for Good Living Program Project",
+      "project_development_objective": "To (i) improve climate-resilient road connectivity in selected lagging rural areas; and (ii) enhance national road sector management",
+      "total_financing": "US$400 million",
+      "implementation_period": "2025-2032 (7 years, expected closing December 31, 2032)",
+      "beneficiaries": "Primary beneficiaries: 450,000 inhabitants of selected rural areas within 2 km of improved roads (231,800 female, 152,100 youth). Indirect beneficiaries: 5,100,000 rural population of intervention departments. Special focus on indigenous peoples, women, persons with disabilities, and vulnerable populations."
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Guatemalan Highlands (Huehuetenango, San Marcos, Quiche, Totonicapan, Quetzaltenango, Solola, Chimaltenango)",
+        "Verapaces (Alta Verapaz, Baja Verapaz)",
+        "Dry Corridor (El Progreso, Zacapa, Chiquimula, Jalapa, Jutiapa)"
+      ],
+      "coverage_type": "regional - three priority areas across seven departments",
+      "fragile_or_conflict_affected_areas": "partial - The three intervention areas (Highlands, Verapaces, Dry Corridor) are characterized by high poverty, marginalization, and historical social conflicts. Paramilitary structures from the 1960s-90s internal conflict persist, creating ongoing social conflict and prompting migration. These areas experience high crime levels and weak state presence. However, Guatemala is not classified as a fragile state overall."
+    },
+    "key_components": [
+      {
+        "component_name": "Rural Roads, Departmental Roads and National Roads",
+        "description": "Rehabilitation and improvement of rural, departmental and national roads to enhance climate resilience and road safety. Includes: (1.1) Rural roads rehabilitation (US$215.3M) with drainage improvements, slope stabilization, paving, pedestrian/NMT infrastructure, and road safety measures; (1.2) Departmental and national roads rehabilitation (US$162.7M) focused on climate adaptation and connectivity; (1.3) Emergency response equipment for Road Zones (US$6M) including machinery for disaster response. Land acquisition costs estimated at US$10M.",
+        "financing": "US$384 million"
+      },
+      {
+        "component_name": "Strategic Management",
+        "description": "Institutional strengthening of DGC and CIV including: (i) Methodology for prioritization and selection of interventions with mobility needs assessment and participatory approach; (ii) Design manual for climate-resilient, safe, and inclusive rural roads; (iii) Road asset management improvements including maintenance scheme review and digital tools; (iv) Gap analysis and action plan for mobilizing private capital; (v) Gender equity promotion through Gender Action Plan and certified training for women in road construction; (vi) Implementation of international best practices in environmental, social, and governance standards.",
+        "financing": "US$5 million"
+      },
+      {
+        "component_name": "Project Management",
+        "description": "Support for DGC's Project Implementation Unit including project management and coordination, monitoring and evaluation, fiduciary management, environmental and social standards management, stakeholder outreach and grievance mechanisms, training for DGC staff, and office refurbishment.",
+        "financing": "US$11 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Communications, Infrastructure, and Housing (CIV) through the General Road Directorate (DGC). A dedicated Project Implementation Unit (PIU) will be established with full-time staff in technical, fiduciary, environmental, social, and monitoring and evaluation areas.",
+      "coordination_mechanisms": "Interinstitutional coordination under DGC/CIV leadership with participation of: Road Maintenance Agency (COVIAL) for departmental/national road maintenance; Road Zones for rural road maintenance; Solidarity Social Fund; Municipal governments; Municipal Development Councils (COMUDES); Community Development Councils (COCODES); mancomunidades (voluntary municipal associations) where they exist. Private Secretariat of the Presidency (SPP) coordinates the broader Development Routes Program.",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers (February 2025). Systematic Tracking of Exchanges in Procurement (STEP) system will be used. Project Procurement Strategy for Development (PPSD) and initial Procurement Plan required before implementation. Likely use of international competitive procurement for complex contracts due to limited domestic capacity. Performance-based contracts (PBCs) for maintenance will be explored. Scoring criteria in bidding documents to encourage hiring of local personnel and women.",
+      "monitoring_and_evaluation": "Semiannual progress reports prepared within 45 days of semester end covering results indicators, disbursements, financial management, procurement, environmental and social policies, and lessons learned. Mid-Term Review by MINFIN and World Bank. Implementation Completion Report at project end. M&E system designed to track PDO indicators (people benefiting from improved access, climate resilience, pipeline of prioritized roads, maintenance programs in place) and intermediate indicators by component. Annual data collection with responsibility assigned to CIV/DGC."
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "External financing loans require congressional approval after World Bank Board approval. In the past decade, World Bank and other MDB loans have been held in Congress for the maximum two-year approval period. Several World Bank-financed projects were canceled after the two-year wait. Risk of delays or blockages in internal approval processes of GoG and Congress.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Project addresses consensual national priority. Early involvement of key stakeholders and private sector representatives in preparation. Package for Board approval accounts for stakeholder opinions to reduce technical objections in congressional approval. However, residual risk remains significant as it is not possible to fully address approval delays."
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Implementation of rural roads project across large territory requires cooperation of local entities and effective coordination among municipalities. Intermunicipality organizations are not highly developed (except few exceptions like ADIMAM). Current organization of rural road maintenance is inefficient with unclear division of responsibilities between municipalities and DGC, and reliance on force account modality. This could compromise sustainability of outcomes.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Component 2 includes activities to explore more efficient forms of institutional coordination and propose improved maintenance models. In-depth study could inform reform of rural roads administration. Project will promote interinstitutional and intersectoral coordination seeking agreements with municipalities and communities for future road maintenance."
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "DGC has experience with two World Bank-financed rural road projects and other MDB projects, with low technical staff turnover. However, technical staff is limited and sufficient staff covering all key implementation areas must be secured. Inherent risk is Substantial.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Dedicated PIU will be created prior to effectiveness with key staff in technical, socioenvironmental, and fiduciary areas. Appointment and adequate staffing of PIU is an effectiveness condition. World Bank will provide comprehensive training and closer implementation support."
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Main residual fiduciary risks: (i) DGC's limited experience with Bank-financed procurement regulations and Bank contracts; (ii) CIV/DGC's limited fiduciary capacity; (iii) potential lack of timely and quality technical inputs, supervision, and contract complexity that could impact procurement and implementation progress. High staff turnover might result in delays.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Comprehensive World Bank training for PIU fiduciary staff and extended technical team. Selection of qualified, seasoned, full-time fiduciary specialists with MDB experience. Detailed fiduciary procedures in Project Operations Manual including flowcharts of roles and responsibilities. Independent financial audits required. Time-bound action plan for FM improvements including appointment of qualified FM staff, POM preparation, budget planning, chart of accounts design, and staff training."
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Environmental risk (Substantial): Potential impacts on air, water, land, biodiversity from road clearing, waste generation, nuisance, slope cutting, material sourcing. Potential impacts on protected areas. Indirect risks include increased logging, habitat conversion for agriculture, increased wildlife mortality. Social risk (Substantial): Labor influx and SEA/SH risks; involuntary resettlement due to dwellings/commercial stands in right of way; temporary access restrictions affecting businesses; community health and safety risks from construction and increased vehicle speeds; child labor risks; cultural change from increased indigenous-nonindigenous interaction. SEA/SH risk rated Moderate. First Bank operation under ESF with this counterpart; limited borrower capacity.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Framework approach adopted with ESMF, RPF, LMPs, and IPPF to be prepared within 90 days of effectiveness. No bidding for works can commence before ESMF, RPF, and IPPF approved and disclosed. Exclusion list and screening tool to identify high-risk activities. DGC to hire competent E&S specialists in PIU. Culturally appropriate GRMs established. GBV Action Plan developed. Training on E&S standards for DGC staff. Community participation in selection and design. Road safety audits. Land acquisition authorization for loan proceeds. Resettlement action plans for affected individuals. Supervision procedures strengthened through community monitoring. Contractor training on E&S compliance."
+      },
+      {
+        "risk_category": "Stakeholders",
+        "risk_description": "High inherent risk that local communities could object to selection of road sections, type of standards, or fail to reach consensus on prioritization and interventions. Could delay or impede road selection and works implementation. Risk related to community participation and social dynamics.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Project design includes active community participation in selection of interventions and design choices. Requires strong and proactive stakeholder management with deep knowledge of local dynamics and careful assessment of social issues. Consultant firm to perform technical analysis of rural road networks and assess communities' mobility needs. GRMs allow communities to remain active during implementation. Participatory methodology for prioritization and selection. Community engagement through COMUDES and COCODES."
+      },
+      {
+        "risk_category": "Technical Design",
+        "risk_description": "Technical design of road improvements, while based on proven approaches from previous Bank projects, involves complex climate resilience considerations and integration of safety and gender aspects in designs for yet-to-be-identified road sections.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Design manual for climate-resilient rural roads to be developed under Component 2. Road safety audits of designs and completed works. Technical assessment of rural road networks. Use of international engineering standards. Lessons learned from previous Guatemala projects and similar operations in Central America incorporated into designs."
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Not identified as a significant risk for this operation.",
+        "risk_rating": "low",
+        "mitigation_measures": "N/A"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Substantial",
+      "triggered_safeguard_policies": [
+        "ESS 1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS 2: Labor and Working Conditions",
+        "ESS 3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS 4: Community Health and Safety",
+        "ESS 5: Land Acquisition, Restrictions on Land Use and Involuntary Resettlement",
+        "ESS 6: Biodiversity Conservation and Sustainable Management of Living Natural Resources",
+        "ESS 7: Indigenous Peoples/Sub-Saharan African Historically Underserved Traditional Local Communities",
+        "ESS 8: Cultural Heritage",
+        "ESS 10: Stakeholder Engagement and Information Disclosure"
+      ],
+      "grievance_redress_mechanism": "Yes. Project will establish culturally appropriate and inclusive GRMs to respond to complaints throughout project life cycle. GRMs will allow submissions in person, by phone, email, letter, or through coordination with local community leaders. Mechanisms will keep complainants' information confidential to reduce reprisal risk and allow anonymous complaints. Central registration of complaints at PIU for tracking. Communities can also access World Bank's Grievance Redress Service (GRS) and Accountability Mechanism (AM) including Inspection Panel and Dispute Resolution Service.",
+      "gender_considerations": "Substantial focus on gender equality and women's empowerment. Project addresses identified gender gaps: (i) Women's mobility and accessibility gaps - lack of sidewalks, poor illumination, unsafe roads limit women's access to health care and services; (ii) Low female participation in transport-related jobs (23% of DGC employees, mostly in administrative positions; 8.6% in transport/storage sector, 1% in construction). Gender Action Plan (GAP) with concrete measures and indicators will be implemented including: (a) Study on mobility patterns of women and persons with disabilities to identify barriers and design improvements; (b) Certified training program for women in specialized technical road works (target: 80 women trained and accredited); (c) Internship program for female engineering students/recent graduates at DGC (target: 20 women); (d) Scoring criteria in bidding documents to encourage hiring of women; (e) Design of roads to include gender and universal accessibility considerations; (f) Support for CIV Gender Unit established in 2017. Target beneficiaries include 231,800 women (51.52% of 450,000 direct beneficiaries) and 152,100 youth (33.8%).",
+      "vulnerable_groups": [
+        "Indigenous peoples (over 40% of population, experiencing higher extreme poverty rates)",
+        "Afro-descendants (over 40% of population)",
+        "Rural populations (70% lack access to passable all-year primary/secondary roads)",
+        "Women (face accessibility gaps, safety concerns, underrepresentation in transport sector)",
+        "Children (almost 1 million under age 5 suffer from chronic malnutrition/stunting)",
+        "Persons with disabilities (1.46 million or 9.5% of population)",
+        "Elderly",
+        "Low-income households (57.3% classified as poor, 16.7% in extreme poverty)",
+        "Informal vendors and small businesses (affected by temporary access restrictions during construction)",
+        "Communities in high-risk disaster areas (half of territory, third of population at high risk)"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project is designed with conflict sensitivity considerations. The three intervention areas (Highlands, Verapaces, Dry Corridor) are characterized by historical social conflicts stemming from the 1960s-90s internal conflict, with paramilitary structures persisting and creating ongoing tensions. The project addresses these fragile contexts through: (i) Community participation and stakeholder engagement mechanisms to build consensus and reduce conflict over road selection; (ii) Inclusive design processes involving indigenous peoples and vulnerable groups; (iii) Grievance redress mechanisms to address community concerns; (iv) Employment and training opportunities for local populations to support livelihoods and reduce grievances; (v) Coordination with local authorities and community councils (COMUDES, COCODES) to ensure local buy-in; (vi) Gender and social inclusion measures to address historical marginalization. The project supports the GoG's Development Routes Program aimed at improving lives of rural communities through infrastructure and services, which can help address root causes of conflict related to marginalization and lack of access.",
+      "fragility_context": "While Guatemala is not classified as a fragile state, the project operates in fragile contexts within the country. Key fragility factors in intervention areas: (i) High poverty and extreme poverty rates above national average; (ii) High marginalization of indigenous peoples and rural populations; (iii) Weak state presence and institutional capacity; (iv) Persistent paramilitary structures and social conflict from internal conflict period (1960s-90s); (v) High crime levels and weak social contract; (vi) Limited access to basic services and markets due to poor infrastructure; (vii) High vulnerability to climate disasters (24% of road network exposed to flooding, 51% to landslides, 70% to hurricanes, 88% to earthquakes); (viii) High malnutrition rates (Guatemala ranks 2nd in Latin America after Haiti); (ix) Outbound migration and loss of human capital; (x) Weak institutional coordination among municipalities and government agencies. The project addresses these fragility factors through rural infrastructure investment, institutional strengthening, and inclusive development approaches.",
+      "security_considerations": "Security considerations include: (i) Road safety improvements as a core project objective - Guatemala's road accidents are the second-leading cause of death, with 40% occurring in rural areas where they are more likely to be fatal; death rate 4-10 times higher among rural residents, many indigenous peoples; (ii) Construction worker safety risks from machinery and vehicle movement; (iii) Community health and safety risks from increased vehicle speeds after road improvements; (iv) Labor influx risks including potential SEA/SH in construction camps; (v) Access security during construction works; (vi) Emergency response capacity strengthening through equipment provision to Road Zones for disaster response. Project includes road safety audits, design standards for pedestrian and NMT safety, speed management measures, sidewalks, signage, and lighting. SEA/SH risks assessed as Moderate with mitigation through training, codes of conduct, monitoring, and culturally appropriate GRMs.",
+      "displacement_or_refugees": "Yes - Involuntary resettlement risk is identified as Substantial. Potential displacement includes: (i) Physical displacement - dwellings and commercial stands are prevalent within road rights of way, especially in rural areas; (ii) Economic displacement - loss of or damage to crops, vegetation, infrastructure; (iii) Temporary access restrictions during construction affecting established businesses and informal vendors typically located on road sides. Mitigation measures: (i) Resettlement Planning Framework (RPF) to be prepared in accordance with ESS5 within 90 days of effectiveness; (ii) Authorization for loan proceeds to finance land acquisition (estimated US$10M), cash compensation, and other cash assistance for involuntary resettlement; (iii) Specific resettlement action plans for each road segment involving displacement, prepared with consultation of affected individuals; (iv) Detailed social assessment for each road section paying close attention to resettlement issues and unclear land ownership system; (v) Bank-approved procedures for resettlement to avoid complications from direct community-contractor agreements; (vi) Training for DGC and contractors on resettlement compliance; (vii) Robust supervision procedures strengthened through community monitoring in hard-to-access areas; (viii) Lessons learned from previous SRMRP project incorporated into design. Estimated resettlement costs: US$6.7M for rural roads, US$3.3M for departmental/national roads."
+    }
+  }
+}

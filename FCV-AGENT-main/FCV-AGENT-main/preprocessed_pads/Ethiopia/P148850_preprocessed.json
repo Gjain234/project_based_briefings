@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P148850",
+    "guid": 882371468000596899,
+    "node_id": 24440102,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b082ea6308&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Expressway Development Support Project",
+      "project_development_objective": "To enhance efficiency and safety in the movement of goods and people along the Batu (Zeway)-Arsi Negele section of the Modjo-Hawassa development corridor, whilst strengthening the Recipient's institutional capacity to develop and manage high capacity highways and expressways.",
+      "total_financing": "SDR 262.9 million (US$370 million equivalent)",
+      "implementation_period": "May 22, 2015 to December 31, 2021 (6 years)",
+      "beneficiaries": "Direct beneficiaries estimated at about 400,000 people (50% female) within project influence area. Indirect beneficiaries include about 1.9 million people in seven Woredas in influence area of entire Modjo-Hawassa corridor."
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Batu (Zeway)",
+        "Arsi Negele",
+        "Oromia National Regional State",
+        "Southern Nations, Nationalities & Peoples' Region (SNNPR)",
+        "Modjo-Hawassa corridor"
+      ],
+      "coverage_type": "regional",
+      "fragile_or_conflict_affected_areas": "no - document does not indicate FCV context"
+    },
+    "key_components": [
+      {
+        "component_name": "Construction of High Capacity Highway",
+        "description": "Construction of Batu (Zeway)-Arsi Negele section (57 km), supervision services, road safety improvement works, and ITS installation",
+        "financing": "US$340 million"
+      },
+      {
+        "component_name": "Institutional Development and Regulatory Framework",
+        "description": "Strengthening capacity for expressway development, strategic master plan preparation, legal/regulatory framework, ITS conceptual framework, and follow-on project preparation",
+        "financing": "US$18 million"
+      },
+      {
+        "component_name": "Road Safety and Institutional Development Support to Transport Sector",
+        "description": "Implementation of Safe System approach, strengthening National Road Safety Council, enhanced enforcement, and MOT capacity building",
+        "financing": "US$12 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ethiopian Roads Authority (ERA) for Components 1 and 2; Ministry of Transport (MOT) for Component 3",
+      "coordination_mechanisms": "Framework for Project Implementation Coordination (FPIC) with four financing partners; joint supervision missions with AfDB, China EXIM Bank, and Korea EXIM Bank",
+      "procurement_approach": "Design and Build contract format using two-envelope system for main works; ICB and NCB methods; Bank procurement guidelines",
+      "monitoring_and_evaluation": "Annual performance monitoring by ERA Planning Department; quarterly IFRs; annual audited financial statements; mid-term review in April 2018"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "environmental and social",
+        "risk_description": "Greenfield development affecting farmlands and rural houses, passing close to environmentally sensitive lakes, parks and wetlands. High number of people affected by resettlement.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Robust safeguards instruments prepared; independent consultants for monitoring; joint supervision arrangements; livelihood restoration support"
+      },
+      {
+        "risk_category": "institutional capacity",
+        "risk_description": "Limited capacity of ERA to deliver projects within budget, time and quality; challenges with safety and environmental standards enforcement; limited experience with design-build contracts",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Technical assistance provided; training programs; strengthened supervision; modernization agenda implementation"
+      },
+      {
+        "risk_category": "stakeholder coordination",
+        "risk_description": "Multiple donors financing separate sections may lack coordination; potential opposition from service providers in smaller towns; restricted movement for crossing traffic",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Framework for Project Implementation Coordination established; access provided to major towns; link roads for smaller towns"
+      },
+      {
+        "risk_category": "political and governance",
+        "risk_description": "General governance and political risks in project implementation",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Governance and transparency study; strengthened procurement and contract management"
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "Financial management challenges including IFMIS transition, internal control weaknesses, audit findings",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Action plans for FM improvements; training; strengthened internal audit; parallel systems during transition"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "A - Full Assessment",
+      "triggered_safeguard_policies": [
+        "Environmental Assessment OP/BP 4.01",
+        "Natural Habitats OP/BP 4.04",
+        "Physical Cultural Resources OP/BP 4.11",
+        "Involuntary Resettlement OP/BP 4.12",
+        "Forests OP/BP 4.36"
+      ],
+      "grievance_redress_mechanism": "yes - Ethiopian Grievance Redress Mechanisms using existing Kebele, Woreda, Zonal and Regional Public Grievance Hearing Offices, Ethiopian Institute of Ombudsman, with final recourse to courts",
+      "gender_considerations": "Project will benefit women through reduced travel time to markets and social services, employment opportunities in agro-processing, improved access to market places. Gender disaggregated monitoring planned.",
+      "vulnerable_groups": [
+        "Project Affected Persons (PAPs)",
+        "Small-scale fishermen",
+        "Rural poor farmers",
+        "Women engaged in small scale trade"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "No specific conflict sensitivity measures mentioned - project does not appear to be in conflict-affected area",
+      "fragility_context": "Document does not identify Ethiopia as fragile state or project area as fragile context",
+      "security_considerations": "Road safety improvements and accident reduction measures included, but no broader security considerations mentioned",
+      "displacement_or_refugees": "no - project involves economic displacement and resettlement of 200 people (33 households) permanently, and 3,903 people partially affected, but no refugees or conflict-induced displacement mentioned"
+    }
+  }
+}

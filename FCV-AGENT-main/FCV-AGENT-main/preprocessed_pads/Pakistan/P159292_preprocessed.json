@@ -1,0 +1,139 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P159292",
+    "guid": 842221583550098164,
+    "node_id": 31785832,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b0875fcab8&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 114782
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Balochistan Livelihoods and Entrepreneurship Project (BLEP)",
+      "project_development_objective": "To create employment opportunities for rural communities and achieve sustainability of enterprises in selected districts of Balochistan",
+      "total_financing": "US$50 million (IDA Credit: US$20.42 million, IDA Grant: US$14.58 million, MDTF Grant: US$15 million)",
+      "implementation_period": "February 2020 - June 2024 (approximately 4.5 years)",
+      "beneficiaries": "56,610 households (8,615 refugees, 47,995 host community members); approximately 40% of refugee population in targeted districts"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Zhob",
+        "Chagai",
+        "Nushki",
+        "Sherani",
+        "Killa Saifullah",
+        "Killa Abdullah",
+        "Pishin",
+        "Mastung"
+      ],
+      "coverage_type": "regional (8 districts in Balochistan province)",
+      "fragile_or_conflict_affected_areas": "yes - Balochistan is affected by security challenges and protracted refugee presence; six of eight districts have been affected by prolonged refugee presence; three districts have poverty rates exceeding 60%"
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Economic Mobilization",
+        "description": "Community facilitation through Local Facilitators and Technical Resource Persons to mobilize communities, form community-based platforms, identify entrepreneurs, prepare Enterprise Development Plans and Livelihoods Investment Plans. Citizens' Engagement Strategy to change perceptions on employment, savings, women's engagement, and climate-smart practices.",
+        "financing": "US$6.59 million"
+      },
+      {
+        "component_name": "Component 2: Promoting Enterprise Development and Livelihoods",
+        "description": "Sub-component 2.1: Enterprise Facilitation providing matching grants and BDS to entrepreneurs and enterprise clusters. Sub-component 2.2: Livelihoods Promotion providing grants to individuals for subsistence-level activities. Sub-component 2.3: Technical and Vocational Skills Development training 12,750 workers in market-relevant trades.",
+        "financing": "US$37.28 million"
+      },
+      {
+        "component_name": "Component 3: Project Management",
+        "description": "Institutional capacity development of Planning and Development Department (P&DD), Government of Balochistan, including PMIU establishment, personnel, capital and operating costs, MIS/TPMA/evaluation.",
+        "financing": "US$6.13 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Planning and Development Department (P&DD), Government of Balochistan, through a Project Management Implementation Unit (PMIU) headed by a Project Director",
+      "coordination_mechanisms": "Project Steering Committee (PSC) chaired by Additional Chief Secretary; Project Facilitation Committee (PFC) headed by Secretary of P&DD; coordination with UNHCR, GIZ, and other stakeholders",
+      "procurement_approach": "World Bank's Procurement Regulations for IPF Borrowers; use of STEP system; mix of prior and post review; methods include QCBS, LCS, NCB, RFQ; qualified Procurement Specialist required",
+      "monitoring_and_evaluation": "M&E Specialist and two M&E Officers; Third Party Monitoring and Verification (TPMV); Management Information System (MIS) for quarterly progress reports; baseline survey completed; rapid evaluations; DIME involvement for impact evaluation design"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Security situation in Balochistan could disrupt economic activity, cause damage to infrastructure, and cause internal displacement of civilians",
+        "risk_rating": "high",
+        "mitigation_measures": "Continued higher-level dialogue with provincial government; flexible approach allowing rescheduling of activities if necessary"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Pakistan's IMF stabilization program could lead to fiscal tightening and delayed release of capital and recurrent budgets for project implementation",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Work with Government of Balochistan to prioritize project expenditures"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "Poor governance, bureaucratic delays, rent-seeking, implementation delays, difficulty retaining quality staff, procurement delays, weak coordination among stakeholders",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Frequent interaction with implementing teams; quarterly portfolio reviews; periodic updates to senior management; hiring of qualified staff; development of internal controls"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Low government capacity, multiple retail transactions with communities, difficulty attracting qualified staff for FM and procurement, political influence on payments, low absorption capacity",
+        "risk_rating": "high",
+        "mitigation_measures": "Hire qualified FM specialist; develop project-specific internal controls in POM; provide FM training to communities; support with procurement and contract management competencies; customized fiduciary guidelines"
+      },
+      {
+        "risk_category": "Refugee Protection",
+        "risk_description": "Risk that elements of Pakistan's Protection Framework could be changed due to evolving regional situation, impacting project objectives",
+        "risk_rating": "high",
+        "mitigation_measures": "Ensure Protection Framework remains adequate as confirmed by UNHCR at any time; effectiveness condition requires Government of Pakistan maintain adequate Refugee Protection Framework"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Potential misalignment with sector strategies and policies",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Not explicitly detailed in document"
+      },
+      {
+        "risk_category": "Technical Design of Project",
+        "risk_description": "Technical design challenges in implementation",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Lessons learned from previous operations incorporated; flexible design allowing adaptation"
+      },
+      {
+        "risk_category": "Environment and Social",
+        "risk_description": "Potential environmental impacts from minor physical interventions; social impacts from land acquisition",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Environmental and Social Management Framework (ESMF) prepared; site and activity-specific ESMPs required before civil works; Resettlement Policy Framework included in ESMF; third-party validation mechanism"
+      },
+      {
+        "risk_category": "Stakeholders",
+        "risk_description": "Stakeholder coordination and engagement challenges",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Citizens' Engagement Strategy; Grievance Redress Mechanism; community-based platforms; regular consultation"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "B - Partial Assessment",
+      "triggered_safeguard_policies": [
+        "OP/BP 4.01 Environmental Assessment",
+        "OP/BP 4.04 Natural Habitats",
+        "OP/BP 4.36 Forests",
+        "OP 4.09 Pest Management",
+        "OP/BP 4.12 Involuntary Resettlement"
+      ],
+      "grievance_redress_mechanism": "yes - Context-specific GRM operationalized for eight participating districts; draws lessons from existing GRMs in province; complaints tracked and actions reported in project monitoring; World Bank's Grievance Redress Service (GRS) and Inspection Panel available for project-affected communities",
+      "gender_considerations": "Gender analysis completed; gender action plan incorporated in project design; results framework fully disaggregated by gender; target of 11,142 female direct beneficiaries (19.7% of total); 6,000 female job-focused beneficiaries; support for women entrepreneurs through LIPs and training; mobile skills training initiatives with female facilitators; flexibility for women requiring chaperones; women's groups formation encouraged; target of 30% female-owned enterprises with ongoing operations after three years",
+      "vulnerable_groups": [
+        "Refugees (1.4 million Afghan refugees in Pakistan, 318,000 in Balochistan)",
+        "Women (particularly in rural areas with low labor force participation)",
+        "Poor and marginalized communities",
+        "Necessity entrepreneurs",
+        "Structurally marginalized groups"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project explicitly designed to address FCV context; marked as 'Fragile within a non-fragile Country'; security situation in Balochistan acknowledged as high risk; project aims to reduce tensions between refugees and host communities through economic integration; support for voluntary repatriation of Afghan refugees through livelihood improvements; project designed to promote cohesion between refugees and local population; flexible implementation approach to accommodate security disruptions",
+      "fragility_context": "Balochistan characterized by: low economic growth (1.4% in 2015, lowest among provinces); high poverty rates (75% in isolated districts like Sherani); low population density (38 persons/km²) creating service delivery challenges; protracted refugee situation (318,000 Afghan refugees); limited employment opportunities; reliance on public sector as 'employer of last resort'; low human capital; gender disparities; climate vulnerability; natural resource degradation from refugee presence; low institutional capacity; security challenges",
+      "security_considerations": "Security situation in Balochistan could disrupt economic activity, damage infrastructure, and cause internal displacement; Bank will rely on virtual reviews, TPMV, and reverse missions given security constraints; flexible project design to allow rescheduling of activities if necessary; implementation support missions adapted to security context",
+      "displacement_or_refugees": "yes - Project specifically targets Afghan refugee population; 318,000 Afghan refugees in Balochistan (1.4 million in Pakistan); nearly half are women; refugees hold Proof of Registration (PoR) cards; project targets 8,615 refugees (40% of refugee population in targeted districts); refugees supported through: vocational training (4,500 refugees), livelihoods support (2,500 refugees), training as local facilitators (15 refugees); project aligns with Pakistan's Solutions Strategy for Afghan Refugees (SSAR) and Repatriation and Management Policy (RMP); project supports voluntary repatriation through livelihood improvements; refugees unable to own immovable assets but can receive employment support; project funded through IDA 18 Regional Sub-Window for Refugees and Host Communities"
+    }
+  }
+}

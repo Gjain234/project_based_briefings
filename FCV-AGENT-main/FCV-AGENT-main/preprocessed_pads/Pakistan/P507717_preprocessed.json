@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P507717",
+    "guid": 99063025130516762,
+    "node_id": 40027244,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=P507717-d9057b71-1176-440e-afe1-6021f0703aaf.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 108266
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "System Transformation of Early Education Project - Balochistan (STEP-B)",
+      "project_development_objective": "Improve access and learning environment for girls and boys at early childhood education and enhance reading and numeracy proficiency at primary levels in Project-supported schools",
+      "total_financing": "US$9.07 million",
+      "implementation_period": "June 30, 2025 to June 30, 2029 (4 years)",
+      "beneficiaries": "15,000 children in ECE (7,500 girls), 42,000 children in primary (21,000 girls), 1,900 teachers (at least 50% female), parents, and broader communities in Balochistan"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Quetta",
+        "Killa Abdulla",
+        "Pishin",
+        "Chaghi",
+        "Chaman",
+        "Killa Saifullah",
+        "Noshki"
+      ],
+      "coverage_type": "regional (7 districts in Balochistan province, with province-wide scaling under GRADES-B)",
+      "fragile_or_conflict_affected_areas": "yes - Balochistan is affected by security challenges and conflict; five of the seven target districts (Quetta, Killa Abdulla, Pishin, Chaghi, Chaman) are refugee districts; security situation restricts access to project areas and affects implementation"
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Implementation of a Blended CPD Model at ECE and Primary Levels",
+        "description": "Blended continuous professional development for ECE and primary teachers including: updating ECE pedagogical guide, creating gender-responsive learning materials, implementing CPD program with mentorship and coaching, foundational learning assessments, teacher performance monitoring, and digital learning management system platform. Will train 500 ECE teachers and 1,400 primary teachers.",
+        "financing": "US$1,588,275"
+      },
+      {
+        "component_name": "Component 2: Expand Access to Quality ECE",
+        "description": "Infrastructure expansion and parental engagement: (2.1) Construction of 70-120 new ECE rooms and rehabilitation of 170-220 existing rooms with WASH facilities, boundary walls, play areas, and renewable energy; (2.2) Parental awareness and enrollment campaigns to increase ECE enrollment and engage parents in foundational literacy support. Contingent on achieving disbursement condition for formula-based school funding.",
+        "financing": "US$6,138,000"
+      },
+      {
+        "component_name": "Component 3: Monitoring and Evaluation and Project Coordination",
+        "description": "Development of ECE data modules for EMIS, evaluation of CPD model effectiveness, participation in National Achievement Test (NAT), feasibility study for alternative ECE models, project management unit operations, and M&E frameworks to track progress and impact.",
+        "financing": "US$1,348,225"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "School Education Department (SED) of Balochistan, with Project Management Unit (PMU) headed by Project Director. PMU includes sector, M&E, procurement, financial management, and environmental/social safeguards specialists. Coordination with Provincial Institute of Teacher Education (PITE), Policy Planning and Implementation Unit (PPIU), and Bureau of Curriculum.",
+      "coordination_mechanisms": "Project Steering Committee (PSC) for inter-agency cooperation; Project Coordination Committee (PCC) meets quarterly; coordination with UNICEF (co-grant agent of System Transformation Grant), UNESCO (System Capacity Grant agent), and Local Education Group (LEG); joint implementation with GRADES-B project under same PMU for efficiency",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers; some activities may follow provincial procurement procedures through national competition; Project Procurement Strategy for Development (PPSD) developed; small-scale classroom construction and refurbishment contracts; risk mitigation includes open access to procurement opportunities, pre-bid conferences, continuation of experienced procurement staff, regular internal audits, and conflict of interest prohibitions",
+      "monitoring_and_evaluation": "Report-based disbursement with Interim Unaudited Financial Reports (IUFRs) submitted semi-annually; PDO indicators tracked through EMIS and foundational learning assessments; intermediate indicators monitored through project progress reports; biannual implementation support missions plus technical assistance missions; midterm review at 25 months; third-party monitoring, community monitoring, and remote monitoring systems used due to security constraints; M&E frameworks with clear objectives and indicators; data quality assurance and feedback mechanisms for learning and decision-making"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Potential frequent transfers of government officials working on the project may slow implementation despite project remaining a priority",
+        "risk_rating": "high",
+        "mitigation_measures": "Project Steering Committee will facilitate inter-agency cooperation and help manage political and governance changes as they arise; continuity of PMU from previous BHCIP project; experienced implementing partner"
+      },
+      {
+        "risk_category": "Security",
+        "risk_description": "Current security situation in Balochistan may restrict or prevent access to project areas, affecting implementation, monitoring, and stakeholder engagement",
+        "risk_rating": "high",
+        "mitigation_measures": "Security management plan will be developed; security measures included in work contracts for sensitive areas; strong third-party monitoring to support supervision; use of remote monitoring systems, community monitoring, and technology-based data management; limited World Bank travel capacity acknowledged and mitigated through alternative monitoring approaches"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Pakistan faces macroeconomic risks including continued slow growth, limited policy buffers, deteriorating external conditions, potential natural disasters, and possible slowdown or reversal of policy reforms despite IMF EFF program",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Government commitment to IMF program implementation; World Bank support to structural policy reforms in fiscal and power sectors; project design focuses on sustainable, cost-effective interventions"
+      },
+      {
+        "risk_category": "Institutional Capacity",
+        "risk_description": "Limited institutional capacity for implementation, particularly regarding new initiatives like blended CPD models and parent engagement programs",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Hands-on technical and operational support from World Bank task team; training on Bank operations; risk-based approach to operational support; cross-district and cross-provincial knowledge-sharing; continuation of experienced PMU staff; fiduciary and safeguards training during project launch"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Procurement risks include security concerns affecting supply and bidding market, use of pre-registered bidders restricting competition, and low capacity of bidders' supply market",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Open access to procurement opportunities without pre-registration restrictions; public notices in advance with sufficient time for bid submission; familiarization of bidders in pre-bid conferences; continuation of experienced procurement specialist and staff; regular internal audits by external firm; annual procurement post-review by World Bank; auditing by Accountant General's office"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Temporary and localized environmental impacts from construction including air/noise pollution, waste management, health and safety risks; social risks include exclusion of marginalized groups, gender disparities, land requirements, temporary livelihood impacts, gender-based violence, and sexual exploitation/abuse risks",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Environmental and Social Management Framework (ESMF) with systematic screening process; Environmental and Social Commitment Plan; resettlement procedure for land impacts; OHS protocols; security management; gender-sensitive design prioritizing girls' schools and safety features; inclusive design for children with disabilities; Grievance Redress Mechanism; Stakeholder Engagement Plan; community engagement and awareness campaigns; child protection measures"
+      },
+      {
+        "risk_category": "Technical Design",
+        "risk_description": "Novelty of blended CPD models for ECE and primary in Balochistan context; variability in CPD impact on learning outcomes (0.1-0.3 standard deviation range); teacher coaching effectiveness uncertain",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Evaluation of CPD model effectiveness through third-party comprehensive evaluations; foundational learning assessments at baseline, midline, and endline; use of TEACH and COACH tools to assess teaching quality; ongoing evaluation under Data and Research in Education Trust Fund; exploration of two mentorship approaches (school-based head teacher-led vs. subject teacher-led); participation in National Achievement Test (NAT) for learning outcome measurement"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Dependence on government commitment to policy implementation and resource allocation; need for stable socio-political environment for uninterrupted implementation",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Alignment with Balochistan Education Partnership Compact (BEPC) 2024-2028; broad stakeholder participation through Local Education Group and Compact Task Team; government's allocation of US$18.789 million for System Transformation Grant demonstrates commitment; coordination with development partners including UNICEF and UNESCO"
+      },
+      {
+        "risk_category": "Stakeholder Engagement",
+        "risk_description": "Challenges in engaging stakeholders due to security situation; potential exclusion of vulnerable groups including rural populations, ethnic minorities, and refugees; gender-based barriers to girls' participation",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Comprehensive Stakeholder Engagement Plan (SEP) disclosed publicly; community meetings in accessible locations; focused group discussions with gender and disability inclusivity; household surveys for those unable to attend public forums; materials in local languages and accessible formats; Grievance Redress Mechanism with community feedback mechanisms; parental awareness campaigns; sensitization on inclusive education and support for children with disabilities; PTSMC platform for parent training and engagement"
+      },
+      {
+        "risk_category": "Other (Data and Monitoring)",
+        "risk_description": "Data limitations affecting realistic planning and decision-making; need for robust M&E systems and ECE data collection",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Development of ECE data modules for EMIS with comprehensive indicators; establishment of robust M&E frameworks; use of standard instruments (MELQO) to measure quality and outcomes; participation in National Achievement Test; remote monitoring system already available at PMU; technology-based data management solutions with dashboard"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate",
+      "triggered_safeguard_policies": [
+        "ESS 1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS 2: Labor and Working Conditions",
+        "ESS 3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS 4: Community Health and Safety",
+        "ESS 8: Cultural Heritage",
+        "ESS 10: Stakeholder Engagement and Information Disclosure"
+      ],
+      "grievance_redress_mechanism": "yes - Project-level Grievance Redress Service (GRS) established to promptly review and address complaints; grievances resolved within 4-week target; GRS data disseminated to strengthen accountability and improve governance; World Bank's independent Accountability Mechanism (Inspection Panel and Dispute Resolution Service) available for complaints; communities can submit complaints at any time after concerns brought to Bank Management",
+      "gender_considerations": "Project prioritizes gender equality through: (1) CPD designed to be gender-sensitive with recruitment and training of female teachers to address shortage; (2) construction/rehabilitation of ECE rooms prioritized in areas with high gender disparities with boundary walls, WASH facilities, and play areas for girls' safety; (3) community engagement and parental awareness campaigns promoting girls' education; (4) target of 7,500 girls in ECE and 21,000 girls in primary; (5) disaggregation of all indicators by gender; (6) addressing cultural and social norms that undervalue girls' education; (7) female teacher recruitment target of at least 50% in CPD programs",
+      "vulnerable_groups": [
+        "Out-of-school children (OOSC) - 3.13 million in Balochistan, 45% at primary level",
+        "Children with disabilities (CWD) - only 13% in education; 1,753 reported in EMIS 2022-23",
+        "Girls - 41% enrollment vs 59% for boys at primary; 46% vs 63% for boys in 2020",
+        "Rural populations - 73.4% of Balochistan population; sparse school density (1km from accessible roads)",
+        "Ethnic minorities",
+        "Refugee populations - five target districts are refugee districts",
+        "Children from low-income families - high poverty concentration in target areas",
+        "Children in areas with high stunting rates (46.6% under five stunted)",
+        "Non-literate parents - program includes strategies for oral language development and everyday activities"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project acknowledges fragility and conflict context of Balochistan through: (1) explicit recognition of security challenges restricting access to project areas; (2) development of security management plan with measures included in work contracts for sensitive areas; (3) use of alternative monitoring approaches (third-party, community, remote monitoring) due to security constraints and limited World Bank travel capacity; (4) focus on inclusive education and social cohesion through parental engagement and community awareness campaigns; (5) targeting of refugee districts (Quetta, Killa Abdulla, Pishin, Chaghi, Chaman) as priority areas; (6) emphasis on equitable resource allocation through new funding formula to reduce disparities; (7) integration of conflict-sensitive approaches in project design and implementation",
+      "fragility_context": "Balochistan faces severe fragility indicators: (1) Human Capital Index of 0.323 (among lowest in world); (2) 65% of school-age children (3.13 million) out of school; (3) 46.6% of children under five stunted; (4) only 22.3% receive age-appropriate complementary feeding; (5) 39.1% of children aged 3-4 developmentally on track; (6) low primary enrollment (54% vs 78% national average); (7) severe gender disparities (41% girls vs 59% boys); (8) only 13% of children with disabilities in education; (9) sparse school infrastructure (1km average distance from roads); (10) teacher shortage with only 9% of schools having dedicated ECE teachers; (11) low teacher quality and pedagogical practices; (12) limited ECE access (14% public, 5% private enrollment); (13) inadequate budget allocation to ECE (4.3% of provincial education budget); (14) security challenges affecting implementation and access",
+      "security_considerations": "Security situation in Balochistan is a major implementation constraint: (1) current security situation may restrict or prevent access to project areas; (2) World Bank task team has limited ability to travel to all project sites; (3) security concerns affect supply and bidding market for procurement; (4) security measures will be included in work contracts for sensitive areas; (5) strong third-party monitoring will support supervision; (6) remote monitoring systems, community monitoring, and technology-based data management solutions will be used; (7) security management plan will be developed for the project; (8) project design acknowledges security risks and incorporates mitigation strategies; (9) implementation support approach adapted to security context with risk-based operational support",
+      "displacement_or_refugees": "yes - Five of the seven target districts (Quetta, Killa Abdulla, Pishin, Chaghi, Chaman) are identified as refugee districts; project explicitly prioritizes these refugee-affected areas for interventions; project aims to improve access and learning outcomes for refugee populations alongside host communities; no involuntary resettlement anticipated as ESS 5 (Land Acquisition, Restrictions on Land Use and Involuntary Resettlement) marked as not currently relevant; land needs will be met through government-owned land or voluntary land donation with protocol developed compatible with ESS 5 requirements; project includes sensitization of communities on inclusive education to promote acceptance and support for vulnerable groups including refugees"
+    }
+  }
+}

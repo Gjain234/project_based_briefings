@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P178760",
+    "guid": 99941005092220009,
+    "node_id": 33813174,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=IDU-ba954408-0fb5-4e13-83fc-77d4132723aa.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 203657
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Afghanistan Community Resilience and Livelihoods Project",
+      "project_development_objective": "To provide short-term livelihood opportunities and deliver urgent essential services in rural and urban areas",
+      "total_financing": "US$265 million",
+      "implementation_period": "2 years (April 2022 - April 2024)",
+      "beneficiaries": "Approximately 1 million households (7 million Afghans) receiving direct livelihoods support; 9.3 million Afghans benefiting from improved access to basic services"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "6,450 rural communities across 6 regions, 23 provinces, and 71 districts",
+        "8 urban centers: Kabul, Herat, Jalalabad, Kandahar, Mazar-e-Sharif, Bamyan, Kunduz, and Khost"
+      ],
+      "coverage_type": "national with focus on rural and urban areas",
+      "fragile_or_conflict_affected_areas": "yes - entire country is fragile and conflict-affected; project specifically designed to operate in areas previously controlled by Taliban and current ITA-controlled areas"
+    },
+    "key_components": [
+      {
+        "component_name": "Emergency Livelihoods Support and Services in Rural Areas",
+        "description": "Cash-for-work program providing minimum 28 days of work per household for 774,000 rural households; rehabilitation of small-scale basic infrastructure (water, sanitation, roads, climate-resilient assets); benefits 6.8 million Afghans",
+        "financing": "US$141 million"
+      },
+      {
+        "component_name": "Emergency Livelihoods Support and Services in Urban Areas",
+        "description": "Labor-intensive works providing average 60 days of work per beneficiary for 115,000 urban households including IDPs; small-scale urban infrastructure improvements; benefits 2.5 million Afghans",
+        "financing": "US$65 million"
+      },
+      {
+        "component_name": "Social Grants for Women and the Most Vulnerable in Rural and Urban Areas",
+        "description": "Cash transfers, food/grain banks, and livelihood activities for 132,000 vulnerable households (female-headed households, persons with disabilities, IDPs) unable to participate in cash-for-work; approximately US$2,000 per community",
+        "financing": "US$18 million"
+      },
+      {
+        "component_name": "Strengthening Community Institutions for Inclusive Service Delivery especially for Women",
+        "description": "Support for CDCs and local community institutions through NGO-provided community mobilization, planning, implementation, monitoring, training; capacity building for women's participation; awareness campaigns on health, education, nutrition",
+        "financing": "US$27 million"
+      },
+      {
+        "component_name": "Implementation Support",
+        "description": "UNOPS management and oversight costs including technical support, training, monitoring, reporting, MIS development, GRM establishment, and coordination",
+        "financing": "US$14 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "United Nations Office for Project Services (UNOPS) as recipient-executed grant; UNOPS will contract NGOs in rural areas and private contractors in urban areas",
+      "coordination_mechanisms": "Coordination with UN agencies (UNDP ABADEI program, WFP, UNICEF, UNHCR, UN-Habitat, WHO), ADB, IsDB, EU, bilateral partners, and international/national NGOs; three-level coordination structure under UNAMA; harmonized monitoring across ARTF, Afghanistan Infrastructure Trust Fund, AHTF, STFA",
+      "procurement_approach": "Alternative Procurement Arrangements (APA) using UNOPS' own procurement procedures; UNOPS will procure NGOs as Facilitating Partners and private contractors; community-level procurement for materials and labor; emergency procurement procedures available",
+      "monitoring_and_evaluation": "World Bank supervision with quarterly implementation support missions; ARTF Monitoring Agent (MA) for independent verification of physical performance and financial monitoring; quarterly IFRs from UNOPS; annual internal audits; MA will verify Entry Criteria for Access, beneficiary targeting, wage payments, infrastructure quality, and E&S compliance; CDCs provide community-level monitoring and grievance redress"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "High political uncertainty with no international recognition of ITA; risks regarding safe and unhindered access to all geographical areas and beneficiaries including women and minorities; potential restrictions on female staff mobility; unclear ITA priorities with regional variation in policies",
+        "risk_rating": "high",
+        "mitigation_measures": "Leverage UN agencies and NGOs with decades of experience negotiating access in Taliban-controlled areas; use CDCs as trusted community representatives to ensure access and mitigate tensions; establish Entry Criteria for Access (ECA) to ensure CDCs can operate and women can participate; work through non-governmental channels; coordinate with international community on principles of engagement"
+      },
+      {
+        "risk_category": "Security",
+        "risk_description": "Volatile security situation with civilian casualties between August-October 2021; attacks on Shi'ite mosques and Hazara ethnic minority; killing of polio workers in February 2022; risk of armed conflict near project sites and terrorist attacks on project workers",
+        "risk_rating": "high",
+        "mitigation_measures": "Work with experienced NGO partners with conflict-sensitive approaches; leverage CDC and local elder knowledge of local conflict dynamics; adhere to UN security protocols; maintain flexibility to suspend activities in areas where security deteriorates; prioritize areas with improved security conditions"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Afghan economy in severe crisis with 30% expected contraction; suspension of foreign aid and freezing of US$9 billion in reserves; currency depreciation of 15%; liquidity crisis with limited access to financial services; inflation around 40% for basic goods; limited banking infrastructure (only 15% of adults have financial accounts, 1-1.5% use mobile money)",
+        "risk_rating": "high",
+        "mitigation_measures": "Carefully review liquidity situation and reliable financial payment systems with UNOPS; use multiple payment channels including bank transfers and physical cash distribution; establish segregated pass-through accounts at Afghanistan International Bank for NGO cash management; employ FPs as financial service providers for last-mile payments; ensure funds cannot be diverted to ITA; monitor currency fluctuations and adjust payment mechanisms as needed"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "High inherent financial management risk due to: accuracy of beneficiary lists; adequate management of beneficiary information; accurate documentation of expenditures; ability to transfer money to beneficiaries; limited banking infrastructure; weak institutional capacity; potential for fraud and diversion",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Revalidate beneficiary lists from CCAP and REACH with FP and CDC support; develop MIS building on CCAP system design; require FPs to maintain CDC-level accounting and document management; implement multiple control layers including bank accounts for pass-through payments, monthly replenishment, and MA verification; conduct periodic validation exercises to confirm cash delivery; require pre-qualification of NGOs on fiduciary capacity; maintain comprehensive audit trail with CDC member signatures; ARTF MA to provide independent assurance and quarterly reviews"
+      },
+      {
+        "risk_category": "Procurement",
+        "risk_description": "Substantial procurement risks from: COVID-19 implementation delays; restrictions on local bank operations; border closures and import restrictions; limited availability of qualified service providers and suppliers; inability of local bidders to submit quality bids; difficulty obtaining performance security from reliable banks; security issues and unexpected events",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Use UNOPS' emergency procurement procedures to expedite procurement; leverage UNOPS' strong procurement and contracting capabilities; utilize UNOPS' global experience and Copenhagen Office support; develop community procurement procedures in consultation with WB; ensure FPs have adequate procurement capacity; maintain flexibility in procurement plan; regular monitoring of procurement progress against plan"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Environmental risk (Moderate): low to medium noise and dust pollution; vegetation removal and land degradation; construction waste generation. Social risk (Substantial): occupational and community health and safety; possible child labor; SEA/SH risks for female project actors and women/girls in communities; COVID-19 exposure risks; exclusion of vulnerable groups; contextual security risks to communities and project workers",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Prepare and implement ESMF with E&S screening template and generic management plans; include E&S risk mitigation in bidding documents and contracts; train NGO and contractor staff on E&S implementation; hire E&S specialists at project start; prioritize nature-based and simple infrastructure solutions; implement WHO COVID-19 protocols; develop SEA/SH action plan with specific timebound actions, Codes of Conduct, and SEA/SH-responsive GRM with referrals to GBV service providers; ensure adequate female staff in implementing NGOs; establish robust GRM with multiple uptake channels; conduct community consultations on project activities; monitor E&S compliance through MA quarterly reports"
+      },
+      {
+        "risk_category": "Institutional Capacity",
+        "risk_description": "Reduced implementation capacity in Afghanistan due to political crisis; many government workers unpaid since August 2021; loss of 500,000+ security force jobs; disruption to core government services; limited private sector capacity; uncertainty regarding ITA governance capacity",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Work through non-governmental actors (UNOPS, NGOs, CDCs) rather than government; leverage private sector contractors in urban areas to preserve civil works implementation capacity; build capacity of CDCs and NGOs through training and technical support; use experienced NGO partners with established field presence; provide implementation support and supervision from WB task team; establish PIU with adequate staffing in key functions"
+      },
+      {
+        "risk_category": "Operational - Access and Implementation",
+        "risk_description": "Risks to safe and unhindered access for implementing agencies and beneficiaries; restrictions on women's mobility and participation; potential ITA interference in CDC operations; challenges in reaching IDPs and minorities; geographic variation in local norms and customs affecting implementation",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Establish Entry Criteria for Access (ECA) requiring: (1) CDCs not prohibited from operating with minimum 70% member positions filled; (2) women able to participate with minimum 40% women CDC members. Funds not released in areas where ECAs not met; communities given 3 weeks to meet criteria or project moves to other areas. Conduct six-month review before releasing second tranche. Leverage CDC and local elder negotiations; use female social organizers from NGOs; arrange mahram for female staff where needed; work with experienced NGO partners familiar with local contexts; maintain flexibility to adapt implementation approach; coordinate with other humanitarian actors on geographic coverage"
+      },
+      {
+        "risk_category": "Data Protection and Privacy",
+        "risk_description": "Project requires collection and processing of personal data, personally identifiable information, and sensitive data for beneficiary identification and targeting; risks of data misuse, unauthorized access, or improper retention",
+        "risk_rating": "substantial",
+        "mitigation_measures": "UNOPS and partners must comply with UNOPS' personal data protection policy aligned with international best practices; implement data minimization (collect only necessary data); ensure data accuracy and correction procedures; limit data use to legitimate purposes; establish data retention limits; inform data subjects of use and processing; allow data subjects to correct information; require partners accessing sensitive data to sign non-disclosure agreements; specify which individuals have access, duration of access, and data disposal provisions"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Substantial (Environmental risk rated Moderate; Social risk rated Substantial)",
+      "triggered_safeguard_policies": [
+        "ESS1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS2: Stakeholder Engagement and Information Disclosure",
+        "ESS3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS4: Community Health and Safety",
+        "ESS10: Stakeholder Engagement and Information Disclosure"
+      ],
+      "grievance_redress_mechanism": "yes - Project GRM using UNOPS' Awaaz Afghanistan mechanism (toll-free hotline, SMS short code, email, grievance forms, verbal reporting, letters, websites, help desks, collection boxes). Two-tiered structure: local-level GRC with FPs and national-level GRC through UNOPS. All complaints must be closed (resolved, withdrawn, or escalated) within 30 days. UNOPS maintains grievance register. MA provides independent GRM implementation reviews. SEA/SH-responsive GRM with referrals to pre-identified GBV service providers.",
+      "gender_considerations": "Significant focus on gender equality and women's empowerment: (1) Component 4 ensures women integral to CDCs with reserved seats, encouraging participation in public spaces, and identifying female beneficiaries; (2) Component 3 targets female-headed households and women without able-bodied family members; (3) Project builds on CCAP success with 50% CDC women members; (4) Implementing NGOs required to have adequate female staff for mobilization and engagement; (5) Women's groups and sub-committees (health, education, youth) provide safe spaces for women to meet and access services; (6) Project addresses widening gender gap post-August 15, 2021 with restricted mobility and access; (7) Targets include monitoring female-headed households receiving social grants; (8) Women's participation in CDC activities is Entry Criteria for Access",
+      "vulnerable_groups": [
+        "Female-headed households",
+        "Persons with disabilities",
+        "Internally Displaced Persons (IDPs) - estimated 5.8 million in country, 80% women and children",
+        "Elderly persons",
+        "Ethnic minorities (Hazara, Tajik, Uzbek, etc.)",
+        "Ultra-poor and destitute households",
+        "Households lacking able-bodied members",
+        "Adolescent girls",
+        "Children at risk of child labor",
+        "Returnees"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project explicitly designed with conflict-sensitive approach: (1) Uses CDCs as apolitical community representatives to avoid exacerbating grievances and tensions; (2) Implements Entry Criteria for Access to ensure CDCs can operate independently and women can participate - funds not released where these conditions not met; (3) Leverages lessons from operating in former Taliban-controlled areas with conflict-sensitive approaches; (4) Works through non-governmental channels (UNOPS, NGOs, CDCs) to maintain neutrality and independence from ITA; (5) Emphasizes community participation and consultation to avoid conflict escalation; (6) Targets both host communities and IDPs with 'whole of community' approach to mitigate tensions; (7) Flexible geographic coverage to avoid areas where conditions deteriorate; (8) Coordinates with other humanitarian actors to avoid overlaps and duplications; (9) Builds community resilience and social cohesion as foundation for future peace and reconstruction",
+      "fragility_context": "Afghanistan experiencing severe fragility and conflict: (1) August 15, 2021 political crisis with Taliban takeover and ITA establishment; (2) No international recognition of ITA; (3) Abrupt cessation of most international aid and all security assistance; (4) Major economic crisis with 30% expected GDP contraction; (5) Freezing of US$9 billion in foreign reserves and loss of hard currency access; (6) Disruption to core government services; (7) 24.4 million Afghans in need of humanitarian assistance (2022); (8) Over 2/3 of households unable to cover basic food and non-food needs; (9) 5.8 million IDPs in country; (10) Volatile security situation with civilian casualties and attacks on minorities; (11) Weak governance capacity of ITA with many government workers unpaid; (12) Loss of 500,000+ security force jobs; (13) Collapse of private sector activity; (14) Severe liquidity crisis and banking sector disruption; (15) Inflation around 40% for basic goods; (16) Widespread adoption of harmful coping mechanisms (high-interest borrowing, asset sales, reduced human capital investment); (17) Disruption to health services and COVID-19 management; (18) Restrictions on women's mobility, work, and participation; (19) Project designed to preserve 18 years of development gains and prevent lost generation",
+      "security_considerations": "Security is critical implementation constraint: (1) Volatile security situation with ongoing risk of armed conflict near project sites and terrorist attacks on project workers; (2) Civilian casualties reported August-October 2021; (3) Attacks on Shi'ite mosques and Hazara ethnic minority; (4) Killing of polio vaccination workers in February 2022; (5) Project assumes security conditions allow for continued operations but acknowledges this is uncertain; (6) UNOPS and NGO staff must have safe and unhindered access to project areas; (7) Project adheres to UN security protocols; (8) Flexibility to suspend activities if security deteriorates; (9) Work with experienced NGO partners familiar with security dynamics; (10) Leverage CDC and local elder knowledge of security situation; (11) Prioritize areas with improved security conditions since August 2021",
+      "displacement_or_refugees": "yes - Significant displacement and refugee issues: (1) Over 1.3 million Afghans fled homes as IDPs in 2021; (2) Total estimated 5.8 million IDPs in country as of December 2021; (3) Approximately 80% of IDPs are women or children; (4) Majority of 2021 displacement (62%) due to intensifying conflict after international troop withdrawal; (5) Large influx of IDPs in cities and peri-urban areas creating challenges for service delivery and economic opportunities; (6) Component 2 specifically targets urban IDPs with labor-intensive works; (7) Component 3 targets IDP households for social grants; (8) Project uses 'whole of community' approach in urban areas targeting both host communities and IDPs to mitigate tensions; (9) CDCs have proven effective at identifying and assisting IDP households (92% reached in COVID-19 response); (10) Project includes IDP household monitoring indicator; (11) Coordination with UNHCR and other humanitarian actors on displacement issues"
+    }
+  }
+}

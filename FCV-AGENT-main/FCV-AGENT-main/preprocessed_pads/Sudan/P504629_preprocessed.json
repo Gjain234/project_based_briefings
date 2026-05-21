@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P504629",
+    "guid": 99120424170039438,
+    "node_id": 34432516,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-3f523f6e-fd66-4613-ab40-20cf7c482908.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Sudan Health Assistance and Response to Emergencies (SHARE)",
+      "project_development_objective": "To restore access to a basic package of health and nutrition services and preserve the main elements of essential public health functions.",
+      "total_financing": "US$82 million equivalent (SDR 62.5 million to UNICEF + SDR 19.5 million to WHO)",
+      "implementation_period": "2 years (December 2024 - January 31, 2027)",
+      "beneficiaries": "9 million people including women of reproductive age, children under five, internally displaced persons (IDPs), and host communities. Project supports 420 PHC facilities and 10 hospitals."
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "All 18 states of Sudan with priority to safer and accessible localities",
+        "Khartoum",
+        "Darfur (Central, West, East)",
+        "Gezira",
+        "Greater Kordofan",
+        "Blue Nile",
+        "Gedarif",
+        "Sennar",
+        "Northern State",
+        "River Nile",
+        "Kassala",
+        "Port Sudan",
+        "White Nile"
+      ],
+      "coverage_type": "national with targeted localities in each state",
+      "fragile_or_conflict_affected_areas": "yes - extensive. Sudan is in active armed conflict since April 2023. Nearly 75% of health facilities in conflict-affected areas are non-functional. 11.16 million people displaced. 24.8 million people (half the population) need humanitarian aid. Project explicitly targets IDPs and conflict-affected areas."
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Improving Access to Basic Health and Nutrition Services",
+        "description": "Subcomponent 1.1 (UNICEF, $41.41M): Strengthening PHC model through support to 420 PHC facilities, 25 mobile teams, 1,200+ community health workers serving 1M+ people. Subcomponent 1.2 (WHO, $9.79M): First-level referral centers and hospitals providing BEmONC/CEmONC, SAM management, vaccination campaigns. Subcomponent 1.3 (WHO, $3.65M): Climate change adaptive health service delivery including contingency plans, flood/heat risk assessments, vector control prepositioning, CHW climate training. Subcomponent 1.4 (UNICEF, $9M): Climate-resilient health facility rehabilitation, solar power installation, WASH improvements. Subcomponent 1.5 (UNICEF, $1.5M): Digital solutions including telemedicine, AI-driven e-learning platform, health system governance platform.",
+        "financing": "US$65,352,999"
+      },
+      {
+        "component_name": "Component 2: Preserving the Main Elements of the Health System",
+        "description": "Strengthening emergency preparedness and response through: IDSR/EWARS training and operations; Emergency Operations Centers (EOCs) rehabilitation and operations; laboratory guidelines and operations; blood bank system strengthening; Rapid Response Teams training and deployment; subnational emergency preparedness plans for climate shocks and conflict response.",
+        "financing": "US$2,778,664"
+      },
+      {
+        "component_name": "Component 3: Monitoring and Evaluation and Project Management",
+        "description": "Subcomponent 3.1 (UNICEF, $2M): Third-party monitoring (TPM) agency to verify delivery of inputs and service delivery, monitor health facility utilization. Subcomponent 3.2 ($0.5M): Data analysis and knowledge management including DHIS2, EWARS, Health Resources and Service Availability Monitoring System analysis. Subcomponent 3.3 ($11.37M): Project Management Units for UNICEF and WHO with multidisciplinary teams for day-to-day management, procurement, financial management, monitoring.",
+        "financing": "US$13,868,337"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "UNICEF and WHO as direct grant recipients and implementing agencies. UNICEF implements Components 1.1, 1.4, 1.5, and 3.1. WHO implements Components 1.2, 1.3, and 2. Both jointly implement 3.2 and 3.3. Both organizations will engage qualified implementing partners (NGOs, CSOs, INGOs) for field implementation.",
+      "coordination_mechanisms": "Project Coordination Committee (PCC) co-chaired by UNICEF and WHO representatives, meeting periodically to coordinate implementation, identify/mitigate risks, review monitoring results. Coordination with Health and WASH Clusters. Alignment with Sudan SANAD and Somoud projects. Coordination with UN agencies and local authorities at state/locality levels.",
+      "procurement_approach": "Alternative Procurement Arrangements - UNICEF and WHO follow their own procurement procedures (approved by World Bank Chief Procurement Officer April 1, 2024). Procurement includes consulting services, goods, non-consulting services, small/medium works. 6-18 month Procurement Plan to be agreed within 30 days of effectiveness. Procurement risk rated High with Substantial residual risk due to hyperinflation, exchange rate volatility, supply chain disruptions, fraud/corruption risks.",
+      "monitoring_and_evaluation": "Third-party monitoring agency (competitively selected) to verify delivery and service utilization. Integration with Geo-Enabling initiative for Monitoring and Supervision (GEMS) for real-time field data access. Biannual technical reports from UNICEF/WHO with narrative updates and Results Framework progress. Quarterly progress matrices. Data sources include DHIS2, EWARS, Health Resources and Service Availability Monitoring System, TPM surveys. Emphasis on measuring actual service delivery outcomes."
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political",
+        "risk_description": "Federal institutions non-functional due to conflict; reliance on state/locality-level institutions which may have limited capacity. Coordination challenges with federal-level security apparatus.",
+        "risk_rating": "high",
+        "mitigation_measures": "Work with state and locality-level institutions and local authorities. Coordinate with other UN agencies and international/local partners. Technical-level coordination with Humanitarian Aid Commission at state level."
+      },
+      {
+        "risk_category": "security",
+        "risk_description": "Multiple health facilities previously attacked and looted, leading to deaths of patients and health workers. Ongoing security risks from armed groups, violence, extortion, theft, looting, vandalism of project materials. Risk of escalation to safer states.",
+        "risk_rating": "high",
+        "mitigation_measures": "Customized Security Management Framework (SMF) with implementation arrangements. PIM to outline procedures for determining need to cease work in particular areas. High-level UN coordination and UNOCHA humanitarian corridor facilitation. UNICEF and WHO field presence and partner networks."
+      },
+      {
+        "risk_category": "macroeconomic",
+        "risk_description": "Economic contraction (20% in 2023, 15% in 2024), hyperinflation (211% in October 2024), currency depreciation, disrupted supply chains, frozen donor aid, reduced government funding for health facilities. Affects availability of public funds and health facility functionality.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Project provides external financing for basic health services. Source goods/services internationally to limit local shortage effects. Monitor exchange rates and alert stakeholders. Review Procurement Plan for strategic purchases and long-term agreements. Explore multi-donor trust fund options for medium-term financing."
+      },
+      {
+        "risk_category": "institutional",
+        "risk_description": "High complexity from two implementing agencies. Security challenges and population mobility may compromise beneficiary identification. Sustainability heavily dependent on long-term external financing. Operating environment complex and dynamic.",
+        "risk_rating": "high",
+        "mitigation_measures": "Focus on community interventions proven effective. Leverage strong field presence and knowledge of UNICEF/WHO and implementing partners. Early collaboration with capable IPs. Explore multi-donor trust fund for medium-term commitments. TPM agency to complement technical support."
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "Country environment volatility and conflict impede access to beneficiaries. Insecurity affects delivery of inputs (medications, supplies, fuel) and raises fund safeguard risks. Project supervision challenging due to insecurity. Verification of outputs difficult and costly. Decentralized implementation across all states with potential conflict escalation.",
+        "risk_rating": "high",
+        "mitigation_measures": "Implementation through UNICEF, WHO, and experienced IPs in FCV contexts. TPM agency for verification. GEMS integration for real-time monitoring. Quarterly IFRs within 45 days. Entity-level audits by UN Board of Auditors (UNICEF) and WHO External Auditor. Segregation of duties, procurement committees, vendor vetting, anti-fraud clauses."
+      },
+      {
+        "risk_category": "environmental",
+        "risk_description": "Potential EHS risks from health facility rehabilitation/operation: noise, dust, hazardous/non-hazardous waste generation, improper disposal, fire hazards, inefficient resource use. Medical waste (infectious materials, sharps, pharmaceuticals, chemicals) if not managed properly causes environmental contamination. Air pollution from medical waste incineration, isolation wards. Wastewater discharge from facilities. E-waste from digital innovations and solar equipment. Fuel consumption and vehicle emissions from mobile teams.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Environmental and Social Management Framework (ESMF) to be prepared as disbursement condition. Application of World Bank ESF standards, World Bank Group General EHS Guidelines, Good International Industry Practice. General Waste Management Plan. Climate-resilient facility design. Solar power to reduce emissions. Proper medical waste management protocols."
+      },
+      {
+        "risk_category": "social",
+        "risk_description": "Exclusion of vulnerable groups. Social tensions between IDPs and host communities over project benefits and targeting criteria. Possible increase in IDP mobility to project areas. Weak community participation. Gender gaps and GBV risks. Detrimental social norms disadvantaging women/girls. Conflict has increased vulnerability of women and children.",
+        "risk_rating": "high",
+        "mitigation_measures": "Stakeholder Engagement Plan (SEP) with community consultations to understand exclusion risks and social tensions. Clear uniform approach to social mobilization and community engagement in PIM. Proactive feedback processes and GRM for all services. TPM verification. Citizen engagement surveys. Gender-focused indicators (deliveries by skilled personnel, ANC visits, GBV survivor support). Culturally appropriate consultations ensuring women and marginalized communities engage. Project will not move forward without stakeholder consensus."
+      },
+      {
+        "risk_category": "sexual exploitation and abuse",
+        "risk_description": "High risk of SEA/SH in FCV context with displaced populations, weak governance, and humanitarian crisis. Project involves health services, community engagement, and cash transfers which can create SEA/SH risks.",
+        "risk_rating": "high",
+        "mitigation_measures": "SEA/SH Action Plan. Sensitization and training of staff and partners. Reporting mechanisms and investigation procedures. Codes of conduct. Community awareness. Integration into GRM. PMU staff with GBV expertise."
+      },
+      {
+        "risk_category": "data protection",
+        "risk_description": "Substantial residual risk from data collection, processing, and privacy: unauthorized access to personally identifiable/sensitive information, gaps in data privacy regulations, cybersecurity breaches. Digital platforms with AI features pose data privacy and cybersecurity risks.",
+        "risk_rating": "high",
+        "mitigation_measures": "Data minimization, accuracy, use limitations, retention policies. Inform data subjects and allow correction. Follow UNICEF Policy on Personal Data Protection and WHO policies. Software/hardware investments for cybersecurity. Periodic assessments with enhanced human oversight and regular training. Close coordination with Sudan SANAD project on data privacy."
+      },
+      {
+        "risk_category": "technical design",
+        "risk_description": "Complexity from two implementing agencies. Security challenges and population mobility may compromise beneficiary identification. Frequent population movements fleeing conflict areas.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Focus on proven effective community interventions. Strong field presence and knowledge of UNICEF/WHO and IPs. Flexible project design allowing responsiveness to volatile conditions. Simpler design with specific achievable results."
+      },
+      {
+        "risk_category": "stakeholder engagement",
+        "risk_description": "Sudan's long history of conflict affects engagement with authorities and communities. May impede implementation and access. IDPs and host communities may not be integral to decision-making.",
+        "risk_rating": "high",
+        "mitigation_measures": "Emphasis on sensitization and consultation with communities. Culturally appropriate engagement ensuring women and marginalized communities participate. Local authority awareness and engagement at technical level. Consensus-based approach - project will not move forward without stakeholder assurances."
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "High environmental and social risk classification",
+      "triggered_safeguard_policies": [
+        "ESS 1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS 2: Labor and Working Conditions",
+        "ESS 3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS 4: Community Health and Safety",
+        "ESS 7: Indigenous Peoples/Sub-Saharan African Historically Underserved Traditional Local Communities",
+        "ESS 8: Cultural Heritage",
+        "ESS 10: Stakeholder Engagement and Information Disclosure"
+      ],
+      "grievance_redress_mechanism": "yes - Project-level GRM with inclusive, accessible, safe process to receive and resolve grievances, close feedback loop with communities, sensitively handle corruption and SEA/SH allegations. Proactive feedback processes for all health services. Citizen engagement surveys. World Bank Grievance Redress Service (GRS) and Accountability Mechanism (AM) also available. Target: 80% of complaints satisfactorily addressed in timely manner by project closing.",
+      "gender_considerations": "Women and girls face significant barriers to health services due to conflict, fragility, socioeconomic and cultural challenges. Maternal mortality 270 per 100,000 births (1 in 78 lifetime risk). Total fertility rate 4.5, adolescent fertility 80 per 1,000 girls ages 15-19. Less than 50% of women participate in own health decisions. Project addresses through: maternal and child health services including skilled birth attendance, family planning, ANC/postnatal care; BEmONC/CEmONC services; nutrition services for pregnant/lactating women and children; community health worker outreach. Gender indicators: number of deliveries by skilled personnel, number of pregnant women receiving ANC visits, proportion of GBV survivors receiving first-line support (target 80%).",
+      "vulnerable_groups": [
+        "Internally displaced persons (IDPs) - 11.16 million displaced",
+        "Children under five - 6.5 million, 3.5 million with acute malnutrition, 700,000 with severe acute wasting",
+        "Women of reproductive age - 2.64 million, 105,000 currently pregnant",
+        "Pregnant and lactating women",
+        "Children missing vaccinations - 1.7 million under age one at risk",
+        "Host communities affected by IDP influx",
+        "Rural populations with limited health access",
+        "Marginalized communities and poor populations",
+        "Girls and adolescents",
+        "People with severe acute malnutrition requiring specialized treatment"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project explicitly designed for FCV context. Processed under World Bank Policy for Investment Project Financing paragraph 12 (Urgent Need/Capacity Constraints due to conflict). Designed to complement humanitarian aid while laying foundation for medium/long-term development. Flexible design allowing responsiveness to volatile conflict conditions. Three-tiered service delivery model (Fully Accessible, Partially Accessible, Severely Restricted Access areas) adapts to changing security/accessibility. Uses UN humanitarian corridor facilitation for supply movement. Avoids channeling funds through federal/state/local authorities or parastatal entities. Works through UN agencies and NGO partners. Focuses on preserving health system capacity for post-conflict recovery. Emphasizes community-based approaches and local implementation capacity.",
+      "fragility_context": "Sudan classified as Fragile State. Key fragility factors: (1) Armed conflict since April 2023 with 10,900 estimated deaths, widespread destruction, massive displacement; (2) Non-functional federal institutions; (3) Severe economic collapse - GDP contracted 20% (2023) and 15% (2024), hyperinflation 211% (Oct 2024), currency depreciation; (4) Extreme poverty increased from 15.2% (2014) to 56.7% (2024); (5) Health system collapse - 75% of health facilities non-functional in conflict areas, 2/3 of population lacks health access, $900M financial losses to health sector; (6) Humanitarian crisis - 24.8 million need aid, 11.16 million displaced, disease outbreaks (cholera, measles, dengue); (7) Climate vulnerability - ranked 179/185 on adaptation index, frequent floods/droughts affecting food security and health; (8) Weak governance and institutional capacity; (9) Gender-based violence and protection risks.",
+      "security_considerations": "Multiple security risks identified: (1) Health facilities previously attacked and looted with deaths of patients/workers; (2) Armed group violence, extortion, theft, vandalism; (3) Insecurity impedes access to beneficiaries and delivery of inputs; (4) Project supervision challenging due to insecurity; (5) Verification of outputs difficult and costly; (6) Risk of conflict escalation to safer states. Mitigation: Customized Security Management Framework (SMF). PIM procedures for ceasing work in high-risk areas. UNICEF/WHO field presence and partner networks. High-level UN coordination and UNOCHA humanitarian corridor facilitation. Alternative implementation modalities through experienced UN agencies and NGOs. TPM for verification. GEMS for real-time monitoring.",
+      "displacement_or_refugees": "yes - extensive. 11.16 million people internally displaced as of November 2024. Project explicitly targets IDPs as primary beneficiaries alongside host communities. Service delivery model includes mobile teams and outreach to reach displaced populations. Project aims to provide services to 9 million people including IDPs. Concerns about IDP mobility to project areas for benefits. Social tensions between IDPs and host communities over project benefits and targeting criteria. Project includes community consultations to understand and mitigate exclusion risks and social tensions. Complementarity with Sudan SANAD project which provides cash transfers to vulnerable/food insecure populations including IDPs. Project supports 25 mobile teams to reach IDPs in remote areas and areas without functioning facilities."
+    }
+  }
+}

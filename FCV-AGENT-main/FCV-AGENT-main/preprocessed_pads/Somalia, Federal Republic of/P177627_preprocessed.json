@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P177627",
+    "guid": 99055011182252324,
+    "node_id": 33941490,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-63dd48bb-2de2-45f6-884c-8c9a581a5515.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Barwaaqo - Somalia Water for Rural Resilience Project",
+      "project_development_objective": "To develop water, agriculture, and environmental services for rural communities in Somalia's drylands.",
+      "total_financing": "US$70 million (SDR 54.7 million equivalent)",
+      "implementation_period": "December 2022 to February 2028 (approximately 5 years)",
+      "beneficiaries": "500,000 rural people (175,000 women) in Galmudug, Puntland, South West State, Hirshabelle, Jubbaland, and Somaliland"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Puntland",
+        "Galmudug",
+        "South West State",
+        "Hirshabelle",
+        "Jubbaland",
+        "Somaliland",
+        "Sool and Sanaag regions"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "yes - Somalia is a fragile state with persistent insecurity, conflict, and unresolved political tensions. Project will work in areas of low security risk with flexible site selection. Parts of Somalia remain in conflict affecting access to project sites. Al-Shabab-controlled areas excluded from implementation."
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Development of Multiuse Water Sources",
+        "description": "Construction of 100 new climate-resilient water infrastructure (sand dams, subsurface dams, berkads, hafir dams) and rehabilitation of 50 existing water points. All water lifting via solar pumps (low-carbon energy). Includes institutional capacity development for water management and climate-resilient infrastructure planning.",
+        "financing": "US$26.3 million (38% of total)"
+      },
+      {
+        "component_name": "Component 2: Development of Agriculture and Livestock Services around Water Points",
+        "description": "Support for sustainable farming and livestock production through climate-smart agriculture technologies, farmer field schools, community animal health workers training, microproject grants, and institutional strengthening of agriculture and livestock extension services.",
+        "financing": "US$15.5 million (22% of total)"
+      },
+      {
+        "component_name": "Component 3: Development of Environmental Catchment Services in Project Areas",
+        "description": "Environmental restoration including rangeland restoration, sustainable land management practices, soil and water conservation, invasive species management, forest restoration, and institutional capacity development for environmental protection and climate adaptation.",
+        "financing": "US$10 million (14% of total)"
+      },
+      {
+        "component_name": "Component 4: Project Management, Community-Driven Development, and Enhancing Livelihoods Planning",
+        "description": "Project management through NPCU and PIUs, community-driven development planning with Community Investment Plans, M&E systems, knowledge management, third-party monitoring, and contingent emergency response mechanism.",
+        "financing": "US$17.5 million (25% of total)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Federal Republic of Somalia through Ministry of Planning Investment and Economic Development (lead), with implementation by Ministries of Water, Agriculture and Livestock, and Environment in FGS, FMSs, and Somaliland. Puntland Water Development Agency also involved.",
+      "coordination_mechanisms": "Federal Inter-Ministerial Steering Committee at federal level; State-level project steering committees; National Project Coordination Unit (NPCU) at federal level; Project Implementation Units (PIUs) in each FMS and Somaliland; Village Development Committees (VDCs) at community level. Coordination with GW4R and FSRP projects through formalized platforms.",
+      "procurement_approach": "World Bank's New Procurement Regulations (July 2016, updated November 2020). All procurement activities subject to prior review by World Bank. Three key contracts centralized at FGS level: Security Risk Assessments, Third Party Monitoring, and backstopping engineering support. STEP system used for procurement tracking. Procurement Plan updated annually. Enhanced forced labor provisions for solar panels/components procurement.",
+      "monitoring_and_evaluation": "Web-based Management Information System (MIS) for real-time data tracking. Baseline and end-line beneficiary surveys. Bi-annual reporting aligned with interim financial reports. Annual full project reports. Mid-term review at 30 months. Third-party monitoring in South West State, Hirshabelle, and Jubbaland for remote supervision and fiduciary compliance. Quarterly interim implementation support missions plus twice-yearly formal missions. Monitoring of E&S aspects, conflict, and gender. Geo-tagging of investments and geospatial imaging for before-and-after comparisons."
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Relations among FGS and FMSs could impact implementation. New administration could heighten tensions and shift priorities. Political instability can quickly result in insecurity. Potential changes to key PFM institutions' leadership due to elections.",
+        "risk_rating": "high",
+        "mitigation_measures": "Simple, community-based project design protected from higher-level political issues. Flexibility to reallocate funds to more secure states if security deteriorates. Strong intergovernmental relations built under Biyoole project. Federal Inter-Ministerial Steering Committee oversight."
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Somalia's economy subject to low and volatile growth (2.2% projected for 2022, below 2.9% population growth). Severe drought and famine conditions emerging. High inflation (8.5% projected for 2022, food inflation 16%). Limited policy options due to negligible fiscal space and no monetary policy instruments. War in Ukraine impacts food prices.",
+        "risk_rating": "high",
+        "mitigation_measures": "Ongoing support from World Bank, IMF, and international partners to improve revenue generation and public resource management. Project efforts to improve water supply and management support response to climatic shocks."
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "FM and procurement environment challenging with potential mismanagement, fraud, lack of transparency, and corruption. Weak FM capacity at country and institutional levels. Emerging PFM systems and legal frameworks. Limited number of competent procurement staff. Weak capacity of bidders and service providers.",
+        "risk_rating": "high",
+        "mitigation_measures": "Strict fiduciary control mechanisms and application of World Bank fiduciary rules. Dedicated procurement and FM specialists in PIUs with adequate training. All procurement activities subject to prior World Bank review. On-the-job fiduciary training. Periodic World Bank review and implementation support. Third-party monitoring for fiduciary compliance. EAFS Unit in Ministry of Finance manages designated and project accounts. Focus on social accountability."
+      },
+      {
+        "risk_category": "Security",
+        "risk_description": "Parts of Somalia remain in conflict affecting access to project sites and insecurity for government and contractor staff. Al-Shabab-controlled areas cannot be accessed. Security situation complex and could suddenly deteriorate. High price bids due to security conditions.",
+        "risk_rating": "high",
+        "mitigation_measures": "Flexibility in site selection based on security situation. Security Risk Assessments and Security Risk Management Plans for each site or batch of sites. Project design offers flexibility to undertake activities in low-security-risk areas and select new sites as needed. Contingency plans and standard operating procedures for restricted access. ESMP clearance only if Security Risk Management Plan in place. Project coordinators responsible for security with guidance from national security advisor. Remote monitoring using drones and GEMS where in-person access not possible."
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Institutional capacity to manage water, agriculture, livestock, and environmental resources requires strengthening. Institutional roles need clarification. Nascent institutional capacity for multisectoral rural resilience.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Institutional strengthening embedded in each component. Capacity building activities for government staff. Support for development of national policies and implementation through sectoral line ministries. Standardization of implementation connecting national policy to community activities."
+      },
+      {
+        "risk_category": "Technical Design of Project",
+        "risk_description": "Technical design complexity in fragile state context. Weak contractor capacity. Limited experience with World Bank procurement regulations. Weak private sector capacity.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Project design based on lessons from WALP pilot and Biyoole project. Training for contractors and service providers on World Bank procedures. On-the-job training and hands-on support from World Bank. Backstopping engineering firm contracted centrally. Encouragement of international firms to have joint ventures with local firms."
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "Limited capacity at state level, particularly in Hirshabelle and Jubbaland where PIUs will be newly established. Weak institutional infrastructure. Limited budgetary allocations to relevant government entities.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Lessons from Biyoole project applied to new PIUs. Recruitment of qualified procurement specialists with World Bank experience. Capacity strengthening through on-the-job training, hands-on support, and mentoring. Project budget supports procurement of vehicles, office equipment, and renovation/construction of office buildings. Support for O&M guidelines and sustainability planning. Involvement of districts and community management committees."
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Substantial risk rating. Potential for exclusion of disadvantaged and vulnerable groups (women, minorities, IDPs, persons with disabilities) from decision-making and benefits. Land access issues with unregistered or grabbed land and multiple overlapping claims. Potential for water-related conflicts between pastoralists and settled communities. Labor influx risks including SEA/SH. Occupational health and safety risks. Potential child labor. Weak E&S capacity in implementing institutions. GBV risks substantial due to poverty, resource vulnerability, and unsafe travel to water facilities. Potential for overexploitation of water resources and environmental degradation.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Comprehensive ESMF, SEP, RPF, and Labor Management Procedures prepared and disclosed. Site-specific ESMPs, social assessments, inclusivity plans, LMPs, SEA/SH and RAPs/LRPs prepared before contracting. Robust community engagement and CDD approach ensuring inclusive participation. Minimum 30% women in VDC leadership and 30% female community facilitators. Women-only CIP discussion sessions. Mapping of vulnerable and marginalized groups. SSAHUTLC plans if applicable. Grievance redress mechanism with safe reporting channels for SEA/SH. GBV advisor recruited. SEA/SH prevention and response action plan. Code of Conduct addressing GBV/SEA/SH. Regular community consultations on GBV risks. Safety audits around water infrastructure. Dedicated E&S, GBV, and security specialists at NPCU and state levels. E&S focal points in implementing ministries. Capacity strengthening of PIUs on ESF. Resettlement Action Plans and land agreements through government-mediated processes. Compensation procedures where required. Forced labor risk mitigation for solar panels procurement."
+      },
+      {
+        "risk_category": "Stakeholders",
+        "risk_description": "Risk that state agencies will overestimate capacity to deliver activities, resulting in slow implementation. Disruptions could fuel tensions and jeopardize state-citizen relations. Nascent state-citizen relations vulnerable to disruption.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Project support to government to leverage nonstate actors and bring them under government direction and oversight. Federal and FMS-level Steering Committees with key ministries. Strong involvement of federal and state authorities. Coordination with development pillar working groups. Robust capacity building embedded in project. Community engagement through VDCs. Citizen engagement platform with toll-free complaints line."
+      },
+      {
+        "risk_category": "Procurement",
+        "risk_description": "High risk rating. Limited number of competent procurement staff. Weak capacity of bidders and limited service providers. High price bids due to security. Fraud and corruption risks. Collusion among bidders due to limited competition. Inadequate experience in procurement planning, monitoring, and contract management. Potential COVID-19 disruptions. Weak legal and financial institutions. Lack of enforcement of Public Regulatory Framework.",
+        "risk_rating": "high",
+        "mitigation_measures": "Dedicated procurement specialists in PCU/PIUs with relevant qualifications. All procurement activities treated as prior review. Training of PMU/stakeholders on New Procurement Regulations. Awareness creation on integrity in procurement and FM. Support for procurement reforms. Application of flexibilities in World Bank Procurement Framework. Joint ventures between international and local firms. Probity advisor involvement where appropriate. Forced labor bidder declarations and enhanced contractual provisions for solar panels. Strengthened procurement documents for core functions."
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Substantial",
+      "triggered_safeguard_policies": [
+        "Environmental and Social Standard 1 (ESS1): Assessment and Management of Environmental and Social Risks and Impacts",
+        "Environmental and Social Standard 2 (ESS2): Labor and Working Conditions",
+        "Environmental and Social Standard 3 (ESS3): Resource Efficiency and Pollution Prevention and Management",
+        "Environmental and Social Standard 4 (ESS4): Community Health and Safety",
+        "Environmental and Social Standard 5 (ESS5): Land Acquisition, Restrictions on Land Use and Involuntary Resettlement",
+        "Environmental and Social Standard 6 (ESS6): Biodiversity Conservation and Sustainable Management of Living Natural Resources",
+        "Environmental and Social Standard 7 (ESS7): Indigenous Peoples/Sub-Saharan African Historically Underserved Traditional Local Communities",
+        "Environmental and Social Standard 8 (ESS8): Cultural Heritage",
+        "Environmental and Social Standard 10 (ESS10): Stakeholder Engagement and Information Disclosure",
+        "OP 7.50: Projects on International Waterways"
+      ],
+      "grievance_redress_mechanism": "yes - Multitiered, multichannel Grievance Redress Mechanism (GRM) being enhanced from Biyoole project. Options include free mobile technology and physical interface from community to national level. 360-degree monitoring and reporting process with tracking of complaint resolution time (approximately 10 days). Separate channels for SEA/SH with safe and confidential reporting. Identified GM focal points trained on effective response to SEA/SH cases. Separate worker GM established. Community feedback gathered through regular community meetings. Beneficiary satisfaction monitoring. World Bank's Grievance Redress Service (GRS) and Accountability Mechanism also available.",
+      "gender_considerations": "Significant gender focus throughout project. Women comprise 35% of beneficiaries (175,000 of 500,000). Project addresses gender gaps in water access (women spend 3-6 hours daily collecting water), agricultural productivity (only 14% of women own farms vs. higher rates for men), livestock ownership (28% of women own livestock), decision-making, and employment. Targets include: 30% female farmers adopting improved technology, 30% female livestock managers with increased productivity, 30% female share of farmers/clients with increased incomes, 30% women in VDC leadership positions, 30% female PIU staff and seconded staff, 25% female management and technical staff in ministries, 20% contracts to female-friendly contractors. Female extension agents and veterinarians to be deployed. Female-led associations, cooperatives, and self-help groups supported. Training scheduled at convenient times with childcare provided. Family unit training to increase awareness. Minimum 30% female community facilitators with additional leadership training. Women-only CIP discussion sessions. Female recruitment and retention strategy for water and agriculture ministries. Workplace improvements including separate toilets and prayer rooms for women. Procurement guidelines giving extra points to female-friendly firms.",
+      "vulnerable_groups": [
+        "Women and girls",
+        "Internally displaced people (IDPs)",
+        "Nomadic herders and pastoralists",
+        "Landless laborers",
+        "Minority and marginalized groups",
+        "Occupational minorities",
+        "Youth",
+        "Persons with disabilities",
+        "Female-headed households",
+        "Communities in remote areas with limited access",
+        "Sub-Saharan Africa Historically Underserved Traditional Local Communities (SSAHUTLC) if present"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project explicitly designed with conflict sensitivity. Community-driven development approach ensures inclusive participation of all stakeholder groups to reduce resource-based conflicts. Water infrastructure development addresses water scarcity as a driver of conflict between pastoralists and settled communities. Project includes conflict monitoring and management. Security Risk Assessments and Management Plans for each site. Flexible site selection to avoid high-conflict areas. Project design allows reallocation of funds to more secure states if security deteriorates. Community engagement processes designed to identify and manage social tensions. Water sharing agreements developed through consultation to reduce conflict risks. Environmental restoration and sustainable land management reduce land degradation-driven conflicts. Project contributes to World Bank Crisis Response Framework Pillar 4 on 'Strengthening Policies, Institutions and Investments for Rebuilding Better' to improve long-term development outcomes and reduce conflict drivers.",
+      "fragility_context": "Somalia is a fragile state recovering from conflict with persistent insecurity and unresolved political tensions. Key fragility factors: (1) Weak state institutions with limited capacity to deliver services; (2) Political instability with delayed elections (2020 to 2022) and potential for further tensions; (3) Extreme poverty with 70% living on less than US$1.90/day and 90% of households deprived in at least one poverty dimension; (4) Severe food insecurity with 7.8 million affected by worst drought in four decades, 2.2 million in Emergency phase, 300,560+ in Catastrophe/Famine phase; (5) Record-high displacement with 2.6 million displaced by war, floods, droughts, and livelihood loss; (6) Climate vulnerability with one of highest inter-annual rainfall variations in Africa, 27% land loss to degradation (2000-2015), deforestation, and soil carbon loss; (7) Water insecurity with only 33% of households having piped water, 41% without access to regular improved water source; (8) Limited fiscal space and negligible monetary policy instruments; (9) Fragmented aid environment undermining national institutions; (10) Weak PFM systems and legal frameworks; (11) Limited private sector capacity; (12) Gender inequality at 0.776 on Gender Inequality Index (one of lowest globally); (13) Occupational segregation and clan-based power structures perpetuating exclusion.",
+      "security_considerations": "Security is a major implementation challenge. Parts of Somalia remain in conflict with al-Shabab-controlled areas excluded from project. Security situation complex and could suddenly deteriorate. High security risks for government staff and contractors. Project includes: (1) Security Risk Assessments and Management Plans for each site or batch of sites; (2) Flexibility in site selection to work in low-security-risk areas; (3) Contingency plans and standard operating procedures for restricted access; (4) National security advisor to guide project coordinators; (5) Remote monitoring using drones and GEMS where in-person access not possible; (6) Third-party monitoring in South West State, Hirshabelle, and Jubbaland for remote supervision; (7) Security risk management firm contracted centrally; (8) Use of security firms for travel and site protection in line with World Bank Good Practice Note; (9) ESMP clearance only if Security Risk Management Plan in place; (10) Flexibility to reallocate funds to more secure states if needed; (11) Consideration of contingency plans in mid-term review if security deteriorates.",
+      "displacement_or_refugees": "yes - Significant displacement context. Over 2.6 million Somalis displaced by effects of war, floods, droughts, and loss of livelihoods. In 2022, more than 1 million displaced by drought including 99,000 in August 2022 alone. Internally displaced people (IDPs) identified as vulnerable group requiring special inclusion in project. Project addresses displacement drivers through: (1) Improved water access reducing water-related displacement; (2) Enhanced agricultural and livestock productivity improving livelihood resilience; (3) Environmental restoration and sustainable land management reducing land degradation-driven displacement; (4) Climate adaptation measures reducing drought and flood impacts. IDPs specifically included in community mapping and vulnerability assessments. Inclusive community engagement processes ensure IDPs participate in decision-making and benefit from project. Resettlement Policy Framework addresses potential land access issues. Project contributes to reducing displacement through improved resilience to climate shocks."
+    }
+  }
+}

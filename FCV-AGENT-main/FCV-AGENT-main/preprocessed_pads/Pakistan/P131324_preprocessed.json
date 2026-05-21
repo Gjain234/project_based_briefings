@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P131324",
+    "guid": 556871468190136019,
+    "node_id": 24585888,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b082ef2bc3&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 202608
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Sindh Barrages Improvement Project",
+      "project_development_objective": "To improve the reliability and safety of the Guddu barrage and strengthen the Sindh Irrigation Department's capacity to operate and manage the barrage",
+      "total_financing": "SDR 133.7 million (US$188 million equivalent) IDA Credit, with Government of Sindh contribution of US$20 million, for total project cost of US$208 million",
+      "implementation_period": "June 22, 2015 to December 22, 2020 (5 years implementation, 6 months additional for closing)",
+      "beneficiaries": "Over 2.6 million people across 1.2 million hectares of irrigated land in Kashmore, Ghotki, Jacobabad, Sukkur, and Shikarpur districts of Sindh, and Nasirabad and Jafarabad districts of Baluchistan; approximately 370,000 farm households with average farm size of 3.3 hectares"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Guddu Barrage (Kashmore district, Sindh Province)",
+        "Kashmore district",
+        "Ghotki district",
+        "Jacobabad district",
+        "Sukkur district",
+        "Shikarpur district",
+        "Nasirabad district (Baluchistan)",
+        "Jafarabad district (Baluchistan)"
+      ],
+      "coverage_type": "regional",
+      "fragile_or_conflict_affected_areas": "partial - The area was troubled by conflict between the Mazari and Khosa tribes in 2010-2011, but situation improved following tribal leader collaboration by end of 2011. Security situation remains unpredictable in parts of the country. Overall risk rating is High due to political, security, and environmental factors."
+    },
+    "key_components": [
+      {
+        "component_name": "Component A: Rehabilitation of the Guddu Barrage",
+        "description": "Rehabilitation of barrage and associated structures including: replacement of all 65 main barrage gates (55 tons each) and 25 canal head regulator gates (25 tons each); concrete repairs; removal and construction of new left pocket dividing wall; river training works; staff offices and O&M facilities; implementation of environmental and social management plan; and construction supervision",
+        "financing": "US$195 million (US$20 million GoSindh, US$175 million IDA)"
+      },
+      {
+        "component_name": "Component B: Improved Barrage Operation",
+        "description": "Establishment of Barrage Management Organization (BMO) and modernization of barrage operation and maintenance including: upgrades to monitoring instrumentation (piezometers, gate-positioning, water measurement equipment); replacement of surveillance and maintenance boats; hydrographic equipment; workshops and spare parts; updated operation and maintenance manuals; and preparation of future barrage improvement projects",
+        "financing": "US$6 million (IDA)"
+      },
+      {
+        "component_name": "Component C: Project Management, Monitoring, and Evaluation",
+        "description": "Coordination of project activities, training and technical assistance in procurement, financial management, social and environmental safeguards, and communication; establishment of independent Panel of Experts for barrage safety review; information dissemination and communication program; and monitoring and evaluation studies",
+        "financing": "US$7 million (IDA)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Sindh Irrigation Department (ID) through Project Management Office (PMO) headed by experienced Project Director; Planning and Development Department (PDD) through Project Coordination and Monitoring Unit (PCMU) for coordination and monitoring; Project Steering Committee chaired by Additional Chief Secretary (Development) for policy guidance",
+      "coordination_mechanisms": "Project Steering Committee (PSC) with representatives from ID, Finance, Agriculture, Environment, Public Health Engineering, Forestry and Wildlife, and local administration; PCMU acts as secretary to PSC; Panel of Experts (POE) comprising international gates expert and two national experts (hydrologist and hydraulic/structural engineer) for technical review and safety oversight; Project Management Consultant (PMC) for bid evaluation and contract management support; Transparency International Pakistan as observer in bid openings",
+      "procurement_approach": "Three main civil works contracts procured through International Competitive Bidding (ICB): (1) Barrage works including gate replacement and left divide wall modification (US$137 million); (2) River training works (US$46 million); (3) Renovation and construction of staff offices (US$4 million NCB). Consultancy services through Quality and Cost Based Selection (QCBS). Prior review for all ICB contracts, first NCB contract, and consultancy contracts above US$300,000. Post-review for other contracts. Transaction-based disbursement with Statements of Expenditures and Summary Sheets. Designated Account in National Bank of Pakistan for fund flow.",
+      "monitoring_and_evaluation": "PMO responsible for data collection on key performance indicators; bi-annual progress reports to Government of Sindh, PSC, and World Bank covering civil works progress, institutional components, SDAP and EMP implementation, training and studies; annual implementation reports with component progress, EMP implementation, key performance indicators, and financial statements; mid-term review; independent M&E consultants for impact evaluation and third-party monitoring of EMP and SAP implementation; M&E Unit within PMO for consolidated progress reporting and results verification; baseline and six-monthly progress reports on indicators"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Political risk is critical for investment in Sindh province. Maintaining political balance between major parties has been higher priority than governance reforms. Fluctuation in political leadership is a reality. However, rehabilitation of Sindh's barrages is priority across political boundaries and potential flooding from barrage failure remains real possibility.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Strong counterparts in place for project; Project Steering Committee chaired by secretary of PDD ensures coordination; government commitment evidenced through resource allocation and establishment of PMO with core staff during preparation; independent Panel of Experts established"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Country's external and fiscal situation remains vulnerable with low international reserves and large fiscal deficit. Progress on revenue mobilization, power subsidy elimination, and public debt reduction is slow.",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "Detailed costing based on detailed design and experience from recent similar projects; 10% price and physical contingencies included; O&M costs of Guddu barrage (US$704,000) are low compared to revenue generated from irrigation water supply, so funding is not an issue as costs are covered through tariffs and revenue collected"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Project is consistent with government vision but there are inadequate recent sector strategies and policies in terms of agriculture and water.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "New irrigation sector strategy under preparation; Bank providing technical assistance through ongoing Sindh Agricultural Growth Project for agricultural policy analysis and design; Sindh Agricultural Sector Development Strategy and Irrigation Strategy to form key contribution to longer-term sector growth and investment priorities"
+      },
+      {
+        "risk_category": "Technical Design of Project",
+        "risk_description": "Works are not overly complex technically. Real challenge is executing construction works according to planned schedule in timely manner without extensive closure. Delays may occur due to engineering or climate-related factors.",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "Detailed designs for all works prepared by international and national engineering firms; construction carefully planned and scheduled for optimal alignment between design and implementation; timing laid out to make best use of dry season construction periods; feasibility study reviewed by independent Panel of Experts"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "While ID and PDD have experience with large infrastructure and donor-financed projects, institutional capacity needs strengthening for barrage management and modernization.",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "ID and PDD have significant experience implementing large infrastructure projects using ICB procedures; staff well versed with procurement and contract management; Component B provides technical assistance for institutional capacity strengthening in barrage safety, modern instrumentation, water and sediment measurement, climate change knowledge, and environmental and citizens feedback; O&M costs are sustainable as covered through tariffs and revenue"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Fiduciary risk is substantial due to country context, financial management arrangements not yet established, and inherent risks associated with procurement of large-scale infrastructure projects.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Bank will continuously support training and professional development for FM and procurement staff; transaction-based disbursement method will mitigate risks; Bank will support implementation of effective procurement monitoring mechanism; qualified professional accountants with adequate experience will be hired in PMO with TORs agreed with Bank; FM assessment carried out; external audit by Office of Auditor General of Pakistan; interim financial reports within 45 days of six-month periods; audited financial statements within six months of fiscal year end"
+      },
+      {
+        "risk_category": "Environment and Social",
+        "risk_description": "Project is Category A. May impact flora and fauna; Indus River between Guddu and Sukkur barrages is important game reserve and habitat for Indus Blind Dolphin with large population. Construction activities could impact dolphins through underwater noise from piling, collision with construction vehicles, sediment load, and water pollution. Possible disruption of canal water supply during construction.",
+        "risk_rating": "High",
+        "mitigation_measures": "Independent Environmental and Social Assessment (ESA) completed; Environmental and Social Management Plan (ESMP) with environmental codes of practice (ECPs) for 18 different aspects; site-specific plans to be prepared by contractors; Dolphin Conservation and Management Plan to be finalized; mitigation measures for underwater noise (vibratory hammers preferred, 500m exclusion zone monitoring); motor boat speed restrictions (15 km/hour), pingers to chase dolphins; booms, absorbents, skimmers for spill recovery; bulkhead gates and barge-mounted cranes to avoid canal closures; Emergency Preparedness Plan prepared; Social Management Framework (SMF) with Resettlement Policy Framework, Social Action Plan, and Communication Strategy; grievance redress mechanism; no land acquisition or resettlement expected but RPF prepared for contingency; extensive stakeholder consultations (1,270 participants); communication strategy with multiple languages (Sindhi, Balochi, Urdu, Siraki)"
+      },
+      {
+        "risk_category": "Stakeholders",
+        "risk_description": "Possible interruption in water supply during construction could result in resistance from affected stakeholders.",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "Communication plans developed to ensure public is well-informed about project activities; both traditional and non-traditional communication methods employed; stakeholder assessment and consultation carried out with direct beneficiaries during preparation and will continue during implementation; water user satisfaction surveys and citizens' feedback mechanisms; proactive citizen engagement platforms"
+      },
+      {
+        "risk_category": "Security",
+        "risk_description": "Security situation remains unpredictable in much of the country and can deteriorate unexpectedly. Can impact government's ability to deliver services and programs in certain areas and pose risk to Bank operations (periodic office closings, staff travel restrictions). Project costs can increase due to security actions for worker safety.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Continue vigilance with regard to security readiness and adjustment of operational posture to minimize risks to staff; review and update security measures; flexible implementation arrangements that take into account access and movement restrictions and can quickly adapt to changing circumstances; build in contingency costs for security actions"
+      },
+      {
+        "risk_category": "Other - Climate Change",
+        "risk_description": "Climate change expected to increase occurrence of extreme climatic events (floods and reduced flows). Temperatures in Sindh expected to increase 2°C by 2050 and 4°C by end of century; rainfall highly variable. Impacts include reduced crop productivity, increased irrigation water requirements, uncertainty in water availability, damages from extreme events, and deterioration of cultivated lands.",
+        "risk_rating": "Substantial (implicit in High overall rating)",
+        "mitigation_measures": "Climate Change Risk Assessment completed; structural interventions including gate rehabilitation and river training works to improve resilience; improved monitoring and adaptive management; operation and maintenance measures; freeboard provision of six feet for embankment crests to accommodate steady rise in downstream water levels; widening of left pocket to improve sediment management; adaptive capacity built into project design; regular canal maintenance to improve ability to supply water during reduced flows"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Category A - Full Assessment required due to large-scale construction on Indus River, irrigation systems, potential interruption of canal supplies, and impacts on Indus Blind Dolphin habitat (Ramsar site declared in 2000)",
+      "triggered_safeguard_policies": [
+        "Environmental Assessment OP/BP 4.01",
+        "Natural Habitats OP/BP 4.04 (Indus Blind Dolphin game reserve between Guddu and Sukkur barrages)",
+        "Involuntary Resettlement OP/BP 4.12 (RPF prepared for contingency, no resettlement expected)",
+        "Safety of Dams OP/BP 4.37 (barrage is major hydraulic structure)",
+        "Projects on International Waterways OP/BP 7.50 (rehabilitation of existing barrage facilities, falls within exception to notification requirements)"
+      ],
+      "grievance_redress_mechanism": "Yes - Multistage grievance redress mechanism established: (1) Complaints recorded with acknowledgement issued within three working days; (2) If not resolved by contractor or supervisory staff, grievances tabled in Grievance Redress Committee meeting within one week; (3) If not satisfactorily resolved by Committee, referred to PMO head within one week. Committee chaired by PMO head with relevant stakeholders. World Bank Grievance Redress Service (GRS) also available for project-affected communities and individuals; World Bank Inspection Panel available for complaints regarding Bank non-compliance with policies",
+      "gender_considerations": "Gender-informed design with monitoring of gender distribution included in Results Framework; women's participation in farmers' organizations has increased under ongoing SWSIP; under ongoing Sindh Agricultural Growth Project and recently approved Sindh Irrigated Agriculture Improvement Project, women participation expected to increase; 5,000 female-headed households and landless farmers to benefit from high-efficiency irrigation kits for kitchen gardening under complementary projects; women and girls commonly involved in all aspects of agriculture in project area; communication strategy considers diverse stakeholder engagement including women",
+      "vulnerable_groups": [
+        "Poorer farming families with land at tail end of canals (more vulnerable to irrigation reliability decline)",
+        "Landless farmers",
+        "Female-headed households",
+        "Temporary and permanent laborers engaged in construction",
+        "Communities in flood-vulnerable areas",
+        "Populations dependent on canal water for drinking (78% of Sindh underlain by saline groundwater unsuitable for drinking)",
+        "Indus Blind Dolphin population (endangered species)"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project addresses conflict sensitivity through: (1) Stakeholder engagement and communication strategy with extensive consultations (1,270 participants from 31 villages, 43 canal commands); (2) Grievance redress mechanism to address community concerns; (3) Social Management Framework addressing social issues and disruptions; (4) Consideration of tribal structures and leaders in project area (Mazari 50%, Mirani 30% of population); (5) Recognition of past tribal conflict (Mazari-Khosa conflict 2010-2011, improved by end 2011); (6) Water user satisfaction surveys and citizens' feedback mechanisms; (7) Communication in multiple local languages (Sindhi, Balochi, Urdu, Siraki) considering low literacy rates; (8) Proactive citizen engagement platforms; (9) Emergency Preparedness Plan to address risks from barrage failure that could cause widespread flooding and economic disruption",
+      "fragility_context": "Key fragility factors mentioned: (1) Political instability - maintaining political balance between major parties prioritized over governance reforms, fluctuation in political leadership; (2) Security challenges - unpredictable security situation in parts of country, periodic office closings and staff travel restrictions; (3) Institutional capacity constraints - inadequate sector strategies and policies, need for institutional strengthening; (4) Economic vulnerability - country's external and fiscal situation vulnerable with low international reserves and large fiscal deficit; (5) Social vulnerabilities - 30-35% of Sindh's population lives below poverty line, majority rural; low education and income levels in project area (literacy rate 6%); limited access to social amenities; (6) Environmental fragility - water scarcity with growing gap between demand and supply, climate change impacts, arid/semi-arid climate with high drought susceptibility; (7) Infrastructure fragility - aging hydraulic infrastructure reaching end of design life, critical barrage at risk of failure; (8) Tribal tensions - history of conflict between major tribes in project area",
+      "security_considerations": "Security situation remains unpredictable in much of the country and can deteriorate unexpectedly. This can impact: (1) Government's ability to deliver services and programs in certain areas; (2) Bank operations (periodic office closings, restrictions on staff travel); (3) Project implementation timelines and costs; (4) Worker safety requiring additional security measures and contingency costs. Mitigation includes: (1) Vigilance with regard to security readiness; (2) Adjustment of operational posture to minimize risks to staff; (3) Review and update of security measures; (4) Flexible implementation arrangements that can quickly adapt to changing circumstances; (5) Contingency costs for security actions built into project budget",
+      "displacement_or_refugees": "No - Project is not expected to require any land acquisition or resettlement. The proposed activities are limited to existing footprints of the barrage and associated structures. However, Resettlement Policy Framework (RPF) has been prepared to guide resettlement planning for any unanticipated land acquisition and resettlement impacts during project implementation. Staff colony will be constructed on right bank downstream of barrage on derelict park land currently owned by ID, to be handed over to ID upon project completion. Possible disruption of water supply during construction addressed through: (1) Use of bulkhead gates and barge-mounted cranes to avoid need for cofferdams; (2) Gates replaced one by one without obstructing canal flows; (3) Canals not closed except during regular scheduled closure dates during construction period; (4) Social Action Plan with contingency measures to reduce impact of any irrigation supply disruption"
+    }
+  }
+}

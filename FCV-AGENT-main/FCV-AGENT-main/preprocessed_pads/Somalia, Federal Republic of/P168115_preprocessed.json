@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P168115",
+    "guid": 267241552269666297,
+    "node_id": 30871805,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b086a0284d&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Somalia Capacity Advancement, Livelihoods and Entrepreneurship, through Digital Uplift Project (SCALED-UP)",
+      "project_development_objective": "Support progress towards increased access to basic digital financial and government services targeting entrepreneurship and employment, particularly for women",
+      "total_financing": "US$31 million (SDR 12.9 million IDA Grant + US$13 million Somalia Multi-Partner Fund)",
+      "implementation_period": "4 years (March 2019 - June 2023)",
+      "beneficiaries": "Residents of Somalia, especially women and female-owned MSMEs; FGS institutions (MoF, MoIFAR, MoCI, MPTT, CBS, FRC, NCA); banks and non-bank financial institutions; Federal Member States"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Mogadishu",
+        "Federal Member States (FMS)",
+        "Somaliland",
+        "Puntland",
+        "South Central Somalia"
+      ],
+      "coverage_type": "national with focus on urban areas and areas with security clearance",
+      "fragile_or_conflict_affected_areas": "yes - entire country is fragile and conflict-affected; Al Shabaab controls some areas; security restrictions limit project activities in certain locations"
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Strengthening Institutions",
+        "description": "Support to CBS, FRC, MPTT/NCA, and new ID Authority for regulatory capacity, financial sector development, ICT regulation, and digital ID system establishment. Includes RegTech solutions, policy development, and institutional capacity building.",
+        "financing": "US$7 million"
+      },
+      {
+        "component_name": "Component 2: Enabling Financial and Digital Services",
+        "description": "Establishment of MSME Financing Facility (US$15M line of credit), digital ID enrollment (1 million people), government and retail payment services interoperability, and e-business registration services through one-stop shop.",
+        "financing": "US$20 million"
+      },
+      {
+        "component_name": "Component 3: Project Management and Coordination",
+        "description": "Project Implementation Unit staffing, Project Steering Committee support, monitoring and evaluation, grievance redress mechanism, and coordination across implementing agencies.",
+        "financing": "US$4 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Finance (MoF), Federal Republic of Somalia",
+      "coordination_mechanisms": "Project Steering Committee (PSC) headed by MoF with representatives from MoCI, MPTT, MoIFAR, CBS, FRC, NCA, and new ID Authority; Project Implementation Unit (PIU) in MoF with focal persons from key MDAs; Financial sector sub-committee for MSME Financing Facility",
+      "procurement_approach": "World Bank New Procurement Framework; World Bank Standard Procurement Documents; prior and post review based on risk; STEP system for procurement transactions; special procurement arrangements for FCV country status",
+      "monitoring_and_evaluation": "PIU M&E Unit with MIS; autonomous management bodies for MSME Financing Facility and digital ID services; quarterly progress reports from MSME Financing Facility; independent monitoring agent for MSME Financing Facility; citizen engagement surveys; midterm review at end of year 2"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political",
+        "risk_description": "Risk of political instability, constitutional review process, AMISOM transition, federal elections in 2020, state-level elections, and tensions between FGS and FMS could slow or derail project implementation, especially digital ID activities",
+        "risk_rating": "high",
+        "mitigation_measures": "Policy dialogue and client engagement through World Bank operations; support to intergovernmental institutional frameworks; capacity building to stabilize core government functions; inclusive policy dialogue structures"
+      },
+      {
+        "risk_category": "macroeconomic",
+        "risk_description": "Limited fiscal space, structural over-reliance on grant financing, vulnerability to external shocks (drought, disease, trade bans), dependence on remittances and few commodity exports",
+        "risk_rating": "high",
+        "mitigation_measures": "Support for domestic resource mobilization; MSME Financing Facility to fund expansion in productive sectors; annual adjustment of MSME pricing to market conditions; EU budget support operation to provide fiscal space"
+      },
+      {
+        "risk_category": "institutional",
+        "risk_description": "Inadequate capacity in public sector and core institutions; majority of supported institutions are new or yet to be established; delays in setting up MSME Financing Facility and ID Authority; changes in operating environment",
+        "risk_rating": "high",
+        "mitigation_measures": "Additional capacity building efforts; external support from development partners; independent monitoring agent; policy commitments from Prime Minister (January 22, 2019); phased and iterative approach; World Bank implementation support"
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "Weak PFM legal framework; fragmented accountability systems; high banking and funds flow risks; potential for fraud, corruption, and money laundering; weak domestic banking system",
+        "risk_rating": "high",
+        "mitigation_measures": "EAFS Unit in MoF for FM responsibility; robust internal controls and procedures; external audit by Auditor General; independent monitoring agent; digital payments to reduce leakages; strong FM arrangements with qualified accountants; periodic audits"
+      },
+      {
+        "risk_category": "technical",
+        "risk_description": "Technical components of digital ID being delivered by NADRA before comprehensive policy and legal framework developed; risk of unsuitable features coded into system; potential non-delivery if Pakistan government financing stops; vendor lock-in risks",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Tripartite Technical Working Group (FGS, NADRA, World Bank) for ongoing technical advice; in-depth assessment of technical components; phased approach providing flexibility; World Bank convening role for additional financing if needed; policy framework development before full deployment"
+      },
+      {
+        "risk_category": "stakeholder",
+        "risk_description": "Telecommunications companies concerned about regulation affecting profits; social resistance to government ID registration; security concerns about holding government-issued ID; fear of extremist groups targeting ID registration points",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Policy dialogue and inclusive consultation; depoliticization of digital ID initiative; continuous citizen engagement and outreach; emphasis on financial access benefits; security risk mitigation through careful implementation strategy"
+      },
+      {
+        "risk_category": "environmental and social",
+        "risk_description": "Potential adverse environmental impacts from livestock sector financing; weak safeguards capacity of client and beneficiaries; mixed safeguards performance of predecessor projects; social risks including weak labor practices, child/forced labor, occupational health/safety; GBV risks from improved women's financial autonomy",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Focus on two subsectors (livestock and off-grid renewable energy); E&S management consultant in PIU; World Bank safeguards supervision; participation agreements with PFIs including non-discrimination clauses; E&S screening criteria; GBV risk identification and mitigation measures; grievance redress mechanisms"
+      },
+      {
+        "risk_category": "security",
+        "risk_description": "Fragile security situation affecting staff safety, implementation timelines, and project budgets; all activities require security threat analysis; potential restrictions on activities in certain locations; extremist groups may target ID registration or threaten ID holders",
+        "risk_rating": "high",
+        "mitigation_measures": "Continuous security assessment; flexible project design to adapt to changing security context; high level of planning and coordination; duty of care responsibilities; depoliticization of digital ID; emphasis on financial access narrative"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Category B - Partial Assessment",
+      "triggered_safeguard_policies": [
+        "Environmental Assessment OP/BP 4.01"
+      ],
+      "grievance_redress_mechanism": "yes - Project-level GRM established; World Bank Grievance Redress Service (GRS) available; World Bank Inspection Panel available; GRM accessible to women through voice-based messaging and call centers; GBV-sensitive reporting channels integrated",
+      "gender_considerations": "Gender gap analysis conducted; women face discrimination in financial access and employment; 50% female enrollment target for digital ID; 30% lending quota for female-owned MSMEs; gender-themed workshops for financial service providers; women's outreach strategies required from PFIs; all-female registration units for ID enrollment; targeted citizen engagement campaigns for women; gender-disaggregated data collection",
+      "vulnerable_groups": [
+        "Women and female-headed households",
+        "Internally Displaced Persons (IDPs)",
+        "Persons with disabilities",
+        "Minority clans",
+        "Children",
+        "Remote and marginalized populations",
+        "Poor and bottom-of-pyramid populations"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project explicitly designed for FCV context; addresses access barriers that may exacerbate political tensions; supports formalization and economic opportunities to reduce vulnerability; depoliticization of digital ID initiative; inclusive governance structures; citizen engagement to build trust in institutions; security-conscious implementation; flexible design to adapt to changing security context",
+      "fragility_context": "Somalia remains fragile despite progress since 2011; limited fiscal space constrains service delivery; low trust in state; widespread poverty (69%); high youth unemployment (74% for women, 61% for men); decades of conflict destroyed institutions; Al Shabaab insurgency; recurrent drought and external shocks; limited domestic revenue (2% of GDP); dependence on remittances and aid; weak formal institutions; informal economy dominance",
+      "security_considerations": "All development initiatives require continuous security threat analysis; staff movements limited by security restrictions; some locations may be excluded from activities; project activities may be delayed or cancelled due to security; AMISOM transition and security sector reform ongoing; extremist groups may target ID registration or threaten ID holders; security risk mitigation through careful implementation and narrative framing",
+      "displacement_or_refugees": "yes - Internally Displaced Persons (IDPs) are significant population; estimated 9% of population displaced; female-headed households more common among IDPs (54%); project targets IDPs for digital ID enrollment; special measures for IDP access to financial services; WFP has registered 4 million people including IDPs; project will leverage humanitarian agency experience with vulnerable populations"
+    }
+  }
+}

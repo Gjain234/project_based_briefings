@@ -1,0 +1,108 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P176772",
+    "guid": 99800012022228217,
+    "node_id": 33949921,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-38023395-68a8-4eb6-8dd3-05bbe5a8c9ed.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Djibouti Affordable Housing Finance Project",
+      "project_development_objective": "To expand access to affordable housing finance for underserved populations in the Recipient's territory",
+      "total_financing": "US$85 million (US$15 million IDA, US$70 million commercial financing guaranteed)",
+      "implementation_period": "December 20, 2022 to December 31, 2027",
+      "beneficiaries": "Low-to-middle income households (categories 1-3: monthly income <US$1,500), households in electronic social register, women, youth in construction trades"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Djibouti City",
+        "Balbala",
+        "national territory"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "no - but small state with high climate vulnerability and regional instability context"
+    },
+    "key_components": [
+      {
+        "component_name": "Mortgage guarantee mechanism",
+        "description": "Establish partial credit guarantee fund for affordable housing loans within FGPCD, targeting households earning US$450-1,500/month for houses up to DJF 10 million",
+        "financing": "US$7 million IDA + US$70 million private capital mobilization"
+      },
+      {
+        "component_name": "Innovative financing of affordable housing",
+        "description": "Phase 1: ARULoS self-construction financing for poor households. Phase 2: Line of credit to microfinance institutions. Sub-component 2b: Convert rent-to-own contracts to mortgage loans",
+        "financing": "US$5.5 million IDA"
+      },
+      {
+        "component_name": "Technical Assistance and Project Management",
+        "description": "Policy reforms to lower construction costs, capacity building for FGPCD and financial institutions, climate-resilient construction training, project management",
+        "financing": "US$2.5 million IDA"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Agence de Réhabilitation Urbaine et du Logement Social (ARULoS) as lead implementing agency; Fonds de Garantie Partielle des Credits de Djibouti (FGPCD) for Component 1",
+      "coordination_mechanisms": "High-level Steering Committee chaired by Minister of Economy and Finance, including MVUH, Minister of Budget, BCD Governor, Chamber of Commerce President. ARULoS Project Management Team with dedicated specialists",
+      "procurement_approach": "World Bank Procurement Regulations for IPF, using STEP system. Limited procurement scope as 70% of funds are non-procurable activities (guarantee fund capitalization, microfinance loans, conversion costs)",
+      "monitoring_and_evaluation": "M&E system within ARULoS, quarterly IFRs, annual surveys of beneficiaries, gender-disaggregated data collection, climate indicators tracking"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political and governance",
+        "risk_description": "Need for strong coordination between ARULoS, FGPCD, Chamber of Commerce, and financial institutions. FGPCD governance must evolve to include Ministry of Housing",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Clear coordination mechanisms, MoUs between agencies, steering committees, updated governance arrangements"
+      },
+      {
+        "risk_category": "macroeconomic",
+        "risk_description": "High inflation international context could make it difficult for banks to offer 20-year fixed rate mortgages at current single digit rates",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Monitor inflation trends, flexible interest rate mechanisms if needed"
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "FGPCD lacks experience managing guarantees at scale, governance and internal control systems under development. ARULoS FM staff workload concerns",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Upgrade accounting systems, develop mortgage guarantee procedures, automated core business system, additional FM staff, external auditor recruitment"
+      },
+      {
+        "risk_category": "institutional capacity",
+        "risk_description": "Limited experience with mortgage guarantees at proposed scale, need for capacity building in financial institutions",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Technical assistance, training programs, knowledge exchange with other guarantee funds, BCD supervisory support"
+      },
+      {
+        "risk_category": "stakeholder",
+        "risk_description": "Risk of non-transparent beneficiary selection",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Role of financial institutions in screening, use of electronic social register, voluntary participation, strong grievance system"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate",
+      "triggered_safeguard_policies": [
+        "ESS1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS2: Stakeholder Engagement and Information Disclosure",
+        "ESS3: Labor and Working Conditions",
+        "ESS4: Resource Efficiency and Pollution Prevention",
+        "ESS5: Community Health and Safety",
+        "ESS10: Financial Intermediaries"
+      ],
+      "grievance_redress_mechanism": "yes - ESMF incorporates grievance mechanism accessible to affected parties, ARULoS has existing grievance system",
+      "gender_considerations": "Target 40% of mortgage loans to women/joint ownership, 30% of self-construction beneficiaries to be women, additional gender staff hired, financial literacy training for women",
+      "vulnerable_groups": [
+        "low-income households in electronic social register",
+        "women",
+        "informal sector workers",
+        "households in climate-vulnerable areas"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project designed for small state context with regional instability but domestic political stability. No direct conflict risks identified",
+      "fragility_context": "Small state with limited fiscal space, high debt risk (70% of GDP), high unemployment (28.4% overall, 80% youth), climate vulnerability, dependence on port services and military base rents",
+      "security_considerations": "Strategic location with foreign military bases, relative political stability compared to regional context, but economic fragility and climate risks pose security challenges",
+      "displacement_or_refugees": "yes - country hosts large number of refugees and migrants, rapid urbanization with 78% urban population, Balbala hosts ~300,000 people (30% of population) including many displaced"
+    }
+  }
+}

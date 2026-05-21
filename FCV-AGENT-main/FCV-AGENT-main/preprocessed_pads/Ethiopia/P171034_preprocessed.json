@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P171034",
+    "guid": 421681619316030132,
+    "node_id": 32971756,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b08847bca4&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Ethiopia Digital Foundations Project",
+      "project_development_objective": "To increase the inclusiveness and affordability of digital services and digital job creation in Ethiopia",
+      "total_financing": "US$200 million equivalent (SDR 138.9 million)",
+      "implementation_period": "April 21, 2021 to October 30, 2026",
+      "beneficiaries": "All citizens of Ethiopia, with special emphasis on women, youth, disabled persons, and rural populations"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "National coverage",
+        "Addis Ababa",
+        "Secondary cities",
+        "Rural areas",
+        "All regions except Tigray"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "partial - Tigray Region excluded due to ongoing conflict and communication blackout since November 2020"
+    },
+    "key_components": [
+      {
+        "component_name": "Digital economy, enabling legal and regulatory environment",
+        "description": "Strengthen analog foundations through telecom sector reform, partial privatization of Ethio Telecom, strengthening regulatory authority (ECA), and developing digital economy policies",
+        "financing": "US$20 million"
+      },
+      {
+        "component_name": "Digital government and connectivity",
+        "description": "Develop government capacity for digital services, COVID-19 response, connect public institutions and educational institutions to broadband internet",
+        "financing": "US$133 million"
+      },
+      {
+        "component_name": "Digital business and entrepreneurship",
+        "description": "Nurture digital entrepreneurship through matching grants to digital start-ups and businesses, provide technical assistance to Ministry of Innovation and Technology",
+        "financing": "US$40 million"
+      },
+      {
+        "component_name": "Project management",
+        "description": "Project Implementation Unit operations, coordination, procurement, financial management, monitoring and evaluation",
+        "financing": "US$7 million"
+      },
+      {
+        "component_name": "Contingent Emergency Response Component (CERC)",
+        "description": "Zero-value component for emergency response flexibility during project implementation",
+        "financing": "US$0 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Innovation and Technology (MInT) as lead, with Ministry of Finance and Economic Development",
+      "coordination_mechanisms": "Project Steering Committee chaired by State Minister of MInT, Technical Committees for each component, coordination with ECA, EthERNet, PEHAA",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers, competitive bidding, technology-neutral approaches",
+      "monitoring_and_evaluation": "PIU responsible for overall M&E, quarterly progress reports, beneficiary feedback mechanisms, impact evaluation studies"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political",
+        "risk_description": "Political interference in telecom reform, upcoming elections, conflict in Tigray Region with telecommunications blackout",
+        "risk_rating": "high",
+        "mitigation_measures": "Policy leverage through Development Policy Financing, Ethiopian-led reform process, monitoring of political developments"
+      },
+      {
+        "risk_category": "macroeconomic",
+        "risk_description": "COVID-19 impact, foreign exchange shortages, high public debt, reduced investor appetite",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Macroeconomic reform program support, fiscal stabilization measures, transparency improvements"
+      },
+      {
+        "risk_category": "sectoral",
+        "risk_description": "Limited experience with telecom liberalization, systemic policy change requirements, institutional adjustments needed",
+        "risk_rating": "high",
+        "mitigation_measures": "Strong government commitment, legal framework established, capacity building for ECA, DPF prior actions"
+      },
+      {
+        "risk_category": "institutional",
+        "risk_description": "Limited capacity in new institutions (ECA, MInT), staff recruitment challenges, weak internal audit functions",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Technical assistance, capacity building programs, recruitment support, training programs"
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "Limited World Bank project experience, staff turnover, procurement capacity limitations, grant management risks",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Financial Management Manual, Matching Grants Manual, procurement training, enhanced supervision"
+      },
+      {
+        "risk_category": "security",
+        "risk_description": "Conflict in Tigray Region, large number of internally displaced persons, security deterioration",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Avoid conflict areas, continuous monitoring, flexible project design"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate",
+      "triggered_safeguard_policies": [
+        "Environmental and Social Standards",
+        "Stakeholder Engagement",
+        "Labor and Working Conditions",
+        "Community Health and Safety"
+      ],
+      "grievance_redress_mechanism": "yes - to be established within 60 days of effectiveness, suitable for GBV/SEA issues",
+      "gender_considerations": "Special emphasis on women's participation, gender-disaggregated indicators, support for female entrepreneurs, addressing digital gender divide",
+      "vulnerable_groups": [
+        "women",
+        "youth",
+        "disabled persons",
+        "rural populations",
+        "underserved communities in emerging regions"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project excludes Tigray Region due to ongoing conflict, design avoids conflict areas, includes provisions for emergency response through CERC component",
+      "fragility_context": "Ethiopia experiencing political transition, Horn of Africa regional fragility, large displaced populations, ethnic tensions, upcoming elections",
+      "security_considerations": "Telecommunications blackout in Tigray Region, security risks from conflict, monitoring of situation, flexible implementation arrangements",
+      "displacement_or_refugees": "yes - large number of internally displaced persons mentioned, over 50,000 refugees fled to Sudan from Tigray, project design considers refugee and host communities"
+    }
+  }
+}

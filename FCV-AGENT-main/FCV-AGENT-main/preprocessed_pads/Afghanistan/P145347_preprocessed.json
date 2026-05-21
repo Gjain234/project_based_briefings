@@ -1,0 +1,133 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P145347",
+    "guid": 627951468189871734,
+    "node_id": 25106116,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b08311647b&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 242840
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Trans-Hindukush Road Connectivity Project",
+      "project_development_objective": "To improve road transport connectivity across the Hindukush mountain range",
+      "total_financing": "US$250 million (IDA Grant equivalent to SDR 178.1 million)",
+      "implementation_period": "October 20, 2015 to June 30, 2022 (7 years)",
+      "beneficiaries": "Direct beneficiaries: 8.7 million people from at least 11 provinces (Parwan, Bamiyan, Baghlan, Samangan, Balkh, Jazjan, Sar-i-Pul, Faryab, Kunduz, Takhar, Badakhshan). Road users, local communities, provincial governments, Ministry of Mines, Ministry of Agriculture. Both women and men expected to benefit from improved mobility, safety, and access to markets and services."
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Baghlan to Bamiyan (B2B) road - 152 km",
+        "Salang Pass (Jabar Seraj-Khinjan) - 86 km",
+        "Provinces: Parwan, Bamiyan, Baghlan, Samangan, Balkh, Jazjan, Sar-i-Pul, Faryab, Kunduz, Takhar, Badakhshan"
+      ],
+      "coverage_type": "national with regional focus",
+      "fragile_or_conflict_affected_areas": "yes - significant portions of B2B road pass through Taliban-controlled areas and other areas outside effective government control. Security environment is a major implementation challenge. Project includes measures to mitigate security risks and ensure local support."
+    },
+    "key_components": [
+      {
+        "component_name": "Road Construction and Rehabilitation",
+        "description": "Civil works for construction of B2B road (152 km) to paved standard and rehabilitation of Salang road and tunnel (86 km). Includes pavement works, tunnel repairs, snow gallery repairs, fiber optic cable installation, consulting services for supervision and technical audits, and equipment procurement for snow removal.",
+        "financing": "US$240 million"
+      },
+      {
+        "component_name": "Institutional Support and Project Management",
+        "description": "Road safety audits, definition and implementation of asset management arrangements for O&M, community engagement and communications strategy, training and capacity building for MPW staff, and project management support including PMT operations.",
+        "financing": "US$10 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Public Works (MPW) through a Project Management Team (PMT) established as an integral part of MPW, led by a high-level civil servant reporting to the Minister",
+      "coordination_mechanisms": "Inter-Ministerial Steering Committee chaired by Presidential Office representative and co-chaired by Minister of Public Works, including representatives from security-related agencies, Ministry of Mines, Ministry of Agriculture, and other relevant ministries",
+      "procurement_approach": "International Competitive Bidding (ICB) for contracts over US$5 million; National Competitive Bidding (NCB) for contracts US$100,000-5 million; Shopping for contracts under US$100,000. B2B road split into 6 segments to facilitate local contractor participation. Implementation Consultant (IC) services to support MPW in procurement, contract management, and capacity building during transition period (approximately 3 years)",
+      "monitoring_and_evaluation": "MPW responsible for continuous monitoring using provincial office staff. Quarterly Interim Financial Reports (IFRs) submitted within 45 days of quarter end. Semi-annual capacity assessments of MPW by World Bank. Third-party monitoring (TPM) consultant for field verification due to security constraints. Annual audits by Supreme Audit Office with Audit Agent support. Regular implementation support missions by World Bank (initially 3 per year, later 2 per year)"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "High risk from Afghanistan's overall political situation, governance context, serious security issues, and high degree of political instability, fragility, and uncertainty during transition period",
+        "risk_rating": "high",
+        "mitigation_measures": "Inter-Ministerial Steering Committee with security-related agencies; coordination mechanisms for security issues; project design emphasizes labor-intensive methods and local contractor involvement to build community support"
+      },
+      {
+        "risk_category": "Security",
+        "risk_description": "Much of B2B road passes through Taliban-controlled areas and areas outside effective government control. Security risks could affect project implementation, contractor willingness to bid, and staff safety",
+        "risk_rating": "high",
+        "mitigation_measures": "Strategic packaging of civil works into smaller lots for local contractors; design emphasizes labor-intensive work to generate local employment and support; informal consultations with Taliban showing support for project; Inter-Ministerial Steering Committee coordination; use of local MPW staff and consultants who can work in these areas; security-related cost premiums included in estimates"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "MPW has very substantial capacity deficiencies in technical, procurement, contract management, financial management, and disbursement areas. First time for civil servant staff to lead project management. Large size and technical complexity of project",
+        "risk_rating": "high",
+        "mitigation_measures": "Implementation Consultant services to support PMT during transition period; stable appointments to key PMT positions based on proven capacity; semi-annual capacity assessments; transition plan with measurable performance indicators; on-the-job and classroom training; embedding of external consultants within MPW departments for knowledge transfer"
+      },
+      {
+        "risk_category": "Fiduciary (Financial Management and Procurement)",
+        "risk_description": "Government's FM systems have deficiencies leading to payment delays (40-60 days instead of 28 days stipulated in contracts). Weak procurement capacity. Limited experience with World Bank procedures. Corruption risks rated high by Transparency International",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Implementation Consultant support for FM and procurement; one international FM consultant and two national FM consultants; FM manual based on ARAP experience; centralized payment processing through designated account; quarterly IFRs; internal audit by MoF; external audit by Supreme Audit Office; Bank dialogue with MoF to streamline payment processes; procurement complaint handling system; code of ethics for PMT; regular Bank supervision missions"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Government's strategy and policy for road management and maintenance have been weak, resulting in rapid deterioration of past investments. Substantial risk for medium- and long-term sustainability of road infrastructure despite ongoing efforts",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Project includes study to define sustainable asset management arrangements; implementation of tolling mechanism for self-financing O&M; performance-based maintenance contracts; axle load control measures; traffic management to reduce snow chain use; South-South knowledge exchange with Chile and Argentina on high-altitude road management; involvement of IFC in developing O&M arrangements; possible PPP for road operations"
+      },
+      {
+        "risk_category": "Environment and Social",
+        "risk_description": "Land acquisition and resettlement required along B2B road affecting 650-700 families. Social and security environment in B2B area presents challenges. Risk of inadequate RAP implementation given government's limited capacity",
+        "risk_rating": "high",
+        "mitigation_measures": "Detailed Social Impact Assessment and follow-up survey; Resettlement Action Plan (RAP) for first segment completed and disclosed; Resettlement Policy Framework (RPF) for remaining segments; Environmental and Social Impact Assessment (ESIA) and Environmental and Social Management Framework (ESMF); Environmental and Social Safeguard Management Unit (ESMU) within PMT with environmental and social specialists; third-party monitoring of RAP implementation; Grievance Redress Mechanism at multiple levels; government budget allocation for RAP implementation; community consultations including women; road design modifications to minimize land acquisition"
+      },
+      {
+        "risk_category": "Technical Design",
+        "risk_description": "Moderate risk that technical design would be of insufficient quality. Exact scope of Salang tunnel and snow gallery repairs not fully known pending detailed technical assessments",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Review of design by Bank staff and technical specialists; detailed condition survey of Salang Pass pavement and structures; geotechnical investigation of tunnel using ground-penetrating radar; detailed engineering design for Salang Pass to be completed by June 2017; independent technical audits of civil works; specialized tunnel design and engineering services consultant"
+      },
+      {
+        "risk_category": "Other - Cost Estimation Uncertainty",
+        "risk_description": "High risk of cost variations due to: (1) Security environment and contractor pricing of security risks (could increase costs by 30%); (2) Supply/demand situation for contractors (could increase costs by 25-30%); (3) Technical/engineering uncertainties for Salang tunnel and galleries (5-10% impact). Project cost estimate of US$255 million is imprecise",
+        "risk_rating": "high",
+        "mitigation_measures": "Strategic packaging of contracts in smaller lots; phasing of contract launches to avoid bunching and market saturation; cost estimates include insurance and private security premiums; detailed technical assessments underway; risk that additional financing may be needed or scope of Salang works may be reduced; prioritization of Salang works based on risk analysis"
+      },
+      {
+        "risk_category": "Stakeholder",
+        "risk_description": "Project universally supported at national level and by local communities. However, risk that Taliban and other local insurgent forces may change their attitude due to broader political reasons despite current support",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Implementation strategy designed to generate local support through labor-intensive work methods and local contractor involvement; communications and community engagement strategy; grievance redress mechanism; informal consultations with Taliban showing support; packaging of works to benefit local groups"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Low risk that macroeconomic issues could affect project implementation since project is mostly grant-funded and does not depend on large-scale government funding or macroeconomic policies",
+        "risk_rating": "low",
+        "mitigation_measures": "Grant financing reduces macroeconomic dependency; government committed to covering RAP costs (US$5 million)"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Category A - Full Assessment required",
+      "triggered_safeguard_policies": [
+        "Environmental Assessment (OP/BP 4.01)",
+        "Physical Cultural Resources (OP/BP 4.11)",
+        "Involuntary Resettlement (OP/BP 4.12)"
+      ],
+      "grievance_redress_mechanism": "yes - Multi-level Grievance Redress Mechanism established with committees at: (1) Road Segment level with CDC members, PAP representatives, contractor and MPW staff; (2) Project level with MPW PMT staff, Arazi, Ministry of Justice representative, District/Provincial Governors, Provincial Director of MPW, ESMU safeguards officer, AKDN, and community representatives; (3) MPW Headquarter level with Deputy Minister, PMT Director, and social team. System includes registry of complaints and recording of response times. ICT-based citizen feedback mechanisms planned. Intermediate system in place pending full Board approval",
+      "gender_considerations": "Project expected to have indirect positive impacts on women through improved pedestrian safety (women and children likely to benefit most from safety improvements), improved access to social services (hospitals, schools, childcare centers), and improved access to markets. Road safety design elements included to address pedestrian safety concerns. Separate consultations conducted with women on road design options. No gender-specific project activities identified as major roads not suitable for such activities. Lack of gender-disaggregated data on road traffic injuries noted; efforts to be made to convince government to collect such data. At least one ESMU staff member to be female to facilitate consultations with female PAPs",
+      "vulnerable_groups": [
+        "Project-Affected Persons (PAPs) - 650-700 families losing land/properties along B2B road",
+        "Women and children (pedestrian safety benefits)",
+        "People with Limited Mobility (service areas designed barrier-free)",
+        "Extremely poor households (60% of households in project area with income less than US$1 per capita per day)",
+        "Communities in Taliban-controlled areas"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project explicitly designed with conflict sensitivity in mind. Much of B2B road passes through Taliban-controlled areas. Project includes measures to build local support and ensure continued backing from Taliban and other local groups: (1) Labor-intensive work methods to create local employment; (2) Packaging of civil works into smaller lots for local contractor participation; (3) Communications and community engagement strategy; (4) Grievance redress mechanism; (5) Inter-Ministerial Steering Committee with security-related agencies for coordination. Informal consultations with Taliban representatives show support for project provided local groups benefit from construction and operation. Project design emphasizes pragmatic, best-fit options rather than technical perfection given fragile circumstances",
+      "fragility_context": "Afghanistan is one of the least developed countries (GDP per capita US$693 in 2014), ranked 169th on UNDP Human Development Index. Country characterized by high poverty and inequality. Political transition process underway with unity government since late 2014. Afghan National Security Forces assumed full security responsibility end of 2014. Economic growth slowed sharply from 9% average (2003-2012) to 3.7% (2013) and 2% (2014) due to political transition and slow reforms. Government facing fiscal crisis with domestic revenues declining from 11.6% of GDP (2011) to 8.4% (2014). Government highly aid-dependent. Formidable challenges remain in poverty reduction, job creation, and service delivery. Project area includes regions with highest poverty concentration (Northeast, West-Central, East regions). 40% of Afghanistan's poor reside in Northeast and Central regions separated by Hindukush. Regional disparities account for 19% of inequality (up from 15% in 2008). Spatial concentration of poverty related to remoteness, shocks, and fragility dimensions",
+      "security_considerations": "Serious security issues prevail throughout Afghanistan. B2B road alignment passes through areas essentially controlled by Taliban and/or other local groups with government unable to assert effective control. However, MPW staff and local consultants can presently work in these areas. Taliban have expressed informal support for project provided local groups benefit. Project includes security-related cost premiums in estimates (could increase costs by up to 30%). Contractors may face difficulty obtaining security-related insurance. International contractors may be unwilling to mobilize. Project design includes measures to mitigate security risks: strategic packaging of works, labor-intensive methods, local contractor involvement, Inter-Ministerial Steering Committee coordination with security agencies. Third-party monitoring used due to security constraints preventing regular World Bank staff field visits",
+      "displacement_or_refugees": "yes - Involuntary resettlement required. Estimated 650-700 families will be affected by land acquisition along B2B road, losing part of residential, commercial, or agricultural properties. Detailed 100% household census conducted for first segment. Resettlement Action Plan (RAP) for first segment prepared and disclosed (May 20, 2015). Resettlement Policy Framework (RPF) prepared for remaining five segments. Government responsible for RAP implementation prior to civil works commencement. Government allocated budget resources for compensation payments (US$5 million). Compensation to be made through government commission. Livelihood restoration included for affected businesses. Third-party monitoring of RAP implementation planned. No land acquisition or resettlement expected on Salang Pass (works within existing right-of-way). Road design modifications made to minimize land acquisition needs"
+    }
+  }
+}

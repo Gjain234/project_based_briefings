@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P176935",
+    "guid": 717321706545772846,
+    "node_id": 33653443,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b088bdd9c2&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "National Social Safety Net Program - Scale Up (NASSP-SU)",
+      "project_development_objective": "Expand coverage of shock responsive safety net support among the poor and vulnerable and strengthen the national safety net delivery system",
+      "total_financing": "US$800.0 million equivalent (SDR 565.3 million)",
+      "implementation_period": "December 2021 - December 2023 (2 years)",
+      "beneficiaries": "8.2 million households under Component 1 (3.2 million rural, 5.0 million urban); 2.0 million households under Component 2; approximately 10.2 million poor and vulnerable households total (about one-quarter of all Nigerian households)"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "All 36 states of Nigeria",
+        "Federal Capital Territory (FCT)",
+        "1,163 poorest urban wards (expanding to 1,800 wards)",
+        "Rural areas covered by National Social Registry (NSR)",
+        "Northeast region (70.2% poverty rate)",
+        "Northern states (15 states exposed to desertification)"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "partial - Northeast region affected by fragility, conflict, and insecurity; food-producing areas affected by conflict and insecurity contributing to food price inflation; project targets areas vulnerable to climate shocks including drought and flooding"
+    },
+    "key_components": [
+      {
+        "component_name": "Economic Shock Responsive Cash Transfer (ESR-CT)",
+        "description": "Time-limited cash transfers of N5,000 (US$12.17) per month for 6 months to poor and vulnerable households in response to food price inflation and economic shocks. Subcomponent 1.1 targets 3.2 million rural households from NSR; Subcomponent 1.2 targets 5.0 million urban households through expanded RRR using satellite imagery-based poverty maps and USSD-based self-registration",
+        "financing": "US$600.0 million"
+      },
+      {
+        "component_name": "Extended Regular Cash Transfer (ER-CT)",
+        "description": "Continuation of regular cash transfers to existing NASSP beneficiaries (1.8-2.0 million households, 94% female) for at least 2 years total support duration, plus one-time exit grant. Beneficiaries receive N5,000 per month",
+        "financing": "US$147.0 million"
+      },
+      {
+        "component_name": "Delivery System Strengthening and Project Management",
+        "description": "Expansion and strengthening of safety nets delivery systems through digital technologies, RRR expansion, payment mechanism improvements, targeting strengthening, MIS integration, institutional strengthening, impact evaluation, and project management support. Includes gender and social inclusion, citizen engagement, GRM, and environmental/social safeguards",
+        "financing": "US$53.0 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Federal Ministry of Humanitarian Affairs, Disaster Management, and Social Development (FMHADMSD), with National Social Safety Nets Coordinating Office (NASSCO) and National Cash Transfer Office (NCTO) at federal level; State Operations Coordinating Units (SOCUs) and State Cash Transfer Units (SCTUs) at state level; Local Government Desk Officers (LGDOs) at LGA level",
+      "coordination_mechanisms": "National Steering Committee (NSC) chaired by Minister of FMHADMSD; State Steering Committees (SSCs) chaired by state commissioners for planning/budget; federal-state coordination through Memoranda of Understanding (MoUs); Output-Based Disbursement (OBD) framework for state-level funding",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers (November 2020); World Bank Anti-Corruption Guidelines; National Competitive Bidding (NCB) and International Competitive Bidding (ICB) as applicable; STEP system for procurement tracking; Project Procurement Strategy for Development (PPSD) prepared",
+      "monitoring_and_evaluation": "Comprehensive M&E system using MIS, third-party monitoring through independent CSOs, quarterly internal audit reports, annual audited financial statements, beneficiary satisfaction surveys, random post-distribution monitoring, impact evaluations, and process evaluations. M&E responsibility with NASSCO/NCTO at federal level and SOCU/SCTU at state level"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Upcoming national elections in 2023 may pose significant risk in the year preceding elections and contingent on election outcomes; potential for political interference in program implementation",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Strong communications strategy and citizen engagement around CT programs; clear messaging to stakeholders at national, state, and grassroot levels on project objectives"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Concerns related to fiscal and institutional sustainability of the program; low level of investment and coverage of social protection; volatile exchange rates and high inflation affecting program costs",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Government efforts to strengthen social protection sector through policy framework revision and creation of dedicated ministry; ongoing fiscal reforms and policy dialogue; allowance for international and local bidders to submit pricing in multiple convertible currencies"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Highly decentralized delivery involving flow of funds at lowest administrative levels with low capacity; potential integrity issues and fraud in beneficiary selection; unretired advances and inadequate documentation",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Robust FM arrangements through PFMU/FPFMD with strong controls; fully digitized payment of transfers directly to beneficiary accounts; independent third-party monitoring; quarterly CT audits; GRM in all 36 states and FCT; enhanced accountability framework; regular World Bank supervision and technical assistance"
+      },
+      {
+        "risk_category": "Technical Design",
+        "risk_description": "Novel nature of RRR rollout with unanticipated technical challenges; risks of duplication/double-dipping due to minimal KYC requirements for Tier 1 accounts; potential fraud; data management and cybersecurity risks; slower-than-expected RRR rollout pace",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Beneficiaries enrolled from validated NSR and RRR; independent third-party monitoring and random post-distribution monitoring; promotion of higher-tier accounts where possible; assessment of data management protocols and cybersecurity systems; iterative improvements to RRR system; MoU with Central Bank of Nigeria on payment modalities"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Risk of social exclusion of untargeted vulnerable groups (persons with disabilities, IDPs, ethnic minorities, those without phones/bank accounts); potential for elite capture; inadequate stakeholder consultation; GBV/SEA/SH risks; COVID-19 exposure during registration; security risks in insecure areas; data protection issues; potential for incorrect identification of poor in urban areas",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Strong communication campaigns in local languages; dedicated outreach to vulnerable groups; home visits for persons with disabilities; GRM system with multiple entry points; third-party monitoring; GBV (SEA/SH) Action Plan; COVID-19 safety protocols following WHO guidelines; digital payment to minimize security risks; data protection assessments and mitigation measures; process evaluation of delivery approaches within 6 months of effectiveness"
+      },
+      {
+        "risk_category": "Institutional Capacity",
+        "risk_description": "Low capacity at state and local government levels; need for sustained deployment and retention of SOCU/SCTU staff; institutional sustainability concerns",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Minimum conditions for state participation including long-term staff deployment, institutionalization of SOCU/SCTU with clear budget lines, and MoU reinforcement; capacity building and training; World Bank technical assistance; evolution of project units into permanent government structures"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate",
+      "triggered_safeguard_policies": [
+        "ESS1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS2: Labor and Working Conditions",
+        "ESS3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS4: Community Health and Safety",
+        "ESS10: Stakeholder Engagement and Information Disclosure"
+      ],
+      "grievance_redress_mechanism": "Yes - Functional GRM system established under NASSP with multiple entry points (walk-ins, written letters, toll-free calls, emails, online, GRM App); GRM managers at state level (74) and grievance redress officers at LGA level (774); project-level GRM for workers; GBV-specific GRM; annual review of GRM functionality; grievances addressed within specified timeframes; third-party monitoring of GRM implementation",
+      "gender_considerations": "Project deliberately selects female household members as primary beneficiaries to address gender gaps in financial inclusion and control of household resources; 94% of regular-CT beneficiaries are female; project encourages and facilitates female members to open transactional accounts; targeted outreach and communication campaigns tailored to local norms; gender-inclusive GRM; gender guidelines operationalized in project activities; female staff recruitment promoted (target 30%); monitoring of percentage of female beneficiaries receiving transfers",
+      "vulnerable_groups": [
+        "Persons with disabilities",
+        "Internally Displaced Persons (IDPs)",
+        "Persons living in slum communities",
+        "Ethnic minorities",
+        "Marginalized groups",
+        "Elderly",
+        "Women",
+        "People without mobile phones or bank accounts",
+        "People with limited digital and financial literacy"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project targets poor and vulnerable households in conflict-affected areas, particularly northeast region with 70.2% poverty rate and ongoing fragility/insecurity. Food price inflation partly driven by conflict in food-producing regions. Project aims to prevent negative coping mechanisms that could exacerbate conflict. Digital payment mechanism reduces need for cash handling in insecure areas. Project does not anticipate use of security personnel. Existing security procedures from NASSP will be adopted. In situations where security becomes critical due to insecurity, employment of security personnel will follow ESS4 provisions. Project includes conflict-sensitive messaging and community engagement approaches.",
+      "fragility_context": "Nigeria faces multiple fragility factors: (1) Northeast region affected by conflict and insecurity with 70.2% poverty rate; (2) Food price inflation driven partly by conflict in food-producing areas; (3) Climate change exacerbating conflict in agricultural/pastoral areas; (4) Weak public sector capacity; (5) Large youth unemployment; (6) Over 80 million people in poverty; (7) Additional 25% vulnerable to falling into poverty; (8) Desertification affecting 15 northern states with 60+ million people; (9) Frequent flooding and droughts. Project addresses fragility through shock-responsive safety nets, building resilience, and strengthening delivery systems.",
+      "security_considerations": "Project does not anticipate use of security personnel due to fully digitized payment mechanism. For beneficiaries in areas with low financial access point coverage, project will procure roaming agent services from PSPs to reduce need for large cash gatherings. Existing security procedures from NASSP will be adopted. In situations where security becomes critical due to impending insecurity, employment of security personnel will follow ESS4 provisions. Project will rely on digital platforms to minimize security risks. COVID-19 safety protocols will be implemented during registration/enrollment to prevent large gatherings.",
+      "displacement_or_refugees": "Yes - Project acknowledges IDPs living in camps in urban areas as a vulnerable group at risk of exclusion. Project will implement specific outreach strategies to reach and include IDPs. Project targets areas with high climate vulnerability (drought, flooding, desertification) which are drivers of displacement. Over 8.7 million people affected by flooding between 2010-2018. Major flood events in 2012, 2018, 2019 led to displacement of over 2 million Nigerians. Project aims to build resilience and prevent negative coping strategies that could lead to further displacement."
+    }
+  }
+}

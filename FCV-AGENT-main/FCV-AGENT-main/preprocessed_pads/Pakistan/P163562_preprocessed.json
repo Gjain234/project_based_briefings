@@ -1,0 +1,140 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P163562",
+    "guid": 935681561946547674,
+    "node_id": 31156674,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b086da7265&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 150791
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Khyber Pakhtunkhwa Integrated Tourism Development Project (KITE)",
+      "project_development_objective": "To improve tourism-enabling infrastructure, enhance tourism assets, and strengthen destination management for sustainable tourism development in Khyber Pakhtunkhwa",
+      "total_financing": "US$77 million (IDA: US$70 million, Counterpart: US$7 million)",
+      "implementation_period": "2019-2025 (6 years, closing date June 30, 2025)",
+      "beneficiaries": "Public and private sector stakeholders, travelers (especially women, youth, disabled, elderly), local MSMEs, tourism operators, service providers, local communities, youth and women through training programs, heritage preservation beneficiaries"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Naran",
+        "Chitral",
+        "Galliyat",
+        "Kalam",
+        "Kumrat",
+        "Khyber Pakhtunkhwa province"
+      ],
+      "coverage_type": "provincial with focus on four main destinations and eleven potential Integrated Tourism Zones (ITZs)",
+      "fragile_or_conflict_affected_areas": "partial - Khyber Pakhtunkhwa has transitioned out of vulnerability and unrest over the past eight years with substantial poverty reduction, but parts remain vulnerable to crises. Former FATA (Federally Administered Tribal Areas) merged with province in 2018. Security situation has improved considerably but political and governance risks remain substantial."
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Sector Enablement and Tourism Entrepreneurship",
+        "description": "Strengthening policy, institutional and regulatory environment; establishing automated data collection and monitoring mechanisms; supporting tourism entrepreneurship through awareness, BDS services, and vocational skills training (targeted at women and youth); transforming visitor experience using digital technology and supporting creative business models",
+        "financing": "US$8 million"
+      },
+      {
+        "component_name": "Component 2: Infrastructure Planning and Development",
+        "description": "Destination development solutions through DIMPs and ITZ feasibility studies; preserving and managing heritage sites; improving access through road rehabilitation/upgradation, road maintenance equipment, and telephone/internet connectivity; feasibility studies for at least two ITZs",
+        "financing": "US$55 million"
+      },
+      {
+        "component_name": "Component 3: Project Management and Capacity Building",
+        "description": "Supporting project management and capacity building for PMUs; implementing environmental preservation and waste management activities including plastics recycling; civil works for PMU functioning; implementing Gender Analysis and Action Plan",
+        "financing": "US$7 million"
+      },
+      {
+        "component_name": "Component 4: Contingent Emergency Response Component (CERC)",
+        "description": "Providing immediate response to eligible crisis or emergency as needed; allows rapid reallocation of credit proceeds from other components under streamlined procedures",
+        "financing": "US$0 (provisional)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Two Implementing Entities: (1) Department of Culture, Sports, Tourism and Youth Affairs (DoT) - responsible for Components 1, 2, and 3; (2) Communication and Works Department (C&W) - responsible for infrastructure development activities under Component 2. Each has a Project Management Unit (PMU-DoT and PMU-C&W) led by Project Directors",
+      "coordination_mechanisms": "Project Steering Committee (PSC) chaired by Additional Chief Secretary of Khyber Pakhtunkhwa, including representatives from GoKP departments (Finance, C&W, DoT), NTCB, Federal Planning Commission, private sector stakeholders, T&T industry, academia, Women Chambers of Commerce, Bank of Khyber, SME Development Authority. Shared Services Unit (SSU) provides cross-cutting implementation support. Liaison Officer ensures coordination between PMU-DoT and PMU-C&W",
+      "procurement_approach": "World Bank Procurement Regulations for Borrowers (August 2018) for Investment Project Financing; use of STEP (Systematic Tracking of Exchanges in Procurement) online system; 18-month procurement plan prepared; national procurement arrangements permitted when approaching national market with conditions; prior-review requirements for certain contracts; complaint handling mechanism established",
+      "monitoring_and_evaluation": "M&E system based on results framework; PMUs responsible for data collection through implementation partners; PMU-DoT compiles and aggregates M&E data; TMIS (Tourism Management Information System) used to monitor procurement milestones, results, disbursements; Third-Party Monitoring Agent (TPMA) hired for independent monitoring; biannual reporting to PSC; digital data collection system to track T&T sector progress"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Khyber Pakhtunkhwa undergoing transition through merger with former FATA. Realization of tourism development depends on continuing stable political economy and security environment. Reversal of political reforms or security deterioration could impede implementation",
+        "risk_rating": "substantial",
+        "mitigation_measures": "KITE implementation overseen by Senior Minister and supported by PSC; security situation has improved considerably; technical assistance provided to establish tourist police; high-level client ownership and clear decision-making mechanisms"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Recent deterioration in macro-fiscal situation in Pakistan with currency depreciation and energy tariff hikes. Medium-term inflationary impacts and reduced spending power could impact domestic tourism. Fiscal constraints may delay release of capital and recurrent budgets",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Economic reform program negotiated with IMF; major infrastructure activities scheduled for second half of project life; province to prioritize project expenditures in annual budget and development plans"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "KITE is World Bank's first IDA engagement for KP tourism sector. Implementation challenges persist due to gaps in departmental capacities. DoT and C&W lack experience with World Bank procedures. Weak institutional capacity in both departments",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Ongoing ERKF (AF) project has successfully partnered with DoT; DoT teams learning from Punjab Walled City Project; both departments have notified KITE PMUs and Project Directors; capacity building through Component 3; support from SSU; training in World Bank procedures"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Significant weaknesses in procurement and contract management due to insufficient capacity. Both DoT and C&W implementing World Bank project for first time. Constrained FM capacity and lack of dedicated FM staff. Weak internal audit function in DoT",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Finance Managers to be hired for each PMU within one month of effectiveness; periodic training on FM and procurement capacity; support through SSU experts; C&W has considerable experience with civil works; internal audit by Provincial Internal Audit Cell; supervision missions during first six months and annually thereafter"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Potential adverse environmental impacts from physical activities including air/noise pollution, roadside tree cutting, labor camps, traffic congestion, improper waste disposal at natural sites, wildlife disturbance. Social impacts include labor influx, over-tourism, cultural disruption, gender-based violence risks, displacement",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Environmental and Social Management Framework (ESMF) prepared; site-specific ESMPs for civil works; Resettlement Policy Framework (RPF) and Resettlement Action Plans (RAPs) for land acquisition; Indigenous Peoples Planning Framework (IPPF) for Kalash communities; Physical Cultural Resource Management Framework; Labor Influx Management Plans in construction contracts; GRM with gender-sensitive protocol; Code of Conduct for contractors; training for workers and community; women-friendly amenities at sites"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Coordination between Federal and provincial governments needs strengthening. Constraints to doing business with multiple agencies. Underdeveloped entrepreneurship system. Road and air connectivity challenges. Unregulated P2P accommodation economy",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Policy and regulatory environment strengthening through Component 1; advisory support to provincial authorities; business registration and licensing reform; technical assistance on PPPs and ITZs; digital technology support for visitor management; coordination through NTCB and PSC"
+      },
+      {
+        "risk_category": "Technical Design of Project",
+        "risk_description": "Project design complexity with multiple components and implementing agencies. Destination selection and prioritization challenges. Sustainability of investments dependent on private sector participation and local community engagement",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Clear selection criteria for destinations (tourism attributes, visitation, development potential, sustainability); DIMPs for strategic planning; private sector engagement through IFC Investment Generation Approach; community engagement mechanisms; Project Operations Manual with detailed procedures; lessons learned from World Bank tourism projects incorporated"
+      },
+      {
+        "risk_category": "Stakeholder Engagement",
+        "risk_description": "Need for strong local community support and private sector participation. Risk of over-tourism and environmental degradation without proper management. Potential for negative cultural impacts and social disruption",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Citizens engagement mechanisms building on existing systems; transparent information dissemination; GRM accessible to project affected persons; community consultations in destination development; DIMPs developed in consultation with stakeholders; awareness campaigns on responsible tourism; involvement of CSOs and academia"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "B - Partial Assessment",
+      "triggered_safeguard_policies": [
+        "Environmental Assessment (OP/BP 4.01)",
+        "Natural Habitats (OP/BP 4.04)",
+        "Forests (OP/BP 4.36)",
+        "Physical Cultural Resources (OP/BP 4.11)",
+        "Indigenous Peoples (OP/BP 4.10)",
+        "Involuntary Resettlement (OP/BP 4.12)"
+      ],
+      "grievance_redress_mechanism": "Yes - GRM accessible to project affected persons (PAPs) housed in PMU-C&W and PMU-DoT with user-friendly complaint submission options. Clear roles, timelines, procedures and responsibilities outlined. GRM at PMU-C&W describes options for on-site grievance redress during land acquisition and resettlement. In-built monitoring mechanism to check responsiveness. TMIS digital system includes visitor feedback and complaints option. TIFCs function as entry points for tourist-community feedback. DoT maintains active social media page for feedback. GRM is gender-sensitive with protocol for handling GBV complaints. World Bank Grievance Redress Service (GRS) and Inspection Panel also available",
+      "gender_considerations": "Gender Analysis and Action Plan (GAAP) prepared. Project addresses low female labor force participation (FLFP) in KP (20.1% nationally, lower in tourism). Targets: 20% of 30,000 beneficiaries to be women (6,000 women); women entrepreneurs and workers to receive BDS and training; at least 30% women staff in PMUs; women-friendly amenities at tourist sites (toilets, nursing rooms, well-lit parking); support for women-owned MSMEs; vocational skills training targeted at women and youth; awareness campaigns on responsible tourism and GBV; anti-harassment helplines and referral mechanisms; home-based stay facilities for women; gender-responsive codes of conduct for tourism companies; gender mainstreaming within DoT and PMUs",
+      "vulnerable_groups": [
+        "Women (especially in tourism workforce and as entrepreneurs)",
+        "Youth (vocational training and employment opportunities)",
+        "Disabled persons (accessible facilities and services)",
+        "Elderly travelers (accessible facilities)",
+        "Indigenous Kalash people (in Chitral district)",
+        "Local communities in project areas (labor influx, over-tourism impacts)",
+        "Project affected persons (land acquisition, resettlement)",
+        "Low-income households in tourism destinations"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project designed with conflict sensitivity considerations. Khyber Pakhtunkhwa has transitioned out of vulnerability and unrest over past eight years with substantial poverty reduction. Project aims to support economic revitalization and job creation as part of post-conflict recovery. Tourism development positioned as driver of economic growth and social stability. Community engagement and local value chain development emphasized to build social cohesion. Heritage preservation and cultural respect integrated into project design. However, political and governance risks rated substantial due to ongoing transition and potential for reversal of security gains",
+      "fragility_context": "Khyber Pakhtunkhwa province characterized by: (1) Transition from conflict - emerged from period of unrest and vulnerability; (2) Merger with former FATA (2018) requiring strengthened administrative capacity; (3) Low human development outcomes - ranks low on Human Capital Index; (4) High poverty and inequality; (5) Limited access to public services and income generation in rural areas (85% rural population); (6) Youth bulge as both opportunity and challenge; (7) Climate vulnerability - prone to glacial lake outburst floods and extreme weather; (8) Weak institutional capacity in government departments; (9) Limited private sector development; (10) Dependence on Federal Government support during FATA transition period. Project addresses fragility through infrastructure development, job creation, institutional strengthening, and economic diversification",
+      "security_considerations": "Security situation has improved considerably across country and within Khyber Pakhtunkhwa. Project includes technical assistance to establish tourist police in province for enhanced security. Road rehabilitation and connectivity improvements include safety considerations in engineering design. Tourist Information and Facilitation Centers (TIFCs) support visitor safety and information. Mobile repeater stations and signal boosters at remote sites enhance communication and emergency response. However, security risks remain given province's history and ongoing transition. Project design includes contingency planning through CERC component for emergency response",
+      "displacement_or_refugees": "Yes - Involuntary Resettlement (OP/BP 4.12) triggered. Project will require land for construction and rehabilitation of tourist infrastructure. Some project interventions may lead to resettlement but with low and localized impacts on livelihoods. Efforts will be made to use government-owned land and minimize private land acquisition. Resettlement Policy Framework (RPF) prepared to identify and mitigate income losses and social impacts from land acquisition. Resettlement Action Plans (RAPs) or Abbreviated RAPs will be prepared for activities causing land-taking impacts. Indicative amount of US$7 million (PKR 1,011 million) included in project PC1 for RAP costs to be financed by GoKP. GRM at PMU-C&W describes options for on-site grievance redress during land acquisition and resettlement process. Project Affected Persons (PAPs) have access to grievance mechanisms and World Bank's GRS and Inspection Panel"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P160395",
+    "guid": 686501520132423023,
+    "node_id": 29585772,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b0856648a9&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Ethiopia Electrification Program (ELEAP)",
+      "project_development_objective": "To increase access to electricity in Ethiopia and to enhance institutional capacity for planning and implementation of the Government's electrification program",
+      "total_financing": "US$375 million (US$250 million IDA Regular Credit + US$125 million IDA Scale-Up Facility Credit)",
+      "implementation_period": "March 1, 2018 to July 7, 2023 (66 months)",
+      "beneficiaries": "1,080,000 households for on-grid connections (5.4 million people), 51,100 households for off-grid services (255,000 people), social institutions including schools and health centers, productive enterprises, electricity sector institutions"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "All 15 regions of Ethiopia",
+        "Rural and urban areas nationwide",
+        "Focus on areas within 3km of existing grid infrastructure"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "partial - program operates in context of political tensions and state of emergency declared October 2016 (lifted August 2017), with risks of civil unrest affecting rural access"
+    },
+    "key_components": [
+      {
+        "component_name": "Results Area 1: On-grid electricity connections",
+        "description": "Large scale densification of electricity connections including LV extensions, service drops, metering and limited MV line installations/rehabilitation for 1,080,000 new connections",
+        "financing": "US$324 million"
+      },
+      {
+        "component_name": "Results Area 2: Off-grid electricity access",
+        "description": "Pilot-scale off-grid service delivery including 5 renewable energy mini-grids and 50,000 stand-alone solar systems",
+        "financing": "US$14.5 million"
+      },
+      {
+        "component_name": "Results Area 3: Sector capacity and institutional reform",
+        "description": "Strengthening planning capacity, establishing Department of Electrification, improving fiduciary systems, gender and citizen engagement, safeguards systems",
+        "financing": "US$36.5 million (combined for DLIs 3-7)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ethiopian Electric Utility (EEU) as main implementing agency, Ministry of Water, Irrigation and Electricity (MoWIE) for oversight and coordination",
+      "coordination_mechanisms": "Department of Electrification (DoE) to be established under MoWIE, National Steering Committee for high-level guidance, Task Force for day-to-day coordination",
+      "procurement_approach": "EEU follows own procurement guidelines based on federal law and World Bank procedures, MoWIE follows Federal Public Procurement Rules",
+      "monitoring_and_evaluation": "DoE responsible for program oversight, Central Statistics Agency (CSA) as independent verification agency for connections, separate IVA for other DLIs"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political",
+        "risk_description": "Political tensions and civil unrest following demonstrations, state of emergency declared in 2016, upcoming 2020 elections may affect program implementation and rural access",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Comprehensive citizen engagement strategy, transparent communication on program design and selection criteria, public consultations conducted"
+      },
+      {
+        "risk_category": "institutional",
+        "risk_description": "Limited capacity of MoWIE and EEU to implement ambitious electrification targets, stretched institutional capacity with NEP expansion",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Capacity strengthening through technical assistance, training programs, establishment of DoE, improved planning and M&E systems"
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "EEU financial audit backlog, disclaimer audit opinion for 2015, significant internal control findings, weak procurement capacity and transparency issues",
+        "risk_rating": "high",
+        "mitigation_measures": "FM action plan implementation, technical assistance for procurement and FM improvement, DLIs for audited financial statements and procurement performance"
+      },
+      {
+        "risk_category": "financial",
+        "risk_description": "Low domestic electricity tariffs (US$0.03/kWh) among lowest in Sub-Saharan Africa, sector debt obligations of US$5 billion, financial sustainability concerns",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Tariff revision under consideration, export revenue augmentation, debt restructuring options, private sector participation through IPPs"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Not specified but activities expected to have manageable environmental and social impacts",
+      "triggered_safeguard_policies": [],
+      "grievance_redress_mechanism": "yes - GRM to be established at all levels, existing EEU customer service mechanisms to be strengthened, complaint handling procedures for procurement and F&C",
+      "gender_considerations": "Gender and citizen engagement work program required, targets for women's employment at EEU (increase from 20% to 30%), attention to female-headed households, productive uses of energy for women",
+      "vulnerable_groups": [
+        "Female-headed households",
+        "Rural poor households",
+        "Remote communities without grid access"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Program includes comprehensive citizen engagement strategy to address political tensions, transparent selection criteria and communication to prevent regional favoritism, grievance mechanisms established",
+      "fragility_context": "Ethiopia experiencing political tensions with demonstrations and civil unrest, state of emergency declared 2016-2017, risks to rural accessibility and government decision-making capacity during implementation",
+      "security_considerations": "Risk that civil unrest could affect access to rural areas for program implementation, potential for tensions between government and civil society to impact program acceptance",
+      "displacement_or_refugees": "no specific mention of displacement or refugee populations, though program targets vulnerable groups including remote rural communities"
+    }
+  }
+}

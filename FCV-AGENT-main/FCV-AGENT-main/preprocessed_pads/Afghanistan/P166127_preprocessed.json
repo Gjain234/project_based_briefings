@@ -1,0 +1,177 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P166127",
+    "guid": 714251547070785057,
+    "node_id": 30748949,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b086bee5fe&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 243555
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Afghanistan: Eshteghal Zaiee - Karmondena (EZ-Kar) Project",
+      "project_development_objective": "To strengthen the enabling environment for economic opportunities in cities where there is a high influx of displaced people by increasing returnees' access to civil documents, providing short-term employment opportunities, improving market enabling infrastructure, and supporting investor friendly regulatory reforms",
+      "total_financing": "US$200 million (IDA: US$150 million; ARTF: US$50 million)",
+      "implementation_period": "2018-2023 (5 years)",
+      "beneficiaries": "Afghan refugees in Pakistan, returnees, internally displaced persons (IDPs), and host communities in 13 cities: Kabul, Jalalabad, Kandahar, Herat, Puli Khumri, Maimana, Firozkoh, Khost, Asadabad, Kunduz, Mihtarlam, Taloqan, and Paroon. Estimated 80,000 vulnerable households for short-term employment; 1.5 million passport applications expected"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Kabul (Kabul Province)",
+        "Jalalabad (Nangarhar Province)",
+        "Kandahar (Kandahar Province)",
+        "Herat (Herat Province)",
+        "Puli Khumri (Baghlan Province)",
+        "Maimana (Faryab Province)",
+        "Firozkoh (Ghor Province)",
+        "Khost (Khost Province)",
+        "Asadabad (Kunar Province)",
+        "Kunduz (Kunduz Province)",
+        "Mihtarlam (Laghman Province)",
+        "Taloqan (Takhar Province)",
+        "Paroon (Nuristan Province)",
+        "Pakistan (for Component 1 - MoFA missions in Islamabad, Karachi, Peshawar, Quetta)"
+      ],
+      "coverage_type": "National with regional component (Afghanistan and Pakistan)",
+      "fragile_or_conflict_affected_areas": "Yes - Afghanistan is a fragile and conflict-affected state. The project explicitly targets cities with high influx of displaced persons due to conflict and insecurity. Civilian casualties remain at unprecedented levels (10,451 killed/wounded in 2017; 8,050 in first nine months of 2018). Some areas remain difficult to access due to insecurity. The project is marked as operating in a Fragile State and Conflict context"
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Regional and National Integration of Displaced Persons",
+        "description": "Support for Afghan refugees in Pakistan through enhanced MoFA capacity for consular services (passports, civil documents), provision of information services via information centers, helplines, and communications campaigns in Pakistan. Joint MoFA-MoRR communications strategy to facilitate access to economic opportunities and social services",
+        "financing": "US$4.5 million"
+      },
+      {
+        "component_name": "Component 2: Short-Term Employment Opportunities, Reforms, and Market Enabling Infrastructure under IDLG",
+        "description": "Subcomponent 2.1: Short-term employment through labor-intensive public works via Community Development Councils (1,160 CDCs) with grants up to US$27,000 each, benefiting 80,000 vulnerable households. Subcomponent 2.2: Market enabling infrastructure through Gozar and Business Gozar grants (up to US$200,000 each) for 230 Gozars and 30 Business Gozars. Subcomponent 2.3: Municipal-level regulatory reforms focusing on construction permits simplification. Subcomponent 2.4: Component management",
+        "financing": "US$120.5 million"
+      },
+      {
+        "component_name": "Component 3: Prioritized Urban Investments in Four Provincial Capital Cities",
+        "description": "Performance-based grant allocations to Jalalabad, Kandahar, Herat, and Khost for priority infrastructure projects (roads, markets, drainage, street lighting, etc.) conditional on achievement of PFM and construction permit reform triggers. Allocated: Jalalabad US$9M, Kandahar US$4M, Herat US$4M, Khost US$3M. Includes feasibility studies, engineering designs, construction supervision, and M&E",
+        "financing": "US$25 million"
+      },
+      {
+        "component_name": "Component 4: Market Enabling Infrastructure and Reforms for Kabul Municipality",
+        "description": "Subcomponent 4.1: Regulatory reforms for construction permits in Kabul (target: reduce from 13 to 10 processing steps, 199 to 160 days). Subcomponent 4.2: Priority Projects for market upgrading, roads, electricity, logistics infrastructure (max US$2.5M per project). Subcomponent 4.3: Component management using existing KMDP PIU",
+        "financing": "US$40 million"
+      },
+      {
+        "component_name": "Component 5: Red Carpet and Program Coordination",
+        "description": "Subcomponent 5.1: National-level regulatory reforms including construction permit simplification, building code development, business service center feasibility assessments, and coordination mechanisms. Subcomponent 5.2: Inter-ministerial program coordination through Project Steering Committee, technical working groups, MoUs, capacity building, M&E systems, GRM, and communications",
+        "financing": "US$10 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Multiple agencies: Ministry of Foreign Affairs (MoFA) for Component 1; Independent Directorate of Local Governance (IDLG) for Components 2 and 3; Kabul Municipality for Component 4; Ministry of Economy (MoEC) for Component 5 and overall coordination. Ministry of Finance is the Borrower",
+      "coordination_mechanisms": "Deputy Minister-level Project Steering Committee chaired by MoEC Deputy Minister; Technical-level steering committee meeting monthly; Memoranda of Understanding signed by all implementing agencies and MoRR outlining roles and responsibilities; City Coordination Committees in each city; Joint Communications Committee for Component 1; Displacement and Returnee Executive Committee (DiREC) for broader government coordination",
+      "procurement_approach": "World Bank Procurement Regulations for IPF; National Procurement Authority oversight; Prior and post-review by World Bank; STEP system for procurement planning and tracking; Advance procurement authorized; Community-based procurement for CDCs, Gozars, and Business Gozars following CCAP modalities; Designated Accounts in Da Afghanistan Bank for fund disbursement",
+      "monitoring_and_evaluation": "Each implementing agency responsible for component-level M&E; MoEC coordinates and consolidates quarterly progress reports; Project MIS managed by MoEC fed by implementing agencies' MISs; Semi-annual internal audit by chartered accountancy firm; Annual external audit by Supreme Audit Office; Third-Party Monitoring (TPM) for high-risk components; Geo-Enabling Initiative for Monitoring and Supervision (GEMS) for remote monitoring; Community Participatory Monitoring under CCAP; Beneficiary satisfaction surveys; Rapid assessments for qualitative details"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Current political arrangements and possibility of government change pose high risks. 2018-2019 elections create political instability. Business confidence declining and economic activity slowing. Uncertainty around policy continuity and government commitment to project objectives",
+        "risk_rating": "High",
+        "mitigation_measures": "Implementation of Transparency and Accountability Framework; designated Access to Information focal point; various communications and community engagement tools; pro-active disclosure of project information; community-based accountability mechanisms; strong inter-ministerial coordination through PSC and MoUs"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "High risks from uncertain and limited domestic and external fiscal resources; continued high security expenditure; weak economic growth (projected 2.4% in 2018, 3.7% by 2021); poverty rate increased from 38% (2011/12) to 55% (2016/17); weak labor demand despite increasing labor force",
+        "risk_rating": "High",
+        "mitigation_measures": "Project focuses on generating economic opportunities to support growth; short-term employment and market infrastructure investments expected to contribute to economic improvement; alignment with government's economic growth agenda"
+      },
+      {
+        "risk_category": "Security",
+        "risk_description": "Continued insurgent activity and high civilian casualties (10,451 killed/wounded in 2017; 8,050 in first 9 months of 2018); some areas difficult to access due to insecurity; impacts on movement of technical expertise, increases costs, and complicates monitoring activities",
+        "risk_rating": "High",
+        "mitigation_measures": "Geo-Enabling Initiative for Monitoring and Supervision (GEMS) for remote monitoring; Third-Party Monitoring; flexible implementation arrangements; project addresses returnee challenge which could reduce security risks if successful"
+      },
+      {
+        "risk_category": "Social Protection",
+        "risk_description": "Displaced populations subject to protection risks including harassment, gender-based violence, asset preservation challenges, and access to services. Large returning situation creates vulnerability. Competition for jobs between returnees/IDPs and host communities could create resentment",
+        "risk_rating": "High",
+        "mitigation_measures": "Red carpet and returnee integration components aimed at managing protection risks; whole-of-community approach for beneficiary selection to ensure vulnerable people from both host communities and IDPs/returnees benefit equally; gender-based violence risk mitigation through ESMPs with codes of conduct; functional GRM for women; community participatory monitoring"
+      },
+      {
+        "risk_category": "Implementation",
+        "risk_description": "Complex project with multiple ministries involved; two implementing agencies (MoFA, MoEC) have no World Bank experience and low capacity; wide geographic spread across 13 cities stretches supervision capacity; fluid movement of people and changing regional policies around refugees; multiplicity of agencies and coordination challenges",
+        "risk_rating": "High",
+        "mitigation_measures": "Transparency and Accountability Framework building on what works in Afghanistan and FCV contexts; Third-Party Monitoring and GEMS; strengthened two-way communications; better use of country systems for FM and Procurement; functioning community-based accountability mechanisms from CCAP; comprehensive FM capacity building plan; dedicated FM and procurement staff; semi-annual internal audits; strong coordination mechanisms through PSC and MoUs; phased implementation with complexity added as capability proven; leveraging existing systems and structures"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "High FM risk due to: limited FM capacity in implementing agencies; excess use and delayed liquidation of cash advances; absence of management reporting system; low budget credibility; limited internal audit scope and poor quality; non-compliance with audit recommendations. High procurement risk due to: newly hired procurement staff unfamiliar with World Bank regulations; weak procurement systems; coordination challenges among multiple units",
+        "risk_rating": "High",
+        "mitigation_measures": "Adoption of Financial Management Manual for IDA/ARTF projects; hiring of Senior FM Specialists and FM Officers; FM capacity building plan by consulting firm within 3 months; semi-annual internal audit by chartered accountancy firm; external audit by Supreme Audit Office; monthly budget monitoring reports; quarterly Interim Financial Reports; annual audited financial statements; Project Procurement Strategy for Development (PPSD); hiring of procurement specialists; prior and post-review by World Bank; STEP system; strong third-party monitoring; designated accounts in Da Afghanistan Bank; special banking arrangements with DAB for CDC grants"
+      },
+      {
+        "risk_category": "Institutional Capacity",
+        "risk_description": "Limited institutional capacity of implementing agencies, particularly MoFA and MoEC which have no World Bank experience; weak financial management and procurement systems; limited experience with complex multi-component projects; staff turnover risks; coordination challenges across multiple agencies",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Comprehensive capacity building plan; hiring of incremental FM and procurement staff; training on World Bank procedures; leveraging existing PIU structures from CCAP, CIP, and KMDP; strong World Bank implementation support; detailed Operations Manuals for each component; mentoring and on-the-job training; phased implementation approach"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Potential negative environmental and social impacts from civil works and infrastructure investments; occupational health and safety risks for workers; potential resettlement/land acquisition issues; gender-based violence risks; social cohesion challenges between returnees and host communities",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Environmental and Social Management Framework (ESMF) and Resettlement Policy Framework (RPF) prepared and disclosed; framework approach adopted for subprojects; safeguard policies triggered: OP/BP 4.01 (Environmental Assessment) and OP/BP 4.12 (Involuntary Resettlement); Strategic Environmental and Social Assessment for regulatory reforms; gender-focused investments (at least 30 Gozar/Business Gozar investments and 5 Priority Projects targeting women); GRM for grievances; community participatory monitoring; codes of conduct for labor; female-only windows at passport agencies; gender-disaggregated data collection"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "EZ-Kar implementation in context of major GoIRA urban governance strengthening effort through CIP; potential distraction from governance priorities; risk of infrastructure development impinging on performance-based financing system; coordination challenges between EZ-Kar and CIP",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Jointly agreed site and scheme criteria in close coordination with CIP team; common PIU used for CCAP, CIP, and EZ-Kar; Economic Infrastructure Unit within PIU for EZ-Kar and CIP coordination; clearing mechanism to decide which Priority Projects financed under CIP vs EZ-Kar window"
+      },
+      {
+        "risk_category": "Technical Design",
+        "risk_description": "Broad scope of project with diversity of activities creates risk of over-ambitious design; complexity of coordinating multiple components and implementing agencies; demand-driven approach creates uncertainty in subproject selection and implementation",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Procurement consolidation; phased implementation with complexity added as capability proven; leveraging existing systems and structures from CCAP, CIP, KMDP; use of output measures for some activities; detailed Operations Manuals; clear selection criteria and positive menus for subprojects; screening tools for strategic fit"
+      },
+      {
+        "risk_category": "Stakeholder Engagement",
+        "risk_description": "Expectations management challenge - communications campaign could raise unrealistic expectations among Afghan refugees in Pakistan; unmet expectations could generate grievances and social/political disturbances; inclusion challenges for refugees lacking required documents; potential resentment from host communities competing for same jobs",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Enhanced information management capacity of MoRR; Joint Communications Committee to verify accuracy of information; whole-of-community approach for beneficiary selection; clarification of passport application requirements; GRM for grievances; community participatory monitoring; beneficiary satisfaction surveys; citizen feedback mechanisms; two-way communication strategies"
+      },
+      {
+        "risk_category": "Returnee Environment",
+        "risk_description": "Unpredictable returnee environment largely driven by policies and events in Pakistan; influenced by geo-political developments; fluid movement of people; changing regional policies around refugees and integration",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Significant coordination with World Bank Pakistan team; consultation with potential Afghan returnees in Pakistan; regional workshop between Afghanistan and Pakistan teams with UNHCR; citizen feedback mechanism for passport services; UNHCR commitment to work with World Bank on Component 1; operational linkages between Afghanistan and Pakistan teams; sharing of documents; periodic face-to-face meetings and video conferences; coordination on documentation and asset transfers"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "B - Partial Assessment",
+      "triggered_safeguard_policies": [
+        "OP/BP 4.01 - Environmental Assessment (triggered)",
+        "OP/BP 4.12 - Involuntary Resettlement (triggered)"
+      ],
+      "grievance_redress_mechanism": "Yes - Multiple GRM systems: (1) Project-level GRM at MoEC with links to implementing agencies' existing GRM systems; (2) Component 1: MoFA's Directorate of Consular Affairs GRM receiving inquiries via emails, phone calls, online chat; (3) CCAP and KMDP CE models applied to Components 2 and 4; (4) Community Participatory Monitoring under CCAP; (5) Citizens Feedback Model (CFM) with SMS-based feedback collection piloted for Component 1; (6) World Bank's Grievance Redress Service (GRS) and Inspection Panel available; (7) Technical working group for cross-cutting grievances; (8) Beneficiaries can contact MoEC directly if desired",
+      "gender_considerations": "Significant gender focus: (1) Women comprise 54% of recent returnees (2015-2017); only 13% of documented Afghan refugee women employed vs 10% of recently returned women; female labor force participation 19% overall; (2) At least 30 Gozar/Business Gozar investments and 5 Priority Projects (one each in Kabul, Herat, Jalalabad, Kandahar, Khost) required to target women through women-exclusive subprojects or inclusive subprojects; (3) Gender gap in access to identity - vast majority of Afghan women lack national ID cards (prerequisite for passports); (4) Project will help close gender gap in access to markets via infrastructure investments; (5) Special arrangements for women passport applicants (female-only windows); (6) Outreach and communication to create demand among women for passports; (7) Data collection and management to track women's passport applications and success rates; (8) GBV risk mitigation through ESMPs with codes of conduct for laborers; (9) Functional GRM for women; (10) At least 40% of CDC members required to be women; (11) Gender-disaggregated data collection and monitoring; (12) Gender analysis to identify project-relevant gaps; (13) Specific actions to address gender gaps and improve women's empowerment; (14) Gender indicators in results framework",
+      "vulnerable_groups": [
+        "Internally Displaced Persons (IDPs)",
+        "Afghan Refugees (in Pakistan and returning)",
+        "Returnees",
+        "Host communities",
+        "Women (particularly returnee women with low economic activity)",
+        "Children",
+        "Poor and very poor households (identified through Well-Being Analysis)",
+        "Unskilled daily wage laborers",
+        "Small and micro-enterprises (SMEs)",
+        "Informal sector workers",
+        "Undocumented returnees",
+        "Settled IDPs/Returnees in communities"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project explicitly designed to address displacement crisis resulting from conflict and insecurity. Conflict sensitivity measures include: (1) Whole-of-community approach to maintain social cohesion between returnees/IDPs and host communities; (2) Equal benefit distribution to vulnerable people from both groups; (3) Focus on economic opportunities as foundation for sustainable reintegration; (4) Regional approach coordinating with Pakistan to address cross-border displacement; (5) Alignment with Solutions Strategy for Afghan Refugees (SSAR) and tripartite agreements; (6) Support for returnee integration through documentation, information services, and economic opportunities; (7) Transparency and Accountability Framework to build public trust; (8) Community participatory monitoring and engagement; (9) GRM to address grievances and prevent escalation; (10) Coordination with humanitarian actors (UNHCR, IOM, OCHA) for complementary support",
+      "fragility_context": "Afghanistan is a fragile and conflict-affected state facing multiple fragility factors: (1) Ongoing conflict with civilian casualties at unprecedented levels (10,451 killed/wounded in 2017; 8,050 in first 9 months of 2018); (2) Large-scale displacement: 1.7 million internally displaced persons; 2+ million returning from Pakistan and Iran since 2015; (3) Weak state capacity and governance challenges; (4) High poverty rate increased from 38% (2011/12) to 55% (2016/17); (5) Weak labor demand despite increasing labor force; (6) Limited access to services and infrastructure; (7) Political instability around 2018-2019 elections; (8) Macroeconomic uncertainty with limited fiscal resources; (9) Security constraints limiting government access to some areas; (10) Climate vulnerability with ranking 8th of 170 countries for climate change vulnerability; (11) Weak institutional capacity of government agencies; (12) Limited private sector development and business environment challenges",
+      "security_considerations": "Security is a major implementation constraint: (1) Continued insurgent activity and high civilian casualties; (2) Some areas remain difficult to access due to insecurity; (3) Security constraints impact movement of technical expertise and increase costs; (4) Monitoring and supervision challenges due to restricted access; (5) Mitigation through: Geo-Enabling Initiative for Monitoring and Supervision (GEMS) for remote monitoring; Third-Party Monitoring; flexible implementation arrangements; leveraging existing systems and structures; strong coordination mechanisms; phased implementation; (6) Project addresses returnee challenge which could reduce security risks if successful; (7) Whole-of-community approach aims to maintain social cohesion and reduce conflict",
+      "displacement_or_refugees": "Yes - Major displacement context: (1) 1.7 million internally displaced persons in Afghanistan; (2) 2+ million Afghan refugees returning from Pakistan and Iran since 2015; (3) About half of returnees settle in urban areas, putting pressure on service delivery and infrastructure; (4) Component 1 specifically targets Afghan refugees in Pakistan (estimated 1.5 million passport applications expected); (5) Project aims to support voluntary repatriation and reintegration; (6) Whole-of-community approach benefits both returnees/IDPs and host communities; (7) Regional approach coordinating with Pakistan; (8) Alignment with Solutions Strategy for Afghan Refugees (SSAR) and tripartite agreements between GoIRA, GoP, and UNHCR; (9) Support for documentation (passports, civil documents) to facilitate reintegration; (10) Information services to help refugees access economic opportunities and social services; (11) Short-term employment and market infrastructure investments to support economic integration; (12) Regulatory reforms to improve business environment for returnees; (13) Gender-specific support recognizing that 54% of recent returnees are women; (14) Coordination with humanitarian actors (UNHCR, IOM) for complementary support"
+    }
+  }
+}

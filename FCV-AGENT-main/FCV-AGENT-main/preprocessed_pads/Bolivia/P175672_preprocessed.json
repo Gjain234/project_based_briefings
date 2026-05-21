@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P175672",
+    "guid": 99525007292241107,
+    "node_id": 33876067,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-8b4f7f4e-ed23-4f89-ab4c-8735c9aff7c8.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Innovation for Resilient Food Systems (Alianzas Rurales – PAR III) Project",
+      "project_development_objective": "Contribute to increased food security, market access and the adoption of climate-smart approaches by targeted project beneficiaries.",
+      "total_financing": "US$351.2 million (IBRD: US$300 million; Counterpart: US$51.2 million)",
+      "implementation_period": "5 years implementation, 15 years capitalization (20-year evaluation period); Expected closing: November 30, 2027",
+      "beneficiaries": "127,900 rural families across 2,560 subprojects; at least 1,000 RCOs (Rural Community Organizations) and 1,270 RPOs (Rural Producer Organizations); 290 complementary productive infrastructure subprojects; at least 30% women beneficiaries"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Santa Cruz",
+        "Cochabamba",
+        "La Paz",
+        "Potosí",
+        "Chuquisaca",
+        "Tarija",
+        "Oruro",
+        "Beni",
+        "Pando"
+      ],
+      "coverage_type": "national with focus on Highlands, Amazon, and Sub-Andean regions",
+      "fragile_or_conflict_affected_areas": "partial - Southern departments (Potosí, Chuquisaca, Tarija, Oruro, Santa Cruz) at moderately high risk of food insecurity; political and governance instability noted as substantial risk; no active armed conflict but institutional fragility and governance challenges present"
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Capacity Building and Institutional Strengthening",
+        "description": "Communication and dissemination strategy; formation and strengthening of RCOs and RPOs; capacity-building for technical service providers, municipalities, departments; technical assistance for subproject preparation and evaluation; policy dialogue support for food security expansion",
+        "financing": "US$16.5 million (IBRD)"
+      },
+      {
+        "component_name": "Component 2: Support to Community and Productive Alliances",
+        "description": "Community Alliance Subprojects (US$94.4M) for food security and vulnerability reduction; Productive Alliance Subprojects (US$101.8M) for market-oriented production with fixed capital investments and working capital; Complementary Productive Infrastructure Subprojects (US$113.0M) for public infrastructure including roads, bridges, irrigation, telecommunications, electricity",
+        "financing": "US$309.3 million (IBRD: US$257.4 million)"
+      },
+      {
+        "component_name": "Component 3: Project Management",
+        "description": "Equipment, consulting services, non-consulting services, operating costs for NCU and DOUs; project financial audits; technical studies; monitoring and evaluation; staffing for implementation support",
+        "financing": "US$25.4 million (IBRD)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Rural Development and Land (MDRyT) through EMPODERAR's National Coordinating Unit (NCU); 11 Departmental Operating Units (DOUs) at decentralized level",
+      "coordination_mechanisms": "Project Operational Manual (POM) with detailed procedures; Subproject Agreements between EMPODERAR NCU and RCOs/RPOs/Municipalities/Departments; coordination with national and subnational governments; intergovernmental agreements for infrastructure maintenance; strong coordination within RCOs, RPOs and government levels critical to success",
+      "procurement_approach": "EMPODERAR NCU handles most procurement; RCOs and RPOs process procurement for Community and Productive Alliance Subprojects with NCU support; World Bank Procurement Regulations for IPF Borrowers (November 2020); use of Government's integrated financial management system (SIGEP) and Treasury Single Account (TSA); Project Procurement Strategy for Development (PPSD) prepared; potential use of SOL application to simplify RCO/RPO procurement",
+      "monitoring_and_evaluation": "EMPODERAR NCU M&E Unit coordinates data collection; Georeferenced Management Information System (SIGG) for real-time monitoring; baseline study in first year; mid-term review in year 3; final evaluation at project closing; quasi-experimental methodologies; impact evaluation at closing; semi-annual Progress Reports to World Bank; monitoring of climate co-benefits and GHG reductions in real-time"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Changes in authorities could lead to shifts in priorities and delays in decision-making; coordination challenges within central government and among government levels; institutional capacity constraints",
+        "risk_rating": "substantial",
+        "mitigation_measures": "WBG maintains dialogue with authorities at all levels; close implementation support and training in WBG fiduciary procedures and Anticorruption Guidelines; increased participation of Country Lawyer in key discussions; strong implementation track record of EMPODERAR NCU in PAR I and PAR II projects"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Globally constrained macroeconomic context may result in lower availability of counterpart financing; limited debt capacity of national and subnational governments; limited resources for operations and maintenance of infrastructure; high real exchange rate overvaluation (26-33%) hinders competitiveness",
+        "risk_rating": "substantial",
+        "mitigation_measures": "WBG will endeavor to provide 100% financing for proposed Project investments where feasible; Operations and Maintenance costs included in Project costs to ensure timely resource allocation and budgeting"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Inappropriate use of pesticides and contamination of soil/water; inadequate waste management from plastic inputs; displacement of native agrobiodiversity; degradation/fragmentation of natural habitats; substantial risk of underage child labor in family-based farming (467,874 children aged 5-14 in agriculture, 68% in agriculture); potential labor influx impacts from civil works; physical and economic displacement from minor civil works; loss of traditional indigenous knowledge; discrimination against indigenous minorities with itinerant production traditions; gender-based violence context (75% of women aged 15+ experienced physical/sexual violence)",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Environmental and Social Management Framework (ESMF) with exclusion list prepared and disclosed; Resettlement Policy Framework prepared; Labor Management Plan with measures to prevent child and forced labor; Stakeholder Engagement Plan with grievance redress mechanism; Free, prior, and informed consent procedures for Indigenous Peoples; exclusion of subprojects in protected areas, with land-use change potential, involving new/large dams, or requiring land acquisition; workers' code of conduct based on Law 348; GBV prevention approach in GRM; mapping of GBV prevention institutions; consultation processes for displacement situations; adaptive management approach for ongoing risk assessment"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation",
+        "risk_description": "Weaknesses in public sector to attract and maintain qualified staff with high staff rotation; limited capacity of RCOs and RPOs for subproject implementation; need for enhanced procedures for complementary productive infrastructure subprojects (civil works)",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Independent consultant firm contracted for selection and performance evaluation of Project staff (proven effective in PAR II); reliance on existing EMPODERAR NCU arrangements and expertise; adjustment of SIGG management information system to address Project needs; review and update of Operational Manual with enhanced procedures and tools; specific arrangements and mechanisms for participation, transparency and accountability throughout subproject cycle"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Staff rotation risks; disbursement of funds to RCOs and RPOs with limited capacity; payment processes for civil works and fraud/corruption risks; need for adequate internal controls and monitoring",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Independent consultant firm for staff selection and evaluation; use of SIGEP and TSA for disbursement processing; SIGG system for recording and monitoring physical and financial progress; simplified guidelines for RCOs/RPOs with record-keeping and documentation requirements; technical assistance for administrative tasks; clear roles and responsibilities with segregation of duties; alert-based mechanism in SIGG for timely identification of delays; participatory financial evaluation through 'rendición de cuentas'; counterpart contributions as incentive for sound management; annual independent audits by private firm acceptable to Bank; semi-annual interim financial reports"
+      },
+      {
+        "risk_category": "Technical Design",
+        "risk_description": "Demand-driven subproject design with locations not known ex-ante; technology adoption rates uncertain; assumption that proposed technologies and practices will be attractive to farmers",
+        "risk_rating": "moderate",
+        "mitigation_measures": "ESMF to be prepared during implementation with detailed screening and approval procedures; Environmental and Social Management Plans for each subproject; lessons learned from PAR I and PAR II incorporated; market orientation verification for productive alliances; participatory processes for subproject selection; technical assistance for subproject preparation; monitoring of adoption rates and adjustment mechanisms"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Fixed exchange rate system limits macroeconomic tools; high real exchange rate overvaluation hinders competitiveness; fertilizer price volatility and supply constraints from Ukraine conflict; global food price spikes affecting vulnerable populations",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Project support to policy dialogue with MDRyT and other Ministries for food security expansion; focus on productivity improvements and climate resilience to reduce vulnerability; diversification of value chains; support for non-traditional exports (cocoa, beans, coffee, quinoa, Brazil nuts, beef)"
+      },
+      {
+        "risk_category": "Stakeholder Engagement",
+        "risk_description": "Limited participation of minoritarian indigenous groups and women in decision-making; cultural and social norms limiting women's participation; potential resistance to agricultural technology changes; need for effective communication with low-literacy populations",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Comprehensive Stakeholder Engagement Plan with stakeholder mapping and consultation processes; communication strategy with non-written tools for low-literacy populations; targeted trainings for women and indigenous peoples; sensitization of community leaders on gender and inclusion; grievance redress mechanism with 30-day response time; citizen engagement indicators in results framework; satisfaction surveys; participatory subproject selection and implementation"
+      },
+      {
+        "risk_category": "Climate and Disaster",
+        "risk_description": "Bolivia ranks 10th globally in climate risk; exposure to droughts, floods, landslides; climate variability affecting rainfed agriculture; loss of mountain glaciers; projected temperature increases and rainfall changes; El Niño impacts; pest and disease distribution changes",
+        "risk_rating": "moderate (overall climate/disaster risk to project outcomes)",
+        "mitigation_measures": "Climate change and disaster risk screening completed; project design includes climate-smart agriculture technologies and practices; investments in irrigation and water management; soil conservation measures; climate-resilient crop varieties; improved livestock management; forest management for beekeeping; GHG mitigation benefits quantified (net reduction of 156.164 tCO2e/year); monitoring of climate co-benefits; adaptive management approach; technical assistance on climate adaptation"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Substantial",
+      "triggered_safeguard_policies": [
+        "Assessment and Management of Environmental and Social Risks and Impacts (ESS1)",
+        "Stakeholder Engagement and Information Disclosure (ESS10)",
+        "Labor and Working Conditions (ESS2)",
+        "Resource Efficiency and Pollution Prevention and Management (ESS3)",
+        "Community Health and Safety (ESS4)",
+        "Land Acquisition, Restrictions on Land Use and Involuntary Resettlement (ESS5)",
+        "Biodiversity Conservation and Sustainable Management of Living Natural Resources (ESS6)",
+        "Indigenous Peoples/Sub-Saharan African Historically Underserved Traditional Local Communities (ESS7)",
+        "Cultural Heritage (ESS9)"
+      ],
+      "grievance_redress_mechanism": "Yes - Project-level GRM with 30-day response time requirement; complaints tracked through SIGG information system; linkages to GBV prevention institutions; World Bank Grievance Redress Service (GRS) available; World Bank Accountability Mechanism (Inspection Panel and Dispute Resolution Service) available; community-level grievance mechanisms through RCOs and RPOs; public accounting ('rendición de cuentas') mechanisms for transparency and accountability",
+      "gender_considerations": "Gender Action Plan developed; target of 35% women farmers adopting improved technology; 35% of RPO business plan sales increases from women-led RPOs; 30% of technical service providers trained to be women; 30% of RCOs/RPOs formalized to be led by women; targeted assistance to women-led groups; women's participation in decision-making promoted through trainings and sensitization; communication strategy with non-written tools for low-literacy women; female technical service providers contracted; women's subprojects supported (agri-film/greenhouses, living fences, poultry houses, livestock sheds, crop storage, milking rooms, rainwater harvesting); satisfaction monitoring for women beneficiaries; recognition of gender gaps in income, labor market participation, credit access, education, and productive options",
+      "vulnerable_groups": [
+        "Indigenous Peoples (78% of target population meet ESS7 criteria)",
+        "Women (particularly rural and indigenous women)",
+        "Youth",
+        "Persons with disabilities",
+        "Poorest households",
+        "Food-insecure populations",
+        "Families with school-age children (5-17 years) at risk of child labor",
+        "Indigenous minorities with itinerant production traditions",
+        "Victims of gender-based violence"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project designed with conflict sensitivity considerations: addresses food insecurity as stress multiplier for migration; supports income generation and market access to reduce economic grievances; promotes inclusive participation of marginalized groups (indigenous peoples, women, youth) to enhance social cohesion; strengthens local institutions and governance capacity; includes grievance redress mechanisms to address community concerns; supports policy dialogue for food security expansion; focuses on resilience-building to reduce vulnerability to shocks; no activities in active conflict zones but operates in context of political instability and governance challenges",
+      "fragility_context": "Bolivia faces substantial political and governance risks with institutional fragility: changes in authorities affect priorities and implementation; coordination challenges between government levels; limited institutional capacity; high staff turnover in public sector; macroeconomic instability with limited fiscal space; high poverty and inequality (20.2% poverty in 2021, though declining); significant food insecurity (22.7% of households food insecure, 2.4 million undernourished); climate vulnerability (10th globally in climate risk); high dependence on agriculture for rural livelihoods; limited private sector investment (7% of GDP); 87% of private sector jobs informal; gender-based violence widespread (75% of women experienced physical/sexual violence); indigenous population marginalized (78% of target population); limited access to services and opportunities in rural areas",
+      "security_considerations": "No direct security threats to project implementation mentioned; however, context of gender-based violence requires SEA/SH prevention measures in workers' code of conduct; labor influx from civil works requires monitoring for GBV risks; mapping of GBV prevention institutions required; linkages between GRM and GBV response institutions needed; child labor risks in family farming require monitoring and prevention measures; potential for discrimination against indigenous minorities requires safeguards; project operates in remote rural areas with limited state presence requiring decentralized implementation support",
+      "displacement_or_refugees": "No refugee populations mentioned; potential for minor physical and economic displacement from complementary productive infrastructure subprojects (civil works) expected to be low and manageable; displacement risks include: temporary/permanent economic displacement from minor civil works (walls, fences, small land portions, crops, fruit trees, livestock pasture, easements); potential minor physical displacement from on-site investments on privately-owned lands; Resettlement Policy Framework prepared to manage displacement risks; consultation processes required for all displacement situations; Free, prior, and informed consent procedures for Indigenous Peoples where applicable; Process Framework not required as no restrictions on access to natural resources anticipated; project may indirectly reduce displacement pressures by improving food security and income opportunities in rural areas"
+    }
+  }
+}

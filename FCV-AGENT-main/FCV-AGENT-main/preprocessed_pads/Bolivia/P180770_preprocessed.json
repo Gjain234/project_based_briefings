@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P180770",
+    "guid": 99052824162530460,
+    "node_id": 34326548,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-0ab5bb48-e543-4690-8bb4-b6374979d273.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Road Sector Climate Resilience Program SOP-1 (RSCRP SOP-1)",
+      "project_development_objective": "To enhance climate risk management in Bolivia's road sector, and improve climate resilience and road safety of specific road sections",
+      "total_financing": "US$118.5 million (IBRD)",
+      "implementation_period": "2024-2030 (6.5 years, expected closing December 31, 2030)",
+      "beneficiaries": "165,000 direct and indirect beneficiaries (approximately 83,000 women) in municipalities of Chimore, Ivirgarzama, Guanay, and Monteagudo; approximately 9,000 vehicles daily use the existing roads"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Chimore-Ivirgarzama (Cochabamba Department)",
+        "Guanay Bridge (La Paz Department)",
+        "Molino-Monteagudo (Chuquisaca Department)"
+      ],
+      "coverage_type": "national with regional focus on three specific road sections",
+      "fragile_or_conflict_affected_areas": "partial - Bolivia faces agitated and conflictive social and political context with recurrent strikes and mobilizations; however, not classified as fragile state. Project areas are vulnerable to climate-related disasters (floods and landslides)"
+    },
+    "key_components": [
+      {
+        "component_name": "Institutional Development and Capacity Building",
+        "description": "Road sector climate resilience diagnosis; development of institutional and infrastructure management strategy for climate-resilient road sector; capacity building and training for ABC officials on climate risk, road safety, gender considerations, and contract management; road safety design improvements; integrated management information system; gender action plan; and feasibility studies for future interventions",
+        "financing": "US$17.8 million"
+      },
+      {
+        "component_name": "Bridge and Road Upgrading for Climate Resilience and Road Safety",
+        "description": "Three main interventions: (2a) Chimore-Ivirgarzama - construction of bridge, replacement of culverts, footbridges, and overpass accesses (US$32.0M); (2b) Guanay Bridge - replacement of existing bridge and construction of accesses (US$15.1M); (2c) Molino-Monteagudo - rehabilitation of existing road and construction of bypass to avoid urban area (US$43.9M); (2d) Gender and social inclusion investments (US$1.0M)",
+        "financing": "US$92.0 million"
+      },
+      {
+        "component_name": "Project Management",
+        "description": "Establishment and operation of Project Coordination and Support Team (PCST), technical advisory consultancy, monitoring and evaluation, environmental and social commitment plan implementation, financial audits, training, and project management oversight",
+        "financing": "US$8.4 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Administradora Boliviana de Carreteras (ABC) - Bolivian Road Agency, a decentralized entity of the Ministry of Public Works, Services and Housing (MOPSV). Ministry of Development Planning (MPD) is the signatory of the loan agreement",
+      "coordination_mechanisms": "Project Coordination and Support Team (PCST) headed by full-time Project Coordinator; Technical Advisory (TA) consultancy with 3-5 long-term consultants and drawdown mechanism for short-term support; coordination between ABC HQ (La Paz) and regional offices in La Paz, Cochabamba, and Chuquisaca departments; collaboration with Vice Ministry of Public Investment and External Financing (VIPFE)",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers (September 2023); open international competitive bidding for larger contracts; open national competitive bidding for smaller contracts; quality-cost-based selection or consultant qualification-based selection for consulting services; use of STEP system for procurement plan tracking",
+      "monitoring_and_evaluation": "Results framework with PDO and intermediate indicators; semiannual reports on results indicators; annual reports on fund use; semiannual financial reports; mid-term review at approximately 30 months; dedicated M&E team within PCST; annual supervision missions by World Bank; monitoring system through ABC; grievance redress mechanism with online registry"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Challenging short- to medium-term macroeconomic outlook due to potential El Niño impacts, large fiscal deficits, constrained domestic and international financing, pressure on international reserves, potential inflation increases, and imported goods price increases",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Adequate contingencies in project cost estimates; financing for land acquisition and compensation included as eligible project financing; close monitoring of macroeconomic conditions"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Low capacity of ABC in procurement and financial management for IPF; high staff turnover causing delays in procurement and financial reporting; lack of centralized information system; dependency on MEFP for timely payment processing; low capacity in accounts payable management; delays in contracting financial audits",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Hiring fiduciary staff with WB procurement and FM knowledge; training of fiduciary staff; contracting independent Technical Advisory consultancy with qualified fiduciary staff; preparation of comprehensive Project Operations Manual; enhancement of in-house FM system (SICOPP) with interfaces to other systems; close monitoring of fund availability; appointment of independent auditors no later than 6 months after effectiveness with minimum 3-year contract"
+      },
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Potential changes in political commitment; agitated and conflictive social and political context with recurrent strikes and mobilizations",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Strong political ownership and continued commitment during project life; improved cross-institutional coordination; maintenance of designed implementation arrangements"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Need to strengthen road sector strategy to address climate change and road safety comprehensively; limited utilization of existing road asset management tools",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Development of institutional and infrastructure management strategy for climate-resilient road sector; capacity building for ABC; implementation of hydroclimatic model results manual"
+      },
+      {
+        "risk_category": "Technical Design",
+        "risk_description": "Complexity of designing climate-resilient infrastructure in challenging topography; need for updated designs incorporating climate considerations; technical capacity constraints at ABC",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Updated designs with increased lookback and verification periods for bridges (200-year design, 300-year verification) and culverts (50-year design); road safety audits at multiple stages; technical advisory support; capacity building for ABC staff"
+      },
+      {
+        "risk_category": "Institutional Capacity",
+        "risk_description": "ABC's limited capacity to manage complex projects; high staff turnover; weak coordination between ABC units and with stakeholders; challenges in environmental and social risk management",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Establishment of PCST with dedicated Project Coordinator; Technical Advisory consultancy support; Project Operations Manual with detailed procedures; capacity building and training programs; enhanced communication channels; lessons learned from previous projects incorporated into design"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Substantial risks including: contamination of rivers from spills/discharges; alteration of hydrological cycles; nuisance to communities (noise, dust, vibration); erosion acceleration; inadequate traffic management; waste and hazardous materials handling; vegetation loss; environmental liabilities; borrow pit and water pond management; occupational health and safety issues; economic and property displacement; labor influx; weak labor management; community tensions; debts with workers; road safety risks; social exclusion of vulnerable groups; conflictive social context; substantial SEA/SH risk due to labor influx, poverty, sexism culture, high statutory rape incidence, and high feminicide rates",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Spill prevention and response plans; erosion control measures; noise and dust reduction strategies; proper waste management; vegetation preservation; strengthened institutional capacity; enhanced road safety measures; occupational health and safety protocols; water harvesting pond and borrow pit management; consultation with local communities and vulnerable groups; labor influx management; timely payments and adequate working conditions; social inclusion promotion; gender-based violence prevention and response programs; grievance redress mechanism with designated channels for GBV/SEA/SH complaints; linkage with SLIMs and DNAs; training of community promoters; Environmental and Social Commitment Plan (ESCP); Stakeholder Engagement Plan (SEP); Gender Action Plan (GAP); Labor Management Plan; environmental and social management plans; resettlement plans"
+      },
+      {
+        "risk_category": "Stakeholder Engagement",
+        "risk_description": "Recent increase in community and civil actions involving road network that can delay implementation; need for effective community participation and grievance resolution; underrepresentation of women in decision-making; potential social exclusion of vulnerable groups",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Detailed social assessments for each infrastructure investment; meaningful consultations with affected communities; effective grievance redress mechanisms operating throughout implementation; culturally appropriate mechanisms; launch workshops before commencement of works; opportunity for communities to identify small investments with high social impact; gender-sensitive consultations; participation of women, elderly, youth, and people with reduced mobility in design consultations; at least 50% of complementary investments allocated to women's priorities"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Substantial (Environmental and Social Risk Classification)",
+      "triggered_safeguard_policies": [
+        "ESS 1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS 2: Labor and Working Conditions",
+        "ESS 3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS 4: Community Health and Safety",
+        "ESS 5: Land Acquisition, Restrictions on Land Use and Involuntary Resettlement",
+        "ESS 6: Biodiversity Conservation and Sustainable Management of Living Natural Resources",
+        "ESS 8: Cultural Heritage",
+        "ESS 10: Stakeholder Engagement and Information Disclosure"
+      ],
+      "grievance_redress_mechanism": "Yes - Project-level grievance mechanism to be established by ABC within 30 days after effectiveness; online GRM system for registry and follow-up of complaints with details on receipt, processing, response, and status; multiple channels including email, mayor's office, contractor mailboxes, in-person complaints, and World Bank GRS referrals; designated channels staffed by trained professionals for GBV/SEA/SH complaints; linkage with SLIMs and DNAs for GBV service provision; World Bank Grievance Redress Service (GRS) and Accountability Mechanism available for project-affected communities",
+      "gender_considerations": "Gender Action Plan (GAP) to be developed addressing: gender-sensitive infrastructure designs; gender-inclusive consultations and communications; prevention and response to gender-based violence (GBV); sexual exploitation and abuse (SEA) and sexual harassment (SH) risk mitigation; linkage with SLIMs and DNAs; training of community promoters on healthy conflict resolution, healthy relationships, and healthy parenting; women economic empowerment in road conservation microenterprises; capacity building for women in ABC (at least one social specialist with gender experience at HQ and one in each of three regional offices); gender-responsive data collection and analysis; gender-sensitive budgeting; at least 50% of complementary investments (Intervention 2d) allocated to women's priorities; pedestrian sidewalks and non-motorized transport features to improve women's mobility and safety; improved lighting and visibility for women's sense of security; accessibility features for elderly and people with reduced mobility; target of 82,500 women beneficiaries out of 165,000 total beneficiaries",
+      "vulnerable_groups": [
+        "Women (particularly in rural areas facing time poverty and mobility constraints)",
+        "Youth",
+        "Indigenous peoples",
+        "People with disabilities and reduced mobility",
+        "Elderly",
+        "Poor and extremely poor populations",
+        "Rural populations with limited access to services",
+        "Children (road safety risks in school areas)",
+        "Workers in road conservation microenterprises",
+        "Potential survivors of gender-based violence and sexual exploitation/abuse"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project incorporates conflict-sensitive approaches through: meaningful community consultations and engagement mechanisms; grievance redress mechanisms designed to address community tensions; social assessments for each intervention; launch workshops to explain project and responsibilities; active and continuous involvement of affected communities; mechanisms to address underlying conflicts with local communities/organizations; communication strategies for environmental and social aspects; linkage with local authorities and community organizations; recognition of agitated and conflictive social and political context with recurrent strikes and mobilizations; measures to ensure timely payments to avoid debts with workers and local providers that could fuel tensions",
+      "fragility_context": "Bolivia faces significant fragility factors: (1) High vulnerability to climate-related disasters - ranked 10th globally in climate risk index with 84 extreme weather events between 1965-2020 causing US$3.7 billion in damages (9% of 2019 GDP) and affecting 9 million people; (2) Geographic and topographical challenges - landlocked, sparsely populated, with steep Andean mountains prone to landslides and eastern floodplains vulnerable to floods; (3) Economic vulnerabilities - constrained fiscal space, declining gas exports, weak private investment, large fiscal deficits, pressure on international reserves; (4) Social vulnerabilities - high poverty (15.2% internationally, 32% in rural areas, 22% among indigenous peoples), gender inequalities, high violence against women (one of highest feminicide rates in LAC), limited rural accessibility (80% of rural population lacks access to all-weather roads); (5) Institutional weaknesses - ABC capacity constraints, high staff turnover, weak coordination across government levels; (6) Political instability - agitated and conflictive social and political context with recurrent strikes and mobilizations",
+      "security_considerations": "Project addresses security through: (1) Road safety as core PDO outcome with target to reduce traffic fatalities from 5 to 3 annually in intervened areas (40% reduction); (2) Road safety audits at multiple design and construction stages with focus on speed management; (3) Enhanced road safety features including marked paved shoulders, improved markings and signs, safety barriers, speed management/traffic calming, improved signalization and pedestrian crossings; (4) Pedestrian sidewalks and non-motorized transport features for vulnerable users; (5) Improved lighting and visibility for women's sense of security; (6) Occupational health and safety protocols during construction; (7) Labor management plans to address labor influx risks; (8) SEA/SH prevention and response programs with designated GRM channels; (9) Community engagement and communication strategies; (10) Road designs accounting for climate hazards (flooding, landslides) that could cause accidents",
+      "displacement_or_refugees": "Yes - Involuntary resettlement and economic displacement identified as significant social risk. Mitigation measures include: (1) ESS 5 (Land Acquisition, Restrictions on Land Use and Involuntary Resettlement) triggered; (2) Resettlement Plans to be prepared for each intervention; (3) Land and resettlement expenditures (US$8.8 million) eligible for project financing; (4) Detailed social assessments for each infrastructure investment; (5) Consultations with affected populations; (6) Protocols and mechanisms to ensure participation of different population segments in consultations; (7) Timely payments and compensation to affected persons; (8) Grievance redress mechanisms for resettlement-related complaints; (9) Capacity building for ABC in resettlement management; (10) Lessons learned from previous projects incorporated into design"
+    }
+  }
+}

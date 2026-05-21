@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P171346",
+    "guid": 989731565575232490,
+    "node_id": 31313241,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b086f839bc&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Shock Responsive Safety Net for Human Capital Project (SNHCP)",
+      "project_development_objective": "To provide cash transfers to targeted poor and vulnerable households and establish the key building blocks of a national shock-responsive safety net system.",
+      "total_financing": "SDR 46.8 million (US$65 million equivalent) - IDA Pre-Arrears Clearance Grant",
+      "implementation_period": "August 2019 - August 2022 (3 years)",
+      "beneficiaries": "200,000 poor and vulnerable households (approximately 1.2 million individuals) with children under five years across Federal Member States of Somalia"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Galmudug",
+        "Hirshabelle",
+        "Jubbaland",
+        "Puntland",
+        "South West",
+        "Somaliland",
+        "Federal Republic of Somalia (rural areas prioritized)"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "Yes - Somalia is classified as a fragile state with active conflict. Al-Shabaab controls parts of the country, government presence is limited beyond urban areas and key towns. The project explicitly excludes areas controlled by armed groups and focuses on 'permissive' areas. Banadir (Mogadishu) excluded from Component 1 due to strong humanitarian presence. Rural areas prioritized as they are underserved by humanitarian assistance."
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Nutrition-linked Unconditional Cash Transfers",
+        "description": "Provides unconditional cash transfers of US$20/month (delivered quarterly) to 200,000 poor and vulnerable households with children under five years in rural areas across all Federal Member States. Links beneficiaries to complementary nutrition services (SAM/MAM treatment). Implemented by WFP under service contract with MoLSA using SCOPE beneficiary management platform with biometric identification. Targets households in 'Stressed' IPC category underserved by humanitarian assistance.",
+        "financing": "SDR 38.16 million (US$53 million equivalent)"
+      },
+      {
+        "component_name": "Component 2: Delivery Systems and Institutional Capacity Building",
+        "description": "Establishes key building blocks of a social protection delivery system including: social registry development, MIS, cash transfer payment delivery system, GRM, targeting methodology, SP policy framework and 5-year roadmap, SP governance structure, government-led SP working group, communication strategy, and capacity building. Implemented by UNICEF under service contract with MoLSA.",
+        "financing": "SDR 4.32 million (US$6 million equivalent)"
+      },
+      {
+        "component_name": "Component 3: Project Management, Monitoring and Evaluation, and Knowledge Management",
+        "description": "Establishes federal PIU within MoLSA and state-level antenna PIUs/focal points. Finances PIU staff, IT equipment, operating costs, third-party monitoring (TPM) firm (quarterly), financial audits, targeting evaluation, knowledge management/learning activities, and design of a pilot productive safety net activity targeting youth.",
+        "financing": "SDR 4.32 million (US$6 million equivalent)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Labor and Social Affairs (MoLSA) - Federal Government of Somalia. Ministry of Finance (MoF) is the grant recipient. WFP contracted by MoLSA for Component 1 implementation; UNICEF contracted by MoLSA for Component 2 implementation.",
+      "coordination_mechanisms": "Federal PIU within MoLSA SP Department; MoLSA-led 'Food Security, Nutrition and Social Protection' sub-working group; Technical Working Group on Social Protection; Donors Working Group (DWG); Technical Assistance Facility (TAF); Cash Working Group; External Assistance Fiduciary Section (EAFS) within Office of Accountant General; coordination with state governments through antenna PIUs",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers (July 2016, revised Nov 2017 and Aug 2018). Special procurement arrangements under paragraph 12 of Section III of World Bank Policy on Investment Project Financing (FCV country status). Main contracts: WFP and UNICEF service contracts; goods/services by MoLSA under Component 3. STEP system used for procurement tracking. Prior review of all contracts regardless of value.",
+      "monitoring_and_evaluation": "MoLSA has overall M&E responsibility. Dedicated M&E officer in federal PIU. WFP and UNICEF provide quarterly monitoring reports. Semiannual progress reports to World Bank (45 days after reporting period). Independent TPM firm conducts quarterly sample-based monitoring and verification of cash transfers. Targeting evaluation in Year 1. WFP SCOPE MIS used for beneficiary data. Quarterly IFRs submitted 45 days after quarter end."
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Lack of government presence in parts of country; volatile security situation; ongoing anti-terror campaign restricting access; federal elections 2020/21; political contestation between FGS and Somaliland; risk of elite capture during beneficiary identification; complex federation process with uncertainties over power and resource sharing; African Union Mission in Somalia transition.",
+        "risk_rating": "high",
+        "mitigation_measures": "Engage UN agencies (WFP, UNICEF), NGOs, and private sector with established relationships. Deliver cash transfers in all member states based on objective criteria. Communications campaigns for public support. Component 2 supports inclusive policy dialogue on SP roles/responsibilities. Community-based beneficiary selection with NGO monitoring. WFP GRM to address deviations. TPM agency for frequent site checks."
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "High fiduciary risk due to: weak/evolving banking systems with anti-money laundering and anti-terrorism financing risks; inadequate PFM and cash transfer management capacities; limited access to project sites due to security; potential beneficiary inclusion/exclusion errors; weak procurement legal framework; risk of Al-Shabaab affiliated persons being included in beneficiary lists.",
+        "risk_rating": "high",
+        "mitigation_measures": "Biometric beneficiary identification via SCOPE; strengthened framework agreements with third-party payment service providers; TPM arrangements with field-based monitors; use of banking institutions supervised by recognized regimes; EAFS units for FM oversight; UCS adoption; periodic World Bank FM supervision every 6 months; dedicated procurement and FM specialists in PIU; TPM TOR to include validation against UN debarred list."
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "MoLSA has limited institutional capacity and no previous experience implementing cash transfer programs or World Bank-funded projects. Low government revenue base limits fiscal sustainability. Evolving intergovernmental relationships complicate governance arrangements between federal and state levels.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "PIU established to support day-to-day implementation. WFP service contract leverages existing delivery capacity. Component 2 focuses on institutional capacity development. PIU staff shadow WFP/UNICEF for hands-on experience. World Bank TA for procurement and FM capacity. Lessons from Special Financing Facility for Local Development Project. Gradual phasing of government ownership."
+      },
+      {
+        "risk_category": "Technical Design",
+        "risk_description": "Potential lack of access to target communities; political capture in targeting process by FGS and subnational authorities; inadequate data quality on population, demographics, and malnutrition; security considerations may alter targeting approach; risk of oversubscription.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Geographical targeting based on publicly available data with objective eligibility criteria. WFP selected for political neutrality and transparent fund allocation. Operations limited to areas where WFP has access and can monitor. Community-based beneficiary selection with NGO monitoring. Early communications on program objectives and targeting rationale. Gradual rollout prioritizing most distressed districts."
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Significant capacity constraints at all government levels; evolving federal relationships complicate institutional/governance arrangements between federal and state levels for safety net delivery, particularly with Somaliland.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Component 2 activities on policy support, capacity building, institutional development. UNICEF leveraged for existing relationships. Five-year implementation plan development. MoLSA-led Technical Working Group. Exploration of National Social Protection Secretariat. Wide-ranging capacity-building interventions including knowledge exchange and technical training."
+      },
+      {
+        "risk_category": "Environment and Social",
+        "risk_description": "Security risks impeding access to beneficiaries; exclusion of minority groups, disabled persons, widows; gender dynamics restricting women/children access; GBV risks including sexual exploitation and abuse linked to cash transfers; elite/clan capture of benefits; difficulty monitoring in remote/insecure areas; systemic weakness in borrower capacity.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Project operates only in permissive areas; WFP/UNICEF as high-capacity implementing partners; WFP Safe Distribution Guidelines; community-based targeting with NGO support; GBV Action Plan in Social Management Plan; dedicated GRM and risk management officer; WFP multitiered monitoring including hotline; TPM firm; code of conduct for payment partners and security; female staff in TPM and GRM."
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Low revenue base; growth insufficient to address widespread vulnerabilities; dependence on remittances and aid; weak financial sector regulatory framework.",
+        "risk_rating": "moderate"
+      },
+      {
+        "risk_category": "Stakeholders",
+        "risk_description": "Multiple stakeholders with varying interests including FGS, FMS, humanitarian agencies, NGOs, donors, and communities.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Stakeholder Engagement Plan prepared; extensive consultations, workshops, round table discussions; coordination through established working groups; communications campaigns."
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Substantial (Environmental and Social Risk Classification)",
+      "triggered_safeguard_policies": [
+        "Assessment and Management of Environmental and Social Risks and Impacts (Relevant)",
+        "Stakeholder Engagement and Information Disclosure (Relevant)",
+        "Labor and Working Conditions (Relevant)",
+        "Resource Efficiency and Pollution Prevention and Management (Relevant - e-waste from Component 2)",
+        "Community Health and Safety (Relevant)"
+      ],
+      "grievance_redress_mechanism": "Yes - WFP's existing GRM adopted for the project. Operates at local level with 360-degree monitoring. Includes dedicated call centers, Somalia-based hotline, field monitoring staff, and online case management software. Complaints classified by risk level (high, medium, low, residual). Dedicated GRM and risk management officer hired by WFP. Separate channels for safe/confidential reporting of SEA and GBV. Long-term: MoLSA to develop comprehensive GRM with UNICEF support under Component 2. World Bank GRS and Inspection Panel also available.",
+      "gender_considerations": "Strong gender focus: female caregivers/mothers are direct recipients of cash transfers. Gender gap analysis conducted. GBV Action Plan included in Social Management Plan. Female staff in TPM and GRM. Field facilitation by NGOs including women staff. Project designed to reduce rural-urban migration during shocks that exposes women/girls to GBV. Cash transfers expected to enhance women's decision-making power. Results framework includes female beneficiary indicator. Annex 6 provides detailed gender and GBV analysis.",
+      "vulnerable_groups": [
+        "Internally Displaced Persons (IDPs) - approximately 14% of total population",
+        "Women and girls (particularly displaced women and girls)",
+        "Children under five years",
+        "Pregnant and lactating women",
+        "Female-headed households",
+        "Minority and marginalized groups",
+        "Persons with disabilities",
+        "Child-headed households",
+        "Rural poor",
+        "Pastoralist and agro-pastoralist communities",
+        "Households in IPC 'Stressed' category (IPC 2)"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project explicitly designed with conflict sensitivity: targeting approach uses objective criteria to reduce exclusion and considers political economy dynamics; community consultations embedded in implementation; functional GRM prerequisite for project launch; special attention to inclusion of minority and marginalized groups; project operates only in 'permissive' areas where WFP can monitor; WFP political neutrality used as key mitigation for elite/clan capture; 'do no harm' principle embedded throughout; project avoids areas controlled by armed groups; service agreements include contractual obligation to uphold humanitarian principles; project designed to strengthen social contract between government and citizens; SP programs explicitly linked to reducing social inequalities and enhancing social cohesion.",
+      "fragility_context": "Somalia experienced 25+ years of civil war since 1991; Al-Shabaab active with attacks in March/April 2019; government control limited beyond urban areas; 14 droughts since 1960; 2011 famine killed 250,000; 2016/17 drought left 6.7 million in urgent need; 1.5 million+ internally displaced; 80% below international poverty line; third poorest country in region; nascent federal system with complex power-sharing; no formal safety net system; weak PFM and banking systems; limited government revenue (5.4% of GDP); dual development trap of instability and exclusion; Somalia ranked most vulnerable country to climate change by Center for Global Development.",
+      "security_considerations": "Security is a primary operational constraint. Project only operates in areas permissive enough for WFP to monitor. WFP security officers in all regions. UNDSS provides overarching UN security. Cash transfer delivery points may be targeted by armed actors including Al-Shabaab. AML/CFT risks due to potential inclusion of Al-Shabaab affiliated persons. Security of cash handling is major challenge. Limited access to project sites for monitoring. In event of deteriorating security in one or more states, project will be restructured to continue in other states. Security is explicit criterion in district selection.",
+      "displacement_or_refugees": "Yes - approximately 1.5 million people internally displaced since November 2016 due to drought, conflict, and flooding, in addition to 1.1 million in protracted displacement (total ~14% of population). IDPs are among most vulnerable beneficiaries. Displaced women and girls face highest GBV risks. Project targets rural areas to reduce push factor for rural-urban migration during shocks. IDP settlements have 70% poverty rate. Project targeting methodology explicitly includes IDPs (26% of all IDPs in target districts based on 2014 data). No mention of international refugees."
+    }
+  }
+}

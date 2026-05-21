@@ -1,0 +1,133 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P510861",
+    "guid": 99082625171042221,
+    "node_id": 40039812,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-6a4472a2-a645-45dd-bc0d-6e635f83b0e3.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Smart Public Finances: Data-Driven Public Expenditure Management for Greater Efficiency Program - Phase 1 (Guatemala)",
+      "project_development_objective": "To enhance effectiveness, efficiency, and accountability of public expenditures in Guatemala",
+      "total_financing": "US$50 million (Phase 1); US$140 million (total MPA envelope)",
+      "implementation_period": "2025-2031 (6 years)",
+      "beneficiaries": "Direct: Ministries of Finance and state agencies in Guatemala; Indirect: citizens, businesses, civil society organizations, academia, SMEs, and service users in health, education, and social assistance sectors"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Guatemala (national)",
+        "Central America region (for MPA)"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "no - Guatemala is not classified as fragile or conflict-affected, though it faces significant socioeconomic challenges including high poverty (55%), informal economy (71.1% of workforce), limited fiscal space, and vulnerability to natural disasters"
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Foundations for Smart PFM",
+        "description": "Strengthens core PFM processes including budgeting, treasury, revenue, debt management, accounting, public investment management, asset management, procurement, human resources, audit and control, and fiscal transparency. Includes developing integrated PFM conceptual model, strengthening MTEF, expanding TSA coverage, adopting IPSAS, improving public investment management, and enhancing data analytics capabilities.",
+        "financing": "US$8 million"
+      },
+      {
+        "component_name": "Component 2: Secure and Sustainable PFM Information Ecosystem",
+        "description": "Modernizes IFMIS and peripheral systems, implements data analytics platform, enhances ICT infrastructure, and develops information security and business continuity systems. Includes updating core systems (budgeting, accounting, treasury, debt management), integrating peripheral systems (procurement, payroll, asset management), implementing unified data repository and analytics tools, and establishing ISMS and BCMS based on ISO standards.",
+        "financing": "US$35 million"
+      },
+      {
+        "component_name": "Component 3: Governance, Capacity, and Knowledge Sharing",
+        "description": "Establishes PFM governance framework, supports change management, builds capacity in PFM and data analytics, and promotes regional knowledge sharing through Smart PFM Community of Practice. Includes PIU operations, governance model implementation, capacity-building programs, and participation in regional CoP.",
+        "financing": "US$7 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Public Finances (MINFIN) through the Technical Budget Directorate (DTP)",
+      "coordination_mechanisms": "Project Implementation Unit (PIU) established within DTP; Digital Transformation Committee and Interinstitutional Committee (Mesa Interinstitucional) jointly established by MINFIN and SEGEPLAN serve as governance bodies; Smart PFM Community of Practice (CoP) at regional level for cross-country learning; coordination with IMF and IDB on complementary PFM reforms",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers (sixth edition, February 2025); simplified Project Procurement Strategy for Development (PPSD); procurement methods include National Open Competitive Procurement, consulting services, goods procurement (licenses, IT equipment, software), and non-consulting services (training, technical assistance); prior review requirements and procurement plan to be agreed with Bank",
+      "monitoring_and_evaluation": "Multi-tiered results framework with Program Development Objective (PrDO) indicators and Project Development Objective (PDO) indicators selected from PEFA indicators; PIU to establish monitoring system and submit semiannual progress reports to World Bank; M&E specialist within PIU; interim evaluation before midterm review; Bank to conduct semiannual implementation support missions; progress documented in Aide Memoires and Implementation Status and Results Reports (ISRs)"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Risk of political instability affecting reform commitment and continuity; potential changes in government leadership could disrupt implementation momentum; weak institutional stability within implementing agency",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Secure strong, sustained commitment from senior government leadership; establish incentives that sustain reforms beyond individual tenures; maintain continuous engagement with dedicated team within MINFIN under clear directive from Minister of Finance; anchor implementation in Technical Budget Directorate (DTP) to ensure strong client ownership"
+      },
+      {
+        "risk_category": "Technical Design",
+        "risk_description": "PFM reforms require whole-of-government approach with complex, cross-cutting changes; anticipated efficiency gains depend on interoperability of processes and seamless integration of information systems across institutions; involvement of multiple stakeholders increases potential for misalignment or implementation delays; lack of foundational preconditions for PFM reforms",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Development and application of well-defined, evidence-based PFM conceptual and governance models informed by diagnostic and reform strategy; comprehensive diagnostic and reform strategy completed prior to project preparation; phased implementation approach; clear and coherent framework to foster shared understanding of objectives and processes; flexibility embedded in design for just-in-time technical assistance"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "Complex PFM reforms require strong government commitment; coordination challenges may arise as beneficiaries extend beyond MINFIN; DTP has limited experience with donor-funded projects; potential talent turnover in key positions; weak institutional support for system maintenance; limited analytical capacity in government",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Establishment of PIU within DTP to enable faster decision-making and improved coordination; Component 3 support for PIU operations including project management, financial management, procurement, monitoring, and environmental/social risk management capacities; training for PIU and relevant stakeholders on Bank operations and processes; implementation of change management mechanisms and communications strategy; coordination through Digital Transformation Commission between MINFIN and SEGEPLAN; permanent capacity building programs to mitigate impact of talent turnover; structured career paths for data professionals"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "DTP has limited experience with donor-funded projects and lack of recent engagement with World Bank operations; no prior experience implementing Bank's procurement regulations; low value of anticipated contracts may limit interest from international firms, reducing competition and affecting bid quality; unfamiliarity with Bank's financial management policies and requirements; potential delays in activity execution",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Setup of PIU with qualified personnel; procurement training for PIU and DTP staff; market analysis to find potential providers; preparation of simplified PPSD to identify best procurement arrangements; basic systems and procedures in place to support project implementation; bi-annual interim unaudited financial reports; use of Statements of Expenditures (SOEs) with supporting documents; designated account at National Treasury; direct payments method option for disbursement"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Limited fiscal space due to historically low tax revenues and post-pandemic fiscal consolidation; remittances are major source of household income (19.4% of GDP in Guatemala) and drive VAT collections (47.8% of government net income); decline in remittances could reduce VAT collections and create fiscal vulnerabilities; extreme weather events pose additional risk causing infrastructure damage and economic losses",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Project aims to enhance productivity of public spending and create fiscal space through improved efficiency; improved public investment management to reduce cost overruns; enhanced asset management to increase revenues; business continuity systems to respond to climate-related shocks; climate budget tagging and climate risk screening in public investment"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Persistent weaknesses in PFM functions including budgeting, accounting, treasury, human resources, public investment, asset management, and procurement; low scores in budget reliability and expenditure composition outturn; weak predictability and control of budget execution; limited availability and timeliness of in-year budget reports; underdeveloped M&E phase of budget process; inconsistent development and use of performance indicators",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Comprehensive PFM ecosystem assessment and diagnostic completed; reform strategy developed addressing identified weaknesses; project design includes strengthening of core PFM processes and methodologies; implementation of integrated conceptual model; adoption of IPSAS; development of performance information systems; establishment of data governance models"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Potential generation of electronic waste (e-waste) from outdated electronics and IT equipment; occupational health and safety hazards for workforce; higher energy consumption from new systems; potential job loss in public sector from increased productivity in HRM; resistance to proposed project activities from stakeholder groups affected by transition to smart PFM; possible exclusion of vulnerable groups through technology biases in data analytics platform",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Environmental management standards to ensure energy-efficient technologies in new equipment; life cycle requirements and energy efficiency standards in procurement; proper treatment of electronic waste; occupational health and safety measures for workforce; gender-sensitive assessment of skills and representation gaps; gender-responsive budgeting and public procurement practices; integration of gender considerations across components; citizen engagement mechanisms including full-cycle consultations; inclusive governance structures; stakeholder engagement throughout design and implementation; change management strategy to address resistance; diversity and equality policies in public employment"
+      },
+      {
+        "risk_category": "Stakeholders",
+        "risk_description": "Multiple stakeholders involved in PFM reforms may have divergent interests; potential resistance from groups affected by efficiency improvements; limited engagement of civil society and vulnerable groups; weak transparency and accountability may undermine public trust",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Inclusive governance structures with mechanisms for dialogue and resolution; continuous stakeholder involvement throughout implementation; citizen engagement mechanisms including public portals for fiscal data access and full-cycle budget consultations; communications and change management strategy with targeted outreach to civil society; user satisfaction surveys; expansion of fiscal transparency through improved portals; gender-sensitive and inclusive approach to capacity building"
+      },
+      {
+        "risk_category": "Security",
+        "risk_description": "Guatemala has experienced significant cyberattacks on government entities: Superintendency of Tax Administration faced 8,000+ cyberattacks in 2021; Foreign Ministry ransomware attack in 2022; Guatecompras and SICOIN portals attacked in 2023; gap between cybersecurity policy formulation and practical implementation; vulnerable and outdated PFM systems; increasingly sophisticated cyberattacks",
+        "risk_rating": "substantial (implicit)",
+        "mitigation_measures": "Development of Information Security Management System (ISMS) based on ISO 27000 family of standards; implementation of Business Continuity Management System (BCMS) following ISO 22301 guidelines; design and implementation of Computer Security Incident Response Team (CSIRT) and Security Operation Center (SOC) for incident detection and response; information security and business continuity policy development; strengthening of information security governance and functional arrangements; implementation of processes to identify critical assets, assess security risks, and identify threats; readiness for climate-related disruptions"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate",
+      "triggered_safeguard_policies": [
+        "ESS 1: Assessment and Management of Environmental and Social Risks and Impacts (Relevant)",
+        "ESS 10: Stakeholder Engagement and Information Disclosure (Relevant)",
+        "ESS 2: Labor and Working Conditions (Relevant)",
+        "ESS 3: Resource Efficiency and Pollution Prevention and Management (Relevant)",
+        "ESS 7: Indigenous Peoples/Sub-Saharan African Historically Underserved Traditional Local Communities (Relevant)"
+      ],
+      "grievance_redress_mechanism": "Yes - Project-level grievance mechanism to be established by MINFIN no later than 60 days after Effective Date and maintained throughout project implementation; World Bank's Grievance Redress Service (GRS) available for complaints; World Bank's Accountability Mechanism (Inspection Panel and Dispute Resolution Service) available for complaints regarding Bank non-compliance with policies",
+      "gender_considerations": "Gender-responsive planning integrated across components; integration of gender criteria addressing disparities in access to infrastructure and services; gender-disaggregated data incorporated into fiscal transparency tools; promotion of gender-responsive budgeting practices; support for women's participation in training, governance, and decision-making; increase in municipalities applying gender tagging (CPEG) from 112 to 250; gender-sensitive assessment of skills and representation gaps; gender-based budget classifier (CPEG) integration into FMIS; gender-focused public procurement practices; diversity and equality policies in public employment; target to increase gender-tagged budget from 0.6% to higher levels",
+      "vulnerable_groups": [
+        "Women",
+        "Rural populations with limited access to education and services",
+        "Poor and extremely poor populations (55% in poverty)",
+        "Youth facing high unemployment and underemployment",
+        "Indigenous peoples",
+        "Informal sector workers (71.1% of workforce)",
+        "Populations vulnerable to climate change impacts (75% at risk from floods, droughts, landslides)"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Guatemala is not classified as fragile or conflict-affected. However, the project addresses underlying drivers of fragility through: improved public service delivery in health, education, and security sectors; enhanced fiscal transparency and accountability to rebuild public trust; more efficient resource allocation to address poverty and inequality; strengthened institutional capacity and governance; improved citizen engagement mechanisms. The project supports the government's ability to respond to crises without undermining critical service delivery through business continuity systems.",
+      "fragility_context": "Guatemala faces significant socioeconomic challenges that create fragility risks: high poverty (55%), large informal economy (71.1% of workforce), limited formal job creation, weak public service delivery, low tax revenues (11.8% of GDP), dependence on remittances (19.4% of GDP), high inequality, limited access to education and health services, and vulnerability to natural disasters. These structural challenges erode public trust and hinder effective governance. The project addresses these by improving PFM systems, enhancing resource allocation efficiency, and strengthening institutional capacity for evidence-based decision-making.",
+      "security_considerations": "Guatemala faces significant cybersecurity threats: 8,000+ cyberattacks on Tax Administration in 2021; ransomware attack on Foreign Ministry in 2022; attacks on Guatecompras and SICOIN in 2023. Project includes comprehensive information security measures: ISMS based on ISO 27000 standards; BCMS following ISO 22301; CSIRT and SOC implementation; information security governance strengthening; critical asset identification and risk assessment; business continuity readiness for climate-related disruptions. These measures enhance resilience of critical government financial systems.",
+      "displacement_or_refugees": "no - Project does not involve land acquisition, involuntary resettlement, or displacement. It is a technical assistance and systems modernization project focused on improving public financial management. However, project may indirectly affect employment through increased productivity in human resource management, which could result in job losses in public sector. Mitigation includes change management strategy and communications efforts to address stakeholder concerns."
+    }
+  }
+}

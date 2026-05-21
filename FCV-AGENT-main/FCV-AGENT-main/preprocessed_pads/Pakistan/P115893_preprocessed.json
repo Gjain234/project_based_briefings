@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P115893",
+    "guid": 779371468057882621,
+    "node_id": 15963535,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b0828cb541&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 570132
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Tarbela Fourth Extension Hydropower Project (T4HP)",
+      "project_development_objective": "To facilitate a sustainable expansion of Pakistan's electricity generation capacity and strengthen WAPDA's capacity to develop the country's hydropower resources by installing a 1,410 MW hydropower plant on an existing dam with an already constructed tunnel",
+      "total_financing": "US$914 million (IBRD Loan: US$400 million, IDA Credit: US$440 million equivalent, WAPDA: US$74 million)",
+      "implementation_period": "July 1, 2012 to December 31, 2018 (6.5 years)",
+      "beneficiaries": "Direct beneficiaries: millions of energy users including industry, households, and farmers. Indirect beneficiaries: non-electric users through higher productivity and employment, particularly in industrial sector"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Tarbela Dam area, Indus River",
+        "Haripur District (left bank)",
+        "Swabi District (right bank)",
+        "Khyber Pakhtunkhwa Province",
+        "60 km northwest of Islamabad"
+      ],
+      "coverage_type": "National (electricity generation for national grid)",
+      "fragile_or_conflict_affected_areas": "Partial - Pakistan faces significant security challenges and conflict in border areas; the project area itself is relatively secure but located in a country with governance and security concerns"
+    },
+    "key_components": [
+      {
+        "component_name": "Component A: Construction of Power House and Modification to the Tunnel",
+        "description": "Civil works including construction of power house, penstock connecting Tunnel 4 to power units, and raised intakes for Tunnels 3 and 4",
+        "financing": "US$309.6 million"
+      },
+      {
+        "component_name": "Component B: Power Units and Ancillary Equipment",
+        "description": "Installation of three 470 MW turbines and generators, transformers, electro-mechanical equipment, and short transmission line to grid connection",
+        "financing": "US$431.5 million"
+      },
+      {
+        "component_name": "Component C: Social Action and Environmental Management Plans, Dam Monitoring and Surveillance",
+        "description": "Implementation of Social Action Plan (US$15M), Environmental Management Plan (US$3M), Dam Safety Monitoring (US$5M), and Glacier Monitoring Program (US$6M)",
+        "financing": "US$29 million"
+      },
+      {
+        "component_name": "Component D: Construction Supervision, Monitoring and Evaluation",
+        "description": "Construction supervision consulting services (US$24M) and M&E of project impacts and management plans (US$2.4M)",
+        "financing": "US$26.4 million"
+      },
+      {
+        "component_name": "Component E: Project Management Support, Capacity Building, Technical Assistance and Training",
+        "description": "PMU support and audits (US$14M), WAPDA capacity building and IPOE (US$4M), and future project preparation (US$16M)",
+        "financing": "US$34 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Water and Power Development Authority (WAPDA), specifically through the Project Management Unit (PMU) established under the General Manager Tarbela's office",
+      "coordination_mechanisms": "PMU headed by Project Director with three units: Engineering Unit (Civil, Mechanical, Electrical), Procurement/Financial Management/Administration Unit, and Environment & Social Unit. Supported by Construction Supervision Consultants (CSCs), Monitoring and Evaluation Consultants (M&ECs), and Independent Panel of Experts (IPOE)",
+      "procurement_approach": "International Competitive Bidding (ICB) for major contracts; National Competitive Bidding (NCB) for smaller contracts; shopping procedures for minor works; direct contracting for specialized services. Two major ICB contracts: civil works (US$317.8M) and turbines/generators (US$431.9M)",
+      "monitoring_and_evaluation": "Quarterly progress reports (45 days after quarter end), annual reports (by September 30), mid-term review (October 31, 2016), and Implementation Completion Report (6 months after closing). M&ECs provide independent monitoring of project impacts, EMP, and SAP implementation"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Institutional/Capacity",
+        "risk_description": "Efficiency and transparency in procurement and financial management could be challenging given the large size of the project. Limited capacity of internal audit function at WAPDA",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Proper procurement planning and tracking system; experienced procurement consultants; internationally recruited CSCs as engineer; IPOE involvement; Bank team placement in-country; strengthening of internal audit function; website for procurement transparency"
+      },
+      {
+        "risk_category": "Design and Implementation",
+        "risk_description": "Risks of inadequate technical designs and engineering works leading to failure or poor performance. Large scale of operation represents a risk",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Internationally renowned design company; IPOE involvement throughout project; world-leading turbine/generator manufacturer; WAPDA's previous experience with Tunnel 3 conversion; state-of-the-art design concepts and methods"
+      },
+      {
+        "risk_category": "Social",
+        "risk_description": "Outstanding resettlement issues from Tarbela Dam Project (40 claims) and Ghazi Barotha Project (410 claims) pending in courts. Poor implementation of original Tarbela resettlement program left difficult legacy issues. Risk of opposition from affected communities and NGOs",
+        "risk_rating": "high",
+        "mitigation_measures": "Social Action Plan (SAP) developed to address legacy issues; Resettlement Claims Commission established; social mobilization team contracted; clear boundaries to cover only in-court cases; Grievance Redress Committee on-site; extensive stakeholder consultations conducted"
+      },
+      {
+        "risk_category": "Environmental",
+        "risk_description": "Environmental impacts primarily limited to construction stage but include potential for landslides, slope instability, dust, noise, water quality impacts, and disturbance to fauna. Located in seismically active region",
+        "risk_rating": "high",
+        "mitigation_measures": "Comprehensive Environmental and Social Assessment (ESA) and Environmental Management Plan (EMP); Environmental and Social Management Unit (ESMU) within PMU; independent M&ECs for supervision; Environmental Code of Practices in contracts; monitoring programs for water quality, air quality, noise, slope stability; tree plantation plan; dam safety monitoring upgrades"
+      },
+      {
+        "risk_category": "Security/Political",
+        "risk_description": "Pakistan faces significant security challenges and conflict in border areas. Project is considered potential terrorist target. Persistence of conflict affects all aspects of life in Pakistan",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Project area has restricted access and security arrangements; Independent Panel of Experts; regular Bank supervision; contingency planning; emergency preparedness plan"
+      },
+      {
+        "risk_category": "Fiduciary/Governance",
+        "risk_description": "Governance is a considerable concern in Pakistan. Perception of corruption has increased. Large contracts present rent-seeking opportunities",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Comprehensive Governance and Accountability Action Plan (GAAP); website disclosure of all procurement information; public bid openings with CSO presence; conflict of interest declarations; multiple oversight entities (M&ECs, IPOE, internal audit); complaints mechanism; Bank sanctions framework; enhanced transparency measures"
+      },
+      {
+        "risk_category": "Economic/Hydrological",
+        "risk_description": "Potential impact of climate change on inflow hydrology; construction cost overruns; construction delays; variations in water availability",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Extensive hydrological simulations using 1962-2009 data; sensitivity analysis showing robustness to 70% decline in generation; probabilistic risk assessment; scenario analysis; monitoring of glaciers and climate impacts; contingency planning"
+      },
+      {
+        "risk_category": "Operational",
+        "risk_description": "Risk of sediment blockage of tunnel intakes; sedimentation of reservoir reducing useful life; potential for dam safety issues",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Raised intake construction to prolong operational life; dam safety monitoring system upgrades; sediment management studies; glacier monitoring program; regular dam inspections; IPOE review of dam safety aspects"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Category A (Full Assessment required due to large-scale construction on major dam with potential impacts on densely populated downstream areas)",
+      "triggered_safeguard_policies": [
+        "Environmental Assessment (OP 4.01)",
+        "Involuntary Resettlement (OP 4.12)",
+        "Safety of Dams (OP 4.37)",
+        "International Waterways (OP 7.50)",
+        "Physical Cultural Resources (OP 4.11)"
+      ],
+      "grievance_redress_mechanism": "Yes - Grievance Redress Committee (GRC) established on-site with representatives from WAPDA, contractors, local communities, social organizers, and civil society. Public Information Centre with public register for grievances. GRC meets regularly to review grievances with decisions delivered within 10 days. Complaints mechanism also established for procurement-related issues with website tracking",
+      "gender_considerations": "Gender consultations carried out during ESA preparation at 10 different locations with 96 female stakeholders. Women-specific concerns addressed in Social Impact Management Framework. Women's participation encouraged in construction employment through female working groups. Women's mobility and safety addressed in Traffic Management Plan. Women's health and education facilities identified as community needs in social assistance program",
+      "vulnerable_groups": [
+        "Previously resettled persons from Tarbela Dam Project (96,000 people resettled in 1968-1976)",
+        "Previously resettled persons from Ghazi Barotha Project (179 families/899 persons)",
+        "Outstanding claimants in courts (40 from TDP, 410 from GBHP)",
+        "Low-income households in project area (majority below poverty line)",
+        "Women and children (safety concerns during construction)",
+        "Fishermen (livelihood dependent on reservoir)",
+        "Migrating bird populations",
+        "Local communities in Haripur and Swabi districts with limited access to services"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project addresses conflict sensitivity through: (1) Social Action Plan to resolve outstanding resettlement disputes from previous projects that could fuel grievances; (2) Extensive stakeholder consultations to build consensus and address concerns; (3) Grievance Redress Committee and multiple accountability mechanisms to prevent conflicts; (4) Communications strategy to manage expectations and provide transparent information; (5) Employment opportunities for local communities to build support; (6) Governance and Accountability Action Plan to prevent corruption-related conflicts; (7) Security arrangements appropriate to Pakistan's context",
+      "fragility_context": "Pakistan faces significant fragility factors: (1) Persistence of conflict in border areas affecting all aspects of life; (2) Weak governance with corruption concerns (Transparency International ranking 143 in 2010); (3) Security challenges throughout the country; (4) Economic challenges with GDP growth of 2.4% in FY10/11, inflation at 13.7%; (5) Fiscal deficit of 6.3% of GDP; (6) Circular debt in power sector estimated at PKR 270-310 billion; (7) High unemployment and poverty (17.2% in 2007-08); (8) Weak institutional capacity and governance in public sector; (9) Limited access to basic services in project area (water, sanitation, health, education)",
+      "security_considerations": "Project area has restricted access and security arrangements. Project is considered potential terrorist target. Pakistan faces significant security challenges with conflict in border areas. Mitigation measures include: (1) Restricted access to WAPDA-controlled area; (2) Security staff training; (3) Emergency preparedness planning; (4) Regular Bank supervision; (5) Independent Panel of Experts oversight; (6) Contingency planning for security incidents; (7) Awareness raising on security risks for workers and communities",
+      "displacement_or_refugees": "No new displacement expected from T4HP itself as project uses existing dam and tunnel on WAPDA-owned land. However, project addresses legacy displacement issues: (1) Tarbela Dam Project (1968-1976) displaced 96,000 people and acquired 33,200 hectares; (2) Ghazi Barotha Project (1995-2003) displaced 179 families (899 persons); (3) Outstanding resettlement claims: 40 from TDP, 410 from GBHP pending in courts; (4) Social Action Plan developed to settle these legacy claims through out-of-court commission with estimated compensation of PKR 1,909 million; (5) Resettlement Claims Commission established to facilitate faster resolution; (6) Social mobilization team contracted to support settlement process"
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P164443",
+    "guid": 235601538364654826,
+    "node_id": 30423227,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b0861210e1&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 273354
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Women's Economic Empowerment Rural Development Project (WEE-RDP)",
+      "project_development_objective": "To increase social and economic empowerment of poor rural women in selected communities.",
+      "total_financing": "US$ 100 million (SDR 17.90 million IDA Grant + US$ 75 million ARTF)",
+      "implementation_period": "2018-2023 (5 years)",
+      "beneficiaries": "Approximately 450,000 direct beneficiaries (350,000 female) from 400,000-450,000 households across 76 districts in 34 provinces; secondary beneficiaries include approximately 100 SMEs/agribusiness firms"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "All 34 provinces of Afghanistan",
+        "76 districts total (52 new districts + 24 existing AREDP districts)",
+        "Approximately 6,250 Community Development Councils (CDCs)",
+        "7 districts on standby due to security concerns"
+      ],
+      "coverage_type": "National with phased implementation",
+      "fragile_or_conflict_affected_areas": "Yes - partial. Project operates in fragile and conflict-affected state. High-risk area strategy developed for semi-secure/insecure areas. 7 districts on standby list due to security situation. Over 70% of selected districts classified as rural."
+    },
+    "key_components": [
+      {
+        "component_name": "Community Mobilization and Institution Development",
+        "description": "Social mobilization to establish 40,000 Self-Help Groups (SHGs), 5,000 Village Savings and Loan Associations (VSLAs), 5,000 Enterprise Groups (EGs), and 500 Producer Associations (PAs). Includes training and capacity building for community institutions. Two implementation strategies: NGO Facilitating Partners (FPs) in CCAP areas and direct MRRD staff deployment (Social Organizers, Village Facilitators, District Facilitators).",
+        "financing": "US$ 30 million"
+      },
+      {
+        "component_name": "Access to Finance",
+        "description": "Seed capital grants to SHGs and VSLAs to establish revolving funds. Partnerships with MFIs and commercial banks (MISFA, DAB, state-owned banks) to promote financial inclusion. Development of financial products and services. Three-stage approach: own savings culture through SHGs, seed capital injection to VSLAs, and linkage to formal financial institutions.",
+        "financing": "US$ 39 million"
+      },
+      {
+        "component_name": "Enterprise Development and Market Linkages",
+        "description": "Technical assistance and capacity building for EGs and PAs. Catalytic grants (up to $2,000 per EG) for common assets and infrastructure. Private-public-community partnerships for market linkages. Focus on pro-poor, high-value commodities (vegetables, horticulture, dairy, poultry, handicrafts, honey). Uses Maximizing Finance for Development (MFD) cascade approach.",
+        "financing": "US$ 18 million"
+      },
+      {
+        "component_name": "Project Management",
+        "description": "Project implementation support including staff salaries, consultancies, training, equipment, and operational costs. Monitoring and evaluation, financial management, procurement, human resource management, knowledge management, communications, environmental and social safeguards, and grievance redress mechanism.",
+        "financing": "US$ 13 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Rural Rehabilitation and Development (MRRD), positioned within proposed Sustainable Economic Growth Directorate",
+      "coordination_mechanisms": "WEE-NPP Inter-Ministerial Steering Committee (led by MOLSAMD and MOWA) for overall coordination. Partnerships with MISFA, Da Afghanistan Bank (DAB), state-owned banks (New Kabul Bank, Pashtany), NGO Facilitating Partners, Technical Support Agencies, and other projects (NHLP, TUP, SWEEP, CCAP). Twinning arrangement with rural livelihoods projects in India for technical assistance.",
+      "procurement_approach": "World Bank Procurement Regulations for IPF (July 2016, revised November 2017). Major procurement: Facilitating Partners (~$11 million), goods, equipment, and technical agencies. Systematic Tracking of Exchanges in Procurement (STEP) system used. Capacity building for MRRD Procurement Directorate. Advance procurement of FPs planned.",
+      "monitoring_and_evaluation": "Computerized web-based Management Information System (MIS) for real-time monitoring. Community-based participatory monitoring (CPM) at village level. Third-party monitoring through ARTF mechanism. Baseline and impact assessments. Rigorous impact evaluation planned. Quarterly reporting on results framework. Mid-term review at 2.5 years."
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Unity government, upcoming Parliamentary and Presidential elections (2018-19), political instability, and uncertainty around government reforms could affect implementation and sustainability.",
+        "risk_rating": "High",
+        "mitigation_measures": "Regular inter-ministerial steering committee meetings, joint action plans with relevant departments, strong government commitment to WEE-NPP, alignment with national development priorities (ANPDF)"
+      },
+      {
+        "risk_category": "Security/Conflict",
+        "risk_description": "Fragile security environment, deteriorating security situation, limited ability for World Bank task team to conduct field visits, high security threats in rural areas, 7 districts on standby due to security concerns.",
+        "risk_rating": "High",
+        "mitigation_measures": "High-risk area strategy developed for semi-secure/insecure areas, use of Third-Party Monitors (TPM), flexible implementation approach with continuous adjustments to security situations, reliance on project client feedback and implementation partners"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Fiscal pressures, declining aid, economic deceleration, poverty increase (38.3% in 2012-13 to 54.5% in 2016-17), private sector growth decline, inflation pressures from refugees and commodity prices, currency volatility.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Affordable pricing of loans to client group, focus on financial sustainability of VSLAs, linkages with formal financial institutions, diversified livelihood activities"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Limited outreach of MFIs (80 districts of 14 provinces, 12% rural clients), weak banking sector presence in rural areas, limited financial products, lack of legal framework for VSLAs, no microfinance law yet.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Up-front institutional partnerships with MISFA, DAB, and state-owned banks, development of new financial products, work with WEE-NPP steering committee on policy reforms, exploration of IT-enabled delivery channels, simplified bank account opening procedures"
+      },
+      {
+        "risk_category": "Technical Design of Project",
+        "risk_description": "Complexity of applying saturation approach, VSLA sustainability challenges, access to finance linkages, business linkages, targeting women in socio-cultural context, changes from AREDP model, limited experience with FPs and financial institutions.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Drawing on multiple partners and Technical Support Agencies, strong stakeholder interest, SWEEP pilot to field-test new ideas, lessons from AREDP and similar projects in South Asia, twinning with India projects"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "MRRD restructuring and alignment uncertainties, limited experience with FPs and financial institutions, need for intense supervision and monitoring, high staff attrition, rotation of responsibilities.",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "Competent multi-disciplinary project team with relevant professional skill sets, close association with CCAP, capacity building through Technical Support Agencies, twinning arrangement with India project, regular training on procurement, FM, M&E, and safeguards"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Operational advance mismanagement in MRRD projects, delays in reconciliation, weak asset management policy, large volumes of unmanaged fixed assets, new accounting software (Quickbooks) with no previous experience, MIS development delays, complex grant management with 5,000 VSLAs.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Implementation of FM manual developed by Bank, rapid clearance of operational advances (fortnightly), MIS development as disbursement condition, integrated MIS with accounting records, monthly reconciliations, semi-annual internal audits, fixed asset verification, backup financial data in Excel for first year"
+      },
+      {
+        "risk_category": "Environment and Social",
+        "risk_description": "Potential minor health and safety issues from community-level businesses, pesticide use in agricultural activities, limited community awareness of safeguards, potential for gender-based violence (GBV) from economic empowerment, displacement risks if land required.",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "Environmental and Social Management Framework (ESMF) prepared and disclosed, Pest Management Plan (PMP) to be prepared before EG grants disbursed, ESS focal officer at HQ and safeguards focal points at provincial level, GBV module in staff training, willing buyer-willing seller approach for land, community participatory monitoring"
+      },
+      {
+        "risk_category": "Stakeholders",
+        "risk_description": "Limited outreach of commercial banks and MFIs, several provinces/districts with no bank branches, limited financial products, need for linkages with private sector, coordination challenges with multiple ministries and agencies.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Up-front institutional partnerships and MOUs with financial institutions, development of new products and tools, work with financial inclusion department of DAB, collaboration with A2F project, regular inter-ministerial coordination meetings, joint action plans"
+      },
+      {
+        "risk_category": "Other - Gender-Based Violence",
+        "risk_description": "Economic empowerment could increase GBV risk if violence used as extractive mechanism or male backlash to changing gender roles, though global evidence shows mixed results.",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "GBV module in staff training, formation of male SHGs (up to 20%) to reduce backlash, women's SHGs as safe spaces for disclosure and collective action, awareness raising with CDCs on GBV impacts, soft skills training on behavior change communication and conflict resolution"
+      },
+      {
+        "risk_category": "Other - Climate and Disaster",
+        "risk_description": "Afghanistan ranked 8 of 170 countries for climate vulnerability, exposure to droughts and floods, agricultural sector vulnerability, potential 2-6% increase in extremely poor by 2030 linked to climate change.",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "Project focus on climate-resilient technologies and agronomic practices, capacity enhancement of EGs/PAs for adaptive capacity, climate-resilient agricultural inputs and processes, estimated 8,513 tCO2e GHG emission reductions over 20 years"
+      },
+      {
+        "risk_category": "Other - Financial Intermediation",
+        "risk_description": "Concerns about loan contract enforcement under Islamic finance (ad hoc profit sharing vs. predictable interest rates), VSLA sustainability with profit sharing arrangements, lack of VSLA supervision, no legal framework for VSLAs, force majeure and credit risk coverage unclear.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "VSLA maturity and sustainability analysis and index development, MOUs with MISFA and state-owned banks before effectiveness, certification process for VSLAs before seed capital provision, decertification/strengthening process for non-performing VSLAs, clear credit risk coverage in operational manual, Islamic-compliant profit sharing principles"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "B - Partial Assessment",
+      "triggered_safeguard_policies": [
+        "Environmental Assessment OP/BP 4.01",
+        "Pest Management OP 4.09"
+      ],
+      "grievance_redress_mechanism": "Yes - Project-level grievance redress mechanism (GRM) to be established and integrated with CCAP GRM system where possible. Grievances tracked through MIS. Community participatory monitoring (CPM) through social audits. World Bank's Grievance Redress Service (GRS) and Inspection Panel available for project-affected communities.",
+      "gender_considerations": "Project is primarily designed to reduce gender gaps in voice, agency, social and economic participation, and access to finance for rural poor women. All interventions directly contribute to closing gender gaps. Gender-sensitive implementation approaches including involvement of men, careful social mobilization, focus on female staff, soft skills training (behavior change communication, conflict resolution, life skills), GBV awareness raising with CDCs. Specific indicators to measure progress on gender outcomes. Formation of male SHGs (up to 20%) to reduce backlash risk.",
+      "vulnerable_groups": [
+        "Poor and ultra-poor women",
+        "Kuchies (nomadic tribes)",
+        "Widows",
+        "Returnees",
+        "Internally Displaced Persons (IDPs)",
+        "Persons with Different Abilities (PWD)",
+        "Marginalized households"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project explicitly designed for fragile and conflict-affected context. High-risk area strategy developed for semi-secure/insecure areas. 7 districts on standby due to security. Project recognizes that addressing gender disparities and empowering women is essential for consolidating peace and security in fragile and conflict-affected societies. Community-driven development approach through CDCs provides platform for social inclusion and local democratic participation. Project builds social capital and solidarity among women which can contribute to peace-building.",
+      "fragility_context": "Afghanistan is a fragile state with: (1) Deteriorating security environment with withdrawal of international security forces; (2) Political instability with upcoming elections and unity government challenges; (3) Severe poverty (54.5% in 2016-17, up from 38.3% in 2012-13); (4) Weak institutions and governance; (5) Limited private sector growth (declined from 9.4% to 2.1%); (6) Widespread corruption (ranked 177 of 180 in Transparency Index); (7) Declining aid and fiscal pressures; (8) Climate vulnerability (ranked 8 of 170 countries); (9) Limited financial inclusion (10% population, 3.8% women in formal institutions); (10) Significant gender disparities in economic participation and legal rights.",
+      "security_considerations": "High security threats pose formidable challenges to implementation. World Bank task team unable to conduct field visits due to security. Deteriorating security situation limits direct interactions with communities. 7 of 76 target districts on standby list due to security concerns. Project relies heavily on Third-Party Monitors (TPM) for field oversight. Implementation support must be flexible with continuous adjustments to changing security situations. High-risk area strategy developed for semi-secure/insecure areas. Project operates in context where security forces have limited presence in many rural areas.",
+      "displacement_or_refugees": "Yes - Project includes support for returnees and IDPs as vulnerable groups. CCAP additional financing activities targeted IDP and returnee hosting communities, generating 1,926,793 labor days of paid work for 40,458 households. Project includes returnees as explicit beneficiary category. Returnee presence was one criterion for district selection. Project does not involve land acquisition or resettlement (OP 4.12 not triggered). Land requirements would follow willing buyer-willing seller approach or use of government land free of disputes."
+    }
+  }
+}

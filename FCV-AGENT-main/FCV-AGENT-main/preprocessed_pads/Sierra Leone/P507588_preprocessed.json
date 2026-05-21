@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P507588",
+    "guid": 99090825181038946,
+    "node_id": 40042007,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-a01bb309-cb69-4828-b27f-10b83ffbb568.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Sierra Leone Water Security and WASH Access Improvement Project",
+      "project_development_objective": "Strengthen WASH sector institutions and capacity, improve operational performance of the water supply service provider and promote sanitation in the Western Area of Sierra Leone",
+      "total_financing": "US$40.0 million equivalent (SDR 29.6 million)",
+      "implementation_period": "2026-2031 (Phase 1 of MPA; overall program 2026-2035)",
+      "beneficiaries": "At least 1,700,000 people in Western Area (400,000 for water supply, 1,300,000 for sanitation and hygiene); seven sector institutions; approximately 1,400 jobs expected in Phase 1"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Freetown",
+        "Western Area Peninsula",
+        "Freetown City Council (FCC) area",
+        "Western Area Rural District Council (WARDC) area"
+      ],
+      "coverage_type": "regional (Western Area focus in Phase 1; expansion to secondary cities in Phase 2-3)",
+      "fragile_or_conflict_affected_areas": "partial - Sierra Leone is not classified as fragile state but faces high political and governance risks, macroeconomic instability, and institutional capacity challenges; 2023 elections resulted in political uncertainty and tensions; widespread poverty and unemployment create conditions conducive to social unrest"
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Institutional Strengthening and Capacity Building",
+        "description": "Strengthening PIR through policy review and operationalization of MWRS sanitation mandate; capacity building and knowledge development for sector staff; construction of WASH Administrative Center to host MWRS, NWRMA, and SLEWRC with demonstration features for water/wastewater management",
+        "financing": "US$8.55 million"
+      },
+      {
+        "component_name": "Component 2: Water Resources Management Improvement",
+        "description": "Development of National Water Resources Master Plan including water inventory, hydrological assessment, climate impact modeling; catchment protection and rejuvenation activities including awareness raising, protective barriers, and nature-based solutions",
+        "financing": "US$3.00 million"
+      },
+      {
+        "component_name": "Component 3: Priority Investments in Urban Water Supply",
+        "description": "Strengthening GVWC management tools and service efficiency through EDAMS upgrade, smart meter procurement and installation, performance-based PPPs for NRW reduction; infrastructure upgrades including raw water storage, treatment capacity, and feasibility studies for new dams; micro-hydropower and solar energy evaluation",
+        "financing": "US$16.25 million"
+      },
+      {
+        "component_name": "Component 4: Urban Sanitation Service Delivery Improvement",
+        "description": "Upgrading existing and constructing new Fecal Sludge Treatment Plants (FSTPs) using climate-efficient technologies; construction of approximately 95 improved public toilet facilities with handwashing in schools, health centers, and public spaces; preparation of national ODF campaign and City-Wide Inclusive Sanitation plan",
+        "financing": "US$9.20 million"
+      },
+      {
+        "component_name": "Component 5: Project Management",
+        "description": "Financing fiduciary, safeguards, and technical expenditures for Project implementation including WASHIT operations, consultants, technical assistance, E&S framework implementation, and M&E",
+        "financing": "US$3.00 million"
+      },
+      {
+        "component_name": "Component 6: Contingent Emergency Response Component",
+        "description": "Allows reallocation of uncommitted Project funds to support emergency response and reconstruction following eligible crisis or emergency",
+        "financing": "US$0 million (contingent)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Water Resources and Sanitation (MWRS) as lead; co-implementing agencies: National Water Resources Management Authority (NWRMA), Guma Valley Water Company (GVWC), Freetown City Council (FCC), Western Area Rural District Council (WARDC); supporting agencies: Sierra Leone Water Company (SALWACO), Sierra Leone Electricity and Water Regulatory Commission (SLEWRC)",
+      "coordination_mechanisms": "Project Steering Committee (PSC) chaired by MWRS with high-level representatives from multiple ministries and all implementing agencies; meets at least bi-annually; WASH Project Implementation Team (WASHIT) within MWRS serves as PMU for day-to-day coordination; donor coordination platform to be established and maintained; inter-ministerial coordination through PSC involving Health, Education, Environment, Finance, Local Government, and other sectors",
+      "procurement_approach": "World Bank Procurement Regulations for IPF; national competitive bidding following Sierra Leone National Public Procurement Act 2016; use of STEP system; World Bank Standard Procurement Documents for international procurement; prior review for contracts subject to threshold; mandatory use of Rated Criteria with minimum weightings for technical factors; SEA/SH disqualification mechanism and DAAB for main works contracts; direct payment mechanism to contractors; advance procurement to accelerate kick-off",
+      "monitoring_and_evaluation": "Project-level M&E systems tracking PDO and intermediate indicators; biannual to quarterly monitoring frequency depending on indicator; broader monitoring of water-borne diseases, child health, school attendance; MWRS through WASHIT oversees M&E in collaboration with PSC; mid-term review planned; citizen satisfaction survey at mid-term; grievance redress mechanism with quarterly reporting on resolution timelines; learning agenda with structured reviews at mid-term and end of phase"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Fragile institutions, widespread poverty and unemployment exacerbated by high inflation creating conditions for social unrest; 2023 elections resulted in political uncertainty and ongoing tensions with strong party divisions; threats to social stability",
+        "risk_rating": "high",
+        "mitigation_measures": "Project prepared in close collaboration with all IAs including opposition-led FCC and WARDC; implementation arrangements provide IAs with incentives to perform; implementation of Stakeholder Engagement Plan; community engagement through Wan Fambul Framework; World Bank-supported initiatives in skills development, cash transfers, public works to improve living conditions and alleviate youth pressures"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Reversals in domestic revenue mobilization or significant expenditure overruns could undermine fiscal consolidation; larger deficits threaten fiscal and debt sustainability; risk of inflation-depreciation spiral; external risks from global commodity prices and imported inflation",
+        "risk_rating": "high",
+        "mitigation_measures": "GoSL commitment to enhance fiscal sustainability through World Bank Macro Stability DPO and IMF Extended Credit Facility program; stringent financial controls and transparent procurement; contracts awarded in US$; direct payment and transfer from US$ to SLL at time of payment to limit inflation/depreciation impact; strengthened PFM and procurement systems; multi-stakeholder platforms (PSC, donor coordination, community engagement) for oversight"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "While foundational analytical work and sector policies have been developed (WASH Poverty Diagnostic 2024, NWASHSDP 2025-2035, National Water and Sanitation Policy 2021), capacity to implement strategies and enforce policies is limited",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Component 1 on institutional strengthening and capacity building to review policies and regulations and turn them into action; co-location of MWRS, NWRMA, and SLEWRC in new Water Administrative Center to improve coordination and enforcement"
+      },
+      {
+        "risk_category": "Technical Design of Project",
+        "risk_description": "Uncertainty regarding local availability of high-quality consultants and capacity to attract foreign firms for critical studies, designs, and feasibility studies of dam construction",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Capacity building activities, consultant support and technical assistance; close World Bank supervision and review of technical designs; early market engagement for activities estimated to cost at least US$10 million; construction supervision consultants to review technical soundness and value for money"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "Low institutional capacity; recently created MWRS and NWRMA are understaffed, under-resourced, and struggle to carry out mandates; MWRS recently acquired sanitation mandate from Ministry of Health and needs reorganization; MWRS building burnt in 2023; weak E&S capacity",
+        "risk_rating": "high",
+        "mitigation_measures": "Construction of Water Administrative Center; strengthening PIR and capacity; clear implementation arrangements agreed by all IAs; support to IAs to deliver on mandates with performance incentives; embedding consultants within IAs for knowledge transfer; World Bank HEIS for procurement, FM, and E&S through first two years; World Bank Governance team support; IFC and MIGA engagement to establish PPP prerequisites; upfront agreement on O&M management models prior to construction"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "GoSL advancing PFM reforms but faces challenges including budget deviations, procedural overrides, inefficient investment management, and unplanned political spending; limited independence of auditor general and Audit Service Sierra Leone from executive branch poses high FM risk",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Foreign exchange Dedicated Account to receive grant; World Bank retains right to audit DA; selection and training of procurement and FM staff of WASHIT and all IAs within 90 days of effectiveness; comprehensive review of MWRS and country processes with agreed action plan; lessons from ongoing/past World Bank projects incorporated; HEIS consultant support for fiduciary capacity building during first year when most procurement occurs; quarterly IFRs; annual audited financial statements within six months of fiscal year end"
+      },
+      {
+        "risk_category": "Environment and Social",
+        "risk_description": "Weak capacity to manage risks from infrastructure activities, pollution, disease transmission from fecal sludge handling, civil works, biodiversity impact, potential conflicts over barriers in water catchment areas, and dam construction studies; risks include social exclusion, involuntary resettlement, ensuring clean water access in poor areas; temporary and permanent land acquisition and displacement possible; civil works could induce labor influx and GBV risks",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Strategic capacity building and technical assistance for design and feasibility studies; ESMF and RPF prepared and disclosed; ESCP with specific requirements for recruiting E&S and GBV specialists within 3 months; Labor Management Procedures and SEA/SH Action Plan to be prepared within 1 month of effectiveness; GRM in all Project areas; gender-disaggregated toilets to mitigate GBV risks; stakeholder consultations with special attention to women and vulnerable groups; World Bank HEIS for E&S instruments preparation and staff capacity building; building on EPASL's rigorous risk assessment process; some IAs have project E&S experience but require ESF training"
+      },
+      {
+        "risk_category": "Procurement",
+        "risk_description": "Identified risks include: procurement delays due to poor coordination between WASHIT and IAs; weak procurement and contract management capacity due to limited knowledge of World Bank Procurement Regulations and STEP; insufficient competition from limited local contractor capacity and lack of international bidder interest; weak complaint redress mechanism; time and cost overruns from poor planning",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Detailed PIM by effectiveness outlining procurement and contract management responsibilities and complaint handling; recruitment of experienced procurement specialist within WASHIT; training of WASHIT, IA staff, and procurement committees on Procurement Regulations and contract management; robust contract management structure; use of consultants to prepare procurement documents and supervise construction where capacity lacking; World Bank HEIS to WASHIT; advance procurement to accelerate kick-off; competitive recruitment of WASHIT staff; regular training and orientation programs for procurement staff"
+      },
+      {
+        "risk_category": "Sexual Exploitation, Abuse, and Sexual Harassment (SEA/SH)",
+        "risk_description": "Substantial risk given that 62 percent of women in Sierra Leone experience violence; civil works could induce labor influx and GBV risks; weak institutional capacity to manage SEA/SH risks",
+        "risk_rating": "substantial",
+        "mitigation_measures": "SEA/SH assessment and action plan to be prepared within 1 month of Project effective date; recruitment of GBV and SEA/SH expert service provider; leverage existing SEA/SH risk action plans; responsive GRM with confidential channel for SEA/SH or GBV issues; worker training on SEA/SH; Accountability and Response Framework; gender-disaggregated toilet facilities in schools and public spaces; gender-sensitive infrastructure design; Project support for women's health, hygiene, and sanitation contributing to gender equality"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Substantial E&S Risk Classification",
+      "triggered_safeguard_policies": [
+        "ESS 1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS 2: Labor and Working Conditions",
+        "ESS 3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS 4: Community Health and Safety",
+        "ESS 5: Land Acquisition, Restrictions on Land Use and Involuntary Resettlement",
+        "ESS 6: Biodiversity Conservation and Sustainable Management of Living Natural Resources",
+        "ESS 8: Cultural Heritage",
+        "ESS 10: Stakeholder Engagement and Information Disclosure",
+        "OP 7.50: Projects on International Waterways (exception to riparian notification requirement approved May 15, 2025)"
+      ],
+      "grievance_redress_mechanism": "Yes - Project-wide GRM established to allow affected stakeholders to submit grievances and seek redress; accessible processes for submitting complaints with clear procedures from investigation to resolution and feedback; provision for appeal if dissatisfied; communication campaign to raise awareness on GRM use; confidential channel for SEA/SH or GBV issues; Project-level GRM and World Bank Grievance Redress Service (GRS) available; World Bank Accountability Mechanism (Inspection Panel and Dispute Resolution Service) available; quarterly reporting on grievance resolution timelines with target of 90 percent addressed within approved timeline by project closing",
+      "gender_considerations": "Comprehensive gender gap analysis conducted; women underrepresented in water sector (13 percent of GVWC jobs, 6 percent technical, 22 percent managerial); gender-specific gaps in WASH access and sector participation identified; tailored action plan with targets for female participation and representation; Project targets 30 percent women in technical and managerial positions at GVWC (100 technical, 16 managerial) and MWRS (65 technical, 5 managerial); gender-sensitive training materials and delivery mechanisms; mentorship and internship programs for women; gender-disaggregated toilets with adapted menstrual health and hygiene solutions; women's participation in decision-making; gender-disaggregated data collection and monitoring; awareness raising on sexual harassment; flexible working arrangements and childcare support considerations; women's access to information and effective participation in all Project interventions; gender-sensitive employment policies; career advancement pathways including structured training and mentorship",
+      "vulnerable_groups": [
+        "Poor and low-income households, especially female-headed households",
+        "Women and girls",
+        "Youth",
+        "Persons living with disability",
+        "Marginalized groups",
+        "Communities in informal settlements",
+        "People in remote/rural areas",
+        "Communities affected by land acquisition and resettlement",
+        "Workers in civil works (labor influx risks)"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project designed with conflict sensitivity considerations: prepared in close collaboration with all IAs including opposition-led local councils (FCC and WARDC) to ensure political inclusivity; implementation arrangements provide incentives for all parties to perform; Stakeholder Engagement Plan emphasizes inclusive participation and information disclosure; community engagement through Wan Fambul Framework which has supported GoSL decentralization efforts emphasizing women's empowerment and reconciliation/social cohesion; Project Steering Committee includes representatives from multiple ministries and local governments to foster inter-institutional collaboration; donor coordination platform to promote coordinated approaches and alignment with government priorities; grievance redress mechanism to address community concerns; citizen engagement mechanisms including dialogue platforms, GRM, and satisfaction surveys to promote accountability and transparency; focus on reducing social exclusion and ensuring equitable access to WASH services for vulnerable groups",
+      "fragility_context": "Sierra Leone faces multiple fragility factors: (1) Political and governance fragility - 2023 elections resulted in political uncertainty and ongoing tensions with strong party divisions; threats to social stability; fragile institutions; (2) Economic fragility - GDP per capita US$542; 24.5 percent below poverty line; high inflation (peaked at 54.6 percent in October 2023, declined to 6.5 percent by July 2025); low domestic revenue collection (10.2 percent of GDP in 2024); employment primarily in low-productivity subsistence agriculture; debt distress risk; (3) Climate vulnerability - ranked 9th most climate vulnerable country globally; 179 out of 187 on Notre Dame Global Adaptation Index; over 300 disasters in past 25 years; increasing exposure to floods, landslides, droughts, wildfires; (4) Institutional capacity - weak institutions; recently created MWRS and NWRMA understaffed and under-resourced; limited capacity to implement policies and enforce regulations; (5) Human development - HDI score 0.467 (below Sub-Saharan Africa average of 0.568); ranked 185 out of 193 countries; high child mortality (45 percent higher than Sub-Saharan Africa average); 26 percent of children under 5 stunted; (6) Social cohesion - widespread poverty and unemployment creating conditions for social unrest; gender inequality (ranked 184 out of 193 on Gender Inequality Index); 62 percent of women experience violence",
+      "security_considerations": "Project addresses security through: (1) Water security - defined as 'securing sufficient water resources to meet WASH needs and improving institutional and people's capacity to manage and protect the resource sustainably in a changing climate'; (2) Climate resilience - water resources master plan to model climate-induced impacts; catchment protection and rejuvenation to ensure water availability during droughts; infrastructure designed to be resilient to floods and extreme weather; (3) Public health security - improved WASH reduces waterborne diseases (diarrhea, cholera) and improves health outcomes; (4) Community safety - improved sanitation reduces open defecation and fecal contamination of water sources; gender-disaggregated facilities reduce GBV risks; (5) Environmental security - protection of Western Area Peninsula National Park (WAPNP) as main freshwater source through awareness raising, protective barriers, and nature-based solutions; enforcement of water resources regulations; (6) Institutional security - strengthening MWRS, NWRMA, and other sector institutions to effectively manage water resources and deliver services; capacity building to ensure sustainability; (7) Social stability - Project designed to improve living conditions and reduce poverty through WASH access, which helps mitigate conditions conducive to social unrest",
+      "displacement_or_refugees": "Yes - potential for involuntary resettlement and land acquisition: (1) Civil works for water infrastructure (treatment plants, reservoirs, distribution networks, sanitation facilities) may require land acquisition; (2) Measures to protect water catchment areas including WAPNP may restrict land use and require resettlement of encroachers; (3) Construction of protective barriers around water supply weirs may affect land use; (4) Feasibility studies for new dam construction may identify sites requiring resettlement in future phases; (5) Resettlement Policy Framework (RPF) prepared and publicly disclosed prior to appraisal to guide resettlement planning; (6) Resettlement Action Plans (RAPs) to be prepared for specific activities requiring land acquisition or displacement; (7) E&S risk management includes social risk mitigation for involuntary resettlement; (8) Stakeholder consultations with affected communities required; (9) Grievance redress mechanism available for resettlement-related grievances; (10) Project design includes upfront agreement on O&M management models to ensure sustainability of resettled communities' access to services; (11) No refugee or IDP populations specifically mentioned in PAD, but project area includes urban informal settlements with vulnerable populations"
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P173750",
+    "guid": 933841586193140802,
+    "node_id": 31933141,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b0877c9d06&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Ethiopia COVID-19 Emergency Response",
+      "project_development_objective": "To prevent, detect and respond to the threat posed by COVID-19 and strengthen national systems for public health preparedness in Ethiopia",
+      "total_financing": "US$82.60 million (SDR 30.30 million credit + SDR 30.30 million grant)",
+      "implementation_period": "March 16, 2020 to June 30, 2021",
+      "beneficiaries": "Ethiopian population, particularly vulnerable groups including refugees, health workers, and communities at points of entry"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "National coverage",
+        "All regions",
+        "Points of entry including Bole International Airport",
+        "Border crossings",
+        "Regional health bureaus"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "partial - Ethiopia borders multiple fragile states and hosts 1.5 million registered refugees from neighboring fragile states"
+    },
+    "key_components": [
+      {
+        "component_name": "Medical Supplies and Equipment",
+        "description": "Procurement of medical supplies, equipment, drugs for case management, infection prevention and control, laboratory equipment, reagents, testing kits",
+        "financing": "US$43.97 million"
+      },
+      {
+        "component_name": "Preparedness, Capacity Building and Training",
+        "description": "Coordination, EOC functionalization, deployment of health workers, screening at points of entry, strengthening surveillance systems, building diagnostic capacity",
+        "financing": "US$22.20 million"
+      },
+      {
+        "component_name": "Community Discussions and Information Outreach",
+        "description": "Risk communication and community engagement, behavioral assessments, production of communication materials, media engagement",
+        "financing": "US$8.50 million"
+      },
+      {
+        "component_name": "Quarantine, Isolation and Treatment Centers",
+        "description": "Establishment and equipping of quarantine, isolation and treatment centers including nutrition and dignity kits",
+        "financing": "US$6.93 million"
+      },
+      {
+        "component_name": "Project Implementation and Monitoring",
+        "description": "Administrative support, procurement, financial management, environmental and social safeguards, monitoring and evaluation",
+        "financing": "US$1.00 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Health (MoH) with Ethiopian Public Health Institute (EPHI) as key technical entity",
+      "coordination_mechanisms": "Grants Management Unit (GMU) of MoH's Partnership and Cooperation Directorate for day-to-day management, coordination with regional health bureaus",
+      "procurement_approach": "Emergency procurement procedures with direct contracting, RFQ methods, shortened bid submission times, advance payments up to 40%",
+      "monitoring_and_evaluation": "EPHI responsible for data collection and compilation, MoH GMU for reporting to World Bank, semiannual supervision missions"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political",
+        "risk_description": "Ongoing political and social tensions in country which may impact coordination and communication efforts",
+        "risk_rating": "high",
+        "mitigation_measures": "Integrated mitigation measures in design and operational framework"
+      },
+      {
+        "risk_category": "macroeconomic",
+        "risk_description": "Significant negative impact on Ethiopia's economy, reduction in forex reserves, disruption to global supply chains",
+        "risk_rating": "high",
+        "mitigation_measures": "Flexibility to allocate resources for essential pharmaceutical purchases, coordination with existing financing mechanisms"
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "Multiple implementing entities with capacity gaps, high staff turnover, weak internal controls, parallel systems",
+        "risk_rating": "high",
+        "mitigation_measures": "Clear staffing definitions, coordination mechanisms, separate bank accounts, revised roles and responsibilities"
+      },
+      {
+        "risk_category": "institutional",
+        "risk_description": "Limited public-sector capacity, complexities in operation of FM arrangements",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Capacity building, technical assistance, recruitment of additional staff"
+      },
+      {
+        "risk_category": "environmental and social",
+        "risk_description": "High health and safety risks due to dangerous nature of COVID-19 pathogen, laboratory-associated infections, biological waste management",
+        "risk_rating": "high",
+        "mitigation_measures": "Updated Environmental and Social Management Framework, WHO standards compliance, proper safety systems"
+      },
+      {
+        "risk_category": "procurement",
+        "risk_description": "Global supply chain breakdown, procurement delays, cost overruns, reduced availability of essential commodities",
+        "risk_rating": "high",
+        "mitigation_measures": "Emergency procurement procedures, direct contracting options, procedural flexibilities"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "High risk",
+      "triggered_safeguard_policies": [
+        "Environmental and Social Framework (ESF)",
+        "Assessment and Management of Environmental and Social Risks and Impacts",
+        "Stakeholder Engagement and Information Disclosure",
+        "Labor and Working Conditions",
+        "Resource Efficiency and Pollution Prevention and Management",
+        "Community Health and Safety",
+        "Indigenous Peoples/Sub-Saharan African Historically Underserved Traditional Local Communities"
+      ],
+      "grievance_redress_mechanism": "yes - multi-step process including health facility level, Woreda Grievance Office, Regional Grievance Office, Ethiopia Independent Ombudsman, plus COVID-19 specific hotline",
+      "gender_considerations": "Provisions for vulnerable groups including elderly and those with compromised immune systems, gender-based violence considerations",
+      "vulnerable_groups": [
+        "elderly",
+        "immunocompromised individuals",
+        "refugees",
+        "displaced populations",
+        "traditional local communities"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project addresses risks from neighboring fragile states, includes provisions for refugee populations, considers ongoing political and social tensions",
+      "fragility_context": "Ethiopia borders multiple fragile states, serves as major transportation hub, hosts 1.5 million refugees, limited health services in refugee-hosting areas",
+      "security_considerations": "High-risk environment due to proximity to fragile states, potential for undetected disease spread across borders, security implications of pandemic response",
+      "displacement_or_refugees": "yes - Ethiopia hosts about 1.5 million registered refugees from neighboring fragile states, majority located in emerging and under-developed subnational states with limited health services"
+    }
+  }
+}

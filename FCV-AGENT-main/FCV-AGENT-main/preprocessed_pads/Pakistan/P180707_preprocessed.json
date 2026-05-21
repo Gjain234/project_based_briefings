@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P180707",
+    "guid": 99061523153028022,
+    "node_id": 34094746,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-6d54efdf-4495-46f8-bfcd-14f4e4aea0da.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 122734
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Khyber Pakhtunkhwa Citizen-Centered Service Delivery Project (CCSDP)",
+      "project_development_objective": "To promote access to child health services and enhance citizen-centered service delivery in selected districts of Khyber Pakhtunkhwa Province",
+      "total_financing": "US$50 million (JPY 6.44 billion equivalent)",
+      "implementation_period": "July 2023 - June 2025 (2 years)",
+      "beneficiaries": "Nearly 300,000 families with at least one child under age 2; 560,000 individuals utilizing CFC services; at least 45% of beneficiary children expected to be girls"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Seven merged districts of former FATA: Mohmand, Orakzai, North Waziristan, South Waziristan, Bajaur, Khyber, Kurram",
+        "Four adjacent settled districts: Lakki Marwat, Tank, Dera Ismail Khan, Bannu",
+        "Selected districts of Khyber Pakhtunkhwa Province"
+      ],
+      "coverage_type": "regional",
+      "fragile_or_conflict_affected_areas": "yes - Newly Merged Districts (NMDs) of former FATA are fragile and conflict-affected. Approximately 340,000 families were displaced following interventions against militants in five tribal districts. Project targets crisis-affected areas with high poverty rates (47% in NMDs vs 21.9% national average). Conflict and militancy have impacted service delivery and infrastructure in NMDs."
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Promoting Access to Child Health Services",
+        "description": "Provides child health services including health awareness and counseling, growth monitoring screening for malnutrition, immunization services, and referral of complicated cases to stabilization centers and pediatricians for mothers with children aged 0-24 months. Includes Child Wellness Grant (CWG) of approximately US$45 spread over five visits conditional on attendance of health awareness sessions and growth monitoring. Covers 300,000 additional families with complete CWG cycle.",
+        "financing": "US$37 million IDA + US$4 million MDTF = US$41 million"
+      },
+      {
+        "component_name": "Component 2: Enhanced Citizen-Centered Service Delivery and Program Management",
+        "description": "Focuses on enhancing program management, transparency, and accountability through capacity building, stakeholder consultation, social mobilization, strategic communication and awareness, and monitoring. Supports establishment of three new Citizen Facilitation Centers (CFCs). Strengthens program management and oversight, provides technical support to institutionalize TDPERP implementation arrangements at provincial level. Supports transition of CFC model to KP Government with introduction of provincial services.",
+        "financing": "US$9 million IDA"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "National Database and Registration Authority (NADRA) as implementing entity; Ministry of Economic Affairs (MEA) as overall responsible agency with Project Management Unit (PMU)",
+      "coordination_mechanisms": "Project Steering Committee (PSC) chaired by MEA with senior representatives from MEA, Ministry of Finance, NADRA, and relevant KP departments; Review Committee (RC) for operational level coordination; Monthly RC meetings for day-to-day operational matters",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers (Fourth Edition, November 2020); some activities may follow national federal procurement procedures subject to Bank approval; NADRA uses WB's STEP system for procurement approval; Project Procurement Strategy for Development (PPSD) developed; procurement plan covers first 18 months",
+      "monitoring_and_evaluation": "Results Framework with PDO and intermediate indicators; NADRA responsible for six-monthly progress reports covering targets, achievements, component expenses, ESS application, grievances and incidents; Third-party monitoring including process evaluations, spot checks, and beneficiary feedback surveys; Beneficiary Outcome Survey rounds planned; External audit by Director General Audit (Auditor General of Pakistan); Internal audit twice yearly by internal audit firm; Quarterly internal control operational assessments on sample payments"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "political",
+        "risk_description": "Regional security challenges, political uncertainty, and upcoming general elections. Effective service delivery depends on continued federal government support. Project rollout against backdrop of political instability.",
+        "risk_rating": "high",
+        "mitigation_measures": "Continue implementation with existing NADRA delivery systems until GoKP develops independent systems; Project Steering Committee ensures coordination and stakeholder engagement; Phased transition plan to be formalized between federal and provincial governments"
+      },
+      {
+        "risk_category": "macroeconomic",
+        "risk_description": "GoP facing severe economic stress with low foreign reserves, depreciating currency, high inflation. 2022 floods exacerbated fiscal constraints. Risks include worsening external conditions, further natural disasters, slowdown in policy adjustment before elections. Could lead to macroeconomic instability affecting household incomes.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Project design not dependent on imports or counterpart financing; provides cash transfer mechanisms to support households; WB support to structural policy reforms in fiscal and power sectors; project helps mitigate through direct cash transfers to vulnerable populations"
+      },
+      {
+        "risk_category": "institutional",
+        "risk_description": "Sustainability of CFCs requires concrete transition plan not yet agreed between GoP and GoKP. Risk of low capacity of provincial host departments to eventually manage CFC structures and project management structures (PSC, RC, PMU). Absence of agreed transition plan poses high risk to sustainability.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Continuation of current implementation mechanism during project life to mitigate capacity risk; Progress tracked in results framework; Federal government working with GoKP on phased transition plan; Capacity assessment of provincial departments planned at CFC handover; Legal covenant requiring phased timebound transition plan within 9 months of effectiveness"
+      },
+      {
+        "risk_category": "fiduciary",
+        "risk_description": "Financial management and procurement risks related to implementing entities' capacity and systems",
+        "risk_rating": "moderate",
+        "mitigation_measures": "MEA PMU and NADRA have adequate FM capacity with satisfactory TDPERP track record; Quarterly internal control operational effectiveness and spot check reports; Regular internal audit; Audited financial statements within 6 months of fiscal year close; NADRA has procurement experience with WB projects; Procurement risk assessment completed; STEP system used for procurement approval; Bank conducts annual procurement post-review"
+      },
+      {
+        "risk_category": "environmental and social",
+        "risk_description": "Low to moderate scale adverse environmental impacts including vaccine ineffectiveness, waste generation, soil and water contamination, air quality deterioration, infection risks from unsterilized syringes/needles, improper healthcare waste disposal, cold chain mismanagement. Social risks include exclusion of vulnerable groups, security/safety concerns for women and female staff, social barriers from vaccination misconceptions.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Environmental and Social Management Plan (ESMP) with mitigation measures per mitigation hierarchy; Stakeholder Engagement Plan (SEP) prepared and to be updated throughout project; Dedicated E&S and Gender Specialists hired; Color-coded bins for waste segregation at source; Environmental monitoring of groundwater and soil; Labor Management Procedures; GRM for grievances; Security and safety plan for project; GBV training for female CFC staff; Inclusive outreach and communication campaigns; Women-friendly amenities at CFCs; Disability accessibility measures; Community engagement and citizen participation mechanisms"
+      },
+      {
+        "risk_category": "security",
+        "risk_description": "Security and safety concerns for women and female staff at CFCs in NMDs due to regional security challenges and conservative tribal society norms",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Security and safety plan for project; Provision of security at CFC sites by MEA; Female-only days at CFCs; Recruitment of female staff including Lady Health Visitors; Engagement of tribal elders and community leaders for buy-in; Women-friendly facilities and separate offices/toilets for female staff"
+      },
+      {
+        "risk_category": "social",
+        "risk_description": "Risk of exclusion of disadvantaged and vulnerable groups including persons with disabilities, women, and marginalized populations due to social norms, lack of CNICs, language barriers, and information asymmetry",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Dedicated outreach efforts to vulnerable groups; Disability awareness training for staff; Facility adaptation for persons with disabilities; CNIC registration services at CFCs to address legal identity barriers; Multilingual staff and local language messaging; Grievance Redress Mechanism with 99% redressal rate target; Community mobilization campaigns; Engagement of community leaders; Inclusive communication strategies"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate",
+      "triggered_safeguard_policies": [
+        "ESS1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS2: Stakeholder Engagement and Information Disclosure",
+        "ESS3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS4: Community Health and Safety",
+        "ESS10: Information Disclosure"
+      ],
+      "grievance_redress_mechanism": "yes - Robust GRM established at CFCs with 99% redressal rate target; Grievances addressed and responded to within specified timeframe; GRM accessible to beneficiaries and citizens; Project-level grievance mechanisms available; World Bank's Grievance Redress Service (GRS) available for complaints; World Bank's Accountability Mechanism (AM) with Inspection Panel and Dispute Resolution Service available",
+      "gender_considerations": "Significant focus on gender inclusion. Female labor force participation in KP only 15.8% vs 63.2% for men. Project strengthens women's access to health services through: conditioning grants on women's presence at health awareness sessions; ensuring female staff at CFCs including Lady Health Visitors; women-friendly amenities; women-only days at CFCs; increased female staff recruitment (target 28% female staff); CNIC registration services to address legal identity barriers (82% of women now use own CNICs vs 15% in 2016); GBV training for female staff; GBV referral mechanisms; tracking female child enrollment in CWG (target 45%); VRS requests by women; social mobilization and community leader engagement; mobile registration services. Female infant mortality gap being addressed through wider communications and outreach.",
+      "vulnerable_groups": [
+        "Children aged 0-24 months",
+        "Mothers and pregnant women",
+        "Families in Newly Merged Districts (NMDs) with 47% poverty rate",
+        "Temporarily Displaced Persons (TDPs) and crisis-affected populations",
+        "Women and girls (particularly in conservative tribal society)",
+        "Persons with disabilities (6.2% of population, likely higher)",
+        "Marginalized and disadvantaged groups",
+        "Rural populations with limited service access",
+        "Populations in climate risk-prone areas"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project explicitly designed for fragile and conflict-affected context. Builds on TDPERP which supported early recovery of families affected by militancy-related displacement. Approximately 340,000 families displaced following interventions against militants in five tribal districts. Project addresses conflict impacts through: cash transfers for early recovery and rehabilitation; health services to support human capital preservation; CFCs as trust-building mechanisms between state and citizens in conservative tribal society; women participation initiatives to rebuild social cohesion; community engagement through tribal elders and leaders; GRM for grievance redressal to strengthen citizen-state relations. Project explicitly notes that conservative tribal society of former FATA viewed merger with suspicion; TDPERP succeeded in creating space for women to access public services, demonstrating conflict sensitivity. Project design incorporates lessons on addressing non-financial barriers and building trust in post-conflict contexts.",
+      "fragility_context": "Project targets highly fragile areas. Key fragility factors: (1) Newly Merged Districts (NMDs) have highest poverty rate in country at 47% vs 21.9% national average; (2) Former FATA region experienced prolonged conflict and militancy with 340,000 families displaced; (3) Weak public service delivery and infrastructure in NMDs - nearly four years after merger, NMDs continue to suffer from lack of services and poor local administration; (4) Institutional capacity gaps - targets related to local governance, administrative capacity, and key investments continue to lag; (5) High vulnerability to climate shocks - KP especially vulnerable to flash floods and extreme weather; 2022 floods affected 4.35 million people in KP, pushing 720,000 into poverty; (6) Poor human development outcomes - high stunting (38%), learning poverty (75%), low maternal and child health indicators; (7) Gender and social exclusion - only 56% of women in NMDs registered with NADRA vs 76% national average, high spousal violence (66% in former FATA); (8) Limited economic opportunities and high unemployment; (9) Fiscal constraints on GoKP to manage development needs in merged areas.",
+      "security_considerations": "Project operates in security-sensitive context with ongoing regional security challenges. Specific security considerations: (1) NMDs experienced militancy and conflict requiring military interventions; (2) Approximately 340,000 families displaced due to security operations; (3) Conservative tribal society with traditional governance structures (jirgas) and social norms restricting women's mobility; (4) Security and safety concerns for women and female staff at CFCs; (5) Project includes security provisions - MEA responsible for ensuring security at CFC sites; (6) Female staff safety measures including separate facilities and women-only service days; (7) Community engagement with tribal elders and leaders to build trust and ensure acceptance; (8) Project design incorporates lessons from TDPERP on building trust in post-conflict contexts; (9) Political uncertainty and upcoming elections pose additional security risks; (10) Project implementation continues with existing NADRA systems until GoKP develops independent capacity, reducing security risks from institutional transitions.",
+      "displacement_or_refugees": "yes - Project explicitly addresses displacement and refugee/IDP populations. Approximately 340,000 families were displaced following interventions against militants in five tribal districts (Kurram, Orakzai, Khyber, North Waziristan, South Waziristan). Displacement context: (1) Families displaced due to significant damage to infrastructure, lack of social services, and economic shocks including loss of livelihood; (2) GoP began declaring areas safe for repatriation starting 2015; (3) FATA's Sustainable Return and Rehabilitation Strategy recognized cash transfers as appropriate tool for return and rehabilitation; (4) Ongoing TDPERP (predecessor project) included Early Recovery Package for TDPs with grants for resettlement; (5) Current CCSDP project continues support through Child Wellness Grants and CFCs to both TDP and non-TDP families; (6) Project provides cash transfers to support household income and food consumption; (7) Health services support human capital preservation during recovery; (8) CFCs serve as trust-building mechanisms between state and returning populations; (9) Project targets crisis-affected areas with high vulnerability; (10) 2022 floods created additional displacement - estimated 720,000 people pushed into poverty in KP alone, with 4.35 million affected across province."
+    }
+  }
+}

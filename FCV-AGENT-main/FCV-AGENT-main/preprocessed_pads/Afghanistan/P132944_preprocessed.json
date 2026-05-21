@@ -1,0 +1,142 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P132944",
+    "guid": 320511541065030739,
+    "node_id": 30570687,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b0865473d0&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 204983
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Naghlu Hydropower Rehabilitation Project - Phase I",
+      "project_development_objective": "To improve dam safety and sustainability of hydropower and to increase the supply of domestically generated hydroelectricity at the Naghlu Hydropower Plant (NHPP)",
+      "total_financing": "US$83 million",
+      "implementation_period": "December 1, 2015 to September 30, 2022 (approximately 7 years)",
+      "beneficiaries": "Electricity users (households, industry, farmers) in Kabul region; DABS (implementing agency); local communities in project area; consumers avoiding diesel self-generation costs"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Surobi District, Kabul Province",
+        "Tagab District, Kabul Province",
+        "Kabul region"
+      ],
+      "coverage_type": "local/regional",
+      "fragile_or_conflict_affected_areas": "yes - Surobi District characterized by security problems; project located in high-risk area with escalating insurgency-related violence; Afghanistan overall remains in state of fragility and conflict"
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Mechanical, Electrical, and Electromechanical Works",
+        "description": "Rehabilitation of Unit 1 and balance of plant; enhancing maintenance of powerhouse including Unit 3 overhaul; provision of spare parts and consumables for 3-5 years; development of warehouses for equipment storage; advisory services for sustainable O&M",
+        "financing": "US$30 million"
+      },
+      {
+        "component_name": "Component 2: Dam Safety and Power Generation Improvement",
+        "description": "Dam safety audit and safety improvement measures including reactivation of bottom outlet, auxiliary power systems, spillway gate improvements, instrumentation installation, UXOS clearance; optimization of power generation through feasibility studies and detailed design for increasing power generation",
+        "financing": "US$33 million"
+      },
+      {
+        "component_name": "Component 3: Environmental and Social Sustainability, Project Management Support, and Future Project Preparation",
+        "description": "Local development assistance including electrification of villages and vocational training; environmental and social management support; project management support; training programs; consulting services; Environmental and Social Advisory Panel (ESAP) and Project Technical Advisory Panel (PTAP) support; future hydropower project preparation",
+        "financing": "US$20 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Da Afghanistan Breshna Sherkat (DABS) - Afghanistan's state-owned power utility",
+      "coordination_mechanisms": "Project Steering Committee (PSC) chaired by deputy minister of finance, including representatives from MEW, agriculture and environment ministries, president's office, and Afghanistan National Security Forces; Project Implementation Team (PIT) within DABS led by project manager reporting to COO; Environmental and Social Advisory Panel (ESAP) and Project Technical Advisory Panel (PTAP) for independent oversight",
+      "procurement_approach": "International Competitive Bidding (ICB) for contracts above US$5 million; National Competitive Bidding (NCB) for contracts below US$5 million; Shopping procedures for smaller contracts; World Bank procurement guidelines apply; prior review by Bank for major contracts; procurement plan prepared and agreed with Bank",
+      "monitoring_and_evaluation": "DABS responsible for M&E with support from international consultant; M&E specialist appointed within DABS; quarterly interim financial reports; annual audited financial statements; monitoring framework and baseline indicators established; external monitoring by independent third party; internal audit by DABS Internal Audit Department; external audit by Supreme Audit Office (SAO)"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "High uncertainties in operating environment; escalating insurgency-related violence increasing fragility; possible changes to senior management; government's limited ability to deliver services and programs",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "DABS operation is relatively autonomous and less affected by government changes; Project Steering Committee includes security-related government agencies; benefit-sharing activities to ensure local community support; grievance redress mechanisms"
+      },
+      {
+        "risk_category": "Security/Conflict",
+        "risk_description": "Deteriorating security environment could seriously affect project implementation, supervision, and contractor/consultant availability; expected withdrawal of U.S. troops by end of 2016 may worsen security; insecure environment may create difficulties in securing contractors, lead to delays, limit movement for supervision, increase security costs",
+        "risk_rating": "High",
+        "mitigation_measures": "Use of third-party monitoring agent (ARTF Supervisory Agent program) for on-site supervision; benefit-sharing activities with electrification and vocational training to ensure local community support; grievance redress committee for addressing complaints; exploration of IT-based technology for supervision; narrow project scope; contingency planning for unanticipated events"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Slow economic recovery with real GDP growth at 1.9% in 2015; declining domestic revenue (8.2% of GDP in 2014); high dependence on international donor assistance; fuel subsidies for electricity expected to be phased out by end of 2015",
+        "risk_rating": "High",
+        "mitigation_measures": "Project provides low-cost domestic generation option; economic analysis shows robust returns even under pessimistic scenarios; project contributes to economic growth and stabilization"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "DABS has weak capacity; low initial capacity results in uncertainties about ability to adapt to good international utility practices; DABS has not implemented Bank-funded project before; overstaffing and under-qualification of staff; poor customer management and billing; tariffs do not fully recover costs",
+        "risk_rating": "High",
+        "mitigation_measures": "International consultants to support and advise DABS staff throughout implementation; capacity building for DABS staff started during preparation and continues during implementation; hiring of project team with necessary technical specialists; training programs and development of operational manuals; mentoring by international procurement specialist and FM specialist; Project Technical Advisory Panel and Environmental and Social Advisory Panel for independent oversight"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "DABS lacks direct experience implementing Bank-funded projects; FM capacity concerns; procurement capacity gaps; understanding of Bank procedures limited; internal audit system gaps; decentralization issues",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "FM specialist hired by DABS; head of Finance Department recently hired with significant Bank experience; accounting manual to be updated; training provided to FM staff on Bank requirements; international procurement specialist hired to build capacity; procurement manual prepared; complaints handling mechanism established; regular FM reviews (two per year); prior review of major contracts; audit arrangements with SAO and private auditors"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Sector policy uncertainties; need for cost recovery while ensuring affordability; tariff issues; sector knowledge gaps",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Project supports sector development through capacity building; alignment with National Energy Supply Program and Power Sector Master Plan; MEW involvement in Project Steering Committee; support for future hydropower project preparation"
+      },
+      {
+        "risk_category": "Technical Design of Project or Program",
+        "risk_description": "Complex hydropower rehabilitation project; dam safety issues requiring immediate attention; sediment management challenges; presence of unexploded ordnance (UXOS) in reservoir; structural safety concerns under earthquake loading; lack of instrumentation; inoperability of bottom outlet; unavailability of auxiliary spillway gate operation methods",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Comprehensive dam safety audit to be conducted; Project Technical Advisory Panel to advise on dam safety; dynamic stability analysis to determine structural safety under earthquake loading; detailed studies on structural and operational safety; training of dam staff; installation of essential instrumentation; development of emergency preparedness plans; independent dam safety inspections; consultation with international experts"
+      },
+      {
+        "risk_category": "Environment and Social",
+        "risk_description": "High environmental and social risks including potential loss of assets and land; temporary land acquisition and resettlement in neighboring communities; sediment removal impacts; UXOS handling risks; downstream impacts on aquatic species and irrigation facilities; potential flooding from dam height increase; vulnerable groups affected",
+        "risk_rating": "High",
+        "mitigation_measures": "Environmental and Social Management Framework (ESMF) and Resettlement Policy Framework (RPF) prepared and disclosed; separate ESIAs for Subcomponents 2(a) and 2(b); Environmental and Social Advisory Panel for independent oversight; grievance redress mechanism established; community consultations conducted; benefit-sharing programs including electrification and vocational training; pre-feasibility social assessment completed; vulnerable groups prioritized for employment; capacity building for safeguards staff; external monitoring by independent third party"
+      },
+      {
+        "risk_category": "Stakeholders",
+        "risk_description": "Need for local community support in fragile security environment; communities historically felt they did not benefit from dam; coordination with multiple donors (ADB, KfW, USAID); potential for different donor approaches to overwhelm DABS",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Extensive community consultations conducted; Community Development Councils used as primary vehicle for community engagement; benefit-sharing programs (electrification and vocational training) to ensure community support; grievance redress committee established with community representatives; communication and outreach plan to be developed; coordination through ARTF; close contact with other donors to ensure alignment; local development assistance activities"
+      },
+      {
+        "risk_category": "Power Production Disruption",
+        "risk_description": "During rehabilitation and safety improvement, power production may have to be reduced; Afghanistan's high dependence on energy imports means rehabilitation could be delayed to ensure domestic supply",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Strong focus on safety from outset of implementation; contingency planning; project design includes phased approach; coordination with DABS on power supply management"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Category A - Full Assessment required",
+      "triggered_safeguard_policies": [
+        "OP/BP 4.01 Environmental Assessment",
+        "OP/BP 4.04 Natural Habitats",
+        "OP/BP 4.11 Physical Cultural Resources",
+        "OP/BP 4.12 Involuntary Resettlement",
+        "OP/BP 4.37 Safety of Dams",
+        "OP/BP 7.50 Projects on International Waterways"
+      ],
+      "grievance_redress_mechanism": "yes - Project-level Grievance Redress Committee (GRC) established in Surobi District with 12 members nominated by communities; comprises community representatives, local government officials, and local NGO representative; DABS developing complaint record database for tracking; GRM training manual being developed; public awareness programs to inform communities about grievance services; three-level mechanism: local resolution, GRC, and appeal to DABS management; World Bank Grievance Redress Service (GRS) also available for project-affected communities",
+      "gender_considerations": "Women's views captured in social survey through hiring and training of local women; vocational training program includes special plans to target women skills development; women from local area hired to conduct surveys; approximately 20% of vocational training beneficiaries targeted to be women; women's CDCs consulted during project preparation",
+      "vulnerable_groups": [
+        "Female-headed households",
+        "Pastoral nomad groups",
+        "Rural youth lacking vocational training",
+        "Low-income consumers currently using diesel self-generation",
+        "Communities in project area (Surobi and Tagab Districts) historically not benefiting from dam",
+        "Affected persons subject to land acquisition or resettlement"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project explicitly designed with conflict sensitivity in mind. Key measures include: (1) Community benefit-sharing programs (electrification and vocational training) to ensure local support and counter grievances that communities have not benefited from dam; (2) Extensive community consultations using Community Development Councils as primary engagement vehicle; (3) Grievance redress mechanisms at project and Bank levels; (4) Local development assistance to improve community livelihoods; (5) Project Steering Committee includes security-related government agencies for coordination on security issues; (6) Lessons learned from other Afghanistan projects emphasize that projects can only succeed if local communities are convinced of benefits; (7) Narrow project scope to manage complexity in insecure environment; (8) Contingency planning for security-related disruptions",
+      "fragility_context": "Afghanistan remains one of least-developed countries with state of fragility and conflict undermining economic prospects and social cohesion. Key fragility factors: (1) Escalating insurgency-related violence increasing fragility; (2) Lack of security perceived as most important constraint for public service delivery; (3) Insecurity affecting growth and poverty by damaging human capital, constraining productive activities, increasing social unrest, promoting unequal access to services, increasing political instability; (4) Poverty incidence at 35.8% (2011-12); bottom 40% commands only 21% of consumption; over 50% risk descending into poverty; (5) Slow economic recovery with real GDP growth at 1.9% in 2015; (6) Declining domestic revenue (8.2% of GDP in 2014); (7) Expected withdrawal of U.S. troops by end of 2016 may worsen security; (8) Project area (Surobi District) characterized by security problems; (9) Decades of civil war and insurgency have devastated energy sector infrastructure (65% of transmission lines destroyed); (10) Government capacity constraints in service delivery",
+      "security_considerations": "Security is major implementation risk. Specific considerations: (1) Deteriorating security environment could affect project implementation, supervision, and contractor/consultant availability; (2) Limited number of contractors and consultants willing to work in sensitive areas; (3) Difficulties in securing and maintaining contracting firms; (4) Potential early termination or abandonment of assignments; (5) Delays in rehabilitation; (6) Limitations on Bank staff movement for field supervision; (7) Logistical problems for supervision; (8) Increased demand for additional financial resources for security needs; (9) Surobi District is high-risk area; (10) Mitigation through third-party monitoring agent (ARTF Supervisory Agent program) for on-site supervision; (11) Use of IT-based technology for supervision; (12) Benefit-sharing activities to maintain community support; (13) Inclusion of security agencies in Project Steering Committee; (14) Contingency planning for unanticipated security events",
+      "displacement_or_refugees": "yes - Potential displacement and resettlement issues identified. Details: (1) Involuntary Resettlement Policy (OP 4.12) triggered due to possible land acquisition, asset loss, and resettlement in connection with Subcomponents 2(a) and 2(b); (2) Sediment removal from reservoir may result in permanent asset loss and temporary land acquisition; (3) Decision to increase storage capacity of dam could result in unavoidable resettlement of people, disruption of community life and networks, permanent or temporary loss of land, assets, livelihoods, and communal/social/cultural facilities (cemeteries, shrines, mosques, grazing land); (4) Resettlement Policy Framework (RPF) developed as part of ESMF and will be applied to all project components where land acquisition, asset loss, and/or resettlement cannot be avoided; (5) Separate ESIAs will be carried out for Subcomponents 2(a) and 2(b) to inform development of ESMPs and Resettlement Action Plans (RAPs) if required; (6) RAPs will comply with resettlement principles regarding eligibility criteria, compensation categories and rates, and organizational arrangements; (7) Pre-feasibility social assessment conducted in 64 villages (28 villages within 3 km of dam, 36 additional villages 5-25 km away); (8) Subcomponent 3(a) includes benefit-sharing through electrification and vocational training for affected communities; (9) Very small areas of land may be acquired on willing buyer-willing seller basis for electricity poles and pylons; (10) Grievance redress mechanisms in place for affected persons"
+    }
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P171160",
+    "guid": 326261597708391857,
+    "node_id": 32132540,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b087b0a0f9&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Somali Integrated Statistics and Economic Planning Capacity Building Project (SISEPCBP)",
+      "project_development_objective": "Strengthen the national statistical system in the collection, processing and dissemination of poverty and selected macro-economic data to inform development policy and poverty reduction activities.",
+      "total_financing": "US$25.0 million (SDR 18.3 million equivalent) IDA Grant",
+      "implementation_period": "July 2020 – August 2025 (approximately 5 years)",
+      "beneficiaries": "Direct beneficiaries: producers of official statistics, decision- and policymakers in public ministries and agencies, M&E staff. Indirect beneficiaries: Somali people broadly, data users in public and private sector, civil society, academia, development partners, and the public at large."
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Mogadishu (Banadir)",
+        "Somaliland",
+        "Puntland",
+        "Galmudug",
+        "Hirshabelle",
+        "Jubbaland",
+        "South West",
+        "Federal Republic of Somalia (national coverage)"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "Yes – Somalia is explicitly classified as a fragile state and conflict-affected country. The project datasheet marks both 'Fragile State(s)' and 'Conflict' checkboxes. Years of civil war and ongoing conflict in parts of the country have eroded the statistical system. Large insecure areas exist, particularly in southern Somalia and Mogadishu, which constrain field data collection. Some areas remain inaccessible due to insecurity."
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Strengthening Coordination, Statistical Infrastructure and Data Development of the National Statistical System",
+        "description": "Supports key official statistics producing agencies to strengthen NSS capacity for poverty and macroeconomic monitoring. Includes: (1.1) Supporting development and coordination of NSS including transformation of DNS to Somali National Bureau of Statistics; (1.2) Somali Integrated Household Budget Survey (SIHBS) for poverty monitoring and macroeconomic baselines; (1.3) Strengthening sources of business and administrative data including Somali Integrated Business Establishment Survey (SIBES) and administrative data for national accounts; (1.4) Strengthening human capacity in poverty, CPI and national accounts statistics; (1.5) Development of compendium of statistical concepts, data access and dissemination policy.",
+        "financing": "US$14.08 million"
+      },
+      {
+        "component_name": "Component 2: ICT Development and Equipment of the National Statistical System",
+        "description": "Supports ICT infrastructure in DNS headquarters, field offices, and selected key federal MDAs. Includes ICT needs assessment and strategy development, and procurement of statistical software and hardware (computers, laptops, servers, networking equipment, software licenses).",
+        "financing": "US$0.92 million"
+      },
+      {
+        "component_name": "Component 3: Data Utilization for M&E and Planning",
+        "description": "Strengthens capacity for data utilization in monitoring, evaluation and planning. Sub-component 3.1 strengthens MED capacity including national M&E framework, sectoral performance monitoring pilots, M&E capacity building, and M&E IT platform enhancements. Sub-component 3.2 supports economic policy analysis and planning capacity including NEC/EPAU operations and macroeconomic/fiscal programming in MoF.",
+        "financing": "US$6.50 million"
+      },
+      {
+        "component_name": "Component 4: Project Management",
+        "description": "Supports project planning, budgeting, management, coordination, and M&E through technical advisory services, training, operating costs, and goods. Establishes and maintains PIU within DNS, develops Project Operations Manual, and ensures fiduciary compliance.",
+        "financing": "US$3.50 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Planning, Investment & Economic Development (MoPIED) through the Directorate of National Statistics (DNS), and later the Somali National Bureau of Statistics (SNBS) once established. A Project Implementation Unit (PIU) headed by a Project Coordinator will manage day-to-day operations.",
+      "coordination_mechanisms": "Project Steering Committee (PSC) chaired by Permanent Secretary of MoPIED with DNS, MED, NEC, MoF representatives; Joint Government and Development Partners Forum (JGDF) chaired by DNS for government-DP consultation; Project Technical Committee chaired by DNS Director General for technical guidance on surveys and dissemination; MoUs with Federal Member States (FMSs) for activities in their jurisdictions.",
+      "procurement_approach": "World Bank New Procurement Framework (NPF) under Procurement Regulations for Borrowers under IPF (July 2016, revised November 2017 and August 2018). STEP system used for all procurement transactions. Main procurement: consulting services, goods (ICT equipment), and non-consulting services. Procurement risk rated Substantial. PIU to recruit qualified Procurement Specialist.",
+      "monitoring_and_evaluation": "PIU responsible for results monitoring and reporting. Core PDO and intermediate indicators with baselines, milestones and targets. Annual progress reports compiled by PIU under DNS supervision. Multiple data sources: Somali User Satisfaction Survey, third-party assessments, direct feedback from beneficiaries, self-assessments, publicly available data submissions to international agencies, and simple counts of statistical releases."
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Political contestation among key partners (line ministries, FMS statistical departments, government agencies); weak governance, limited transparency and accountability; risk of political instability affecting project implementation.",
+        "risk_rating": "high",
+        "mitigation_measures": "Establish leading departments for each component early; build consensus and commitment among key partners; put in place memoranda of understanding; strict fiduciary control mechanisms; social accountability measures; project reports made publicly available."
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Limited government capacity to respond to external shocks; climate shocks (drought, floods, locusts) threatening agricultural output; insecurity in Mogadishu and southern Somalia affecting economic activity; COVID-19 pandemic impacts.",
+        "risk_rating": "high",
+        "mitigation_measures": "Ongoing work with IMF and other development partners to support increased revenue mobilization; emergency support from FAO, World Bank and others for locust crisis; flexible project design to adapt to shocks."
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Lack of coherent sector strategies and policies for data production in key MDAs (FMS statistical authorities, Ministry of Agriculture, Revenue Authorities); fragmented and uncoordinated statistical system.",
+        "risk_rating": "high",
+        "mitigation_measures": "Facilitate dialogue through technical working groups; support alignment of coherent framework for data production; capacity building and institutional strengthening packages."
+      },
+      {
+        "risk_category": "Technical Design",
+        "risk_description": "Multi-agency project with multiple components cutting across sectors and regional governments; weak institutional human resource capacity; weak intra- and inter-governmental coordination; scope complexity.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Focus on priority activities needed to achieve PDO; context-tailored capacity building; implementation teams and TA to mitigate complexity; close monitoring of work plans by PSC and management team."
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "Very weak institutional capacity typical of fragile state context; risk that project benefits are not sustained after project closure; limited human resources in DNS and MDAs.",
+        "risk_rating": "high",
+        "mitigation_measures": "Additional levels of supervision and monitoring by World Bank; close collaboration with Statistics Sweden (strong local presence); hiring of field consultants for technical assistance; learning by doing approach; institutional and legal reforms to ensure sustainability."
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Challenging financial management and procurement environment; mismanagement, fraud, lack of transparency and corruption; low levels of trust in government institutions; limited FM and procurement capacity in DNS/MoPIED.",
+        "risk_rating": "high",
+        "mitigation_measures": "Dedicated procurement and financial management specialists in PIU; on-the-job fiduciary training; World Bank periodic review and implementation support; EAFS unit oversight; external audit by Auditor General; strict fiduciary control mechanisms; social accountability focus."
+      },
+      {
+        "risk_category": "Security/Implementation",
+        "risk_description": "Security threats in parts of Somalia (particularly southern Somalia and Mogadishu) can render field data collection difficult; partial or complete deterioration of security and political relations between government levels; unique demographics of IDPs and nomads making field data collection challenging.",
+        "risk_rating": "high",
+        "mitigation_measures": "Careful design of sampling frame and flexible sample design allowing inclusion/exclusion of specific areas based on security assessment; stakeholder engagement through survey implementation committees; security assessment using UNDSS information; hiring local enumerators where possible."
+      },
+      {
+        "risk_category": "Environment and Social",
+        "risk_description": "Risk of insufficient capture of disaggregated data on marginalized groups (nomads, IDPs, persons with disabilities); gender bias in data collection; data confidentiality risks for vulnerable groups; GBV risks for enumerators and respondents; labor influx and mobility constraints for enumerators due to security/clan conflicts.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Labor Management Procedures; Codes of Conduct for enumerators; GBV-sensitive grievance mechanisms; identification of GBV service providers in advance; inclusive survey design; hiring female enumerators; training on gender-sensitive questions; Stakeholder Engagement Framework."
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate (Environmental and Social Risk Classification: Moderate; Environmental Risk: Low; Social Risk: Moderate)",
+      "triggered_safeguard_policies": [
+        "Assessment and Management of Environmental and Social Risks and Impacts (ESS1) – Relevant",
+        "Stakeholder Engagement and Information Disclosure (ESS10) – Relevant",
+        "Labor and Working Conditions (ESS2) – Relevant",
+        "Community Health and Safety (ESS4) – Relevant",
+        "Resource Efficiency and Pollution Prevention and Management (ESS3) – Not Currently Relevant",
+        "Land Acquisition, Restrictions on Land Use and Involuntary Resettlement (ESS5) – Not Currently Relevant",
+        "Biodiversity Conservation (ESS6) – Not Currently Relevant",
+        "Indigenous Peoples/Sub-Saharan African Historically Underserved Traditional Local Communities (ESS7) – Not Currently Relevant",
+        "Cultural Heritage (ESS8) – Not Currently Relevant",
+        "Financial Intermediaries (ESS9) – Not Currently Relevant"
+      ],
+      "grievance_redress_mechanism": "Yes – Establishment of a grievance redress mechanism is an effectiveness condition. The project will implement a two-pronged GRM accessible at local (field offices) and national levels to channel grievances from project stakeholders. GRM will have clear and transparent procedures from uptake to resolution. GBV-sensitive complaint mechanisms will be explored. Contractors will have specific GRM procedures for workers. World Bank GRS and Inspection Panel also available.",
+      "gender_considerations": "Significant gender focus: project addresses gender data gaps identified in WBG Gender Strategy FY16-23; household and business surveys will collect sex-disaggregated data on education, employment, firm/land ownership; DNS staff to be trained on gender-sensitive questions and analysis; female enumerators to be recruited; gender-disaggregated training statistics tracked; UNSD Minimum List gender indicators tracked as PDO indicator; M&E reports to include gendered targets and indicators; project tracks share of female DNS staff receiving training.",
+      "vulnerable_groups": [
+        "Internally Displaced Persons (IDPs)",
+        "Nomadic populations",
+        "Rural residents",
+        "Persons with disabilities",
+        "Women (facing significant gender inequality)",
+        "Hard-to-reach populations"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "The project explicitly acknowledges Somalia as an FCV context and is marked as both 'Fragile State' and 'Conflict' in the financing modalities. Survey design incorporates flexible sampling to exclude insecure areas; security assessments using UNDSS information guide fieldwork; local enumerator hiring reduces security risks; CAPI-based data collection allows less conspicuous methods in insecure areas; stakeholder engagement among government levels addresses political tensions; MoUs with FMSs manage federal-state coordination risks. The project avoids civil works to minimize environmental/social risks in conflict context.",
+      "fragility_context": "Somalia has endured decades of civil war since 1991 collapse of central government, destroying statistical infrastructure, equipment, records and human resources. Ongoing conflict in parts of the country (particularly southern Somalia) continues to constrain data collection. The country has extremely weak institutions typical of fragile states: lowest Statistical Capacity Indicator score in Sub-Saharan Africa (30 vs. SSA average of 62 in 2017); nascent federal government re-established only in 2012; high external debt (US$5.2 billion); 69% of population below US$1.90/day; large IDP population; recurring climate shocks (drought, floods, locusts); COVID-19 pandemic adding additional stress. Somalia only recently cleared IDA arrears (March 2020) and reached HIPC Decision Point.",
+      "security_considerations": "Security is a major constraint throughout the project. Field data collection feasibility depends on current security assessments; partial or complete deterioration of security can render fieldwork impossible. Enumerator mobility is constrained by security risks and potential clan conflicts, requiring local hiring strategies. The project uses UNDSS and other sources for security assessment. Sampling frame design allows flexible inclusion/exclusion of areas based on security. COVID-19 containment measures may also impede face-to-face interactions. Security authorities are expected to provide protection for project workers.",
+      "displacement_or_refugees": "Yes – Somalia has a significant IDP population. The project explicitly includes IDPs as a target population for household surveys. Previous surveys (SLHS 2013) excluded IDPs; SHFS Wave 1 (2016) excluded large insecure areas and nomads. The SIHBS will include IDP settlements in its sampling frame across all major regions. IDP household registries for camps in Central Regions, Jubaland, South West, Galmudug, Puntland, Somaliland and Banadir will be used to construct the IDP sampling frame. IDPs face unique challenges including tenure insecurity and spatial dislocation from social networks and livelihoods."
+    }
+  }
+}

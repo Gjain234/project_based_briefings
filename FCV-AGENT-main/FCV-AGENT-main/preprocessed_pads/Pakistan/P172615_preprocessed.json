@@ -1,0 +1,130 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P172615",
+    "guid": 438401654609799746,
+    "node_id": 33821817,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b088dba71e&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 172288
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "National Health Support Program (NHSP)",
+      "project_development_objective": "To strengthen equitable delivery and quality of essential health services at the primary health care level in support of Universal Health Coverage",
+      "total_financing": "US$300 million (IDA Credit: US$258 million; GFF Grant: US$42 million)",
+      "implementation_period": "2022-2026 (4 years)",
+      "beneficiaries": "Population of Khyber Pakhtunkhwa (KP), Punjab, and Sindh provinces; Ministry of National Health Services, Regulations and Coordination (MoNHSR&C); primary health care facilities including Rural Health Centers (RHCs), Basic Health Units (BHUs), and community-level health workers"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Khyber Pakhtunkhwa (KP)",
+        "Punjab",
+        "Sindh"
+      ],
+      "coverage_type": "provincial/regional",
+      "fragile_or_conflict_affected_areas": "partial - KP has security concerns and insecurity affecting female workers and service delivery; Balochistan excluded initially but identified as having greater remoteness challenges; program explicitly targets lagging areas defined by UHC Service Coverage Index or zero-dose children indicators"
+    },
+    "key_components": [
+      {
+        "component_name": "Results Area 1: Improving Coverage and Quality of Essential Health Services",
+        "description": "Focuses on ensuring PHC facilities meet essential health service delivery norms including facility readiness, provider competencies, referral systems, TB case notification, and immunization coverage. Includes climate risk considerations and addresses equity in lagging areas.",
+        "financing": "US$137.3 million (DLI 1-5)"
+      },
+      {
+        "component_name": "Results Area 2: Enhancing Governance and Accountability",
+        "description": "Strengthens health information systems through DHIS2 integration and dashboards, reduces stock-outs of essential commodities and medicines, strengthens performance management systems, and increases community engagement in underserved areas.",
+        "financing": "US$98.3 million (DLI 6-7, 10-11)"
+      },
+      {
+        "component_name": "Results Area 3: Improving Health Financing and Public Financial Management",
+        "description": "Improves budgeting and budget flow practices, enhances domestic resource mobilization for PHC, develops health financing frameworks and strategies, and strengthens expenditure tracking through IFMIS.",
+        "financing": "US$58.8 million (DLI 8-9)"
+      },
+      {
+        "component_name": "IPF Component: Technical Assistance and Capacity Building",
+        "description": "Supports program management, technical assistance to achieve DLIs, learning and innovation in service delivery, establishment of PMUs at federal and provincial levels, and management of environmental and social risks.",
+        "financing": "US$59.6 million (approximately 15% of total financing)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of National Health Services, Regulations and Coordination (MoNHSR&C) at federal level; Department of Health in Sindh, Primary and Secondary Healthcare Department in Punjab, and Department of Health in Khyber Pakhtunkhwa at provincial levels",
+      "coordination_mechanisms": "National UHC Country Platform (NUCP) under MoNHSR&C leadership for federal coordination; Provincial Steering Committees comprising representatives from Finance, Health, and Planning Departments; Technical Working Groups (TWGs) for operational and technical matters; Provincial UHC coordination platforms/steering committees; Semi-annual Joint Implementation Support Missions with World Bank and co-financing partners; Annual implementation reviews",
+      "procurement_approach": "World Bank Procurement Regulations for Borrowers (November 2020); Non-complex, routine procurement managed by existing government staff; Systematic Tracking of Exchanges in Procurement (STEP) system; Annual procurement post-reviews by World Bank; Subject to audit by Supreme Audit Institution; Anti-Corruption Guidelines compliance required",
+      "monitoring_and_evaluation": "Third-party independent verification agency (TPVA) to verify achievement of Disbursement Linked Results (DLRs); Provincial Health Departments submit progress reports every six months; Federal level monitoring through MoNHSR&C using UHC Service Coverage Index; Mix of administrative data, Health Management Information System data, supportive supervision, data quality checks, and rapid assessments; Integrated dashboards for routine performance review; Monitoring, Evaluation, Research and Learning agenda facilitated by MoNHSR&C"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Frequent administrative changes in concerned ministries; need for greater inter-governmental and inter-ministerial collaboration and coordination; political instability affecting reform implementation",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Use of multi-stakeholder national and provincial platforms (NUCP, Provincial UHC SCs) established to oversee UHC progress and resolve implementation bottlenecks; strong government commitment demonstrated through COVID-19 response; regular coordination through Joint Implementation Support Missions"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "External imbalances widening due to rising import bills; pressures on rupee and limited external buffers; inflationary pressures from global energy and commodity prices; risk of sharp economic downturn affecting government capacity to focus on reforms; fiscal deficits and debt sustainability concerns; limited fiscal space for health spending",
+        "risk_rating": "high",
+        "mitigation_measures": "Ongoing International Monetary Fund Extended Fund Facility program; World Bank support for technical assistance to strengthen institutional capabilities for macro-fiscal management; DLI on domestic resource mobilization for PHC to incentivize increased spending; program design includes efficiency improvements to maximize impact of limited resources"
+      },
+      {
+        "risk_category": "Technical Design of Program",
+        "risk_description": "Program involves three diverse provinces and MoNHSR&C with different contexts; requires ownership from Health, Planning, and Finance Departments; requires consensus among numerous stakeholders and development partners; first use of PforR instrument in Pakistan's health sector; complexity of institutional arrangements and coordination",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Provincial leadership to define own results with associated TA support; national scope facilitates coordination and consensus building; use of country's own national and provincial platforms developed under federal and provincial leadership; semi-annual Joint Implementation Support Missions; NHSP Steering Committee under MDTF; routine updates at national and provincial UHC coordination platforms; learning from NISP experience with DLI-based operations"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "Limited existing capacity of healthcare delivery systems at federal and provincial levels; weak institutional capacity at district level; poor quality of district health plans; limited staff performance monitoring and accountability; weak compliance with protocols and standards; challenges in HR management and staff motivation",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Program focuses on using and strengthening existing delivery systems rather than creating parallel structures; DLIs designed to institutionalize capacities and tools; IPF component supports strengthening mechanisms for monitoring and supervision; capacity building through TA; support for competency-based training; performance management system development; technical working groups for operational support"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Substantial residual risk due to horizontal and vertical span of program activities across provinces and from DGHS to PHC level; complexity in budgeting, fund flow, reporting, procurement, and accountability; weak budget credibility in provinces; inconsistent use of chart of accounts across provinces; weak linkages between input and output data; delays in budget releases; lack of transparency and accountability in PHC expenditure; challenges in tracking PHC-level financial data",
+        "risk_rating": "substantial",
+        "mitigation_measures": "DLIs on budgeting, fund flow, and expenditure tracking (DLI 8-9); IPF component builds provincial capacity for improved financial management and procurement; revision of chart of accounts to define facility/priority services as cost centers in IFMIS; training for DHO and facility managers on budget preparation; establishment of efficient bill processing for PHC facilities; development of expenditure reporting procedures for contracted-out facilities; annual financial statements audited by Auditor General of Pakistan; World Bank annual procurement post-reviews"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Healthcare waste management challenges at PHC facilities; low capacity of provincial Health Departments for HCW management; non-compliance with Hospital Waste Management Rules; lack of secured landfills for healthcare hazardous waste; risks of social exclusion and access barriers for vulnerable populations; gender gaps in access to services; occupational and health safety risks from repair and renovation activities; data privacy and security concerns with system upgrades; potential impacts on informal/illegal settlers on health facility premises",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Development of guidelines for managing environment/social risks at PHC facilities; training providers on hazardous HCW management; implementation of National Guidelines for Infection Prevention and Control (2020); screening for subprojects to avoid adverse social impacts; community engagement and social mobilization activities targeting women; grievance redress mechanism; gender-responsive monitoring across DLIs; equity considerations hard-wired into DLI design with 20% of achievements required in lagging areas; communications activities on UHC reforms and risk communication; functional GRM with quarterly reporting; engagement with healthcare providers on E&S management; multimodal communication campaigns to increase demand for PHC services"
+      },
+      {
+        "risk_category": "Implementation Capacity and Sustainability",
+        "risk_description": "Weak institutional capacity at district level; challenges in data quality and completeness; fragmented information systems; weak HR management systems; high staff absenteeism and low retention in remote areas; inadequate working conditions affecting female workers; lack of career pathways; technology upgrades may not be effective without commensurate human capacity investment",
+        "risk_rating": "substantial",
+        "mitigation_measures": "IPF component provides substantial TA to provinces; establishment of PMUs at federal and provincial levels; support for competency-based training systems; DLI on health information systems strengthening through DHIS2 integration; support for HR performance monitoring; technical working groups for operational support; capacity building activities; learning and innovation component to generate evidence for future improvements"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate (for IPF component)",
+      "triggered_safeguard_policies": [
+        "Assessment and Management of Environmental and Social Risks and Impacts (ESS1)",
+        "Stakeholder Engagement and Information Disclosure (ESS10)",
+        "Labor and Working Conditions (ESS2)",
+        "Indigenous Peoples/Sub-Saharan African Historically Underserved Traditional Local Communities (ESS7)"
+      ],
+      "grievance_redress_mechanism": "Yes - Existing program grievance redress mechanism at provincial level; World Bank's Grievance Redress Service (GRS) available for affected communities; World Bank's independent Inspection Panel available for complaints regarding Bank non-compliance; functional GRM to be maintained with quarterly reporting; digital technology to be used to expand community engagement and beneficiary feedback",
+      "gender_considerations": "Gender equity is a primary social inclusion issue and is hard-wired into program design; DLIs include gender-specific targets and indicators; availability of essential female staff required in facility readiness norms; gender competency in communications and counseling incorporated into competency-based training; gender-disaggregated data collection required; female contraceptive methods to be made available; support for increasing proportion of female health managers (target of at least 5% female managers in Punjab); gender-responsive monitoring across DLIs; support for collaboration with community-based groups on gender norms and empowerment; communications activities to address gender gaps in access to services",
+      "vulnerable_groups": [
+        "Poor and low-income populations",
+        "Women and girls (particularly regarding reproductive, maternal, newborn, child, and adolescent health)",
+        "Populations in remote and geographically disadvantaged areas",
+        "Ethnic minorities",
+        "Populations in lagging districts (identified by UHC Service Coverage Index or zero-dose children)",
+        "Informal/illegal settlers on health facility premises",
+        "Marginalized communities and Indigenous Peoples",
+        "Populations with limited mobility and access to transportation",
+        "Communities affected by insecurity"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Program addresses conflict-related health system challenges through: (1) explicit inclusion of security considerations in referral protocols incorporating gender issues related to mobility and security; (2) targeting of remote and lagging areas disproportionately affected by insecurity and geographic remoteness; (3) support for emergency transportation systems to overcome access barriers; (4) engagement with private and non-governmental providers in areas with limited government presence; (5) community engagement and risk communications to build trust in health system; (6) support for LHW-uncovered areas in Punjab where vulnerable communities reside; (7) climate resilience measures to address health impacts of climate-related disasters; (8) strengthening of health system capacity to respond to health emergencies including pandemics",
+      "fragility_context": "Pakistan faces multiple fragility factors: (1) Macroeconomic fragility with high inflation, external imbalances, and fiscal deficits affecting government capacity; (2) Institutional fragility with weak capacity at district level, poor coordination between departments, and limited accountability mechanisms; (3) Geographic fragility with stark provincial disparities in health outcomes and access, particularly affecting Balochistan and remote areas of KP and Sindh; (4) Security fragility in KP and Balochistan affecting service delivery and staff retention, particularly for female workers; (5) Health system fragility with low public financing (1.2% of GDP), high out-of-pocket spending (51.9% of health expenditure), and poor quality of care; (6) Human capital fragility with high stunting (38%), low immunization coverage, and poor maternal and child health indicators; (7) Climate vulnerability with projected increases in extreme weather events, vector-borne diseases, and water-borne diseases",
+      "security_considerations": "Program acknowledges security challenges affecting health service delivery: (1) Insecurity in KP and Balochistan affecting staff recruitment, retention, and mobility; (2) Particular impact on female health workers due to inadequate accommodation and insecurity; (3) Distance, poor road infrastructure, and insecurity adding to cost of seeking care in remote areas; (4) Referral protocols to incorporate gender issues related to mobility and security; (5) Support for emergency transportation systems to overcome access barriers in insecure areas; (6) Community engagement strategies to build trust in health system; (7) Risk communications to address concerns about service delivery and pandemic response",
+      "displacement_or_refugees": "No specific mention of displacement or refugee populations in the PAD. However, the program's focus on equitable access and vulnerable populations, combined with Pakistan's geographic and security challenges, suggests potential relevance to displaced or mobile populations. The program's emphasis on community engagement, private sector engagement, and reaching underserved areas may benefit displaced populations, though this is not explicitly addressed in the document."
+    }
+  }
+}

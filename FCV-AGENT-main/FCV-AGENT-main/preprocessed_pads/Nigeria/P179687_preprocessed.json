@@ -1,0 +1,138 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P179687",
+    "guid": 99112923130036443,
+    "node_id": 34204828,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-55491e4e-ae91-4ebc-b3ec-51772c00f67f.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Nigeria Distributed Access through Renewable Energy Scale-up Project (DARES)",
+      "project_development_objective": "To increase access to electricity services for households and MSMEs with private sector-led distributed renewable energy generation",
+      "total_financing": "US$750 million (IDA Credit: US$150 million, IDA Shorter Maturity Loan: US$600 million, of which US$350 million from IDA Scale Up Window)",
+      "implementation_period": "2024-2028 (5 years)",
+      "beneficiaries": "Approximately 17.5 million people, 237,000 MSMEs (including 124,000 agribusinesses), and about 30 state hospitals; includes female-headed households and women-led MSMEs"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Rural and remote areas across Nigeria",
+        "Peri-urban and urban areas",
+        "Northern Nigeria (North-East and North-West)",
+        "Southern Nigeria (South-East and South-West)",
+        "Lagos State (pilot for solar rooftop)",
+        "All 36 states and FCT"
+      ],
+      "coverage_type": "National with focus on unserved and underserved areas",
+      "fragile_or_conflict_affected_areas": "Yes, partial. The project acknowledges security challenges in northern and southeastern Nigeria with increasing banditry and kidnapping. These areas have low electricity access rates. The project will continuously monitor security situations and engage stakeholders to provide solutions for affected communities. Post-Niger coup d'état security concerns could impact foreign investment."
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Solar Hybrid Mini Grids for Economic Development",
+        "description": "Support for privately-owned and operated solar hybrid mini grids in unserved (rural/remote) and underserved (urban/peri-urban) areas. Includes: (1.1) Minimum Subsidy Tender for isolated mini grids, interconnected mini grids, and state government-led solar rooftop solutions; (1.2) Performance Based Grants Program for isolated and interconnected mini grids. Targets 1,170 isolated mini grids (100kWp), 120 interconnected mini grids (1MWp), 5 interconnected mini grids (5MWp), and 30 rooftop solar (1MWp). Will replace approximately 288,000 diesel/gasoline generator sets.",
+        "financing": "US$1,023 million total (IDA: US$410 million; Private sector: US$613 million)"
+      },
+      {
+        "component_name": "Component 2: Standalone Solar Systems for Households, MSMEs and Agribusinesses",
+        "description": "Expansion of standalone solar systems (SAS) for households (basic electrification), MSMEs, and agribusinesses (productive use of electricity). Includes: (2.1) Performance Based Grants for solar home systems and PUE equipment with supply-side and demand-side subsidies; (2.2) Catalytic Grants for companies targeting poor and hardest-to-reach consumers. Targets 2,750,000 solar home systems and 75,000 PUE products. Demand-side subsidies directed through National and State Social Registry (12 million households).",
+        "financing": "US$715 million total (IDA: US$300 million; Private sector: US$415 million)"
+      },
+      {
+        "component_name": "Component 3: Technical Assistance",
+        "description": "Institutional strengthening, ecosystem building, and state engagement. Includes: (3.1) Institutional Strengthening for REA, FMoP, NERC, NEMSA, FMoE, FMoF capacity building and national electrification plan development; (3.2) DARES Ecosystem and Implementation support for pipeline preparation, PUE ecosystem building, and E&S risk management; (3.3) Engagement with States for policy frameworks and solar rooftop market creation. Parallel financing from GEAPP, SEforALL, USAID, GIZ, JICA.",
+        "financing": "US$80 million total (IDA: US$40 million; Other development partners: US$40 million)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Rural Electrification Agency (REA) as primary implementing agency; Lagos State Electricity Board (LSEB) for state-level activities; Project Management Unit (PMU) adapted from NEP; Additional states may join as implementing agencies upon meeting eligibility criteria",
+      "coordination_mechanisms": "DARES Steering Committee chaired by Honorable Minister of Power with Honorable Minister of Finance as co-chair; includes representatives from Federal Ministry of Power, Federal Ministry of Finance, NERC, States, and REA; meets semi-annually; Independent Verification Agency (IVA) and grants administrator hired to support implementation; Coordination with development partners (AfDB, JICA, GIZ, USAID, GEAPP, SEforALL, RMI)",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers (September 2023); World Bank Standard Procurement Documents for international competitive procurement; Federal Government standard bidding documents for national competitive procurement (with World Bank provisions); Commercial Practices for private sector enterprises; Odyssey e-procurement platform used by REA; Mandatory provisions to mitigate forced labor risk in solar panel procurement; Rated Criteria mandatory for international procurements advertised after September 1, 2023",
+      "monitoring_and_evaluation": "REA monitors all component activities and sends progress reports to World Bank; Multi-Tier Framework (MTF) data integration; Odyssey platform for data collection, processing, and verification; Independent Verification Agent verifies outputs claimed by participating companies; Mid-term review within two years of project start; Annual monitoring of PDO indicators and intermediate results indicators; Beneficiary satisfaction survey at mid-term; Grievance Redress Mechanism tracking; Data collection on generation, consumption, and mini grid performance; Geospatial monitoring tools and responsible data sharing framework"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Security situation in northern and southeastern Nigeria remains complex with increasing banditry and kidnapping. Escalating security concerns post-Niger coup d'état could negatively impact foreign investment. Security situation could lead to limited deployment or delays in affected areas, causing communities to feel left out.",
+        "risk_rating": "High",
+        "mitigation_measures": "Project will continuously monitor security situation in affected areas; Extensive stakeholder engagement to provide solutions for affected communities; Flexible implementation approach to address security constraints"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Nigeria faces high inflation (27.3% in October 2023, highest in 18 years), elevated fiscal financing gaps (₦10.7 trillion or 4.4% of GDP in 2023), public debt sustainability concerns, and currency volatility. Limited local manufacturing for renewable equipment means heavy dependence on imports; exchange rate fluctuations and dollar availability can severely impact developer financials and timelines. Entrenched inflation at elevated levels poses challenges.",
+        "risk_rating": "High",
+        "mitigation_measures": "Continue discussions with FGN to allow grant disbursement in US dollars to provide security to developers; Recent FX market reforms (unified exchange rates, market-reflective pricing) should help over time; Direct disbursement in US$ reduces absolute grant amounts needed; Monitor macroeconomic developments and adjust implementation as needed"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Power sector lacks overall electrification strategy or plan, leaving approach to electrification unclear. Inconsistent application and enforcement of existing policies and regulations. Regulations on mini grid options when grid arrives have not been tested in practice; potential for stranded assets remains a source of anxiety for mini grid developers and investors.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Performance-Based Conditions (PBCs) introduced to improve policy and regulatory framework: PBC 1 requires presidential approval of National Electrification Strategy and Implementation Plan (NESIP); PBC 3 requires NERC mini grid regulations amendments to allow portfolio-based permitting, require 12-month notice for DISCO expansion, clarify community rights/duties, and increase maximum mini grid capacity from 1MW to 5MW"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "REA's PMU has gained experience implementing NEP but DARES represents significant scale-up of financing and scope. Implementation capacity must be scaled accordingly. Inclusion of new state-level implementing agency (LSEB) adds to capacity needs. LSEB has no direct experience in World Bank-financed projects.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "PBC 2 specifically targets REA capacity development through: (2.1) preparation, adoption, and operationalization of new REA business plan reflecting expanded mandate; (2.2) improvement in Key Performance Indicators (KPIs) demonstrating increased capacity including reduced time for grant agreement signing and fund disbursement; Recruitment of effective grant administrator; LSEB to receive training on World Bank procedures and STEP within 90 days of effectiveness; Additional office space, equipment, and high-speed internet for LSEB within 90 days of effectiveness"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Risks include: (i) use of financing proceeds for unintended purposes; (ii) fraud and corruption; (iii) political interference in FM staff deployment; (iv) capacity of PMU staff to render acceptable financial reports timely; (v) use of funds for non-compliant expenditures. FM risk rating is Substantial.",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Robust action plan and implementation support arrangements; Improved M&E with more data sharing on generation, consumption, and performance; Clarity on beneficiaries and fund recipients; Technical and geospatial solutions for verification; Well-qualified FM staff in place at FPFMD and LSPFMU; Separate accounting systems for REA and LSEB; Semi-annual Interim Financial Reports within 45 days; Annual audited financial statements within 6 months; Quarterly internal audit reports; Risk-based FM supervision; Regular on-site reviews and desk reviews"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Moderate E&S risks and impacts from mini grid construction and SAS deployment including: electronic and hazardous waste, solid waste, land clearing/tree cutting, end-of-life battery disposal (lead acid), noise and dust emissions, soil pollution from leakages, occupational and community health/safety risks, bird and bat mortality from solar panels. Labor risks include poor working environments, child and forced labor by suppliers. Community health risks from migrant workers.",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "Updated Environmental and Social Management Framework (ESMF) disclosed October 6, 2023 (in-country) and October 9, 2023 (World Bank); Updated Labor Management Procedures (LMP) and Stakeholder Engagement Plan (SEP) disclosed same dates; Environmental and Social Commitment Plan (ESCP) included in Financing Agreement; Updated Resettlement Policy Framework (RPF) disclosed same dates; Company selection criteria and compliance clauses in grant agreements include E&S requirements; Private developers required to develop Environmental and Social Management System (ESMS) consistent with ESS9; LSEB E&S system to be assessed prior to implementation; Citizen engagement mechanisms and indicators including effective GRM; Grievance Redress Mechanism adapted from NEP; Security Management Plan to be developed; Forced labor risk mitigation through market analysis, bidding document provisions, and Forced Labor Performance Declarations"
+      },
+      {
+        "risk_category": "Technical Design",
+        "risk_description": "While SAS technologies are well-known with minimal risks, and MST/PBG approaches are established, new modalities like distributed PV (rooftop solar) and interconnected mini grids present some implementation complexity. Technical standards are well-known but must be properly specified.",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "Technical standards well-known and will be specified in Project Implementation Manual (PIM); Experience from NEP implementation provides lessons; Interconnected mini grids technically similar to isolated mini grids with added grid connection capability; Rooftop solar technologically similar to SAS; Detailed technical specifications in PIM; Capacity building for implementers"
+      },
+      {
+        "risk_category": "Stakeholder",
+        "risk_description": "Multiple stakeholders with different interests (DISCOs, private developers, communities, states, development partners) require coordination. Potential for conflicting approaches and stakeholder misalignment.",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "DARES Steering Committee for broad oversight and inter-agency coordination; Extensive stakeholder engagement and consultations; Formal collaboration agreements with development partners; Coordination mechanisms with DISCOs for interconnected mini grids; Community engagement frameworks; Tripartite agreements for interconnected mini grids involving community, DISCO, and developer"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate",
+      "triggered_safeguard_policies": [
+        "ESS 1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS 2: Labor and Working Conditions",
+        "ESS 3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS 4: Community Health and Safety",
+        "ESS 5: Land Acquisition, Restrictions on Land Use and Involuntary Resettlement",
+        "ESS 6: Biodiversity Conservation and Sustainable Management of Living Natural Resources",
+        "ESS 8: Cultural Heritage",
+        "ESS 9: Financial Intermediaries",
+        "ESS 10: Stakeholder Engagement and Information Disclosure"
+      ],
+      "grievance_redress_mechanism": "Yes. Project-level GRM adapted from NEP with multiple channels for complaints. Communities and individuals can submit complaints to: (i) project-level grievance mechanisms; (ii) World Bank's Grievance Redress Service (GRS); (iii) World Bank's independent Accountability Mechanism (AM) including Inspection Panel and Dispute Resolution Service. GRM functionality tracked as intermediate indicator with target of 95% of project-related grievances registered and addressed by project closing. Biannual reporting on grievances disaggregated by gender.",
+      "gender_considerations": "Project addresses gender gaps in electricity access. Female-headed households (FHHs) have lower access than male-headed households (MHHs): 79.2% vs 83.6% in urban areas; gap varies by region (10-28%). In bottom income quintile, only 6% of FHHs have access vs 13% of MHHs. Only 14% of firms managed by women; women-led MSMEs disadvantaged in financing and electricity access. Project measures include: (i) Subsidies and targeted communication campaigns to reduce disparities; (ii) 100% of FHHs targeted for new connections (based on NEP observations); (iii) Tracking of female-managed MSMEs receiving new/improved electricity services; (iv) Promotion of women's participation in mini grid and SAS operations for employment opportunities; (v) Gender-disaggregated indicators for people provided with new/improved electricity service; (vi) Target of 30% women employed by SAS companies by project closing; (vii) Demand-side subsidies directed through National and State Social Registry to ensure targeting of poorest households including FHHs",
+      "vulnerable_groups": [
+        "Female-headed households",
+        "Low-income households (bottom income quintile)",
+        "Rural and remote populations",
+        "Unserved and underserved populations",
+        "Populations in fragile and conflict-affected areas (North-East and South-East Nigeria)",
+        "Women-led MSMEs",
+        "Agribusinesses and smallholder farmers",
+        "Migrant workers in project areas",
+        "Communities in areas with security challenges"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project acknowledges fragility and conflict context. Security situation in northern and southeastern Nigeria is complex with increasing banditry and kidnapping. Post-Niger coup d'état escalating security concerns could negatively impact foreign investment. Project design incorporates conflict sensitivity through: (i) Continuous monitoring of security situation in affected areas; (ii) Extensive stakeholder engagement to provide solutions for affected communities; (iii) Flexible implementation approach to address security constraints; (iv) Focus on reaching most remote and fragile parts of country through targeted subsidies; (v) Inclusion of FCV areas in mini grid site selection; (vi) Catalytic grants specifically for hard-to-reach areas; (vii) Security Management Plan to be developed; (viii) Lessons from NEP show that reaching most remote and fragile areas requires significant and sustained public funding as these areas are economically unattractive or require disproportionate private sector subsidies",
+      "fragility_context": "Nigeria faces multiple fragility factors: (i) Security challenges: Complex security situation with increasing banditry and kidnapping in northern and southeastern regions; (ii) Economic fragility: Subdued economic growth (0.7% average 2015-2020), high inflation (27.3% October 2023), elevated fiscal deficits (5% of GDP in 2022), public debt at 40% of GDP with debt service at 100%+ of revenues; (iii) Development challenges: 80 million people living in poverty, 12 million pushed into poverty by inflation since 2020, 85+ million without electricity access (60% access rate), large disparities between urban (89%) and rural (26%) access; (iv) Institutional challenges: Weak institutional capacity, inconsistent policy enforcement, lack of comprehensive electrification strategy; (v) Macroeconomic instability: Currency volatility, limited FX access, high inflation expectations risk becoming unanchored; (vi) Governance challenges: Political interference risks, capacity constraints in implementing agencies",
+      "security_considerations": "Security risk assessment will be conducted based on project activities to be implemented. Security Management Plan will be developed to increase awareness of safety and security in project sites and ensure timely information flow. Project acknowledges that security situation in northern and southeastern Nigeria (areas with low electricity access) remains challenging. Implementation will be flexible to accommodate security constraints. Continuous monitoring of security situation in affected areas with stakeholder engagement to provide solutions for communities affected by security challenges.",
+      "displacement_or_refugees": "No significant displacement expected. Land acquisition and land use: Some tiny pieces of land may need to be acquired for mini grid and solar system installations, but economic and physical displacements are very unlikely due to small scale of facilities to be constructed. Existing Resettlement Policy Framework (RPF) from NEP has been updated and disclosed (October 6, 2023 in-country, October 9, 2023 World Bank). Applicable Resettlement Action Plan (RAP) will be prepared, disclosed, and implemented if displacement becomes unavoidable before commencement of project activities requiring land acquisition and displacement. Project does not specifically address refugee populations but operates in context where security challenges may create displacement pressures."
+    }
+  }
+}

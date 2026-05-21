@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P172945",
+    "guid": 697141647441927504,
+    "node_id": 33743962,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=IBArchive-6b6afc41-924a-4863-b75e-263d020aa0be.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 178871
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Punjab Urban Land Systems Enhancement Project (PULSE)",
+      "project_development_objective": "To support the Government of Punjab with: (i) improved land records; and (ii) identification of land for development, including land for housing programs",
+      "total_financing": "US$150 million (EUR 132.6 million equivalent)",
+      "implementation_period": "5 years (July 2022 - June 2027)",
+      "beneficiaries": "38.5 million people including 2.51 million households (16.1 million people) in urban areas and 3.48 million households (22.4 million people) in rural areas; women, vulnerable groups, landowners, property developers, investors, government agencies"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Punjab Province (entire province)",
+        "36 districts in Punjab",
+        "Pilot areas: Dina, Talagang, Barki, Jallo, Maraka, Ichra, Mazang, Jahar Town, Wapda Town",
+        "Major cities: Lahore, Multan, Faisalabad, Gujranwala, Sargodha"
+      ],
+      "coverage_type": "provincial (entire Punjab)",
+      "fragile_or_conflict_affected_areas": "partial - Punjab is affected by climate change vulnerabilities, natural disasters (floods, droughts, earthquakes), and has significant informal settlements (katchi abadis) with tenure insecurity; however, not classified as fragile or conflict-affected state"
+    },
+    "key_components": [
+      {
+        "component_name": "Digital Land Records and Cadastral Maps for LRMIS",
+        "description": "Development of seamless multipurpose cadastral map linked to digital land records; systematic registration of peri-urban and urban properties; upgrading tax records to urban land records; incorporation of existing urban records; systematic registration of urban properties; first land registration in notified informal settlements (katchi abadis)",
+        "financing": "US$103 million"
+      },
+      {
+        "component_name": "Land for Housing",
+        "description": "Preparation of inventory of state lands; digitalization and geo-referencing of public lands; development of state lands management procedures and strategies; identification of suitable public lands for housing programs including Naya Pakistan Housing Program",
+        "financing": "US$3 million"
+      },
+      {
+        "component_name": "Integrated Land and Geospatial Information Systems and Services",
+        "description": "ICT infrastructure upgrade; development of next generation LRMIS and Land Information Portal; digitization of Deeds Registry records; establishment of Provincial Spatial Data Infrastructure (PSDI); provision of base maps and multi-hazard risk assessment; strengthening geodetic network",
+        "financing": "US$35.5 million"
+      },
+      {
+        "component_name": "Project Management and Institutional Strengthening",
+        "description": "Support for PMU and PIUs; capacity building and training; monitoring and evaluation; legal and regulatory support; public awareness campaigns; gender mainstreaming; grievance redress mechanism; renovation of Arazi Record Centers (ARCs)",
+        "financing": "US$8.5 million"
+      },
+      {
+        "component_name": "Contingent Emergency Response Component (CERC)",
+        "description": "Provides immediate response to eligible emergencies through reallocation of project funds",
+        "financing": "US$0.0 million (contingent)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Punjab Board of Revenue (BoR) as primary implementing agency; Project Management Unit (PMU) established in BoR headquarters; two Project Implementation Units (PIUs) in Punjab Land Records Authority (PLRA) and Provincial Disaster Management Authority (PDMA)",
+      "coordination_mechanisms": "Project Steering Committee (PSC) at provincial level co-led by Chairman Planning and Development Board and Senior Member BoR; meets quarterly; comprises representatives from Finance Department, Local Government & Community Development, Excise and Taxation Department, Punjab Housing and Town Planning Agency, Housing & Urban Development Department, Cooperative Department, Lahore Development Authority, and other key stakeholders; administrative agreements with key partners including development authorities, E&TD, PITB, PHATA, Survey of Pakistan, DGKA, Revenue Academy Punjab, Urban Unit, HUDD, private housing agencies",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers; open competitive bidding with national and international market approach as principal method; use of Systematic Tracking of Exchanges in Procurement (STEP); Project Procurement Strategy for Development (PPSD) prepared with 18-month Procurement Plan; qualified procurement specialists in PMU and PIUs; prior and post reviews based on complexity and value",
+      "monitoring_and_evaluation": "PMU responsible for M&E; dedicated M&E officer to capture data from implementing departments; baseline survey in Year 1; independent operational assessments and impact evaluations at mid-term and project end; biannual progress reports; monitoring of pilot activities; customer satisfaction surveys; gender-disaggregated indicators; Results Framework with PDO and intermediate results indicators tracked semi-annually or annually"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Project requires long-term political ownership in complex political context with multiple actors at various government tiers; groups benefiting from inefficiency of existing systems may resist changes and lobby against project activities",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Strong engagement with senior bureaucrats and policymakers; extensive regular collaborative engagement with key stakeholders; Project Steering Committee to institutionalize engagement; lessons from successful LRMIS project implementation"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Fiscal and monetary tightening expected to resume in FY22; public debt remains elevated; Pakistan's exposure to debt-related shocks; external imbalances and higher domestic inflation; outlook assumes IMF Extended Fund Facility program remains on track",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Project will help reduce fiscal burden by providing data and strengthening systems for improved property tax and stamp duty collection; project supports revenue enhancement which is essential for provincial financing of resilient infrastructure"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "BoR is strong but Directorate of Land Records (DLR) lacks dedicated and experienced staff as it has functioned mainly as regulator; capacity issues in undertaking field activities; need for comprehensive capacity building across multiple agencies",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Significant funding for comprehensive capacity building program for BoR, DLR, district collectors, PMU and PIU staff, public agencies, private sector companies, local leaders, and contractors; training needs assessment and long-term training plan; study tours and ESF training; hiring of experienced staff for PMU and PIUs"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Capacity issues in government departments resulting in inefficiencies and delays; staffing challenges; non-compliance with rules and procedures; weak internal controls",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Hiring dedicated FM and procurement staff in PMU and PIUs; provision of training; better internal audit controls; use of improved accounting software; close Bank support; detailed activity-level budgets; external audit by DG Audit Punjab; internal audit by hired firm twice yearly; use of New Accounting Model (NAM) and Chart of Accounts"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "High social risk due to contentious nature of land tenure in Punjab, particularly in context of widening social and economic inequities; complex cadastral mapping over large area; risk of land clearing of informal occupants in anticipation of project; disputes over land ownership likely to emerge; widespread disputes over land including multiple claimants, disputed inheritance rights, customary exclusion of women and minors",
+        "risk_rating": "high",
+        "mitigation_measures": "Systematic registration using participatory community-based approach with public display and alternative dispute resolution; disputes marked as 'disputed' in records with appeal mechanisms; institutional capacity building for dispute resolution; training of personnel on social and gender issues; Resettlement Policy Framework (RPF) for land acquisition and involuntary resettlement; Environmental and Social Management Framework (ESMF); Stakeholder Engagement Plan (SEP); Grievance Redress Mechanism (GRM); Gender-based Violence (GBV) and Sexual Exploitation and Abuse (SEA) Risk Assessment and Action Plan; Labor Management Plan (LMP); e-waste management plan; third-party monitoring; dedicated E&S specialists in PMU"
+      },
+      {
+        "risk_category": "COVID-19",
+        "risk_description": "Pandemic poses risks to implementation start including restrictions on mobility; could cause longer implementation period for cadastral surveys and fieldwork activities",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Adherence to all National Command Operation Center (NCOC) COVID-19 standard operating procedures; project labor expected to be vaccinated by project commencement; virus-related risks expected to reduce as vaccination scaling advances in Punjab"
+      },
+      {
+        "risk_category": "Technical Design",
+        "risk_description": "Complex technical design involving cadastral mapping, systematic registration, ICT systems development, and integration of multiple land registries",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Fit-for-purpose (FFP) approach tailored to country needs and capacity; incremental technology acquisition; pilots in Year 1 to develop efficient workflows before scale-up; lessons from previous LRMIS project and urban cadastral mapping pilots; comprehensive mid-term review to assess design assumptions and reallocate resources; technical standards compliance with international geospatial standards (Open Geospatial Consortium, ISO/TC211)"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Need for harmonization of policy, legal, and regulatory framework across multiple agencies; coordination challenges between land-related tax authorities and other agencies",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Legal and regulatory support component to update and harmonize policy framework; studies and consultations to develop recommendations; workshops and consultancies; coordination through Project Steering Committee; administrative agreements with key partners"
+      },
+      {
+        "risk_category": "Stakeholders",
+        "risk_description": "Multiple stakeholders with diverse interests; need for buy-in from development authorities, housing agencies, tax authorities, and private sector; resistance from groups benefiting from current inefficiencies",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Comprehensive stakeholder engagement plan; public awareness campaigns; communications strategy; participation and communications strategy critical factor from LRMIS experience; dedicated communications team; citizen engagement through public displays and community consultations; GRM for addressing concerns"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "High (Environmental and Social risk rating)",
+      "triggered_safeguard_policies": [
+        "ESS1 - Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS2 - Labor and Working Conditions",
+        "ESS3 - Resource Efficiency and Pollution Prevention and Management",
+        "ESS4 - Community Health and Safety",
+        "ESS5 - Land Acquisition, Restrictions on Land Use and Involuntary Resettlement",
+        "ESS10 - Stakeholder Engagement and Information Disclosure"
+      ],
+      "grievance_redress_mechanism": "Yes - Project-level GRM established and managed by GRM Specialist; Project Grievance Redress Committee constituted at PMU level; GRM Committee chaired by BoR comprising all relevant departments; online complaint registration system linked with PLRA's existing system; grievance/complaint redressal counters at ARCs improved through capacity building; records maintained in central database; appeals system included; BoR has well-developed complaint registration system with third-party management; PDMA hosts Disaster Helpline for citizen complaints; social media platforms engaged (Facebook, YouTube, Instagram, LinkedIn, Twitter); service standards for response times established",
+      "gender_considerations": "Substantial focus on gender equality and women's land rights; 30% of land ownership registered in women's names in rural areas (August 2021); target to increase percentage of women with names on legally recognized land records; activities include: targeting information on land tenure rights addressing cultural norms; ensuring women's participation in all registration steps; creating dedicated hindrance-free areas in ARCs for women; setting up mobile ARCs; training revenue officers on gender issues; hiring more women for project and revenue offices; developing strategies to mitigate social costs of women's inheritance claims; using multiple channels for women's awareness; gender-disaggregated indicators in Results Framework measuring percentage of land rights registered to women, newly registered/updated records jointly or individually filed by women, women customers' satisfaction with services, BoR staff receiving gender sensitization training; gender strategy to monitor public awareness campaigns addressing gender norms; comprehensive gender statistics on land tenure to be accessible to public; female-only DMMs established with target of one per Tehsil managed by female patwari; women in urban areas estimated at only 25% of properties in women's names compared to 47% in rural areas",
+      "vulnerable_groups": [
+        "Women (particularly regarding inheritance rights and land ownership)",
+        "Residents of katchi abadis (informal settlements) on state land",
+        "Urban and peri-urban poor living in hazardous locations",
+        "Minors and children",
+        "Elderly and disabled persons",
+        "Low-income households",
+        "Informal settlers",
+        "Vulnerable populations in climate-disaster prone areas"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project addresses conflict risks through: systematic registration using participatory community-based approach to manage disputes over land ownership; alternative dispute resolution mechanisms and formal appeal channels; public display of cadastral information for social verification; marking disputed claims in records; institutional capacity building for dispute resolution; training of personnel on social issues; Grievance Redress Mechanism for addressing grievances and complaints; Stakeholder Engagement Plan ensuring consultation of vulnerable groups; communications strategy to build confidence in land administration system; legal assistance and dispute resolution facilitation; social monitoring sensitive to land rights of women and vulnerable groups; project design recognizes land tenure as contentious issue in Punjab with widespread disputes over land including multiple claimants and disputed inheritance rights",
+      "fragility_context": "Punjab faces significant fragility factors: (1) Climate vulnerability - Pakistan is 39th most vulnerable country and 27th least ready for climate change; Punjab experiences record-breaking monsoon rains, severe droughts, devastating floods, earthquakes, landslides; deforestation rate second highest in Asia; poor in rural areas more exposed to climatic shocks; urban and peri-urban poor live in hazardous locations; (2) Economic vulnerability - COVID-19 pandemic projected to increase unemployment by 5-8 million in Punjab, pushing many households below poverty line; income-generating activities hampered; (3) Tenure insecurity - dispersed and duplicative land records negatively impact economic recovery; poor and vulnerable including women face unprotected rights; widespread land disputes; (4) Housing crisis - urban housing gap estimated at 2.3 million units in 2017, expected to reach 11.3 million by 2047; (5) Informal settlements - 5,379 katchi abadis identified with 4,354 notified; residents face tenure insecurity, poor housing, infrastructure, and living conditions; highly exposed to climate hazards; (6) Institutional weakness - land administration system unable to keep pace with population growth and urbanization; fragmented overlapping incomplete land records; lack of tenure security increases financial risk for infrastructure and housing investments",
+      "security_considerations": "Project includes security considerations for: (1) Surveyor safety - multi-stakeholder consultations identified safety of surveyors as concern during land registration; (2) Data security - compliance with Digital Identity and Data Protection/Privacy Guidelines; information security and data privacy protection requirements to prevent data exfiltration; compliance with ISO/IEC 27000 standards; cybersecurity expertise from PITB; (3) ICT infrastructure resilience - redundancy systems and dynamic nodes for disaster conditions; climate-resilient ICT infrastructure; interlinking early warning systems with PDMA for flood, storm, heat warnings; backup data centers to prevent service disruption from extreme climate events; (4) Occupational Health and Safety (OHS) - OHS risks from ARC expansion and office renovation works including air and noise emissions; survey work in physically challenging conditions; OHS requirements of government and ESS2 requirements; COVID-19 standard operating procedures; (5) Gender-based violence - substantial risk of GBV and SEA/SH within families and communities when women claim inheritance rights; SEA/SH Risk Assessment and Action Plan required; Accountability and Response Framework; assessment of service provider capabilities for survivor-centered services",
+      "displacement_or_refugees": "Yes - Potential for involuntary resettlement and displacement: (1) Informal settlers on public/state-owned lands may be removed during project lifetime or downstream; (2) Resettlement Policy Framework (RPF) prepared in accordance with ESS5 to address risks related to land acquisition, restrictions on land use, and involuntary resettlement; (3) Gaps identified between Land Acquisition Act 1894 and ESS5 in areas of screening/scoping, consultation and participation of affected persons, grievance redress, due process for removal of informal settlers, additional support to vulnerable households, livelihood restoration measures; (4) Informal settlers will only be removed in manner consistent with due process principles of ESS5; (5) Detailed social, legal, and institutional assessment to be conducted during Year 1 pilot to investigate involuntary resettlement risks and recommend management measures; (6) All project activities involving civil works or land registration screened using 'Involuntary Resettlement Screening Checklist for Civil Works & Informal Occupants'; (7) Resettlement Plans may be prepared to identify eligible affected persons including informal occupants and propose compensation in accordance with ESS5; (8) Monitoring of resettlement risks required up to 15 months after project closure; (9) Project will support first land registration in notified katchi abadis to provide secure rights for dwellers; (10) Residents of katchi abadis identified as vulnerable group requiring targeted engagement and support"
+    }
+  }
+}

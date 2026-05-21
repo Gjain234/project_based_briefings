@@ -1,0 +1,133 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P179003",
+    "guid": 99053124073596939,
+    "node_id": 34332144,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-ea36be2f-f07a-4f7a-b79d-ba8add49f4fb.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 151023
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Sindh Livestock and Aquaculture Sectors Transformation Project (LIVAQUA)",
+      "project_development_objective": "To promote climate-smart and competitive small and medium producers in the livestock and aquaculture sectors in Sindh",
+      "total_financing": "US$147 million (IDA Credit: US$135 million, Government of Sindh: US$2 million, Producer Groups: US$10 million, Commercial Financing: US$10 million)",
+      "implementation_period": "6 years (June 2024 - December 2029)",
+      "beneficiaries": "Over 940,000 farm families (930,000 livestock households and 10,000 aquaculture households); approximately 19,000 growth-oriented SMPs organized in 650 Producer Groups; government institutions; private sector companies; processors and off-takers"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Sindh Province",
+        "All districts in Sindh (phased approach)",
+        "Priority districts: those benefiting from Sindh Agriculture Growth Project (SAGP) and Sindh Water and Agriculture Transformation Project (SWAT)"
+      ],
+      "coverage_type": "provincial with phased district-level implementation",
+      "fragile_or_conflict_affected_areas": "partial - heightened security challenges noted in northern part of Sindh requiring security risk monitoring and management measures"
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Strengthening the Enabling Environment for Sectoral Growth",
+        "description": "Support development of inclusive, climate-resilient, and sustainable livestock and aquaculture sectors through: (1.1) improving sector policy and strategic frameworks, evidence-based decision making, formulation of policies, strategies, contingency plans, and sectoral dashboards; (1.2) strengthening delivery of essential knowledge, inputs, and services including disease control, diagnostic laboratory services, food safety services, breeding and genetic improvement, and research and development of green technologies",
+        "financing": "US$77 million"
+      },
+      {
+        "component_name": "Component 2: Promotion of Climate-Smart Production, Value Addition, and Inclusive Access to Markets",
+        "description": "Support growth-oriented SMPs to establish/upgrade market linkages with off-takers through: (2.1) capacity building and development of horizontal and vertical alliances (Producer Groups and Productive Alliances); (2.2) improvement of market integration through matching grants for investments in quality inputs, value addition equipment, infrastructure, and specialized technical assistance",
+        "financing": "US$48 million"
+      },
+      {
+        "component_name": "Component 3: Project Management, Monitoring, and Learning",
+        "description": "Support overall management, implementation, supervision of Project interventions, capacity building, monitoring, evaluation, communication, dissemination, and continuous learning including baseline, mid-term, and end-of-project impact assessments",
+        "financing": "US$10 million"
+      },
+      {
+        "component_name": "Component 4: Contingent Emergency Response",
+        "description": "Allow for rapid reallocation of Project proceeds for provision of immediate response to an Eligible Crisis or Emergency as needed",
+        "financing": "US$0 million (contingent)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Livestock and Fisheries Department (L&FD) of the Government of Sindh",
+      "coordination_mechanisms": "Project Steering Committee (PSC) chaired by Chairman of Planning and Development Board, including representatives from multiple government departments, private sector, local authorities, producer organizations, and NGOs; Project Technical Committee (PTC) chaired by Project Coordinator providing technical oversight; Project Coordination Unit (PCU) in Karachi; Project Implementation Unit (PIU) in Hyderabad with district-level Field Managers; District Coordination Committees (DCCs) in each district",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers; national competitive bidding for works (threshold US$20 million); international competitive bidding for some goods and consultancies; tripartite agreements for beneficiary Producer Groups under Component 2; Project Procurement Strategy for Development (PPSD) developed; Procurement Risk Rating: Moderate",
+      "monitoring_and_evaluation": "Geo-Enabling Initiative for Monitoring and Supervision/KoboToolbox and web-based Management Information System (MIS); Geographical Information System (GIS) for infrastructure mapping; baseline survey at start-up; annual outcome surveys; mid-term and endline surveys; impact evaluation; quarterly reports to Government and World Bank; annual reports by September 30; mid-term review in 2027; Independent M&E Consultants hired; data protection protocols for personal data collection"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Project requires coordination among different government and non-government entities; risk of political instability affecting implementation",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Project Steering Committee established under leadership of Planning and Development Board with all key stakeholders; demonstrated strong commitment from Government of Sindh sustained across election cycles"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Pakistan's economy faces elevated debt and external financing needs; risks from international price/interest rate shocks, natural disasters, reversal of reforms, lack of progress in structural reforms",
+        "risk_rating": "high",
+        "mitigation_measures": "Ongoing World Bank and partners' support to structural policy reforms; IPF financing instrument; Project Steering Committee monitoring to ensure resources remain available; coordination with IMF programs"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "Scale of Project spanning most of Sindh with 1 million farm families may overwhelm technical and management capacity; L&FD lacks experience in aquaculture and Productive Alliance approach; risk of inadequate operations and maintenance of public infrastructure; security challenges in northern Sindh",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Strengthening institutional capacities with focus on aquaculture, agribusiness, and marketing; developing robust operations and maintenance plans; private sector involvement in service provision; security risk monitoring and management practices for northern Sindh implementation"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Need to strengthen internal controls; risks related to untimely funds flow, inadequate asset management, protection from fraud and corruption, timely financial reporting; capacity issues at government and department levels",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Detailed action plan on procurement and FM; application of government accounting rules and procedures; internal audit firm conducting periodic audits; annual audit by Office of Auditor General of Pakistan; dedicated FM staff; expected to reduce to Moderate if mitigation measures function properly"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Environmental risks: soil erosion, reduced fertile land, agrochemical use, livestock waste, invasive species, improper handling of pesticides/medicines/vaccines. Social risks: child labor, exclusion of vulnerable groups, elite capture, gender gaps",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Environmental and Social Management Framework (ESMF); Environmental and Social Commitment Plan (ESCP); Labor Management Procedures (LMP); Community Health and Safety measures; Stakeholder Engagement Plan (SEP); dedicated Senior Safeguards Specialist and Gender Specialist at PIU; Environment and Social Specialists at district level; specific window for female-headed Producer Groups; measures to prevent elite capture"
+      },
+      {
+        "risk_category": "Climate and Disaster",
+        "risk_description": "Substantial risk of climate change impacts including floods (recent 2022 floods killed 1.2 million livestock and damaged 3.8 million hectares of crops); annual cost of natural resource losses equals 4-6% of provincial GDP",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Introduction of climate-smart practices in livestock and aquaculture; improved sectoral data collection; animal health interventions; contingency plans for climate-related emergencies; promotion of climate-resilient breeds and production technologies; rangeland management improvements to increase resilience"
+      },
+      {
+        "risk_category": "Procurement",
+        "risk_description": "Risks related to timely staffing of PIU, adequate planning and market approach, contract management",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Detailed procurement risk assessment; Procurement Risk Assessment and Management System; World Bank annual procurement post-review; prior review as required; regular implementation support missions"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Substantial",
+      "triggered_safeguard_policies": [
+        "ESS 1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS 2: Labor and Working Conditions",
+        "ESS 3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS 4: Community Health and Safety",
+        "ESS 5: Land Acquisition, Restrictions on Land Use and Involuntary Resettlement",
+        "ESS 6: Biodiversity Conservation and Sustainable Management of Living Natural Resources",
+        "ESS 8: Cultural Heritage",
+        "OP 7.50: Projects on International Waterways"
+      ],
+      "grievance_redress_mechanism": "yes - Project-level grievance mechanism established; communities and individuals can submit complaints to World Bank's Grievance Redress Service (GRS) or Accountability Mechanism (AM); grievance indicator tracked in results framework with target of 90% addressed within stipulated time by project completion",
+      "gender_considerations": "Approximately 31% of women in Sindh depend on livestock for livelihood; women face barriers including social norms, lack of access to information and credit, low literacy, male-dominated cooperatives, household duties, restricted mobility. Project includes: dedicated application window for female-headed Producer Groups with preferential conditions (10% vs 25% matching requirement, no formal buyer agreement required); support for women LSPs; tailored technical and business support; women-specific leadership and networking support; target of 33% female direct beneficiaries adopting CSPs; 10% female SMPs reaching productivity increases; 70 female-headed Producer Group business plans by project completion",
+      "vulnerable_groups": [
+        "Small and medium-sized producers (SMPs)",
+        "Women farmers and female-headed households",
+        "Subsistence farmers",
+        "Rural poor (28.1% poverty rate vs 10.9% urban)",
+        "Youth",
+        "Historically marginalized groups",
+        "Unbanked farmers",
+        "Children (protection from child labor in livestock/aquaculture management)"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project design incorporates conflict sensitivity through: (1) focus on inclusive development benefiting vulnerable groups and reducing inequalities; (2) emphasis on market-driven approaches and private sector engagement to reduce dependence on government; (3) community participation and beneficiary feedback mechanisms; (4) grievance redress mechanisms; (5) security risk monitoring and management practices for northern Sindh where heightened security challenges exist; (6) support for resilience-building through improved livelihoods and food security",
+      "fragility_context": "Pakistan faces fragility factors including: macroeconomic instability with high debt and external financing needs; recent catastrophic 2022 floods impacting 33 million people with 1.2 million livestock killed; poverty rate of 40.1% (7 million more Pakistanis below poverty line than in 2018); high stunting rates (40% nationally, 45.5% in Sindh, exceeding 60% in poorest districts); climate vulnerability ranking Pakistan in top 10 globally; security challenges in northern Sindh; institutional capacity constraints. Project addresses fragility through climate-smart agriculture, improved food and nutrition security, livelihood diversification, and institutional strengthening",
+      "security_considerations": "Heightened security challenges in northern part of Sindh noted as risk; Project will implement security risk monitoring practices and other security risk management measures for implementation, monitoring, and supervision of Project activities in that area; no specific security incidents mentioned but acknowledged as constraint on implementation",
+      "displacement_or_refugees": "no - Project explicitly states no private land acquisition anticipated; all investments on public lands; voluntary land donation available as option for farmers with good practice principles followed; no involuntary land acquisition or resettlement expected. However, context notes that 2022 floods resulted in many permanently displaced persons (33 million impacted)"
+    }
+  }
+}

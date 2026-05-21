@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P179684",
+    "guid": 99090924154096338,
+    "node_id": 34389177,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-85088c47-4863-4599-b4b5-096fa6542e7d.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Sustainable Power and Irrigation for Nigeria Project (SPIN)",
+      "project_development_objective": "To strengthen dam safety and improve management of water resources for hydropower and irrigation in selected areas of Nigeria",
+      "total_financing": "US$500 million",
+      "implementation_period": "2025-2029 (5 years)",
+      "beneficiaries": "Approximately 950,000 direct beneficiaries including farmers, households, livestock breeders, and institutional staff; indirect beneficiaries include downstream communities protected by improved dam safety, agricultural and pastoral value chain participants"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "North-Central (Benue, Kogi, Kwara, Nasarawa, Plateau)",
+        "North-East (Borno, Taraba, Yobe)",
+        "North-West (Jigawa, Katsina, Kebbi, Sokoto, Zamfara)",
+        "South-East (Abia, Anambra, Enugu, Imo, Niger)",
+        "South-West (Lagos, Osun, Ekiti)",
+        "South-South (Akwa Ibom, Cross River, Delta, Edo)"
+      ],
+      "coverage_type": "National with focus on 31 states that expressed interest; 16 potential irrigation schemes identified across multiple river basins",
+      "fragile_or_conflict_affected_areas": "Yes - partial. Nigeria is considered fragile and conflict-affected. North-East faces insurgency and terrorism (Boko Haram, ISWAP) with over 2 million displaced. North-Central and North-West experience banditry, identity clashes, communal conflicts, and herder-farmer disputes. Security concerns in northern Nigeria affect foreign investment and project implementation"
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Institutional Strengthening and Capacity Building for Water Resources Management",
+        "description": "Supports policy, institutions, and regulation at federal, state, and river basin levels. Includes: (1.1.1) strengthening dam safety institutional structure and developing national dam safety guidelines; (1.1.2) capacity building for federal institutions on irrigation management; (1.1.3) hydropower development support including Hydropower Master Plan preparation; (1.2) state-level WUA legislation support; (1.3) river basin level WRM improvements",
+        "financing": "US$30 million"
+      },
+      {
+        "component_name": "Component 2: Irrigation Modernization",
+        "description": "Rehabilitation and revitalization of 40,000 ha of irrigated command area. Includes: (2.1) mobilization and development of Water User Associations (WUAs); (2.2) irrigation and drainage infrastructure rehabilitation and upgrading; (2.3) irrigation management modernization with ICT systems and water accounting",
+        "financing": "US$350 million"
+      },
+      {
+        "component_name": "Component 3: Improvements in Dam Operations and Enhancing Dam Safety",
+        "description": "Strengthens dam safety management system and rehabilitates prioritized dams. Includes: dam safety portfolio risk assessment, Emergency Action Plans, O&M manuals, rehabilitation works, sediment management plans, and nature-based solutions. Will not construct new dams, only rehabilitate existing ones",
+        "financing": "US$100 million"
+      },
+      {
+        "component_name": "Component 4: Project Management",
+        "description": "Establishes Federal Project Management Unit (FPMU) and State Project Implementation Units (SPIUs), Technical Units, monitoring and evaluation systems, and project coordination structures",
+        "financing": "US$20 million"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Federal Ministry of Water Resources and Sanitation (FMWRS) as lead implementing agency, in collaboration with Federal Ministry of Power (FMP) and participating state governments. River Basin Development Authorities (RBDAs) implement at basin level",
+      "coordination_mechanisms": "Project Steering Committee (PSC) chaired by Minister of FMWRS and co-chaired by Minister of FMP; Federal Technical Committee (FTC) for technical guidance; State Technical Committees at state level; Federal Project Management Unit (FPMU) for day-to-day coordination; Three Technical Units (TUs) for irrigation, dam safety, and hydropower",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers (September 2023). Federal-level procurements conducted by FPMU; state-level procurements by SPIUs. Procurement risk rated Substantial due to unknown participating states, capacity constraints, and fragility/conflict situation. Mitigation includes skilled procurement staff, advance procurement, hands-on WB support, STEP portal use, fraud awareness training, and experienced supervision consulting firms",
+      "monitoring_and_evaluation": "FPMU/SPIU responsible for monitoring all activities and sending progress reports to World Bank. M&E system tracks PDO indicators (people protected from floods/droughts, WUA functionality, irrigation area, hydropower master plan), intermediate indicators, and performance-based conditions. Midterm review within 2 years of implementation. Quarterly environmental and social reports; monthly contractor reports"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "High levels of state autonomy in Nigerian federalism; recent Supreme Court decision on local government autonomy; security concerns in northern Nigeria (banditry, kidnapping) affecting foreign investment; water access is a political issue with broad stakeholder engagement needed",
+        "risk_rating": "high",
+        "mitigation_measures": "Extensive stakeholder engagement at all levels; ongoing engagement throughout project preparation and implementation; alignment with hydrological boundaries rather than political ones; strong political support for irrigation and water security"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Uncertain growth outlook dependent on external factors and government policy response; fiscal deficit projected above 3% of GDP through 2027; limited fiscal space for public investments; vulnerability to oil price shocks and exchange rate fluctuations; high inflation and foreign exchange shortages",
+        "risk_rating": "high",
+        "mitigation_measures": "World Bank monitoring of macro-economic outlook; support through other interventions (Reforms for Economic Stabilization DPF, Accelerating Revenue Mobilization Program); quarterly budget review and updates to address cost variations from FX rate premiums"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Need for stronger alignment between parallel policies in agriculture, bulk water supply, hydropower generation, and irrigation; effective coordination between FMP and FMWRS crucial but challenging; National Water Policy and Renewable Energy Policy need integration",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Joint HMP preparation by FMWRS and FMP; PSC with ministerial representation from multiple sectors; Federal Technical Committee for technical coordination; performance-based conditions incentivizing policy adoption"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Potential misuse of funds, fraud, political interference, high personnel turnover, delayed financial reporting, noncompliance with fiduciary requirements; FM risk for SPIN assessed as Substantial; state-level agencies using manual accounting systems",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Build on existing FM arrangements from TRIMING Project; robust action plan and implementation support; comprehensive Financial Procedures Manual; computerized accounting systems; trained staff with segregation of duties; independent internal and external audits; quarterly internal audit reports; biannual financial reporting; FM implementation support on risk-based approach"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "High risk from dam failure, construction-related impacts (dust, waste, wastewater), siltation affecting dam safety, flooding, occupational health and safety issues, community health and safety, land acquisition/displacement, temporary livelihood loss, inadequate compensation, grievances, poor stakeholder engagement, security risks in fragile/conflict-affected areas, water pollution, air quality impacts, inadequate dam O&M, emergency preparedness gaps",
+        "risk_rating": "high",
+        "mitigation_measures": "Comprehensive Environmental and Social Management Framework (ESMF) prepared and disclosed; Resettlement Policy Framework (RPF) for guidance on land acquisition; Labor Management Procedures (LMP); Pest Management Plan (PMP); Stakeholder Engagement Plan (SEP); Environmental and Social Commitment Plan (ESCP); site-specific ESIAs/ESMPs/RAPs for identified subprojects; Dam Safety Review Panel assessments; Emergency Action Plans with safety protocols for women and persons with disabilities; qualified environmental/OHS, social, and gender/GBV officers in SPIUs/RBDAs; project-specific Grievance Redress Mechanism with GBV-sensitive procedures; security focal points appointed by state security advisers; quarterly ESF reporting; capacity building on ESF implementation"
+      },
+      {
+        "risk_category": "Technical Design",
+        "risk_description": "Specific irrigation schemes and dams not yet selected at appraisal; design reviews and detailed assessments needed; construction supervision and quality assurance requirements; dam break analysis and risk assessment needed for all selected dams",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Framework approach with ESMF providing screening procedures; state selection based on demonstrated commitment and technical readiness criteria; Construction Supervision and Quality Assurance Plans before tender; dam safety guidelines and international standards compliance; Dam Safety Portfolio Risk Management Analysis; maturity matrices for dam safety assessment; World Bank technical support and supervision"
+      },
+      {
+        "risk_category": "Institutional Capacity",
+        "risk_description": "Varying capacity of state-level PIUs for implementation; RBDAs have inadequate budget and human resources for dam MOM; institutional capacity gaps in environmental and social management at state levels; need for organizational development and human resource capacity support",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Capacity assessment and risk of SPIUs conducted when states selected; fit-for-purpose procurement approaches; extensive training on WB procedures and ESF requirements; hands-on expanded implementation support (HEIS) for low-capacity states; organizational development activities; human resource provisions for technical support; internalization of capacities within FMWRS and FMP; Field-Level Leadership program for women and staff development"
+      },
+      {
+        "risk_category": "Stakeholder Engagement",
+        "risk_description": "Need for effective engagement with multiple stakeholders including farmers, WUAs, RBDAs, state governments, civil society; potential conflicts over water allocation and land tenure; downstream community concerns about dam safety",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Comprehensive Stakeholder Engagement Plan with procedures for consultations; citizen engagement mechanisms including beneficiary consultations and satisfaction surveys; focus group discussions and citizen report cards; GRM with accessible complaint processes and appeal procedures; communication campaigns on project activities, emergency plans, and GRM channels; targeted outreach to vulnerable groups; tripartite MOUs among WUAs, state governments, and RBDAs"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "High",
+      "triggered_safeguard_policies": [
+        "ESS 1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS 2: Labor and Working Conditions",
+        "ESS 3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS 4: Community Health and Safety",
+        "ESS 5: Land Acquisition, Restrictions on Land Use and Involuntary Resettlement",
+        "ESS 6: Biodiversity Conservation and Sustainable Management of Living Natural Resources",
+        "ESS 8: Cultural Heritage",
+        "ESS 10: Stakeholder Engagement and Information Disclosure"
+      ],
+      "grievance_redress_mechanism": "Yes - Project-specific GRM established with committees at FPMU, SPIU, RBDA, and dam scheme levels. GRM Manual to be developed with alternative channels for grievance submission. Includes GBV-sensitive procedures for allegations of Sexual Exploitation and Abuse/Sexual Harassment. Accessible processes from investigation to resolution with appeal provisions. Communication campaign to raise awareness on GRM use. World Bank Grievance Redress Service (GRS) and Accountability Mechanism (AM) also available",
+      "gender_considerations": "Project aligned with World Bank Gender Strategy. Women's representation and leadership in water institutions prioritized. Field-Level Leadership program targeted at women to enhance technical and leadership skills for decision-making roles. Active promotion of women's leadership in WUAs through inclusive operational procedures, gender-equitable promotion policies, women quotas, and flexible work hours. Target of 20% women managers in WUA governing bodies by project closing. Women's participation in WUA membership and decision-making emphasized. Gender/GBV officers deployed in SPIUs from State Ministry of Women Affairs. Emergency Action Plans include safety protocols specific to women and persons with disabilities",
+      "vulnerable_groups": [
+        "Small farmers and sharecroppers",
+        "Women farmers and women-headed households",
+        "Youth",
+        "Persons with disabilities",
+        "Downstream communities affected by dam operations",
+        "Displaced persons and project-affected persons",
+        "Landless persons",
+        "Low-income populations"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project explicitly designed with conflict sensitivity. Nigeria is fragile and conflict-affected with most regions experiencing violence. North-East faces insurgency/terrorism (Boko Haram, ISWAP) with 2+ million displaced. North-Central and North-West experience banditry, identity clashes, communal conflicts, and herder-farmer disputes over land and cattle. Project addresses root causes of conflict through: (1) improved water security reducing competition and conflict over water resources; (2) enhanced livelihood opportunities through irrigation reducing economic grievances; (3) inclusive WUA governance promoting social cohesion; (4) transparent water allocation mechanisms reducing disputes; (5) security focal points appointed in participating states; (6) GRM with accessible complaint resolution; (7) stakeholder engagement emphasizing conflict-affected communities; (8) attention to land tenure issues and potential conflicts; (9) coordination with state security advisers",
+      "fragility_context": "Nigeria is among the least developed nations globally with over 40% population living in poverty. Key fragility factors: (1) High dependence on oil with insufficient economic diversification; (2) Poor governance and weak institutions with low trust in state institutions; (3) Inadequate human capital investments; (4) Insecurity in multiple regions affecting economic development; (5) Climate vulnerability - ranks among top 10 countries most susceptible to climate change effects; (6) Water security challenges affecting livelihoods and economic development; (7) Food insecurity with 26.5 million projected food insecure in 2024; (8) Weak institutional capacity for water resources management; (9) Inadequate dam safety management and maintenance; (10) Limited fiscal space for public investments. Project addresses fragility through: institutional strengthening, capacity building, improved water security, enhanced food production, climate resilience, and livelihood improvements",
+      "security_considerations": "Security risks rated high. Project implemented in fragile, conflict-affected, and volatile settings. Specific security concerns: (1) Banditry and kidnapping in northern Nigeria affecting foreign investment and project implementation; (2) Insurgency and terrorism in North-East (Boko Haram, ISWAP); (3) Herder-farmer conflicts over land and water access; (4) Identity clashes and communal conflicts; (5) Potential for conflict over water allocation and irrigation access; (6) Difficulty in monitoring large number of civil works across different geographic locations in insecure areas; (7) Shortage of service providers/contractors/suppliers in some states due to fragility and violence. Mitigation measures: (1) Security focal points appointed by state security advisers in participating states (within 3 months of effectiveness); (2) Security Management Plans to be prepared; (3) Hands-on expanded implementation support by World Bank; (4) Fit-for-purpose procurement approaches; (5) Experienced supervision consulting firms for civil works; (6) Early market sounding to encourage bidder participation; (7) Ongoing security monitoring and risk assessment; (8) Coordination with state security structures",
+      "displacement_or_refugees": "Yes - potential for displacement and livelihood impacts. Project activities may result in: (1) Minor land acquisition and temporary loss of livelihood during rehabilitation of existing irrigation schemes; (2) Minor land take for civil works (campsites, construction yards, working areas) to be redistributed upon completion; (3) Physical and economic displacement from irrigation expansion; (4) Temporary disruption of income/livelihood sources during rehabilitation. Mitigation: (1) Resettlement Policy Framework (RPF) prepared and disclosed providing principles and guidance for RAP preparation; (2) Site-specific Resettlement Action Plans (RAPs) or Livelihood Restoration Plans to be prepared proportionate to risks/impacts when subproject locations identified; (3) Project activities will not commence until RAPs finalized and approved by World Bank; (4) Prompt compensation and resettlement assistance payments to project-affected persons; (5) For Model 2 states, compensation costs covered by state counterpart funds; for Model 1, FPMU covers costs similar to TRIMING; (6) Detailed stakeholder engagement on land tenure/ownership structures at each scheme; (7) Appropriate compensation per RAPs; (8) Community-level GRM accessible to all stakeholders; (9) Monitoring of RAP implementation; (10) Attention to tenure insecurity and land conflict risks; (11) Special attention to vulnerable groups (small farmers, sharecroppers, women-headed households, landless persons)"
+    }
+  }
+}

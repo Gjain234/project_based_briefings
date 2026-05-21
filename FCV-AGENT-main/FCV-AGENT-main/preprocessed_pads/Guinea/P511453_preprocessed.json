@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P511453",
+    "guid": 99080425213535308,
+    "node_id": 40036259,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-e7b1cb57-9078-490e-8988-30bc9fe608c0.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Guinea Electricity Access Scale Up Project-Phase 2 (GNEAP-2)",
+      "project_development_objective": "To increase grid and non-grid access to electricity services in selected areas and improve the operational performance of the power utility",
+      "total_financing": "US$271.8 million (US$132.3 million IDA, US$100.0 million EIB, US$11.7 million PCM, US$27.8 million financing gap)",
+      "implementation_period": "June 2025 - June 2030 (5 years)",
+      "beneficiaries": "Approximately 1.53 million people (218,585 households and 10,694 SMEs/businesses), including 960,022 people gaining new access to electricity"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Kindia",
+        "Labé",
+        "Mamou",
+        "Pita",
+        "Dalaba",
+        "Conakry (peri-urban areas)",
+        "26 rural localities for mini-grids (Faranah, Boke, Kissidougou, N'zerekore, Kankan regions)"
+      ],
+      "coverage_type": "national with focus on urban, peri-urban, and rural areas",
+      "fragile_or_conflict_affected_areas": "partial - Guinea experienced a military coup in September 2021 and is under transitional administration. Political risk is rated High. However, the country is not currently in active conflict, though political transition creates governance uncertainty."
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Reinforcement and expansion of grid access and improvement of commercial performance of EDG",
+        "description": "Grid extension and densification in Kindia, Labé, Mamou, Pita, and Dalaba; construction of Kindia-Donkea and Mamou-Labé MV lines; rural electrification along Mamou-Labé corridor; operational improvements and digitalization of EDG including integrated management system, smart meters, and capacity building. Targets 182,544 household connections.",
+        "financing": "US$209.0 million total (US$81.2 million IDA, US$100.0 million EIB, US$27.8 million financing gap)"
+      },
+      {
+        "component_name": "Component 2: Off-grid electrification with privately operated hybrid mini-grid systems",
+        "description": "Electrification of 26 rural localities through privately-operated hybrid mini-grids (80% renewable - solar with battery storage or mini-hydro, 20% diesel backup). Targets 36,041 household connections and 4,258 productive use enterprises. Includes viability gap subsidies (60-80%) to ensure affordability.",
+        "financing": "US$30.7 million total (US$19.0 million IDA, US$11.7 million PCM)"
+      },
+      {
+        "component_name": "Component 3: Support to reform actions and financial sustainability of the energy sector",
+        "description": "Technical assistance for electricity sector modeling and tariff reform; technical and institutional support for performance-based utility management; generalization of pre-paid meters in non-strategic public institutions (target 60,000 meters). Includes four Performance-Based Conditions (PBCs) totaling US$60.0 million.",
+        "financing": "US$10.0 million IDA"
+      },
+      {
+        "component_name": "Component 4: Implementation support, technical assistance, and capacity building",
+        "description": "Project implementation support; owner's engineer services; resettlement action plan compensation and payments; gender policy development and implementation; capacity building and technical studies including E&S framework strengthening.",
+        "financing": "US$22.1 million IDA"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Energy, Hydraulics and Hydrocarbons (MEHH), Electricité de Guinée (EDG), and Agence Guinéenne d'Electrification Rurale (AGER)",
+      "coordination_mechanisms": "Project Steering Committee chaired by MEHH secretary general, including representatives from AGER, EDG, and relevant sector ministries. Existing PIU from GNEAP-1 will be maintained and strengthened with staff from AGER. Project Implementation Unit (PIU) accountable to Steering Committee and EDG management.",
+      "procurement_approach": "World Bank Standard Procurement Documents; Systematic Tracking of Exchanges in Procurement (STEP); competitive selection of private operators for mini-grids; prior review for solar panel procurement to address forced labor risks; Project Procurement Strategy for Development (PPSD) prepared",
+      "monitoring_and_evaluation": "Independent Verification Agent (IVA) to verify PBC achievement; semi-annual progress reports; project midterm review at 2.5 years; M&E specialist to coordinate activities; baseline, mid-term, and end-line surveys; monitoring of KPIs through EDG and AGER reports; national grievance redress mechanism integration"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Guinea under transitional administration since September 2021 military coup. Constitutional referendum scheduled for September 2025, followed by elections in December 2025. Political transition could create uncertainty and delays in decision-making. Previous governance disruptions affected EDG management and sector coordination.",
+        "risk_rating": "high",
+        "mitigation_measures": "Reinforced sector dialogue; strengthened institutional arrangements promoting operational autonomy; performance-based conditions linked to governance reforms; continued high-level policy dialogue; establishment of clearer accountability frameworks through performance contracts"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Ongoing political transition has disrupted energy sector governance. Weak institutional coordination, overlapping mandates, and limited accountability mechanisms within EDG and MEHH. Previous implementation challenges under GNEAP-1 included critical delays and governance shortcomings (e.g., loss of 100,000 meters in warehouse fire).",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Strengthened implementation arrangements; enhanced procurement support; targeted technical assistance for operational management capacity; adoption of performance contract with EDG; clearer accountability frameworks; HEIS support for contract management"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "Limited capacity of EDG, AGER, and E&S staff to manage project implementation at scale. Weak institutional coordination and overlapping mandates. Previous delays and governance shortcomings in GNEAP-1 implementation.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Recruitment of highly qualified environmental, social, and gender specialists within 90 days of effectiveness; capacity building programs; owner's engineer support for supervision; technical assistance for institutional strengthening; HEIS support; training on World Bank procedures"
+      },
+      {
+        "risk_category": "Fiduciary - Financial Management",
+        "risk_description": "Low PFM capabilities within PIU; existing accounting software configured for only one project; outdated manual procedures; issue of lapsed loan affecting disbursement arrangements.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Procurement and deployment of Tompro multi-project management software; update of FM procedures manual; recruitment of internal and external auditors; independent FM system based on GNEAP-1 arrangements; private auditors; updated FM procedures; annual work plan and budget approval by Steering Committee and World Bank; HEIS support"
+      },
+      {
+        "risk_category": "Fiduciary - Procurement",
+        "risk_description": "High volume of procurement with need for coordination between PIU, EDG, and AGER. Moderately Satisfactory performance under GNEAP-1 with recurring delays in procurement planning and contract management. Substantial overall procurement risk.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Continued staffing of experienced procurement specialists; targeted training on World Bank procedures; enhanced World Bank procurement team support during bidding and contract execution; Project Procurement Strategy for Development; regular procurement reviews; STEP monitoring; prior review of solar panel procurement to address forced labor risks"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Substantial E&S risks including: land acquisition and economic displacement; community health and safety during construction; disturbance and destruction of vegetation and wildlife habitat; generation of various waste types; weak capacity of implementing entities to manage E&S risks at scale; forced labor risks in solar supply chain; occupational health and safety risks; electromagnetic field impacts; noise and air pollution. Previous GNEAP-1 had Moderately Unsatisfactory/Unsatisfactory E&S rating due to RAP implementation delays and compensation challenges.",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Environmental and Social Commitment Plan (ESCP) and Stakeholder Engagement Plan (SEP) prepared and disclosed; Resettlement Policy Framework (RPF) and Labor Management Plan (LMP) to be completed within one month of effectiveness; site-specific RAPs during implementation; specific management plans (Air Emissions, Hazardous Waste, Biodiversity, OHS); recruitment of E&S specialists; capacity building on ESF; US$400,000 earmarked for E&S capacity building; forced labor screening and declarations required from suppliers; climate-resilient design specifications; integration into national GRM within three months; grievance redress mechanism with ANAFIC"
+      },
+      {
+        "risk_category": "Gender-Based Violence",
+        "risk_description": "Civil works will involve deployment of out-of-area workers in peri-urban and rural areas, creating potential risk of sexual exploitation and abuse (SEA) and sexual harassment (SH). Risk assessed as Moderate based on GNEAP-1 experience.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Gender policy development and implementation; codes of conduct addressing workplace harassment; mentorship and coaching programs; internship programs for women in STEM; gender-sensitive program implementation; monitoring of SEA/SH incidents through grievance mechanism"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Guinea's economy faces challenges including rising poverty rate (51.4% in 2023), low Human Capital Index, persistent institutional capacity gaps, and infrastructure constraints. However, growth has been steady at 5.3% average (2019-2023).",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Project design supports economic growth through energy access expansion; alignment with mining sector development (Simandou, Alteo); support for regional integration through WAPP; focus on cost recovery and financial sustainability of EDG"
+      },
+      {
+        "risk_category": "Technical Design of Project or Program",
+        "risk_description": "Project involves complex infrastructure works including MV/LV distribution lines, substations, and mini-grids in areas with varying accessibility and environmental conditions. However, technologies are well-known and proven in Guinea.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Feasibility studies and bidding documents already finalized for Component 1; detailed technical designs underway; owner's engineer support for supervision; technical specifications follow national standards; climate-resilient design with flood-resistant pylons and strong foundations; transaction advisors for mini-grid PPP structuring"
+      },
+      {
+        "risk_category": "Stakeholders",
+        "risk_description": "Need for effective stakeholder engagement, particularly for connection regularization and mini-grid deployment. Community acceptance of smart metering and tariff increases. Coordination among multiple sector entities.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Stakeholder Engagement Plan with dedicated strategies for vulnerable groups; public awareness campaigns on safe and legal electricity use; periodic satisfaction surveys and iterative consultations; grievance redress mechanism; community engagement on benefits of formal connections; citizen engagement monitoring indicators"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Substantial",
+      "triggered_safeguard_policies": [
+        "ESS 1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS 2: Labor and Working Conditions",
+        "ESS 3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS 4: Community Health and Safety",
+        "ESS 5: Land Acquisition, Restrictions on Land Use and Involuntary Resettlement",
+        "ESS 6: Biodiversity Conservation and Sustainable Management of Living Natural Resources",
+        "ESS 8: Cultural Heritage",
+        "ESS 10: Stakeholder Engagement and Information Disclosure"
+      ],
+      "grievance_redress_mechanism": "Yes - National Grievance Redress Mechanism (GRM) housed within ANAFIC (Agence Nationale de Financement des Collectivités) to be operational within three months of project effectiveness. Allows submission of complaints regarding resettlement, compensation, construction disturbances, connection eligibility, or mini-grid operations through ANAFIC, EDG, AGER field offices, or other designated channels. Project-level grievance mechanisms also established.",
+      "gender_considerations": "Gender Gap Assessment conducted. Project will support: (i) school-to-work programs for women in STEM through internship partnerships (target 10 women hired); (ii) promotion of women in technical roles at EDG (target increase from 7.5% to 12%); (iii) development and implementation of gender policy within EDG and AGER; (iv) mentorship and coaching programs; (v) codes of conduct addressing workplace harassment. Gender policy development allocated US$600,000. Target of 20 women trained within sector institutions. Women representation targets in results framework.",
+      "vulnerable_groups": [
+        "Low-income households (targeted for subsidized connections and lifeline tariffs)",
+        "Informal/illegal electricity users (to be regularized with pre-paid meters)",
+        "Rural populations (targeted for mini-grid electrification)",
+        "Women (underrepresented in energy sector, targeted for employment and leadership)",
+        "Youth (targeted for internship programs and employment)",
+        "Communities affected by land acquisition and resettlement",
+        "Workers in construction and mini-grid operations (occupational health and safety)"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Guinea is not in active conflict but faces political fragility following September 2021 military coup and ongoing transitional administration. Political risk rated High. Project addresses conflict sensitivity through: (i) focus on inclusive development and poverty reduction through energy access; (ii) support for regional integration (WAPP) which promotes cross-border cooperation; (iii) strengthening of institutional governance and accountability; (iv) inclusive stakeholder engagement and grievance mechanisms; (v) gender inclusion and women's economic empowerment; (vi) support for vulnerable populations. Project design emphasizes institutional sustainability and governance reforms to reduce political economy risks.",
+      "fragility_context": "Guinea classified as fragile state with: (i) weak institutional capacity and governance challenges; (ii) political transition and uncertainty following 2021 coup; (iii) rising poverty (51.4% in 2023); (iv) low Human Capital Index (37%); (v) persistent gender disparities; (vi) infrastructure constraints; (vii) limited fiscal space; (viii) weak utility financial sustainability; (ix) high reliance on subsidies (US$317 million in 2024, 1.2% of GDP); (x) arrears to IPPs exceeding US$1.2 billion. Project addresses fragility through: energy access expansion supporting inclusive growth; sector reforms improving governance and financial sustainability; capacity building for institutions; performance-based conditions incentivizing reforms; technical assistance for planning and management; support for private sector participation reducing fiscal burden.",
+      "security_considerations": "No direct security threats mentioned in PAD. However, political transition creates governance uncertainty affecting sector decision-making. Project mitigates through: strengthened institutional arrangements; clearer accountability frameworks; performance-based incentives for reforms; high-level policy dialogue; autonomous operational arrangements for EDG. Infrastructure security not explicitly addressed but implied through technical design standards and supervision arrangements.",
+      "displacement_or_refugees": "Yes - Project will lead to economic displacement and limited land acquisition. Efforts will be made to route infrastructure to minimize physical displacement. Land within distribution line rights of way (ROW) will be subject to restrictions on certain types of agriculture and activities. Whenever feasible, distribution lines and equipment will be constructed within public land. Resettlement Action Plan (RAP) compensation and payments budgeted at US$5.5 million under Component 4. Resettlement Policy Framework (RPF) to be prepared within one month of effectiveness. Site-specific RAPs to be prepared during implementation once investment sites confirmed. Compensation to be financed from IDA, mitigating risk of delayed payments. No refugee populations mentioned in PAD."
+    }
+  }
+}

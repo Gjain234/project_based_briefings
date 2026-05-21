@@ -1,0 +1,145 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P169161",
+    "guid": 485591584928855267,
+    "node_id": 31856766,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b0876e0814&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0"
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Honduras Early Childhood Education Improvement Project",
+      "project_development_objective": "To improve (a) SE's institutional capacity for preschool management; (b) teaching practices of preschool teachers and Educators; and (c) physical learning environments in preschools serving children in Targeted Areas",
+      "total_financing": "US$39.5 million (IDA Credit: US$30 million; GPE Grant: US$9.5 million)",
+      "implementation_period": "2020-2025 (Expected Closing Date: July 31, 2025)",
+      "beneficiaries": "Approximately 178,400 preschool students (80% of total preschool students); 7,900 teachers in CEPB and Educators in CCEPREB (65% of total); SE staff including SDGEPB, UPEG, DGDP, and DIGECEBI"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Gracias a Dios",
+        "Olancho",
+        "Yoro",
+        "Copán",
+        "Lempira",
+        "El Paraíso"
+      ],
+      "coverage_type": "National with targeted focus on 6 most disadvantaged departments and 40 most disadvantaged municipalities",
+      "fragile_or_conflict_affected_areas": "Partial - Honduras experiences high rates of violence and crime affecting children's development; project includes violence prevention measures and addresses security considerations in school settings"
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Strengthening SE's Institutional Capacity for Preschool Management",
+        "description": "Strengthen SE's enabling conditions for sustainable preschool management including design/implementation of Preschool Education Management Model (PEM), community participation through Municipal Councils (COMDEs), human resources capacity building, and planning/monitoring systems improvement",
+        "financing": "US$5.75 million (IDA: US$3.785 million; GPE: US$1.965 million)"
+      },
+      {
+        "component_name": "Component 2: Updating Curricular Design and Improving Teaching Practices",
+        "description": "Update preschool curriculum for all service modalities, provide learning materials, implement in-service teacher training program (Diplomado), provide pedagogical coaching, and establish measurement tools for child development and learning environment quality",
+        "financing": "US$17.15 million (IDA: US$9.615 million; GPE: US$7.535 million)"
+      },
+      {
+        "component_name": "Component 3: Improving Physical Learning Environments in Targeted Areas",
+        "description": "Upgrade building codes and infrastructure standards; construct, expand, and rehabilitate 224 classrooms in preschools serving children in targeted areas with climate-resilient design and low-carbon technologies",
+        "financing": "US$14.3 million (IDA: US$14.3 million)"
+      },
+      {
+        "component_name": "Component 4: Project Management and Evaluation",
+        "description": "Support PIU staffing and operations, establish fund tracking systems, conduct audits, and hire Independent Verification Agents for DLI verification",
+        "financing": "US$2.3 million (IDA: US$2.3 million)"
+      },
+      {
+        "component_name": "Component 5: Contingency Emergency Response",
+        "description": "Provide immediate response to eligible emergencies through reallocation of funds from other components",
+        "financing": "US$0.00 (contingent allocation)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Ministry of Education (Secretaría de Educación - SE) through a Project Implementation Unit (PIU) located within the Preschool Education Subdirectorate (SDGEPB)",
+      "coordination_mechanisms": "Executive Committee chaired by Under-Secretary of Technical-Pedagogical Affairs; coordination with Local Education Group (LEG), Donor Group for Education (MERECE), NGOs, and civil society; liaison with National Education Council (CNE) for PESE monitoring; coordination with Ministry of Finance (SEFIN)",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers; use of STEP system; prior review for high-value contracts; open-national and open-international competitive bidding; standard bidding documents; procurement plan covering first 18 months prepared",
+      "monitoring_and_evaluation": "Results Framework with PDO and intermediate indicators; M&E Unit within PIU responsible for data collection; Independent Verification Agent for DLI verification; semi-annual interim unaudited financial reports; annual audits; coordination with SE's UPEG and CNE; training for SE staff on M&E; sustainability strategy for M&E capacity by mid-term review"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Honduras suffers persistent weakness in education system regarding transparency, governance, and accountability; ongoing sector uncertainty due to GoH reform efforts; frequent teacher strikes and protests causing disruptions",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Broad consultations and interactions generating political commitment at highest level; broad support from local stakeholders; involvement of MERECE, LEG, and government stakeholders in monitoring"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Increased fiscal deficit due to major public investments and reduced revenues; considerable debt obligations limiting public expenditures in education; limited fiscal space",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "SE budget has steadily increased from 2015-2019; GoH commitment to PESE 2018-2030; GoH commitment to absorb costs of newly appointed staff; introduction of DLIs requiring achievement of results before reimbursement"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "ECE is priority in PESE but need to establish monitoring mechanisms for broader educational goals; funding and implementation concerns",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Project supports interventions to better manage and monitor ECE subsector; World Bank will keep Coordinating and Finance Ministries informed of concerns; coordination with MERECE and LEG"
+      },
+      {
+        "risk_category": "Technical Design",
+        "risk_description": "GPE requires results-based financing (30% of funding) - new disbursement modality for GoH; complexity of DLI-based disbursement arrangements",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Close coordination with GPE during project design; GPE involved in preparation process; project design aligned with PESE and SE's Institutional Strategic Plan; cost-effective, evidence-based activities; balance between realism and ambition; clear expectations and adequate resource allocation"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "SE has limited technical, management, coordination and operational capacity; limited experience with World Bank procedures and DLI modality; limited local personnel with fiduciary management experience",
+        "risk_rating": "Substantial",
+        "mitigation_measures": "Establishment of PIU with necessary personnel; specific interventions to strengthen SE's institutional capacity; small committee of ministerial authorities for coordination; World Bank procurement and FM specialists providing close support; fiduciary training; sustainability strategy to integrate PIU roles into SE by mid-term review"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "SE has limited knowledge of World Bank fiduciary processes and instruments; no previous experience with results-based financing modality; limited local personnel with relevant fiduciary experience",
+        "risk_rating": "High",
+        "mitigation_measures": "Close support from World Bank procurement and FM specialists during implementation; fiduciary training and team building; concrete processes for monitoring and accounting of evidence-based activities; quarterly supervision during first year; at least two FM supervision missions per year; desk reviews of interim reports and audit reports"
+      },
+      {
+        "risk_category": "Violence and Security",
+        "risk_description": "High incidence of violence in Honduras including community and gang violence could disrupt school services and children's attendance; four in 10 Hondurans aged 18-24 experienced violence during childhood",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "Government monitoring and adjustment of intervention locations as needed; communication campaigns to engage beneficiaries and promote school attendance; project financing school crime and violence prevention training for teachers; inclusion of violence prevention content in teacher training; positive discipline and communication training for parents, teachers, and community leaders"
+      },
+      {
+        "risk_category": "Sustainability",
+        "risk_description": "Risk of teacher turnover due to inadequate working conditions; high rates of violence disrupting service provision; fiscal sustainability concerns",
+        "risk_rating": "Moderate",
+        "mitigation_measures": "Development of sustainable strategy to recruit, select, motivate, and retain teaching talent; analysis of Educators' working conditions with recommendations; improvement of non-salary working conditions through coaching, materials, and better environments; violence prevention measures to strengthen children's resilience; evidence-informed interventions for violence prevention"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate",
+      "triggered_safeguard_policies": [
+        "Assessment and Management of Environmental and Social Risks and Impacts (ESS1)",
+        "Stakeholder Engagement and Information Disclosure (ESS10)",
+        "Labor and Working Conditions (ESS2)",
+        "Resource Efficiency and Pollution Prevention and Management (ESS4)",
+        "Community Health and Safety (ESS4)",
+        "Land Acquisition, Restrictions on Land Use and Involuntary Resettlement (ESS5)",
+        "Biodiversity Conservation and Sustainable Management of Living Natural Resources (ESS6)",
+        "Indigenous Peoples/Sub-Saharan African Historically Underserved Traditional Local Communities (ESS7)",
+        "Cultural Heritage (ESS8)"
+      ],
+      "grievance_redress_mechanism": "Yes - Project includes Grievance Redress Mechanism (GRM) at project level; World Bank's Grievance Redress Service (GRS) available for project-affected communities; World Bank Inspection Panel available for complaints regarding WB non-compliance; GRM includes code of conduct on construction sites and redress mechanism for grievances from adversely affected individuals",
+      "gender_considerations": "No identifiable gender gaps in preschool enrollment; project includes activities on gender and inclusive education; curriculum will include content on gender and resilience to violence; in-service training includes content on gender biases, inclusive education, and violence prevention (including gender-based); project supports professional development and improved working conditions for teachers (majority women); construction sites will have measures to address sexual misconduct; works ensure safe access for all populations including those with disabilities",
+      "vulnerable_groups": [
+        "Indigenous and Afro-descendant children (22% attend CEPB/CCEPREB; 85% live in poverty in isolated rural areas)",
+        "Children in lowest income quintiles (61% enrollment vs 91% in highest quintile)",
+        "Children in poorest regions experiencing reductions in enrollment",
+        "Children exposed to violence (4 in 10 aged 18-24 experienced violence; 1/3 suffered physical violence; 13% experienced sexual violence)",
+        "Children with disabilities",
+        "Children in rural and remote areas",
+        "Children affected by climate-related hazards (floods, droughts, landslides)"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project addresses violence prevention through: inclusion of violence prevention content in teacher training; positive discipline and communication training for parents, teachers, and community leaders; identification of distress in children and empowerment to respond; identification of victimization hotspots on way to school; safety measures around school buildings; evidence-informed violence prevention interventions; communication campaigns to promote school attendance despite violence; project design includes hands-on approach to violence prevention",
+      "fragility_context": "Honduras characterized by: high poverty rates (17.2% extreme poor; 61.9% living on less than US$5.50/day - second poorest in Western Hemisphere after Haiti); high income inequality (Gini 0.50); high rates of violence and crime affecting children's development; vulnerability to natural disasters (earthquakes, hurricanes, droughts, floods, landslides); climate change increasing frequency/severity of hazards; low human capital (HCI rank 103/157); learning crisis with only 29.7% achieving minimum proficiency in reading, 15.4% in math; large disparities in access and quality of education by socioeconomic status and geography; weak governance and accountability in education sector; low adaptive capacity at national, regional, local levels",
+      "security_considerations": "Project includes: safety of schools as consideration in infrastructure design; accessibility measures; natural disaster risk considerations; overall community safety during construction; climate resilience design and low-carbon technologies for infrastructure; occupational health and safety plan; code of conduct on construction sites; grievance redress mechanism for construction-related issues; training on school crime and violence prevention for teachers; positive discipline approaches; community engagement on school safety",
+      "displacement_or_refugees": "No - Project does not involve land acquisition or involuntary resettlement; however, ESS5 (Land Acquisition, Restrictions on Land Use and Involuntary Resettlement) is triggered as precautionary measure; project works within existing school premises; project notes seasonal migration of families within and outside country for employment opportunities as demand-side challenge to preschool attendance"
+    }
+  }
+}

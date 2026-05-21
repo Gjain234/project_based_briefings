@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FCV Sensitivity Project Screener · WBG FCV Analytics Unit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+    :root{
+      /* WBG official palette */
+      --wbg-navy:   #002244;
+      --wbg-blue:   #009FDA;
+      --wbg-cyan:   #47C4EB;
+      --wbg-dark:   #00263A;
+
+      /* UI neutrals */
+      --white:      #ffffff;
+      --off-white:  #f5f7fa;
+      --border:     #d9e2ec;
+      --muted:      #5a6a7e;
+      --text:       #1a2a3a;
+
+      /* Stage accent colours */
+      --s1: #0072BB;
+      --s2: #005A8E;
+      --s3: #E07B00;
+      --s4: #1A7A4A;
+
+      --radius:    8px;
+      --radius-sm: 5px;
+      --shadow-sm: 0 1px 4px rgba(0,34,68,.08);
+      --shadow-md: 0 4px 14px rgba(0,34,68,.10);
+      --shadow-lg: 0 8px 28px rgba(0,34,68,.13);
+    }
+
+    html{scroll-behavior:smooth}
+    body{font-family:'Source Sans 3',Arial,sans-serif;background:var(--off-white);color:var(--text);min-height:100vh;line-height:1.6;font-size:15px}
+
+    /* ── Skip link ── */
+    .skip{position:absolute;top:-50px;left:0;background:var(--wbg-blue);color:#fff;padding:8px 16px;z-index:200;border-radius:0 0 4px 0;font-size:13px;text-decoration:none;transition:top .2s}
+    .skip:focus{top:0}
+
+    /* ══════════════════════════════════════════
+       TOP BAR (thin WBG institutional bar)
+    ══════════════════════════════════════════ */
+    .top-bar{
+      background:var(--wbg-navy);
+      padding:6px 32px;
+      display:flex;align-items:center;justify-content:space-between;
+    }
+    .top-bar-left{display:flex;align-items:center;gap:12px}
+
+    /* WBG Globe SVG logo */
+    .wbg-globe{width:32px;height:32px;flex-shrink:0}
+
+    .top-bar-wordmark{
+      font-family:'Source Sans 3',Arial,sans-serif;
+      font-size:13px;font-weight:600;
+      color:rgba(255,255,255,.9);
+      letter-spacing:.03em;
+      text-transform:uppercase;
+    }
+    .top-bar-divider{width:1px;height:16px;background:rgba(255,255,255,.25);margin:0 4px}
+    .top-bar-unit{
+      font-size:12px;font-weight:400;
+      color:var(--wbg-cyan);
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+    .top-bar-badge{
+      font-size:10px;padding:3px 9px;
+      background:rgba(0,159,218,.2);
+      border:1px solid rgba(0,159,218,.35);
+      border-radius:20px;color:var(--wbg-cyan);
+      letter-spacing:.07em;text-transform:uppercase;
+    }
+
+    /* ══════════════════════════════════════════
+       HERO BANNER
+    ══════════════════════════════════════════ */
+    .hero{
+      background: linear-gradient(135deg, var(--wbg-navy) 0%, #004080 55%, #005a9e 100%);
+      padding:44px 32px 40px;
+      position:relative;overflow:hidden;
+    }
+    /* decorative grid lines */
+    .hero::before{
+      content:'';position:absolute;inset:0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size:40px 40px;
+      pointer-events:none;
+    }
+    /* cyan accent line */
+    .hero::after{
+      content:'';position:absolute;
+      bottom:0;left:0;right:0;height:3px;
+      background:linear-gradient(90deg, var(--wbg-blue), var(--wbg-cyan));
+    }
+
+    .hero-inner{
+      max-width:860px;margin:0 auto;
+      position:relative;z-index:1;
+    }
+    .hero-eyebrow{
+      font-size:11px;font-weight:600;
+      text-transform:uppercase;letter-spacing:.14em;
+      color:var(--wbg-cyan);margin-bottom:10px;
+      display:flex;align-items:center;gap:8px;
+    }
+    .hero-eyebrow::before{content:'';display:inline-block;width:20px;height:2px;background:var(--wbg-cyan)}
+
+    .hero h1{
+      font-family:'Source Serif 4',serif;
+      font-weight:300;font-size:34px;
+      color:#fff;line-height:1.2;margin-bottom:10px;
+      letter-spacing:-.01em;
+    }
+    .hero h1 strong{font-weight:600;color:var(--wbg-cyan)}
+
+    .hero-sub{
+      font-size:15px;color:rgba(255,255,255,.72);
+      max-width:540px;line-height:1.6;margin-bottom:24px;
+    }
+
+    .hero-chips{display:flex;flex-wrap:wrap;gap:8px}
+    .hero-chip{
+      display:inline-flex;align-items:center;gap:6px;
+      font-size:12px;padding:5px 12px;
+      background:rgba(255,255,255,.1);
+      border:1px solid rgba(255,255,255,.2);
+      border-radius:20px;color:rgba(255,255,255,.8);
+    }
+    .hero-chip svg{flex-shrink:0}
+
+    /* ══════════════════════════════════════════
+       STEPPER
+    ══════════════════════════════════════════ */
+    .stepper-wrap{
+      max-width:860px;margin:28px auto 0;
+      padding:0 24px;
+    }
+    .stepper{
+      display:flex;background:#fff;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      overflow:hidden;box-shadow:var(--shadow-sm);
+    }
+    .step{
+      flex:1;padding:13px 10px;
+      display:flex;flex-direction:column;align-items:center;gap:5px;
+      font-size:11px;font-weight:600;color:var(--muted);
+      border-right:1px solid var(--border);
+      transition:all .22s ease;
+      text-transform:uppercase;letter-spacing:.05em;
+      user-select:none;
+    }
+    .step:last-child{border-right:none}
+    .step-num{
+      width:24px;height:24px;border-radius:50%;
+      background:var(--border);
+      display:flex;align-items:center;justify-content:center;
+      font-size:12px;font-weight:700;color:var(--muted);
+      transition:all .22s ease;
+    }
+    .step.active{background:var(--wbg-navy);color:rgba(255,255,255,.85)}
+    .step.active .step-num{background:var(--wbg-blue);color:#fff}
+    .step.done{background:#f0f9f4;color:#1a7a4a}
+    .step.done .step-num{background:#1a7a4a;color:#fff;font-size:10px}
+    .step.done .step-num::after{content:'✓'}
+    .step.err{background:#fff5f5;color:#b91c1c}
+    .step.err .step-num{background:#ef4444;color:#fff;font-size:11px}
+    .step.err .step-num::after{content:'!'}
+
+    /* ══════════════════════════════════════════
+       MAIN CONTENT AREA
+    ══════════════════════════════════════════ */
+    .main{max-width:860px;margin:0 auto;padding:28px 24px 100px}
+
+    /* ── Card ── */
+    .card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-sm);overflow:hidden}
+
+    /* ── Upload panel ── */
+    .upload-intro{
+      padding:28px 32px 22px;
+      border-bottom:1px solid var(--border);
+      display:flex;align-items:flex-start;gap:18px;
+    }
+    .upload-icon-box{
+      width:48px;height:48px;flex-shrink:0;
+      background:linear-gradient(135deg,#e8f4fc,#d0ebf8);
+      border-radius:var(--radius);
+      display:flex;align-items:center;justify-content:center;
+      border:1px solid rgba(0,159,218,.2);
+    }
+    .upload-intro-text h2{font-family:'Source Serif 4',serif;font-weight:400;font-size:20px;color:var(--text);margin-bottom:4px}
+    .upload-intro-text p{font-size:14px;color:var(--muted);line-height:1.55}
+
+    .upload-zones{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:20px 32px;border-bottom:1px solid var(--border)}
+    .zone-wrap{display:flex;flex-direction:column;gap:7px}
+    .zone-lbl{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--text)}
+    .zone-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+    .zone-dot.p{background:var(--wbg-blue)}
+    .zone-dot.c{background:#1a7a4a}
+    .zone-hint{font-size:12px;color:var(--muted)}
+
+    .drop-zone{
+      border:2px dashed var(--border);border-radius:var(--radius-sm);
+      padding:20px 12px;cursor:pointer;
+      transition:all .18s ease;background:var(--off-white);
+      text-align:center;min-height:100px;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+    }
+    .drop-zone:hover,.drop-zone.over{border-color:var(--wbg-blue);background:#eef7fc}
+    .drop-zone.has{border-color:#1a7a4a;background:#f0f9f4}
+    .drop-zone p{font-size:13px;color:var(--muted)}
+    .drop-zone strong{color:var(--wbg-blue)}
+    .drop-zone.has p,.drop-zone.has strong{color:#1a7a4a}
+    input[type=file]{display:none}
+
+    .chips{display:flex;flex-wrap:wrap;gap:6px;padding:12px 32px;min-height:14px}
+    .chip{
+      display:inline-flex;align-items:center;gap:5px;
+      padding:4px 10px;border-radius:20px;font-size:12px;font-weight:600;max-width:210px;
+    }
+    .chip.p{background:#e8f4fc;color:#004e7c;border:1px solid rgba(0,159,218,.25)}
+    .chip.c{background:#f0f9f4;color:#1a5c38;border:1px solid rgba(26,122,74,.25)}
+    .chip span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .chip button{background:none;border:none;cursor:pointer;color:inherit;opacity:.5;padding:0;line-height:1;font-size:15px}
+    .chip button:hover{opacity:1}
+
+    /* Built-in docs notice */
+    .builtin-notice{
+      margin:0 32px 16px;padding:10px 14px;
+      background:#f0f9f4;border:1px solid rgba(26,122,74,.25);
+      border-radius:var(--radius-sm);
+      display:flex;align-items:center;gap:10px;
+      font-size:12px;color:#1a5c38;
+    }
+    .builtin-notice svg{flex-shrink:0}
+
+    .upload-foot{
+      padding:16px 32px 24px;
+      display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;
+    }
+    .upload-hint{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px}
+
+    /* ── Buttons ── */
+    .btn{
+      display:inline-flex;align-items:center;gap:7px;
+      border:none;border-radius:var(--radius-sm);
+      font-family:'Source Sans 3',Arial,sans-serif;
+      font-size:14px;font-weight:600;cursor:pointer;
+      transition:all .16s ease;letter-spacing:.01em;white-space:nowrap;
+    }
+    .btn:focus-visible{outline:2px solid var(--wbg-blue);outline-offset:2px}
+    .btn:disabled{opacity:.4;cursor:not-allowed}
+
+    .btn-primary{background:var(--wbg-navy);color:#fff;padding:11px 24px;box-shadow:var(--shadow-sm)}
+    .btn-primary:hover:not(:disabled){background:#003366}
+    .btn-blue{background:var(--wbg-blue);color:#fff;padding:11px 24px;box-shadow:var(--shadow-sm)}
+    .btn-blue:hover:not(:disabled){background:#007ab8}
+    .btn-ghost{background:#fff;color:var(--text);border:1.5px solid var(--border);padding:10px 18px}
+    .btn-ghost:hover:not(:disabled){border-color:var(--wbg-blue);color:var(--wbg-blue)}
+    .btn-danger{background:#fff;color:#b91c1c;border:1.5px solid #fca5a5;padding:10px 18px}
+    .btn-danger:hover:not(:disabled){background:#fef2f2}
+    .btn-sm{padding:7px 14px!important;font-size:13px!important}
+
+    /* ── Stage callout ── */
+    .callout{
+      border-radius:var(--radius-sm);padding:13px 16px;margin-bottom:16px;
+      display:flex;gap:11px;align-items:flex-start;border:1px solid;
+      animation:fadeIn .3s ease;
+    }
+    .callout.info{background:#e8f4fc;border-color:#a8d8f0;color:#004e7c}
+    .callout.ok{background:#f0f9f4;border-color:#86efac;color:#1a5c38}
+    .callout-icon{flex-shrink:0;margin-top:1px}
+    .callout-body{font-size:13px;line-height:1.55}
+    .callout-body strong{font-weight:700;display:block;margin-bottom:3px}
+
+    /* ── Stage header ── */
+    .stage-hdr{display:flex;align-items:center;gap:13px;margin-bottom:16px}
+    .stage-badge{
+      width:36px;height:36px;border-radius:50%;
+      display:flex;align-items:center;justify-content:center;
+      font-family:'Source Serif 4',serif;font-size:16px;font-weight:400;
+      color:#fff;flex-shrink:0;
+    }
+    .s1{background:var(--s1)} .s2{background:var(--s2)} .s3{background:var(--s3)} .s4{background:var(--s4)}
+    .stage-title{font-family:'Source Serif 4',serif;font-weight:400;font-size:20px;color:var(--text)}
+    .stage-sub{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+
+    /* ── Output card ── */
+    .out-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:16px;box-shadow:var(--shadow-sm)}
+    .out-hdr{
+      padding:10px 18px;background:#f5f7fa;border-bottom:1px solid var(--border);
+      display:flex;justify-content:space-between;align-items:center;
+    }
+    .out-hdr-l{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;font-weight:600}
+    .dot{width:6px;height:6px;border-radius:50%}
+    .dot.live{background:var(--wbg-blue);animation:pulse 1s infinite}
+    .dot.done{background:#1a7a4a}
+    .copy-btn{
+      background:none;border:1px solid var(--border);padding:3px 11px;
+      border-radius:4px;font-size:11px;cursor:pointer;color:var(--muted);
+      transition:all .14s;font-family:'Source Sans 3',Arial,sans-serif;font-weight:600;
+    }
+    .copy-btn:hover{border-color:var(--wbg-blue);color:var(--wbg-blue)}
+    .copy-btn.ok{color:#1a7a4a;border-color:#1a7a4a}
+
+    .out-body{
+      padding:24px 28px;font-size:14px;line-height:1.8;color:var(--text);
+      max-height:540px;overflow-y:auto;
+    }
+    .out-body::-webkit-scrollbar{width:5px}
+    .out-body::-webkit-scrollbar-track{background:#f5f7fa}
+    .out-body::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+
+    .out-body h1{font-family:'Source Serif 4',serif;font-weight:400;font-size:20px;margin:1.3em 0 .4em;color:var(--text)}
+    .out-body h2{font-family:'Source Serif 4',serif;font-weight:400;font-size:17px;margin:1.2em 0 .35em;border-bottom:1px solid var(--border);padding-bottom:5px;color:var(--text)}
+    .out-body h3{font-size:12px;font-weight:700;margin:1em 0 .3em;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+    .out-body p{margin-bottom:.7em}
+    .out-body strong{font-weight:700}
+    .out-body em{font-style:italic;color:#3a4a5a}
+    .out-body ul,.out-body ol{margin:.4em 0 .7em 1.4em}
+    .out-body li{margin-bottom:.25em}
+    .out-body hr{border:none;border-top:1px solid var(--border);margin:1.2em 0}
+    .out-body table{width:100%;border-collapse:collapse;margin:1em 0;font-size:13px}
+    .out-body th{background:#f5f7fa;padding:8px 11px;text-align:left;font-weight:700;border:1px solid var(--border);font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+    .out-body td{padding:8px 11px;border:1px solid var(--border);vertical-align:top}
+    .out-body tr:nth-child(even) td{background:#fafbfc}
+
+    /* ── Refine card ── */
+    .refine-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;margin-bottom:16px;box-shadow:var(--shadow-sm)}
+    .refine-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+    .refine-row{display:flex;gap:9px}
+    .refine-in{
+      flex:1;border:1.5px solid var(--border);border-radius:var(--radius-sm);
+      padding:9px 12px;font-family:'Source Sans 3',Arial,sans-serif;font-size:14px;
+      color:var(--text);background:var(--off-white);resize:none;transition:border-color .18s;line-height:1.5;
+    }
+    .refine-in:focus{outline:none;border-color:var(--wbg-blue)}
+    .refine-in::placeholder{color:#9aabb8}
+
+    /* ── Action bar ── */
+    .act-bar{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:16px}
+    .sep{height:20px;width:1px;background:var(--border);margin:0 2px}
+
+    /* ── Error card ── */
+    .err-card{background:#fff5f5;border:1px solid #fca5a5;border-radius:var(--radius);padding:16px 20px;margin-bottom:16px;animation:fadeIn .2s ease}
+    .err-top{display:flex;align-items:flex-start;gap:10px;margin-bottom:12px}
+    .err-body{flex:1}
+    .err-title{font-weight:700;color:#991b1b;font-size:14px;margin-bottom:3px}
+    .err-msg{font-size:13px;color:#b91c1c;line-height:1.5}
+    .err-acts{display:flex;gap:7px;flex-wrap:wrap}
+
+    /* ── Loading ── */
+    .load-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:48px 32px;text-align:center;margin-bottom:16px;box-shadow:var(--shadow-sm)}
+    .spinner{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--wbg-blue);border-radius:50%;animation:spin .7s linear infinite;margin:0 auto 16px}
+    .load-title{font-family:'Source Serif 4',serif;font-weight:300;font-size:18px;color:var(--text);margin-bottom:5px}
+    .load-sub{font-size:13px;color:var(--muted)}
+    .load-tags{margin-top:16px;display:flex;justify-content:center;gap:6px;flex-wrap:wrap}
+    .load-tag{font-size:11px;padding:3px 10px;background:var(--off-white);border-radius:20px;color:var(--muted);border:1px solid var(--border)}
+
+    /* ── Footer ── */
+    .page-footer{
+      background:var(--wbg-navy);
+      padding:16px 32px;
+      text-align:center;
+      font-size:11px;
+      color:rgba(255,255,255,.4);
+      letter-spacing:.04em;
+    }
+
+    /* ── Animations ── */
+    @keyframes spin{to{transform:rotate(360deg)}}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes slideUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    .ani{animation:slideUp .28s ease}
+
+    .hero-tool-title{
+      font-size:14px;color:rgba(255,255,255,.6);
+      font-style:italic;margin-bottom:12px;margin-top:-4px;
+      letter-spacing:.01em;
+    }
+    .hero-disclaimer{
+      display:flex;align-items:flex-start;gap:8px;
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.15);
+      border-radius:var(--radius-sm);
+      padding:10px 14px;margin-bottom:20px;margin-top:16px;
+      font-size:12px;color:rgba(255,255,255,.65);line-height:1.5;
+      max-width:600px;
+    }
+    .hero-disclaimer svg{flex-shrink:0;margin-top:1px;color:rgba(255,255,255,.5)}
+    .confidential-warning{
+      margin:0 32px 16px;padding:10px 14px;
+      background:#fffbeb;border:1px solid #fcd34d;
+      border-radius:var(--radius-sm);
+      display:flex;align-items:flex-start;gap:10px;
+      font-size:12px;color:#78350f;line-height:1.5;
+    }
+    .confidential-warning svg{flex-shrink:0;margin-top:1px;color:#d97706}
+    @media(max-width:640px){
+      .top-bar{padding:8px 16px}
+      .hero{padding:28px 16px 24px}
+      .hero h1{font-size:24px}
+      .stepper-wrap{padding:0 16px}
+      .main{padding:20px 16px 80px}
+      .upload-zones{grid-template-columns:1fr;padding:16px 20px}
+      .upload-intro,.upload-foot,.chips{padding-left:20px;padding-right:20px}
+      .builtin-notice{margin:0 20px 14px}
+      .out-body{padding:18px 18px}
+      .refine-row{flex-direction:column}
+      .hero-chips{display:none}
+    }
+
+    .hero-tool-sub {
+      font-size: 15px; font-style: italic;
+      color: rgba(255,255,255,.6);
+      margin-bottom: 14px; margin-top: -2px;
+    }
+    .hero-disclaimer {
+      display: flex; align-items: flex-start; gap: 9px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: var(--radius-sm);
+      padding: 11px 15px; margin-top: 18px; margin-bottom: 22px;
+      font-size: 12.5px; color: rgba(255,255,255,.62);
+      line-height: 1.55; max-width: 580px;
+    }
+    .hero-disclaimer svg { flex-shrink: 0; margin-top: 1px; opacity: .7; }
+    .confidential-notice {
+      display: flex; align-items: flex-start; gap: 10px;
+      margin: 0 32px 16px;
+      padding: 11px 15px;
+      background: #fffbeb;
+      border: 1px solid #fbbf24;
+      border-radius: var(--radius-sm);
+      font-size: 12.5px; color: #78350f; line-height: 1.55;
+    }
+    .confidential-notice svg { flex-shrink: 0; margin-top: 1px; }
+
+    /* ── Onboarding modal ── */
+    .modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;animation:fadeIn .2s ease}
+    .modal{background:#fff;border-radius:10px;max-width:620px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.25);overflow:hidden}
+    .modal-hdr{background:var(--wbg-navy);padding:22px 28px;position:relative}
+    .modal-hdr h2{font-family:'Source Serif 4',serif;font-weight:300;font-size:22px;color:#fff;margin-bottom:4px}
+    .modal-hdr p{font-size:13px;color:rgba(255,255,255,.65)}
+    .modal-body{padding:24px 28px}
+    .modal-stages{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+    .modal-stage{border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px 14px}
+    .modal-stage-num{width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;margin-bottom:6px}
+    .modal-stage-title{font-size:13px;font-weight:700;margin-bottom:3px;color:var(--text)}
+    .modal-stage-desc{font-size:12px;color:var(--muted);line-height:1.5}
+    .modal-note{font-size:12px;color:var(--muted);background:var(--off-white);border-radius:var(--radius-sm);padding:10px 14px;margin-bottom:20px;line-height:1.55}
+    .modal-foot{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .modal-foot label{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--muted);cursor:pointer}
+
+    /* ── Session persistence bar ── */
+    .session-bar{display:flex;align-items:center;gap:8px;padding:10px 32px;background:#f0f4f8;border-bottom:1px solid var(--border);font-size:12px;color:var(--muted)}
+    .session-bar svg{flex-shrink:0}
+    .session-bar-btns{margin-left:auto;display:flex;gap:6px}
+
+    /* ── Truncation warning banner ── */
+    .trunc-warn-area{background:#fff7ed;border:1.5px solid #fed7aa;border-radius:var(--radius);padding:14px 18px;margin-bottom:14px}
+    .trunc-warn-hdr{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#c2410c;margin-bottom:8px}
+    .trunc-warn-item{font-size:12.5px;color:#7c2d12;margin-bottom:4px;line-height:1.55;padding-left:4px}
+    .trunc-warn-item strong{color:#9a3412}
+    .trunc-warn-note{font-size:12px;color:#92400e;margin-top:8px;padding-top:8px;border-top:1px solid #fed7aa;line-height:1.5}
+
+    /* ── Prompt viewer modal ── */
+    .prompt-modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;animation:fadeIn .2s ease}
+    .prompt-modal{background:#fff;border-radius:10px;width:100%;max-width:780px;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,.3);overflow:hidden}
+    .prompt-modal-hdr{background:var(--wbg-navy);padding:18px 26px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+    .prompt-modal-hdr h2{font-family:'Source Serif 4',serif;font-weight:300;font-size:19px;color:#fff}
+    .prompt-modal-hdr p{font-size:12px;color:rgba(255,255,255,.55);margin-top:2px}
+    .prompt-modal-close{background:none;border:none;color:rgba(255,255,255,.6);cursor:pointer;font-size:22px;line-height:1;padding:2px 6px;border-radius:4px}
+    .prompt-modal-close:hover{color:#fff;background:rgba(255,255,255,.1)}
+    .prompt-modal-tabs{display:flex;gap:2px;padding:12px 16px 0;background:#f5f7fa;border-bottom:2px solid var(--border);flex-shrink:0}
+    .prompt-tab{padding:8px 16px;font-size:12px;font-weight:700;cursor:pointer;border-radius:5px 5px 0 0;color:var(--muted);border:none;background:none;text-transform:uppercase;letter-spacing:.05em;transition:all .15s;display:flex;align-items:center;gap:6px}
+    .prompt-tab.active{background:var(--wbg-navy);color:#fff}
+    .prompt-tab:hover:not(.active){background:#e8edf2;color:var(--text)}
+    .prompt-modified-dot{width:7px;height:7px;border-radius:50%;background:#f59e0b;flex-shrink:0}
+    .prompt-modal-body{flex:1;overflow-y:auto;padding:20px 24px}
+    .prompt-info{font-size:12.5px;color:var(--muted);background:#f5f7fa;border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 14px;margin-bottom:14px;line-height:1.55}
+    .prompt-modified-banner{font-size:12px;background:#fffbeb;border:1px solid #fcd34d;color:#78350f;border-radius:var(--radius-sm);padding:8px 12px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+    textarea.prompt-edit{width:100%;min-height:400px;padding:14px 16px;font-family:'Source Code Pro',monospace;font-size:12px;line-height:1.65;color:var(--text);border:1.5px solid var(--border);border-radius:var(--radius-sm);resize:vertical;background:#fafbfc}
+    textarea.prompt-edit:focus{outline:none;border-color:var(--wbg-blue);background:#fff}
+    textarea.prompt-edit.modified{border-color:#f59e0b;background:#fffef8}
+    .prompt-modal-foot{padding:14px 24px;background:#f5f7fa;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+    .prompt-modal-foot-left{font-size:12px;color:var(--muted)}
+    /* View prompt link on stage header */
+    .view-prompt-link{font-size:11px;color:var(--wbg-blue);cursor:pointer;background:none;border:none;padding:2px 6px;border-radius:3px;font-family:inherit;font-weight:600;letter-spacing:.03em;opacity:.8;text-decoration:underline;text-underline-offset:2px}
+    .view-prompt-link:hover{opacity:1}
+    .view-prompt-link.modified{color:#d97706}
+    /* Top bar prompt button */
+    .topbar-prompt-btn{font-size:11px;padding:4px 12px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:4px;color:rgba(255,255,255,.75);cursor:pointer;font-family:inherit;font-weight:600;letter-spacing:.04em;transition:all .15s}
+    .topbar-prompt-btn:hover{background:rgba(255,255,255,.2);color:#fff}
+    .topbar-prompt-btn.has-modified{border-color:rgba(245,158,11,.6);color:#fbbf24}
+    
+    /* Override Leaflet cluster halo effects */
+    .marker-cluster {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+    .marker-cluster-small,
+    .marker-cluster-medium,
+    .marker-cluster-large {
+      background: transparent !important;
+    }
+
+  </style>
+</head>
+<body>
+
+<a href="#main" class="skip">Skip to main content</a>
+
+<!-- ══ TOP BAR ══ -->
+<div class="top-bar" role="banner">
+  <div class="top-bar-left">
+    <!-- WBG Globe SVG (simplified) -->
+    <svg class="wbg-globe" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="World Bank Group">
+      <circle cx="16" cy="16" r="14" stroke="#009FDA" stroke-width="1.5" fill="none"/>
+      <ellipse cx="16" cy="16" rx="6" ry="14" stroke="#009FDA" stroke-width="1.5" fill="none"/>
+      <line x1="2" y1="16" x2="30" y2="16" stroke="#009FDA" stroke-width="1.5"/>
+      <line x1="4" y1="10" x2="28" y2="10" stroke="#009FDA" stroke-width="1"/>
+      <line x1="4" y1="22" x2="28" y2="22" stroke="#009FDA" stroke-width="1"/>
+    </svg>
+    <span class="top-bar-wordmark">WBG FCV Analytics Unit</span>
+    <span class="top-bar-divider"></span>
+    <span class="top-bar-unit">Project Screener</span>
+  </div>
+  <span class="top-bar-badge">Internal Tool · Pilot</span>
+</div>
+
+<!-- ══ HERO ══ -->
+<div class="hero" role="region" aria-label="Tool overview">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">FCV Sensitivity Project Screener</div>
+    <h1>FCV Sensitivity Project Screener</h1><p class="hero-tool-title">A tool for screening WBG projects for recommendations to strengthen <strong>FCV sensitivity and responsiveness</strong></p>
+    <p class="hero-sub">This tool uses an LLM to screen draft WBG project documents for FCV dynamics and generate recommendations on how to strengthen FCV sensitivity and responsiveness. Upload your project documents and follow the step-by-step process to produce a final recommendation note. At each stage you can review the AI's thinking and make refinements before proceeding.</p>
+    <div class="hero-disclaimer">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <span>Output is generated by an LLM and should be approached with care. It is not a replacement for expert analysis and should be used as a supplementary input only.</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px">
+      <a href="/how-it-works" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:9px 18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:6px;color:#fff;font-size:13px;font-weight:600;text-decoration:none;letter-spacing:.02em;transition:all .18s" onmouseover="this.style.background='rgba(255,255,255,.2)'" onmouseout="this.style.background='rgba(255,255,255,.12)'">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        How this tool works
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+    <div class="hero-chips">
+      <span class="hero-chip">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Four-stage analysis
+      </span>
+      <span class="hero-chip">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        Web-informed risk context
+      </span>
+      <span class="hero-chip">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        WBG FCV guidance embedded
+      </span>
+      <span class="hero-chip">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        Refineable at each stage
+      </span>
+    </div>
+    
+    <!-- Tab Navigation -->
+    <div style="display:flex;gap:12px;margin-top:24px">
+      <a href="/" style="padding:10px 20px;background:var(--off-white);border:1px solid var(--off-white);border-radius:6px 6px 0 0;color:var(--text);text-decoration:none;font-size:14px;font-weight:600;transition:all .2s">FCV Project Screener</a>
+      <a href="/briefing" style="padding:10px 20px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:6px 6px 0 0;color:rgba(255,255,255,.7);text-decoration:none;font-size:14px;font-weight:600;transition:all .2s" onmouseover="this.style.background='rgba(255,255,255,.15)';this.style.color='rgba(255,255,255,.9)'" onmouseout="this.style.background='rgba(255,255,255,.1)';this.style.color='rgba(255,255,255,.7)'">Portfolio Briefing Generator</a>
+    </div>
+  </div>
+</div>
+
+<!-- Prompt viewer/editor modal -->
+<div id="prompt-modal" class="prompt-modal-bg" style="display:none" role="dialog" aria-modal="true" aria-label="View and edit analysis prompts">
+  <div class="prompt-modal">
+    <div class="prompt-modal-hdr">
+      <div>
+        <h2>Analysis Prompts</h2>
+        <p>View and optionally edit the prompts used at each stage. Edits apply to this session only — prompts reset to defaults on page reload.</p>
+      </div>
+      <button class="prompt-modal-close" onclick="closePromptModal()" aria-label="Close">×</button>
+    </div>
+    <div class="prompt-modal-tabs" id="prompt-tabs">
+      <button class="prompt-tab active" id="ptab-1" onclick="showPromptTab(1)">Stage 1 · FCV Risks</button>
+      <button class="prompt-tab" id="ptab-2" onclick="showPromptTab(2)">Stage 2 · Screening</button>
+      <button class="prompt-tab" id="ptab-3" onclick="showPromptTab(3)">Stage 3 · Gaps</button>
+      <button class="prompt-tab" id="ptab-4" onclick="showPromptTab(4)">Stage 4 · Rec. Note</button>
+    </div>
+    <div class="prompt-modal-body">
+      <div class="prompt-info">
+        These are the instructions sent to the AI at each stage of the analysis. Editing a prompt here will affect only your current session — the defaults reload automatically next time someone opens the tool. Modified prompts are flagged with an amber indicator.
+      </div>
+      <div id="prompt-modified-banner" class="prompt-modified-banner" style="display:none">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        This prompt has been modified for this session.
+      </div>
+      <textarea class="prompt-edit" id="prompt-edit-area" rows="20" oninput="onPromptEdit()"></textarea>
+    </div>
+    <div class="prompt-modal-foot">
+      <span class="prompt-modal-foot-left" id="prompt-foot-status"></span>
+      <div style="display:flex;gap:8px">
+        <button class="btn btn-ghost btn-sm" onclick="resetCurrentPrompt()">Reset to default</button>
+        <button class="btn btn-blue btn-sm" onclick="saveCurrentPrompt()">Apply to this session</button>
+        <button class="btn btn-ghost btn-sm" onclick="closePromptModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Onboarding modal -->
+<div id="onboarding-modal" class="modal-bg" style="display:none" role="dialog" aria-modal="true" aria-label="How this tool works">
+  <div class="modal" style="max-width:680px">
+    <div class="modal-hdr" style="padding:24px 32px 20px">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--wbg-cyan);margin-bottom:8px;display:flex;align-items:center;gap:8px"><span style="display:inline-block;width:16px;height:2px;background:var(--wbg-cyan)"></span>WBG FCV Analytics Unit</div>
+      <h2 style="font-size:24px;margin-bottom:6px">FCV Sensitivity Project Screener</h2>
+      <p style="font-size:14px;font-style:italic;color:rgba(255,255,255,.6)">A tool for screening WBG projects for recommendations to strengthen FCV sensitivity and responsiveness</p>
+    </div>
+    <div class="modal-body" style="padding:0;max-height:72vh;overflow-y:auto">
+
+      <div style="padding:20px 32px;border-bottom:1px solid var(--border)">
+        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:10px">What this tool does</div>
+        <p style="font-size:14px;line-height:1.65;color:var(--text)">This tool uses an AI language model (LLM) to screen draft WBG project documents — such as PCNs and PADs — for FCV dynamics. It generates structured recommendations on how to strengthen FCV sensitivity and responsiveness, drawing on the uploaded documents, the WBG FCV Sensitivity &amp; Responsiveness Guide, and the AI's broader knowledge of the country and sector context.</p>
+        <p style="font-size:14px;line-height:1.65;color:var(--text);margin-top:10px">The tool is designed to support — not replace — expert FCV analysis. It works best as a starting point for peer review conversations between FCV specialists and Task Team Leaders.</p>
+      </div>
+
+      <div style="padding:20px 32px;border-bottom:1px solid var(--border)">
+        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:14px">How to use it — four stages</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div style="border:1px solid var(--border);border-radius:6px;padding:12px 14px;border-top:3px solid var(--s1)">
+            <div style="font-size:11px;font-weight:700;color:var(--s1);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px">Stage 1 · Identifying FCV Risks</div>
+            <p style="font-size:12.5px;color:var(--text);line-height:1.55">Upload your PCN or PAD. The AI extracts all FCV-relevant content from the document and flags information from its own knowledge of the country context. Review what it finds and correct anything that is wrong or missing before proceeding.</p>
+          </div>
+          <div style="border:1px solid var(--border);border-radius:6px;padding:12px 14px;border-top:3px solid var(--s2)">
+            <div style="font-size:11px;font-weight:700;color:var(--s2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px">Stage 2 · FCV-Sensitivity Screening</div>
+            <p style="font-size:12.5px;color:var(--text);line-height:1.55">The AI assesses the project across six FCV dimensions, rating risks both <em>to</em> the project (how the FCV context threatens success) and <em>from</em> the project (how it could inadvertently worsen fragility). A risk matrix summarises the findings.</p>
+          </div>
+          <div style="border:1px solid var(--border);border-radius:6px;padding:12px 14px;border-top:3px solid var(--s3)">
+            <div style="font-size:11px;font-weight:700;color:var(--s3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px">Stage 3 · Identifying Project Gaps</div>
+            <p style="font-size:12.5px;color:var(--text);line-height:1.55">The AI identifies gaps in FCV sensitivity and design, proposes mitigations for high-risk dimensions, and runs a do-no-harm checklist. This content feeds directly into the final Recommendations Note — review it carefully before proceeding.</p>
+          </div>
+          <div style="border:1px solid var(--border);border-radius:6px;padding:12px 14px;border-top:3px solid var(--s4)">
+            <div style="font-size:11px;font-weight:700;color:var(--s4);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px">Stage 4 · Recommendations Note</div>
+            <p style="font-size:12.5px;color:var(--text);line-height:1.55">A collegial peer-review memo addressed to the TTL. It summarises FCV strengths and gaps, sets out strategic priorities, and includes a technical annex. The output includes a mandatory AI disclaimer and can be copied directly into Word.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding:20px 32px;border-bottom:1px solid var(--border)">
+        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:10px">Refining the analysis</div>
+        <p style="font-size:13.5px;line-height:1.65;color:var(--text)">After each stage, the AI will ask you 1–2 clarifying questions about things it is uncertain about. Answering these improves the quality of subsequent stages. You can also use the <strong>Refine</strong> box at any point to correct the AI, add local knowledge, or redirect its focus. The AI's reasoning is visible throughout — you are in control of the analysis.</p>
+      </div>
+
+      <div style="padding:20px 32px;background:#fff8f8;border-bottom:1px solid #fca5a5">
+        <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#991b1b;margin-bottom:10px;display:flex;align-items:center;gap:6px">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Important — use with care
+        </div>
+        <ul style="font-size:13px;line-height:1.7;color:#7f1d1d;padding-left:18px">
+          <li>Outputs are generated by an AI and <strong>may contain errors, omissions, or misjudgements</strong>. They should not be treated as definitive expert analysis.</li>
+          <li>The AI draws on general knowledge of the country context, which may be <strong>outdated or incomplete</strong>. Always verify against current, authoritative sources.</li>
+          <li>The Recommendations Note should be <strong>reviewed, adapted, and validated</strong> by an FCV specialist before any operational use.</li>
+          <li><strong>Do not upload classified, confidential, or otherwise restricted documents.</strong> Only use materials cleared for use with external AI processing systems.</li>
+        </ul>
+      </div>
+
+      <div style="padding:18px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <label style="display:flex;align-items:center;gap:7px;font-size:12px;color:var(--muted);cursor:pointer"><input type="checkbox" id="dont-show-again"> Don't show this again</label>
+        <button class="btn btn-primary" onclick="closeOnboarding()" style="padding:11px 28px">
+          Begin screening →
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Session bar -->
+<div class="session-bar" id="session-bar">
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+  <span id="session-status">No active session</span>
+  <div class="session-bar-btns">
+    <button class="btn btn-ghost btn-sm" id="prompt-bar-btn" onclick="openPromptModal()" title="View and edit analysis prompts">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+      View / Edit Prompts
+    </button>
+    <button class="btn btn-ghost btn-sm" onclick="saveSession()" id="save-session-btn" style="display:none">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      Save session
+    </button>
+    <button class="btn btn-ghost btn-sm" onclick="document.getElementById('load-session-inp').click()">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Load session
+    </button>
+    <input type="file" id="load-session-inp" accept=".json" style="display:none" onchange="loadSession(this)">
+  </div>
+</div>
+
+<!-- ══ STEPPER ══ -->
+<div class="stepper-wrap">
+  <nav class="stepper" aria-label="Analysis stages">
+    <div class="step" id="step-0"><div class="step-num">↑</div>Upload</div>
+    <div class="step" id="step-1"><div class="step-num">1</div>FCV Risks</div>
+    <div class="step" id="step-2"><div class="step-num">2</div>Screening</div>
+    <div class="step" id="step-3"><div class="step-num">3</div>Gaps</div>
+    <div class="step" id="step-4"><div class="step-num">4</div>Rec. Note</div>
+  </nav>
+</div>
+
+<!-- ══ MAIN ══ -->
+<main class="main" id="main">
+
+  <!-- Upload panel -->
+  <div id="upload-panel" class="card ani">
+
+    <div class="upload-intro">
+      <div class="upload-icon-box">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#009FDA" stroke-width="2" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="12" y1="18" x2="12" y2="12"/>
+          <polyline points="9 15 12 12 15 15"/>
+        </svg>
+      </div>
+      <div class="upload-intro-text">
+        <h2>Upload Project Documents</h2>
+        <p>Upload the PCN or PAD being assessed. Optionally add contextual documents such as the RRA or country reports. WBG FCV guidance and risk summaries are already included in the background.</p>
+      </div>
+    </div>
+
+    <div class="upload-zones">
+      <div class="zone-wrap">
+        <div class="zone-lbl"><span class="zone-dot p"></span>Project Document</div>
+        <p class="zone-hint">The PCN or PAD being assessed</p>
+        <div class="drop-zone" id="dp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--border)" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <p style="margin-bottom:8px">Drag &amp; drop, or select below</p>
+          <input type="file" id="ip" multiple accept=".pdf,.txt,.docx,.doc,.md" style="display:block;font-size:13px;color:var(--text);cursor:pointer;max-width:130px;">
+        </div>
+      </div>
+
+      <div class="zone-wrap">
+        <div class="zone-lbl"><span class="zone-dot c"></span>Contextual Documents</div>
+        <p class="zone-hint">RRA, country risk reports — optional</p>
+        <div class="drop-zone" id="dc">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--border)" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          <p style="margin-bottom:8px">Drag &amp; drop, or select below</p>
+          <input type="file" id="ic" multiple accept=".pdf,.txt,.docx,.doc,.md" style="display:block;font-size:13px;color:var(--text);cursor:pointer;max-width:130px;">
+        </div>
+      </div>
+    </div>
+
+    <div class="chips" id="chips" aria-live="polite"></div>
+    <div id="debug-log" style="margin:0 32px 8px;font-size:11px;color:#666;min-height:16px"></div>
+
+    <div class="builtin-notice">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+      <span><strong>Pre-loaded:</strong> WBG FCV Sensitivity &amp; Responsiveness Guide — no upload needed. Country-specific risk documents (e.g. RRA, risk summaries) should be uploaded separately per project.</span>
+    </div>
+    <div class="confidential-notice">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2.5" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <div><strong>Confidentiality reminder:</strong> Do not upload classified, confidential, or otherwise restricted documents. Only upload materials approved for use with external AI processing systems.</div>
+    </div>
+
+    <div class="upload-foot">
+      <p class="upload-hint">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        At least one project document required to begin
+      </p>
+      <button class="btn btn-primary" id="start-btn" onclick="startAnalysis()">
+        Begin FCV Analysis
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Analysis panel -->
+  <div id="analysis-panel" style="display:none">
+    <div id="err-area" aria-live="assertive"></div>
+    <div id="stage-disp"></div>
+    <div id="refine-area"></div>
+    <div id="act-area"></div>
+  </div>
+
+</main>
+
+<footer class="page-footer">
+  WBG FCV Analytics Unit · Internal Use Only · LLM-Assisted Review Pilot
+</footer>
+
+<script>
+  // ── State ──────────────────────────────────────────────────────────────────
+  let pF=[],cF=[],hist=[],curS=0,busy=false;
+  let sessionName='';
+
+  // ── Onboarding ──────────────────────────────────────────────────────────────
+  function initOnboarding(){
+    try {
+      if(!localStorage.getItem('fcv-onboarding-done')){
+        document.getElementById('onboarding-modal').style.display='flex';
+      }
+    } catch(e) {
+      // localStorage may be blocked in some corporate environments — ignore
+    }
+  }
+  function closeOnboarding(){
+    try {
+      if(document.getElementById('dont-show-again').checked){
+        localStorage.setItem('fcv-onboarding-done','1');
+      }
+    } catch(e) {}
+    document.getElementById('onboarding-modal').style.display='none';
+  }
+  initOnboarding();
+
+  // ── Session persistence ─────────────────────────────────────────────────────
+  function saveSession(){
+    const state = {
+      version: 1,
+      savedAt: new Date().toISOString(),
+      currentStage: curS,
+      history: hist,
+      fileNames: { project: pF.map(f=>f.name), context: cF.map(f=>f.name) }
+    };
+    const blob = new Blob([JSON.stringify(state, null, 2)], {type:'application/json'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'fcv-session-' + new Date().toISOString().slice(0,10) + '.json';
+    a.click();
+    URL.revokeObjectURL(url);
+    document.getElementById('session-status').textContent = 'Session saved at ' + new Date().toLocaleTimeString();
+  }
+
+  function loadSession(input){
+    const file = input.files[0];
+    if(!file) return;
+    const reader = new FileReader();
+    reader.onload = e => {
+      try {
+        const state = JSON.parse(e.target.result);
+        if(!state.version || !state.history){
+          alert('This does not appear to be a valid FCV session file.');
+          return;
+        }
+        hist = state.history;
+        curS = state.currentStage || 0;
+        sessionName = file.name;
+        document.getElementById('upload-panel').style.display='none';
+        document.getElementById('analysis-panel').style.display='block';
+        document.getElementById('save-session-btn').style.display='';
+        const savedAt = new Date(state.savedAt).toLocaleString();
+        document.getElementById('session-status').textContent =
+          'Resumed: ' + file.name + ' (saved ' + savedAt + ') — Stage ' + curS + ' complete';
+        setStepper(curS+1, 'active');
+        // Show resume prompt in stage-disp
+        const nextStage = curS < 4 ? curS + 1 : 4;
+        document.getElementById('stage-disp').innerHTML = `
+          <div class="callout info ani">
+            <div class="callout-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+            <div class="callout-body"><strong>Session resumed</strong>Analysis through Stage ${curS} has been loaded.
+            ${state.fileNames.project.length ? '<br>Original files: ' + [...state.fileNames.project,...state.fileNames.context].join(', ') : ''}
+            <br>Note: you will need to re-upload your documents if you want to run Stage 1 again.</div>
+          </div>`;
+        document.getElementById('act-area').innerHTML = curS < 4 ? `
+          <div class="act-bar ani">
+            <button class="btn btn-blue" onclick="runStage(${nextStage})">
+              Continue from Stage ${nextStage}
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+            <div class="sep"></div>
+            <button class="btn btn-ghost" onclick="reset()">Start over</button>
+          </div>` : '';
+      } catch(err) {
+        alert('Could not load session: ' + err.message);
+      }
+      input.value='';
+    };
+    reader.readAsText(file);
+  }
+
+  function updateSessionBar(){
+    if(curS > 0){
+      document.getElementById('save-session-btn').style.display='';
+      document.getElementById('session-status').textContent =
+        'Stage ' + curS + ' of 4 complete' + (sessionName ? ' · ' + sessionName : '');
+    }
+  }
+
+  const NAMES={1:'Identifying FCV Risks',2:'FCV-Sensitivity Screening',3:'Identifying Project Gaps',4:'Recommendations Note'};
+  const SHORT={1:'Identifying FCV Risks',2:'FCV-Sensitivity Screening',3:'Identifying Project Gaps',4:'Recommendations Note'};
+  const SUBS={1:'Extracting all FCV-relevant information from your documents',2:'Assessing risks across six FCV dimensions',3:'Identifying gaps and recommending mitigations',4:'Generating the final TTL support note'};
+  const COL={1:'s1',2:'s2',3:'s3',4:'s4'};
+
+  const CALLS={
+    1:{t:'Stage 1 of 4 · Identifying FCV Risks',
+       b:'<strong>What you are reading:</strong> The output has two parts. <strong>Part A</strong> extracts FCV risks directly from your uploaded documents. <strong>Part B</strong> sets out the wider FCV context from the AI training knowledge of sources such as UN, ICG, and World Bank reports — this is not live data, but reflects established reporting on the country. Check both parts and use the query box below to correct anything or add local knowledge before proceeding.'},
+    2:{t:'Stage 2 of 4 · FCV-Sensitivity Screening',
+       b:'<strong>What you are reading:</strong> This is the LLM structured assessment of the project FCV sensitivity and responsiveness across key dimensions. It shows how the AI is weighing the evidence and forming its judgements. Review the ratings and reasoning carefully — if a dimension seems underweighted, overweighted, or is missing important context, use the query box below to adjust before moving on.'},
+    3:{t:'Stage 3 of 4 · Identifying Project Gaps',
+       b:'<strong>What you are reading:</strong> This is the LLM analysis of gaps in FCV sensitivity and responsiveness, along with proposed mitigations and a do-no-harm check. This content feeds directly into the final Recommendations Note, so it is worth taking time here to refine any gaps that seem inaccurate or to add local knowledge the AI may not have captured.'},
+    4:{t:'Stage 4 of 4 · Recommendations Note — ready to copy',
+       b:'<strong>What you are reading:</strong> This is the LLM-generated Recommendations Note for the Task Team Leader, drawing on the analysis from the previous three stages. Review it carefully before use — treat it as a well-informed draft, not a final expert assessment. You can still refine specific sections using the query box. When satisfied, click <strong>Copy all</strong> and paste into your Word document.'}
+  };
+
+  function setupZone(zoneId, inputId, arr, type) {
+    const zone = document.getElementById(zoneId);
+    const inp  = document.getElementById(inputId);
+
+    // Drag and drop — click is handled natively by the visible input
+    zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('over'); });
+    zone.addEventListener('dragleave', e => { if (!zone.contains(e.relatedTarget)) zone.classList.remove('over'); });
+    zone.addEventListener('drop', e => {
+      e.preventDefault();
+      zone.classList.remove('over');
+      addFiles(Array.from(e.dataTransfer.files), arr, type);
+    });
+
+    // File input change
+    inp.addEventListener('change', function(e) {
+      const log = document.getElementById('debug-log');
+      log.textContent = 'change event fired on ' + inputId;
+      console.log('change event', inputId, this.files);
+      if (this.files && this.files.length > 0) {
+        log.textContent = 'Files detected: ' + Array.from(this.files).map(f=>f.name).join(', ');
+        addFiles(Array.from(this.files), arr, type);
+      } else {
+        log.textContent = 'change fired but files was empty or null (files=' + this.files + ')';
+      }
+      setTimeout(() => { this.value = ''; }, 100);
+    });
+    // Also try input event as fallback
+    inp.addEventListener('input', function(e) {
+      const log = document.getElementById('debug-log');
+      log.textContent = 'input event fired on ' + inputId;
+      if (this.files && this.files.length > 0) {
+        addFiles(Array.from(this.files), arr, type);
+      }
+    });
+  }
+
+  setupZone('dp', 'ip', pF, 'p');
+  setupZone('dc', 'ic', cF, 'c');
+
+  function addFiles(files, arr, type) {
+    let added = 0;
+    files.forEach(f => {
+      if (!arr.find(x => x.name === f.name)) {
+        arr.push(f);
+        added++;
+      }
+    });
+    if (added > 0) renderChips();
+  }
+
+  function removeF(name, type) {
+    if (type === 'p') pF = pF.filter(f => f.name !== name);
+    else cF = cF.filter(f => f.name !== name);
+    renderChips();
+  }
+
+  function renderChips() {
+    const el = document.getElementById('chips');
+    el.innerHTML = '';
+    const all = [...pF.map(f => ({f, t:'p'})), ...cF.map(f => ({f, t:'c'}))];
+    all.forEach(({f, t}) => {
+      const chip = document.createElement('div');
+      chip.className = `chip ${t}`;
+      const icon = t === 'p' ? '📄' : '📋';
+      // Escape filename for safe use in onclick
+      const safeName = f.name.replace(/'/g, "\'");
+      chip.innerHTML = `<span title="${f.name}">${icon} ${f.name}</span><button onclick="removeF('${safeName}','${t}')" aria-label="Remove ${f.name}">×</button>`;
+      el.appendChild(chip);
+    });
+    document.getElementById('dp').classList.toggle('has', pF.length > 0);
+    document.getElementById('dc').classList.toggle('has', cF.length > 0);
+    // button always enabled; startAnalysis guards internally
+  }
+
+  // Fallback: enable Begin button when native input shows files, even if change event was blocked
+  // Button is always enabled — startAnalysis() checks for files
+
+  async function startAnalysis(){
+    if(busy) return;
+    // Collect files directly from inputs at click time (works even if change event was blocked by corporate policy)
+    const ipEl = document.getElementById('ip');
+    const icEl = document.getElementById('ic');
+    if (ipEl && ipEl.files) {
+      Array.from(ipEl.files).forEach(f => { if (!pF.find(x => x.name === f.name)) pF.push(f); });
+    }
+    if (icEl && icEl.files) {
+      Array.from(icEl.files).forEach(f => { if (!cF.find(x => x.name === f.name)) cF.push(f); });
+    }
+    if (!pF.length) {
+      const log = document.getElementById('debug-log');
+      if (log) { log.style.color='#b91c1c'; log.textContent = '⚠ Please select a project document before beginning.'; }
+      return;
+    }
+    document.getElementById('upload-panel').style.display = 'none';
+    document.getElementById('analysis-panel').style.display = 'block';
+    await runStage(1);
+  }
+
+  async function runStage(stage,followOn=null){
+    if(busy)return;
+    busy=true;curS=stage;
+    setStepper(stage,'active');clearUI();
+
+    document.getElementById('stage-disp').innerHTML=`
+      <div class="stage-hdr ani">
+        <div class="stage-badge ${COL[stage]}">${stage}</div>
+        <div><div class="stage-title">${NAMES[stage]}</div><div class="stage-sub">${followOn?'Refining…':SUBS[stage]}</div></div>
+      </div>
+      <div class="load-card">
+        <div class="spinner" role="status" aria-label="Loading"></div>
+        <div class="load-title">${followOn?'Updating output…':'Generating '+SHORT[stage]+'…'}</div>
+        <p class="load-sub">This usually takes 20–60 seconds.</p>
+        <div class="load-tags"><span class="load-tag">Reading documents</span><span class="load-tag">Applying FCV lens</span><span class="load-tag">Drawing on web context</span></div>
+      </div>`;
+
+    try{
+      const payload={stage,history:hist,user_message:followOn||''};
+      // Attach session prompt override if user has edited this stage's prompt
+      if(sessionPrompts[stage]){
+        payload.prompt_override = sessionPrompts[stage];
+      }
+
+      if(stage===1){
+        const readF=(file,isCtx)=>new Promise((res,rej)=>{
+          const isPdf=file.name.toLowerCase().endsWith('.pdf');
+          const r=new FileReader();
+          if(isPdf){r.onload=e=>res({name:file.name,type:'pdf',content:e.target.result.split(',')[1],isContext:isCtx});r.readAsDataURL(file)}
+          else{r.onload=e=>res({name:file.name,type:'text',content:e.target.result,isContext:isCtx});r.readAsText(file)}
+          r.onerror=()=>rej(new Error('Could not read '+file.name));
+        });
+        payload.documents=[
+          ...await Promise.all(pF.map(f=>readF(f,false))),
+          ...await Promise.all(cF.map(f=>readF(f,true)))
+        ];
+      }
+
+      let res;
+      try{
+        res=await fetch('/api/run-stage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+      }catch(e){throw new Error('Could not reach the server. Please check your connection and try again.')}
+
+      if(!res.ok){
+        let msg='Server error '+res.status;
+        try{const d=await res.json();msg=d.error||msg}catch(e){}
+        throw new Error(msg);
+      }
+
+      const reader=res.body.getReader(),dec=new TextDecoder();
+      let buf='',streamed='';
+
+      document.getElementById('stage-disp').innerHTML=`
+        <div class="stage-hdr ani">
+          <div class="stage-badge ${COL[stage]}">${stage}</div>
+          <div><div class="stage-title">${NAMES[stage]}</div><div class="stage-sub">Generating…</div></div>
+        </div>
+        <div class="out-card">
+          <div class="out-hdr"><div class="out-hdr-l"><span class="dot live"></span>Generating output</div></div>
+          <div class="out-body" id="s-out" aria-live="polite"></div>
+        </div>`;
+
+      while(true){
+        const{done,value}=await reader.read();if(done)break;
+        buf+=dec.decode(value,{stream:true});
+        const lines=buf.split('\n');buf=lines.pop();
+        for(const line of lines){
+          if(!line.startsWith('data: '))continue;
+          try{
+            const p=JSON.parse(line.slice(6));
+            if(p.error)throw new Error(p.error);
+            if(p.truncation_warnings){
+              // Store warnings to render after renderOut fires
+              window._truncWarnings = p.truncation_warnings;
+            }
+            if(p.chunk){streamed+=p.chunk;const el=document.getElementById('s-out');if(el)el.innerHTML=md(streamed)}
+            if(p.done){hist=p.history||hist;curS=stage;updateSessionBar();renderOut(stage,p.result,followOn);setStepper(stage,'done');
+              // Inject truncation warning banner if any
+              if(window._truncWarnings && window._truncWarnings.length){
+                const warnHtml = window._truncWarnings.map(w=>`<div class="trunc-warn-item">${md(w)}</div>`).join('');
+                const warnEl = document.createElement('div');
+                warnEl.id = 'trunc-warn-area';
+                warnEl.className = 'trunc-warn-area ani';
+                warnEl.innerHTML = `
+                  <div class="trunc-warn-hdr">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    Document truncation — analysis may be incomplete
+                  </div>
+                  ${warnHtml}
+                  <div class="trunc-warn-note">The analysis below is based only on the portion of each document that was read. Consider whether key findings appear in the unread sections before proceeding to later stages.</div>`;
+                const disp = document.getElementById('stage-disp');
+                if(disp) disp.insertBefore(warnEl, disp.firstChild);
+                window._truncWarnings = null;
+              }
+            }
+          }catch(e){if(e.message!=='Unexpected end of JSON input')throw e}
+        }
+      }
+    }catch(e){showErr(e.message,stage);document.getElementById('stage-disp').innerHTML=''}
+    busy=false;
+  }
+
+  function renderOut(stage,result,isFollowOn){
+    const isLast=stage===4;
+    const c=CALLS[stage];
+    document.getElementById('stage-disp').innerHTML=`
+      <div class="stage-hdr ani">
+        <div class="stage-badge ${COL[stage]}">${stage}</div>
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;gap:10px">
+            <div class="stage-title">${NAMES[stage]}</div>
+            <button class="view-prompt-link ${sessionPrompts[stage]?'modified':''}" onclick="openPromptModal(${stage})" title="${sessionPrompts[stage]?'Prompt modified for this session':'View the prompt used for this stage'}">
+              ${sessionPrompts[stage]?'⚑ prompt (modified)':'view prompt'}
+            </button>
+          </div>
+          <div class="stage-sub">${isFollowOn?'Updated based on your input':SUBS[stage]}</div>
+        </div>
+      </div>
+      <div class="callout ${isLast?'ok':'info'} ani">
+        <div class="callout-icon">${isLast
+          ?'<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>'
+          :'<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>'
+        }</div>
+        <div class="callout-body"><strong>${c.t}</strong>${c.b}</div>
+      </div>
+      <div class="out-card ani">
+        <div class="out-hdr">
+          <div class="out-hdr-l"><span class="dot done"></span>${NAMES[stage]}</div>
+          <button class="copy-btn" id="copy-btn" onclick="copyOut()">Copy all</button>
+        </div>
+        <div class="out-body" id="out-txt">${md(result)}</div>
+      </div>`;
+
+    document.getElementById('refine-area').innerHTML=`
+      <div class="refine-card ani">
+        <div class="refine-lbl">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          Refine this output
+        </div>
+        <div class="refine-row">
+          <textarea class="refine-in" id="rfn" rows="2"
+            placeholder="e.g. 'Expand on the security dimension' · 'The project is in a border area — please factor this in' · 'Adjust tone to be more cautious'"
+            onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();doRefine()}"></textarea>
+          <button class="btn btn-ghost btn-sm" onclick="doRefine()">Send
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </div>
+      </div>`;
+
+    document.getElementById('act-area').innerHTML=isLast?`
+      <div class="act-bar ani">
+        <button class="btn btn-ghost" onclick="reset()">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          Start new analysis
+        </button>
+      </div>`:`
+      <div class="act-bar ani">
+        <button class="btn btn-blue" onclick="runStage(${stage+1})">
+          Continue to ${SHORT[stage+1]}
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+        <div class="sep"></div>
+        <button class="btn btn-ghost" onclick="reset()">Start over</button>
+      </div>`;
+
+    document.getElementById('stage-disp').scrollIntoView({behavior:'smooth',block:'start'});
+  }
+
+
+
+  function showErr(msg,stage){
+    setStepper(stage,'err');
+    document.getElementById('err-area').innerHTML=`
+      <div class="err-card ani" role="alert">
+        <div class="err-top">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#b91c1c" stroke-width="2" style="flex-shrink:0;margin-top:1px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div class="err-body">
+            <div class="err-title">Something went wrong</div>
+            <div class="err-msg">${msg}</div>
+          </div>
+        </div>
+        <div class="err-acts">
+          <button class="btn btn-ghost btn-sm" onclick="retry(${stage})">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.87"/></svg>
+            Try again
+          </button>
+          ${stage>1?`<button class="btn btn-ghost btn-sm" onclick="retry(${stage-1})">← Back to Stage ${stage-1}</button>`:''}
+          <button class="btn btn-danger btn-sm" onclick="reset()">Start over</button>
+        </div>
+      </div>`;
+  }
+
+  function retry(s){document.getElementById('err-area').innerHTML='';busy=false;runStage(s)}
+  function clearUI(){['err-area','stage-disp','refine-area','act-area'].forEach(id=>{const e=document.getElementById(id);if(e)e.innerHTML=''});window._truncWarnings=null;}
+
+  function copyOut(){
+    const el=document.getElementById('out-txt');if(!el)return;
+    navigator.clipboard.writeText(el.innerText||'').then(()=>{
+      const b=document.getElementById('copy-btn');
+      if(b){b.textContent='Copied ✓';b.classList.add('ok');setTimeout(()=>{b.textContent='Copy all';b.classList.remove('ok')},2500)}
+    }).catch(()=>{const t=document.createElement('textarea');t.value=el.innerText;document.body.appendChild(t);t.select();document.execCommand('copy');document.body.removeChild(t)});
+  }
+
+  function doRefine(){
+    const el=document.getElementById('rfn');const msg=el?.value.trim();
+    if(!msg||busy)return;el.value='';
+    document.getElementById('refine-area').innerHTML='';document.getElementById('act-area').innerHTML='';
+    runStage(curS,msg);
+  }
+
+  function setStepper(active,status){
+    document.getElementById('step-0').className='step done';
+    for(let i=1;i<=4;i++){
+      const el=document.getElementById(`step-${i}`);if(!el)continue;
+      if(i<active)el.className='step done';
+      else if(i===active)el.className=status==='err'?'step err':'step active';
+      else el.className='step';
+    }
+  }
+
+  function reset(){
+    pF=[];cF=[];hist=[];curS=0;busy=false;
+    document.getElementById('upload-panel').style.display='block';
+    document.getElementById('analysis-panel').style.display='none';
+    document.getElementById('chips').innerHTML='';
+    // button stays enabled for next use
+    document.getElementById('dp').classList.remove('has');
+    document.getElementById('dc').classList.remove('has');
+    clearUI();document.getElementById('stage-disp').innerHTML='';
+    for(let i=0;i<=4;i++){const el=document.getElementById(`step-${i}`);if(el)el.className='step'}
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  // Markdown renderer
+  function md(t){
+    if(!t)return'';
+    let h=t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    // Tables
+    h=h.replace(/(\|.+\|\n)(\|[-| :]+\|\n)((?:\|.+\|\n?)*)/g,m=>{
+      const rows=m.trim().split('\n').filter(r=>r.trim());
+      const heads=rows[0].split('|').filter(c=>c.trim());
+      const body=rows.slice(2);
+      return`<table><thead><tr>${heads.map(c=>`<th>${c.trim()}</th>`).join('')}</tr></thead><tbody>${body.map(r=>`<tr>${r.split('|').filter(c=>c.trim()).map(c=>`<td>${c.trim()}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+    });
+    h=h.replace(/^### (.+)$/gm,'<h3>$1</h3>').replace(/^## (.+)$/gm,'<h2>$1</h2>').replace(/^# (.+)$/gm,'<h1>$1</h1>');
+    h=h.replace(/\*\*\*(.+?)\*\*\*/g,'<strong><em>$1</em></strong>').replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\*(.+?)\*/g,'<em>$1</em>');
+    h=h.replace(/^---$/gm,'<hr>');
+    h=h.replace(/^□ (.+)$/gm,'<li style="list-style:none">☐ $1</li>').replace(/^- (.+)$/gm,'<li>$1</li>').replace(/^\d+\. (.+)$/gm,'<li>$1</li>');
+    h=h.replace(/(<li>.*?<\/li>\n?)+/g,m=>`<ul>${m}</ul>`);
+    h=h.replace(/\n{2,}/g,'</p><p>').replace(/\n/g,'<br>');
+    h='<p>'+h+'</p>';
+    ['h1','h2','h3','table','ul','hr'].forEach(tag=>{
+      h=h.replace(new RegExp(`<p>(<${tag}[^>]*>)`,'g'),'$1').replace(new RegExp(`(</${tag}>)<\\/p>`,'g'),'$1');
+    });
+    return h.replace(/<p>\s*<\/p>/g,'');
+  }
+
+  // ── Prompt viewer/editor ────────────────────────────────────────────────────
+  // Session-only overrides — reset on page reload
+  let sessionPrompts = {}; // {1: 'custom text', ...} — only populated when user edits
+  let defaultPrompts = {}; // loaded from server once
+  let promptModalActiveTab = 1;
+
+  async function ensureDefaultPromptsLoaded(){
+    if(Object.keys(defaultPrompts).length) return;
+    try {
+      const r = await fetch('/api/default-prompts');
+      defaultPrompts = await r.json();
+    } catch(e) {
+      defaultPrompts = {};
+    }
+  }
+
+  async function openPromptModal(stage){
+    await ensureDefaultPromptsLoaded();
+    document.getElementById('prompt-modal').style.display = 'flex';
+    showPromptTab(stage || promptModalActiveTab || 1);
+  }
+
+  function closePromptModal(){
+    document.getElementById('prompt-modal').style.display = 'none';
+  }
+
+  function showPromptTab(n){
+    promptModalActiveTab = n;
+    // Update tab styles
+    for(let i=1;i<=4;i++){
+      const tab = document.getElementById('ptab-'+i);
+      if(!tab) continue;
+      tab.className = 'prompt-tab' + (i===n?' active':'');
+      // Show modified dot if session override exists
+      const dot = tab.querySelector('.prompt-modified-dot');
+      if(sessionPrompts[i]){
+        if(!dot){ const d=document.createElement('span'); d.className='prompt-modified-dot'; tab.appendChild(d); }
+      } else {
+        if(dot) dot.remove();
+      }
+    }
+    // Load text into editor
+    const text = sessionPrompts[n] || defaultPrompts[String(n)] || '';
+    const editor = document.getElementById('prompt-edit-area');
+    editor.value = text;
+    editor.className = 'prompt-edit' + (sessionPrompts[n] ? ' modified' : '');
+    // Show/hide modified banner
+    document.getElementById('prompt-modified-banner').style.display = sessionPrompts[n] ? 'flex' : 'none';
+    document.getElementById('prompt-foot-status').textContent = sessionPrompts[n] ? 'Modified for this session' : 'Default prompt';
+  }
+
+  function onPromptEdit(){
+    const editor = document.getElementById('prompt-edit-area');
+    const isDefault = editor.value === (defaultPrompts[String(promptModalActiveTab)] || '');
+    editor.className = 'prompt-edit' + (isDefault ? '' : ' modified');
+  }
+
+  function saveCurrentPrompt(){
+    const editor = document.getElementById('prompt-edit-area');
+    const val = editor.value.trim();
+    const def = (defaultPrompts[String(promptModalActiveTab)] || '').trim();
+    if(val === def){
+      delete sessionPrompts[promptModalActiveTab];
+    } else {
+      sessionPrompts[promptModalActiveTab] = val;
+    }
+    showPromptTab(promptModalActiveTab);
+    updateTopbarPromptBtn();
+    document.getElementById('prompt-foot-status').textContent = 'Applied to this session ✓';
+    setTimeout(()=>{ document.getElementById('prompt-foot-status').textContent = sessionPrompts[promptModalActiveTab] ? 'Modified for this session' : 'Default prompt'; }, 2000);
+  }
+
+  function resetCurrentPrompt(){
+    delete sessionPrompts[promptModalActiveTab];
+    showPromptTab(promptModalActiveTab);
+    updateTopbarPromptBtn();
+  }
+
+  function updateTopbarPromptBtn(){
+    const btn = document.getElementById('prompt-bar-btn');
+    if(!btn) return;
+    const hasAny = Object.keys(sessionPrompts).length > 0;
+    if(hasAny){
+      btn.style.borderColor = '#f59e0b';
+      btn.style.color = '#d97706';
+      btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg> ⚑ Prompts (modified)`;
+    } else {
+      btn.style.borderColor = '';
+      btn.style.color = '';
+      btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg> View / Edit Prompts`;
+    }
+  }
+
+  // Override getPromptForStage to use session overrides when present
+  // Session prompt overrides are sent to the backend as prompt_override in the payload.
+  // The backend uses the override in place of its DEFAULT_PROMPTS for that stage run.
+
+</script>
+</body>
+</html>

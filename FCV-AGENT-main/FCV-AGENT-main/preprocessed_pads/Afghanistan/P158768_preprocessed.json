@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P158768",
+    "guid": 811751531403657634,
+    "node_id": 30254294,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b085d7cd68&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 122413
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Public-Private Partnerships and Public Investment Advisory Project (PPIAP)",
+      "project_development_objective": "To develop a pipeline of feasible private and publicly funded projects",
+      "total_financing": "US$50 million (IDA Grant: US$20 million; ARTF Grant: US$30 million)",
+      "implementation_period": "June 2018 - June 2023 (5 years)",
+      "beneficiaries": "Government institutions (MoF, CPA, line ministries), private investors (large, medium, small), and the people of Afghanistan through improved allocation of public resources and infrastructure development"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "National coverage across Afghanistan"
+      ],
+      "coverage_type": "national",
+      "fragile_or_conflict_affected_areas": "yes - Afghanistan is designated as a fragile state. The project explicitly addresses FCV context with ongoing security challenges, insurgency, and conflict affecting implementation and investment climate"
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Strengthening Institutional and Technical Capacity",
+        "description": "Development of PIM-PPP framework, standardized project appraisal documents, PPP Law Rules of Procedure, review and revision of relevant laws, FCCL framework, resident advisers to CPA, capacity-building programs, and awareness-building campaigns",
+        "financing": "US$5.0 million (100% IDA)"
+      },
+      {
+        "component_name": "Component 2: Infrastructure Project Preparation Facility (IPPF)",
+        "description": "Establishment and operation of IPPF with two windows: (a) Appraisal Window for pre-feasibility and feasibility studies for public/PPP projects; (b) PPP Project Development Fund Window for feasibility studies, safeguards documents, detailed design and tender documents for PPP projects",
+        "financing": "US$40.0 million (US$15 million IDA; US$25 million ARTF)"
+      },
+      {
+        "component_name": "Component 3: Project Management",
+        "description": "Support for Project Management Unit (PMU) operations including monitoring, management, and implementation obligations until mainstreamed into Afghan civil service",
+        "financing": "US$5.0 million (100% ARTF)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Central Partnership Authority (CPA) within Ministry of Finance (MoF), with support from MoF Procurement Directorate and Finance Directorate",
+      "coordination_mechanisms": "High-level oversight through Development Councils (DCs); centralized coordination through MoFBD, MoFPD, CPA, and MoEc; Project Evaluation Committee and Project Recommendation Committee for project review; line ministries retain responsibility for project identification and implementation",
+      "procurement_approach": "World Bank Procurement Regulations for Borrowers; prior review threshold for high-risk implementing agency; use of Standard Procurement Documents (SPDs), Requests for Proposals (RFPs); STEP system for tracking; procurement through open national competition; transaction advisers for PPP-specific procurement",
+      "monitoring_and_evaluation": "CPA conducts M&E with dedicated M&E specialist; semiannual and annual monitoring reports; annual and semiannual M&E reviews; midterm review at 2 years; implementation support missions at least twice yearly; monitoring of safeguards compliance; baseline data collection and stakeholder surveys"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Power-sharing arrangements under National Unity Government create tension; potential changes in political support for PPPs; increased insurgency weakening government capacity; poor governance and corruption risks; blurred relationship between business and politics",
+        "risk_rating": "high",
+        "mitigation_measures": "Government's continued effort to strengthen legal framework and address corruption; alignment with ANPDF reform agenda; integration with budget circular process; development of clear institutional and legal arrangements"
+      },
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Heavy reliance on aid; reduction in security and civilian support would pressure fiscal sustainability; constrained fiscal space with revenues at 11.4% of GDP financing only 60% of recurrent budget; stagnating economic growth at 2.6% (2017) and projected 2.2% (2018)",
+        "risk_rating": "high",
+        "mitigation_measures": "Project promotes maximization of private financing for development; supports structural reforms; integration of fiscal sustainability considerations into decision-making; FCCL framework to manage contingent liabilities"
+      },
+      {
+        "risk_category": "Sector Strategies and Policies",
+        "risk_description": "Weak enforcement of regulatory, policy, and legal framework; lack of in-house GoIRA technical expertise; nonavailability of technical experts on PPPs; multisectoral coordination challenges; feasibility studies may not yield anticipated results; lack of comprehensive development plans",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Technical assistance to streamline PPP framework; alignment with PIM framework; capacity building and institutional strengthening; development of manuals and guidelines; revision of relevant laws and policies"
+      },
+      {
+        "risk_category": "Technical Design of Project",
+        "risk_description": "PPP concept is relatively new in Afghanistan; complex technical challenges in PPP preparation; Afghanistan's fragility may reduce private investor interest; Government's fiscal constraints inhibit ability to guarantee PPPs; success depends on availability of donor funding for guarantees, insurance, capital subsidies",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Robust preparation of PPP projects through upstream identification and prioritization; strong synergies with other World Bank and donor-funded projects; support for risk identification and mitigation along project cycle; availability of World Bank, IFC, and MIGA guarantees and insurance"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "Highly uneven and thinly spread technical capacity in public sector; long-term aid dependency creating vulnerability to delays and coordination problems; CPA is new agency with limited experience; limited capacity in line ministries",
+        "risk_rating": "high",
+        "mitigation_measures": "Strong emphasis on institutional strengthening within MoF and sponsoring line ministries; resident advisers to work closely with CPA and line ministries; capacity-building programs; IPPF support for capacity building at MoFPD, CPA, and line ministries; train-the-trainer approach"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "No budget allocated for Project in FY2018; framework/guidelines for accessing IPPF funding not yet developed; Financial Management Manual not yet prepared; limited FM team capacity; high procurement risk implementing agency; limited familiarity with PPP transactions",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Preparation of Financial Management Manual by June 30, 2018; in-year budget approval from President; augmentation of FM team with one assistant; prior review threshold for high-risk implementing agency; hiring of transaction advisers for PPP advisory services; use of World Bank SPDs and procurement procedures; STEP system implementation; internal audit semiannually by MoF Internal Audit Department"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Project classified as Category A; some prepared projects may trigger safeguard risks including land acquisition and resettlement; potential impacts on natural habitats, international waterways, dams; environmental and social safeguards staff capacity limited",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Environmental and Social Management Framework (ESMF) and Resettlement Policy Framework (RPF) prepared and disclosed; social screening and scoping at pre-feasibility stage; Social Impact Assessment and site-specific Social Management Plans at feasibility stage; RAPs where needed; hiring of environmental and social safeguards specialists in MoF; riparian notification for international waterways projects; consultation with stakeholders"
+      },
+      {
+        "risk_category": "Stakeholders",
+        "risk_description": "Implementation relies on productive collaboration between multiple stakeholders (MoFPD, CPA, line ministries, private sector); number of stakeholders may lead to competition for resources and complicate decision-making; coordination challenges",
+        "risk_rating": "substantial",
+        "mitigation_measures": "Project designed with budget for enhanced coordination and communication strategy; MoF has experience implementing World Bank projects; Development Councils provide high-level oversight; clear institutional roles and responsibilities defined; regular coordination meetings and PPD events"
+      },
+      {
+        "risk_category": "Security",
+        "risk_description": "Afghanistan still recovering from conflict; recent violence in areas where infrastructure needs to be built; continuing high security risks; 2,640 people killed and 5,380 injured between January-September 2017; 200,000+ internally displaced in first half of 2017; 296,000+ refugees returned; security affecting business and consumer confidence",
+        "risk_rating": "high",
+        "mitigation_measures": "Project design accounts for fragile context; focus on preparation rather than implementation; flexibility in implementation arrangements; coordination with security assessments; integration with broader development agenda; support for institutional strengthening to improve government capacity"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Category A - Full Assessment",
+      "triggered_safeguard_policies": [
+        "Environmental Assessment (OP/BP 4.01)",
+        "Natural Habitats (OP 4.04)",
+        "Pest Management (OP 4.09)",
+        "Involuntary Resettlement (OP/BP 4.12)",
+        "Safety of Dams (OP/BP 4.37)",
+        "Projects on International Waterways (OP 7.50)"
+      ],
+      "grievance_redress_mechanism": "yes - Grievance Redress Committee to be established in MoF; exploration of feasibility of central grievance hotline integrating existing project-level hotlines; support for review and upgrade of grievance arrangements; World Bank Grievance Redress Service (GRS) available; World Bank Inspection Panel available for complaints",
+      "gender_considerations": "Gender analysis to be conducted for potential sectors; feasibility studies to use gender tagging tools; all development of policies, regulations, and manuals to be gender-informed; public-private dialogue and capacity-building to be inclusive with special provisions for women and majority-women-owned SMEs; training for female civil servants; capacity-building for female entrepreneurs; consultations with women beneficiaries through Afghan Women Chamber of Commerce; target of 5 female staff among 25 CP3P certified staff; all feasibility studies and PPP projects to consider gender issues",
+      "vulnerable_groups": [
+        "Poor and impoverished population (poverty increased from 38.3% in 2011 to 54.5% in 2016/17)",
+        "Unemployed and underemployed (unemployment at 23.9%; 400,000 new workers entering workforce annually)",
+        "Internally displaced persons (200,000+ displaced in first half of 2017)",
+        "Refugees (296,000+ returned from Iran and Pakistan)",
+        "Women (limited participation, unequal legal rights, limited access to finance, barriers to business registration)",
+        "Youth (half the population below age 15)",
+        "Communities affected by land acquisition and resettlement from infrastructure projects"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project explicitly designed for fragile, conflict, and violence (FCV) context; recognizes that PPP transactions in FCV contexts are complex and require long lead time; acknowledges security risks affecting project implementation and achievement of results; incorporates lessons from World Bank experience in FCV environments; focuses on preparation rather than implementation to reduce security exposure; integrates conflict sensitivity into institutional strengthening and capacity building; supports development of enabling environment for private investment despite fragility",
+      "fragility_context": "Afghanistan designated as fragile state; key fragility factors include: (1) ongoing insurgency and conflict with 2,640 deaths and 5,380 injuries in first 9 months of 2017; (2) large-scale displacement (200,000+ IDPs in H1 2017, 296,000+ refugee returns); (3) severe poverty (54.5% in 2016/17, up from 38.3% in 2011); (4) high unemployment (23.9%) and limited productive employment; (5) stagnating economic growth (2.6% in 2017, projected 2.2% in 2018); (6) heavy aid dependency (17% of GDP); (7) weak institutional capacity and governance; (8) limited private sector development; (9) power-sharing tensions in National Unity Government; (10) corruption and governance challenges",
+      "security_considerations": "Continuing high security risks have potential to adversely affect project implementation and achievement of results; recent violence involves opposing forces in areas where infrastructure needs to be built; security affecting business and consumer confidence; project design mitigates security risks by focusing on preparation activities rather than implementation; implementation support missions and coordination mechanisms account for security constraints; flexibility built into implementation arrangements to accommodate security situation changes",
+      "displacement_or_refugees": "yes - Project triggered Involuntary Resettlement (OP/BP 4.12) because some public and PPP projects prepared under Component 2, if subsequently implemented outside project scope, could result in land acquisition and resettlement; Resettlement Policy Framework (RPF) prepared with draft Terms of Reference for Resettlement Action Plans; due diligence procedures for land acquisition and resettlement included in RPF; preliminary social screening and scoping at pre-feasibility stage; Social Impact Assessment and site-specific Social Management Plans at feasibility stage; RAPs to be prepared where needed; local disclosure and consultation required per national law and World Bank safeguards policies. Context: 200,000+ internally displaced persons in first half of 2017 due to conflict; 296,000+ refugees returned from Iran and Pakistan in same period"
+    }
+  }
+}

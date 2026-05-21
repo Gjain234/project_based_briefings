@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P176594",
+    "guid": 99052824160540985,
+    "node_id": 34326543,
+    "pdf_url": "https://spfilesapi.worldbank.org/services?I4_SERVICE=FILE_URLS2&SITE_KEY=DRPSINT&I4_DOCID=BOSIB-98bc4d33-8a18-42f9-b863-6011477d1aaa.pdf",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 150264
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "Getting Results: Access and Delivery of Quality Education Services in Punjab Project (GRADES)",
+      "project_development_objective": "To increase girls' and boys' participation rates in pre-primary and primary grades and enhance reading proficiency in primary grades.",
+      "total_financing": "US$150 million (SDR 113.81 million equivalent)",
+      "implementation_period": "July 2024 - June 2029 (5 years)",
+      "beneficiaries": "Approximately 5 million children in pre-primary and primary grades in public and PEF schools; 7,000 headteachers; 165,000 teachers; 3,000+ teacher mentors (AEOs); indirect beneficiaries include future generations through sustained reforms"
+    },
+    "geographic_scope": {
+      "primary_locations": [
+        "Punjab Province",
+        "All districts in Punjab"
+      ],
+      "coverage_type": "provincial/national (Punjab is Pakistan's most populated province with 53% of Pakistan's population and 54.2% of GDP)",
+      "fragile_or_conflict_affected_areas": "partial - Punjab has experienced climate-induced crises including 2022 floods that damaged 1,843 school buildings; vulnerable to heatwaves, floods, and seismic activity; 7.6 million out-of-school children in Punjab (37.4% of Pakistan's total)"
+    },
+    "key_components": [
+      {
+        "component_name": "Component 1: Getting Results Agenda (Performance-Based Conditions)",
+        "description": "Supporting Punjab's education reform agenda through 7 PBCs covering: (1) targeting for results in school participation and learning outcomes; (2) strengthening and scaling public-private partnerships (PEF); (3) improved learning materials and recovery curriculum; (4) improving school readiness through scaling quality ECCE; (5) supporting teachers and headteachers towards learning recovery; (6) strengthening and using learning assessments; (7) strengthening Non-Salary Budgets",
+        "financing": "US$53.12 million"
+      },
+      {
+        "component_name": "Component 2: Building Climate-Smart Classrooms for a Sustainable Expansion of the School System",
+        "description": "Constructing approximately 5,400 additional classrooms (grades ECCE to 5) with climate-smart features including heat insulation, natural ventilation, raised plinths for flood-prone areas, reflective roofs, WASH facilities, wheelchair ramps, afforestation, water conservation, and rainwater harvesting; prioritizing reconstruction of flood-damaged classrooms and girls' schools",
+        "financing": "US$81.88 million"
+      },
+      {
+        "component_name": "Component 3: Technical Assistance, Evaluation and Project Implementation",
+        "description": "Providing technical support to implementing departments, research studies and third-party verification of PBCs, project staffing, supervision and monitoring of classroom construction, environmental and social compliance, and strengthening GBV reporting and response systems in schools",
+        "financing": "US$15 million"
+      },
+      {
+        "component_name": "Component 4: Contingent Emergency Response Component (CERC)",
+        "description": "Provision of immediate response to an Eligible Crisis or Emergency as needed",
+        "financing": "US$0 million (contingent)"
+      }
+    ],
+    "implementation_arrangements": {
+      "implementing_agency": "Government of Punjab - School Education Department (SED) and Communication and Works Department (C&WD); SED's attached departments: Punjab Examination Commission (PEC), Punjab Education Foundation (PEF), Punjab Curriculum and Textbook Board (PCTB), Quaid-e-Azam Academy for Educational Development (QAED)",
+      "coordination_mechanisms": "Project Steering Committee (PSC) chaired by Chairman P&D Board, meeting bi-annually; Departmental Review Committee (DRC) at SED level chaired by Secretary SED, meeting quarterly; SED-Service Delivery Unit (SDU) for overall coordination; GRADES Construction Unit (GCU) for Component 2 implementation; Program Monitoring and Implementation Unit (PMIU) as project secretariat",
+      "procurement_approach": "World Bank Procurement Regulations for IPF Borrowers (September 2023); some activities may follow provincial procurement procedures subject to Bank approval; Project Procurement Strategy for Development (PPSD) being finalized; dedicated procurement specialists to be recruited; civil works procurement to follow Bank guidelines with external supervision firm for ESF compliance",
+      "monitoring_and_evaluation": "PMIU responsible for overall M&E using three data sources: School Information System (SIS), Monitoring and Evaluation Assistants' real-time school monitoring data, and Assistant Education Officers' data; quarterly reporting to DRC and bi-annual to PSC; third-party validation (TPV) for PBC verification; baseline, midline, and endline studies on project impact; annual financial statements based on IPSAS; external audit by Directorate General Audit Punjab; internal audit by independent firm twice yearly"
+    },
+    "identified_risks": [
+      {
+        "risk_category": "Macroeconomic",
+        "risk_description": "Pakistan's economy remains vulnerable despite recent stabilization. Risks include international price/interest rate shocks, natural disasters impacting production and revenue, reversal of recent reforms, and lack of progress in structural reforms. Debt and external financing needs remain elevated.",
+        "risk_rating": "high",
+        "mitigation_measures": "Ongoing World Bank and partner support to structural policy reforms in fiscal, energy, and state-owned enterprise sectors; project design includes climate-resilient infrastructure to mitigate disaster impacts"
+      },
+      {
+        "risk_category": "Political and Governance",
+        "risk_description": "Strong political support from GoPunjab exists, but SED, C&WD, and P&D experience frequent leadership turnover which could impact project continuity and implementation",
+        "risk_rating": "substantial",
+        "mitigation_measures": "High-level coordination through Project Steering Committee; strong commitment by GoPunjab to limit frequency of project management transfers; recent satisfactory enforcement of this commitment"
+      },
+      {
+        "risk_category": "Institutional Capacity for Implementation and Sustainability",
+        "risk_description": "Implementation capacity varies across departments; PMIU has experience with WB projects but C&WD requires additional procurement support",
+        "risk_rating": "low",
+        "mitigation_measures": "PMIU has previous experience implementing PESP-III and PHCIP; dedicated procurement specialists to be recruited; external supervision firm for civil works; strong GoPunjab commitment to education sector"
+      },
+      {
+        "risk_category": "Fiduciary",
+        "risk_description": "Financial management and procurement risks exist given scale of civil works and multiple implementing entities",
+        "risk_rating": "moderate",
+        "mitigation_measures": "FM arrangements assessed as adequate per Bank IPF with PBCs policy; two designated accounts (SED and C&WD); external audit by Directorate General Audit Punjab; internal audit by independent firm; biannual interim unaudited financial reports; off-the-shelf financial accounting software recommended; dedicated FM specialists in GCU"
+      },
+      {
+        "risk_category": "Environmental and Social",
+        "risk_description": "Civil works pose localized, temporary environmental and health/safety risks including construction waste, occupational health and safety, WASH facility concerns, e-waste generation, and potential land acquisition/resettlement issues. GBV, labor management, and community health and safety risks from construction activities.",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Environmental and Social Framework (ESF) instruments prepared; Environmental and Social Commitment Plan (ESCP) in place; external supervision firm to monitor ESF implementation; suitable provisions in contract documents; GoPunjab's extensive experience with Bank safeguards; PMIU experienced team; grievance redress mechanism with two-tiered structure (district and PMIU levels); stakeholder engagement plan disclosed; GBV prevention and response training for teachers; child protection code of conduct"
+      },
+      {
+        "risk_category": "Technical Design of Project or Program",
+        "risk_description": "Complexity of coordinating multiple departments and attached agencies; need to ensure quality of classroom construction and climate-smart features; ensuring effective implementation of PBCs",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Detailed Project Operations Manual (POM) to be prepared within 4 months of effectiveness; School Infrastructure Strategy to be developed within 6 months; independent verification agent to verify PBC achievement; third-party validation for monitoring; technical assistance component includes research and evaluation support"
+      },
+      {
+        "risk_category": "Stakeholders",
+        "risk_description": "Potential resistance to reforms; need for community and parental engagement; private sector partnership sustainability concerns",
+        "risk_rating": "moderate",
+        "mitigation_measures": "Stakeholder Engagement Plan prepared and publicly disclosed; parental engagement model using SMS technology and smartphone application; grievance redress mechanism; community satisfaction surveys in Years 3 and 5; PEF partnership model strengthening including fundraising model and revised partnership rules"
+      }
+    ],
+    "safeguards_and_social": {
+      "environmental_category": "Moderate",
+      "triggered_safeguard_policies": [
+        "ESS 1: Assessment and Management of Environmental and Social Risks and Impacts",
+        "ESS 2: Labor and Working Conditions",
+        "ESS 3: Resource Efficiency and Pollution Prevention and Management",
+        "ESS 4: Community Health and Safety",
+        "ESS 5: Land Acquisition, Restrictions on Land Use and Involuntary Resettlement",
+        "ESS 8: Cultural Heritage",
+        "ESS 10: Stakeholder Engagement and Information Disclosure"
+      ],
+      "grievance_redress_mechanism": "Yes - Two-tiered grievance redress structure: (1) District level enabling immediate local responses to grievances among school and community level stakeholders and beneficiaries; (2) PMIU level for review and addressing more difficult cases not resolved locally. Grievance redressal cell established in PMIU's Safeguards Office under supervision of PMIU's Program Director. Project-level grievance mechanisms complement World Bank's Grievance Redress Service (GRS) and Accountability Mechanism (AM).",
+      "gender_considerations": "Gender is a critical cross-cutting theme. Project addresses supply-side barriers to girls' education: (1) limited supply of school establishments and poor quality of learning environments - addressed through classroom construction prioritizing girls' schools and improved learning environments; (2) shortage and poor quality of female teachers - addressed through teacher training and recruitment targets (75% female teachers); (3) weak leadership and school management - addressed through headteacher training and management support. Demand-side constraints addressed through parental engagement using SMS and smartphone applications. Gender-disaggregated targets for school participation and learning outcomes tracked at district and school levels. All PDO indicators disaggregated by gender. Teacher training includes child protection code of conduct with GBV prevention, response, and referrals. Improved teacher guides incorporate elements addressing girls' needs and positive role models.",
+      "vulnerable_groups": [
+        "Girls (17% of girls aged 6-16 in Punjab unlikely to ever attend school vs 13% of boys; gender gap in enrollment)",
+        "Out-of-school children (7.6 million in Punjab, 37.4% of Pakistan's total)",
+        "Children with disabilities (18% of children aged 6-16 in Punjab have functional disabilities; limited inclusive education infrastructure and teacher training)",
+        "Children in flood-prone and seismic zones (1,843 school buildings damaged in 2022 floods)",
+        "Children affected by climate-induced school closures (heat waves, flooding, extreme weather)",
+        "Children in rural areas (distance to school particularly impacts girls' enrollment)",
+        "Children from low-income households (poverty rate 40.1% at lower-middle income threshold)",
+        "Children affected by recurring emergencies (COVID-19 pandemic, 2022 floods)"
+      ]
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "Project design incorporates conflict-sensitive approaches through: (1) universal, gender-neutral interventions that benefit underserved populations including girls; (2) focus on inclusive education and disability inclusion to reach marginalized groups; (3) strengthening of data systems for evidence-based decision-making; (4) community and parental engagement mechanisms; (5) grievance redress mechanisms at multiple levels; (6) child protection and GBV prevention training for teachers; (7) focus on school readiness and foundational learning to address learning crisis; (8) support for both public and private education systems to ensure broad access",
+      "fragility_context": "Pakistan faces multiple fragility factors: (1) Macroeconomic instability - high debt, external financing needs, volatile growth, recent IMF programs; (2) Climate vulnerability - among most affected countries on Global Climate Risk Index; 2022 floods impacted 33 million people, damaged 1,843 schools in Punjab, disrupted 3.5 million children's schooling; (3) Human capital crisis - 77% learning poverty, 40% stunting, 20.3 million out-of-school children; (4) Governance challenges - frequent leadership turnover in key departments, weak institutional capacity in some areas; (5) Social vulnerabilities - gender inequality in education, high poverty, child protection concerns including GBV; (6) Recurring emergencies - COVID-19 pandemic, 2022 floods, heat waves, earthquakes (2005 earthquake killed 853 teachers and 18,095 students, destroyed 7,500 schools)",
+      "security_considerations": "Project addresses security through: (1) Climate-resilient school infrastructure designed to withstand floods, earthquakes, and extreme heat - can serve as emergency shelters; (2) WASH facilities and safe learning environments to address girls' safety concerns; (3) GBV prevention and response systems in schools; (4) Child protection code of conduct and training for teachers; (5) Disability-inclusive infrastructure including ramps and accessible facilities; (6) Community engagement and grievance mechanisms to address safety concerns; (7) Monitoring systems to track school closures and disruptions from emergencies",
+      "displacement_or_refugees": "No direct displacement or refugee populations mentioned in PAD. However, project addresses impacts of 2022 floods which permanently displaced many people and damaged school infrastructure. Project includes: (1) prioritization of reconstruction of classrooms and WASH facilities in schools damaged during 2022 floods; (2) elevated school design for flood-prone areas; (3) dry and wet flood-proofing measures; (4) climate-resilient infrastructure to reduce future disaster impacts; (5) monitoring systems to track return of students to school after natural disasters or pandemics"
+    }
+  }
+}
