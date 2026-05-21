@@ -3698,9 +3698,6 @@
     "setup.py": {
       "checksum": "c8455fc55a5145f66145060a13a7616e"
     },
-    "static/admin.html": {
-      "checksum": "f75068214462b2ad91cf415eb28072c8"
-    },
     "static/architecture.html": {
       "checksum": "9abe6980b038fb3f3047949e7d134b48"
     },
