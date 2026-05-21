@@ -49,8 +49,7 @@
         <div><strong>Experimental Tool:</strong> This briefing generator synthesizes country risk data, project documents, and implementation reports. Generated content requires expert review and verification before operational use.</div>
       </div>
       <div class="tab-nav">
-        <!-- <a href="/" class="tab-link">FCV Project Screener</a> -->
-        <a href="/briefing" class="tab-link active">Portfolio Briefing Generator</a>
+        <a href="/" class="tab-link active">Portfolio Briefing Generator</a>
       </div>
     </div>
   </div>
@@ -662,6 +661,67 @@ Return valid JSON with structure: { "connections": [ { "country_risk_id", "count
     </div>
   </div>
 
+  <!-- Onboarding modal -->
+  <div id="onboarding-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:1000;align-items:center;justify-content:center;padding:20px;" role="dialog" aria-modal="true" aria-label="About this tool">
+    <div style="background:#fff;border-radius:10px;max-width:680px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.25);overflow:hidden;max-height:90vh;display:flex;flex-direction:column;">
+      <div style="background:var(--wbg-navy,#002244);padding:24px 32px 20px;flex-shrink:0;">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:#47C4EB;margin-bottom:8px;display:flex;align-items:center;gap:8px;"><span style="display:inline-block;width:16px;height:2px;background:#47C4EB"></span>WBG FCV Analytics Unit</div>
+        <h2 style="font-family:'Source Serif 4',serif;font-weight:300;font-size:24px;color:#fff;margin-bottom:6px;">FCV Portfolio Briefing Generator</h2>
+        <p style="font-size:14px;font-style:italic;color:rgba(255,255,255,.6)">Comprehensive FCV portfolio briefings using country risk analysis, PAD assessments, and implementation status</p>
+      </div>
+      <div style="overflow-y:auto;flex:1;">
+
+        <div style="padding:20px 32px;border-bottom:1px solid #d9e2ec;">
+          <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#5a6a7e;margin-bottom:10px;">What this tool does</div>
+          <p style="font-size:14px;line-height:1.65;color:#1a2a3a;">This tool generates structured FCV portfolio briefings for any World Bank country portfolio. It combines country-level risk intelligence (from CrisisWatch and other sources), project design analysis from PADs, and realized implementation risks from ISRs and Aide Memoires — then uses an AI to synthesize them into a cohesive briefing.</p>
+          <p style="font-size:14px;line-height:1.65;color:#1a2a3a;margin-top:10px;">The tool is designed to support portfolio oversight conversations between FCV specialists and country teams. It works best as a structured starting point, not a final product.</p>
+        </div>
+
+        <div style="padding:20px 32px;border-bottom:1px solid #d9e2ec;">
+          <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#5a6a7e;margin-bottom:14px;">How to use it</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <div style="border:1px solid #d9e2ec;border-radius:6px;padding:12px 14px;border-top:3px solid #0072BB;">
+              <div style="font-size:11px;font-weight:700;color:#0072BB;text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px;">1 · Select a Country</div>
+              <p style="font-size:12.5px;color:#1a2a3a;line-height:1.55;">Choose a country from the dropdown. The tool will load its active World Bank portfolio and any cached risk data.</p>
+            </div>
+            <div style="border:1px solid #d9e2ec;border-radius:6px;padding:12px 14px;border-top:3px solid #005A8E;">
+              <div style="font-size:11px;font-weight:700;color:#005A8E;text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px;">2 · Choose Briefing Type</div>
+              <p style="font-size:12.5px;color:#1a2a3a;line-height:1.55;">Select how the briefing should be structured: by RRA headings, by country risk, by sector, or with custom categories you define.</p>
+            </div>
+            <div style="border:1px solid #d9e2ec;border-radius:6px;padding:12px 14px;border-top:3px solid #E07B00;">
+              <div style="font-size:11px;font-weight:700;color:#E07B00;text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px;">3 · Generate</div>
+              <p style="font-size:12.5px;color:#1a2a3a;line-height:1.55;">Click Generate Briefing. The first run takes 10–15 minutes; subsequent runs reuse cached data and complete in ~2–3 minutes.</p>
+            </div>
+            <div style="border:1px solid #d9e2ec;border-radius:6px;padding:12px 14px;border-top:3px solid #1A7A4A;">
+              <div style="font-size:11px;font-weight:700;color:#1A7A4A;text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px;">4 · Review &amp; Refine</div>
+              <p style="font-size:12.5px;color:#1a2a3a;line-height:1.55;">Inspect intermediate outputs in the Country Risks, PAD Risks, and Implementation Risks tabs. Edit the prompt to adjust style or focus.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="padding:20px 32px;background:#fff8f8;border-bottom:1px solid #fca5a5;">
+          <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#991b1b;margin-bottom:10px;display:flex;align-items:center;gap:6px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            Important — use with care
+          </div>
+          <ul style="font-size:13px;line-height:1.7;color:#7f1d1d;padding-left:18px;">
+            <li>Outputs are generated by an AI and <strong>may contain errors, omissions, or misjudgements</strong>. They should not be treated as definitive expert analysis.</li>
+            <li>Country risk intelligence is drawn from CrisisWatch and other sources, which may be <strong>incomplete or dated</strong> for fast-moving situations.</li>
+            <li>The briefing should be <strong>reviewed and validated</strong> by an FCV specialist before any operational use.</li>
+          </ul>
+        </div>
+
+        <div style="padding:18px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+          <label style="display:flex;align-items:center;gap:7px;font-size:12px;color:#5a6a7e;cursor:pointer;"><input type="checkbox" id="briefing-dont-show-again"> Don't show this again</label>
+          <button onclick="closeBriefingOnboarding()" style="display:inline-flex;align-items:center;gap:7px;border:none;border-radius:5px;font-family:'Source Sans 3',Arial,sans-serif;font-size:14px;font-weight:600;cursor:pointer;background:#002244;color:#fff;padding:11px 28px;box-shadow:0 1px 4px rgba(0,34,68,.08);">
+            Get started →
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <!-- Modal for viewing old briefings -->
   <div id="briefingModal" class="modal" style="display:none;">
     <div class="modal-content">
@@ -697,6 +757,26 @@ Return valid JSON with structure: { "connections": [ { "country_risk_id", "count
     </div>
   </div>
 
+  <script>
+    (function() {
+      var modal = document.getElementById('onboarding-modal');
+      try {
+        if (!localStorage.getItem('briefing-onboarding-done')) {
+          modal.style.display = 'flex';
+        }
+      } catch(e) {
+        modal.style.display = 'flex';
+      }
+    })();
+    function closeBriefingOnboarding() {
+      try {
+        if (document.getElementById('briefing-dont-show-again').checked) {
+          localStorage.setItem('briefing-onboarding-done', '1');
+        }
+      } catch(e) {}
+      document.getElementById('onboarding-modal').style.display = 'none';
+    }
+  </script>
   <script src="static/briefing.js?v=6"></script>
 </body>
 </html>

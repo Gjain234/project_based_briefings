@@ -5,7 +5,7 @@ import ast
 import base64
 import csv
 import glob
-from flask import Flask, request, jsonify, send_from_directory, Response, stream_with_context
+from flask import Flask, request, jsonify, send_from_directory, Response, stream_with_context, redirect
 import anthropic
 from background_docs import FCV_GUIDE
 from rra_cache import get_rra_cache
@@ -178,6 +178,11 @@ client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY_DEV"))
 
 @app.route('/')
 def index():
+    return send_from_directory('.', 'briefing.html')
+
+
+@app.route('/screener')
+def screener_page():
     base = os.path.dirname(os.path.abspath(__file__))
     static_path = os.path.join(base, 'static')
     if os.path.exists(os.path.join(static_path, 'index.html')):
@@ -375,7 +380,7 @@ def run_stage():
 
 @app.route('/briefing')
 def briefing_page():
-    return send_from_directory('.', 'briefing.html')
+    return redirect('/')
 
 @app.route('/api/briefing/countries')
 def get_countries():
