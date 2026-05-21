@@ -365,7 +365,7 @@ async function maybeReviewProjectSelection(requestPayload) {
 
   showStatus('Reviewing project selection...', 'info');
 
-  const response = await fetch('/api/briefing/project-selection', {
+  const response = await fetch('api/briefing/project-selection', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify(requestPayload)
@@ -391,7 +391,7 @@ async function loadCountries() {
   console.log('loadCountries called');
   try {
     console.log('Fetching /api/briefing/countries...');
-    const response = await fetch('/api/briefing/countries');
+    const response = await fetch('api/briefing/countries');
     console.log('Response status:', response.status);
     const data = await response.json();
     console.log('Countries data:', data);
@@ -424,7 +424,7 @@ async function loadLastScanDate(country) {
   if (!country) return;
   
   try {
-    const response = await fetch(`/api/briefing/last-scan/${encodeURIComponent(country)}`);
+    const response = await fetch(`api/briefing/last-scan/${encodeURIComponent(country)}`);
     const data = await response.json();
     
     const dateDiv = document.getElementById('lastScanDate');
@@ -518,7 +518,7 @@ async function generateBriefing(customPrompt = null, selectedProjectIds = null, 
   document.getElementById('resultsSection').style.display = 'none';
   
   try {
-    const response = await fetch('/api/briefing/generate', {
+    const response = await fetch('api/briefing/generate', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -599,9 +599,9 @@ async function generateBriefing(customPrompt = null, selectedProjectIds = null, 
               const country = data.country;
               
               Promise.all([
-                fetch(`/api/briefing/content/${encodeURIComponent(country)}`).then(r => r.json()),
-                fetch(`/api/briefing/risks/${encodeURIComponent(country)}`).then(r => r.json()),
-                fetch(`/api/briefing/project-names/${encodeURIComponent(country)}`).then(r => r.json())
+                fetch(`api/briefing/content/${encodeURIComponent(country)}`).then(r => r.json()),
+                fetch(`api/briefing/risks/${encodeURIComponent(country)}`).then(r => r.json()),
+                fetch(`api/briefing/project-names/${encodeURIComponent(country)}`).then(r => r.json())
               ])
                 .then(([briefingData, risksData, projectNames]) => {
                   const results = {
@@ -1226,7 +1226,7 @@ async function initializePromptEditor() {
 
   let defaultPrompt = '';
   try {
-    const response = await fetch('/api/briefing/default-prompt', {
+    const response = await fetch('api/briefing/default-prompt', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -1292,7 +1292,7 @@ function enablePromptEditor() {
 
 // Load recent briefings for a country
 function loadRecentBriefings(country) {
-  fetch(`/api/briefing/recent/${encodeURIComponent(country)}`)
+  fetch(`api/briefing/recent/${encodeURIComponent(country)}`)
     .then(response => response.json())
     .then(data => {
       const section = document.getElementById('recentBriefingsSection');
@@ -1328,7 +1328,7 @@ function loadRecentBriefings(country) {
 // View a specific briefing in main content area
 function viewBriefing(filename, country) {
   // Fetch the specific file content
-  fetch(`/api/briefing/file/${encodeURIComponent(filename)}`)
+  fetch(`api/briefing/file/${encodeURIComponent(filename)}`)
     .then(response => response.json())
     .then(data => {
       if (data.briefing) {
@@ -1452,7 +1452,7 @@ async function checkRraExists(country) {
   }
   
   try {
-    const response = await fetch(`/api/briefing/rra-check/${encodeURIComponent(country)}`);
+    const response = await fetch(`api/briefing/rra-check/${encodeURIComponent(country)}`);
     const data = await response.json();
     
     const compareBtn = document.getElementById('compareRraBtn');
@@ -1504,7 +1504,7 @@ async function compareToRra() {
   showStatus('Comparing briefing to RRA... this may take a minute', 'info');
   
   try {
-    const response = await fetch('/api/briefing/compare-to-rra', {
+    const response = await fetch('api/briefing/compare-to-rra', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

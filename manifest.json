@@ -3708,7 +3708,7 @@
       "checksum": "f15ca7715110d8a803e99e2ae5d39474"
     },
     "app.py": {
-      "checksum": "c9e3987538a248076c81885c5d02aac3"
+      "checksum": "016909109b607ea66e50ba3243ef195a"
     },
     "app_shareable.py": {
       "checksum": "a4dfacaa8ae671d7757b6c4cb0a3fa14"
@@ -3717,7 +3717,7 @@
       "checksum": "34706b11437a03858635689b833a7fa5"
     },
     "briefing.html": {
-      "checksum": "42a9fd0a529111716c242c0fcb9b1d37"
+      "checksum": "a40bb2fec3e54408cb92b19a767f6fd0"
     },
     "briefing_config.py": {
       "checksum": "6ffde763fb86acd038d2c81337d8d99f"
@@ -3774,7 +3774,7 @@
       "checksum": "c45e4e69287159229cb32568c4c60d8b"
     },
     "index.html": {
-      "checksum": "40ae0ce9a3f9fb052f658e20c0d5d694"
+      "checksum": "a1758712d9fa47c572aff98188b79291"
     },
     "intermediary_outputs/Afghanistan_briefing_risks.csv": {
       "checksum": "d03f497130a628e2c5189e8a4e7e3ed9"
@@ -7362,7 +7362,7 @@
       "checksum": "9abe6980b038fb3f3047949e7d134b48"
     },
     "static/briefing.js": {
-      "checksum": "091b5333becb518c6ece3a16384df39f"
+      "checksum": "64e2064a1dab170544d0767f673b029b"
     },
     "static/briefing_styles.css": {
       "checksum": "f8a75685ae13dd46b9a9ae7e2c18e709"

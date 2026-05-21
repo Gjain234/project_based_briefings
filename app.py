@@ -89,7 +89,7 @@ except ImportError:
 # ── Constants ────────────────────────────────────────────────────────────────
 
 MAX_DOC_CHARS = 800_000
-ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD", "fcv-admin-2024")
+
 PROMPTS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'prompts.json')
 
 DO_NO_HARM_HEADER = """---
@@ -195,44 +195,10 @@ def health():
     return jsonify({'status': 'ok'})
 
 
-# ── Admin routes ─────────────────────────────────────────────────────────────
-
 @app.route('/how-it-works')
 def how_it_works():
     base = os.path.dirname(os.path.abspath(__file__))
     return send_from_directory(os.path.join(base, 'static'), 'architecture.html')
-
-
-@app.route('/admin')
-def admin():
-    base = os.path.dirname(os.path.abspath(__file__))
-    return send_from_directory(os.path.join(base, 'static'), 'admin.html')
-
-
-@app.route('/api/admin/prompts', methods=['GET'])
-def get_prompts():
-    if request.headers.get('X-Admin-Password') != ADMIN_PASSWORD:
-        return jsonify({'error': 'Unauthorized'}), 401
-    return jsonify(load_prompts())
-
-
-@app.route('/api/admin/prompts', methods=['POST'])
-def set_prompts():
-    if request.headers.get('X-Admin-Password') != ADMIN_PASSWORD:
-        return jsonify({'error': 'Unauthorized'}), 401
-    data = request.get_json()
-    if not data:
-        return jsonify({'error': 'Invalid JSON'}), 400
-    save_prompts(data)
-    return jsonify({'ok': True})
-
-
-@app.route('/api/admin/prompts/reset', methods=['POST'])
-def reset_prompts():
-    if request.headers.get('X-Admin-Password') != ADMIN_PASSWORD:
-        return jsonify({'error': 'Unauthorized'}), 401
-    save_prompts({})
-    return jsonify({'ok': True})
 
 
 @app.route('/api/default-prompts', methods=['GET'])
