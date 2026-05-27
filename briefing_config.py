@@ -15,10 +15,11 @@ def get_document_df_path(internal=True):
     if not internal:
         return "./public_documents_filtered.csv"
     else:
-        return "./joined_df_filtered.csv"
+        return "./all_documents_filtered.csv"
 
 # Model configurations
-OPENAI_CHAT_MODEL = "gpt-5.2"
+OPENAI_CHAT_MODEL = "gpt-5.4-mini"
+OPENAI_REASONING_MODEL = "gpt-5.5"
 ANTHROPIC_CHAT_MODEL = "claude-haiku-4-5"  # Fast model for general tasks
 ANTHROPIC_REASONING_MODEL = "claude-sonnet-4-6"  # Reasoning model for complex tasks
 

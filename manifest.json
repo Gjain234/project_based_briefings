@@ -9,16 +9,19 @@
     "version": "3.11.9",
     "package_manager": {
       "name": "pip",
-      "version": "26.0.1",
+      "version": "26.1.1",
       "package_file": "requirements.txt"
     }
   },
   "files": {
     "requirements.txt": {
-      "checksum": "eaf87368fc7f4835b7165f7780268009"
+      "checksum": "1bd62a08bb75efd987dce524512a1cb5"
+    },
+    ".DS_Store": {
+      "checksum": "5a2aa59f4e689158b03395579b08a754"
     },
     ".gitignore": {
-      "checksum": "2a00a8acf5b50d5a24bd66abce17be50"
+      "checksum": "2c3e3e2e23886c246ef8d0ceb42f21ee"
     },
     ".pytest_cache/.gitignore": {
       "checksum": "ae07caff09568018697eb6087d745223"
@@ -51,7 +54,7 @@
       "checksum": "f15ca7715110d8a803e99e2ae5d39474"
     },
     "app.py": {
-      "checksum": "016909109b607ea66e50ba3243ef195a"
+      "checksum": "8f1d1eb30b23cb0402252ec5b7eb88e3"
     },
     "app_shareable.py": {
       "checksum": "a4dfacaa8ae671d7757b6c4cb0a3fa14"
@@ -63,7 +66,7 @@
       "checksum": "a40bb2fec3e54408cb92b19a767f6fd0"
     },
     "briefing_config.py": {
-      "checksum": "6ffde763fb86acd038d2c81337d8d99f"
+      "checksum": "0acbeaecb23b634e4457708cfb50e473"
     },
     "briefing_how_it_works.html": {
       "checksum": "ce80b6fea39f17a31e4da5ec9ec89d8c"
@@ -72,13 +75,13 @@
       "checksum": "c1e4c8fcac852d4b8bb2b4eeab5f8ee4"
     },
     "briefing_setup.py": {
-      "checksum": "8e1507ef3a8865e9685de94f5c7e7bce"
+      "checksum": "ef6bd039be1e17fcf3ee9067aee0bfb2"
     },
     "briefing_shareable.html": {
       "checksum": "602cc03febd0ba4306fd137fe15065b9"
     },
     "config.py": {
-      "checksum": "6ffde763fb86acd038d2c81337d8d99f"
+      "checksum": "73dd332c26ebdb94845b01761c00f353"
     },
     "country_ids.json": {
       "checksum": "c3032586a7ae4386723ec4df0a9d222c"
@@ -96,7 +99,7 @@
       "checksum": "30008794f96939eee7ff7d3ee3f63dd8"
     },
     "generate_briefing.py": {
-      "checksum": "30b62bfc7c711b8d2f4df32ad9aef17a"
+      "checksum": "e8ef58a2a848399d3cd55dfa112d0625"
     },
     "get_briefing_risks.py": {
       "checksum": "e19450f3316f503533f2f01bf7f884e2"
@@ -112,9 +115,6 @@
     },
     "get_pad_risks.py": {
       "checksum": "ef67f38ab745dabe79c5302f48bc0843"
-    },
-    "gitignore": {
-      "checksum": "c45e4e69287159229cb32568c4c60d8b"
     },
     "index.html": {
       "checksum": "a1758712d9fa47c572aff98188b79291"
@@ -153,7 +153,10 @@
       "checksum": "24981637d3f727755570e6ae52936277"
     },
     "intermediary_outputs/Djibouti_implementation_realized_risks_mapped.csv": {
-      "checksum": "e603f8ba63bb932f2cbad8c9d0809e94"
+      "checksum": "632690bb27e417122167f087371fd672"
+    },
+    "intermediary_outputs/Djibouti_implementation_realized_risks_mapped_metadata.json": {
+      "checksum": "5b622db3809d1065983f45945866856c"
     },
     "intermediary_outputs/Djibouti_pad_risks.csv": {
       "checksum": "69ee0c6ece5b923af3fda65f72a0e930"
@@ -460,6 +463,12 @@
     },
     "intermediary_outputs/final_Djibouti_rra_briefing_20260416_131640.md": {
       "checksum": "e0c9519e6d9f6f6eae4093fc3ab20934"
+    },
+    "intermediary_outputs/final_Djibouti_rra_briefing_20260526_161627.md": {
+      "checksum": "21e9db940aae817b177d082d2d4bac97"
+    },
+    "intermediary_outputs/final_Djibouti_rra_briefing_20260527_142839.md": {
+      "checksum": "6436aedda570dd2ac17719d4629a6f42"
     },
     "intermediary_outputs/final_Djibouti_sector_briefing_20260304_162336.md": {
       "checksum": "c181ac95f11f514a8be1626454b9b936"
@@ -2966,8 +2975,11 @@
     "local_media_sources.py": {
       "checksum": "1db3012c62c4db2aeae8249889f54079"
     },
+    "mai-api-integration-example.R": {
+      "checksum": "c962b632d5dea72331076d5644bcb9e0"
+    },
     "main_briefing_generator.py": {
-      "checksum": "51cf28fcf044f90ef182424bce9094e4"
+      "checksum": "b25efa75a79dc9743f128fb0f89b3b25"
     },
     "map_data/ACLED Data_2026-03-24.csv": {
       "checksum": "340a1d0daae87cf109e92b40d08efca6"
@@ -2989,6 +3001,9 @@
     },
     "map_data/reverse_geocode_cache.json": {
       "checksum": "497e7dd6d557f854f7cd5a1229b3e581"
+    },
+    "patch_manifest.py": {
+      "checksum": "5ed1bc23808dd01026c996d77b00ea61"
     },
     "preprocess_pads.py": {
       "checksum": "1856a5149f083340bc2a1406ada19da6"
@@ -3104,6 +3119,9 @@
     "preprocessed_pads/Djibouti/P176772_preprocessed.json": {
       "checksum": "0974289b4a981b3abae1f13b5e22a701"
     },
+    "preprocessed_pads/Djibouti/P178033_preprocessed.json": {
+      "checksum": "e567eab114378ad33b5828fc8da03940"
+    },
     "preprocessed_pads/Djibouti/P178836_preprocessed.json": {
       "checksum": "35bf5b67ac5a25017d6b2d1f069e1501"
     },
@@ -3118,6 +3136,9 @@
     },
     "preprocessed_pads/Djibouti/P509082_preprocessed.json": {
       "checksum": "81bba860993a5878d44601b98e799b4b"
+    },
+    "preprocessed_pads/Djibouti/P511492_preprocessed.json": {
+      "checksum": "daf0a9875dbb2c48711f19d7a364e6ef"
     },
     "preprocessed_pads/Ethiopia/P131118_preprocessed.json": {
       "checksum": "54b5896fe117c799e23453dcd73e8c28"
@@ -3680,9 +3701,6 @@
     "prompts.py": {
       "checksum": "e468565f02b75bf84f7b557214784db7"
     },
-    "public_documents_filtered.csv": {
-      "checksum": "d8b699e8fa17cf05df676185d1d0279a"
-    },
     "pytest.ini": {
       "checksum": "0c527e02f29027a5833cc0f6bae723e3"
     },
@@ -3695,20 +3713,104 @@
     "rras/lebanon_rra.txt": {
       "checksum": "9e12dd1e15c08b3a146d8c28ee9fbef9"
     },
+    "rras/ouo_rras/afghanistan_rra.txt": {
+      "checksum": "5af3520d032e66c4b403b18e07af6176"
+    },
+    "rras/ouo_rras/armenia_rra.txt": {
+      "checksum": "60bdc88f3a04370e3c967c503bfe9f19"
+    },
+    "rras/ouo_rras/benin_rra.txt": {
+      "checksum": "5e44b02cb3fc203285e744171ebb7497"
+    },
+    "rras/ouo_rras/burundi_rra.txt": {
+      "checksum": "07400e9938f56777af9bc96c34a3b065"
+    },
+    "rras/ouo_rras/chad_rra.txt": {
+      "checksum": "a9bb6cdf1556a1e1a084edb5a2280e37"
+    },
+    "rras/ouo_rras/comoros_rra.txt": {
+      "checksum": "ff404a5f7274bdec8d3d75e18885450c"
+    },
+    "rras/ouo_rras/drc_rra.txt": {
+      "checksum": "f5089b54041356296e40963ecedac0ae"
+    },
+    "rras/ouo_rras/ethiopia_rra.txt": {
+      "checksum": "dd6a5333b65d4e47f64937bc4fcf1e27"
+    },
+    "rras/ouo_rras/guinea-bissau_rra.txt": {
+      "checksum": "3bde0ec6650fe540a5625946c6c70d68"
+    },
+    "rras/ouo_rras/haiti_rra.txt": {
+      "checksum": "becd0f6a16d6f75554fac14d053e0f06"
+    },
+    "rras/ouo_rras/honduras_rra.txt": {
+      "checksum": "0ab8b1f2546503f5a5e4a8c374cb36fe"
+    },
+    "rras/ouo_rras/kosovo_rra.txt": {
+      "checksum": "831f4d57374c210f49ef96c2ecb75604"
+    },
+    "rras/ouo_rras/libya_rra.txt": {
+      "checksum": "892f0a6143b1f7a9f0bfc25cce1f74ec"
+    },
+    "rras/ouo_rras/madagascar_rra.txt": {
+      "checksum": "8b7a9103edbd6eafba2a379523f4253d"
+    },
+    "rras/ouo_rras/mali_rra.txt": {
+      "checksum": "e6505f97f23500aee02a319e4b9e1a6c"
+    },
+    "rras/ouo_rras/mauritania_rra.txt": {
+      "checksum": "87107a6d8c538ef0b4d9b02ba90935fc"
+    },
+    "rras/ouo_rras/nepal_rra.txt": {
+      "checksum": "ae802970ce844aa2f26254427843d071"
+    },
+    "rras/ouo_rras/niger_rra.txt": {
+      "checksum": "e67b8ecf0d054f06dfce01207d73edb0"
+    },
+    "rras/ouo_rras/nigeria_rra.txt": {
+      "checksum": "9133ed687500d4adf2c1656c0c5d7e64"
+    },
+    "rras/ouo_rras/papua_new_guinea_rra.txt": {
+      "checksum": "f403138d599811d853883e8077aee279"
+    },
+    "rras/ouo_rras/solomon_islands_rra.txt": {
+      "checksum": "e27af257782f83e958a93214029b5cb3"
+    },
+    "rras/ouo_rras/somalia,_federal_republic_of_rra.txt": {
+      "checksum": "a8e92e4f9d0dd5ecf2da6146be6785ff"
+    },
+    "rras/ouo_rras/south_sudan_rra.txt": {
+      "checksum": "93f668741cff5251880803233443dccd"
+    },
+    "rras/ouo_rras/sri_lanka_rra.txt": {
+      "checksum": "a2771ed70abd03ca1384bf560eb7e6b0"
+    },
+    "rras/ouo_rras/sudan_rra.txt": {
+      "checksum": "b00d210edc2ef8e20ecb607a2db9cf7f"
+    },
+    "rras/ouo_rras/the_gambia_rra.txt": {
+      "checksum": "93748b9300b77b4aeceaf0a6d18cc329"
+    },
+    "rras/ouo_rras/togo_rra.txt": {
+      "checksum": "98df62fd41ddc20849ae40491b684265"
+    },
+    "rras/ouo_rras/yemen_rra.txt": {
+      "checksum": "0aaa5e23e9c5d20435119314f79a7b72"
+    },
     "setup.py": {
-      "checksum": "c8455fc55a5145f66145060a13a7616e"
+      "checksum": "ba3bb13475b0956b8e06a74d2678d4a2"
     },
     "static/architecture.html": {
       "checksum": "9abe6980b038fb3f3047949e7d134b48"
     },
     "static/briefing.js": {
-      "checksum": "64e2064a1dab170544d0767f673b029b"
+      "checksum": "22b2b12ca92a66d4c2af7031415fb3eb"
     },
     "static/briefing_styles.css": {
       "checksum": "f8a75685ae13dd46b9a9ae7e2c18e709"
     },
     "test.ipynb": {
-      "checksum": "56b39c5a0017a0a6a148f9df186e9f18"
+      "checksum": "9cbc3031cddf86a2acde73c331aef554"
     },
     "tests/__pycache__/test_local_media_sources.cpython-314-pytest-9.0.3.pyc": {
       "checksum": "9971cb8e80876f76f9039b2410595d47"

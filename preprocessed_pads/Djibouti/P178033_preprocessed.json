@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "PROJ_ID_IB": "P178033",
+    "guid": 7.723816535940947e+17,
+    "node_id": 33814096,
+    "pdf_url": "http://wbdocsservices.worldbank.org/services?I4_SERVICE=FILE_URLS2&RENDITION=Y&TYPE=T&I4_DOCID=090224b088da7dd6&stream=Yes",
+    "document_type": "Project Appraisal Document",
+    "preprocessing_version": "1.0",
+    "truncated": false,
+    "truncation_chars": 3
+  },
+  "structured_content": {
+    "project_overview": {
+      "project_name": "",
+      "project_development_objective": "",
+      "total_financing": "",
+      "implementation_period": "",
+      "beneficiaries": ""
+    },
+    "geographic_scope": {
+      "primary_locations": [],
+      "coverage_type": "",
+      "fragile_or_conflict_affected_areas": ""
+    },
+    "key_components": [],
+    "implementation_arrangements": {
+      "implementing_agency": "",
+      "coordination_mechanisms": "",
+      "procurement_approach": "",
+      "monitoring_and_evaluation": ""
+    },
+    "identified_risks": [],
+    "safeguards_and_social": {
+      "environmental_category": "",
+      "triggered_safeguard_policies": [],
+      "grievance_redress_mechanism": "",
+      "gender_considerations": "",
+      "vulnerable_groups": []
+    },
+    "fcv_relevant_details": {
+      "conflict_sensitivity": "",
+      "fragility_context": "",
+      "security_considerations": "",
+      "displacement_or_refugees": ""
+    }
+  }
+}

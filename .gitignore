@@ -214,3 +214,8 @@ joined_df_filtered.csv
 intermediary_outputs/old_outputs/
 intermediary_outputs/final*.md
 all_documents_filtered.csv
+rras/rra_pdfs/
+mai-api-integration-example.R
+.DS_Store
+rras/ouo_rras/*
+rsconnect-python/

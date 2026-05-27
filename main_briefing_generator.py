@@ -275,40 +275,65 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
     
     # Load or generate PAD risks
     should_regenerate_pad_risks = False
+    pad_risks = pd.DataFrame()
+    new_pad_project_ids = set()
+
     if os.path.exists(pad_risks_path):
         try:
             update_status("📂 Loading existing PAD susceptibilities")
             pad_risks = pd.read_csv(pad_risks_path)
-            # Check if the file is empty
             if pad_risks.empty or len(pad_risks.columns) == 0:
                 update_status("   ⚠️ Previous PAD analysis is incomplete, will regenerate")
                 should_regenerate_pad_risks = True
-        except Exception as e:
-            update_status(f"   ⚠️ Error reading previous PAD analysis, will regenerate")
+            elif 'PROJ_ID_IB' in pad_risks.columns:
+                # Check for new projects not yet in the cached results
+                cached_ids = set(pad_risks['PROJ_ID_IB'].dropna().astype(str))
+                current_pads = country_document_df[
+                    country_document_df['document_type'] == 'Project Appraisal Document'
+                ]
+                current_ids = set(current_pads['PROJ_ID_IB'].dropna().astype(str).unique())
+                new_pad_project_ids = current_ids - cached_ids
+                if new_pad_project_ids:
+                    update_status(f"   🔍 Found {len(new_pad_project_ids)} new PAD project(s) not yet analyzed, processing...")
+        except Exception:
+            update_status("   ⚠️ Error reading previous PAD analysis, will regenerate")
             should_regenerate_pad_risks = True
     else:
         should_regenerate_pad_risks = True
-    
-    if should_regenerate_pad_risks:
-        update_status("📋 Analyzing PAD susceptibilities...")
-        # Create specific clients for PAD tasks based on config
+
+    if should_regenerate_pad_risks or new_pad_project_ids:
         if not internal:
             pad_preprocessing_client = get_client_for_model(ANTHROPIC_PAD_PREPROCESSING_MODEL, internal=False)
             pad_stress_test_client = get_client_for_model(ANTHROPIC_PAD_STRESS_TEST_MODEL, internal=False)
         else:
-            # Internal mode uses the same client for both (GPT-5.2)
+            if client is None:
+                client, reasoning_client = setup(internal=internal)
             pad_preprocessing_client = reasoning_client
             pad_stress_test_client = client
-        
-        pad_risks_list = run_stress_tests_for_all_pads(
-            country_document_df, 
-            briefing_risks_df, 
-            pad_stress_test_client, 
+
+        if should_regenerate_pad_risks:
+            update_status("📋 Analyzing PAD susceptibilities...")
+            docs_to_process = country_document_df
+        else:
+            docs_to_process = country_document_df[
+                country_document_df['PROJ_ID_IB'].astype(str).isin(new_pad_project_ids)
+            ]
+
+        new_pad_risks_list = run_stress_tests_for_all_pads(
+            docs_to_process,
+            briefing_risks_df,
+            pad_stress_test_client,
             country,
             pad_preprocessing_client
         )
-        pad_risks = pd.DataFrame(pad_risks_list)
-        if save_outputs:
+        new_pad_risks_df = pd.DataFrame(new_pad_risks_list)
+
+        if not pad_risks.empty and not new_pad_risks_df.empty:
+            pad_risks = pd.concat([pad_risks, new_pad_risks_df], ignore_index=True)
+        elif not new_pad_risks_df.empty:
+            pad_risks = new_pad_risks_df
+
+        if save_outputs and not pad_risks.empty:
             pad_risks.to_csv(pad_risks_path, index=False)
             print(f"  ✓ Saved to {pad_risks_path}")
     
@@ -325,10 +350,11 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
     if should_regenerate_implementation_risks:
         update_status("⚠️ Extracting implementation risks from ISRs/Aide Memoires...")
 
-        # Create specific client for implementation risk extraction based on config
         if not internal:
             implementation_risk_client = get_client_for_model(ANTHROPIC_IMPLEMENTATION_RISK_MODEL, internal=False)
         else:
+            if client is None:
+                client, reasoning_client = setup(internal=internal)
             implementation_risk_client = client
 
         # extract_all_realized_fcv_risks now handles caching internally at document level
@@ -372,10 +398,11 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
         implementation_realized_risks_mapped = pd.read_csv(implementation_mapped_path)
     else:
         update_status("🔗 Mapping implementation risks to country risks...")
-        # Create specific client for risk mapping based on config
         if not internal:
             risk_mapping_client = get_client_for_model(ANTHROPIC_RISK_MAPPING_MODEL, internal=False)
         else:
+            if client is None:
+                client, reasoning_client = setup(internal=internal)
             risk_mapping_client = client
 
         if not country_risks_regenerated and os.path.exists(implementation_mapped_path):
@@ -426,10 +453,11 @@ def get_fcv_content_from_docs(country, mode='risk', n_paragraphs=5, custom_categ
             briefing = f.read()
     else:
         update_status(f"📝 Generating final {status_mode_label} briefing document...")
-        # Use specific model for final briefing synthesis based on config
         if not internal:
             final_briefing_client = get_client_for_model(ANTHROPIC_FINAL_BRIEFING_MODEL, internal=False)
         else:
+            if client is None:
+                client, reasoning_client = setup(internal=internal)
             final_briefing_client = reasoning_client
         
         # Check if we need to filter projects due to context size

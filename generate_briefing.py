@@ -581,18 +581,20 @@ def generate_custom_aligned_briefing(
     prompt = ChatPromptTemplate.from_messages([
         (
             "system",
-            system_prompt
+            system_prompt + "\n\nEvidence:\n\n{evidence}"
         ),
         (
             "human",
-            "Evidence:\n\n{evidence}"
+            "Generate the briefing."
         )
     ])
 
     chain = prompt | client
 
+    evidence_str = json.dumps(evidence, indent=2)
+    print(f"[EVIDENCE INJECTED] length={len(evidence_str)} chars | preview={evidence_str[:3000]}")
     message = chain.invoke({
-        "evidence": json.dumps(evidence, indent=2)
+        "evidence": evidence_str
     })
 
     return (message.content or "").strip()
@@ -638,18 +640,20 @@ def generate_risk_aligned_briefing(
     prompt = ChatPromptTemplate.from_messages([
         (
             "system",
-            system_prompt
+            system_prompt + "\n\nEvidence:\n\n{evidence}"
         ),
         (
             "human",
-            "Evidence:\n\n{evidence}"
+            "Generate the briefing."
         )
     ])
 
     chain = prompt | client
 
+    evidence_str = json.dumps(evidence, indent=2)
+    print(f"[EVIDENCE INJECTED] length={len(evidence_str)} chars | preview={evidence_str[:3000]}")
     message = chain.invoke({
-        "evidence": json.dumps(evidence, indent=2)
+        "evidence": evidence_str
     })
 
     return (message.content or "").strip()
@@ -695,18 +699,20 @@ def generate_sector_aligned_briefing(
     prompt = ChatPromptTemplate.from_messages([
         (
             "system",
-            system_prompt
+            system_prompt + "\n\nEvidence:\n\n{evidence}"
         ),
         (
             "human",
-            "Evidence:\n\n{evidence}"
+            "Generate the briefing."
         )
     ])
 
     chain = prompt | client
 
+    evidence_str = json.dumps(evidence, indent=2)
+    print(f"[EVIDENCE INJECTED] length={len(evidence_str)} chars | preview={evidence_str[:3000]}")
     message = chain.invoke({
-        "evidence": json.dumps(evidence, indent=2)
+        "evidence": evidence_str
     })
 
     return (message.content or "").strip()
@@ -771,18 +777,20 @@ def generate_project_based_briefing(
     prompt = ChatPromptTemplate.from_messages([
         (
             "system",
-            system_prompt
+            system_prompt + "\n\nEvidence:\n\n{evidence}"
         ),
         (
             "human",
-            "Evidence:\n\n{evidence}"
+            "Generate the briefing."
         )
     ])
 
     chain = prompt | client
 
+    evidence_str = json.dumps(evidence, indent=2)
+    print(f"[EVIDENCE INJECTED] length={len(evidence_str)} chars | preview={evidence_str[:3000]}")
     message = chain.invoke({
-        "evidence": json.dumps(evidence, indent=2)
+        "evidence": evidence_str
     })
 
     return (message.content or "").strip()
@@ -840,12 +848,20 @@ def generate_rra_aligned_briefing(
     system_prompt = apply_style_guardrails(system_prompt)
 
     prompt = ChatPromptTemplate.from_messages([
-        ("system", system_prompt),
-        ("human", "Evidence:\n\n{evidence}"),
+        (
+            "system",
+            system_prompt + "\n\nEvidence:\n\n{evidence}"
+        ),
+        (
+            "human",
+            "Generate the briefing."
+        )
     ])
 
     chain = prompt | client
-    message = chain.invoke({"evidence": json.dumps(evidence, indent=2)})
+    evidence_str = json.dumps(evidence, indent=2)
+    print(f"[EVIDENCE INJECTED] length={len(evidence_str)} chars | preview={evidence_str[:3000]}")
+    message = chain.invoke({"evidence": evidence_str})
     return (message.content or "").strip()
 
 

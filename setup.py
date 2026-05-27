@@ -1,4 +1,4 @@
-from config import *
+from briefing_config import *
 import os
 
 def get_client_for_model(model_name, internal=True):
@@ -72,9 +72,9 @@ def setup(internal=True):
             - reasoning_client: Higher reasoning model for complex analysis (Sonnet for external, GPT for internal)
     """
     if internal:
-        # Internal uses GPT-5.2 for both, but with different reasoning efforts
+        # Internal uses GPT-5.4-mini for standard tasks and GPT-5.5 for reasoning tasks
         standard_client = get_client_for_model(OPENAI_CHAT_MODEL, internal=True)
-        reasoning_client = get_client_for_model(OPENAI_CHAT_MODEL, internal=True)
+        reasoning_client = get_client_for_model(OPENAI_REASONING_MODEL, internal=True)
         # Note: Both use same model but get_client_for_model will set different reasoning_effort
     else:
         # External uses Haiku for speed and Sonnet for reasoning

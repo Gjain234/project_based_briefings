@@ -3,6 +3,7 @@
 let currentCountry = '';
 let generating = false;
 let briefingText = ''; // Store original briefing text for download
+let briefingAbortController = null;       // Track active briefing generation for cancellation
 let rraComparisonAbortController = null; // Track active RRA comparison for cancellation
 let lastMapData = null; // Store last loaded map data for HTML export
 let compareRraBtnDefaultHtml = '';
@@ -497,6 +498,7 @@ async function generateBriefing(customPrompt = null, selectedProjectIds = null, 
   }
 
   generating = true;
+  briefingAbortController = new AbortController();
   const {country, mode, n_paragraphs: nParagraphs, custom_categories: customCategories, custom_prompt: promptOverride, force_regenerate: forceRegenerate, selected_project_ids: finalSelectedProjectIds} = reviewedPayload;
   const modeSelect = document.getElementById('briefingMode');
 
@@ -521,6 +523,7 @@ async function generateBriefing(customPrompt = null, selectedProjectIds = null, 
     const response = await fetch('api/briefing/generate', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
+      signal: briefingAbortController.signal,
       body: JSON.stringify({
         country,
         mode,
@@ -591,7 +594,7 @@ async function generateBriefing(customPrompt = null, selectedProjectIds = null, 
               return;
             }
             
-            if (data.complete) {
+            if (data.complete && generating) {
               sawCompletion = true;
               console.log('Briefing complete, loading results...');
               
@@ -647,20 +650,26 @@ async function generateBriefing(customPrompt = null, selectedProjectIds = null, 
       }
     }
 
-    if (!sawCompletion) {
+    if (!sawCompletion && generating) {
       throw new Error('Briefing generation ended before completion. Check the server logs for the underlying error.');
     }
   } catch (error) {
+    if (error.name === 'AbortError') return; // user clicked Stop — already handled
     showStatus('Error: ' + error.message, 'error');
     generating = false;
     resetGenerateUI();
+  } finally {
+    briefingAbortController = null;
   }
 }
 
 // Stop generation
 function stopGeneration() {
   generating = false;
-  // Note: In a real implementation, you'd also need to abort the fetch
+  if (briefingAbortController) {
+    briefingAbortController.abort();
+    briefingAbortController = null;
+  }
   showStatus('Generation cancelled', 'error');
   resetGenerateUI();
 }

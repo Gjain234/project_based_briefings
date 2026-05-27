@@ -1,3 +1,6 @@
+# DEPLOY TO POSIT CONNECT:
+# /Users/gjain8/Library/Python/3.14/bin/rsconnect write-manifest api --entrypoint app:app . --overwrite && python3 patch_manifest.py && /Users/gjain8/Library/Python/3.14/bin/rsconnect deploy manifest manifest.json --server "$CONNECT_SERVER" --api-key "$CONNECT_API_KEY" --insecure
+
 import os
 import json
 import re
@@ -36,6 +39,10 @@ except ImportError:
     PdfReader = None
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# ── Environment detection ─────────────────────────────────────────────────────
+_IS_POSIT  = os.environ.get("POSIT_PRODUCT") == "CONNECT"
+_IS_RENDER = os.environ.get("RENDER") == "true"
 
 # ── Databricks document data refresh ─────────────────────────────────────────
 
@@ -77,7 +84,8 @@ def refresh_document_data():
         print(f"Warning: Failed to refresh document data from Databricks: {e}")
 
 
-refresh_document_data()
+if not _IS_POSIT and not _IS_RENDER:
+    refresh_document_data()
 
 try:
     from country_name_mapping import is_individual_country, get_country_id_key, check_acled_country_match
@@ -173,7 +181,21 @@ def extract_pdf_text(b64_data, name):
 
 app = Flask(__name__, static_folder='static')
 app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024
-client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY_DEV"))
+
+# ── LLM client — Bedrock on Posit Connect, direct Anthropic elsewhere ─────────
+if _IS_POSIT:
+    client = anthropic.AnthropicBedrock(
+        aws_access_key=os.environ.get("AWS_ACCESS_KEY_ID"),
+        aws_secret_key=os.environ.get("AWS_SECRET_ACCESS_KEY"),
+        aws_region=os.environ.get("AWS_DEFAULT_REGION", "us-east-1"),
+    )
+    # Bedrock cross-region inference profile IDs — override via env vars if needed
+    _SCREENER_MODEL = os.environ.get("BEDROCK_SCREENER_MODEL", "us.anthropic.claude-sonnet-4-5-20250514-v1:0")
+    _RRA_MODEL       = os.environ.get("BEDROCK_RRA_MODEL",      "us.anthropic.claude-sonnet-4-5-20250514-v1:0")
+else:
+    client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY_DEV"))
+    _SCREENER_MODEL = "claude-sonnet-4-20250514"
+    _RRA_MODEL       = "claude-sonnet-4-6"
 
 
 @app.route('/')
@@ -306,7 +328,7 @@ def run_stage():
                     yield f"data: {json.dumps({'truncation_warnings': truncation_warnings})}\n\n"
 
                 with client.messages.stream(
-                    model="claude-sonnet-4-20250514",
+                    model=_SCREENER_MODEL,
                     max_tokens=16000,
                     messages=messages
                 ) as stream:
@@ -357,7 +379,8 @@ def get_countries():
         if is_individual_country is None:
             return jsonify({'error': 'country_name_mapping module not found'}), 500
         
-        document_df_path = os.path.join(BASE_DIR, 'public_documents_filtered.csv')
+        doc_csv = 'all_documents_filtered.csv' if _IS_POSIT else 'public_documents_filtered.csv'
+        document_df_path = os.path.join(BASE_DIR, doc_csv)
         document_df = pd.read_csv(document_df_path)
         all_countries = document_df['CNTRY_SHORT_NAME'].unique()
         individual_countries = [c for c in all_countries if is_individual_country(c)]
@@ -824,7 +847,7 @@ def generate_briefing():
                             selected_project_ids=selected_project_ids,
                             regenerate_final_only=regenerate_final_only,
                             save_outputs=True,
-                            internal=False,
+                            internal=_IS_POSIT,
                             force_regenerate=force_regenerate,
                             status_callback=handle_status,
                             stream_callback=capture_stream
@@ -1189,25 +1212,44 @@ def get_briefing_file(filename):
 
 # ── RRA Comparison endpoint ──────────────────────────────────────────────────
 
+def _find_rra_file(country):
+    """
+    Return the path to an RRA text file for the given country, or None.
+
+    Search order:
+      - Internal (Posit Connect): ouo_rras/ → public_rras/ → rras/ root (legacy)
+      - External: public_rras/ → rras/ root (legacy)
+    """
+    base = os.path.dirname(os.path.abspath(__file__))
+    folders = (
+        [os.path.join(base, 'rras', 'ouo_rras'),
+         os.path.join(base, 'rras', 'public_rras'),
+         os.path.join(base, 'rras')]
+        if _IS_POSIT else
+        [os.path.join(base, 'rras', 'public_rras'),
+         os.path.join(base, 'rras')]
+    )
+    slug = country.lower().replace(' ', '_')
+    for folder in folders:
+        if not os.path.isdir(folder):
+            continue
+        # Primary: exact slug match
+        candidate = os.path.join(folder, f"{slug}_rra.txt")
+        if os.path.exists(candidate):
+            return candidate
+        # Fallback: first file whose name contains the country string
+        for fname in sorted(os.listdir(folder)):
+            if fname.endswith('_rra.txt') and country.lower() in fname.lower():
+                return os.path.join(folder, fname)
+    return None
+
+
 @app.route('/api/briefing/rra-check/<country>', methods=['GET'])
 def check_rra_exists(country):
     """Check if RRA exists for the country"""
     try:
-        rra_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'rras')
-        # Normalize country name for file lookup (lowercase, replace spaces with underscores)
-        rra_filename = f"{country.lower().replace(' ', '_')}_rra.txt"
-        rra_path = os.path.join(rra_folder, rra_filename)
-        
-        # Also check exact case
-        if not os.path.exists(rra_path):
-            # Try without normalization
-            for file in os.listdir(rra_folder):
-                if file.endswith('_rra.txt') and country.lower() in file.lower():
-                    rra_path = os.path.join(rra_folder, file)
-                    break
-        
-        exists = os.path.exists(rra_path)
-        return jsonify({'exists': exists})
+        path = _find_rra_file(country)
+        return jsonify({'exists': path is not None})
     except Exception as e:
         return jsonify({'exists': False, 'error': str(e)})
 
@@ -1224,19 +1266,9 @@ def compare_to_rra():
         if not country or not briefing:
             return jsonify({'error': 'Country and briefing are required'}), 400
         
-        # Load RRA file
-        rra_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'rras')
-        rra_filename = f"{country.lower().replace(' ', '_')}_rra.txt"
-        rra_path = os.path.join(rra_folder, rra_filename)
-        
-        # Try exact match if not found
-        if not os.path.exists(rra_path):
-            for file in os.listdir(rra_folder):
-                if file.endswith('_rra.txt') and country.lower() in file.lower():
-                    rra_path = os.path.join(rra_folder, file)
-                    break
-        
-        if not os.path.exists(rra_path):
+        # Locate RRA file (respects internal/external access rules)
+        rra_path = _find_rra_file(country)
+        if not rra_path:
             return jsonify({'error': f'RRA file not found for {country}'}), 404
         
         # Check cache before loading RRA
@@ -1298,7 +1330,7 @@ Briefing to Annotate:
         
         # Call Claude to generate comparison with higher token limit
         message = client.messages.create(
-            model="claude-sonnet-4-6",
+            model=_RRA_MODEL,
             max_tokens=8000,
             messages=[
                 {
